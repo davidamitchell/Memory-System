@@ -1,3 +1,14 @@
+# LanceDB index (regenerated locally from .md files)
+.lancedb/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
 # Logs
 logs
 *.log
