@@ -1,4 +1,4 @@
-# AGENTS.md — The Open-Brain Constitution
+# Copilot Instructions — The Open-Brain Constitution
 
 > This file defines the rules, permissions, and behaviour for any AI agent (GitHub Copilot, Claude, Cursor, etc.) working inside this repository. **Read this file first before performing any action.**
 
@@ -14,11 +14,48 @@ You are the **Architect** of this memory system, not just a user. This repositor
 
 ---
 
-## 2. Mandatory System Self-Improvement
+## 2. Skills
+
+Skills are available at `.github/skills/`. Key skills:
+
+- `backlog-manager` — `.github/skills/backlog-manager/SKILL.md`
+- `research` — `.github/skills/research/SKILL.md`
+- `technical-writer` — `.github/skills/technical-writer/SKILL.md`
+- `code-review` — `.github/skills/code-review/SKILL.md`
+- `strategy-author` — `.github/skills/strategy-author/SKILL.md`
+- `decisions` — `.github/skills/decisions/SKILL.md`
+
+---
+
+## 3. Backlog
+
+The backlog is `BACKLOG.md` at the repo root. Use the `backlog-manager` skill from `.github/skills/backlog-manager/SKILL.md`. Read it at the start of every session.
+
+---
+
+## 4. Architecture Decision Records
+
+Every non-trivial architectural or design decision must be recorded as an ADR in `docs/adr/`. Use the `decisions` skill from `.github/skills/decisions/SKILL.md`. Format is MADR. Files named `docs/adr/NNNN-short-title.md`.
+
+---
+
+## 5. PROGRESS.md
+
+Append a dated entry to `PROGRESS.md` after every meaningful session or PR. Never edit old entries — append only. Format: `## YYYY-MM-DD` then what changed and why. Append-only prevents merge conflicts.
+
+---
+
+## 6. CHANGELOG.md
+
+Record every user-facing change in `CHANGELOG.md`. Follow Keep-a-Changelog 1.0.0. New entries go under `## [Unreleased]` at the top.
+
+---
+
+## 7. Mandatory System Self-Improvement
 
 ### Architectural Awareness
 
-You are not just a user of this memory; you are its architect. Always look for ways to improve the tagging, folder structure, or `AGENTS.md` logic. If you notice a structural pattern that would make retrieval faster or more accurate, **propose it**.
+You are not just a user of this memory; you are its architect. Always look for ways to improve the tagging, folder structure, or instruction logic. If you notice a structural pattern that would make retrieval faster or more accurate, **propose it**.
 
 ### Proactive Maintenance
 
@@ -37,19 +74,20 @@ Every time you write a new memory, **search for 3 related existing memories** an
 
 ---
 
-## 3. Folder Structure
+## 8. Folder Structure
 
 | Folder | Purpose |
 |---|---|
 | `/meetings` | Notes from meetings, calls, and conversations |
 | `/journal` | Daily thoughts, reflections, and observations |
 | `/projects` | Project-specific context, decisions, and specs |
+| `docs/adr/` | Architecture Decision Records |
 
 New top-level folders may be added when an existing folder is clearly insufficient. Document the reason in the file that prompted the change.
 
 ---
 
-## 4. File Naming Convention
+## 9. File Naming Convention
 
 All memory files must follow this convention:
 
@@ -63,7 +101,7 @@ Examples:
 
 ---
 
-## 5. Required Front Matter
+## 10. Required Front Matter
 
 Every `.md` memory file must include YAML front matter:
 
@@ -78,7 +116,7 @@ superseded_by: ""   # path to newer note if this one is outdated
 
 ---
 
-## 6. MCP Tool Reference
+## 11. MCP Tool Reference
 
 The `mcp_server.py` exposes the following tools. Use them when instructed by the user or when autonomously maintaining the brain:
 
@@ -90,7 +128,7 @@ The `mcp_server.py` exposes the following tools. Use them when instructed by the
 
 ---
 
-## 7. Git Behaviour
+## 12. Git Behaviour
 
 - **Do not force-push.** All history is sacred context.
 - **Commit messages** must follow: `memory: <short description of change>` (e.g., `memory: add meeting notes 2025-06-15`).
@@ -98,7 +136,7 @@ The `mcp_server.py` exposes the following tools. Use them when instructed by the
 
 ---
 
-## 8. Privacy
+## 13. Privacy
 
 This is a **private repository**. Never include:
 
