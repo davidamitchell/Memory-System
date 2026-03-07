@@ -15,6 +15,7 @@ Added `.github/copilot-setup-steps.yml` and `.vscode/mcp.json` so GitHub Copilot
 ---
 
 ## 2026-03-07 — Standardise agent instructions
+## 2026-03-07
 
 Standardisation pass: replaced `## 7. Mandatory System Self-Improvement` in `.github/copilot-instructions.md` with the unified **Continuous Improvement & Learning** framework (section 7). Added new `## 13. Chain-of-Thought Reasoning` section tailored to this repo's memory workflows; renumbered Privacy to section 14. Updated CHANGELOG.md under [Unreleased].
 

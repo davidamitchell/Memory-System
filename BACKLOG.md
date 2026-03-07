@@ -36,3 +36,6 @@ Consider adding a scheduled workflow or PR check that detects when a Copilot bra
 
 ---
 
+### Notes
+
+---
