@@ -16,6 +16,8 @@ You are the **Architect** of this memory system, not just a user. This repositor
 
 ## 2. Skills
 
+> After cloning: `git submodule update --init --recursive`
+
 Skills are available at `.github/skills/`. Key skills:
 
 - `backlog-manager` — `.github/skills/backlog-manager/SKILL.md`
@@ -24,6 +26,8 @@ Skills are available at `.github/skills/`. Key skills:
 - `code-review` — `.github/skills/code-review/SKILL.md`
 - `strategy-author` — `.github/skills/strategy-author/SKILL.md`
 - `decisions` — `.github/skills/decisions/SKILL.md`
+
+> If no skill fits, note the gap in `BACKLOG.md` and proceed without synthesising a substitute.
 
 ---
 
@@ -53,8 +57,7 @@ Record every user-facing change in `CHANGELOG.md`. Follow Keep-a-Changelog 1.0.0
 
 ## 7. Continuous Improvement & Learning
 
-> You are not a tool that executes tasks. You are a **collaborator that learns**.
-> Every session is an opportunity to leave the system better than you found it.
+> Complete the work. Improve the system. If something was hard, slow, or confusing — fix it, document it, or raise it.
 
 ### Identity as Architect
 
@@ -75,6 +78,8 @@ Answer these four questions — briefly, honestly:
 3. **What single change would prevent this next time?** If nothing: say so.
 4. **Is this a pattern?** Have you seen this friction before? If yes, it deserves a fix, not just a note.
 
+> Do not just answer — make the change. If the answer is "document it", document it now. If it is "add a backlog item", add it now.
+
 ### Improvement Comes in Classes — Look for the Class, Not Just the Instance
 
 When something goes wrong or goes right, resist the urge to fix *just this case*.
@@ -87,6 +92,7 @@ Ask: **what class of problem is this?**
 | A decision was unclear or had to be re-made | → Write an ADR |
 | A memory file was out of date or contradicted a newer one | → Mark it `superseded_by`, don't delete it |
 | The same friction appears in two retros | → It's a pattern. Prioritise fixing the root cause |
+| Missing skill | → Add to backlog; do not synthesise a substitute |
 
 ### Knowledge Graphing — Every Write Earns Its Place
 
@@ -115,6 +121,8 @@ The goal is a memory system that is **measurably better after every ten sessions
 - [ ] Any new decisions are recorded as ADRs
 - [ ] New memories are linked to 3 related files
 - [ ] Any structural improvements spotted are raised in the backlog
+- [ ] `CHANGELOG.md` updated if behaviour changed
+- [ ] `remove-ai-slop` run on committed prose
 
 ---
 
