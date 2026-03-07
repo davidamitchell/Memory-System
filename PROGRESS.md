@@ -24,3 +24,21 @@ Standardisation pass: replaced `## 7. Mandatory System Self-Improvement` in `.gi
 2. What slowed down or went wrong? Nothing significant; the only ambiguity was whether the new Chain-of-Thought section should be numbered 13 or 14 (resolved by inserting before Privacy and bumping Privacy to 14).
 3. What single change would prevent this next time? Keeping section numbers stable in the instructions document would remove renumbering ambiguity on future insertions.
 4. Is this a pattern? No — first occurrence. Worth watching if further sections are added in future standardisation passes.
+
+---
+
+## 2026-03-07 — Align copilot-instructions with owner's personal Copilot instructions
+
+Applied six targeted updates to `.github/copilot-instructions.md` to remove contradictions with the owner's personal Copilot instructions, without touching any repo-specific content (memory system constitution, LanceDB, MCP, folder structure, file naming, front matter, privacy, headless mode, chain-of-thought):
+
+1. **§2 Skills** — Added `git submodule update --init --recursive` setup note and a "no synthesising substitutes" fallback rule.
+2. **§7 Identity as Architect** — Replaced hollow "You are a collaborator that learns" blockquote with direct "Complete the work. Improve the system." wording.
+3. **§7 Mini-Retro** — Added mandate-action note after the four questions: "Do not just answer — make the change."
+4. **§7 Signal table** — Added missing `Missing skill` row.
+5. **§7 "Done" checklist** — Added `CHANGELOG.md updated if behaviour changed` and `remove-ai-slop run on committed prose`.
+
+**Mini-Retro**
+1. Did the process work? Yes — all changes were surgical text replacements with no structural side effects.
+2. What slowed down or went wrong? Nothing significant; the changes were clearly specified in the issue.
+3. What single change would prevent this next time? Nothing to improve — the issue was well-specified and straightforward.
+4. Is this a pattern? This is a recurring "sync personal instructions → repo instructions" task. Could add a periodic review backlog item.
