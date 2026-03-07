@@ -1,0 +1,25 @@
+# Progress
+
+---
+
+## 2026-03-07 — Copilot headless-mode setup
+
+Added `.github/copilot-setup-steps.yml` and `.vscode/mcp.json` so GitHub Copilot's coding agent can operate on this memory system from the GitHub web UI or mobile app with no local IDE. Added Section 15 (headless mode) to `.github/copilot-instructions.md`. Rebased PR onto main after main introduced `.github/copilot-instructions.md` (superseding `AGENTS.md`); moved the headless-mode section from the old AGENTS.md addition into copilot-instructions.md accordingly.
+
+**Mini-Retro**
+1. Did the process work? Yes — the files are straightforward; the main complexity was the rebase against a diverged main that had replaced AGENTS.md.
+2. What slowed down or went wrong? The PR branch diverged from a main that had already removed AGENTS.md. Manual rebase was needed because the branch's base pre-dated PR #3 and #4.
+3. What single change would prevent this next time? Merging main into feature branches earlier (before they diverge significantly) would prevent this class of conflict.
+4. Is this a pattern? Potentially — if multiple Copilot branches run against the same repo simultaneously they will each diverge from main. Worth raising in the backlog.
+
+---
+
+## 2026-03-07 — Standardise agent instructions
+
+Standardisation pass: replaced `## 7. Mandatory System Self-Improvement` in `.github/copilot-instructions.md` with the unified **Continuous Improvement & Learning** framework (section 7). Added new `## 13. Chain-of-Thought Reasoning` section tailored to this repo's memory workflows; renumbered Privacy to section 14. Updated CHANGELOG.md under [Unreleased].
+
+**Mini-Retro**
+1. Did the process work? Yes — the instruction file was well-structured and the targeted replacement was straightforward.
+2. What slowed down or went wrong? Nothing significant; the only ambiguity was whether the new Chain-of-Thought section should be numbered 13 or 14 (resolved by inserting before Privacy and bumping Privacy to 14).
+3. What single change would prevent this next time? Keeping section numbers stable in the instructions document would remove renumbering ambiguity on future insertions.
+4. Is this a pattern? No — first occurrence. Worth watching if further sections are added in future standardisation passes.

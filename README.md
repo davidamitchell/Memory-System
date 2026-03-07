@@ -2,7 +2,7 @@
 
 A **local-first**, agent-native memory system backed by GitHub Markdown files and [LanceDB](https://lancedb.github.io/lancedb/) semantic search, exposed to AI tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/).
 
-> **Read [`AGENTS.md`](./AGENTS.md) for the constitution that governs how AI agents should interact with this repository.**
+> **AI agents: read [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) for the rules and conventions that govern this repository.**
 
 ---
 
@@ -148,10 +148,19 @@ steps:
 
 ```
 Memory-System/
-├── AGENTS.md                  # AI agent constitution (read this first)
+├── .github/
+│   ├── copilot-instructions.md  # AI agent instructions (read this first)
+│   ├── skills/                  # Agent skills submodule (davidamitchell/Skills)
+│   └── workflows/
+│       └── sync-skills.yml      # Weekly skills submodule update
+├── docs/
+│   └── adr/                     # Architecture Decision Records (MADR format)
 ├── mcp_server.py              # MCP server + file-watcher + LanceDB indexer
 ├── requirements.txt           # Python dependencies
 ├── getting-started-prompt.md  # Original architecture brief & PRD
+├── BACKLOG.md                 # Work backlog (backlog-manager skill format)
+├── PROGRESS.md                # Append-only session history
+├── CHANGELOG.md               # User-facing change log (Keep a Changelog)
 ├── meetings/                  # Meeting notes
 ├── journal/                   # Daily thoughts & reflections
 └── projects/                  # Project context & decisions
@@ -173,4 +182,4 @@ Memory-System/
 ## Further Reading
 
 - [`getting-started-prompt.md`](./getting-started-prompt.md) — full PRD and architectural blueprint
-- [`AGENTS.md`](./AGENTS.md) — rules for AI agents working in this repo
+- [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) — rules for AI agents working in this repo
