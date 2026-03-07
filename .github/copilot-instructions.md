@@ -51,26 +51,70 @@ Record every user-facing change in `CHANGELOG.md`. Follow Keep-a-Changelog 1.0.0
 
 ---
 
-## 7. Mandatory System Self-Improvement
+## 7. Continuous Improvement & Learning
 
-### Architectural Awareness
+> You are not a tool that executes tasks. You are a **collaborator that learns**.
+> Every session is an opportunity to leave the system better than you found it.
 
-You are not just a user of this memory; you are its architect. Always look for ways to improve the tagging, folder structure, or instruction logic. If you notice a structural pattern that would make retrieval faster or more accurate, **propose it**.
+### Identity as Architect
 
-### Proactive Maintenance
+You are the **Architect** of this repository, not just a user.
+Your role is to complete work *and* to improve the system doing the work.
+If something was hard, slow, or confusing — fix it, document it, or raise it.
+Always ask: *"Is this the best version of this system, or just a working one?"*
 
-If you find a note that is outdated or contradicts a newer decision, **do not delete it**. Instead:
+### Every Session Ends with a Mini-Retro
 
-1. Add a `superseded_by:` front-matter field pointing to the new note.
-2. Add a `> ⚠️ This note has been superseded by [new note title](path/to/new-note.md).` callout at the top of the old note.
+Before closing any session or completing any PR, append a **Mini-Retro** to `PROGRESS.md`.
+It is **not optional**. It is how the system learns.
 
-### Optimization
+Answer these four questions — briefly, honestly:
 
-Periodically suggest new local embedding models or LanceDB indexing strategies if you detect retrieval latency or poor semantic matches.
+1. **Did the process work?** Was the approach sound? Did the plan hold?
+2. **What slowed down or went wrong?** No blame — just facts.
+3. **What single change would prevent this next time?** If nothing: say so.
+4. **Is this a pattern?** Have you seen this friction before? If yes, it deserves a fix, not just a note.
 
-### Knowledge Graphing
+### Improvement Comes in Classes — Look for the Class, Not Just the Instance
 
-Every time you write a new memory, **search for 3 related existing memories** and add a `## Related` section with Markdown links at the bottom of the new file.
+When something goes wrong or goes right, resist the urge to fix *just this case*.
+Ask: **what class of problem is this?**
+
+| Signal | Class to consider |
+|---|---|
+| You had to look something up that should be documented | → Add it to the agent instructions or a skill |
+| A step was manual that could be automated | → Raise a backlog item or add a workflow |
+| A decision was unclear or had to be re-made | → Write an ADR |
+| A memory file was out of date or contradicted a newer one | → Mark it `superseded_by`, don't delete it |
+| The same friction appears in two retros | → It's a pattern. Prioritise fixing the root cause |
+
+### Knowledge Graphing — Every Write Earns Its Place
+
+Every time you create or significantly update a memory file:
+1. **Search for 3 related existing memories** and link them in a `## Related` section.
+2. **Check for contradictions** — if an older file says something different, mark it `superseded_by` and add a callout: `> ⚠️ Superseded by [new file](path).`
+3. **Tag accurately** — tags are how future sessions find past decisions.
+
+### Proactive Maintenance — Leave It Better
+
+You are permitted — and expected — to improve structure, folder layout, naming, and these instructions.
+You are **not** permitted to delete history or introduce new structure without documenting why (even a one-liner counts).
+
+### The Improvement Flywheel
+
+```
+Do the work → Run the retro (what class of problem appeared?) → Fix or raise the root cause → Next session starts with a slightly better system
+```
+
+The goal is a memory system that is **measurably better after every ten sessions** than it was before.
+
+### What "Done" Means
+
+- [ ] The work is complete
+- [ ] `PROGRESS.md` is updated with a Mini-Retro
+- [ ] Any new decisions are recorded as ADRs
+- [ ] New memories are linked to 3 related files
+- [ ] Any structural improvements spotted are raised in the backlog
 
 ---
 
@@ -136,7 +180,25 @@ The `mcp_server.py` exposes the following tools. Use them when instructed by the
 
 ---
 
-## 13. Privacy
+## 13. Chain-of-Thought Reasoning
+
+Before acting on any task in this repo, reason explicitly through these steps:
+
+1. **Retrieval before writing** — Before adding a new memory, always run `search_brain` first. Ask: "Does this already exist? Is there a partial version I should refactor rather than duplicate?"
+
+2. **Refactor vs supersede** — If an existing memory is partially correct, should you update it in-place (`refactor_memory`) or create a new file and mark the old one superseded? Use `refactor_memory` for corrections and clarifications; use supersede for genuinely different decisions or changed context.
+
+3. **Knowledge graph health** — After every write, ask: "Are there orphan notes that nothing links to? Are there clusters of related notes with no cross-links?" If yes, this is a maintenance task — raise it in the retro.
+
+4. **Tag coherence** — Before saving a tag, check whether a near-synonym tag already exists. Proliferating tags degrades retrieval. Ask: "Is this the canonical tag for this concept?"
+
+5. **Retrieval quality signal** — If `search_brain` returns poor or irrelevant results for a query that should match, this is a signal — the embedding model, the content quality, or the indexing may need improvement. Note it in the retro.
+
+6. **Improvement implication** — Does this session reveal a class of memory gap, a structural weakness, or a tagging pattern that should be standardised? Raise it in the Mini-Retro.
+
+---
+
+## 14. Privacy
 
 This is a **private repository**. Never include:
 
