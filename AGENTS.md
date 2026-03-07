@@ -105,3 +105,55 @@ This is a **private repository**. Never include:
 - API keys, tokens, or credentials.
 - Personally Identifiable Information (PII) beyond what the owner explicitly writes.
 - Passwords or secrets of any kind.
+
+---
+
+## 9. GitHub Copilot — Headless / Web Mode
+
+This section describes how to use GitHub Copilot as an agent for this memory system when you have **no local IDE or terminal** (phone app, browser only).
+
+### How Copilot runs in headless mode
+
+When you assign an issue to `@copilot` on github.com (or via the GitHub mobile app), GitHub spins up an ephemeral cloud sandbox, runs the steps in `.github/copilot-setup-steps.yml` to install dependencies, then starts the MCP server defined in `.vscode/mcp.json` so that Copilot's agent can call `search_brain`, `add_memory`, and `refactor_memory` exactly as it would in a local VS Code session.
+
+### Workflow (phone / web — no local env required)
+
+1. **Open github.com** (or the GitHub mobile app) and navigate to this repository.
+2. **Create a new Issue** describing the memory task, e.g.:
+   - *"Add a note about my decision to use Postgres for the analytics pipeline."*
+   - *"Summarise all journal entries tagged `lancedb` from the last week."*
+   - *"Refactor `projects/2025-06-15-open-brain-architecture.md` to reflect the new folder layout."*
+3. **Assign the issue to `@copilot`** (Assignees → Copilot).
+4. Copilot will:
+   - Set up the Python environment via `copilot-setup-steps.yml`.
+   - Start `mcp_server.py` (stdio transport) as configured in `.vscode/mcp.json`.
+   - Bulk-index all existing `.md` files into a fresh LanceDB instance.
+   - Execute the requested task using the MCP tools.
+   - Open a Pull Request with the resulting file changes.
+5. **Review and merge** the PR directly from github.com or the mobile app.
+
+### Limitations in headless mode
+
+| Limitation | Explanation |
+|---|---|
+| LanceDB index is ephemeral | The `.lancedb/` folder is excluded from git. Each agent session rebuilds the index from `.md` files. Retrieval is still fast for typical repo sizes. |
+| No persistent background watcher | The file-watcher only runs for the lifetime of the agent session. |
+| Git push requires a PAT | Ensure the repository's `GITHUB_TOKEN` (provided automatically in the sandbox) has write access, or grant Copilot write permission under **Settings → Copilot → Coding agent**. |
+
+### MCP configuration reference
+
+The `.vscode/mcp.json` file is the single source of truth for the MCP server in both IDE and headless contexts:
+
+```json
+{
+  "servers": {
+    "open-brain": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${workspaceFolder}/mcp_server.py"]
+    }
+  }
+}
+```
+
+To pass a custom LanceDB path add `"--db-path", "/tmp/.lancedb"` to the `args` array.

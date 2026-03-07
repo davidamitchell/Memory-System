@@ -1,0 +1,39 @@
+# copilot-setup-steps.yml
+#
+# Prepares the GitHub Copilot coding-agent sandbox with everything the
+# Open-Brain MCP server needs to run.  These steps execute before the
+# agent starts working on any task, so the MCP server (and its embedding
+# model) are ready the moment Copilot begins a session.
+#
+# Reference:
+#   https://docs.github.com/en/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent
+
+steps:
+  # ------------------------------------------------------------------
+  # 1. Python runtime
+  # ------------------------------------------------------------------
+  - name: Set up Python 3.11
+    uses: actions/setup-python@v5
+    with:
+      python-version: "3.11"
+
+  # ------------------------------------------------------------------
+  # 2. Install the Open-Brain MCP server dependencies
+  # ------------------------------------------------------------------
+  - name: Install Open-Brain dependencies
+    run: pip install --upgrade pip && pip install -r requirements.txt
+
+  # ------------------------------------------------------------------
+  # 3. Pre-warm the embedding model
+  #
+  #    sentence-transformers downloads the BAAI/bge-small-en-v1.5 model
+  #    from HuggingFace Hub on first use (~130 MB).  Downloading it here
+  #    means the first call_tool() invocation won't block.
+  # ------------------------------------------------------------------
+  - name: Pre-warm BAAI/bge-small-en-v1.5 embedding model
+    run: |
+      python - <<'EOF'
+      from sentence_transformers import SentenceTransformer
+      SentenceTransformer("BAAI/bge-small-en-v1.5")
+      print("Embedding model cached successfully.")
+      EOF

@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "open-brain": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${workspaceFolder}/mcp_server.py"],
+      "env": {}
+    }
+  }
+}

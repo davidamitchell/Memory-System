@@ -74,6 +74,74 @@ python mcp_server.py --repo-path /path/to/repo --db-path /path/to/.lancedb
 
 **Cursor** — add the same block under `mcp` in your Cursor settings.
 
+**GitHub Copilot (VS Code)** — the `.vscode/mcp.json` file in this repository is picked up automatically. Enable MCP in VS Code settings:
+
+```json
+{
+  "github.copilot.chat.mcp.enabled": true
+}
+```
+
+---
+
+## GitHub Copilot in Headless Mode (Web / Mobile)
+
+You can interact with this memory system from **github.com or the GitHub mobile app** — no local IDE or terminal required.
+
+### How it works
+
+1. GitHub spins up an ephemeral cloud sandbox for the Copilot coding agent.
+2. `.github/copilot-setup-steps.yml` installs dependencies and pre-warms the embedding model.
+3. `.vscode/mcp.json` tells Copilot how to launch `mcp_server.py` (stdio transport).
+4. The agent can then call all three MCP tools (`search_brain`, `add_memory`, `refactor_memory`).
+
+### Step-by-step
+
+1. Open this repository on **github.com** (or the mobile app).
+2. Go to **Issues → New issue** and describe your memory task.
+3. In the **Assignees** panel, assign the issue to **Copilot**.
+4. Copilot opens a session, runs `copilot-setup-steps.yml`, and works on the task.
+5. It opens a **Pull Request** with the resulting `.md` file changes.
+6. Review and merge the PR from the browser or phone.
+
+### copilot-setup-steps.yml
+
+The file `.github/copilot-setup-steps.yml` configures the sandbox:
+
+```yaml
+steps:
+  - name: Set up Python 3.11
+    uses: actions/setup-python@v5
+    with:
+      python-version: "3.11"
+
+  - name: Install Open-Brain dependencies
+    run: pip install --upgrade pip && pip install -r requirements.txt
+
+  - name: Pre-warm BAAI/bge-small-en-v1.5 embedding model
+    run: |
+      python - <<'EOF'
+      from sentence_transformers import SentenceTransformer
+      SentenceTransformer("BAAI/bge-small-en-v1.5")
+      EOF
+```
+
+### MCP configuration
+
+`.vscode/mcp.json` — works for both VS Code Copilot and the headless coding agent:
+
+```json
+{
+  "servers": {
+    "open-brain": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${workspaceFolder}/mcp_server.py"]
+    }
+  }
+}
+```
+
 ---
 
 ## Repository Layout
