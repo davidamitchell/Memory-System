@@ -45,6 +45,18 @@ Applied six targeted updates to `.github/copilot-instructions.md` to remove cont
 
 ---
 
+## 2026-03-08 — Merge-conflict audit and branch hygiene (W-0002)
+
+Audited all open pull requests against `main`. Only one open PR existed at the time of this session (PR #7 — this branch). All earlier PRs (#1–#6) had already been merged or closed. The current branch (`copilot/clean-up-merge-conflicts`) is a single clean commit ahead of `main` with no conflicts. No rebases or fixup commits were needed. Marked W-0002 as done in `BACKLOG.md`.
+
+**Mini-Retro**
+1. Did the process work? Yes — systematic enumeration of open PRs via GitHub MCP confirmed there was nothing to resolve.
+2. What slowed down or went wrong? The shallow clone meant `git fetch --unshallow` was needed before seeing full branch history; this is minor but worth noting.
+3. What single change would prevent this next time? Nothing actionable — the task is complete. The scheduled-workflow idea (W-0002 notes) is still worth exploring for future prevention.
+4. Is this a pattern? Yes — same pattern observed in the headless-mode PR (see 2026-03-07 retro). W-0002 now closed.
+
+---
+
 ## 2026-03-08 — Mobile capture discovery backlog (W-0003–W-0015) and doc validation
 
 Added 13 discovery backlog items (W-0003 through W-0015) covering all viable mobile capture and retrieval paths: Slack bot, Claude iOS MCP, ChatGPT Actions, Gemini/Google ecosystem, Grok/X DM bot, iOS Shortcuts + GitHub API, Raycast/Alfred, `remember` CLI, Telegram bot, `inbox/` folder, Apple Watch dictation, self-hosted MCP server options, and LanceDB index rebuild evaluation. Fixed W-0002 duplicate `### Notes` / `---` formatting artifact. Fixed CHANGELOG.md duplicate [Unreleased] entries and added mobile capture changelog entry. Fixed stale `AGENTS.md` link in `projects/2026-03-07-copilot-headless-mode.md`. Added ADR index table to `docs/adr/README.md`. Strengthened archived header in `getting-started-prompt.md`.
