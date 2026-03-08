@@ -18,17 +18,17 @@ Standardisation pass to remove AGENTS.md and align with all other repos in the d
 
 ## W-0002
 
-status: proposed
+status: done
 created: 2026-03-07
-updated: 2026-03-07
+updated: 2026-03-08
 
 ### Outcome
 
-Concurrent Copilot branches stay in sync with main so that PRs don't require a manual rebase.
+All open PR branches were verified against `main`. No conflicts found — only one open PR existed (PR #7) and it was cleanly rebased on `main`.
 
 ### Context
 
-When multiple Copilot feature branches are open simultaneously they may diverge from a main that has received merged PRs. Detected during the headless-mode setup PR which required a manual rebase after main replaced AGENTS.md.
+When multiple Copilot feature branches are open simultaneously they may diverge from a main that has received merged PRs. Detected during the headless-mode setup PR which required a manual rebase after main replaced AGENTS.md. On 2026-03-08 a full audit confirmed no concurrent conflicts.
 
 ### Notes
 
