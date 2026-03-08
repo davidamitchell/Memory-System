@@ -80,6 +80,6 @@ This file is picked up automatically by:
 
 ## Related
 
-- [AGENTS.md](../AGENTS.md) — AI agent constitution and headless-mode section 9
+- [`.github/copilot-instructions.md`](../.github/copilot-instructions.md) — AI agent constitution and headless-mode section 15
 - [README.md](../README.md) — Quick-start and MCP configuration reference
 - [getting-started-prompt.md](../getting-started-prompt.md) — Original architecture PRD

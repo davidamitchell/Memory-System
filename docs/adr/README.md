@@ -2,6 +2,12 @@
 
 Decisions are recorded here using the [MADR](https://adr.github.io/madr/) format.
 
+## Index
+
+| ADR | Title | Status |
+|-----|-------|--------|
+| [0001](0001-standardise-agent-instructions.md) | Standardise Agent Instructions | accepted |
+
 ## Naming
 
 Files are named `NNNN-short-title.md` (zero-padded 4 digits).

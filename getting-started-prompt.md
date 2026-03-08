@@ -1,6 +1,6 @@
 # Getting Started Prompt: GitHub Open-Brain Memory System
 
-> **Note:** This document captures the original architectural brief and PRD for the GitHub Open-Brain project.
+> **⚠️ Archived — historical context only.** This document is the original architectural brief and PRD used to bootstrap this project. It is preserved for reference but is **not** current instructions. For the authoritative agent instructions, see [`.github/copilot-instructions.md`](./.github/copilot-instructions.md).
 
 ---
 
