@@ -7,6 +7,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- `BACKLOG-v2.md` — implementation-ready roadmap (W-0100–W-0110) with Vision, Architecture, Research Cross-Reference, Outstanding Discovery sections, and 11 shaped work items across 5 phases
 - `BACKLOG.md` items W-0003 through W-0015 — mobile capture and retrieval discovery backlog (Slack bot, Claude iOS, ChatGPT Actions, Gemini, Grok/X, iOS Shortcuts, Raycast/Alfred, `remember` CLI, Telegram bot, `inbox/` folder, Apple Watch dictation, self-hosted MCP options, LanceDB rebuild evaluation)
 - `.github/copilot-setup-steps.yml` — bootstraps Copilot's cloud sandbox (Python 3.11, pip deps, pre-warmed embedding model)
 - `.vscode/mcp.json` — MCP server configuration for VS Code Copilot and the headless coding agent
