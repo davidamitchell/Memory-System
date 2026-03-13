@@ -66,3 +66,23 @@ Added 13 discovery backlog items (W-0003 through W-0015) covering all viable mob
 2. What slowed down or went wrong? CHANGELOG.md had duplicate [Unreleased] entries from a prior session; required careful deduplication to avoid losing content.
 3. What single change would prevent this next time? A lint check or note in the CHANGELOG template reminding to deduplicate before adding new entries would prevent accumulation of duplicate blocks.
 4. Is this a pattern? The duplicate CHANGELOG entries appear to be a one-off from a previous PR merge. Watch for it on future PRs that touch CHANGELOG.md.
+
+---
+
+## 2026-03-13 — BACKLOG-v2.md — implementation-ready roadmap
+
+Created `BACKLOG-v2.md` as a complete, shaped build plan for the future of the memory system. The file contains a Vision section, an Architecture section (with plain-text layered diagram), a Research Cross-Reference table, an Outstanding Discovery section, and 11 atomic work items (W-0100–W-0110) across 5 phases:
+
+- Phase 1 — Fix the foundation: W-0100 (pre-computed embeddings, cold-start fix) and W-0101 (Model2Vec evaluation)
+- Phase 2 — Frictionless capture: W-0102 (inbox/ folder), W-0103 (triage automation), W-0104 (iOS Shortcut), W-0105 (CLI remember/recall)
+- Phase 3 — Retrieval quality: W-0106 (hybrid search), W-0107 (related-memories linking)
+- Phase 4 — Async capture channels: W-0108 (Telegram bot), W-0109 (Slack bot)
+- Phase 5 — Infrastructure: W-0110 (self-hosted MCP server)
+
+`BACKLOG.md` was left untouched as the historical record of the discovery agenda. Updated CHANGELOG.md under [Unreleased].
+
+**Mini-Retro**
+1. Did the process work? Yes — the issue was well-specified with phases, format requirements, and partial content for the first two items. The structure from `BACKLOG.md` provided a clear format template.
+2. What slowed down or went wrong? The problem statement was truncated mid-W-0102, requiring extrapolation of the acceptance criteria and all subsequent items. The extrapolation was grounded in the existing BACKLOG.md discovery items (W-0008 through W-0015) and the stated system goals.
+3. What single change would prevent this next time? Providing the full content of W-0102 and a list of intended subsequent item IDs in the issue would have removed all ambiguity about scope.
+4. Is this a pattern? Truncated issue descriptions have appeared before. Worth noting in the backlog that issue specifications should be written to fit within the issue body limit or split across comments.
