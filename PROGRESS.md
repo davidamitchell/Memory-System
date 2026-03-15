@@ -86,3 +86,22 @@ Created `BACKLOG-v2.md` as a complete, shaped build plan for the future of the m
 2. What slowed down or went wrong? The problem statement was truncated mid-W-0102, requiring extrapolation of the acceptance criteria and all subsequent items. The extrapolation was grounded in the existing BACKLOG.md discovery items (W-0008 through W-0015) and the stated system goals.
 3. What single change would prevent this next time? Providing the full content of W-0102 and a list of intended subsequent item IDs in the issue would have removed all ambiguity about scope.
 4. Is this a pattern? Truncated issue descriptions have appeared before. Worth noting in the backlog that issue specifications should be written to fit within the issue body limit or split across comments.
+
+---
+
+## 2026-03-15 — BACKLOG-v2.md — structured relational layer, human door, proactive agent
+
+Extended `BACKLOG-v2.md` with 5 new work items and 2 new phases, per issue "New items in backlog":
+
+- Phase 3 (NEW) — Structured relational layer: W-0111 (discovery: Supabase MCP architecture — two-server vs unified), W-0112 (implementation: Supabase Postgres tables for contacts, meetings, TBD)
+- Phase 4 (NEW) — Human door: W-0113 (auth model + Vercel skeleton), W-0114 (contacts view, inline editing, quick-capture form)
+- Phase 7 (was Phase 5) — Infrastructure: W-0115 added (proactive/scheduled agent, blocked by W-0114 in daily use)
+- Previous Phase 3–5 renumbered to Phase 5–7
+- W-0102 context updated: capture friction note requiring the human-door quick-capture form to use the GitHub Contents API write path (same as iOS Shortcut and CLI), not a Supabase write path
+- Research Cross-Reference and Outstanding Discovery tables updated
+
+**Mini-Retro**
+1. Did the process work? Yes — the issue was precisely specified with item content, format, and dependency rules. The existing item format in BACKLOG-v2.md provided a reliable template.
+2. What slowed down or went wrong? Phase renumbering required careful edits in multiple places (phase headers, Outstanding Discovery, Research Cross-Reference). No errors, but this is mechanical work that is easy to miss.
+3. What single change would prevent this next time? A script or table of contents in BACKLOG-v2.md that maps phase numbers to phase names would make renumbering visible at a glance — worth raising as a backlog item.
+4. Is this a pattern? Phase renumbering has now happened once. If it happens again, a structured phase index or YAML front-matter list of phases would eliminate the manual touch points.

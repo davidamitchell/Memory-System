@@ -60,17 +60,23 @@ The system is built in three layers. The **capture layer** contains every surfac
 | W-0011 (Telegram — still discovery-phase in BACKLOG.md) | W-0108 |
 | W-0003 (Slack — still discovery-phase in BACKLOG.md) | W-0109 |
 | W-0014 (Self-hosted MCP — still discovery-phase in BACKLOG.md) | W-0110 |
+| W-0111 (Supabase MCP integration — discovery in this file) | W-0112, W-0113, W-0114 |
+| W-0112 (Supabase Postgres tables — implementation in this file) | W-0113, W-0114, W-0115 |
+| W-0114 (Human door in daily use — implementation in this file) | W-0115 |
 
 ---
 
 ## Outstanding Discovery
 
-The following research must be completed before the indicated phases can begin. Each maps to an open item in `BACKLOG.md`.
+The following research must be completed before the indicated phases can begin. Each maps to an open item in `BACKLOG.md` or to a new discovery item in this file.
 
 | Discovery needed | Blocking | Source item |
 |---|---|---|
 | iOS Shortcut: GitHub API write path, naming, front-matter injection | W-0104 | W-0008 |
 | CLI: preferred implementation language, shell completion, git flow | W-0105 | W-0010 |
+| Supabase MCP integration architecture: two-server vs unified server | W-0112 | W-0111 |
+| Human door: auth model (magic link, GitHub OAuth, API key) | W-0114 | W-0113 |
+| Proactive agent: hosting (Supabase cron vs GitHub Actions), delivery channel | W-0115 | W-0115 |
 | Telegram bot: hosting options, webhook vs polling, token security | W-0108 | W-0011 |
 | Slack bot: incoming webhook, GitHub API write path, slash-command auth | W-0109 | W-0003 |
 | Self-hosted MCP: home server vs Railway vs Cloudflare Worker trade-offs | W-0110 | W-0014 |
@@ -186,6 +192,8 @@ Any memory can be captured without choosing a destination folder. Calling `add_m
 ### Context
 
 `2026-03-08-inbox-folder-capture-triage-pattern.md` identified that requiring a folder selection at capture time creates cognitive friction that discourages use. The minimum viable inbox file requires only a `captured_at` timestamp and raw content. Triage (moving files from `inbox/` to their permanent home) is a separate concern handled in W-0103. This item is a direct prerequisite for all capture-surface work (W-0104 iOS Shortcut, W-0105 CLI) because those surfaces must be able to write without prompting the user for a folder.
+
+The human-door web interface (Phase 4, W-0114) must include a quick-capture form — minimal fields, mobile-optimised — that writes directly to `inbox/` via the GitHub Contents API, following the same write path as the iOS Shortcut and CLI. This form must not introduce a separate Supabase write path for inbox captures; all narrative input flows through the git-backed markdown layer regardless of capture surface.
 
 ### Acceptance criteria
 
@@ -322,7 +330,178 @@ The terminal is the lowest-friction environment for developers. A `remember` / `
 
 ---
 
-## Phase 3 — Retrieval quality
+## Phase 3 — Structured relational layer
+
+> Extend the system with a Postgres-backed layer for structured record types that do not belong in the markdown/LanceDB layer.
+
+---
+
+## W-0111
+
+status: research-needed
+created: 2026-03-15
+updated: 2026-03-15
+blocks: [W-0112]
+blocked-by: []
+research: []
+assumptions:
+  - Supabase free tier provides sufficient Postgres capacity for a personal-scale structured record store (contacts, meetings)
+  - The MCP client configuration supports multiple simultaneous MCP servers if the two-server route is chosen
+  - RLS (Row Level Security) in Supabase provides sufficient access control for a single-owner personal system
+uncertainty:
+  - Whether two MCP servers in a single client config (e.g. `.vscode/mcp.json`) is cleanly supported by all target MCP clients (VS Code Copilot, Cursor, Claude iOS)
+  - The maintenance cost difference between operating the official Supabase MCP server vs adding SQL-backed tools to `mcp_server.py`
+  - Whether agent ergonomics are better with a unified tool surface (extended `mcp_server.py`) or a dedicated data-layer server
+
+### Outcome
+
+A documented architectural decision on how to expose Supabase Postgres to the MCP agent layer: either via the official Supabase MCP server as a second server in the client config, or by extending `mcp_server.py` with SQL-backed tools. The decision records trade-offs across maintenance cost, tool surface design, agent ergonomics, and multi-server client config cleanliness.
+
+### Context
+
+The markdown/LanceDB layer is optimised for unstructured, narrative knowledge — meeting notes, journal entries, project context. Structured record types (contacts with last_contact dates, recurring meetings with attendees, entities with typed fields) are a poor fit for free-text markdown: queries like "who haven't I contacted in 30 days?" require relational semantics, not semantic similarity. A Supabase Postgres layer provides SQL query capabilities, typed schemas, and RLS without adding operational burden (Supabase is managed). The question is whether to expose it via the official Supabase MCP server (a second MCP server alongside the memory MCP server) or to add SQL tools directly to `mcp_server.py`. Both approaches are viable; the trade-offs must be evaluated before any implementation begins.
+
+### Discovery needed before starting W-0112
+
+- Evaluate the official Supabase MCP server: what tools does it expose, what is its auth model, and how does it behave in VS Code, Cursor, and Claude iOS with multiple MCP servers configured?
+- Evaluate extending `mcp_server.py` with SQL-backed tools: what is the additional dependency surface (supabase-py or psycopg2), and how does it affect the server's test and deployment footprint?
+- Assess agent ergonomics: is it clearer for an agent to call `supabase.query_contacts()` via a dedicated server, or `memory.query_contacts()` via the unified server?
+- Assess two-MCP-server client config cleanliness: does `.vscode/mcp.json` support multiple servers cleanly, and do all target clients honour the full config?
+- Document findings and recommendation in `docs/adr/NNNN-supabase-mcp-integration-architecture.md` before starting W-0112.
+
+### Acceptance criteria
+
+- An ADR exists at `docs/adr/NNNN-supabase-mcp-integration-architecture.md` that records the chosen approach (two servers or unified server) with explicit reasoning covering: maintenance cost, tool surface design, agent ergonomics, and multi-server client config behaviour
+- The ADR documents which MCP clients were tested and the result of running two simultaneous MCP servers in each
+- A prototype or proof-of-concept (throwaway code, not production) was used to validate the chosen approach before the ADR was finalised — this is documented in the ADR
+- W-0112 is unblocked: the implementation approach is clear enough to begin schema design
+
+---
+
+## W-0112
+
+status: research-needed
+created: 2026-03-15
+updated: 2026-03-15
+blocks: [W-0113]
+blocked-by: [W-0111]
+research: []
+assumptions:
+  - Supabase free tier is sufficient for a single-user personal system (contacts, meetings at personal scale)
+  - Row Level Security (RLS) is enabled on all tables; service-role key is used only server-side
+  - The "one more TBD" record type beyond contacts and meetings will be identified during W-0111 discovery or early in this item
+  - Typed fields are preferred over JSONB blobs for the primary structured attributes (name, email, last_contact_date, etc.)
+uncertainty:
+  - The exact schema for each record type will depend on real usage patterns; starting minimal and adding columns is safer than over-designing upfront
+  - Whether the third structured record type (TBD) should be defined before schema migration or added in a follow-up
+
+### Outcome
+
+Supabase Postgres tables exist for contacts, meetings, and one additional structured record type (TBD), with typed fields and Row Level Security enabled. The integration with the MCP agent layer follows the architectural decision made in W-0111. The reasoning for why these record types live in Postgres rather than the markdown/LanceDB layer is documented.
+
+### Context
+
+Contacts and meetings are the canonical examples of data that does not belong in the markdown layer: a contact is a structured entity (name, email, phone, company, last_contact_date, notes) that needs to be queried relationally ("show me everyone I haven't emailed in 30 days"), not retrieved semantically. Meetings similarly have structured attributes (attendees, date, agenda, outcome) that benefit from typed queries. Storing these as markdown files produces retrieval noise (the LanceDB vector index does not understand "last_contact_date < 30 days ago") and makes updates error-prone (editing YAML front-matter in a markdown file is fragile). A Postgres layer separates the concern cleanly: structured data lives in Supabase, narrative context lives in LanceDB, and the agent can query both via the tool surface defined in W-0111.
+
+### Acceptance criteria
+
+- Supabase project exists and connection credentials are stored as repository secrets (not in source code)
+- `contacts` table exists with at minimum: `id`, `name`, `email`, `company`, `last_contact_date`, `notes`, `created_at`, `updated_at`; RLS enabled
+- `meetings` table exists with at minimum: `id`, `title`, `date`, `attendees` (array or FK), `agenda`, `outcome`, `created_at`; RLS enabled
+- A third structured table (type TBD during implementation) exists with typed fields and RLS enabled; its choice and reasoning are documented in `projects/`
+- An ADR or inline note explains why each of these record types belongs in Postgres rather than markdown
+- MCP tools for CRUD operations on all tables are available via the integration approach chosen in W-0111
+- At least one end-to-end test demonstrates: create a contact via MCP tool, query it back, update `last_contact_date`
+- Database schema is documented in `docs/` or `projects/` with the rationale for field choices
+
+---
+
+## Phase 4 — Human door
+
+> A visual web interface over the structured tables — the primary human-facing surface for the relational layer.
+
+---
+
+## W-0113
+
+status: research-needed
+created: 2026-03-15
+updated: 2026-03-15
+blocks: [W-0114]
+blocked-by: [W-0112]
+research: []
+assumptions:
+  - The web interface is a personal tool for a single authenticated user; multi-user support is out of scope
+  - Supabase Auth (magic link or OAuth) is the authentication provider, consistent with the Supabase stack chosen in W-0111 and W-0112
+  - Vercel is the deployment target (serverless, free tier for personal projects)
+uncertainty:
+  - Whether Supabase Auth magic link, GitHub OAuth, or a simple API key is the right auth model for a solo personal tool
+  - Whether Supabase RLS can be used directly from the Next.js/Vercel frontend with the anon key, or whether a server-side proxy is required
+
+### Outcome
+
+The auth model for the human-door web interface is decided and documented: which provider, what flow (magic link, OAuth, API key), and how Supabase RLS integrates with the frontend. A skeleton Vercel project exists with auth wired up but no UI beyond a login screen.
+
+### Context
+
+The human door is a lightweight read/write web interface over the structured Supabase tables created in W-0112. Before building any views, the auth model must be resolved: a misconfigured auth layer in a personal tool is a common source of accidental data exposure. Vercel is the deployment target because it provides zero-ops deploys from a GitHub repo, integrates with Next.js, and has a generous free tier. Supabase Auth is the natural choice given the Supabase stack, but the specific flow (magic link for frictionless solo use vs GitHub OAuth for familiar UX) needs evaluation.
+
+### Discovery needed before starting W-0114
+
+- Evaluate Supabase Auth options for a single-user personal tool: magic link, GitHub OAuth, and simple API key (bearer token via environment variable). Score each on: setup complexity, day-to-day UX, and risk of accidental exposure.
+- Confirm that Supabase RLS policies allow the frontend (using the anon key + user JWT) to read and write rows owned by the authenticated user, without needing a server-side proxy.
+- Set up the Vercel project, connect it to the repository, and configure environment variables (Supabase URL, anon key, auth secret).
+- Document the auth decision in `docs/adr/NNNN-human-door-auth-model.md`.
+
+### Acceptance criteria
+
+- An ADR exists at `docs/adr/NNNN-human-door-auth-model.md` documenting the chosen auth flow and the reasoning
+- A Vercel project is deployed from the repository with a login screen (no content beyond auth)
+- Supabase Auth is configured and a test login (magic link or OAuth) succeeds end-to-end from the Vercel deployment
+- RLS policies on the tables created in W-0112 are tested from the frontend context (anon key + user JWT)
+- The Vercel project URL is documented in `projects/`
+- No credentials or secrets are committed to the repository
+
+---
+
+## W-0114
+
+status: research-needed
+created: 2026-03-15
+updated: 2026-03-15
+blocks: [W-0115]
+blocked-by: [W-0113]
+research: []
+assumptions:
+  - The first view is a contacts list sorted by `last_contact_date` ascending (longest ago at the top) — the primary use case is surfacing who to reach out to
+  - Inline editing (click to edit a field, save on blur or enter) is sufficient for the first iteration; a full edit form is not required
+  - The interface is mobile-optimised (the primary use case is checking contacts on the go)
+  - A quick-capture form for inbox writes is included in this view, per the capture friction requirement in W-0102: minimal fields, mobile-optimised, writes to `inbox/` via the GitHub Contents API (same path as iOS Shortcut and CLI, not a Supabase write)
+uncertainty:
+  - Whether a quick-capture inbox form on the same page as the contacts view is the right UX, or whether a dedicated capture tab/route is better
+  - The exact fields visible in the contacts list without expanding a row
+
+### Outcome
+
+The human-door web interface has a contacts view that shows all contacts sorted by `last_contact_date` (ascending), supports inline field editing, and includes a mobile-optimised quick-capture form that writes directly to `inbox/` via the GitHub Contents API.
+
+### Context
+
+The primary job-to-be-done for the human door is: "show me who I haven't spoken to in a while, let me update the record without friction, and let me capture a quick note without switching context." The contacts-by-last-contact view directly serves the first two jobs. The quick-capture form serves the third — and it must write to `inbox/` via the GitHub Contents API (same path as the iOS Shortcut and CLI) rather than to Supabase, to preserve the principle that all narrative captures flow through the same git-backed markdown layer.
+
+### Acceptance criteria
+
+- The contacts view loads at the Vercel deployment URL and shows all contacts from the Supabase `contacts` table, sorted by `last_contact_date` ascending
+- Clicking a field in the contacts list makes it editable inline; saving writes to Supabase via the RLS-governed frontend client
+- `last_contact_date` is displayed in a human-readable relative format (e.g. "3 months ago")
+- A quick-capture form is present on the page: at minimum a text area and a submit button; on submit it creates a file in `inbox/` via the GitHub Contents API (authenticated with a PAT stored server-side or in the user's session, not hardcoded)
+- The quick-capture form is mobile-optimised: large tap targets, minimal fields, no folder-selection step
+- The interface is responsive and usable on an iPhone screen (375px viewport)
+- All acceptance criteria from W-0113 (auth, RLS) continue to pass
+
+---
+
+## Phase 5 — Retrieval quality
 
 > Improve the quality and usefulness of `search_brain` results.
 
@@ -397,7 +576,7 @@ The `## Related` section requirement in `.github/copilot-instructions.md` (§ 7)
 
 ---
 
-## Phase 4 — Async capture channels
+## Phase 6 — Async capture channels
 
 > Bring the memory system to the places where thoughts actually happen.
 
@@ -488,7 +667,7 @@ Slack is widely used in professional contexts; a `/remember` command lets team-r
 
 ---
 
-## Phase 5 — Infrastructure
+## Phase 7 — Infrastructure
 
 > Make the system accessible from anywhere, not just a local dev environment.
 
@@ -536,3 +715,47 @@ The current MCP server runs only over stdio and requires a local dev environment
 - End-to-end test: call `search_brain` and `add_memory` from a remote MCP client (not localhost)
 - The deployment setup (host, secrets, domain) is documented in `projects/` with rotation instructions
 - An ADR is written documenting the network transport choice and the authentication model
+
+---
+
+## W-0115
+
+status: research-needed
+created: 2026-03-15
+updated: 2026-03-15
+blocks: []
+blocked-by: [W-0114]
+research: []
+assumptions:
+  - The scheduled agent queries the Supabase structured tables (not LanceDB) for its flags — "contacts not reached in X days" is a SQL query, not a semantic search
+  - The agent surfaces flags via a familiar channel (GitHub issue, Telegram message, or email) — the delivery channel is a discovery decision
+  - The blocking dependency on W-0114 (human door in daily use) is intentional: a proactive monitor over a table that isn't being maintained is noise, not signal
+uncertainty:
+  - Whether Supabase Edge Functions cron, GitHub Actions scheduled workflow, or a separate always-on process is the right hosting approach
+  - The delivery channel (GitHub issue creation vs Telegram vs email) depends on which channel is actually checked daily; this is a usage pattern question
+  - Defining "actionable flag" thresholds (e.g. "hasn't contacted in 30 days") without real usage data risks producing too many or too few alerts
+
+### Outcome
+
+A scheduled agent runs on a defined cadence (daily or weekly), queries the Supabase structured tables for configurable flag conditions (e.g. contacts not reached in N days, upcoming meeting follow-ups overdue), and surfaces the flags via a chosen delivery channel — without requiring the human to ask first.
+
+### Context
+
+The human door (W-0113, W-0114) makes structured data maintainable. This item makes it proactive: instead of waiting to be asked, the agent monitors the data and pushes relevant flags to the human. The blocker (W-0114 in real daily use) is explicit and intentional — building a scheduler over data that isn't being maintained produces noise that trains the user to ignore it. Hosting options under consideration are Supabase Edge Functions cron (co-located with the data, no extra infrastructure) and GitHub Actions scheduled workflow (already-used infrastructure, familiar, but adds a workflow file). The delivery channel decision is deferred to discovery.
+
+### Discovery needed before starting implementation
+
+- Determine whether Supabase Edge Functions cron or a GitHub Actions scheduled workflow is the better host for a personal-scale daily check.
+- Identify the delivery channel: GitHub issue creation (visible in the repo), Telegram bot message (real-time on phone), or email. Score each on: daily visibility, friction to dismiss, and setup cost.
+- Define the initial set of flag conditions and their thresholds (e.g. last_contact_date > 30 days, meeting without outcome > 7 days old).
+- Document the design in `projects/YYYY-MM-DD-proactive-agent-design.md` before implementation.
+
+### Acceptance criteria
+
+- A scheduled process (Supabase Edge Function cron or GitHub Actions schedule) runs at a configured cadence (at minimum weekly)
+- The process queries the Supabase `contacts` table and identifies contacts whose `last_contact_date` is older than a configurable threshold
+- Flags are delivered via the chosen channel (GitHub issue, Telegram, or email) with enough context to act without opening a separate app
+- The flag threshold is configurable (environment variable or config file) without code changes
+- The agent does not fire if no flags meet the threshold — silence means all clear
+- The scheduling config and delivery channel are documented in `projects/` with rotation/update instructions
+- This item must not be started until W-0114 has been in daily use for at least two weeks (enforced by convention, documented here)
