@@ -72,7 +72,7 @@ def run(state: dict, repo_root: Path) -> dict:
         f"+{triples_added} triples, {triples_removed} removed"
     )
     logger.info("  version diff: %s", diff_summary)
-    print(diff_summary)  # Print to stdout per acceptance criteria
+    logger.info(diff_summary)
 
     return {
         **state,

@@ -159,12 +159,12 @@ def print_concept_card(data: dict) -> None:
         print(f"Tags       : {', '.join(data['tags'])}")
     if data["related"]:
         print(f"Related    : {' · '.join(data['related'])}")
-    h = data["evidence"]["hash"]
-    s = data["evidence"]["source"]
-    if h and s:
-        short_hash = h.replace("sha256:", "")[:12]
-        print(f"Evidence   : data/segments/{short_hash}….txt ({h[:20]}…)")
-        print(f"Source     : {s}")
+    content_hash = data["evidence"]["hash"]
+    source_doc = data["evidence"]["source"]
+    if content_hash and source_doc:
+        short_hash = content_hash.replace("sha256:", "")[:12]
+        print(f"Evidence   : data/segments/{short_hash}….txt ({content_hash[:20]}…)")
+        print(f"Source     : {source_doc}")
     print(bar)
 
 
