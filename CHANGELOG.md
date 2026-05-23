@@ -7,7 +7,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
-- `docs/adr/0004-provenance-model-and-control-plane.md` — six architectural principles, provenance layer (Extraction Activity, Processor Version, Assertion Lineage, Trust Metadata), control plane (five controls), Prepared Segment, refined 12-processor pipeline; complete PROV-O Turtle example
+- `docs/design/build-loop-harness.md` — full Build Loop Harness protocol: five phases (Entry, Plan, Execute, Close, Self-Improve), validation checklist, drift correction, self-correction, Mermaid diagram, open questions
+- `.github/copilot-instructions.md` §17 — condensed always-on Build Loop Harness reference with focus rules
+
+### Changed
+- `docs/design/README.md` — added `build-loop-harness.md` to the design index
+
+
 
 ### Changed
 - `docs/adr/0003-ontology-architecture.md` — marked superseded by ADR-0004

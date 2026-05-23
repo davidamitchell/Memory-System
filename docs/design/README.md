@@ -9,6 +9,7 @@ Design work happens here **before** implementation. Files in this folder are liv
 | Document | Description | Status |
 |----------|-------------|--------|
 | [ontology-system-design.md](./ontology-system-design.md) | Ontology-based memory architecture — components, processors, diagrams | draft |
+| [build-loop-harness.md](./build-loop-harness.md) | Build loop protocol for AI agents — focus, drift control, context management, self-improvement | draft |
 
 ## Conventions
 

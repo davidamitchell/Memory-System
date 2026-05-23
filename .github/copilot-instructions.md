@@ -315,6 +315,64 @@ Full requirements: [`definition_scheme.md`](../definition_scheme.md)
 
 ---
 
+## 17. Build Loop Harness
+
+Every session follows the **Build Loop Harness** defined in [`docs/design/build-loop-harness.md`](../docs/design/build-loop-harness.md). The full protocol lives there. This section is the condensed always-on reference.
+
+### The five-phase loop
+
+```
+ENTRY → PLAN → EXECUTE (loop) → CLOSE → SELF-IMPROVE
+```
+
+### Entry (before touching any file)
+
+1. State the task intent in **one sentence**.
+2. Read `BACKLOG.md` — is this task already tracked or superseded?
+3. Run `search_brain` with 2–3 queries covering the task domain.
+4. Identify applicable **skills** in `.github/skills/` — use them; do not re-derive.
+5. Check: does an existing file need refactoring rather than a new file?
+
+### Plan (before the first file change)
+
+- Decompose into a numbered checklist (≤ 7 items).
+- State the Definition of Done (see §7).
+- Name at least one risk or unknown.
+- Call `report_progress` with the checklist **before editing anything**.
+
+### Execute loop (per checklist item)
+
+- Make the **smallest valid change**.
+- Validate immediately: tests, links, front matter, tags, knowledge-graph health.
+- Commit: `memory: <description>`.
+- **Drift check**: re-read the one-sentence intent — still on track? If not, trim scope.
+- If stuck > 2 attempts: add to `BACKLOG.md`, skip item, move on.
+
+### Close (mandatory — a session without this is not done)
+
+1. Mini-Retro (four questions from §7) — then **act** on the answers.
+2. Append dated entry to `PROGRESS.md`.
+3. Update `CHANGELOG.md` if behaviour changed.
+4. Write ADRs for non-trivial decisions.
+5. Expand glossary for new terms.
+6. Verify the "Done" checklist from §7.
+7. Final `report_progress` push.
+
+### Self-improve
+
+After close, ask: was any harness phase slow, skipped, or unexpectedly valuable? If the harness itself needs changing, raise a backlog item and write an ADR.
+
+### Focus rules (non-negotiable)
+
+| Rule | Action |
+|---|---|
+| One task per session | Second tasks go to `BACKLOG.md` — not into this PR |
+| No orphan improvements | Unrelated improvements go to `BACKLOG.md` |
+| Skills before scratch work | Skill output is canonical — do not re-derive |
+| Scope declared at Entry | Out-of-scope changes require explicit justification in `report_progress` |
+
+---
+
 ## References
 
 1. [Model Context Protocol](https://modelcontextprotocol.io/) — the open standard powering the MCP tools in this repository.
@@ -323,3 +381,4 @@ Full requirements: [`definition_scheme.md`](../definition_scheme.md)
 4. [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — the format used for `CHANGELOG.md`.
 5. [`glossary/README.md`](../glossary/README.md) — index of all defined terms referenced in this file.
 6. [`definition_scheme.md`](../definition_scheme.md) — the schema for all definition files.
+7. [`docs/design/build-loop-harness.md`](../docs/design/build-loop-harness.md) — full Build Loop Harness protocol.

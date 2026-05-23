@@ -2,6 +2,18 @@
 
 ---
 
+## 2026-05-23 — Build Loop Harness
+
+Defined the Build Loop Harness: a seven-phase protocol (Entry, Plan, Execute, Validate, Correct, Close, Self-Improve) that keeps agents focused, reduces drift, manages context, leverages skills, and produces a self-correcting and self-improving workflow. Created `docs/design/build-loop-harness.md` with the full protocol including a Mermaid flowchart, validation checklist, focus rules, and open questions. Added §17 to `.github/copilot-instructions.md` as a condensed always-on reference. Updated `docs/design/README.md` index and `CHANGELOG.md`.
+
+**Mini-Retro**
+1. Did the process work? Yes — the existing repo conventions (§7 mini-retro, §13 chain-of-thought, skills protocol, backlog) gave clear anchoring points for each phase of the harness, so the design was coherent with no contradictions.
+2. What slowed down or went wrong? Nothing significant. The main design decision was whether to embed the full harness in `copilot-instructions.md` or split it into a design document with a summary in instructions; the split approach keeps instructions scannable while preserving full detail.
+3. What single change would prevent friction next time? The harness itself is now the answer — Entry's "state intent in one sentence" gate would have caught any ambiguity at the start.
+4. Is this a pattern? Yes — structural meta-work (defining how to do work) benefits from the same loop as object-level work. The harness is now self-referential: it was produced using the conventions it encodes.
+
+---
+
 ## 2026-05-23 — ADR-0004: provenance model and control plane
 
 Reviewed ADR-0004 draft. Applied feedback: added standard MADR sections (Context, Decision, Consequences, References), made ADR-0004 supersede ADR-0003 explicitly, completed the PROV-O Turtle provenance example, defined Trust Metadata fields (source_authority, freshness_date, approval_state) with confidence weighting deferred to Open Questions, added Resolver Service identifier scheme (SHA-256 content URIs), added Prepared Segment to the document model. Updated design document to v2 with the full provenance and control plane architecture, 12-processor pipeline, new component diagram, updated sequence diagram. Marked ADR-0003 superseded.
