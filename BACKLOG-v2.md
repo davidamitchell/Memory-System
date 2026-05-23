@@ -762,9 +762,11 @@ The human door (W-0113, W-0114) makes structured data maintainable. This item ma
 
 ---
 
-## Phase 8 — Ontology pipeline: thin slice
+## Phase 8 — Ontology pipeline: thin slices
 
-> End-to-end vertical slice through all 12 processors. Each item in this phase goes *deep and thin*: it touches every layer of the pipeline with the minimum viable implementation rather than perfecting any one layer. The goal is a working seam from raw file to exported Turtle before any processor is hardened.
+> Two additive vertical slices through all 12 processors. Each goes **deep and thin**: every processor fires on every run; none are skipped or deferred to a later item. The goal is a working seam from raw markdown to a CLI-queryable ontology before any processor is hardened.
+>
+> **Reversibility principle:** every technical choice in this phase is made to keep all doors open. rdflib can be swapped for any SPARQL endpoint without changing a single query. Turtle can be converted to JSON-LD or OWL in one call. The `ms:` namespace can be aligned to BFO or schema.org incrementally via `owl:equivalentClass`. Rule-based domain classification can be replaced by an LLM without changing the processor interface. Nothing in this phase requires a server, a cloud service, or an irreversible schema commitment.
 
 ---
 
@@ -777,42 +779,74 @@ blocks: [W-0201]
 blocked-by: []
 research: [docs/adr/0004-provenance-model-and-control-plane.md, docs/design/ontology-system-design.md]
 assumptions:
-  - rdflib is sufficient for the in-memory graph in the first iteration (no triple-store required)
-  - Glossary files are the right input type for the thin slice: they are small, structured, one-concept-per-file, and already curated
-  - The local filesystem is the document store and segment store for this iteration (no object storage service needed)
-  - A single body paragraph = one Prepared Segment is the right granularity for glossary files; multi-segment splitting is deferred to W-0201
-  - Domain classification can be rule-based (path prefix `glossary/` → domain = `Vocabulary`) without ML for this iteration
-  - Version "commit" means writing a numbered `.ttl` file to `data/ontology/`; git commit of that file is the immutable snapshot
-  - Confidence weighting in Trust Metadata is deferred (Open Question from ADR-0004); `source_authority=authoritative` is hard-coded for glossary files in this iteration
+  - rdflib is sufficient for the in-memory graph (no triple-store server required); if performance is unacceptable at 26 files, W-0201 migrates — but this is tested, not assumed
+  - Glossary files (26 files, one concept each, structured front-matter with title/tags/related/aliases) are the right input corpus: curated, small, already linked to each other
+  - The `related:` front-matter field contains the graph edges; extracting them as `ms:relatedTerm` triples is free and high-value
+  - One body paragraph = one Prepared Segment (SHA-256 addressed); sub-paragraph splitting is deferred
+  - Domain classification is rule-based: path prefix `glossary/` → domain signal `Vocabulary` (ML/LLM classification is deferred but the processor interface is stable)
+  - Version "commit" = write a numbered `.ttl` file to `data/ontology/`; the git commit of that file is the immutable snapshot
+  - Confidence weighting is deferred (Open Question Q1 from ADR-0004); `source_authority=authoritative` is assigned to all glossary files in this iteration
+  - The CLI query tool uses SPARQL SELECT via rdflib; the same `.rq` files will work unchanged against any external SPARQL endpoint (Oxigraph, Fuseki, AllegroGraph) when the store is upgraded
+reversibility:
+  - rdflib → any SPARQL endpoint: zero query changes; only the graph load call changes
+  - Turtle → JSON-LD: one `rdflib.Graph().serialize(format="json-ld")` call
+  - `ms:` namespace → BFO/schema.org alignment: add `owl:equivalentClass` statements; existing triples remain valid
+  - Rule-based domain → LLM domain: swap the classifier function; processor 5's input/output interface is unchanged
+  - argparse CLI → MCP tool: the query functions are imported directly; only the entry point changes
+doors-kept-open:
+  - No triple-store server is introduced (keeps local-first)
+  - No confidence score is committed to storage (open question stays open)
+  - No upper ontology import (BFO/SUMO/schema.org) is added (alignment can happen later without migration)
+  - No custom non-RDF format is written (all tooling remains compatible)
 uncertainty:
-  - Whether rdflib's in-memory graph performance is acceptable when the full glossary (30+ files) is loaded; if not, W-0201 will move to a persistent store
-  - Whether the SHA-256 segment URI scheme (`sha256:<hex>`) is stable enough to use as the basis for the Resolver Service, or whether a content-addressed store (e.g. Git object store) should be used instead
+  - Whether rdflib in-memory holds at 26 files (measured in this slice — if not, W-0201 adds Oxigraph)
+  - Whether `ms:relatedTerm` edges form a connected graph or produce isolated islands (measured by the CLI query output)
 
 ### Outcome
 
-A single Python script (`pipeline/run_pipeline.py`) accepts one glossary `.md` file as input and produces a valid Turtle file (`data/ontology/v0001.ttl`) containing one concept triple with full PROV-O provenance. All 12 processors from ADR-0004 fire in sequence; processors with no work to do in this iteration (Reconciliation, Alignment Governance) execute as explicit no-ops with a log line.
+`pipeline/run_pipeline.py glossary/vector-embedding.md` runs end-to-end through all 12 processors and produces `data/ontology/v0001.ttl`. `pipeline/query.py "vector embedding"` prints a concept card to the terminal. Both commands complete in under 5 seconds. The Turtle file is inspectable by eye and parseable by any RDF tool.
+
+**What this unlocks:** the first time the system produces a human-readable, machine-queryable representation of a concept that traces back to its source document. Every processor is wired; none are hypothetical.
+
+**Experiments answered by this slice:**
+- **Q7 (representation format):** does rdflib hold as the working representation? Answered by whether the slice passes or requires a workaround.
+- **Q6 (upper ontology seeding):** do the 26 glossary terms find homes in a minimal `ms:VocabularyDomain` node, or does BFO vocabulary appear immediately necessary? Answered by writing the first domain node and observing friction.
 
 ### Context
 
-ADR-0004 defined a 12-processor pipeline and a provenance model. Until a single file can flow end-to-end and produce a verifiable Turtle output, every architectural decision remains untested. This item is the "elephant carpaccio" first slice: it validates the seam between all layers — sourcing, preparation, segmentation, metadata, domain classification, concept extraction, ontology build, validation, reconciliation, version commit, and export — using the simplest possible implementation of each. It answers Open Question Q7 (internal representation format) by building with rdflib and observing whether it holds.
+ADR-0004 defined the pipeline and provenance model conceptually. Until one file flows end-to-end to a queryable output, every decision is theoretical. This slice validates the seam. It deliberately uses `glossary/vector-embedding.md` as the input because that file has rich `related:` edges (4 links), aliases, and a body that is easy to verify by eye. The CLI query is included in this slice — not deferred — because "a Turtle file exists" is not user-visible value; "I can type a term and see its card" is.
 
-The input corpus is the existing `glossary/` folder (30+ curated `.md` files). The first run uses a single file (e.g. `glossary/vector-embedding.md`) so the output is inspectable by eye and correctable without running the full corpus.
+The `glossary/` folder contains 26 files with consistent YAML front-matter. Each has a `related:` field listing linked terms with `file:` references — these are the graph edges available for free. Extracting them here means W-0201 gets a real graph with ~50+ edges to traverse, not a flat list of isolated nodes.
 
 ### Acceptance criteria
 
-- `pipeline/run_pipeline.py <path-to-glossary-file>` runs without error
-- Each of the 12 processors is implemented as a distinct Python function or class; none are missing or silently skipped
+- `pipeline/run_pipeline.py <path>` runs without error against `glossary/vector-embedding.md`
+- All 12 processors are implemented as distinct Python functions/classes; none are absent or silently skipped; each logs its processor number and name on execution
 - The output `data/ontology/v0001.ttl` is valid Turtle (parseable by `rdflib.Graph().parse(...)`)
-- The output contains at minimum:
-  - One `ms:AssertionNode` triple for the concept label and definition
+- The output contains:
+  - One `ms:AssertionNode` per concept, with `rdfs:label` (title), `rdfs:comment` (first paragraph of body), and `ms:aliases` (from front-matter `aliases:`)
+  - `ms:relatedTerm` triples for each entry in the `related:` front-matter field (4 edges for `vector-embedding.md`)
+  - `ms:hasTag` triples for each tag in the `tags:` field
   - One `prov:wasGeneratedBy` link to an `ms:ExtractionActivity`
   - One `prov:used` link from the activity to the `ms:PreparedSegment`
-  - The segment carries a `ms:contentHash` value (`sha256:<hex>` of the segment text)
-- Processor 9 (Consistency Validation) produces a validation report (even if it contains zero conflicts)
-- Processor 10 (Reconciliation) logs "no conflicts to reconcile" and exits cleanly
-- A `data/segments/<sha256-hex>.txt` file exists containing the raw segment text used as evidence
-- `pipeline/README.md` documents how to run the pipeline and describes each processor's role
-- All acceptance criteria are verified by a single integration test (`tests/test_pipeline_thin_slice.py`) that runs the pipeline against `glossary/vector-embedding.md` and asserts the Turtle output is valid and contains the required triples
+  - The segment carries `ms:contentHash` (`sha256:<hex>` of the body text) and `ms:sourceDocument` (relative path to the `.md` file)
+- Processor 9 (Consistency Validation) produces a validation report with zero conflicts; the report is written to `data/reports/validation-v0001.json`
+- Processor 10 (Reconciliation) logs "no conflicts to reconcile — no-op" and exits cleanly
+- `data/segments/<sha256-hex>.txt` exists containing the raw body text used as evidence
+- `pipeline/query.py "vector embedding"` (exact or partial match on `rdfs:label` or `ms:aliases`) prints a terminal concept card:
+  ```
+  ── Vector Embedding ─────────────────────────────────────
+  Definition : A fixed-length list of numbers that encodes…
+  Aliases    : embedding, text embedding, vector representation
+  Tags       : embedding, vector, nlp, representation
+  Related    : Embedding Model · Semantic Search · Vector Database · LanceDB
+  Evidence   : data/segments/e3b0c4…txt (sha256:e3b0c4…)
+  Source     : glossary/vector-embedding.md
+  ─────────────────────────────────────────────────────────
+  ```
+- The SPARQL query used by `query.py` is saved as `pipeline/queries/concept_card.rq` (plain `.rq` file, portable to any SPARQL endpoint)
+- `pipeline/README.md` documents: how to run the pipeline, how to run a query, the processor list, and the `ms:` namespace prefix table
+- Integration test `tests/test_pipeline_w0200.py` runs the pipeline against `glossary/vector-embedding.md`, asserts valid Turtle, asserts the expected triple count (label + comment + 4 related + 4 tags + provenance chain = ≥12 triples), and asserts `query.py "vector embedding"` exits 0 and prints "Vector Embedding"
 
 ---
 
@@ -825,29 +859,58 @@ blocks: []
 blocked-by: [W-0200]
 research: [docs/adr/0004-provenance-model-and-control-plane.md]
 assumptions:
-  - The thin-slice output from W-0200 is correct and the Turtle format is stable enough to extend
-  - Running all 30+ glossary files through the pipeline will surface at least one domain classification edge case (e.g. a glossary file that straddles two domains)
-  - rdflib remains the in-memory representation (no store migration yet)
+  - The Turtle format established in W-0200 is stable; W-0201 only extends it (additive)
+  - All 26 glossary files share the same front-matter schema; no file will require a new processor branch
+  - The `related:` edges across all 26 files form a mostly-connected graph (the glossary was written with cross-links); this is tested, not assumed
+  - rdflib remains the in-memory representation; if load time exceeds 5 seconds for 26 files, the fix is Oxigraph (a drop-in replacement with the same SPARQL interface)
+reversibility:
+  - All W-0200 reversibility notes carry forward unchanged
+  - `--format json` output from `query.py` is the future MCP tool response shape; switching to MCP requires no format changes
+  - Version diff is a plain text log; it can be structured as JSON later without changing the Version Commit Processor interface
+doors-kept-open:
+  - No persistence layer change (still rdflib + file); the store upgrade decision is informed by the measured load time from this slice
+  - No domain classification upgrade (still rule-based); the multi-domain count from this slice informs whether ML is needed
+  - No upper ontology import added
 uncertainty:
-  - Whether 30+ files produce any Consistency Validation conflicts; if they do, the Reconciliation no-op from W-0200 must be replaced with a real resolver before W-0201 can pass
+  - Whether any of the 26 files triggers a duplicate-label conflict in Processor 9 (the glossary was hand-authored; near-synonyms like "ai-agent" and "agent-first" may share labels)
+  - Whether `ms:relatedTerm` edges across all 26 files form a connected graph or fragment into islands (measured by the `--related` query)
 
 ### Outcome
 
-The pipeline processes all files in `glossary/` in a single run and produces a single merged `data/ontology/v0002.ttl` containing all concept triples with provenance. The Version Commit Processor increments the version number and diffs the new graph state against `v0001.ttl`, logging additions and removals.
+`pipeline/run_pipeline.py glossary/` processes all 26 files, produces `data/ontology/v0002.ttl`, and prints a version diff. `pipeline/query.py --related "vector embedding"` traverses the graph and prints a two-hop concept neighbourhood. `pipeline/query.py --format json "mcp"` outputs JSON, demonstrating the pivot format for automated testing. Both commands complete in under 10 seconds.
+
+**What this unlocks:** the graph edges are live. You can navigate from any concept to its neighbours. The CLI is the first working query interface over the full ontology, and the JSON output format is the exact shape a future MCP tool or test harness will consume.
+
+**Experiments answered by this slice:**
+- **Q5 (multi-domain documents):** how many of the 26 files produce >1 domain signal? If >30%, a resolution strategy is load-bearing. Measured by Processor 5 log output.
+- **Q4 (version commit trigger):** the diff between v0001 (1 file) and v0002 (26 files) makes the per-commit vs batch question concrete — the diff output is the evidence.
+- **Q7 (representation format, continued):** rdflib load time for 26 files is measured; if >5 seconds, the upgrade path to Oxigraph is triggered here (not deferred to a future item).
 
 ### Context
 
-W-0200 validated the pipeline seam with one file. W-0201 deepens Processor 5 (Domain Classification) and Processor 9 (Consistency Validation) by running the full glossary corpus. It also answers Open Question Q5 (multi-domain documents) with real data: if any glossary file triggers >1 domain signal, the resolution strategy must be defined rather than deferred. The diff output from the Version Commit Processor provides the first real evidence for Open Question Q4 (commit trigger frequency).
+W-0200 validated the pipeline seam with one file and produced a queryable concept card. W-0201 makes the graph real by ingesting all 26 glossary files and wiring their cross-references. The `related:` links in the glossary amount to ~80 directed edges across 26 nodes — a real graph, not a toy. The `--related` traversal query is the first time the system demonstrates graph navigation rather than flat lookup. The `--format json` flag is deliberately included here as the testing pivot: every acceptance criterion that checks CLI output can be verified with `json.loads()` rather than terminal parsing.
+
+The version diff (v0001 → v0002) is the first concrete answer to the "what triggers a commit" open question: seeing 25 files → 25 × N triples added in one diff makes the batch-vs-per-ingest decision legible.
 
 ### Acceptance criteria
 
-- `pipeline/run_pipeline.py glossary/` (directory mode) processes all `.md` files in `glossary/` in a single pass
-- The output `data/ontology/v0002.ttl` is valid Turtle and contains one `ms:AssertionNode` per glossary file
-- The Version Commit Processor logs a diff: N triples added, 0 triples removed (first full-corpus run)
-- If any file produces >1 domain signal, the pipeline logs a warning and applies a documented tie-breaking rule (first signal wins, or most-specific signal wins — chosen and recorded in `pipeline/README.md`)
-- Processor 9 logs the number of consistency checks performed and passes with zero conflicts, or surfaces conflicts as structured output (not a crash)
-- The integration test suite is extended to cover the multi-file run and assert the triple count matches the number of glossary files processed
-- `pipeline/README.md` is updated to document the domain classification rule and the version diff format
+- `pipeline/run_pipeline.py glossary/` processes all 26 `.md` files in a single pass without error
+- The output `data/ontology/v0002.ttl` contains one `ms:AssertionNode` per glossary file (26 nodes) and all `ms:relatedTerm` edges from all `related:` fields (expected: ~80 directed edges)
+- The Version Commit Processor prints a diff to stdout: `v0001 → v0002: +N triples, 0 removed` and writes `data/reports/diff-v0001-v0002.json` with structured additions/removals
+- Processor 5 (Domain Classification) logs, for each file: the domain signal(s) detected and whether a tie-break was applied; if any file produced >1 signal, the tie-break rule is documented in `pipeline/README.md` and the count is logged as a summary line
+- Processor 9 (Consistency Validation) checks for duplicate `rdfs:label` values across all 26 nodes; if any are found, they are surfaced as structured conflicts in `data/reports/validation-v0002.json` (not a crash)
+- `pipeline/query.py --related "vector embedding"` traverses `ms:relatedTerm` edges up to two hops and prints a neighbourhood card:
+  ```
+  ── Vector Embedding (neighbours) ────────────────────────
+  Direct   : Embedding Model · Semantic Search · Vector Database · LanceDB
+  Via Embedding Model : BAAI/bge-small-en-v1.5 · …
+  ─────────────────────────────────────────────────────────
+  ```
+- `pipeline/query.py --format json "vector embedding"` outputs valid JSON with keys `label`, `definition`, `aliases`, `tags`, `related`, `evidence`; `json.loads()` on the output does not raise
+- `pipeline/query.py --format json --related "vector embedding"` outputs valid JSON with key `neighbours` (list of concept objects up to two hops)
+- The SPARQL queries used by `--related` and `--format json` are saved as `pipeline/queries/neighbours.rq` and `pipeline/queries/concept_json.rq`
+- `pipeline/README.md` is updated with: multi-file usage, `--related` and `--format` flag docs, the version diff format, and the domain tie-break rule (if applied)
+- Integration test `tests/test_pipeline_w0201.py` asserts: 26 nodes in `v0002.ttl`, `--format json` output is valid JSON, `--related` output contains at least one second-hop neighbour, and `diff-v0001-v0002.json` reports >0 additions
 
 ---
 
@@ -860,3 +923,6 @@ W-0200 validated the pipeline seam with one file. W-0201 deepens Processor 5 (Do
 5. [Model2Vec](https://github.com/MinishLab/model2vec) — the static embedding model evaluated in W-0101.
 6. [Model Context Protocol](https://modelcontextprotocol.io/) — the protocol underlying the MCP server architecture.
 7. [Ink & Switch: Local-first Software](https://www.inkandswitch.com/local-first/) — the design philosophy behind the zero-infrastructure goal.
+8. [rdflib](https://rdflib.readthedocs.io/) — the Python RDF library used in W-0200 and W-0201 for in-memory graph construction, SPARQL queries, and Turtle serialisation.
+9. [W3C PROV-O](https://www.w3.org/TR/prov-o/) — the provenance ontology used in the Turtle pattern (ADR-0004).
+10. [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/) — the query language used in `pipeline/queries/*.rq`; queries written here run unchanged against any SPARQL endpoint.
