@@ -23,7 +23,7 @@ Triage is the second step of the inbox pattern. After items are captured into `/
 
 Triage decouples the two concerns that create capture friction: getting the information into the system (must be instant) and organising it correctly (can be deferred). By separating these, the inbox pattern eliminates the "what folder does this go in?" decision from the capture moment.
 
-Triage can be run on demand (by asking an agent to "process the inbox") or on a schedule (a weekly automated agent pass). W-0103 in BACKLOG-v2.md covers the implementation of automated triage.
+Triage can be run on demand (by asking an agent to "process the inbox") or on a schedule (a weekly automated agent pass). W-0103 in BACKLOG.md covers the implementation of automated triage.
 
 ## Usage in This System
 
@@ -40,4 +40,4 @@ Triage can be run on demand (by asking an agent to "process the inbox") or on a 
 ## References
 
 1. [`BACKLOG.md` W-0012](../BACKLOG.md) — the original inbox/triage discovery item.
-2. [`BACKLOG-v2.md` W-0102–W-0103](../BACKLOG-v2.md) — shaped build items for inbox and triage automation.
+2. [`BACKLOG.md` W-0102–W-0103](../BACKLOG.md) — shaped build items for inbox and triage automation.

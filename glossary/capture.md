@@ -21,9 +21,9 @@ aliases: ["memory capture", "write", "add memory"]
 
 Capture is the process of getting information into the memory system. It covers every mechanism by which a new memory file is created: typing into a chat with an AI agent, running a CLI command, using an iOS Shortcut, sending a Telegram message, or having an agent autonomously capture a decision it just made.
 
-Capture friction — anything that makes it harder or slower to capture — is a primary engineering concern. A memory system that is effortful to write to will be underused. Design decisions in Open-Brain (the inbox pattern, the iOS Shortcut, the CLI `remember` command) are all motivated by reducing capture friction. The system treats startup latency, capture friction, and retrieval quality as first-class engineering concerns (BACKLOG-v2.md Vision).
+Capture friction — anything that makes it harder or slower to capture — is a primary engineering concern. A memory system that is effortful to write to will be underused. Design decisions in Open-Brain (the inbox pattern, the iOS Shortcut, the CLI `remember` command) are all motivated by reducing capture friction. The system treats startup latency, capture friction, and retrieval quality as first-class engineering concerns (BACKLOG.md Vision).
 
-The capture surface is the set of tools and interfaces through which memories enter the system. In the BACKLOG-v2.md architecture diagram, the capture layer sits above the MCP server.
+The capture surface is the set of tools and interfaces through which memories enter the system. In the BACKLOG.md architecture diagram, the capture layer sits above the MCP server.
 
 ## Usage in This System
 
@@ -40,5 +40,5 @@ The capture surface is the set of tools and interfaces through which memories en
 
 ## References
 
-1. [`BACKLOG-v2.md`](../BACKLOG-v2.md) — Vision and Architecture sections define capture as a first-class concern.
+1. [`BACKLOG.md`](../BACKLOG.md) — Vision and Architecture sections define capture as a first-class concern.
 2. [`BACKLOG.md` W-0008–W-0013](../BACKLOG.md) — discovery items covering all viable capture surfaces.

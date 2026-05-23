@@ -48,15 +48,15 @@ Distilled from PROGRESS.md mini-retros. Each entry states the class of problem a
 
 **Pattern:** Problem statements written in GitHub issue bodies can be truncated before all items are specified, forcing scope extrapolation.
 **Rule:** Write issue specs to fit the body limit, or split continuation across comments. Include a list of intended item IDs at the top.
-**Source:** 2026-03-13 — BACKLOG-v2.md implementation-ready roadmap
+**Source:** 2026-03-13 — BACKLOG.md implementation-ready roadmap
 
 ---
 
-## Phase renumbering in BACKLOG-v2.md
+## Phase renumbering in BACKLOG.md
 
 **Pattern:** Inserting new phases mid-document requires touching phase headers, the Outstanding Discovery table, and the Research Cross-Reference table — easy to miss one.
-**Rule:** Add a phase index or table of contents to `BACKLOG-v2.md` so renumbering touch-points are visible at a glance.
-**Source:** 2026-03-15 — BACKLOG-v2.md structured relational layer
+**Rule:** Add a phase index or table of contents to `BACKLOG.md` so renumbering touch-points are visible at a glance.
+**Source:** 2026-03-15 — BACKLOG.md structured relational layer
 
 ---
 

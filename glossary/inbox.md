@@ -23,7 +23,7 @@ The inbox is a frictionless capture drop zone. The design insight behind it is t
 
 The inbox is not for permanent storage. Files that land there are transient: a triage agent periodically reads the inbox, infers a folder (`meetings/`, `journal/`, `projects/`), writes appropriate front matter, and moves the file. The inbox thus decouples capture latency (must be zero) from classification quality (can be slow and careful).
 
-This pattern is described in BACKLOG.md W-0012 and shaped into a build item as W-0102 in BACKLOG-v2.md. It is not yet implemented.
+This pattern is described in BACKLOG.md W-0012 and shaped into a build item as W-0102 in BACKLOG.md. It is not yet implemented.
 
 ## Usage in This System
 
@@ -41,4 +41,4 @@ This pattern is described in BACKLOG.md W-0012 and shaped into a build item as W
 ## References
 
 1. [`BACKLOG.md` W-0012](../BACKLOG.md) — discovery item defining the inbox pattern.
-2. [`BACKLOG-v2.md` W-0102](../BACKLOG-v2.md) — shaped build item for inbox implementation.
+2. [`BACKLOG.md` W-0102](../BACKLOG.md) — shaped build item for inbox implementation.
