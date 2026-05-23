@@ -1,0 +1,3 @@
+- `mcp_server.py` is the MCP server for this repository. It exposes three tools (`search_brain`, `add_memory`, `refactor_memory`) to any MCP-compatible client.
+- `.vscode/mcp.json` configures VS Code and the GitHub Copilot coding agent to connect to `mcp_server.py` via stdio transport.
+- `.github/copilot-setup-steps.yml` ensures `mcp_server.py` is installed and the embedding model is pre-warmed before the Copilot agent begins its session.

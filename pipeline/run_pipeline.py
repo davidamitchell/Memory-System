@@ -59,6 +59,10 @@ PROCESSORS = [
     p12_export,
 ]
 
+# Split processors into extraction (per-file) and commit (once per batch)
+_EXTRACT_PROCESSORS = PROCESSORS[:8]   # p01–p08
+_COMMIT_PROCESSORS = PROCESSORS[8:]    # p09–p12
+
 
 def setup_logging(verbose: bool = False) -> None:
     level = logging.DEBUG if verbose else logging.INFO
@@ -93,6 +97,38 @@ def run_pipeline(source_path: str) -> dict:
     return state
 
 
+def run_pipeline_batch(source_paths: list[str]) -> dict:
+    """Run p01–p08 for each source (accumulating one graph), then p09–p12 once.
+
+    Processing all files into a single ontology version rather than
+    creating one version per file.
+
+    Args:
+        source_paths: Ordered list of source file paths relative to REPO_ROOT.
+
+    Returns:
+        Final pipeline state dict after version commit and export.
+    """
+    batch_state: dict = {}  # carries accumulated graph across files
+
+    for source_path in source_paths:
+        logging.info("  extracting: %s", source_path)
+        state: dict = {"source_path": source_path}
+        if "graph" in batch_state:
+            state["graph"] = batch_state["graph"]
+
+        for processor in _EXTRACT_PROCESSORS:
+            state = processor.run(state, REPO_ROOT)
+
+        batch_state["graph"] = state["graph"]
+
+    # Commit the accumulated graph as a single new version
+    for processor in _COMMIT_PROCESSORS:
+        batch_state = processor.run(batch_state, REPO_ROOT)
+
+    return batch_state
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Run the ontology pipeline on one or more .md files.",
@@ -119,15 +155,25 @@ def main() -> None:
 
     logging.info("Processing %d file(s) from %s", len(sources), args.path)
 
-    final_state = None
-    for source in sources:
-        rel_path = str(source.relative_to(REPO_ROOT))
-        logging.info("=== %s ===", rel_path)
-        final_state = run_pipeline(rel_path)
-        logging.info("  output: %s", final_state.get("output_path"))
+    rel_paths = [str(s.relative_to(REPO_ROOT)) for s in sources]
 
-    if final_state:
-        print(f"\nOutput: {final_state.get('output_path')}")
+    if len(rel_paths) == 1:
+        # Single file: full 12-processor run
+        final_state = run_pipeline(rel_paths[0])
+    else:
+        # Directory / multi-file: batch mode — accumulate all into one version
+        logging.info("Batch mode: extracting all files, then committing once")
+        final_state = run_pipeline_batch(rel_paths)
+
+    diff = final_state.get("diff", {})
+    if diff:
+        prev = diff.get("prev_tag", "initial")
+        next_ = diff.get("next_tag", "?")
+        added = diff.get("triples_added", 0)
+        removed = diff.get("triples_removed", 0)
+        print(f"\n{prev} → {next_}: +{added} triples, {removed} removed")
+
+    print(f"Output: {final_state.get('output_path')}")
 
 
 if __name__ == "__main__":

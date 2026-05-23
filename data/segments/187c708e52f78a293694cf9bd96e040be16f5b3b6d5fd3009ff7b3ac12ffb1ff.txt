@@ -1,0 +1,1 @@
+Triage can be run on demand (by asking an agent to "process the inbox") or on a schedule (a weekly automated agent pass). W-0103 in BACKLOG.md covers the implementation of automated triage.

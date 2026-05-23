@@ -1,0 +1,1 @@
+Every `.md` memory file must begin with:

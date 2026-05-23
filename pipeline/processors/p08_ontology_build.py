@@ -31,19 +31,28 @@ def _ms(local: str) -> URIRef:
 def run(state: dict, repo_root: Path) -> dict:  # noqa: ARG001
     """Build the RDF graph from the delta proposal.
 
-    Adds to state:
-    - ``graph``: rdflib.Graph containing all triples for this document
+    When ``state["graph"]`` already exists (batch mode, accumulating across
+    multiple documents), new triples are merged into it.  When no graph is
+    present a fresh one is created.
+
+    Adds/updates in state:
+    - ``graph``: rdflib.Graph containing all triples built so far
     """
     logger.info("[8/12] Ontology Build Processor — constructing RDF graph")
 
     dp = state["delta_proposal"]
     ea = state["extraction_activity"]
 
-    g = Graph()
-    g.bind("ms", MS)
-    g.bind("prov", PROV)
-    g.bind("rdfs", RDFS)
-    g.bind("xsd", XSD)
+    # Accumulate into existing graph (batch mode) or start fresh (single-file mode)
+    g: Graph = state.get("graph")
+    if g is None:
+        g = Graph()
+        g.bind("ms", MS)
+        g.bind("prov", PROV)
+        g.bind("rdfs", RDFS)
+        g.bind("xsd", XSD)
+    else:
+        logger.debug("  extending existing graph (%d triples)", len(g))
 
     # --- Assertion Node ---
     node = _ms(dp["assertion_id"])

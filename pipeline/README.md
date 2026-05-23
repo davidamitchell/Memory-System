@@ -39,7 +39,7 @@ python pipeline/query.py --related "vector embedding"
 | P-05 | **Domain Classification** | `source_path`, `front_matter` | `domain_signals` |
 | P-06 | **Domain Matching** | `domain_signals` | `domain`, `domain_tie_break_applied` |
 | P-07 | **Concept Extraction** | `front_matter`, `bold_definition`, `segments` | `delta_proposal`, `extraction_activity` |
-| P-08 | **Ontology Build** | `delta_proposal`, `extraction_activity`, `segments`, `domain`, `source_path` | `graph` |
+| P-08 | **Ontology Build** | `delta_proposal`, `extraction_activity`, `segments`, `domain`, `source_path` | `graph` (merged into existing graph if present in state) |
 | P-09 | **Consistency Validation** | `graph` | `validation_report`, `version_tag` |
 | P-10 | **Reconciliation** | `validation_report` | *(state unchanged if no conflicts)* |
 | P-11 | **Version Commit** | `graph`, `version_tag` | `version_number`, `diff` |
@@ -110,3 +110,5 @@ Portable `.rq` query files live in `pipeline/queries/`.
 | File | Description |
 |------|-------------|
 | `concept_card.rq` | Retrieve all concept-card fields for an `AssertionNode` |
+| `neighbours.rq` | Two-hop neighbourhood traversal via `ms:relatedTerm` |
+| `concept_json.rq` | Concept-card fields structured for JSON serialisation |

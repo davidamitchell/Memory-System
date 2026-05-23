@@ -1,0 +1,1 @@
+The capture surface is the set of tools and interfaces through which memories enter the system. In the BACKLOG.md architecture diagram, the capture layer sits above the MCP server.

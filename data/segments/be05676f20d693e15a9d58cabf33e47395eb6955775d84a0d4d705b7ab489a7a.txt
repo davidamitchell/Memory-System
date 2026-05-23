@@ -1,0 +1,1 @@
+Tags should be chosen from a controlled vocabulary rather than invented freely for each file. Proliferating near-synonym tags (e.g. `lancedb`, `lance-db`, `LanceDB`) degrade retrieval because queries must match the tag exactly. The agent constitution (§13, tag coherence) requires agents to check for existing near-synonym tags before saving a new one.

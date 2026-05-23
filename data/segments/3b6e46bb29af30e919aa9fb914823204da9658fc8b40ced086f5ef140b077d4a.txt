@@ -1,0 +1,1 @@
+The inbox is not for permanent storage. Files that land there are transient: a triage agent periodically reads the inbox, infers a folder (`meetings/`, `journal/`, `projects/`), writes appropriate front matter, and moves the file. The inbox thus decouples capture latency (must be zero) from classification quality (can be slow and careful).

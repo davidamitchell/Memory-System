@@ -1,0 +1,3 @@
+- Every memory file has `superseded_by: ""` in its front matter; the empty string means it is current.
+- When a file is superseded, set `superseded_by: "path/to/newer-file.md"` and add the visual callout at the top of the body.
+- Agents are required to check for and resolve contradictions on every write (see `.github/copilot-instructions.md` §7).

@@ -1,0 +1,1 @@
+Tools are the primary mechanism through which AI agents take actions in the world via MCP. Unlike a direct API call made by a human developer, an MCP tool call is initiated autonomously by the AI based on its understanding of the task — the human does not need to specify which tool to call or what arguments to pass.

@@ -158,7 +158,7 @@ The `glossary/` folder contains 26 files with consistent YAML front-matter. Each
 
 ## W-0201
 
-status: open
+status: done
 created: 2026-05-23
 updated: 2026-05-23
 blocks: []
@@ -183,7 +183,13 @@ uncertainty:
 
 ### Outcome
 
-`pipeline/run_pipeline.py glossary/` processes all 26 files, produces `data/ontology/v0002.ttl`, and prints a version diff. `pipeline/query.py --related "vector embedding"` traverses the graph and prints a two-hop concept neighbourhood. `pipeline/query.py --format json "mcp"` outputs JSON, demonstrating the pivot format for automated testing. Both commands complete in under 10 seconds.
+`pipeline/run_pipeline.py glossary/` processes all 26 files in batch mode (p01–p08 per file, p09–p12 once), producing a single unified ontology version. `pipeline/query.py --related "vector embedding"` traverses the graph and prints a two-hop concept neighbourhood. `pipeline/query.py --format json "mcp"` outputs JSON, demonstrating the pivot format for automated testing.
+
+**Measured results (2026-05-23):**
+- 26 `ms:AssertionNode` subjects, 83 `ms:relatedTerm` directed edges, 838 total triples
+- rdflib graph load time: 0.026 s (well below 5 s threshold — no Oxigraph upgrade needed)
+- 0 duplicate-label conflicts; 0 domain tie-breaks required (all 26 files → VocabularyDomain)
+- 16/16 acceptance tests passing (9 W-0200 + 7 W-0201)
 
 **What this unlocks:** the graph edges are live. You can navigate from any concept to its neighbours. The CLI is the first working query interface over the full ontology, and the JSON output format is the exact shape a future MCP tool or test harness will consume.
 

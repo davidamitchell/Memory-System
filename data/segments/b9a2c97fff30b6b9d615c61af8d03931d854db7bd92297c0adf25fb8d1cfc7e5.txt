@@ -1,0 +1,1 @@
+The copilot-instructions.md constitution explicitly frames the agent as the "Architect" of this repository — not just a passive consumer. This reflects an agent-first design: the system is built for AI agency, not retrofitted to accommodate it.

@@ -1,0 +1,1 @@
+LanceDB stores vectors — numerical representations of text or other data — and retrieves the nearest neighbours to a query vector using approximate nearest-neighbour (ANN) algorithms. The result is semantic search: documents that are conceptually similar to the query are returned, even if they share no exact keywords.

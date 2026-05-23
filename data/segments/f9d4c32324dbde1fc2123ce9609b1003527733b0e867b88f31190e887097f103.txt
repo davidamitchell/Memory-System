@@ -1,0 +1,3 @@
+- `/inbox` does not yet exist in the repository (pending W-0102).
+- Once implemented, any capture tool (iOS Shortcut, CLI, Telegram bot) can write to `/inbox` without needing to specify a folder.
+- The `add_memory` MCP tool will accept `folder: "inbox"` as a valid target.

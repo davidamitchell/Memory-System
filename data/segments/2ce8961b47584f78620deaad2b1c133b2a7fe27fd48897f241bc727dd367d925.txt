@@ -1,0 +1,7 @@
+Available skills (via `.github/skills/`):
+- `backlog-manager` — writing and maintaining backlog items.
+- `research` — structured research and synthesis.
+- `technical-writer` — documentation and prose quality.
+- `code-review` — reviewing code changes.
+- `strategy-author` — writing strategy documents.
+- `decisions` — writing Architecture Decision Records in MADR format.

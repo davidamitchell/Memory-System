@@ -1,0 +1,2 @@
+- All ADRs in `docs/adr/` use the MADR format.
+- The `decisions` skill in `.github/skills/decisions/SKILL.md` provides the canonical template and guidance for this repository.

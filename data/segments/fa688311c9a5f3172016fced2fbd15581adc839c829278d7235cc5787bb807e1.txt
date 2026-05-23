@@ -1,0 +1,1 @@
+These three tools are the complete public interface of `mcp_server.py`. Any AI client with MCP support can call them.

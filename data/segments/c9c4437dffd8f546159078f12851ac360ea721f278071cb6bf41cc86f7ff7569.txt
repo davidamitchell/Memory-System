@@ -1,0 +1,1 @@
+A memory file (or source document) is a plain Markdown file (`.md`) in one of the content folders (`/meetings`, `/journal`, `/projects`). It contains YAML front matter (title, date, tags, superseded_by) followed by free-form Markdown content.

@@ -1,0 +1,1 @@
+Because stdio transport requires the server to be a locally runnable process, it is the natural choice for local-first applications. There is no port to manage, no HTTP server to configure, and no authentication layer needed — the OS enforces process isolation. The client simply knows the command to run (`python mcp_server.py`) and the protocol takes care of the rest.

@@ -1,0 +1,1 @@
+The name "Open-Brain" distinguishes the system from closed, vendor-proprietary memory features (e.g. ChatGPT Memory, Claude Projects) that lock knowledge inside a single vendor's platform.

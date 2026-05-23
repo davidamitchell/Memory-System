@@ -1,0 +1,1 @@
+Vector databases range from fully managed cloud services (Pinecone, Weaviate Cloud) to embedded libraries (LanceDB, ChromaDB) that run in-process with no separate server. This system uses LanceDB because it is embedded and requires no hosted infrastructure.

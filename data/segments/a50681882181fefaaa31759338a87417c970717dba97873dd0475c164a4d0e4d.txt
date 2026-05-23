@@ -1,0 +1,1 @@
+For a memory system, local-first has concrete consequences: search should be fast and offline-capable (hence an embedded local vector database), writes should be instantaneous (no waiting for a remote API), and the data should be readable and editable without any application at all (hence plain Markdown files in a git repository).

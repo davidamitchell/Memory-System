@@ -1,0 +1,1 @@
+Capture is the process of getting information into the memory system. It covers every mechanism by which a new memory file is created: typing into a chat with an AI agent, running a CLI command, using an iOS Shortcut, sending a Telegram message, or having an agent autonomously capture a decision it just made.

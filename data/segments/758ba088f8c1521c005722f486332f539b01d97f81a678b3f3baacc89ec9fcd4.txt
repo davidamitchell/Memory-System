@@ -1,0 +1,1 @@
+A mini-retro is a short, structured self-assessment that every agent (and human contributor) must complete before closing a session or merging a PR. It is not optional. It answers four questions:

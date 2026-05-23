@@ -1,0 +1,1 @@
+Retrieval is the read side of the knowledge store: given a natural-language query (or a structured filter), return the most relevant knowledge. It is the counterpart to capture (writing knowledge in) and the operation that delivers value to the user or agent.

@@ -1,0 +1,1 @@
+Memory files are the human-authored input to the system. The 12-processor pipeline reads them, extracts Prepared Segments (SHA-256 content-addressed fragments), and derives typed assertions that are stored in the ontology graph. The memory file itself remains the source of truth; the ontology store is a derived, query-optimised representation.

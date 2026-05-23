@@ -1,0 +1,5 @@
+The core design goals are:
+- **Local-first**: data lives on the user's machine as plain Markdown files in a git repository.
+- **Agent-native**: AI agents can read and write knowledge autonomously via MCP tools.
+- **Zero recurring cost**: uses free, open-source components and GitHub free tier.
+- **Self-improving**: agents are constituted as "Architects", mandated to improve the system's structure as they work.

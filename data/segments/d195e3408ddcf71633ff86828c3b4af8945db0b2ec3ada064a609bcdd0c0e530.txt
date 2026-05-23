@@ -1,0 +1,1 @@
+Most vector databases use approximate nearest-neighbour (ANN) algorithms — such as HNSW or IVF — that trade a small accuracy loss for dramatically faster query times compared to exhaustive brute-force search. They typically support filtering by metadata alongside the vector similarity score.

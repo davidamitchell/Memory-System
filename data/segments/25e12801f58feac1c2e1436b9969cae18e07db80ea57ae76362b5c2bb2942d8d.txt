@@ -1,0 +1,1 @@
+Open-Brain is the project name for this repository's knowledge store. It is designed as the "single brain" across all AI tools a developer uses — rather than each AI assistant (Claude, Copilot, Cursor) maintaining its own private memory silo, Open-Brain provides one shared, agent-accessible knowledge base.
