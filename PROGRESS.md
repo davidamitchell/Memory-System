@@ -2,7 +2,37 @@
 
 ---
 
-## 2026-05-23 — BACKLOG-v2 realigned to ontology architecture
+## 2026-05-23 — W-0200: 12-processor ontology pipeline (first slice)
+
+Built the full end-to-end ontology pipeline for a single glossary file (`glossary/vector-embedding.md`).
+
+**Changes:**
+- `pipeline/processors/p01_sourcing.py` – p12_export.py: all 12 processors
+- `pipeline/run_pipeline.py`: CLI orchestrator (single file and directory mode)
+- `pipeline/query.py`: concept card CLI (`text` and `json` formats, `--related` flag)
+- `pipeline/queries/concept_card.rq`: portable SPARQL SELECT query
+- `pipeline/README.md`: processor table, namespace prefix table, output locations
+- `tests/test_pipeline_w0200.py`: 9 acceptance tests (all passing)
+- `data/ontology/v0001.ttl`: 35-triple Turtle snapshot
+- `data/reports/validation-v0001.json`: 0 conflicts
+- `data/reports/diff-initial-v0001.json`: +35 triples from baseline
+
+**Acceptance criteria met:**
+- `python pipeline/run_pipeline.py glossary/vector-embedding.md` → `data/ontology/v0001.ttl` ✓
+- ≥12 triples (actual: 35) ✓
+- `data/reports/validation-v0001.json` written, 0 conflicts ✓
+- `python pipeline/query.py "vector embedding"` prints concept card ✓
+- All 9 pytest tests pass ✓
+
+**Mini-Retro**
+1. Did the process work? Yes — 12 processors in sequence, each returning `{**state, new_keys}`, made the orchestrator trivial. The hardest part was getting the namespace URI consistent across all processors (solved by defining `_ms()` once per processor file).
+2. What slowed down or went wrong? The `rdflib` `PROV` import path changed between versions (`from rdflib.namespace import PROV` is correct for 7.x). Small friction but worth noting for future rdflib updates.
+3. What single change would prevent this next time? A shared `pipeline/namespaces.py` exporting `MS`, `PROV`, and `_ms()` would eliminate the per-file boilerplate and prevent any namespace drift. That belongs in W-0201 prep.
+4. Is this a pattern? Yes — the "define constants locally per processor" pattern scales badly. Shared namespace module should be the first thing created when expanding to W-0201.
+
+---
+
+## 2026-05-23 — Consolidated two backlog files into BACKLOG.md
 
 Rewrote `BACKLOG-v2.md` to reflect the actual system direction: ontology-based knowledge graph, inputs starting with Research repository documents.
 

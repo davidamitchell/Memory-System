@@ -1,0 +1,1 @@
+Once generated, a vector embedding can be stored in a vector database and reused for every future query. Storing embeddings at write time ("pre-computing") avoids the cost of re-embedding all documents on every server startup.

@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added — W-0200: 12-processor ontology pipeline (first slice)
+- `pipeline/processors/p01_sourcing.py` through `p12_export.py`: full 12-processor pipeline
+- `pipeline/run_pipeline.py`: CLI orchestrator; accepts single `.md` file or directory
+- `pipeline/query.py`: concept card query CLI with `--format json` and `--related` flags
+- `pipeline/queries/concept_card.rq`: portable SPARQL SELECT query for concept card retrieval
+- `pipeline/README.md`: processor table, namespace prefix table, output location reference
+- `tests/test_pipeline_w0200.py`: 9 acceptance tests (all passing)
+- `data/ontology/v0001.ttl`: 35-triple Turtle knowledge graph snapshot (first version)
+- `data/reports/validation-v0001.json`: consistency validation report (0 conflicts)
+- `data/reports/diff-initial-v0001.json`: version diff report (+35 triples)
+
+### Changed — W-0200 marked done; W-0201 unblocked
+- `BACKLOG.md`: W-0200 `status: open` → `status: done`, W-0201 `blocked-by: [W-0200]` → `blocked-by: []`
+
 ### Changed — BACKLOG-v2 rewritten to reflect ontology architecture
 - Vision and Architecture sections replaced: inputs start with Research repository docs; LanceDB/vector architecture removed
 - W-0100, W-0101, W-0106, W-0107 marked `obsolete` (LanceDB-era, replaced by architecture pivot)

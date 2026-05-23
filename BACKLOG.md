@@ -76,9 +76,10 @@ No discovery items are blocking active work. The deferred capture-surface items 
 
 ## W-0200
 
-status: open
+status: done
 created: 2026-05-23
 updated: 2026-05-23
+completed: 2026-05-23
 blocks: [W-0201]
 blocked-by: []
 research: [docs/adr/0004-provenance-model-and-control-plane.md, docs/design/ontology-system-design.md]
@@ -161,7 +162,7 @@ status: open
 created: 2026-05-23
 updated: 2026-05-23
 blocks: []
-blocked-by: [W-0200]
+blocked-by: []
 research: [docs/adr/0004-provenance-model-and-control-plane.md]
 assumptions:
   - The Turtle format established in W-0200 is stable; W-0201 only extends it (additive)
