@@ -1,43 +1,41 @@
 ---
 title: "Retrieval"
 category: concept
-tags: [retrieval, search, memory, recall]
+tags: [retrieval, search, knowledge, recall]
 date: 2026-05-23
 related:
-  - term: "Semantic Search"
-    file: semantic-search.md
-  - term: "LanceDB"
-    file: lancedb.md
-  - term: "MCP Tool"
-    file: mcp-tool.md
   - term: "Knowledge Graph"
     file: knowledge-graph.md
-aliases: ["recall", "memory retrieval", "search"]
+  - term: "MCP Tool"
+    file: mcp-tool.md
+  - term: "Open-Brain"
+    file: open-brain.md
+aliases: ["recall", "knowledge retrieval", "search"]
 ---
 
-**The process of finding and returning relevant memory files in response to a query, using vector similarity, keyword matching, or graph traversal.**
+**The process of finding and returning relevant knowledge in response to a query, using ontology traversal, graph pattern matching, or structured query across the knowledge store.**
 
 ## Definition
 
-Retrieval is the read side of the memory system: given a natural-language query (or a structured filter), return the most relevant memory files. It is the counterpart to capture (writing memories in) and the operation that delivers value to the user or agent.
+Retrieval is the read side of the knowledge store: given a natural-language query (or a structured filter), return the most relevant knowledge. It is the counterpart to capture (writing knowledge in) and the operation that delivers value to the user or agent.
 
-In Open-Brain, the primary retrieval mechanism is semantic search via LanceDB: the query is embedded by the same model used to embed documents, and the nearest-neighbour vectors are returned. This retrieves documents by meaning, not by keyword.
+In Open-Brain, retrieval is performed by querying the ontology store. A query can traverse concept graphs within a domain, match assertion patterns, or navigate provenance links from assertions back to source segments. This is richer than vector similarity: the ontology encodes explicit relationships that similarity alone cannot capture.
 
-Retrieval quality is a first-class engineering concern in this system. Poor retrieval — returning irrelevant results, or failing to surface a document that should clearly match — undermines the entire value proposition of a personal memory system. W-0106 addresses hybrid search (combining vector similarity with BM25 keyword scoring) as a quality improvement, and W-0107 addresses related-memories linking to surface graph-connected memories that pure vector search might miss.
+Retrieval quality is a first-class engineering concern. Poor retrieval — returning irrelevant results, or failing to surface a concept that should clearly match — undermines the entire value proposition of a personal knowledge system. Retrieval quality signals should be noted in the mini-retro and raised as backlog items.
 
 ## Usage in This System
 
-- `search_brain(query)` is the retrieval tool. Agents call it before every write to avoid duplicating existing memories.
-- Retrieval quality signals (poor or missing results) should be noted in the mini-retro and raised as backlog items.
+- The ontology-based MCP query interface (not yet implemented) will be the primary retrieval tool.
+- Until the MCP server is implemented, agents retrieve context by searching files directly (grep, glob) and reading ADRs and design documents.
+- Retrieval quality signals should be raised in the mini-retro and as backlog items.
 
 ## Related Terms
 
-- [Semantic Search](./semantic-search.md)
-- [LanceDB](./lancedb.md)
-- [MCP Tool](./mcp-tool.md)
 - [Knowledge Graph](./knowledge-graph.md)
+- [MCP Tool](./mcp-tool.md)
+- [Open-Brain](./open-brain.md)
 
 ## References
 
-1. [LanceDB: Full-Text and Vector Search](https://lancedb.github.io/lancedb/search/) — retrieval mechanisms available in LanceDB.
-2. [`BACKLOG-v2.md` W-0106](../BACKLOG-v2.md) — hybrid search improvement item.
+1. [W3C SPARQL Query Language](https://www.w3.org/TR/sparql11-query/) — structured query language for RDF graph retrieval.
+2. [`docs/design/ontology-system-design.md`](../docs/design/ontology-system-design.md) — the retrieval architecture for the ontology store.

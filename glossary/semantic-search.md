@@ -1,8 +1,9 @@
 ---
 title: "Semantic Search"
 category: concept
-tags: [search, retrieval, similarity, nlp]
+tags: [search, retrieval, similarity, nlp, superseded]
 date: 2026-05-23
+superseded_by: "glossary/retrieval.md"
 related:
   - term: "Vector Embedding"
     file: vector-embedding.md
@@ -15,20 +16,21 @@ related:
 aliases: ["vector search", "similarity search"]
 ---
 
+> ⚠️ Semantic search via vector embeddings was the retrieval mechanism in the original Open-Brain design concept. That approach was replaced by ontology-based retrieval before implementation. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) and [Retrieval](./retrieval.md) for the current approach.
+
 **A search technique that finds documents by conceptual meaning rather than exact keyword matching, using vector similarity as the relevance signal.**
 
 ## Definition
 
 Semantic search works by converting both the query and every stored document into vector embeddings, then finding the stored vectors that are geometrically closest to the query vector. Two texts are "semantically similar" if their vectors have a high cosine similarity — meaning the embedding model placed them near each other in the vector space.
 
-This is fundamentally different from keyword search (which requires exact word overlap) or full-text search (which ranks by term frequency). Semantic search can match a query like "what did I decide about the database?" with a memory file titled "LanceDB architecture" even if the word "database" appears nowhere in that file.
+This is fundamentally different from keyword search (which requires exact word overlap) or full-text search (which ranks by term frequency). Semantic search can match a query like "what did I decide about the database?" with a document titled "LanceDB architecture" even if the word "database" appears nowhere in that file.
 
-The trade-off is that semantic search requires an embedding model and a vector database, and can occasionally surface false positives (documents that are statistically similar but contextually irrelevant). Hybrid search — combining vector similarity with BM25 keyword scoring — is one mitigation, explored in W-0106.
+The trade-off is that semantic search requires an embedding model and a vector database, and can occasionally surface false positives. It also provides no structural understanding of concepts or their relationships — it returns statistically similar documents, not logically related ones.
 
 ## Usage in This System
 
-- `search_brain(query)` in `mcp_server.py` implements semantic search using LanceDB and the current embedding model.
-- All AI agents working in this repository call `search_brain` before writing a new memory, to check whether the information already exists.
+Semantic search is **not** the retrieval mechanism of this system. It was the original design concept and is retained here as a defined term for historical reference. The current retrieval approach is ontology-based graph traversal — see [Retrieval](./retrieval.md).
 
 ## Related Terms
 
@@ -39,5 +41,5 @@ The trade-off is that semantic search requires an embedding model and a vector d
 
 ## References
 
-1. [LanceDB: Vector Search](https://lancedb.github.io/lancedb/search/) — how LanceDB executes vector similarity queries.
+1. [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) — decision to replace vector/semantic search with ontology-based retrieval.
 2. [SBERT: Semantic Textual Similarity](https://www.sbert.net/docs/usage/semantic_textual_similarity.html) — background on cosine similarity as a relevance metric.

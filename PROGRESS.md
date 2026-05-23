@@ -2,6 +2,32 @@
 
 ---
 
+## 2026-05-23 — Full pivot documentation coherence pass
+
+Completed a full documentation coherence pass to align all docs with the definitive architecture: ontology-based knowledge store (Open-Brain). The original vector/LanceDB design was replaced before implementation; all documentation now reflects this as a full pivot with no dual-track framing.
+
+**Files updated:**
+- `README.md` — Rewritten as single-architecture doc. Removed dual-track "current vector / target ontology" structure, Quick Start, LanceDB cost line, embedding model references.
+- `.github/copilot-instructions.md` — §1 (architecture), §11 (MCP tools), §12 (git), §13 (chain-of-thought), §15 (headless mode), §17 (Build Loop Harness entry), References.
+- `.github/copilot-setup-steps.yml` — Removed embedding model pre-warm step (LanceDB-era artefact).
+- `glossary/open-brain.md` — Definition now describes ontology-based knowledge graph.
+- `glossary/lancedb.md` — Superseded notice added; reframed as a design concept replaced before implementation.
+- `glossary/retrieval.md` — Rewritten around ontology traversal and graph queries.
+- `glossary/semantic-search.md` — Superseded notice added; reframed as the replaced approach.
+- `glossary/mcp-server.md` — Legacy prototype notice added; removed LanceDB references.
+- `glossary/knowledge-graph.md` — Rewritten to describe the ontology as the knowledge graph implementation.
+- `glossary/memory-file.md` — Removed "LanceDB vector index is a derived artefact" sentence; source document framing added.
+- `glossary/embedding-model.md` — Superseded notice added; current production model framing removed.
+- `docs/design/build-loop-harness.md` — Phase 1 step 4 changed from "Call `search_brain`" to "Search the repository."
+
+**Mini-Retro**
+1. Did the process work? Yes — a systematic file-by-file pass with explicit superseded notices is the right approach for this kind of architectural pivot.
+2. What slowed down or went wrong? Context compaction mid-session meant the four completed changes (README, copilot-instructions, copilot-setup-steps, open-brain glossary) were not committed; all work had to be resumed from the summary.
+3. What single change would prevent this next time? Call `report_progress` after every 2–3 file edits, not at the end of a session. Mid-session commits prevent work loss on compaction.
+4. Is this a pattern? Yes — any large documentation pass should be chunked into 2–3 file commits to keep state recoverable.
+
+---
+
 ## 2026-05-23 — Build Loop Harness
 
 Defined the Build Loop Harness: a seven-phase protocol (Entry, Plan, Execute, Validate, Correct, Close, Self-Improve) that keeps agents focused, reduces drift, manages context, leverages skills, and produces a self-correcting and self-improving workflow. Created `docs/design/build-loop-harness.md` with the full protocol including a Mermaid flowchart, validation checklist, focus rules, and open questions. Added §17 to `.github/copilot-instructions.md` as a condensed always-on reference. Updated `docs/design/README.md` index and `CHANGELOG.md`.

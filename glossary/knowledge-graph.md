@@ -4,43 +4,36 @@ category: concept
 tags: [knowledge-graph, graph, links, ontology, structure]
 date: 2026-05-23
 related:
-  - term: "Memory File"
-    file: memory-file.md
-  - term: "Semantic Search"
-    file: semantic-search.md
-  - term: "Tag"
-    file: tag.md
   - term: "Open-Brain"
     file: open-brain.md
-aliases: ["knowledge base graph", "memory graph", "vectorized knowledge graph"]
+  - term: "Tag"
+    file: tag.md
+aliases: ["knowledge base graph", "ontology graph"]
 ---
 
-**A network of interlinked memory files where relationships between pieces of knowledge are made explicit through bidirectional cross-references.**
+**A structured network in which entities (concepts, assertions, sources) are connected by typed relationships, enabling reasoning, traversal, and structured query.**
 
 ## Definition
 
-A knowledge graph is a data model that represents information as nodes (entities or concepts) connected by typed edges (relationships). Rather than storing facts in isolated rows of a table, a knowledge graph makes the connections between facts first-class: "File A is related to File B" is itself a stored piece of information.
+A knowledge graph is a data model that represents information as nodes (entities or concepts) connected by typed edges (relationships). Rather than storing facts in isolated rows of a table, a knowledge graph makes the connections between facts first-class: "Concept A is a subclass of Concept B" or "Assertion X was derived from Source Y" are themselves stored pieces of information.
 
-In Open-Brain, the knowledge graph is implemented through `## Related` sections and `superseded_by` links in memory files. Every time a memory file is created or significantly updated, the agent is required to link it to at least three related existing files. Over time this builds a navigable graph where any memory can be reached from any other by following links.
+In Open-Brain, the knowledge graph is implemented via the ontology layer. An **upper ontology** defines universal concepts (time, causality, provenance), and **lower domain ontologies** define domain-specific concepts (engineering decisions, projects, meetings). Assertions are typed instances of ontology concepts. Provenance links trace each assertion back to the Prepared Segment (a SHA-256 content-addressed fragment of source text) from which it was derived.
 
-The knowledge graph complements semantic search: search finds the most statistically similar documents, while the graph reveals explicit relationships that may not be captured by embedding similarity alone (e.g. "this note supersedes that decision").
-
-The phrase "vectorized knowledge graph" used in the original PRD refers to a knowledge graph backed by a vector index — every node is both linked explicitly and semantically searchable.
+This is richer than a simple `## Related` link list: the ontology encodes explicit, machine-readable relationship types (subClassOf, derivedFrom, contradicts, supersedes) that support formal reasoning and structured query (e.g. SPARQL).
 
 ## Usage in This System
 
-- The `## Related` section in every memory file is the graph edge list.
-- `.github/copilot-instructions.md` §7 (Knowledge Graphing) mandates that agents maintain the graph on every write.
-- The `superseded_by` front matter field is a directed edge indicating which file replaced this one.
+- The ontology store is the knowledge graph of this system. See `docs/design/ontology-system-design.md` for the component and sequence diagrams.
+- The 12-processor pipeline (defined in ADR-0004) is responsible for populating the knowledge graph from source documents.
+- `## Related` sections in Markdown files are informal link annotations; they are not the knowledge graph itself.
 
 ## Related Terms
 
-- [Memory File](./memory-file.md)
-- [Semantic Search](./semantic-search.md)
-- [Tag](./tag.md)
 - [Open-Brain](./open-brain.md)
+- [Tag](./tag.md)
 
 ## References
 
 1. [Wikipedia: Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_graph) — definition and academic background.
-2. [`.github/copilot-instructions.md` §7](../.github/copilot-instructions.md) — the agent mandate for knowledge graphing in this repository.
+2. [`docs/adr/0004-provenance-model-and-control-plane.md`](../docs/adr/0004-provenance-model-and-control-plane.md) — ADR defining the ontology architecture.
+3. [`docs/design/ontology-system-design.md`](../docs/design/ontology-system-design.md) — full component and sequence diagrams for the knowledge graph implementation.

@@ -52,7 +52,7 @@ Every session begins here, regardless of how clear the task appears.
 1. **Read the task statement.** State the intent in one sentence before touching any file.
 2. **Read `BACKLOG.md`.** Check whether the task is already tracked, superseded, or has a prior decision that constrains it.
 3. **Read `.github/copilot-instructions.md`.** Apply the constitution. Do not skip this.
-4. **Retrieve context.** Call `search_brain` with 2–3 queries that cover the task domain. If results are irrelevant, note it — this is a signal for the retro.
+4. **Retrieve context.** Search the repository (grep/glob, or the MCP query interface when available) with 2–3 queries that cover the task domain. If results are irrelevant, note it — this is a signal for the retro.
 5. **Identify applicable skills.** Scan `.github/skills/` before writing anything. If a skill covers any part of the task, use it. If no skill fits, note the gap in `BACKLOG.md` — do not synthesise a substitute.
 6. **Check for existing work.** Ask: does a relevant file already exist that should be refactored rather than duplicated?
 
@@ -209,7 +209,7 @@ flowchart TD
     A([Task received]) --> E1[Read task — state intent in one sentence]
     E1 --> E2[Read BACKLOG.md]
     E2 --> E3[Read copilot-instructions.md]
-    E3 --> E4[search_brain — retrieve context]
+    E3 --> E4[Search repository — retrieve context]
     E4 --> E5[Identify applicable skills]
     E5 --> E6{Existing work\nto refactor?}
     E6 -- yes --> E6a[Refactor existing file]

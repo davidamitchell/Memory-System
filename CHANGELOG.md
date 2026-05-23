@@ -6,23 +6,25 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed — Full pivot documentation coherence pass
+- `README.md` — Rewritten as single-architecture doc; removed dual-track framing, Quick Start, LanceDB and embedding model references
+- `.github/copilot-instructions.md` — §1, §11, §12, §13, §15, §17, References updated to reflect ontology-only architecture
+- `.github/copilot-setup-steps.yml` — Removed embedding model pre-warm step
+- `glossary/open-brain.md` — Definition updated to describe ontology-based knowledge graph
+- `glossary/lancedb.md` — Marked superseded; reframed as design concept replaced before implementation
+- `glossary/retrieval.md` — Rewritten around ontology traversal and graph queries
+- `glossary/semantic-search.md` — Marked superseded; reframed as the replaced approach
+- `glossary/mcp-server.md` — `mcp_server.py` noted as legacy prototype; LanceDB references removed
+- `glossary/knowledge-graph.md` — Rewritten to describe the ontology as the knowledge graph implementation
+- `glossary/memory-file.md` — Removed LanceDB vector index as derived artefact; source document framing added
+- `glossary/embedding-model.md` — Marked superseded; current production model framing removed
+- `docs/design/build-loop-harness.md` — Phase 1 step 4 changed from "Call `search_brain`" to "Search the repository"
+
 ### Added
 - `docs/design/build-loop-harness.md` — full Build Loop Harness protocol: five phases (Entry, Plan, Execute, Close, Self-Improve), validation checklist, drift correction, self-correction, Mermaid diagram, open questions
 - `.github/copilot-instructions.md` §17 — condensed always-on Build Loop Harness reference with focus rules
 
-### Changed
-- `docs/design/README.md` — added `build-loop-harness.md` to the design index
 
-
-
-### Changed
-- `docs/adr/0003-ontology-architecture.md` — marked superseded by ADR-0004
-- `docs/adr/README.md` — ADR-0004 added, ADR-0003 status updated
-- `docs/design/ontology-system-design.md` — updated to v2: all new components from ADR-0004, updated processor table (12 processors), updated component and sequence diagrams, provenance example, updated open questions
-
-- `docs/design/` folder — new conceptual design space for the ontology-based architecture
-- `docs/design/README.md` — index and conventions for the design space
-- `docs/design/ontology-system-design.md` — full component and sequence diagrams, all architectural components and processors for the ontology system
 - `docs/adr/0002-move-from-vector-storage-to-ontology.md` — decision to replace LanceDB vector storage with an ontology-based knowledge representation
 - `docs/adr/0003-ontology-architecture.md` — decision establishing upper/lower ontology structure and the 11-processor pipeline
 - `docs/adr/README.md` — updated index with ADR-0002 and ADR-0003

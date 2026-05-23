@@ -12,25 +12,24 @@ related:
     file: superseded-by.md
   - term: "Open-Brain"
     file: open-brain.md
-aliases: ["memory", "note", "brain file"]
+aliases: ["memory", "note", "brain file", "source document"]
 ---
 
-**A single Markdown file stored in this repository that represents one unit of knowledge in the memory system.**
+**A single Markdown file stored in this repository that represents one unit of source knowledge, from which the ontology store derives structured assertions.**
 
 ## Definition
 
-A memory file is the atomic storage unit of Open-Brain. Each memory file is a Markdown file (`.md`) in one of the content folders (`/meetings`, `/journal`, `/projects`) or the inbox. It contains YAML front matter (title, date, tags, superseded_by) followed by the memory content in free-form Markdown.
+A memory file (or source document) is a plain Markdown file (`.md`) in one of the content folders (`/meetings`, `/journal`, `/projects`). It contains YAML front matter (title, date, tags, superseded_by) followed by free-form Markdown content.
 
-Memory files are plain text, human-readable, and git-versioned. They are the source of truth for all content in the system; the LanceDB vector index is a derived artefact that can be discarded and rebuilt from the files at any time.
+Memory files are the human-authored input to the system. The 12-processor pipeline reads them, extracts Prepared Segments (SHA-256 content-addressed fragments), and derives typed assertions that are stored in the ontology graph. The memory file itself remains the source of truth; the ontology store is a derived, query-optimised representation.
 
-Every memory file is expected to end with a `## Related` section linking to three or more related memories, supporting manual navigation in addition to semantic search. Files that are no longer current should not be deleted; instead their `superseded_by` field should be set to the path of the newer file.
+Memory files are plain text, human-readable, and git-versioned. Files that are no longer current should not be deleted; instead their `superseded_by` field should be set to the path of the newer file.
 
 ## Usage in This System
 
-- Memory files live in `/meetings`, `/journal`, and `/projects` (and optionally `/inbox` once W-0102 lands).
+- Memory files live in `/meetings`, `/journal`, and `/projects`.
 - Filename convention: `YYYY-MM-DD-<kebab-case-title>.md`.
-- Every write via `add_memory` creates a memory file and a paired `.embedding.json` file.
-- `refactor_memory` overwrites an existing memory file in place without creating a new one.
+- Every memory file should end with a `## Related` section linking to related files for human navigation.
 
 ## Related Terms
 
@@ -42,4 +41,4 @@ Every memory file is expected to end with a `## Related` section linking to thre
 ## References
 
 1. [`.github/copilot-instructions.md` §9–10](../.github/copilot-instructions.md) — naming convention and required front matter for memory files.
-2. [`projects/README.md`](../projects/README.md) — example front matter for project memory files.
+2. [`docs/adr/0004-provenance-model-and-control-plane.md`](../docs/adr/0004-provenance-model-and-control-plane.md) — how source documents are processed into ontology assertions.

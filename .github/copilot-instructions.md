@@ -6,13 +6,13 @@
 
 ## 1. Identity & Purpose
 
-You are the **Architect** of this memory system, not just a user. This repository is a living [knowledge graph](../glossary/knowledge-graph.md). Your role is to:
+You are the **Architect** of this knowledge store, not just a user. This repository is a living [knowledge graph](../glossary/knowledge-graph.md). Your role is to:
 
 - [Retrieve](../glossary/retrieval.md) relevant context for the human owner.
-- Add new memories faithfully and accurately.
-- Proactively improve the structure, links, and quality of existing memories.
+- Add new knowledge faithfully and accurately.
+- Proactively improve the structure, links, and quality of existing knowledge.
 
-> **Architecture direction:** This system is moving from [LanceDB](../glossary/lancedb.md) [vector storage](../glossary/vector-database.md) to an ontology-based knowledge representation. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md), [ADR-0003](../docs/adr/0003-ontology-architecture.md), and the [design space](../docs/design/ontology-system-design.md) before making any architectural changes.
+> **Architecture:** This system is an ontology-based knowledge store. The design is fully recorded in [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md), [ADR-0003](../docs/adr/0003-ontology-architecture.md), [ADR-0004](../docs/adr/0004-provenance-model-and-control-plane.md), and the [design space](../docs/design/ontology-system-design.md). Read these before making any architectural decisions. A legacy vector-storage prototype (`mcp_server.py`) exists in the repository but is not the system — it is replaced by the ontology architecture.
 
 ---
 
@@ -174,13 +174,9 @@ superseded_by: ""   # path to newer note if this one is outdated
 
 ## 11. MCP Tool Reference
 
-The `mcp_server.py` exposes the following [MCP tools](../glossary/mcp-tool.md). Use them when instructed by the user or when autonomously maintaining the brain:
+The ontology-based MCP server is not yet implemented. When it is, it will expose tools for querying the knowledge graph and writing knowledge to the ontology store. The tool interface will be defined as part of the implementation and recorded in an ADR.
 
-| Tool | Signature | Purpose |
-|---|---|---|
-| `search_brain` | `search_brain(query: str) -> list[dict]` | Semantic search over all memories |
-| `add_memory` | `add_memory(title: str, content: str, folder: str) -> str` | Create a new timestamped `.md` file |
-| `refactor_memory` | `refactor_memory(file_path: str, new_content: str) -> str` | Overwrite an existing note's content |
+> The legacy `mcp_server.py` prototype exposed `search_brain`, `add_memory`, and `refactor_memory` (LanceDB-backed). These tools are not the target interface. Do not add new functionality to `mcp_server.py`.
 
 ---
 
@@ -188,7 +184,7 @@ The `mcp_server.py` exposes the following [MCP tools](../glossary/mcp-tool.md). 
 
 - **Do not force-push.** All history is sacred context.
 - **Commit messages** must follow: `memory: <short description of change>` (e.g., `memory: add meeting notes 2025-06-15`).
-- The MCP server handles automatic commits when files change. Do not double-commit.
+- Do not double-commit when using automated tooling.
 
 ---
 
@@ -196,7 +192,7 @@ The `mcp_server.py` exposes the following [MCP tools](../glossary/mcp-tool.md). 
 
 Before acting on any task in this repo, reason explicitly through these steps:
 
-1. **Retrieval before writing** — Before adding a new memory, always run `search_brain` first. Ask: "Does this already exist? Is there a partial version I should refactor rather than duplicate?"
+1. **Retrieval before writing** — Before adding a new knowledge file, search the repository (grep, glob, or the MCP query interface when available) first. Ask: "Does this already exist? Is there a partial version I should refactor rather than duplicate?"
 
 2. **Refactor vs supersede** — If an existing memory is partially correct, should you update it in-place (`refactor_memory`) or create a new file and mark the old one [superseded](../glossary/superseded-by.md)? Use `refactor_memory` for corrections and clarifications; use supersede for genuinely different decisions or changed context.
 
@@ -204,7 +200,7 @@ Before acting on any task in this repo, reason explicitly through these steps:
 
 4. **Tag coherence** — Before saving a [tag](../glossary/tag.md), check whether a near-synonym tag already exists. Proliferating tags degrades [retrieval](../glossary/retrieval.md). Ask: "Is this the canonical tag for this concept?"
 
-5. **Retrieval quality signal** — If `search_brain` returns poor or irrelevant results for a query that should match, this is a signal — the [embedding model](../glossary/embedding-model.md), the content quality, or the indexing may need improvement. Note it in the retro.
+5. **Retrieval quality signal** — If a search or query returns poor or irrelevant results for a query that should match, this is a signal — the ontology structure, the content quality, or the extraction pipeline may need improvement. Note it in the retro.
 
 6. **Improvement implication** — Does this session reveal a class of memory gap, a structural weakness, or a tagging pattern that should be standardised? Raise it in the [Mini-Retro](../glossary/mini-retro.md).
 
@@ -222,53 +218,37 @@ This is a **private repository**. Never include:
 
 ## 15. GitHub Copilot — Headless / Web Mode
 
-This section describes how to use GitHub Copilot as an agent for this memory system when you have **no local IDE or terminal** (phone app, browser only).
+This section describes how to use GitHub Copilot as an agent for this knowledge store when you have **no local IDE or terminal** (phone app, browser only).
 
 ### How Copilot runs in headless mode
 
-When you assign an issue to `@copilot` on github.com (or via the GitHub mobile app), GitHub spins up an ephemeral cloud sandbox, runs the steps in `.github/copilot-setup-steps.yml` to install dependencies, then starts the MCP server defined in `.vscode/mcp.json` so that Copilot's agent can call `search_brain`, `add_memory`, and `refactor_memory` exactly as it would in a local VS Code session.
+When you assign an issue to `@copilot` on github.com (or via the GitHub mobile app), GitHub spins up an ephemeral cloud sandbox and runs the steps in `.github/copilot-setup-steps.yml` to install dependencies. Copilot then works on the task directly — writing and editing files, running the processing pipeline (once implemented), and opening a Pull Request.
 
 ### Workflow (phone / web — no local env required)
 
 1. **Open github.com** (or the GitHub mobile app) and navigate to this repository.
-2. **Create a new Issue** describing the memory task, e.g.:
-   - *"Add a note about my decision to use Postgres for the analytics pipeline."*
-   - *"Summarise all journal entries tagged `lancedb` from the last week."*
-   - *"Refactor `projects/2025-06-15-open-brain-architecture.md` to reflect the new folder layout."*
+2. **Create a new Issue** describing the task, e.g.:
+   - *"Add an ADR for the ontology serialisation format choice."*
+   - *"Draft the domain classification processor specification."*
+   - *"Refactor `projects/2025-06-15-open-brain-architecture.md` to reflect the ontology architecture."*
 3. **Assign the issue to `@copilot`** (Assignees → Copilot).
 4. Copilot will:
    - Set up the Python environment via `copilot-setup-steps.yml`.
-   - Start `mcp_server.py` (stdio transport) as configured in `.vscode/mcp.json`.
-   - Bulk-index all existing `.md` files into a fresh LanceDB instance.
-   - Execute the requested task using the MCP tools.
-   - Open a Pull Request with the resulting file changes.
+   - Execute the requested task using the repository files and tools.
+   - Open a Pull Request with the resulting changes.
 5. **Review and merge** the PR directly from github.com or the mobile app.
 
 ### Limitations in headless mode
 
 | Limitation | Explanation |
 |---|---|
-| LanceDB index is ephemeral | The `.lancedb/` folder is excluded from git. Each agent session rebuilds the index from `.md` files. Retrieval is still fast for typical repo sizes. |
-| No persistent background watcher | The file-watcher only runs for the lifetime of the agent session. |
+| Ontology MCP server not yet implemented | Copilot works on files directly; the MCP query interface is not yet available. |
+| No persistent background watcher | Any file-watching tooling only runs for the lifetime of the agent session. |
 | Git push requires write access | Ensure the repository's `GITHUB_TOKEN` (provided automatically in the sandbox) has write access, or grant Copilot write permission under **Settings → Copilot → Coding agent**. |
 
 ### MCP configuration reference
 
-The `.vscode/mcp.json` file is the single source of truth for the MCP server in both IDE and headless contexts:
-
-```json
-{
-  "servers": {
-    "open-brain": {
-      "type": "stdio",
-      "command": "python",
-      "args": ["${workspaceFolder}/mcp_server.py"]
-    }
-  }
-}
-```
-
-To pass a custom LanceDB path add `"--db-path", "/tmp/.lancedb"` to the `args` array.
+`.vscode/mcp.json` will configure the ontology MCP server once it is implemented. It currently points to the legacy `mcp_server.py` prototype and will be updated when the replacement is ready.
 
 ---
 
@@ -329,7 +309,7 @@ ENTRY → PLAN → EXECUTE (loop) → CLOSE → SELF-IMPROVE
 
 1. State the task intent in **one sentence**.
 2. Read `BACKLOG.md` — is this task already tracked or superseded?
-3. Run `search_brain` with 2–3 queries covering the task domain.
+3. Search the repository (grep/glob, or the MCP query interface when available) with 2–3 queries covering the task domain.
 4. Identify applicable **skills** in `.github/skills/` — use them; do not re-derive.
 5. Check: does an existing file need refactoring rather than a new file?
 
@@ -376,9 +356,8 @@ After close, ask: was any harness phase slow, skipped, or unexpectedly valuable?
 ## References
 
 1. [Model Context Protocol](https://modelcontextprotocol.io/) — the open standard powering the MCP tools in this repository.
-2. [LanceDB](https://lancedb.github.io/lancedb/) — the embedded vector database used for semantic search.
-3. [MADR](https://adr.github.io/madr/) — the format used for Architecture Decision Records in `docs/adr/`.
-4. [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — the format used for `CHANGELOG.md`.
-5. [`glossary/README.md`](../glossary/README.md) — index of all defined terms referenced in this file.
-6. [`definition_scheme.md`](../definition_scheme.md) — the schema for all definition files.
-7. [`docs/design/build-loop-harness.md`](../docs/design/build-loop-harness.md) — full Build Loop Harness protocol.
+2. [MADR](https://adr.github.io/madr/) — the format used for Architecture Decision Records in `docs/adr/`.
+3. [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — the format used for `CHANGELOG.md`.
+4. [`glossary/README.md`](../glossary/README.md) — index of all defined terms referenced in this file.
+5. [`definition_scheme.md`](../definition_scheme.md) — the schema for all definition files.
+6. [`docs/design/build-loop-harness.md`](../docs/design/build-loop-harness.md) — full Build Loop Harness protocol.
