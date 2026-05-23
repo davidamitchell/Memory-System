@@ -798,6 +798,7 @@ doors-kept-open:
   - No confidence score is committed to storage (open question stays open)
   - No upper ontology import (BFO/SUMO/schema.org) is added (alignment can happen later without migration)
   - No custom non-RDF format is written (all tooling remains compatible)
+  - Segment files are tracked in git unmodified (no gitignore); this preserves the option explored in W-0202 — git's own object store may be the Resolver Service
 uncertainty:
   - Whether rdflib in-memory holds at 26 files (measured in this slice — if not, W-0201 adds Oxigraph)
   - Whether `ms:relatedTerm` edges form a connected graph or produce isolated islands (measured by the CLI query output)
@@ -911,6 +912,46 @@ The version diff (v0001 → v0002) is the first concrete answer to the "what tri
 - The SPARQL queries used by `--related` and `--format json` are saved as `pipeline/queries/neighbours.rq` and `pipeline/queries/concept_json.rq`
 - `pipeline/README.md` is updated with: multi-file usage, `--related` and `--format` flag docs, the version diff format, and the domain tie-break rule (if applied)
 - Integration test `tests/test_pipeline_w0201.py` asserts: 26 nodes in `v0002.ttl`, `--format json` output is valid JSON, `--related` output contains at least one second-hop neighbour, and `diff-v0001-v0002.json` reports >0 additions
+
+---
+
+## W-0202
+
+status: exploration
+created: 2026-05-23
+updated: 2026-05-23
+blocks: []
+blocked-by: [W-0201]
+research: []
+assumptions:
+  - Git's object store is a content-addressed store backed by SHA-1 (legacy) or SHA-256 (new repos); every blob committed to the repo already has a content hash as its identifier
+  - The Resolver Service in ADR-0004 maps `sha256:<hex>` URIs to physical storage locations; git blobs do exactly this
+  - `git cat-file blob <sha>` retrieves any committed file by its content hash without knowing its path — the same primitive the Resolver Service needs
+  - Segment provenance in Turtle already records `ms:contentHash "sha256:<hex>"` — if the hex matches a git object SHA, no separate store is needed at all
+uncertainty:
+  - Git uses SHA-1 for legacy repos; this repository may not be initialised with `--object-format=sha256`; SHA-1 and SHA-256 hashes for the same content differ, so the URI scheme used in W-0200 (`sha256:<hex>`) must be reconciled with the actual git object hash algorithm in use
+  - Whether storing segment blobs as standalone committed files (`data/segments/<sha>.txt`) is redundant once they are also tracked as git blobs — or whether the filepath itself is the necessary indirection
+  - Whether `git log -- <filepath>` provides sufficient provenance history for the Assertion Lineage requirement in ADR-0004, or whether the explicit `prov:` triples are still needed alongside it
+
+### Outcome
+
+A design note (in `docs/design/` or as a PROGRESS entry) that evaluates whether git's object store can serve as the Resolver Service backing store, replacing the `data/segments/` directory. The evaluation covers: SHA algorithm compatibility, retrieval primitive (`git cat-file`), history (`git log`), and whether explicit PROV-O triples are still necessary given git's built-in provenance.
+
+### Context
+
+ADR-0004 describes a Resolver Service that "maps content-addressed URIs (`sha256:...`) to physical storage locations" and notes it will be "implemented as a library function in the first iteration." Git is already a content-addressed object store: every blob committed to the repository is retrievable by its SHA hash. If the segment files committed in W-0200 and W-0201 are stored as git-tracked files, their git object SHAs are already content-addressed URIs — the Resolver Service may already exist as `git cat-file blob <sha>`.
+
+This is an exploration item, not an implementation item. The goal is to determine whether the architecture can be simplified by treating git as the document store, segment store, and Resolver Service simultaneously — which would eliminate `data/segments/` as a separate directory and use the git object store as the single source of truth. This aligns with the existing "local-first, git-backed" design principle and the observation that git commits are already used as version snapshots.
+
+The SHA algorithm mismatch (SHA-1 vs SHA-256) is the key risk: the `ms:contentHash` URI scheme must use the same algorithm as the git object store, or the resolver cannot perform a direct lookup. This must be measured against the actual repository configuration before committing to either approach.
+
+### Acceptance criteria (exploration — output is a design note, not code)
+
+- Determine the git object hash algorithm in use in this repository (`git config --get extensions.objectformat` or `git rev-parse --show-object-format`)
+- Verify that `git cat-file blob <sha>` can retrieve a committed segment file by its object hash
+- Compare: does the git blob SHA of `data/segments/<sha256-hex>.txt` equal the SHA-256 hash of the file content, or are they different? (Git SHA-1 objects are computed over `blob <size>\0<content>`, not raw content)
+- Write up the finding as a dated entry in `PROGRESS.md` or a short note in `docs/design/`
+- Conclude with one of: (a) git object store IS the Resolver Service — update W-0200/W-0201 acceptance criteria to remove `data/segments/` directory; or (b) git object store is useful for history but not for direct SHA-256 URI resolution — keep `data/segments/` and document why
 
 ---
 
