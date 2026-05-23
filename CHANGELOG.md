@@ -6,7 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-### Changed — Self-improve now mandates making changes, not raising backlog items
+### Changed — BACKLOG-v2 rewritten to reflect ontology architecture
+- Vision and Architecture sections replaced: inputs start with Research repository docs; LanceDB/vector architecture removed
+- W-0100, W-0101, W-0106, W-0107 marked `obsolete` (LanceDB-era, replaced by architecture pivot)
+- W-0102–W-0105, W-0108–W-0115 marked `deferred` (all surface capture items)
+- Active Phase 1 (W-0200, W-0201, W-0202 — ontology pipeline) promoted to top of file
+- Deferred phases moved to a `## Deferred` section at the bottom
+- Research Cross-Reference and Outstanding Discovery tables updated to remove LanceDB research items
+- References section updated: LanceDB and Model2Vec entries removed
+
+
 - `docs/design/build-loop-harness.md` Phase 7 — updated to require direct edits for small improvements; ADR only gates structural changes
 - `.github/copilot-instructions.md` §17 Self-improve — updated to match
 

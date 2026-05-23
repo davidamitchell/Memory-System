@@ -2,7 +2,26 @@
 
 ---
 
-## 2026-05-23 — Build loop and instruction corrections
+## 2026-05-23 — BACKLOG-v2 realigned to ontology architecture
+
+Rewrote `BACKLOG-v2.md` to reflect the actual system direction: ontology-based knowledge graph, inputs starting with Research repository documents.
+
+**Changes:**
+- Vision and Architecture sections replaced entirely (removed LanceDB/vector/capture-surface framing)
+- W-0100, W-0101, W-0106, W-0107 marked `obsolete` (LanceDB-era, superseded by ADR-0002)
+- All surface capture items (W-0102–W-0105, W-0108–W-0115) marked `deferred`
+- Active Phase 1 (W-0200, W-0201, W-0202) promoted to top of file
+- Deferred phases consolidated under a `## Deferred` section
+- Research Cross-Reference and Outstanding Discovery tables updated
+- LanceDB and Model2Vec entries removed from References
+
+**Mini-Retro**
+1. Did the process work? Yes — the scope was clear: defer capture surfaces, correct the vision, promote the active items. Python rewrites for bulk status changes and block reordering were faster and less error-prone than multiple individual edits.
+2. What slowed down or went wrong? Nothing significant. The phase-reordering step required a Python extract-and-reassemble rather than a simple text replacement because the active block was at the end of a 68 KB file.
+3. What single change would prevent this next time? A "phase order" index at the top of the backlog file would make it obvious when phases are out of priority order.
+4. Is this a pattern? Yes — when a large architectural pivot happens, the backlog accumulates stale framing that compounds over sessions. The earlier the realignment, the less debt accumulates. Backlog coherence should be part of the self-improve step.
+
+
 
 Three targeted corrections from the current session:
 
