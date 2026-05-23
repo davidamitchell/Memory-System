@@ -68,7 +68,13 @@ Distilled from PROGRESS.md mini-retros. Each entry states the class of problem a
 
 ---
 
-## Section numbering in copilot-instructions.md
+## Glossary cross-linking is for memory files, not design documents
+
+**Pattern:** The Wikipedia-style cross-linking rule (§16) was applied in `docs/design/build-loop-harness.md`, which is a protocol document, not a memory file.
+**Rule:** Only apply glossary cross-links in memory files (journal, meetings, projects, ADRs). Design documents and protocol docs should use plain prose.
+**Source:** 2026-05-23 — build-loop-harness glossary link removal
+
+---
 
 **Pattern:** Inserting a new section mid-document requires renumbering all subsequent sections — a mechanical step that is easy to get wrong.
 **Rule:** Keep section numbers stable where possible. When inserting, prefer appending or using sub-sections to avoid a cascade renumber.
