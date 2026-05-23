@@ -2,6 +2,18 @@
 
 ---
 
+## 2026-05-23 — Ontology architecture design and setup
+
+Updated the skills submodule to the latest commit. Created `docs/design/` as the new conceptual design space, with a full ontology-system-design document covering all architectural components, the 11-processor pipeline, a component diagram, and a sequence diagram. Wrote ADR-0002 (move from vector storage to ontology) and ADR-0003 (upper/lower ontology architecture and processing pipeline). Updated README.md and `.github/copilot-instructions.md` to reflect the direction change. Updated CHANGELOG.md and `docs/adr/README.md` index.
+
+**Mini-Retro**
+1. Did the process work? Yes — the design questions in the problem statement mapped cleanly onto ADRs and a design document.
+2. What slowed down or went wrong? The problem statement raised an open question about additional processors needed beyond the obvious ones. These were answered (Consistency Validation, Merge/Reconciliation, Export/Serialisation) and added to both ADR-0003 and the design document.
+3. What single change would prevent this next time? The open questions section in the design document is the right place to surface unresolved design choices. Future design sessions should start by reviewing and closing those questions.
+4. Is this a pattern? Yes — design documents without an explicit "Open Questions" section tend to bury uncertainty in prose. The `docs/design/` convention now includes this section by default.
+
+---
+
 ## 2026-03-07 — Copilot headless-mode setup
 
 Added `.github/copilot-setup-steps.yml` and `.vscode/mcp.json` so GitHub Copilot's coding agent can operate on this memory system from the GitHub web UI or mobile app with no local IDE. Added Section 15 (headless mode) to `.github/copilot-instructions.md`. Rebased PR onto main after main introduced `.github/copilot-instructions.md` (superseding `AGENTS.md`); moved the headless-mode section from the old AGENTS.md addition into copilot-instructions.md accordingly.

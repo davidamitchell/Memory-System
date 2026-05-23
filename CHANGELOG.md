@@ -7,6 +7,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- `docs/design/` folder — new conceptual design space for the ontology-based architecture
+- `docs/design/README.md` — index and conventions for the design space
+- `docs/design/ontology-system-design.md` — full component and sequence diagrams, all architectural components and processors for the ontology system
+- `docs/adr/0002-move-from-vector-storage-to-ontology.md` — decision to replace LanceDB vector storage with an ontology-based knowledge representation
+- `docs/adr/0003-ontology-architecture.md` — decision establishing upper/lower ontology structure and the 11-processor pipeline
+- `docs/adr/README.md` — updated index with ADR-0002 and ADR-0003
+
+### Changed
+- `README.md` — updated heading, added ontology direction notice, added target architecture diagram, updated repository layout
+- `.github/copilot-instructions.md` — added architecture direction notice in §1, added `docs/design/` to folder structure table
+
 - `definition_scheme.md` — mandatory schema, requirements, and cross-linking rules for all definition files
 - `glossary/` folder with 26 definition files covering the full knowledge domain of this memory system
 - `glossary/README.md` — index of all defined terms with categories and aliases

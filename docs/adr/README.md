@@ -7,6 +7,8 @@ Decisions are recorded here using the [MADR](../../glossary/madr.md) format.
 | ADR | Title | Status |
 |-----|-------|--------|
 | [0001](0001-standardise-agent-instructions.md) | Standardise Agent Instructions | accepted |
+| [0002](0002-move-from-vector-storage-to-ontology.md) | Move from Vector Storage to Ontology | accepted |
+| [0003](0003-ontology-architecture.md) | Ontology Architecture: Upper/Lower Ontologies and Processing Pipeline | accepted |
 
 ## Naming
 

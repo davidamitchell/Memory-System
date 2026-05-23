@@ -1,12 +1,18 @@
 # Memory-System — GitHub Open-Brain
 
-A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-first.md) memory system backed by GitHub Markdown files and [LanceDB](./glossary/lancedb.md) [semantic search](./glossary/semantic-search.md), exposed to [AI](./glossary/ai-agent.md) tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](./glossary/mcp.md).
+A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-first.md) memory system backed by GitHub Markdown files and an **ontology-based knowledge graph**, exposed to [AI](./glossary/ai-agent.md) tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](./glossary/mcp.md).
+
+> **Direction:** This system is moving from [LanceDB](./glossary/lancedb.md) [vector storage](./glossary/vector-database.md) to an ontology-based representation. See [ADR-0002](./docs/adr/0002-move-from-vector-storage-to-ontology.md) and the [design space](./docs/design/ontology-system-design.md) for the target architecture.
 
 > **AI agents: read [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) for the rules and conventions that govern this repository.**
 
 ---
 
 ## How It Works
+
+> **Note:** The architecture below describes the current (vector-based) implementation. The system is actively being redesigned toward an ontology-based architecture — see the [design space](./docs/design/ontology-system-design.md) and [ADR-0002](./docs/adr/0002-move-from-vector-storage-to-ontology.md).
+
+### Current (vector-based)
 
 ```
 ┌─────────────────────────────────────┐
@@ -36,6 +42,34 @@ A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-
    - `add_memory(title, content, folder)` — create a new timestamped memory file.
    - `refactor_memory(file_path, new_content)` — overwrite an existing memory file.
 4. **Auto-sync** — Every write is automatically committed and pushed to GitHub.
+
+### Target (ontology-based)
+
+```
+┌──────────────────────────────────────────┐
+│  Document Sources                        │
+└─────────────────┬────────────────────────┘
+                  │ ingest
+                  ▼
+         ┌─────────────────┐
+         │  Processing     │  Sourcing → Cleaning → Metadata
+         │  Pipeline       │  → Domain Extraction → Matching
+         │                 │  → Concept Extraction → Ontology Build
+         └────────┬────────┘
+                  │
+          ┌───────▼────────┐
+          │ Ontology Store  │  Upper Ontology
+          │                 │  Lower Ontologies (per domain)
+          │                 │  Versioned snapshots (OWL/RDF/JSON-LD)
+          └───────┬─────────┘
+                  │ MCP tools
+                  ▼
+        ┌──────────────────┐
+        │  mcp_server.py   │  ← AI Agent Interface
+        └──────────────────┘
+```
+
+See the [design space](./docs/design/ontology-system-design.md) for full component and sequence diagrams.
 
 ---
 
@@ -154,10 +188,11 @@ Memory-System/
 │   └── workflows/
 │       └── sync-skills.yml      # Weekly skills submodule update
 ├── docs/
-│   └── adr/                     # Architecture Decision Records (MADR format)
+│   ├── adr/                     # Architecture Decision Records (MADR format)
+│   └── design/                  # Conceptual design space — components and diagrams
 ├── glossary/                    # Controlled vocabulary — one definition file per term
 ├── definition_scheme.md         # Schema and rules every definition file must follow
-├── mcp_server.py              # MCP server + file-watcher + LanceDB indexer
+├── mcp_server.py              # MCP server + file-watcher + LanceDB indexer (current)
 ├── requirements.txt           # Python dependencies
 ├── getting-started-prompt.md  # Original architecture brief & PRD
 ├── BACKLOG.md                 # Work backlog (backlog-manager skill format)

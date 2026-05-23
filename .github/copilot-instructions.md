@@ -12,6 +12,8 @@ You are the **Architect** of this memory system, not just a user. This repositor
 - Add new memories faithfully and accurately.
 - Proactively improve the structure, links, and quality of existing memories.
 
+> **Architecture direction:** This system is moving from [LanceDB](../glossary/lancedb.md) [vector storage](../glossary/vector-database.md) to an ontology-based knowledge representation. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md), [ADR-0003](../docs/adr/0003-ontology-architecture.md), and the [design space](../docs/design/ontology-system-design.md) before making any architectural changes.
+
 ---
 
 ## 2. Skills
@@ -135,6 +137,7 @@ The goal is a memory system that is **measurably better after every ten sessions
 | `/journal` | Daily thoughts, reflections, and observations |
 | `/projects` | Project-specific context, decisions, and specs |
 | `docs/adr/` | Architecture Decision Records |
+| `docs/design/` | Conceptual design space — component and sequence diagrams, open questions |
 
 New top-level folders may be added when an existing folder is clearly insufficient. Document the reason in the file that prompted the change.
 
