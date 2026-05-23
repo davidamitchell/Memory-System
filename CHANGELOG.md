@@ -7,6 +7,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- `docs/adr/0004-provenance-model-and-control-plane.md` — six architectural principles, provenance layer (Extraction Activity, Processor Version, Assertion Lineage, Trust Metadata), control plane (five controls), Prepared Segment, refined 12-processor pipeline; complete PROV-O Turtle example
+
+### Changed
+- `docs/adr/0003-ontology-architecture.md` — marked superseded by ADR-0004
+- `docs/adr/README.md` — ADR-0004 added, ADR-0003 status updated
+- `docs/design/ontology-system-design.md` — updated to v2: all new components from ADR-0004, updated processor table (12 processors), updated component and sequence diagrams, provenance example, updated open questions
+
 - `docs/design/` folder — new conceptual design space for the ontology-based architecture
 - `docs/design/README.md` — index and conventions for the design space
 - `docs/design/ontology-system-design.md` — full component and sequence diagrams, all architectural components and processors for the ontology system

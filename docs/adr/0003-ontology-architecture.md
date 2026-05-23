@@ -1,7 +1,7 @@
 # 0003 — Ontology architecture: upper ontology, lower ontologies, and the document processing pipeline
 
 Date: 2026-05-23
-Status: accepted
+Status: superseded by [0004-provenance-model-and-control-plane.md](./0004-provenance-model-and-control-plane.md)
 
 ## Context
 

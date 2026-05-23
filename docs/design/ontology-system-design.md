@@ -1,9 +1,10 @@
 # Ontology-Based Memory System — Design
 
 **Status:** draft
+**Version:** 2
 **Date:** 2026-05-23
-**Supersedes:** n/a
-**Related ADRs:** [ADR-0002](../adr/0002-move-from-vector-storage-to-ontology.md) · [ADR-0003](../adr/0003-ontology-architecture.md)
+**Supersedes:** v1 (initial design, same file)
+**Related ADRs:** [ADR-0002](../adr/0002-move-from-vector-storage-to-ontology.md) · [ADR-0004](../adr/0004-provenance-model-and-control-plane.md)
 
 ---
 
@@ -15,59 +16,100 @@ This is a **design-space document** — it operates in the conceptual plane. Imp
 
 ---
 
-## 2. Architectural Components
+## 2. Architectural Principles
 
-### 2.1 Documents
+Six constraints govern all design decisions. See [ADR-0004](../adr/0004-provenance-model-and-control-plane.md) for rationale.
+
+| Principle | Constraint |
+|-----------|-----------|
+| **Immutable Source Fidelity** | Raw source artefacts are stored verbatim and never modified |
+| **Deterministic Transformation** | Every derived artefact is reproducible from source + processor version |
+| **Assertion Provenance** | Every accepted ontology assertion must resolve to at least one supporting Prepared Segment |
+| **Control/Data Separation** | Transformation processors (data plane) are distinct from governance and version control (control plane) |
+| **Upper Ontology Stability** | Upper ontology mutations require explicit alignment governance acceptance |
+| **Bidirectional Traceability** | Concepts resolve to source evidence; source evidence resolves to derived assertions |
+
+---
+
+## 3. Architectural Components
+
+### 3.1 Document Layer
 
 | Component | Description |
 |-----------|-------------|
 | **Document** | Any information artefact in scope — structured (tables, schemas), semi-structured (Markdown, HTML), or lexical (plain prose) |
-| **Document Source** | The origin of a document — a URL, API, file system path, RSS feed, database export, etc. |
-| **Sourced Document (Raw)** | A verbatim copy of the document as retrieved from the source. Never modified after capture. Preserves full fidelity including markup, images, and encoding artefacts |
-| **Sourced Document (Prepared)** | A cleaned representation of a raw sourced document. Markup, images, and non-readable characters are removed. Enriched with metadata: source URI, retrieval timestamp, retrieval method, MIME type, document lineage, and any tags or labels present on the original |
-| **Domain Document** | A prepared document that has been assigned to one or more domains in the upper ontology. The scoped unit of input to concept extraction |
+| **Document Source** | External origin: URL, API, filesystem path, feed, database export |
+| **Raw Document** | Immutable verbatim capture of the source artefact — never modified after capture |
+| **Prepared Document** | Canonical cleaned representation with structured metadata attached |
+| **Prepared Segment** | Immutable, content-addressed fragment of a Prepared Document. Identified by a SHA-256 content URI. The atomic unit of evidence for assertion provenance |
+| **Domain Document** | A prepared document assigned to one or more domains in the upper ontology |
 
-### 2.2 Document Collections
-
-| Component | Description |
-|-----------|-------------|
-| **Sourced Documents** | The complete set of all documents (raw and prepared) that have been ingested into the system |
-| **Domain Documents** | The subset of prepared documents assigned to a specific domain, forming the input corpus for that domain's ontology |
-
-### 2.3 Ontology Components
+### 3.2 Ontology Layer
 
 | Component | Description |
 |-----------|-------------|
-| **Upper Ontology** | The top-level taxonomy of all recognised domains and their relationships. Domain-agnostic. Defines what domains exist and how they relate to each other |
-| **Domain Ontology** | A concept graph scoped to a single domain. Contains the concepts, properties, axioms, and relationships extracted from that domain's document corpus |
-| **Lower Ontology** | The collective name for the full set of domain ontologies |
-| **Versioned Ontology** | A snapshot of the upper and/or lower ontology at a specific point in time, tagged with a semantic version, accompanied by a diff and rollback pointer |
+| **Upper Ontology** | Stable domain taxonomy and alignment model. Mutates only through governed acceptance |
+| **Domain Ontology** | Domain-scoped concept graph; the lower ontology tier |
+| **Lower Ontology** | The collective set of all domain ontologies |
+| **Ontology Delta Proposal** | Candidate assertions produced by extraction — not yet accepted into the graph |
+| **Assertion Node** | An accepted ontology fact with confidence score and provenance links |
+| **Versioned Ontology** | Immutable snapshot of the ontology at a point in time, tagged with a semantic version, carrying a semantic diff and rollback pointer |
+
+### 3.3 Provenance Layer
+
+| Component | Description |
+|-----------|-------------|
+| **Extraction Activity** | Recorded execution of a Concept Extraction Processor that produced a set of candidate assertions |
+| **Processor Version** | Versioned identity (name + semver) recorded on every Extraction Activity |
+| **Assertion Lineage** | Supersession and invalidation history of an Assertion Node across versions |
+| **Trust Metadata** | Attached to a Document Source or Prepared Document: `source_authority` (authoritative / secondary / inferred / unknown), `freshness_date` (ISO-8601), `approval_state` (pending / accepted / rejected) |
+
+### 3.4 Storage Layer
+
+| Component | Description |
+|-----------|-------------|
+| **Document Store** | Object storage for raw artefacts, prepared documents, and segments |
+| **Ontology Store** | Graph store for current ontology state (triple store or property graph — deferred) |
+| **Resolver Service** | Maps content-addressed URIs (`sha256:…`) to physical storage locations |
 
 ---
 
-## 3. Architectural Processors
+## 4. Processing Architecture
 
-Processors are the units of transformation in the pipeline. Each processor has a defined input type, output type, and responsibility boundary.
+### 4.1 Data Plane — Processors
+
+Processors transform artefacts. Each has a defined input, output, and sole responsibility.
 
 | # | Processor | Input | Output | Responsibility |
 |---|-----------|-------|--------|----------------|
-| 1 | **Sourcing Processor** | Document Source | Sourced Document (Raw) | Fetches and stores a verbatim copy of a document from its source |
-| 2 | **Cleaning Processor** | Sourced Document (Raw) | Sourced Document (Prepared) — content | Removes markup, images, non-readable characters, and encoding noise |
-| 3 | **Metadata Processor** | Sourced Document (Raw) + source context | Sourced Document (Prepared) — metadata | Attaches source URI, retrieval time, method, MIME type, lineage, and original tags |
-| 4 | **Domain Extraction Processor** | Sourced Document (Prepared) | Domain signals (candidate domain labels) | Identifies which domain(s) the document belongs to by analysing its content |
-| 5 | **Domain Matching Processor** | Domain signals | Domain Document | Maps candidate domain labels to canonical domains in the upper ontology |
-| 6 | **Concept Extraction Processor** | Domain Document | Concepts + relationships | Extracts named entities, properties, and axioms from domain-scoped text |
-| 7 | **Ontology Build Processor** | Concepts + relationships | Domain Ontology; updated Upper Ontology | Constructs or updates the domain ontology; merges domain-level concepts into the upper ontology |
-| 8 | **Ontology Versioning Processor** | Ontology snapshot | Versioned Ontology artefact | Diffs, tags, and commits an immutable ontology version with a changelog and rollback pointer |
-| 9 | **Consistency Validation Processor** | Domain Ontology set | Validation report | Detects contradictions, circular definitions, and broken axioms across domain ontologies before a version is committed |
-| 10 | **Ontology Merge / Reconciliation Processor** | Conflicting domain concepts | Canonical merged representation | Resolves concept collisions when two domain ontologies claim the same term with differing definitions |
-| 11 | **Export / Serialisation Processor** | Internal ontology representation | OWL / RDF-Turtle / JSON-LD | Converts the ontology to standard interchange formats for archival, tooling, and downstream consumers |
+| 1 | **Sourcing Processor** | Document Source | Raw Document | Capture immutable source verbatim |
+| 2 | **Preparation Processor** | Raw Document | Prepared Document | Clean and normalise content |
+| 3 | **Segmentation Processor** | Prepared Document | Prepared Segments | Split into content-addressed, immutable fragments |
+| 4 | **Metadata Processor** | Source + Prepared Document | Metadata Envelope | Attach retrieval, lineage, and trust metadata |
+| 5 | **Domain Classification Processor** | Prepared Document | Domain Signals | Candidate domain labels from content analysis |
+| 6 | **Domain Matching Processor** | Domain Signals | Domain Document | Map candidates to canonical upper ontology domains |
+| 7 | **Concept Extraction Processor** | Domain Document + Segments | Delta Proposal + Extraction Activity | Extract candidate assertions with segment evidence links |
+| 8 | **Ontology Build Processor** | Delta Proposal | Candidate Domain Updates | Construct or update domain ontology graph |
+| 9 | **Consistency Validation Processor** | Candidate Updates | Validation Report | Detect contradictions, circular definitions, collisions |
+| 10 | **Reconciliation Processor** | Validation Conflicts | Canonical Merge Resolution | Resolve semantic conflicts; route upper ontology changes to Alignment Governance |
+| 11 | **Version Commit Processor** | Validated Graph State | Versioned Ontology | Tag, diff, and commit an immutable snapshot |
+| 12 | **Export Processor** | Versioned Ontology | OWL / RDF-Turtle / JSON-LD | Serialise for external tooling and archival |
+
+### 4.2 Control Plane
+
+Controls govern state transitions. They are distinct from data processors.
+
+| Control | Responsibility |
+|---------|----------------|
+| **Validation Gate** | Blocks promotion of any graph state that fails consistency validation |
+| **Alignment Governance** | Reviews and accepts or rejects proposed upper ontology mutations |
+| **Version Commit Gate** | Commits a validated, approved graph state as a new immutable version |
+| **Rollback Controller** | Reverts the active ontology pointer to a prior version; does not delete history |
+| **Invalidation Controller** | Marks Assertion Nodes as superseded when contradicting evidence is accepted |
 
 ---
 
-## 4. Component Diagram
-
-The diagram below shows the components and their data-flow relationships.
+## 5. Component Diagram
 
 ```mermaid
 graph TD
@@ -75,134 +117,199 @@ graph TD
         DS[Document Sources]
     end
 
-    subgraph Raw_Layer["Raw Layer"]
-        SDR[Sourced Documents · Raw]
+    subgraph Doc_Layer["Document Layer"]
+        RAW[Raw Document]
+        PREP[Prepared Document]
+        SEG[Prepared Segments]
+        DD[Domain Document]
     end
 
-    subgraph Prepared_Layer["Prepared Layer"]
-        SDP[Sourced Documents · Prepared]
+    subgraph Prov_Layer["Provenance Layer"]
+        EA[Extraction Activity]
+        PV[Processor Version]
+        AL[Assertion Lineage]
     end
 
-    subgraph Domain_Layer["Domain Layer"]
-        DD[Domain Documents]
-    end
-
-    subgraph Ontology_Store["Ontology Store"]
-        DO[Domain Ontologies\nLower Ontology]
+    subgraph Ont_Layer["Ontology Layer"]
+        DP[Delta Proposal]
+        AN[Assertion Nodes]
+        DO[Domain Ontologies]
         UO[Upper Ontology]
         VO[Versioned Ontology]
     end
 
-    subgraph Processors
-        P1[1 · Sourcing]
-        P2[2 · Cleaning]
-        P3[3 · Metadata]
-        P4[4 · Domain Extraction]
-        P5[5 · Domain Matching]
-        P6[6 · Concept Extraction]
-        P7[7 · Ontology Build]
-        P8[8 · Ontology Versioning]
-        P9[9 · Consistency Validation]
-        P10[10 · Merge / Reconciliation]
-        P11[11 · Export / Serialisation]
+    subgraph Store["Storage Layer"]
+        DSTORE[Document Store]
+        OSTORE[Ontology Store]
+        RS[Resolver Service]
     end
 
-    DS --> P1
-    P1 --> SDR
+    subgraph Control["Control Plane"]
+        VG[Validation Gate]
+        AG[Alignment Governance]
+        VCG[Version Commit Gate]
+        RC[Rollback Controller]
+        IC[Invalidation Controller]
+    end
 
-    SDR --> P2
-    SDR --> P3
-    P2 --> SDP
-    P3 --> SDP
+    subgraph Pipeline["Data Plane — Processors"]
+        P1[1 Sourcing]
+        P2[2 Preparation]
+        P3[3 Segmentation]
+        P4[4 Metadata]
+        P5[5 Domain Classification]
+        P6[6 Domain Matching]
+        P7[7 Concept Extraction]
+        P8[8 Ontology Build]
+        P9[9 Consistency Validation]
+        P10[10 Reconciliation]
+        P11[11 Version Commit]
+        P12[12 Export]
+    end
 
-    SDP --> P4
-    P4 --> P5
-    P5 --> DD
+    DS --> P1 --> RAW
+    RAW --> P2 --> PREP
+    PREP --> P3 --> SEG
+    PREP --> P4
+    P4 --> DSTORE
+    SEG --> DSTORE
+    SEG --> RS
 
-    DD --> P6
-    P6 --> P7
-    P7 --> DO
-    P7 --> UO
+    PREP --> P5 --> P6 --> DD
+    DD --> P7
+    SEG --> P7
+    P7 --> DP
+    P7 --> EA
+    EA --> PV
 
-    DO --> P9
-    UO --> P9
-    P9 -->|conflicts| P10
-    P10 --> UO
+    DP --> P8 --> P9
+    P9 --> VG
+    VG -->|pass| P10
+    VG -->|fail| P9
+    P10 -->|upper changes| AG
+    AG -->|accepted| AN
+    AN --> DO
+    AN --> UO
+    AN --> AL
 
-    P7 --> P8
-    P8 --> VO
+    DO --> P11
+    UO --> P11
+    P11 --> VCG --> VO
+    VO --> OSTORE
+    VO --> P12
 
-    VO --> P11
+    RC -.->|repoint| OSTORE
+    IC -.->|supersede| AL
 ```
 
 ---
 
-## 5. Sequence Diagram
+## 6. Sequence Diagram
 
-The diagram below shows the end-to-end flow for ingesting a single document and incorporating its concepts into the versioned ontology.
+End-to-end flow for ingesting a single document.
 
 ```mermaid
 sequenceDiagram
     autonumber
-    actor User as Trigger / Scheduler
-    participant P1 as Sourcing Processor
-    participant P2 as Cleaning Processor
-    participant P3 as Metadata Processor
-    participant P4 as Domain Extraction
-    participant P5 as Domain Matching
-    participant P6 as Concept Extraction
-    participant P7 as Ontology Build
+    actor Trigger as Trigger / Scheduler
+    participant P1 as Sourcing
+    participant P2 as Preparation
+    participant P3 as Segmentation
+    participant P4 as Metadata
+    participant P5 as Domain Classification
+    participant P6 as Domain Matching
+    participant P7 as Concept Extraction
+    participant P8 as Ontology Build
     participant P9 as Consistency Validation
-    participant P10 as Merge / Reconciliation
-    participant P8 as Ontology Versioning
-    participant P11 as Export / Serialisation
-    participant Store as Ontology Store
+    participant P10 as Reconciliation
+    participant CP as Control Plane
+    participant P11 as Version Commit
+    participant P12 as Export
+    participant Store as Storage
 
-    User->>P1: trigger ingest(source)
-    P1->>Store: store Sourced Doc (Raw)
-    P1->>P2: pass raw document
+    Trigger->>P1: ingest(source)
+    P1->>Store: store Raw Document
 
-    P2->>P3: cleaned document
-    P3->>Store: store Sourced Doc (Prepared)
-    P3->>P4: pass prepared document
+    P1->>P2: raw document
+    P2->>P3: prepared document
+    P3->>Store: store Prepared Segments (content-addressed)
+    P2->>P4: prepared document
+    P4->>Store: attach Trust Metadata
 
-    P4->>P5: candidate domain labels
-    P5->>Store: store Domain Document
-    P5->>P6: pass domain-scoped document
+    P3->>P5: prepared document
+    P5->>P6: domain signals
+    P6->>Store: store Domain Document
 
-    P6->>P7: extracted concepts + relationships
+    P6->>P7: domain document + segments
+    P7->>Store: record Extraction Activity (processor version, segments used)
+    P7->>P8: Delta Proposal
 
-    P7->>Store: update Domain Ontology (Lower)
-    P7->>Store: update Upper Ontology
+    P8->>P9: candidate graph updates
+    P9->>CP: validation report
 
-    P7->>P9: trigger validation
-    P9-->>P10: conflicts detected (if any)
-    P10->>Store: reconciled concepts
+    alt conflicts detected
+        CP->>P10: route conflicts to Reconciliation
+        P10->>CP: canonical resolution
+        CP-->>CP: upper ontology changes → Alignment Governance review
+    end
 
-    P9->>P8: validation passed → snapshot
-    P8->>Store: commit Versioned Ontology (tag + diff + rollback pointer)
+    CP->>P11: validated + approved state
+    P11->>Store: commit Versioned Ontology (semver tag + diff + rollback pointer)
 
-    P8->>P11: trigger export
-    P11->>Store: write OWL / RDF / JSON-LD artefact
+    P11->>P12: versioned ontology
+    P12->>Store: write OWL / RDF / JSON-LD artefact
 ```
 
 ---
 
-## 6. Open Questions
+## 7. Provenance Example
 
-- [ ] What is the internal representation format for domain ontologies before serialisation (RDF graph in-memory, property graph, custom AST)?
-- [ ] How are domain boundaries enforced — single-domain documents only, or can a document span multiple domains?
-- [ ] How is the upper ontology seeded — manually authored, bootstrapped from a standard upper ontology (BFO, SUMO, schema.org), or both?
-- [ ] What triggers a version commit — every document ingest, a scheduled batch, or a manual gate?
-- [ ] How are conflicting domain ontology versions handled during a merge when both are "accepted"?
-- [ ] What is the rollback mechanism — swap the active pointer, or replay from source documents?
+An assertion in the ontology links back through an Extraction Activity to the Prepared Segment that evidences it.
+
+```turtle
+@prefix ex:   <https://memory.example.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+ex:assertion/001
+    a ex:AssertionNode ;
+    ex:claim "LanceDB is an embedded vector database" ;
+    ex:confidence "0.92"^^xsd:decimal ;
+    ex:evidencedBy ex:segment/abc123 ;
+    prov:wasGeneratedBy ex:activity/extract-2026-05-23-001 .
+
+ex:activity/extract-2026-05-23-001
+    a ex:ExtractionActivity ;
+    prov:used ex:segment/abc123 ;
+    prov:wasAssociatedWith ex:processor/concept-extractor-v1.2.0 ;
+    prov:endedAtTime "2026-05-23T04:00:00Z"^^xsd:dateTime .
+
+ex:segment/abc123
+    a ex:PreparedSegment ;
+    ex:contentHash "sha256:e3b0c44298fc1c149afbf4c8996fb924..." ;
+    ex:sourceDocument ex:doc/lancedb-overview-2026 .
+```
+
+---
+
+## 8. Open Questions
+
+- [ ] What is the confidence weighting model for Trust Metadata — numeric score, tier-based, or rule-derived?
+- [ ] Is Alignment Governance a human approval gate, an automated check, or context-dependent?
+- [ ] How does rollback propagate when domain ontologies depend on an upper ontology version being rolled back?
+- [ ] What triggers a Version Commit — every ingest, scheduled batch, or manual gate?
+- [ ] Can a document span multiple domains, and if so, how are conflicting domain assignments resolved?
+- [ ] How is the upper ontology seeded — manually authored, bootstrapped from BFO/SUMO/schema.org, or hybrid?
+- [ ] What is the internal representation format before serialisation (RDF graph, property graph, custom AST)?
 
 ---
 
 ## References
 
 1. [ADR-0002 — Move from vector storage to ontology](../adr/0002-move-from-vector-storage-to-ontology.md)
-2. [ADR-0003 — Ontology architecture](../adr/0003-ontology-architecture.md)
-3. [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) — reference upper ontology
-4. [OWL 2 Web Ontology Language](https://www.w3.org/TR/owl2-overview/) — target serialisation standard
-5. [Mermaid — diagram-as-code](https://mermaid.js.org/) — diagramming syntax used above
+2. [ADR-0004 — Provenance model and control plane](../adr/0004-provenance-model-and-control-plane.md)
+3. [W3C PROV-O](https://www.w3.org/TR/prov-o/) — provenance ontology used in the example
+4. [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) — reference upper ontology
+5. [OWL 2 Web Ontology Language](https://www.w3.org/TR/owl2-overview/) — target serialisation standard
+6. [Mermaid — diagram-as-code](https://mermaid.js.org/) — diagramming syntax used above
+

@@ -2,6 +2,18 @@
 
 ---
 
+## 2026-05-23 — ADR-0004: provenance model and control plane
+
+Reviewed ADR-0004 draft. Applied feedback: added standard MADR sections (Context, Decision, Consequences, References), made ADR-0004 supersede ADR-0003 explicitly, completed the PROV-O Turtle provenance example, defined Trust Metadata fields (source_authority, freshness_date, approval_state) with confidence weighting deferred to Open Questions, added Resolver Service identifier scheme (SHA-256 content URIs), added Prepared Segment to the document model. Updated design document to v2 with the full provenance and control plane architecture, 12-processor pipeline, new component diagram, updated sequence diagram. Marked ADR-0003 superseded.
+
+**Mini-Retro**
+1. Did the process work? Yes — the review identified the exact gaps (no MADR structure, incomplete Turtle example, undefined Trust Metadata) and each was addressed directly.
+2. What slowed down or went wrong? The design document edit left duplicate content because the old_str matched only the header. Caught and fixed with a truncation.
+3. What single change would prevent this next time? When replacing an entire file's content, use bash truncation rather than the edit tool to avoid partial-match issues.
+4. Is this a pattern? Yes — replacing large documents via edit is error-prone. Add this to the agent instructions or use a bash write pattern for full-file replacements.
+
+---
+
 ## 2026-05-23 — Ontology architecture design and setup
 
 Updated the skills submodule to the latest commit. Created `docs/design/` as the new conceptual design space, with a full ontology-system-design document covering all architectural components, the 11-processor pipeline, a component diagram, and a sequence diagram. Wrote ADR-0002 (move from vector storage to ontology) and ADR-0003 (upper/lower ontology architecture and processing pipeline). Updated README.md and `.github/copilot-instructions.md` to reflect the direction change. Updated CHANGELOG.md and `docs/adr/README.md` index.
