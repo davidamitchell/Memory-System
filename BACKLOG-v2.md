@@ -762,6 +762,95 @@ The human door (W-0113, W-0114) makes structured data maintainable. This item ma
 
 ---
 
+## Phase 8 — Ontology pipeline: thin slice
+
+> End-to-end vertical slice through all 12 processors. Each item in this phase goes *deep and thin*: it touches every layer of the pipeline with the minimum viable implementation rather than perfecting any one layer. The goal is a working seam from raw file to exported Turtle before any processor is hardened.
+
+---
+
+## W-0200
+
+status: open
+created: 2026-05-23
+updated: 2026-05-23
+blocks: [W-0201]
+blocked-by: []
+research: [docs/adr/0004-provenance-model-and-control-plane.md, docs/design/ontology-system-design.md]
+assumptions:
+  - rdflib is sufficient for the in-memory graph in the first iteration (no triple-store required)
+  - Glossary files are the right input type for the thin slice: they are small, structured, one-concept-per-file, and already curated
+  - The local filesystem is the document store and segment store for this iteration (no object storage service needed)
+  - A single body paragraph = one Prepared Segment is the right granularity for glossary files; multi-segment splitting is deferred to W-0201
+  - Domain classification can be rule-based (path prefix `glossary/` → domain = `Vocabulary`) without ML for this iteration
+  - Version "commit" means writing a numbered `.ttl` file to `data/ontology/`; git commit of that file is the immutable snapshot
+  - Confidence weighting in Trust Metadata is deferred (Open Question from ADR-0004); `source_authority=authoritative` is hard-coded for glossary files in this iteration
+uncertainty:
+  - Whether rdflib's in-memory graph performance is acceptable when the full glossary (30+ files) is loaded; if not, W-0201 will move to a persistent store
+  - Whether the SHA-256 segment URI scheme (`sha256:<hex>`) is stable enough to use as the basis for the Resolver Service, or whether a content-addressed store (e.g. Git object store) should be used instead
+
+### Outcome
+
+A single Python script (`pipeline/run_pipeline.py`) accepts one glossary `.md` file as input and produces a valid Turtle file (`data/ontology/v0001.ttl`) containing one concept triple with full PROV-O provenance. All 12 processors from ADR-0004 fire in sequence; processors with no work to do in this iteration (Reconciliation, Alignment Governance) execute as explicit no-ops with a log line.
+
+### Context
+
+ADR-0004 defined a 12-processor pipeline and a provenance model. Until a single file can flow end-to-end and produce a verifiable Turtle output, every architectural decision remains untested. This item is the "elephant carpaccio" first slice: it validates the seam between all layers — sourcing, preparation, segmentation, metadata, domain classification, concept extraction, ontology build, validation, reconciliation, version commit, and export — using the simplest possible implementation of each. It answers Open Question Q7 (internal representation format) by building with rdflib and observing whether it holds.
+
+The input corpus is the existing `glossary/` folder (30+ curated `.md` files). The first run uses a single file (e.g. `glossary/vector-embedding.md`) so the output is inspectable by eye and correctable without running the full corpus.
+
+### Acceptance criteria
+
+- `pipeline/run_pipeline.py <path-to-glossary-file>` runs without error
+- Each of the 12 processors is implemented as a distinct Python function or class; none are missing or silently skipped
+- The output `data/ontology/v0001.ttl` is valid Turtle (parseable by `rdflib.Graph().parse(...)`)
+- The output contains at minimum:
+  - One `ms:AssertionNode` triple for the concept label and definition
+  - One `prov:wasGeneratedBy` link to an `ms:ExtractionActivity`
+  - One `prov:used` link from the activity to the `ms:PreparedSegment`
+  - The segment carries a `ms:contentHash` value (`sha256:<hex>` of the segment text)
+- Processor 9 (Consistency Validation) produces a validation report (even if it contains zero conflicts)
+- Processor 10 (Reconciliation) logs "no conflicts to reconcile" and exits cleanly
+- A `data/segments/<sha256-hex>.txt` file exists containing the raw segment text used as evidence
+- `pipeline/README.md` documents how to run the pipeline and describes each processor's role
+- All acceptance criteria are verified by a single integration test (`tests/test_pipeline_thin_slice.py`) that runs the pipeline against `glossary/vector-embedding.md` and asserts the Turtle output is valid and contains the required triples
+
+---
+
+## W-0201
+
+status: open
+created: 2026-05-23
+updated: 2026-05-23
+blocks: []
+blocked-by: [W-0200]
+research: [docs/adr/0004-provenance-model-and-control-plane.md]
+assumptions:
+  - The thin-slice output from W-0200 is correct and the Turtle format is stable enough to extend
+  - Running all 30+ glossary files through the pipeline will surface at least one domain classification edge case (e.g. a glossary file that straddles two domains)
+  - rdflib remains the in-memory representation (no store migration yet)
+uncertainty:
+  - Whether 30+ files produce any Consistency Validation conflicts; if they do, the Reconciliation no-op from W-0200 must be replaced with a real resolver before W-0201 can pass
+
+### Outcome
+
+The pipeline processes all files in `glossary/` in a single run and produces a single merged `data/ontology/v0002.ttl` containing all concept triples with provenance. The Version Commit Processor increments the version number and diffs the new graph state against `v0001.ttl`, logging additions and removals.
+
+### Context
+
+W-0200 validated the pipeline seam with one file. W-0201 deepens Processor 5 (Domain Classification) and Processor 9 (Consistency Validation) by running the full glossary corpus. It also answers Open Question Q5 (multi-domain documents) with real data: if any glossary file triggers >1 domain signal, the resolution strategy must be defined rather than deferred. The diff output from the Version Commit Processor provides the first real evidence for Open Question Q4 (commit trigger frequency).
+
+### Acceptance criteria
+
+- `pipeline/run_pipeline.py glossary/` (directory mode) processes all `.md` files in `glossary/` in a single pass
+- The output `data/ontology/v0002.ttl` is valid Turtle and contains one `ms:AssertionNode` per glossary file
+- The Version Commit Processor logs a diff: N triples added, 0 triples removed (first full-corpus run)
+- If any file produces >1 domain signal, the pipeline logs a warning and applies a documented tie-breaking rule (first signal wins, or most-specific signal wins — chosen and recorded in `pipeline/README.md`)
+- Processor 9 logs the number of consistency checks performed and passes with zero conflicts, or surfaces conflicts as structured output (not a crash)
+- The integration test suite is extended to cover the multi-file run and assert the triple count matches the number of glossary files processed
+- `pipeline/README.md` is updated to document the domain classification rule and the version diff format
+
+---
+
 ## References
 
 1. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase research items that this roadmap supersedes for implementation.
