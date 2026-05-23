@@ -260,6 +260,163 @@ The SHA algorithm mismatch (SHA-1 vs SHA-256) is the key risk: the `ms:contentHa
 
 ---
 
+## W-0203
+
+status: ready
+created: 2026-05-23
+updated: 2026-05-23
+blocks: [W-0204]
+blocked-by: [W-0201]
+research: []
+assumptions:
+  - The 26 glossary files constitute ground truth: every concept label, alias, tag, and relatedTerm declared in their front-matter is a known-correct extraction target
+  - Precision and recall are computable by comparing `delta_proposal` output from any extractor against the hand-authored front-matter values
+  - The existing rule-based p07 extractor should score near-perfect on the glossary corpus (it reads the front-matter directly) — this becomes the baseline ceiling
+uncertainty:
+  - Whether a simple F1 score is sufficient or whether weighted metrics (penalise missing labels more than missing aliases) are needed
+  - Whether evaluation should run per-file or aggregate across all 26 files
+
+### Outcome
+
+An evaluation CLI (`pipeline/eval.py`) that runs any extractor against the glossary corpus and prints per-file and aggregate precision/recall/F1 for concepts (label match), aliases, tags, and relatedTerm edges. The existing rule-based p07 is run first, establishing the baseline scores. The eval harness is the gate for all subsequent latent extraction phases: a new extractor is only accepted if it meets or exceeds baseline on the structured corpus.
+
+### Context
+
+Before any latent extraction work begins, the system needs a way to measure whether a new extractor is better or worse than the existing one. The glossary corpus is the ideal evaluation set because every extraction target is explicitly declared — there is no ambiguity about what the correct output should be. Running the existing rule-based extractor against this harness first establishes the ceiling (it should score ~1.0 since it reads the fields directly), which gives a clear reference point.
+
+This is the thinnest possible first step for latent extraction: no new model, no new NLP library, no architecture change. Just an evaluation tool that makes extraction quality visible. Every subsequent work item (W-0204 onward) runs this harness as part of its acceptance criteria.
+
+### Acceptance criteria
+
+- `pipeline/eval.py --corpus glossary/` runs without error and prints a structured report
+- Report includes: per-file precision/recall/F1 for labels, aliases, tags, and related edges; aggregate scores across all 26 files
+- Running against the existing rule-based p07 produces near-perfect scores (≥0.95 aggregate F1) — this is recorded as the baseline in `PROGRESS.md`
+- The eval harness accepts an `--extractor` flag so future extractors can be swapped in without changing the harness itself
+- `python -m pytest tests/test_eval_w0203.py` passes
+
+---
+
+## W-0204
+
+status: ready
+created: 2026-05-23
+updated: 2026-05-23
+blocks: [W-0205]
+blocked-by: [W-0203]
+research: []
+assumptions:
+  - An LLM can produce the same `delta_proposal` dict shape that the rule-based extractor produces — the interface is stable
+  - A structured prompt (system prompt defining the schema + user prompt with document content) is sufficient to get consistent JSON output from an LLM
+  - One research document is sufficient for the first slice — the goal is to establish viability, not coverage
+  - The W-0203 eval harness is used to validate that the LLM extractor performs acceptably on the glossary corpus before being run on unstructured prose
+uncertainty:
+  - Which LLM to use (local model vs API call); the processor interface is agnostic — the choice is an implementation decision for this item
+  - Whether the LLM requires a structured output schema (JSON mode / function calling) or whether prompt engineering is sufficient
+  - What score threshold on the W-0203 eval harness is "acceptable" for the LLM extractor before it is trusted on unstructured prose
+  - Whether a single research document is representative enough to draw conclusions about latent extraction viability
+
+### Outcome
+
+A new extraction strategy for p07 that uses an LLM to produce `delta_proposal` from unstructured prose. The extractor is evaluated against the W-0203 harness on the glossary corpus, establishing a score vs the rule-based baseline. It is then run against one selected research document, producing a concept card that is inspected by eye. The processor interface (`delta_proposal` dict shape) is unchanged — p08–p12 receive identical input regardless of which extraction strategy was used.
+
+### Context
+
+W-0201 and W-0203 give us a working graph and a measurement tool. This item is the first time the pipeline ingests a document that does not have hand-authored front-matter. The goal is viability, not perfection: does the LLM extractor produce plausible concepts and relations from prose? The W-0203 harness scores the output on the glossary corpus as a proxy for quality. If the score is below threshold, the extractor is refined before moving to W-0205. If it is above threshold, the pipeline is ready to expand the corpus.
+
+The design principle is: the extractor is a pluggable strategy in p07. Swapping rule-based → LLM is one function swap. Nothing in p08–p12 changes. This was the design intent from the beginning (BACKLOG.md W-0200 rationale: "Rule-based domain → LLM domain: swap the classifier function; processor 5's input/output interface is unchanged").
+
+### Acceptance criteria
+
+- `pipeline/processors/p07_concept_extraction.py` has a `--strategy` flag (or equivalent) selecting `rule-based` (default, existing) or `llm`
+- Running `--strategy llm` on any glossary file produces a `delta_proposal` with the same dict schema as the rule-based extractor
+- `pipeline/eval.py --corpus glossary/ --strategy llm` produces a score that is recorded in `PROGRESS.md` alongside the rule-based baseline from W-0203
+- Running `--strategy llm` on one selected research document completes without error and produces a concept card inspectable via `pipeline/query.py`
+- The concept card from the research document is recorded by eye in `PROGRESS.md` — plausibility is noted, not scored (no ground truth exists for prose yet)
+- All existing tests pass unchanged (`python -m pytest tests/ -v`)
+- `python -m pytest tests/test_llm_extraction_w0204.py` passes
+
+---
+
+## W-0205
+
+status: ready
+created: 2026-05-23
+updated: 2026-05-23
+blocks: [W-0206]
+blocked-by: [W-0204]
+research: []
+assumptions:
+  - spaCy (or equivalent NLP library) is available and can be added as a dependency without breaking the existing pipeline
+  - NER and dependency parsing outputs can be fed as enrichment to p07 without changing the processor's output schema
+  - Adding NLP preprocessing to p02 is additive — the existing `prepared_text` output is unchanged; NLP annotations are a new key in state
+  - The W-0203 eval harness can measure whether NLP enrichment improves extraction quality over the W-0204 LLM-only baseline
+uncertainty:
+  - Whether spaCy's default English model is sufficient or whether a specialised scientific/research NER model is needed
+  - Whether NER output improves LLM extraction quality or introduces noise (to be measured, not assumed)
+  - Performance impact of adding NLP preprocessing to the pipeline (target: still completes in under 10 seconds per document)
+
+### Outcome
+
+p02 (Preparation Processor) is extended with an optional NLP enrichment step that attaches named entity spans, POS tags, and noun chunks to pipeline state. p07 (Concept Extraction, LLM strategy) consumes these annotations as additional signal when constructing its extraction prompt. The W-0203 eval harness measures whether NLP enrichment improves F1 over the W-0204 LLM-only baseline on the glossary corpus.
+
+### Context
+
+Phase 3 (W-0204) establishes that LLM-based extraction works on prose. This item tests the hypothesis that feeding the LLM structured NLP annotations (named entities, noun chunks) as part of the prompt produces better extractions than sending raw text alone. This is a targeted, measurable improvement: the eval harness scores both approaches and the delta is the evidence. If enrichment does not improve quality, it is not added — the measurement decides.
+
+The NLP layer belongs in p02 because it is a preparation step (transforming raw text into richer structured input) not an extraction step. This separation preserves the single-responsibility design of the pipeline and ensures that any future extractor (not just LLM) can benefit from NLP enrichment.
+
+### Acceptance criteria
+
+- `pipeline/processors/p02_preparation.py` adds an optional NLP enrichment step controlled by a config flag; when disabled, output is identical to the W-0201 state
+- Pipeline state gains a `nlp_annotations` key when NLP is enabled: named entity spans, POS-tagged tokens, noun chunks
+- `pipeline/eval.py --corpus glossary/ --strategy llm --nlp` runs and produces scores recorded in `PROGRESS.md` alongside the W-0204 LLM-only baseline
+- The delta (NLP-enriched vs LLM-only) is explicitly noted: improvement, no change, or regression — all are valid outcomes; the measurement is the deliverable
+- All existing tests pass unchanged (`python -m pytest tests/ -v`)
+- `python -m pytest tests/test_nlp_enrichment_w0205.py` passes
+
+---
+
+## W-0206
+
+status: ready
+created: 2026-05-23
+updated: 2026-05-23
+blocks: []
+blocked-by: [W-0205]
+research: []
+assumptions:
+  - A minimal relation type vocabulary can be defined in the upper ontology without destabilising existing `ms:relatedTerm` edges
+  - The `delta_proposal` dict can be extended with a `typed_relations` list alongside `related` without breaking p08–p12
+  - The glossary corpus contains implicit relation types that a human can annotate for a small subset — this annotation becomes the ground truth for evaluating typed extraction
+  - `ms:relatedTerm` is retained as a fallback when the extractor cannot determine a typed predicate
+uncertainty:
+  - Which relation types are load-bearing for this corpus (partOf, instanceOf, causedBy, precedes, usedBy, etc.) — a small annotation pass on the glossary will determine this
+  - Whether LLM-based relation typing is reliable enough without fine-tuning
+  - How typed relations interact with the consistency validation in p09 — typed predicates have stronger semantics than untyped ones
+
+### Outcome
+
+The pipeline extracts typed predicates (e.g. `ms:instanceOf`, `ms:usedBy`, `ms:precedes`) in addition to the existing untyped `ms:relatedTerm`. A minimal relation type vocabulary is defined in the upper ontology (`data/ontology/upper.ttl` or equivalent). A small human-annotated subset of the glossary corpus (5–10 files) provides ground truth for evaluating typed extraction quality. The W-0203 eval harness is extended to score typed relation extraction (macro-averaged F1 per relation type).
+
+### Context
+
+Typed relations are what distinguish an ontology from a property graph. An untyped `relatedTerm` edge says "these two concepts are somehow connected." A typed `ms:usedBy` edge says "concept A is used by concept B." The difference matters for reasoning, query precision, and eventual alignment with upper ontologies (BFO, schema.org). This item introduces typed relations at the minimum viable granularity — enough to demonstrate the capability and measure it, not a full OWL axiom set.
+
+The minimal relation vocabulary is determined by annotation, not assumption: a human pass over the glossary `related:` edges, classifying each as partOf / instanceOf / usedBy / precedes / associatedWith (catch-all), reveals which types are actually present in the corpus. This annotation is the ground truth. The extractor is then evaluated against it.
+
+### Acceptance criteria
+
+- A minimal relation type vocabulary (5–8 types plus `ms:relatedTerm` catch-all) is defined and documented in `docs/design/` or as a schema section in the ontology
+- A human annotation of 5–10 glossary files' `related:` edges with typed predicates is committed to `data/eval/typed-relations-ground-truth.json`
+- The LLM extractor (W-0204 strategy) is extended to output typed predicates in `delta_proposal.typed_relations`
+- p08 (Ontology Build) writes typed predicates to Turtle alongside `ms:relatedTerm`
+- `pipeline/eval.py --typed-relations` scores typed extraction against the ground truth annotation
+- Scores are recorded in `PROGRESS.md`
+- All existing tests pass unchanged (`python -m pytest tests/ -v`)
+- `python -m pytest tests/test_typed_relations_w0206.py` passes
+
+---
+
 ## References
 
 1. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase research items; historical record.
@@ -270,6 +427,7 @@ The SHA algorithm mismatch (SHA-1 vs SHA-256) is the key risk: the `ms:contentHa
 6. [rdflib](https://rdflib.readthedocs.io/) — the Python RDF library used in W-0200 and W-0201 for in-memory graph construction, SPARQL queries, and Turtle serialisation.
 7. [W3C PROV-O](https://www.w3.org/TR/prov-o/) — the provenance ontology used in the Turtle pattern (ADR-0004).
 8. [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/) — the query language used in `pipeline/queries/*.rq`; queries written here run unchanged against any SPARQL endpoint.
+9. [`docs/design/ontology-system-design.md §9`](./docs/design/ontology-system-design.md) — target state and proposed extraction phases; context for W-0203–W-0206.
 
 ---
 

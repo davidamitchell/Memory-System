@@ -1,7 +1,7 @@
 # Ontology-Based Memory System — Design
 
 **Status:** draft
-**Version:** 2
+**Version:** 3
 **Date:** 2026-05-23
 **Supersedes:** v1 (initial design, same file)
 **Related ADRs:** [ADR-0002](../adr/0002-move-from-vector-storage-to-ontology.md) · [ADR-0004](../adr/0004-provenance-model-and-control-plane.md)
@@ -292,6 +292,78 @@ ex:segment/abc123
 
 ---
 
+## 9. Target State and Proposed Extraction Phases
+
+> **These phases are proposals — descriptive, not prescriptive.** They describe a plausible route from the current state to the target state. Sequence, scope, and naming will evolve as the work proceeds.
+
+### 9.1 Target State
+
+The pipeline should be able to ingest an arbitrary unstructured prose document and produce a well-formed, versioned, provenance-traced ontology contribution that includes:
+
+| Capability | Description |
+|-----------|-------------|
+| **Named entity extraction** | Concepts and classes identified from prose without hand-authored front-matter |
+| **Alias / synonym grouping** | Multiple surface forms of the same concept collapsed to a canonical node |
+| **Typed relation extraction** | Directed, labelled predicates between concepts (e.g. `partOf`, `causedBy`, `instanceOf`, `precedes`) rather than undifferentiated `relatedTerm` |
+| **Taxonomic hierarchy** | `subClassOf` / `rdf:type` edges enabling is-a reasoning; not just associative links |
+| **Confidence-weighted assertions** | Every extracted assertion carries a confidence score derived from extraction method and source authority |
+| **Full provenance tracing** | Every node resolves to the segment(s) that evidenced it; every segment resolves to its source document |
+| **Consistency validation** | Contradictions and collisions are detected before any version is committed |
+| **Evaluable output** | Extraction quality can be measured against a known-good ground truth corpus |
+
+The pipeline's processor interface (`delta_proposal` dict in / versioned Turtle out) is stable across all phases. Each phase improves the quality and coverage of what p07 (Concept Extraction) produces, without changing what p08–p12 consume.
+
+---
+
+### 9.2 Current State (as of W-0201)
+
+The pipeline is end-to-end and produces correct, provenance-traced Turtle. Extraction is **rule-based**: it reads explicitly declared fields from YAML front-matter. This works perfectly for the glossary corpus (structured, hand-authored) and provides a verifiable ground truth for evaluating future extraction strategies.
+
+Gaps relative to target state:
+- No NLP preprocessing (no tokenisation, POS tagging, NER, or dependency parsing)
+- Concepts and relations are explicitly declared, not inferred from prose
+- All relations are untyped (`ms:relatedTerm`)
+- No taxonomic hierarchy (`subClassOf` is absent)
+- No extraction quality evaluation framework
+
+---
+
+### 9.3 Proposed Phases
+
+#### Phase 0 — Structured extraction (complete)
+*Single glossary file → end-to-end pipeline → queryable concept card.*
+All 12 processors wired. Ground truth established. The glossary corpus forms the evaluation baseline for all future phases.
+
+#### Phase 1 — Full structured corpus (current)
+*All 26 glossary files → full graph → traversable concept neighbourhood.*
+Multi-file merging, graph traversal queries, ~80 typed `relatedTerm` edges. The first real graph, not a toy.
+
+#### Phase 2 — Evaluation harness
+*Measure what the pipeline extracts against what it should extract.*
+Define precision/recall metrics for concept extraction, alias grouping, and relation extraction. Run the existing rule-based extractor against the glossary corpus and record the baseline scores. This harness is the gate for all subsequent phases: every new extraction strategy is only accepted if it meets or exceeds baseline on the structured corpus.
+
+#### Phase 3 — LLM-based concept extraction (prose, single document)
+*Swap p07 for a prompt-based extractor on one unstructured research document.*
+The extractor produces the same `delta_proposal` dict shape; p08–p12 are unchanged. Evaluate output against the Phase 2 harness (using the glossary as proxy ground truth). First evidence that latent extraction is viable on this architecture.
+
+#### Phase 4 — NLP enrichment layer
+*Add tokenisation, POS tagging, and NER as an enrichment step in p02.*
+Feeds richer signal (named entity spans, dependency parses) to p07. Evaluate whether NLP preprocessing improves extraction quality over Phase 3 baseline. spaCy or equivalent; no model training required at this phase.
+
+#### Phase 5 — Typed relation extraction
+*Extend `delta_proposal` to carry typed predicates.*
+Move from `ms:relatedTerm` (undifferentiated) to labelled relations (e.g. `ms:partOf`, `ms:causedBy`, `ms:instanceOf`). A minimal relation type vocabulary is defined in the upper ontology. Evaluate: does typed extraction on the glossary corpus recover the implicit relation types that the hand-authored `related:` fields imply?
+
+#### Phase 6 — Taxonomy induction
+*Introduce `subClassOf` / `rdf:type` hierarchy.*
+Extracted concepts are assigned to class nodes, not just a flat assertion list. Enables is-a reasoning and aligns with OWL semantics. Evaluated against a small set of known hierarchical relationships in the glossary (e.g. `VectorEmbedding subClassOf Representation`).
+
+#### Phase 7 — Confidence weighting and Trust Metadata
+*Attach numeric confidence scores to extracted assertions.*
+Score derives from extraction method (rule-based > LLM-certain > LLM-uncertain), source authority, and segment evidence count. Consistency validation and reconciliation processors use scores to rank competing assertions. Evaluated: does the confidence model correctly rank assertions from authoritative vs inferred sources?
+
+---
+
 ## 8. Open Questions
 
 - [ ] What is the confidence weighting model for Trust Metadata — numeric score, tier-based, or rule-derived?
@@ -312,4 +384,5 @@ ex:segment/abc123
 4. [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) — reference upper ontology
 5. [OWL 2 Web Ontology Language](https://www.w3.org/TR/owl2-overview/) — target serialisation standard
 6. [Mermaid — diagram-as-code](https://mermaid.js.org/) — diagramming syntax used above
+7. [BACKLOG.md W-0203–W-0206](../../BACKLOG.md) — implementation items for latent extraction phases
 
