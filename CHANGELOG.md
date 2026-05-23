@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed — Self-improve now mandates making changes, not raising backlog items
+- `docs/design/build-loop-harness.md` Phase 7 — updated to require direct edits for small improvements; ADR only gates structural changes
+- `.github/copilot-instructions.md` §17 Self-improve — updated to match
+
+### Added
+- `learnings.md` — distilled rules from all PROGRESS.md mini-retros
+
+### Fixed
+- `docs/design/build-loop-harness.md` — removed glossary cross-links from intro (design docs are not memory files)
+
 ### Changed — Full pivot documentation coherence pass
 - `README.md` — Rewritten as single-architecture doc; removed dual-track framing, Quick Start, LanceDB and embedding model references
 - `.github/copilot-instructions.md` — §1, §11, §12, §13, §15, §17, References updated to reflect ontology-only architecture

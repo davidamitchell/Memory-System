@@ -340,7 +340,7 @@ ENTRY → PLAN → EXECUTE (loop) → CLOSE → SELF-IMPROVE
 
 ### Self-improve
 
-After close, ask: was any harness phase slow, skipped, or unexpectedly valuable? If the harness itself needs changing, raise a backlog item and write an ADR.
+After close, ask: was any harness phase slow, skipped, or unexpectedly valuable? If the harness needs changing, **make the change now** — update `docs/design/build-loop-harness.md` and this section in the same session. Small improvements (wording, a missing rule, a clarification): update directly. Structural changes (adding/removing phases, changing the loop shape): write an ADR first, then update both documents. Do not defer to a backlog item.
 
 ### Focus rules (non-negotiable)
 

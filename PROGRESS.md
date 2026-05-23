@@ -2,7 +2,23 @@
 
 ---
 
-## 2026-05-23 — Full pivot documentation coherence pass
+## 2026-05-23 — Build loop and instruction corrections
+
+Three targeted corrections from the current session:
+
+1. **"Search the repository" explained** — clarified that Phase 1 Entry step 4 means running 2–3 grep/glob queries before writing anything, to find existing work and surface retrieval-quality signals.
+2. **Glossary links removed from build-loop-harness.md** — design/protocol documents should use plain prose; the Wikipedia-style cross-linking rule applies only to memory files.
+3. **Self-Improve now mandates making changes** — Phase 7 of `build-loop-harness.md` and §17 of `copilot-instructions.md` both previously said "raise a backlog item" for harness changes, contradicting §7's "do not just answer — make the change." Both updated: small improvements ship in the same session; structural changes require an ADR first.
+
+**Files updated:** `docs/design/build-loop-harness.md`, `.github/copilot-instructions.md`, `CHANGELOG.md`, `learnings.md`
+
+**Mini-Retro**
+1. Did the process work? Yes — all three issues were small, well-scoped corrections. No ambiguity about intent.
+2. What slowed down or went wrong? A missing heading in `learnings.md` was left by a prior edit that matched only the paragraph text; required a follow-up fix. Pattern: always view the file after editing to catch broken formatting.
+3. What single change would prevent this next time? View the edited file immediately after every `edit` call to catch structural breakage before the next step.
+4. Is this a pattern? Yes — the broken heading is a repeat of the earlier duplicate-content issue (see ADR-0004 retro). Add "view file after edit" to the validation checklist or as a standing rule.
+
+
 
 Completed a full documentation coherence pass to align all docs with the definitive architecture: ontology-based knowledge store (Open-Brain). The original vector/LanceDB design was replaced before implementation; all documentation now reflects this as a full pivot with no dual-track framing.
 

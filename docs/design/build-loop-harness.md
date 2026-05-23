@@ -170,7 +170,12 @@ Ask these three questions about the **harness itself**, not just the work:
 2. **Did any phase catch something that would otherwise have been missed?** This is evidence the phase earns its cost. Note it.
 3. **Was the loop the right granularity?** If checklist items were too coarse (each contained implicit sub-steps) or too fine (trivial items padded the list), adjust the decomposition rule for next time.
 
-If a change to this document is warranted, raise a backlog item. Changes to the harness itself require an ADR — the harness is an architectural decision.
+If a change is warranted, **make it now** — do not defer to a backlog item. This is §7 in action: "Do not just answer — make the change."
+
+- **Small improvement** (wording, a missing rule, a clarification): update this document and the condensed reference in `copilot-instructions.md` §17 directly, in the same session.
+- **Structural change** (adding or removing a phase, changing the loop shape, redefining the entry gate): write an ADR first (`docs/adr/`), then update both documents. The harness is an architectural decision — structural changes need a decision record.
+
+Either way, the change ships this session. A backlog item is only appropriate when the change requires research or involves decisions outside the current scope.
 
 ---
 

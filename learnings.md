@@ -76,6 +76,24 @@ Distilled from PROGRESS.md mini-retros. Each entry states the class of problem a
 
 ---
 
+## Self-improve means making the change, not raising a backlog item
+
+**Pattern:** Phase 7 (Self-Improve) and §17 of `copilot-instructions.md` both previously said "raise a backlog item" for harness changes — directly contradicting §7's "do not just answer — make the change."
+**Rule:** Small harness/instruction improvements ship in the same session. Structural changes (phases, loop shape) require an ADR first, then ship. A backlog item is only for changes needing research outside the current scope.
+**Source:** 2026-05-23 — self-improve mandate fix
+
+---
+
+## Section numbering in copilot-instructions.md
+
 **Pattern:** Inserting a new section mid-document requires renumbering all subsequent sections — a mechanical step that is easy to get wrong.
 **Rule:** Keep section numbers stable where possible. When inserting, prefer appending or using sub-sections to avoid a cascade renumber.
 **Source:** 2026-03-07 — Standardise agent instructions
+
+---
+
+## View file after every edit call
+
+**Pattern:** An `edit` call that matches only part of the intended `old_str` can leave broken formatting (missing headings, duplicate content) that is not visible until the next read.
+**Rule:** View the edited file immediately after every `edit` call to catch structural breakage before the next step.
+**Source:** 2026-05-23 — build loop corrections session
