@@ -15,7 +15,7 @@ superseded_by: ""
 
 ## Vision
 
-The memory system is a personal knowledge base that captures, indexes, and retrieves information seamlessly across devices and contexts. It is agent-native, runs at zero recurring infrastructure cost, and is designed to improve the quality of its own structure over time. Every piece of captured knowledge is semantically searchable within seconds of writing. The system treats startup latency, capture friction, and retrieval quality as first-class engineering concerns — not afterthoughts — because a slow or effortful system is an unused system.
+The memory system is a personal knowledge base that captures, indexes, and retrieves information seamlessly across devices and contexts. It is [agent-native](./glossary/agent-first.md), runs at zero recurring infrastructure cost, and is designed to improve the quality of its own structure over time. Every piece of captured knowledge is [semantically searchable](./glossary/semantic-search.md) within seconds of writing. The system treats startup latency, [capture](./glossary/capture.md) friction, and [retrieval](./glossary/retrieval.md) quality as first-class engineering concerns — not afterthoughts — because a slow or effortful system is an unused system.
 
 ---
 
@@ -44,7 +44,7 @@ The memory system is a personal knowledge base that captures, indexes, and retri
 └────────────────────────┘    └────────────────────────────────┘
 ```
 
-The system is built in three layers. The **capture layer** contains every surface through which a memory can enter the system — human-facing tools (iOS, CLI, bots) and agent-facing tools (MCP clients). The **MCP server** is the single write and search interface; all capture surfaces call `add_memory` and all retrieval surfaces call `search_brain`. The **storage and retrieval layers** are separated but tightly coupled: every `add_memory` call writes a markdown file to git and a pre-computed embedding JSON alongside it, so the LanceDB index can be rebuilt from cold in under 2 seconds at any corpus size without re-embedding from text.
+The system is built in three layers. The **capture layer** contains every surface through which a memory can enter the system — human-facing tools (iOS, CLI, bots) and agent-facing tools ([MCP](./glossary/mcp.md) clients). The **[MCP server](./glossary/mcp-server.md)** is the single write and search interface; all capture surfaces call `add_memory` and all retrieval surfaces call `search_brain`. The **storage and retrieval layers** are separated but tightly coupled: every `add_memory` call writes a markdown file to git and a pre-computed [embedding](./glossary/vector-embedding.md) JSON alongside it, so the [LanceDB](./glossary/lancedb.md) index can be rebuilt from cold in under 2 seconds at any corpus size without re-embedding from text.
 
 ---
 
@@ -98,7 +98,7 @@ blocks: [W-0101, W-0102, W-0103, W-0104, W-0105, W-0106, W-0107, W-0108, W-0109]
 blocked-by: []
 research: [2026-03-08-lancedb-index-rebuild-from-git.md]
 assumptions:
-  - BAAI/bge-small-en-v1.5 remains the baseline embedding model until W-0101 resolves the model question
+  - BAAI/bge-small-en-v1.5 remains the baseline [embedding model](./glossary/embedding-model.md) until W-0101 resolves the model question
   - Pre-computed JSON embeddings are safe to commit to git (they are floating-point vectors, not secrets)
   - The corpus will not exceed 10,000 items in the medium term; JSON load scales acceptably to that size
 uncertainty:
@@ -178,7 +178,7 @@ blocked-by: [W-0100]
 research: [2026-03-08-inbox-folder-capture-triage-pattern.md]
 assumptions:
   - The `inbox/` folder is a valid destination for `add_memory` alongside the existing `meetings/`, `journal/`, `projects/` folders
-  - No triage or classification automation is required in this item — that is W-0103
+  - No [triage](./glossary/triage.md) or classification automation is required in this item — that is W-0103
   - Files in `inbox/` follow the same YAML front-matter requirements as other memory files
   - Timestamp-precision filenames (HHmmss) are sufficient to avoid collisions for human-pace capture rates
 uncertainty:
@@ -759,3 +759,15 @@ The human door (W-0113, W-0114) makes structured data maintainable. This item ma
 - The agent does not fire if no flags meet the threshold — silence means all clear
 - The scheduling config and delivery channel are documented in `projects/` with rotation/update instructions
 - This item must not be started until W-0114 has been in daily use for at least two weeks (enforced by convention, documented here)
+
+---
+
+## References
+
+1. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase research items that this roadmap supersedes for implementation.
+2. [`definition_scheme.md`](./definition_scheme.md) — the schema and requirements for all glossary definition files.
+3. [`glossary/README.md`](./glossary/README.md) — controlled vocabulary; terms used throughout this file are defined there.
+4. [LanceDB Documentation](https://lancedb.github.io/lancedb/) — the embedded vector database used in W-0100 and W-0101.
+5. [Model2Vec](https://github.com/MinishLab/model2vec) — the static embedding model evaluated in W-0101.
+6. [Model Context Protocol](https://modelcontextprotocol.io/) — the protocol underlying the MCP server architecture.
+7. [Ink & Switch: Local-first Software](https://www.inkandswitch.com/local-first/) — the design philosophy behind the zero-infrastructure goal.

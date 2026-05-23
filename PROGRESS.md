@@ -105,3 +105,11 @@ Extended `BACKLOG-v2.md` with 5 new work items and 2 new phases, per issue "New 
 2. What slowed down or went wrong? Phase renumbering required careful edits in multiple places (phase headers, Outstanding Discovery, Research Cross-Reference). No errors, but this is mechanical work that is easy to miss.
 3. What single change would prevent this next time? A script or table of contents in BACKLOG-v2.md that maps phase numbers to phase names would make renumbering visible at a glance — worth raising as a backlog item.
 4. Is this a pattern? Phase renumbering has now happened once. If it happens again, a structured phase index or YAML front-matter list of phases would eliminate the manual touch points.
+
+---
+
+## References
+
+1. [`.github/copilot-instructions.md` §5 and §7](../.github/copilot-instructions.md) — the mandate for PROGRESS.md and the Mini-Retro format.
+2. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase work items referenced in this history.
+3. [`BACKLOG-v2.md`](./BACKLOG-v2.md) — implementation-ready roadmap updated during these sessions.

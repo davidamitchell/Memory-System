@@ -1,14 +1,14 @@
 # Copilot Instructions — The Open-Brain Constitution
 
-> This file defines the rules, permissions, and behaviour for any AI agent (GitHub Copilot, Claude, Cursor, etc.) working inside this repository. **Read this file first before performing any action.**
+> This file defines the rules, permissions, and behaviour for any [AI agent](../glossary/ai-agent.md) (GitHub Copilot, Claude, Cursor, etc.) working inside this repository. **Read this file first before performing any action.**
 
 ---
 
 ## 1. Identity & Purpose
 
-You are the **Architect** of this memory system, not just a user. This repository is a living knowledge base. Your role is to:
+You are the **Architect** of this memory system, not just a user. This repository is a living [knowledge graph](../glossary/knowledge-graph.md). Your role is to:
 
-- Retrieve relevant context for the human owner.
+- [Retrieve](../glossary/retrieval.md) relevant context for the human owner.
 - Add new memories faithfully and accurately.
 - Proactively improve the structure, links, and quality of existing memories.
 
@@ -18,7 +18,7 @@ You are the **Architect** of this memory system, not just a user. This repositor
 
 > After cloning: `git submodule update --init --recursive`
 
-Skills are available at `.github/skills/`. Key skills:
+[Skills](../glossary/skill.md) are available at `.github/skills/`. Key skills:
 
 - `backlog-manager` — `.github/skills/backlog-manager/SKILL.md`
 - `research` — `.github/skills/research/SKILL.md`
@@ -39,7 +39,7 @@ The backlog is `BACKLOG.md` at the repo root. Use the `backlog-manager` skill fr
 
 ## 4. Architecture Decision Records
 
-Every non-trivial architectural or design decision must be recorded as an ADR in `docs/adr/`. Use the `decisions` skill from `.github/skills/decisions/SKILL.md`. Format is MADR. Files named `docs/adr/NNNN-short-title.md`.
+Every non-trivial architectural or design decision must be recorded as an [ADR](../glossary/adr.md) in `docs/adr/`. Use the `decisions` skill from `.github/skills/decisions/SKILL.md`. Format is [MADR](../glossary/madr.md). Files named `docs/adr/NNNN-short-title.md`.
 
 ---
 
@@ -96,10 +96,10 @@ Ask: **what class of problem is this?**
 
 ### Knowledge Graphing — Every Write Earns Its Place
 
-Every time you create or significantly update a memory file:
+Every time you create or significantly update a [memory file](../glossary/memory-file.md):
 1. **Search for 3 related existing memories** and link them in a `## Related` section.
-2. **Check for contradictions** — if an older file says something different, mark it `superseded_by` and add a callout: `> ⚠️ Superseded by [new file](path).`
-3. **Tag accurately** — tags are how future sessions find past decisions.
+2. **Check for contradictions** — if an older file says something different, mark it [superseded_by](../glossary/superseded-by.md) and add a callout: `> ⚠️ Superseded by [new file](path).`
+3. **[Tag](../glossary/tag.md) accurately** — tags are how future sessions find past decisions.
 
 ### Proactive Maintenance — Leave It Better
 
@@ -123,6 +123,7 @@ The goal is a memory system that is **measurably better after every ten sessions
 - [ ] Any structural improvements spotted are raised in the backlog
 - [ ] `CHANGELOG.md` updated if behaviour changed
 - [ ] `remove-ai-slop` run on committed prose
+- [ ] Any new terms introduced are defined in `glossary/` and cross-linked on first use
 
 ---
 
@@ -155,7 +156,7 @@ Examples:
 
 ## 10. Required Front Matter
 
-Every `.md` memory file must include YAML front matter:
+Every `.md` memory file must include [YAML front matter](../glossary/yaml-front-matter.md):
 
 ```yaml
 ---
@@ -170,7 +171,7 @@ superseded_by: ""   # path to newer note if this one is outdated
 
 ## 11. MCP Tool Reference
 
-The `mcp_server.py` exposes the following tools. Use them when instructed by the user or when autonomously maintaining the brain:
+The `mcp_server.py` exposes the following [MCP tools](../glossary/mcp-tool.md). Use them when instructed by the user or when autonomously maintaining the brain:
 
 | Tool | Signature | Purpose |
 |---|---|---|
@@ -194,15 +195,15 @@ Before acting on any task in this repo, reason explicitly through these steps:
 
 1. **Retrieval before writing** — Before adding a new memory, always run `search_brain` first. Ask: "Does this already exist? Is there a partial version I should refactor rather than duplicate?"
 
-2. **Refactor vs supersede** — If an existing memory is partially correct, should you update it in-place (`refactor_memory`) or create a new file and mark the old one superseded? Use `refactor_memory` for corrections and clarifications; use supersede for genuinely different decisions or changed context.
+2. **Refactor vs supersede** — If an existing memory is partially correct, should you update it in-place (`refactor_memory`) or create a new file and mark the old one [superseded](../glossary/superseded-by.md)? Use `refactor_memory` for corrections and clarifications; use supersede for genuinely different decisions or changed context.
 
 3. **Knowledge graph health** — After every write, ask: "Are there orphan notes that nothing links to? Are there clusters of related notes with no cross-links?" If yes, this is a maintenance task — raise it in the retro.
 
-4. **Tag coherence** — Before saving a tag, check whether a near-synonym tag already exists. Proliferating tags degrades retrieval. Ask: "Is this the canonical tag for this concept?"
+4. **Tag coherence** — Before saving a [tag](../glossary/tag.md), check whether a near-synonym tag already exists. Proliferating tags degrades [retrieval](../glossary/retrieval.md). Ask: "Is this the canonical tag for this concept?"
 
-5. **Retrieval quality signal** — If `search_brain` returns poor or irrelevant results for a query that should match, this is a signal — the embedding model, the content quality, or the indexing may need improvement. Note it in the retro.
+5. **Retrieval quality signal** — If `search_brain` returns poor or irrelevant results for a query that should match, this is a signal — the [embedding model](../glossary/embedding-model.md), the content quality, or the indexing may need improvement. Note it in the retro.
 
-6. **Improvement implication** — Does this session reveal a class of memory gap, a structural weakness, or a tagging pattern that should be standardised? Raise it in the Mini-Retro.
+6. **Improvement implication** — Does this session reveal a class of memory gap, a structural weakness, or a tagging pattern that should be standardised? Raise it in the [Mini-Retro](../glossary/mini-retro.md).
 
 ---
 
@@ -265,3 +266,57 @@ The `.vscode/mcp.json` file is the single source of truth for the MCP server in 
 ```
 
 To pass a custom LanceDB path add `"--db-path", "/tmp/.lancedb"` to the `args` array.
+
+---
+
+## 16. Glossary
+
+This repository maintains a controlled vocabulary of all key terms in `glossary/`.
+The schema every definition file must follow is in `definition_scheme.md` at the repo root.
+
+### Where things live
+
+| File | Purpose |
+|---|---|
+| `definition_scheme.md` | Mandatory schema for all definition files — read before creating any |
+| `glossary/README.md` | Index of all defined terms |
+| `glossary/<term>.md` | Individual definition file for one term |
+
+### Cross-linking rule (Wikipedia style)
+
+When a defined term appears in **any** file in this repository, link it **on its first occurrence only** in that file. Do not link subsequent occurrences.
+
+- Do not link inside YAML front matter, code blocks, or inline code spans.
+- Use relative paths from the file's location to `glossary/`:
+  - From repo root: `[Term](./glossary/term.md)`
+  - From a first-level subfolder (`projects/`, `journal/`, `meetings/`): `[Term](../glossary/term.md)`
+  - From a second-level subfolder (`docs/adr/`): `[Term](../../glossary/term.md)`
+
+### Definition file requirements (summary)
+
+Every definition file must have:
+1. Valid YAML front matter: `title`, `category`, `tags`, `date`, `related`, `aliases`
+2. A bold one-line definition immediately after the front matter
+3. Four sections in order: `## Definition`, `## Usage in This System`, `## Related Terms`, `## References`
+4. At least one external reference in `## References`
+
+Full requirements: [`definition_scheme.md`](../definition_scheme.md)
+
+### Adding a new term
+
+1. Read `definition_scheme.md` in full.
+2. Create `glossary/<kebab-case-term>.md` following the schema exactly.
+3. Add a row to `glossary/README.md`.
+4. Cross-link the term's first use in any files where it already appears.
+5. Check the "Done" checklist in §7 — the glossary item is now included.
+
+---
+
+## References
+
+1. [Model Context Protocol](https://modelcontextprotocol.io/) — the open standard powering the MCP tools in this repository.
+2. [LanceDB](https://lancedb.github.io/lancedb/) — the embedded vector database used for semantic search.
+3. [MADR](https://adr.github.io/madr/) — the format used for Architecture Decision Records in `docs/adr/`.
+4. [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — the format used for `CHANGELOG.md`.
+5. [`glossary/README.md`](../glossary/README.md) — index of all defined terms referenced in this file.
+6. [`definition_scheme.md`](../definition_scheme.md) — the schema for all definition files.

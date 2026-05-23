@@ -7,6 +7,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- `definition_scheme.md` — mandatory schema, requirements, and cross-linking rules for all definition files
+- `glossary/` folder with 26 definition files covering the full knowledge domain of this memory system
+- `glossary/README.md` — index of all defined terms with categories and aliases
+- New terms added to cover ontology gaps: `capture`, `triage`, `retrieval`, `superseded-by`, `mini-retro`, `agent-first`, `inbox`, `mcp-tool`, `mcp-server`
+- `## References` section added to every content file in the repository
+- Cross-links on first use of defined terms added across all content files (Wikipedia style)
+- `§16 Glossary` section in `.github/copilot-instructions.md` with cross-linking rules and definition file requirements
+- Glossary entry added to `README.md` repo layout and Further Reading section
+- Glossary item added to the "What Done Means" checklist in `.github/copilot-instructions.md` §7
+
+### Changed
+- `README.md` — first uses of local-first, agent-native, LanceDB, semantic search, MCP, memory files, embedding model, vector database, MCP server, MCP tools, stdio transport cross-linked to glossary definitions
+
+
 - `BACKLOG-v2.md` — 5 new work items (W-0111–W-0115) and 2 new phases (Phase 3 Structured relational layer, Phase 4 Human door); Phase 5–7 renumbered from previous Phase 3–5
 - W-0111: discovery item — Supabase MCP integration architecture (two-server vs unified server)
 - W-0112: implementation item — Supabase Postgres tables for contacts, meetings, and TBD (blocked by W-0111)
@@ -40,3 +54,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `README.md` updated to remove `AGENTS.md` reference, reflect current structure, and add headless-mode instructions
 - `.github/copilot-instructions.md` section 7 replaced: "Mandatory System Self-Improvement" superseded by unified "Continuous Improvement & Learning" framework including Mini-Retro, improvement classes, and flywheel model
 - Privacy section renumbered from 13 to 14 to accommodate new Chain-of-Thought Reasoning section
+
+---
+
+## References
+
+1. [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — the format used for this file.
+2. [`.github/copilot-instructions.md` §6](../.github/copilot-instructions.md) — the agent instruction that mandates changelog entries for user-facing changes.

@@ -1,6 +1,6 @@
 # Memory-System — GitHub Open-Brain
 
-A **local-first**, agent-native memory system backed by GitHub Markdown files and [LanceDB](https://lancedb.github.io/lancedb/) semantic search, exposed to AI tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/).
+A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-first.md) memory system backed by GitHub Markdown files and [LanceDB](./glossary/lancedb.md) [semantic search](./glossary/semantic-search.md), exposed to [AI](./glossary/ai-agent.md) tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](./glossary/mcp.md).
 
 > **AI agents: read [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) for the rules and conventions that govern this repository.**
 
@@ -29,9 +29,9 @@ A **local-first**, agent-native memory system backed by GitHub Markdown files an
                     GitHub (cloud backup)
 ```
 
-1. **Storage** — Your memories live as `.md` files in `/meetings`, `/journal`, and `/projects`.
-2. **Vector Layer** — `mcp_server.py` embeds every file using [`BAAI/bge-small-en-v1.5`](https://huggingface.co/BAAI/bge-small-en-v1.5) and stores the index in a local `.lancedb` folder (excluded from git).
-3. **MCP Bridge** — The server exposes three tools to any MCP-compatible AI client:
+1. **Storage** — Your memories live as [memory files](./glossary/memory-file.md) (`.md` files) in `/meetings`, `/journal`, and `/projects`.
+2. **Vector Layer** — `mcp_server.py` embeds every file using an [embedding model](./glossary/embedding-model.md) ([`BAAI/bge-small-en-v1.5`](https://huggingface.co/BAAI/bge-small-en-v1.5)) and stores the index in a local [vector database](./glossary/vector-database.md) (`.lancedb` folder, excluded from git).
+3. **MCP Bridge** — The [MCP server](./glossary/mcp-server.md) exposes three [MCP tools](./glossary/mcp-tool.md) to any MCP-compatible AI client:
    - `search_brain(query)` — semantic search over all memories.
    - `add_memory(title, content, folder)` — create a new timestamped memory file.
    - `refactor_memory(file_path, new_content)` — overwrite an existing memory file.
@@ -91,8 +91,8 @@ You can interact with this memory system from **github.com or the GitHub mobile 
 ### How it works
 
 1. GitHub spins up an ephemeral cloud sandbox for the Copilot coding agent.
-2. `.github/copilot-setup-steps.yml` installs dependencies and pre-warms the embedding model.
-3. `.vscode/mcp.json` tells Copilot how to launch `mcp_server.py` (stdio transport).
+2. `.github/copilot-setup-steps.yml` installs dependencies and pre-warms the [embedding model](./glossary/embedding-model.md).
+3. `.vscode/mcp.json` tells Copilot how to launch `mcp_server.py` ([stdio transport](./glossary/stdio-transport.md)).
 4. The agent can then call all three MCP tools (`search_brain`, `add_memory`, `refactor_memory`).
 
 ### Step-by-step
@@ -155,6 +155,8 @@ Memory-System/
 │       └── sync-skills.yml      # Weekly skills submodule update
 ├── docs/
 │   └── adr/                     # Architecture Decision Records (MADR format)
+├── glossary/                    # Controlled vocabulary — one definition file per term
+├── definition_scheme.md         # Schema and rules every definition file must follow
 ├── mcp_server.py              # MCP server + file-watcher + LanceDB indexer
 ├── requirements.txt           # Python dependencies
 ├── getting-started-prompt.md  # Original architecture brief & PRD
@@ -183,3 +185,15 @@ Memory-System/
 
 - [`getting-started-prompt.md`](./getting-started-prompt.md) — full PRD and architectural blueprint
 - [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) — rules for AI agents working in this repo
+- [`glossary/README.md`](./glossary/README.md) — controlled vocabulary: definitions for every key term in the system
+- [`definition_scheme.md`](./definition_scheme.md) — the schema every glossary definition file must follow
+
+---
+
+## References
+
+1. [Model Context Protocol](https://modelcontextprotocol.io/) — the open standard used to expose memory tools to AI clients.
+2. [LanceDB](https://lancedb.github.io/lancedb/) — the embedded vector database powering semantic search.
+3. [BAAI/bge-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5) — the embedding model used to index memory files.
+4. [Sentence Transformers](https://www.sbert.net/) — the Python library used to run the embedding model.
+5. [Ink & Switch: Local-first Software](https://www.inkandswitch.com/local-first/) — the design philosophy behind this system's architecture.

@@ -6,17 +6,17 @@
 
 ## Part 1: Initial Architecture Brief
 
-Yes, you can absolutely build a GitHub-based memory system using the Model Context Protocol (MCP) and LanceDB. While the video you referenced focuses on a "Postgres + Supabase" stack, your proposed stack of GitHub + LanceDB + Markdown is a highly efficient, "local-first" alternative that is popular in the developer community.
+Yes, you can absolutely build a GitHub-based memory system using the [Model Context Protocol (MCP)](./glossary/mcp.md) and [LanceDB](./glossary/lancedb.md). While the video you referenced focuses on a "Postgres + Supabase" stack, your proposed stack of GitHub + LanceDB + Markdown is a highly efficient, "[local-first](./glossary/local-first.md)" alternative that is popular in the developer community.
 
-Here is how you can architect this system to integrate with your AI agents and chat bots.
+Here is how you can architect this system to integrate with your [AI agents](./glossary/ai-agent.md) and chat bots.
 
 ### System Architecture
 
 Instead of a live cloud database, you will use a **Local-to-GitHub sync pattern**.
 
 - **Storage:** Your memory lives in a GitHub repository as `.md` files. This gives you version control, easy manual editing, and a free cloud backup.
-- **Vector Database:** LanceDB is perfect for this because it is serverless and stores data in files (OSS format). You can store the LanceDB index directly in your GitHub repo or a local folder synced to it.
-- **The Bridge (MCP):** You use an MCP Server (running locally on your machine) that "watches" your Markdown files, embeds them into LanceDB, and provides a search tool to your AI clients (Claude Desktop, Cursor, etc.).
+- **[Vector Database](./glossary/vector-database.md):** LanceDB is perfect for this because it is serverless and stores data in files (OSS format). You can store the LanceDB index directly in your GitHub repo or a local folder synced to it.
+- **The Bridge (MCP):** You use an [MCP Server](./glossary/mcp-server.md) (running locally on your machine) that "watches" your Markdown files, embeds them into LanceDB, and provides a search tool to your AI clients (Claude Desktop, Cursor, etc.).
 
 ### How to Build It
 
@@ -31,20 +31,20 @@ Instead of a live cloud database, you will use a **Local-to-GitHub sync pattern*
 Since LanceDB is an embedded database, you don't need to host it. You can write a simple Python or Node.js script that:
 
 - Scans your GitHub repo folder.
-- Uses an embedding model (like OpenAI's `text-embedding-3-small` or a local one via Ollama) to turn your notes into vectors.
+- Uses an [embedding model](./glossary/embedding-model.md) (like OpenAI's `text-embedding-3-small` or a local one via Ollama) to turn your notes into [vector embeddings](./glossary/vector-embedding.md).
 - Saves that index into a `.lancedb` folder in your repo.
 
 #### 3. The MCP Server
 
-You need an MCP server that exposes two main tools to your AI agents:
+You need an MCP server that exposes two main [MCP tools](./glossary/mcp-tool.md) to your AI agents:
 
-- `search_memory(query)`: Performs a semantic search using LanceDB to find relevant notes.
+- `search_memory(query)`: Performs a [semantic search](./glossary/semantic-search.md) using LanceDB to find relevant notes.
 - `add_memory(content)`: Appends a new Markdown file to your GitHub repo (which then gets auto-indexed).
 
 ### Why This Fits Your Request
 
 - **No SaaS Middlemen:** Unlike the Supabase approach in the video, you aren't relying on a third-party database provider. If GitHub disappeared, you still have the files locally.
-- **Agent Readable:** By using MCP, your memory becomes "agent-native." When you chat with Claude or Cursor, the agent can autonomously call your `search_memory` tool to see what you decided "last Tuesday" without you having to copy-paste.
+- **Agent Readable:** By using MCP, your memory becomes "[agent-native](./glossary/agent-first.md)." When you chat with Claude or Cursor, the agent can autonomously call your `search_memory` tool to see what you decided "last Tuesday" without you having to copy-paste.
 - **Low Cost:** GitHub and LanceDB are free. Your only cost would be the tiny fraction of a cent for embeddings, often totaling less than $0.10 a month.
 
 ### Implementation Tip
@@ -59,9 +59,9 @@ This is the complete, consolidated PRD and architectural blueprint for **GitHub 
 
 ### 1. Product Concept: The "Agent-First" Open-Brain
 
-Most AI memory is a "Silo." Claude knows what you said in Claude; ChatGPT knows what you said in ChatGPT. Open-Brain moves that memory into a **private GitHub repository you own**.
+Most AI memory is a "Silo." Claude knows what you said in Claude; ChatGPT knows what you said in ChatGPT. [Open-Brain](./glossary/open-brain.md) moves that memory into a **private GitHub repository you own**.
 
-By using the Model Context Protocol (MCP) and LanceDB, any AI agent (Cursor, Claude Desktop, Copilot) can read from and write to this repository. It treats your notes not just as text, but as a **Vectorized Knowledge Graph**.
+By using the Model Context Protocol (MCP) and LanceDB, any AI agent (Cursor, Claude Desktop, Copilot) can read from and write to this repository. It treats your notes not just as text, but as a **[Vectorized Knowledge Graph](./glossary/knowledge-graph.md)**.
 
 #### Core Goals
 
@@ -130,5 +130,15 @@ When you use Claude Desktop, you connect it to the same local MCP server. Becaus
 ### 6. Success Metrics
 
 - **Cost:** $0.00 (using local embeddings and GitHub Free).
-- **Latency:** Retrieval in <100ms (local LanceDB is faster than cloud APIs).
+- **Latency:** [Retrieval](./glossary/retrieval.md) in <100ms (local LanceDB is faster than cloud APIs).
 - **Resilience:** If GitHub goes down, your memory is still local. If your laptop dies, your memory is on GitHub.
+
+---
+
+## References
+
+1. [Model Context Protocol](https://modelcontextprotocol.io/) — the open standard described in this document.
+2. [LanceDB Documentation](https://lancedb.github.io/lancedb/) — the embedded vector database referenced throughout.
+3. [Sentence Transformers](https://www.sbert.net/) — the Python library for running local embedding models.
+4. [Ink & Switch: Local-first Software](https://www.inkandswitch.com/local-first/) — the design philosophy behind the local-first approach.
+5. [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) — the authoritative agent constitution that supersedes this document for operational use.

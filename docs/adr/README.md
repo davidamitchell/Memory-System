@@ -1,6 +1,6 @@
 # Architecture Decision Records
 
-Decisions are recorded here using the [MADR](https://adr.github.io/madr/) format.
+Decisions are recorded here using the [MADR](../../glossary/madr.md) format.
 
 ## Index
 
@@ -22,4 +22,10 @@ Files are named `NNNN-short-title.md` (zero-padded 4 digits).
 - A file format, naming convention, or workflow is established
 - A non-trivial architectural choice is made that would be costly to reverse
 
-Use the `decisions` skill in `.github/skills/decisions/SKILL.md` when writing ADRs.
+Use the `decisions` [skill](../../glossary/skill.md) in `.github/skills/decisions/SKILL.md` when writing ADRs.
+
+## References
+
+1. [MADR — Official Documentation](https://adr.github.io/madr/) — the format used for all ADRs in this folder.
+2. [ADR GitHub Organisation](https://adr.github.io/) — canonical resource for ADR formats and tooling.
+3. [`.github/copilot-instructions.md` §4](../../.github/copilot-instructions.md) — the agent instruction that mandates ADRs for non-trivial decisions.

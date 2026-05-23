@@ -44,11 +44,11 @@ updated: 2026-03-08
 
 ### Outcome
 
-Research whether a Slack bot (personal workspace or shared) can receive messages and write them directly to the Memory-System repo as `.md` files via the GitHub API. Determine: (a) whether a free Slack workspace + incoming webhook or Slash command is sufficient, (b) whether a hosted bot (e.g. on Railway, Render, or a GitHub Actions webhook receiver) is needed, (c) latency from message → committed file, (d) retrieval: can the bot respond to a query by calling `search_brain` results back into the Slack thread? Key unknown: does the hosted component requirement kill the "zero infrastructure" design goal?
+Research whether a Slack bot (personal workspace or shared) can receive messages and write them directly to the Memory-System repo as `.md` files via the GitHub API. Determine: (a) whether a free Slack workspace + incoming webhook or Slash command is sufficient, (b) whether a hosted bot (e.g. on Railway, Render, or a GitHub Actions webhook receiver) is needed, (c) latency from message → committed file, (d) [retrieval](./glossary/retrieval.md): can the bot respond to a query by calling `search_brain` results back into the Slack thread? Key unknown: does the hosted component requirement kill the "zero infrastructure" design goal?
 
 ### Context
 
-Slack is already open on most people's phones all day. Sending a message to a dedicated `#brain` channel is 2 taps. This is potentially the lowest-friction mobile capture path that doesn't require a new app.
+Slack is already open on most people's phones all day. Sending a message to a dedicated `#brain` channel is 2 taps. This is potentially the lowest-friction mobile [capture](./glossary/capture.md) path that doesn't require a new app.
 
 ---
 
@@ -60,7 +60,7 @@ updated: 2026-03-08
 
 ### Outcome
 
-Research whether Claude for iOS supports MCP connections to a locally-running `mcp_server.py`, or whether there is a cloud-hosted MCP option. Determine: (a) current state of MCP support in the Claude mobile app (as of 2026), (b) whether Anthropic's planned "personal context" or memory features could serve as a bridge, (c) whether a self-hosted MCP server (e.g. on a home server, VPS, or cloud run) accessible over HTTPS would be recognised by the Claude iOS app, (d) the security model — is it safe to expose `mcp_server.py` to the internet? Key question: is Claude iOS the closest thing to a ready-made solution if you're willing to host the server?
+Research whether Claude for iOS supports [MCP](./glossary/mcp.md) connections to a locally-running `mcp_server.py`, or whether there is a cloud-hosted MCP option. Determine: (a) current state of MCP support in the Claude mobile app (as of 2026), (b) whether Anthropic's planned "personal context" or memory features could serve as a bridge, (c) whether a self-hosted [MCP server](./glossary/mcp-server.md) (e.g. on a home server, VPS, or cloud run) accessible over HTTPS would be recognised by the Claude iOS app, (d) the security model — is it safe to expose `mcp_server.py` to the internet? Key question: is Claude iOS the closest thing to a ready-made solution if you're willing to host the server?
 
 ### Context
 
@@ -80,7 +80,7 @@ Research whether ChatGPT for iOS supports any mechanism to connect to an externa
 
 ### Context
 
-ChatGPT is the most widely used AI app on iOS. If a custom GPT can be pointed at a simple HTTP wrapper around the MCP tools, the retrieval and capture path becomes: open ChatGPT → speak/type → memory is stored or searched. The hosted endpoint requirement is the key unknown.
+ChatGPT is the most widely used AI app on iOS. If a custom GPT can be pointed at a simple HTTP wrapper around the [MCP tools](./glossary/mcp-tool.md), the retrieval and capture path becomes: open ChatGPT → speak/type → memory is stored or searched. The hosted endpoint requirement is the key unknown.
 
 ---
 
@@ -160,7 +160,7 @@ Add a `remember` CLI script to the repo that: (a) accepts a string argument, (b)
 
 ### Context
 
-Engineers live in the terminal. `remember "decided X because Y"` is lower-friction than any GUI for capture during a coding session. `recall "what did I decide about LanceDB"` replaces opening an AI chat for quick lookups.
+Engineers live in the terminal. `remember "decided X because Y"` is lower-friction than any GUI for capture during a coding session. `recall "what did I decide about [LanceDB](./glossary/lancedb.md)"` replaces opening an AI chat for quick lookups.
 
 ---
 
@@ -192,7 +192,7 @@ Add an `inbox/` folder to the repo as a frictionless drop zone: (a) any capture 
 
 ### Context
 
-The current `add_memory` tool requires `folder` as a parameter. Forcing a folder decision at capture time is friction. An inbox pattern removes that decision from the capture path and defers it to a low-urgency triage step.
+The current `add_memory` tool requires `folder` as a parameter. Forcing a folder decision at capture time is friction. An [inbox](./glossary/inbox.md) pattern removes that decision from the capture path and defers it to a low-urgency [triage](./glossary/triage.md) step.
 
 ---
 
@@ -243,3 +243,9 @@ Determine whether `mcp_server.py` can rebuild the full LanceDB index from the `.
 Currently `.lancedb` is excluded from git and must persist locally. If the index can be rebuilt in <5 seconds for a typical corpus, the self-hosted deployment model simplifies significantly — any stateless compute (Cloudflare Worker, Lambda, GitHub Actions) becomes viable.
 
 ---
+
+## References
+
+1. [`BACKLOG-v2.md`](./BACKLOG-v2.md) — the implementation-ready roadmap that supersedes this discovery backlog.
+2. [`.github/copilot-instructions.md` §3](../.github/copilot-instructions.md) — the agent instruction to read the backlog at the start of every session.
+3. [`glossary/README.md`](./glossary/README.md) — controlled vocabulary for terms used in these work items.
