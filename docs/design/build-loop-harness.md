@@ -9,7 +9,7 @@ tags: [agent-workflow, build-loop, self-improvement, context-management]
 
 **Status:** draft
 
-A structured protocol that keeps any [AI agent](../../glossary/ai-agent.md) working in this repository focused, reduces context drift, manages complexity, leverages available [skills](../../glossary/skill.md), and produces a system that measurably improves session over session.
+A structured protocol that keeps any AI agent working in this repository focused, reduces context drift, manages complexity, leverages available skills, and produces a system that measurably improves session over session.
 
 ---
 
