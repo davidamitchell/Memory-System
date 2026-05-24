@@ -6,8 +6,10 @@ date: 2026-05-23
 related:
   - term: "Open-Brain"
     file: open-brain.md
+    rel: partOf
   - term: "Tag"
     file: tag.md
+    rel: uses
 aliases: ["knowledge base graph", "ontology graph"]
 ---
 

@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "Model Context Protocol"
     file: mcp.md
+    rel: uses
   - term: "MCP Tool"
     file: mcp-tool.md
+    rel: uses
   - term: "Agent-first"
     file: agent-first.md
+    rel: relatedTerm
   - term: "Skill"
     file: skill.md
+    rel: uses
 aliases: ["agent", "coding agent", "AI assistant", "Copilot agent"]
 ---
 

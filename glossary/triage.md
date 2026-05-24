@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "Inbox"
     file: inbox.md
+    rel: uses
   - term: "Capture"
     file: capture.md
+    rel: relatedTerm
   - term: "Memory File"
     file: memory-file.md
+    rel: relatedTerm
   - term: "AI Agent"
     file: ai-agent.md
+    rel: uses
 aliases: ["inbox triage", "memory triage", "classification"]
 ---
 

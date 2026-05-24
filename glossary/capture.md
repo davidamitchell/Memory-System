@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "Memory File"
     file: memory-file.md
+    rel: uses
   - term: "Inbox"
     file: inbox.md
+    rel: uses
   - term: "MCP Tool"
     file: mcp-tool.md
+    rel: uses
   - term: "Retrieval"
     file: retrieval.md
+    rel: contrasts
 aliases: ["memory capture", "write", "add memory"]
 ---
 

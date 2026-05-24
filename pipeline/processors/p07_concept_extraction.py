@@ -44,9 +44,12 @@ def run(state: dict, repo_root: Path) -> dict:  # noqa: ARG001
     source_slug = _slug(Path(state["source_path"]).name)
     assertion_id = f"assertion/{source_slug}"
 
-    # Related term assertion IDs derived from related[].file
+    # Related term assertion IDs derived from related[].file, with optional rel type
     related_assertions = [
-        f"assertion/{_slug(r['file'])}"
+        {
+            "id": f"assertion/{_slug(r['file'])}",
+            "rel": r.get("rel", "relatedTerm"),
+        }
         for r in fm.get("related", [])
     ]
 

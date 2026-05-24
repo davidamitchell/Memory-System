@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "Memory File"
     file: memory-file.md
+    rel: partOf
   - term: "YAML Front Matter"
     file: yaml-front-matter.md
+    rel: partOf
   - term: "Knowledge Graph"
     file: knowledge-graph.md
+    rel: relatedTerm
 aliases: ["superseded", "supersedes", "superseded_by"]
 ---
 

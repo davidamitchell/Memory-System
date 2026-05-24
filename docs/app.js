@@ -106,9 +106,32 @@
     const tags    = (concept.tags    || []).map(function (t) {
       return '<span class="badge">' + esc(t) + '</span>';
     }).join(' ') || '—';
-    const related = (concept.related || []).map(function (id) {
-      return '<a href="#' + esc(id) + '" class="concept-link" data-id="' + esc(id) + '">' + esc(id.replace(/-/g, '\u2011')) + '</a>';
-    }).join(', ') || '—';
+
+    // related is now [{id, rel}, ...] — build labelled links grouped by predicate
+    const relatedItems = (concept.related || []);
+    const related = relatedItems.length
+      ? relatedItems.map(function (item) {
+          var id  = typeof item === 'object' ? item.id  : item;
+          var rel = typeof item === 'object' ? item.rel : 'relatedTerm';
+          var display = id.replace(/-/g, '\u2011');
+          var badge = rel !== 'relatedTerm'
+            ? ' <span class="pred-badge pred-' + esc(rel) + '">' + esc(rel) + '</span>'
+            : '';
+          return '<a href="#' + esc(id) + '" class="concept-link" data-id="' + esc(id) + '">' +
+                 esc(display) + '</a>' + badge;
+        }).join(', ')
+      : '—';
+
+    // docs list
+    const docs = (concept.docs || []);
+    const docsHtml = docs.length
+      ? '<ul class="docs-list">' + docs.map(function (f) {
+          var fname = f.replace(/^.*\//, '');
+          // Link to the Documents tab entry
+          return '<li><a href="#documents" class="section-link" data-doc="' + esc(f) + '">' +
+                 '<code>' + esc(fname) + '</code></a></li>';
+        }).join('') + '</ul>'
+      : '<span class="muted">—</span>';
 
     detailPanel.innerHTML =
       '<button class="detail-close" aria-label="Close detail panel">&times;</button>' +
@@ -122,7 +145,9 @@
       '<div class="detail-row"><span class="detail-label">Tags</span>' +
         '<span class="detail-value">' + tags + '</span></div>' +
       '<div class="detail-row"><span class="detail-label">Related</span>' +
-        '<span class="detail-value">' + related + '</span></div>';
+        '<span class="detail-value">' + related + '</span></div>' +
+      '<div class="detail-row"><span class="detail-label">Documents</span>' +
+        '<span class="detail-value">' + docsHtml + '</span></div>';
 
     detailPanel.hidden = false;
 
@@ -133,6 +158,26 @@
 
     // Bind concept links inside the panel
     bindConceptLinks(detailPanel);
+
+    // Bind document links — navigate to Documents tab and scroll to the row
+    detailPanel.querySelectorAll('a.section-link').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var docFile = a.getAttribute('data-doc');
+        if (nav) {
+          var docsLink = nav.querySelector('a[href="#documents"]');
+          if (docsLink) docsLink.click();
+        }
+        if (docFile) {
+          var row = document.querySelector('tr[data-file="' + docFile + '"]');
+          if (row) {
+            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            row.classList.add('highlight');
+            setTimeout(function () { row.classList.remove('highlight'); }, 1500);
+          }
+        }
+      });
+    });
   }
 
   function closeDetail() {

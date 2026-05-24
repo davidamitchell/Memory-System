@@ -32,6 +32,11 @@ from rdflib.namespace import PROV  # noqa: E402
 
 MS = Namespace("https://memory.example.org/ms/")
 
+# All typed relationship predicates used in the ms: namespace
+RELATIONSHIP_PREDICATES = [
+    "relatedTerm", "implements", "instanceOf", "partOf", "contrasts", "uses",
+]
+
 CONCEPT_CARD_QUERY_FILE = REPO_ROOT / "pipeline" / "queries" / "concept_card.rq"
 
 
@@ -75,18 +80,17 @@ def get_concept_data(g: Graph, node) -> dict:
     aliases = sorted(str(o) for o in g.objects(node, _ms("aliases")))
     tags = sorted(str(o) for o in g.objects(node, _ms("hasTag")))
 
-    # Related term labels (may not exist in graph for W-0200 single-file slice)
+    # Related term labels — collect across all typed relationship predicates
     related = []
-    for rel_node in g.objects(node, _ms("relatedTerm")):
-        rel_label = next(g.objects(rel_node, RDFS.label), None)
-        if rel_label:
-            related.append(str(rel_label))
-        else:
-            # Fall back to the local part of the URI
-            uri = str(rel_node)
-            local = uri.rsplit("/", 1)[-1]
-            # Convert slug to title case
-            related.append(local.replace("-", " ").title())
+    for pred_name in RELATIONSHIP_PREDICATES:
+        for rel_node in g.objects(node, _ms(pred_name)):
+            rel_label = next(g.objects(rel_node, RDFS.label), None)
+            if rel_label:
+                related.append(str(rel_label))
+            else:
+                uri = str(rel_node)
+                local = uri.rsplit("/", 1)[-1]
+                related.append(local.replace("-", " ").title())
 
     # Evidence
     content_hash = ""
@@ -112,9 +116,11 @@ def get_concept_data(g: Graph, node) -> dict:
 
 
 def get_neighbours(g: Graph, node, hops: int = 2) -> dict:
-    """Traverse ms:relatedTerm edges up to *hops* hops."""
+    """Traverse relationship edges up to *hops* hops."""
     visited = set()
-    direct_nodes = list(g.objects(node, _ms("relatedTerm")))
+    direct_nodes = []
+    for pred_name in RELATIONSHIP_PREDICATES:
+        direct_nodes.extend(g.objects(node, _ms(pred_name)))
     direct_labels = []
 
     second_hop: dict[str, list[str]] = {}
@@ -133,14 +139,15 @@ def get_neighbours(g: Graph, node, hops: int = 2) -> dict:
 
         if hops >= 2:
             hop2 = []
-            for n2 in g.objects(rel_node, _ms("relatedTerm")):
-                if n2 not in visited:
-                    n2_label = next(g.objects(n2, RDFS.label), None)
-                    if n2_label:
-                        hop2.append(str(n2_label))
-                    else:
-                        uri2 = str(n2)
-                        hop2.append(uri2.rsplit("/", 1)[-1].replace("-", " ").title())
+            for pred_name in RELATIONSHIP_PREDICATES:
+                for n2 in g.objects(rel_node, _ms(pred_name)):
+                    if n2 not in visited:
+                        n2_label = next(g.objects(n2, RDFS.label), None)
+                        if n2_label:
+                            hop2.append(str(n2_label))
+                        else:
+                            uri2 = str(n2)
+                            hop2.append(uri2.rsplit("/", 1)[-1].replace("-", " ").title())
             if hop2:
                 second_hop[label] = hop2
 

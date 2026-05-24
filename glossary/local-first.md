@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "Open-Brain"
     file: open-brain.md
+    rel: relatedTerm
   - term: "LanceDB"
     file: lancedb.md
+    rel: relatedTerm
   - term: "Agent-first"
     file: agent-first.md
+    rel: relatedTerm
 aliases: ["local first", "offline-first"]
 ---
 

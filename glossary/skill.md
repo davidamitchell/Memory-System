@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "AI Agent"
     file: ai-agent.md
+    rel: relatedTerm
   - term: "Open-Brain"
     file: open-brain.md
+    rel: partOf
   - term: "Architecture Decision Record"
     file: adr.md
+    rel: relatedTerm
 aliases: ["agent skill", "skill module"]
 ---
 

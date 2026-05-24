@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "Memory File"
     file: memory-file.md
+    rel: partOf
   - term: "Tag"
     file: tag.md
+    rel: uses
   - term: "Superseded-by"
     file: superseded-by.md
+    rel: uses
 aliases: ["front matter", "frontmatter", "YAML header"]
 ---
 

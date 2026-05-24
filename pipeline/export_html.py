@@ -114,12 +114,13 @@ def render_relations(data: dict) -> str:
     for r in data["relations"]:
         from_id = h(r["from_id"])
         from_label = h(r["from_label"])
+        predicate = h(r.get("predicate", "relatedTerm"))
         to_id = h(r["to_id"])
         to_label = h(r["to_label"])
         rows.append(
             f'    <tr>\n'
             f'      <td><a href="#{from_id}" class="concept-link" data-id="{from_id}">{from_label}</a></td>\n'
-            f'      <td class="predicate">relatedTerm</td>\n'
+            f'      <td class="predicate predicate-{predicate}">{predicate}</td>\n'
             f'      <td><a href="#{to_id}" class="concept-link" data-id="{to_id}">{to_label}</a></td>\n'
             f'    </tr>'
         )
@@ -151,7 +152,6 @@ def render_documents(data: dict) -> str:
     rows = []
     for doc in data["documents"]:
         fname = h(doc["file"])
-        stem = h(Path(doc["file"]).stem)
         seg_count = doc["segment_count"]
         concept_links = []
         for cid in doc["concept_ids"]:
@@ -162,7 +162,7 @@ def render_documents(data: dict) -> str:
             )
         concepts_cell = ", ".join(concept_links) if concept_links else '<span class="muted">—</span>'
         rows.append(
-            f'    <tr>\n'
+            f'    <tr data-file="{fname}">\n'
             f'      <td><code>{fname}</code></td>\n'
             f'      <td class="num">{seg_count}</td>\n'
             f'      <td>{concepts_cell}</td>\n'

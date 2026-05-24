@@ -6,8 +6,10 @@ date: 2026-05-23
 related:
   - term: "Open-Brain"
     file: open-brain.md
+    rel: partOf
   - term: "Architecture Decision Record"
     file: adr.md
+    rel: relatedTerm
 aliases: ["mini retrospective", "session retrospective", "retro"]
 ---
 

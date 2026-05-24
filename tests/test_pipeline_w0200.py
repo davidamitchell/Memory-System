@@ -100,8 +100,15 @@ def test_required_triples_present():
     tags = list(g.objects(node, MS.hasTag))
     assert len(tags) >= 4, f"Expected ≥4 tags, got {len(tags)}"
 
-    # related (expect 4)
-    related = list(g.objects(node, MS.relatedTerm))
+    # related (expect 4 across all relationship predicates)
+    from rdflib import URIRef
+    RELATIONSHIP_PREDICATES = [
+        "relatedTerm", "implements", "instanceOf", "partOf", "contrasts", "uses",
+    ]
+    related = []
+    for pred_name in RELATIONSHIP_PREDICATES:
+        pred_uri = URIRef(f"https://memory.example.org/ms/{pred_name}")
+        related.extend(g.objects(node, pred_uri))
     assert len(related) >= 4, f"Expected ≥4 related terms, got {len(related)}"
 
     # provenance

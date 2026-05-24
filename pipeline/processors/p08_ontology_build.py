@@ -67,8 +67,14 @@ def run(state: dict, repo_root: Path) -> dict:  # noqa: ARG001
     for tag in dp["tags"]:
         g.add((node, _ms("hasTag"), Literal(tag)))
 
-    for related_id in dp["related"]:
-        g.add((node, _ms("relatedTerm"), _ms(related_id)))
+    for rel_item in dp["related"]:
+        if isinstance(rel_item, dict):
+            rel_id = rel_item["id"]
+            rel_pred = rel_item.get("rel", "relatedTerm")
+        else:
+            rel_id = rel_item
+            rel_pred = "relatedTerm"
+        g.add((node, _ms(rel_pred), _ms(rel_id)))
 
     # Domain assignment
     if state.get("domain"):

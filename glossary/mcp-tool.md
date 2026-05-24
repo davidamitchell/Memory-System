@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "Model Context Protocol"
     file: mcp.md
+    rel: partOf
   - term: "MCP Server"
     file: mcp-server.md
+    rel: partOf
   - term: "AI Agent"
     file: ai-agent.md
+    rel: relatedTerm
 aliases: ["tool call", "MCP capability"]
 ---
 

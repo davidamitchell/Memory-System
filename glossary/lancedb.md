@@ -7,12 +7,16 @@ superseded_by: "_docs/adr/0002-move-from-vector-storage-to-ontology.md"
 related:
   - term: "Vector Database"
     file: vector-database.md
+    rel: instanceOf
   - term: "Vector Embedding"
     file: vector-embedding.md
+    rel: uses
   - term: "Semantic Search"
     file: semantic-search.md
+    rel: relatedTerm
   - term: "Embedding Model"
     file: embedding-model.md
+    rel: uses
 aliases: []
 ---
 

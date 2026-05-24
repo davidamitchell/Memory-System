@@ -6,6 +6,7 @@ date: 2026-05-23
 related:
   - term: "Architecture Decision Record"
     file: adr.md
+    rel: instanceOf
 aliases: ["Markdown Any Decision Records", "Markdown Architectural Decision Records"]
 ---
 

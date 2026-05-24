@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "Knowledge Graph"
     file: knowledge-graph.md
+    rel: uses
   - term: "MCP Tool"
     file: mcp-tool.md
+    rel: uses
   - term: "Open-Brain"
     file: open-brain.md
+    rel: partOf
 aliases: ["recall", "knowledge retrieval", "search"]
 ---
 

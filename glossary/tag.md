@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "YAML Front Matter"
     file: yaml-front-matter.md
+    rel: partOf
   - term: "Memory File"
     file: memory-file.md
+    rel: partOf
   - term: "Semantic Search"
     file: semantic-search.md
+    rel: relatedTerm
 aliases: ["label", "category tag"]
 ---
 

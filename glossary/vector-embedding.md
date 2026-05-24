@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "Embedding Model"
     file: embedding-model.md
+    rel: uses
   - term: "Semantic Search"
     file: semantic-search.md
+    rel: relatedTerm
   - term: "Vector Database"
     file: vector-database.md
+    rel: partOf
   - term: "LanceDB"
     file: lancedb.md
+    rel: relatedTerm
 aliases: ["embedding", "text embedding", "vector representation"]
 ---
 

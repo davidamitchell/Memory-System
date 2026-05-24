@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "Local-first"
     file: local-first.md
+    rel: implements
   - term: "Agent-first"
     file: agent-first.md
+    rel: implements
   - term: "MCP Server"
     file: mcp-server.md
+    rel: uses
   - term: "Knowledge Graph"
     file: knowledge-graph.md
+    rel: uses
 aliases: ["GitHub Open-Brain", "Memory-System", "open brain"]
 ---
 

@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "LanceDB"
     file: lancedb.md
+    rel: relatedTerm
   - term: "Vector Embedding"
     file: vector-embedding.md
+    rel: uses
   - term: "Semantic Search"
     file: semantic-search.md
+    rel: relatedTerm
 aliases: ["vector store", "embedding store"]
 ---
 

@@ -7,12 +7,16 @@ superseded_by: "glossary/retrieval.md"
 related:
   - term: "Vector Embedding"
     file: vector-embedding.md
+    rel: uses
   - term: "Vector Database"
     file: vector-database.md
+    rel: uses
   - term: "LanceDB"
     file: lancedb.md
+    rel: uses
   - term: "Retrieval"
     file: retrieval.md
+    rel: instanceOf
 aliases: ["vector search", "similarity search"]
 ---
 

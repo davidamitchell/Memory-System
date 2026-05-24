@@ -82,6 +82,13 @@ def export_ontology(g: Graph, version: str) -> dict:
     concepts: list[dict] = []
     concept_by_uri: dict[str, str] = {}  # full URI → id
 
+    # Predicates that represent typed relationships between AssertionNodes
+    # (excludes metadata predicates like aliases, hasTag, inDomain, etc.)
+    RELATIONSHIP_PREDICATES = {
+        "relatedTerm", "implements", "instanceOf", "partOf",
+        "contrasts", "uses",
+    }
+
     for node in g.subjects(RDF.type, MS.AssertionNode):
         node_str = str(node)
         cid = _local(node_str)
@@ -93,7 +100,16 @@ def export_ontology(g: Graph, version: str) -> dict:
         tags = sorted(str(o) for o in g.objects(node, MS.hasTag))
         domain_uri = next(g.objects(node, MS.inDomain), None)
         domain = _local(str(domain_uri)) if domain_uri else ""
-        related_ids = sorted(_local(str(r)) for r in g.objects(node, MS.relatedTerm))
+
+        # Collect all typed related items (predicate + target id)
+        related_items: list[dict] = []
+        for pred_name in RELATIONSHIP_PREDICATES:
+            pred_uri = MS[pred_name]
+            for target in g.objects(node, pred_uri):
+                related_items.append(
+                    {"id": _local(str(target)), "rel": pred_name}
+                )
+        related_items.sort(key=lambda x: (x["id"]))
 
         concepts.append(
             {
@@ -103,7 +119,7 @@ def export_ontology(g: Graph, version: str) -> dict:
                 "aliases": aliases,
                 "tags": tags,
                 "domain": domain,
-                "related": related_ids,
+                "related": related_items,
             }
         )
 
@@ -120,18 +136,21 @@ def export_ontology(g: Graph, version: str) -> dict:
 
     for node in g.subjects(RDF.type, MS.AssertionNode):
         from_label = label_by_node.get(node, _local(str(node)).replace("-", " ").title())
-        for rel in g.objects(node, MS.relatedTerm):
-            to_label = label_by_node.get(rel, _local(str(rel)).replace("-", " ").title())
-            relations.append(
-                {
-                    "from_id": _local(str(node)),
-                    "from_label": from_label,
-                    "to_id": _local(str(rel)),
-                    "to_label": to_label,
-                }
-            )
+        for pred_name in RELATIONSHIP_PREDICATES:
+            pred_uri = MS[pred_name]
+            for rel in g.objects(node, pred_uri):
+                to_label = label_by_node.get(rel, _local(str(rel)).replace("-", " ").title())
+                relations.append(
+                    {
+                        "from_id": _local(str(node)),
+                        "from_label": from_label,
+                        "predicate": pred_name,
+                        "to_id": _local(str(rel)),
+                        "to_label": to_label,
+                    }
+                )
 
-    relations.sort(key=lambda r: (r["from_label"].lower(), r["to_label"].lower()))
+    relations.sort(key=lambda r: (r["from_label"].lower(), r["predicate"], r["to_label"].lower()))
 
     # --- Documents (from PreparedSegment triples) ---
     # Concept IDs match their glossary filename (e.g. "adr" → "glossary/adr.md").
@@ -145,11 +164,11 @@ def export_ontology(g: Graph, version: str) -> dict:
             doc_segments[source] += 1
 
     # Derive per-document concept list: concept id == stem of sourceDocument filename
+    concept_ids_set = {c["id"] for c in concepts}
     doc_concepts: dict[str, list[str]] = {}
     for f in doc_segments:
         stem = Path(f).stem  # "glossary/adr.md" → "adr"
-        # Only add if a matching concept exists
-        if stem in {c["id"] for c in concepts}:
+        if stem in concept_ids_set:
             doc_concepts[f] = [stem]
         else:
             doc_concepts[f] = []
@@ -162,6 +181,16 @@ def export_ontology(g: Graph, version: str) -> dict:
         }
         for f in sorted(doc_segments)
     ]
+
+    # Build a reverse index: concept_id → list of document files
+    concept_docs: dict[str, list[str]] = defaultdict(list)
+    for doc in documents:
+        for cid in doc["concept_ids"]:
+            concept_docs[cid].append(doc["file"])
+
+    # Embed the docs list into each concept
+    for concept in concepts:
+        concept["docs"] = sorted(concept_docs.get(concept["id"], []))
 
     return {
         "meta": {

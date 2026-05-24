@@ -6,10 +6,13 @@ date: 2026-05-23
 related:
   - term: "Model Context Protocol"
     file: mcp.md
+    rel: implements
   - term: "MCP Tool"
     file: mcp-tool.md
+    rel: relatedTerm
   - term: "stdio Transport"
     file: stdio-transport.md
+    rel: uses
 aliases: ["mcp_server.py", "open-brain server"]
 ---
 

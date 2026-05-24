@@ -7,10 +7,13 @@ superseded_by: "glossary/knowledge-graph.md"
 related:
   - term: "Vector Embedding"
     file: vector-embedding.md
+    rel: uses
   - term: "Semantic Search"
     file: semantic-search.md
+    rel: relatedTerm
   - term: "LanceDB"
     file: lancedb.md
+    rel: relatedTerm
 aliases: ["sentence encoder", "text encoder"]
 ---
 

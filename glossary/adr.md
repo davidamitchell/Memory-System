@@ -6,8 +6,10 @@ date: 2026-05-23
 related:
   - term: "MADR"
     file: madr.md
+    rel: uses
   - term: "Open-Brain"
     file: open-brain.md
+    rel: relatedTerm
 aliases: ["ADR", "decision record"]
 ---
 

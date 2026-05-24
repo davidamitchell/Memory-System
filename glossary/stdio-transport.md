@@ -6,8 +6,10 @@ date: 2026-05-23
 related:
   - term: "Model Context Protocol"
     file: mcp.md
+    rel: partOf
   - term: "MCP Server"
     file: mcp-server.md
+    rel: uses
 aliases: ["stdio", "standard input/output transport"]
 ---
 

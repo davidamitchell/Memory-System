@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "v0011",
-    "generated": "2026-05-24T03:14:30Z",
+    "version": "v0015",
+    "generated": "2026-05-24T07:59:05Z",
     "counts": {
       "concepts": 26,
       "relations": 83,
@@ -27,10 +27,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "ai-agent",
-        "local-first",
-        "mcp",
-        "open-brain"
+        {
+          "id": "ai-agent",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "local-first",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "mcp",
+          "rel": "uses"
+        },
+        {
+          "id": "open-brain",
+          "rel": "relatedTerm"
+        }
+      ],
+      "docs": [
+        "glossary/agent-first.md"
       ]
     },
     {
@@ -53,10 +68,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "agent-first",
-        "mcp",
-        "mcp-tool",
-        "skill"
+        {
+          "id": "agent-first",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "mcp",
+          "rel": "uses"
+        },
+        {
+          "id": "mcp-tool",
+          "rel": "uses"
+        },
+        {
+          "id": "skill",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/ai-agent.md"
       ]
     },
     {
@@ -76,8 +106,17 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "madr",
-        "open-brain"
+        {
+          "id": "madr",
+          "rel": "uses"
+        },
+        {
+          "id": "open-brain",
+          "rel": "relatedTerm"
+        }
+      ],
+      "docs": [
+        "glossary/adr.md"
       ]
     },
     {
@@ -98,10 +137,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "inbox",
-        "mcp-tool",
-        "memory-file",
-        "retrieval"
+        {
+          "id": "inbox",
+          "rel": "uses"
+        },
+        {
+          "id": "mcp-tool",
+          "rel": "uses"
+        },
+        {
+          "id": "memory-file",
+          "rel": "uses"
+        },
+        {
+          "id": "retrieval",
+          "rel": "contrasts"
+        }
+      ],
+      "docs": [
+        "glossary/capture.md"
       ]
     },
     {
@@ -120,9 +174,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "lancedb",
-        "semantic-search",
-        "vector-embedding"
+        {
+          "id": "lancedb",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "semantic-search",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "vector-embedding",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/embedding-model.md"
       ]
     },
     {
@@ -141,10 +207,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "capture",
-        "memory-file",
-        "open-brain",
-        "triage"
+        {
+          "id": "capture",
+          "rel": "partOf"
+        },
+        {
+          "id": "memory-file",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "open-brain",
+          "rel": "partOf"
+        },
+        {
+          "id": "triage",
+          "rel": "relatedTerm"
+        }
+      ],
+      "docs": [
+        "glossary/inbox.md"
       ]
     },
     {
@@ -164,8 +245,17 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "open-brain",
-        "tag"
+        {
+          "id": "open-brain",
+          "rel": "partOf"
+        },
+        {
+          "id": "tag",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/knowledge-graph.md"
       ]
     },
     {
@@ -182,10 +272,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "embedding-model",
-        "semantic-search",
-        "vector-database",
-        "vector-embedding"
+        {
+          "id": "embedding-model",
+          "rel": "uses"
+        },
+        {
+          "id": "semantic-search",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "vector-database",
+          "rel": "instanceOf"
+        },
+        {
+          "id": "vector-embedding",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/lancedb.md"
       ]
     },
     {
@@ -205,9 +310,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "agent-first",
-        "lancedb",
-        "open-brain"
+        {
+          "id": "agent-first",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "lancedb",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "open-brain",
+          "rel": "relatedTerm"
+        }
+      ],
+      "docs": [
+        "glossary/local-first.md"
       ]
     },
     {
@@ -227,7 +344,13 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "adr"
+        {
+          "id": "adr",
+          "rel": "instanceOf"
+        }
+      ],
+      "docs": [
+        "glossary/madr.md"
       ]
     },
     {
@@ -246,9 +369,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "mcp",
-        "mcp-tool",
-        "stdio-transport"
+        {
+          "id": "mcp",
+          "rel": "implements"
+        },
+        {
+          "id": "mcp-tool",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "stdio-transport",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/mcp-server.md"
       ]
     },
     {
@@ -267,9 +402,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "ai-agent",
-        "mcp",
-        "mcp-server"
+        {
+          "id": "ai-agent",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "mcp",
+          "rel": "partOf"
+        },
+        {
+          "id": "mcp-server",
+          "rel": "partOf"
+        }
+      ],
+      "docs": [
+        "glossary/mcp-tool.md"
       ]
     },
     {
@@ -290,10 +437,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "open-brain",
-        "superseded-by",
-        "tag",
-        "yaml-front-matter"
+        {
+          "id": "open-brain",
+          "rel": "partOf"
+        },
+        {
+          "id": "superseded-by",
+          "rel": "uses"
+        },
+        {
+          "id": "tag",
+          "rel": "uses"
+        },
+        {
+          "id": "yaml-front-matter",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/memory-file.md"
       ]
     },
     {
@@ -313,8 +475,17 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "adr",
-        "open-brain"
+        {
+          "id": "adr",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "open-brain",
+          "rel": "partOf"
+        }
+      ],
+      "docs": [
+        "glossary/mini-retro.md"
       ]
     },
     {
@@ -332,10 +503,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "ai-agent",
-        "mcp-server",
-        "mcp-tool",
-        "stdio-transport"
+        {
+          "id": "ai-agent",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "mcp-server",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "mcp-tool",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "stdio-transport",
+          "rel": "relatedTerm"
+        }
+      ],
+      "docs": [
+        "glossary/mcp.md"
       ]
     },
     {
@@ -355,10 +541,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "agent-first",
-        "knowledge-graph",
-        "local-first",
-        "mcp-server"
+        {
+          "id": "agent-first",
+          "rel": "implements"
+        },
+        {
+          "id": "knowledge-graph",
+          "rel": "uses"
+        },
+        {
+          "id": "local-first",
+          "rel": "implements"
+        },
+        {
+          "id": "mcp-server",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/open-brain.md"
       ]
     },
     {
@@ -378,9 +579,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "knowledge-graph",
-        "mcp-tool",
-        "open-brain"
+        {
+          "id": "knowledge-graph",
+          "rel": "uses"
+        },
+        {
+          "id": "mcp-tool",
+          "rel": "uses"
+        },
+        {
+          "id": "open-brain",
+          "rel": "partOf"
+        }
+      ],
+      "docs": [
+        "glossary/retrieval.md"
       ]
     },
     {
@@ -400,10 +613,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "lancedb",
-        "retrieval",
-        "vector-database",
-        "vector-embedding"
+        {
+          "id": "lancedb",
+          "rel": "uses"
+        },
+        {
+          "id": "retrieval",
+          "rel": "instanceOf"
+        },
+        {
+          "id": "vector-database",
+          "rel": "uses"
+        },
+        {
+          "id": "vector-embedding",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/semantic-search.md"
       ]
     },
     {
@@ -423,9 +651,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "adr",
-        "ai-agent",
-        "open-brain"
+        {
+          "id": "adr",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "ai-agent",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "open-brain",
+          "rel": "partOf"
+        }
+      ],
+      "docs": [
+        "glossary/skill.md"
       ]
     },
     {
@@ -445,8 +685,17 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "mcp",
-        "mcp-server"
+        {
+          "id": "mcp",
+          "rel": "partOf"
+        },
+        {
+          "id": "mcp-server",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/stdio-transport.md"
       ]
     },
     {
@@ -466,9 +715,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "knowledge-graph",
-        "memory-file",
-        "yaml-front-matter"
+        {
+          "id": "knowledge-graph",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "memory-file",
+          "rel": "partOf"
+        },
+        {
+          "id": "yaml-front-matter",
+          "rel": "partOf"
+        }
+      ],
+      "docs": [
+        "glossary/superseded-by.md"
       ]
     },
     {
@@ -487,9 +748,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "memory-file",
-        "semantic-search",
-        "yaml-front-matter"
+        {
+          "id": "memory-file",
+          "rel": "partOf"
+        },
+        {
+          "id": "semantic-search",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "yaml-front-matter",
+          "rel": "partOf"
+        }
+      ],
+      "docs": [
+        "glossary/tag.md"
       ]
     },
     {
@@ -509,10 +782,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "ai-agent",
-        "capture",
-        "inbox",
-        "memory-file"
+        {
+          "id": "ai-agent",
+          "rel": "uses"
+        },
+        {
+          "id": "capture",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "inbox",
+          "rel": "uses"
+        },
+        {
+          "id": "memory-file",
+          "rel": "relatedTerm"
+        }
+      ],
+      "docs": [
+        "glossary/triage.md"
       ]
     },
     {
@@ -531,9 +819,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "lancedb",
-        "semantic-search",
-        "vector-embedding"
+        {
+          "id": "lancedb",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "semantic-search",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "vector-embedding",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/vector-database.md"
       ]
     },
     {
@@ -553,10 +853,25 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "embedding-model",
-        "lancedb",
-        "semantic-search",
-        "vector-database"
+        {
+          "id": "embedding-model",
+          "rel": "uses"
+        },
+        {
+          "id": "lancedb",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "semantic-search",
+          "rel": "relatedTerm"
+        },
+        {
+          "id": "vector-database",
+          "rel": "partOf"
+        }
+      ],
+      "docs": [
+        "glossary/vector-embedding.md"
       ]
     },
     {
@@ -576,9 +891,21 @@
       ],
       "domain": "VocabularyDomain",
       "related": [
-        "memory-file",
-        "superseded-by",
-        "tag"
+        {
+          "id": "memory-file",
+          "rel": "partOf"
+        },
+        {
+          "id": "superseded-by",
+          "rel": "uses"
+        },
+        {
+          "id": "tag",
+          "rel": "uses"
+        }
+      ],
+      "docs": [
+        "glossary/yaml-front-matter.md"
       ]
     }
   ],
@@ -586,498 +913,581 @@
     {
       "from_id": "agent-first",
       "from_label": "Agent-first",
+      "predicate": "relatedTerm",
       "to_id": "ai-agent",
       "to_label": "AI Agent"
     },
     {
       "from_id": "agent-first",
       "from_label": "Agent-first",
+      "predicate": "relatedTerm",
       "to_id": "local-first",
       "to_label": "Local-first"
     },
     {
       "from_id": "agent-first",
       "from_label": "Agent-first",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "agent-first",
-      "from_label": "Agent-first",
+      "predicate": "relatedTerm",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
+      "from_id": "agent-first",
+      "from_label": "Agent-first",
+      "predicate": "uses",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
       "from_id": "ai-agent",
       "from_label": "AI Agent",
+      "predicate": "relatedTerm",
       "to_id": "agent-first",
       "to_label": "Agent-first"
     },
     {
       "from_id": "ai-agent",
       "from_label": "AI Agent",
+      "predicate": "uses",
       "to_id": "mcp-tool",
       "to_label": "MCP Tool"
     },
     {
       "from_id": "ai-agent",
       "from_label": "AI Agent",
+      "predicate": "uses",
       "to_id": "mcp",
       "to_label": "Model Context Protocol"
     },
     {
       "from_id": "ai-agent",
       "from_label": "AI Agent",
+      "predicate": "uses",
       "to_id": "skill",
       "to_label": "Skill"
     },
     {
       "from_id": "adr",
       "from_label": "Architecture Decision Record",
-      "to_id": "madr",
-      "to_label": "MADR"
-    },
-    {
-      "from_id": "adr",
-      "from_label": "Architecture Decision Record",
+      "predicate": "relatedTerm",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
+      "from_id": "adr",
+      "from_label": "Architecture Decision Record",
+      "predicate": "uses",
+      "to_id": "madr",
+      "to_label": "MADR"
+    },
+    {
       "from_id": "capture",
       "from_label": "Capture",
+      "predicate": "contrasts",
+      "to_id": "retrieval",
+      "to_label": "Retrieval"
+    },
+    {
+      "from_id": "capture",
+      "from_label": "Capture",
+      "predicate": "uses",
       "to_id": "inbox",
       "to_label": "Inbox"
     },
     {
       "from_id": "capture",
       "from_label": "Capture",
+      "predicate": "uses",
       "to_id": "mcp-tool",
       "to_label": "MCP Tool"
     },
     {
       "from_id": "capture",
       "from_label": "Capture",
+      "predicate": "uses",
       "to_id": "memory-file",
       "to_label": "Memory File"
     },
     {
-      "from_id": "capture",
-      "from_label": "Capture",
-      "to_id": "retrieval",
-      "to_label": "Retrieval"
-    },
-    {
       "from_id": "embedding-model",
       "from_label": "Embedding Model",
+      "predicate": "relatedTerm",
       "to_id": "lancedb",
       "to_label": "LanceDB"
     },
     {
       "from_id": "embedding-model",
       "from_label": "Embedding Model",
+      "predicate": "relatedTerm",
       "to_id": "semantic-search",
       "to_label": "Semantic Search"
     },
     {
       "from_id": "embedding-model",
       "from_label": "Embedding Model",
+      "predicate": "uses",
       "to_id": "vector-embedding",
       "to_label": "Vector Embedding"
     },
     {
       "from_id": "inbox",
       "from_label": "Inbox",
+      "predicate": "partOf",
       "to_id": "capture",
       "to_label": "Capture"
     },
     {
       "from_id": "inbox",
       "from_label": "Inbox",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "inbox",
-      "from_label": "Inbox",
+      "predicate": "partOf",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
       "from_id": "inbox",
       "from_label": "Inbox",
+      "predicate": "relatedTerm",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "inbox",
+      "from_label": "Inbox",
+      "predicate": "relatedTerm",
       "to_id": "triage",
       "to_label": "Triage"
     },
     {
       "from_id": "knowledge-graph",
       "from_label": "Knowledge Graph",
+      "predicate": "partOf",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
       "from_id": "knowledge-graph",
       "from_label": "Knowledge Graph",
+      "predicate": "uses",
       "to_id": "tag",
       "to_label": "Tag"
     },
     {
       "from_id": "lancedb",
       "from_label": "LanceDB",
-      "to_id": "embedding-model",
-      "to_label": "Embedding Model"
-    },
-    {
-      "from_id": "lancedb",
-      "from_label": "LanceDB",
-      "to_id": "semantic-search",
-      "to_label": "Semantic Search"
-    },
-    {
-      "from_id": "lancedb",
-      "from_label": "LanceDB",
+      "predicate": "instanceOf",
       "to_id": "vector-database",
       "to_label": "Vector Database"
     },
     {
       "from_id": "lancedb",
       "from_label": "LanceDB",
+      "predicate": "relatedTerm",
+      "to_id": "semantic-search",
+      "to_label": "Semantic Search"
+    },
+    {
+      "from_id": "lancedb",
+      "from_label": "LanceDB",
+      "predicate": "uses",
+      "to_id": "embedding-model",
+      "to_label": "Embedding Model"
+    },
+    {
+      "from_id": "lancedb",
+      "from_label": "LanceDB",
+      "predicate": "uses",
       "to_id": "vector-embedding",
       "to_label": "Vector Embedding"
     },
     {
       "from_id": "local-first",
       "from_label": "Local-first",
+      "predicate": "relatedTerm",
       "to_id": "agent-first",
       "to_label": "Agent-first"
     },
     {
       "from_id": "local-first",
       "from_label": "Local-first",
+      "predicate": "relatedTerm",
       "to_id": "lancedb",
       "to_label": "LanceDB"
     },
     {
       "from_id": "local-first",
       "from_label": "Local-first",
+      "predicate": "relatedTerm",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
       "from_id": "madr",
       "from_label": "MADR",
+      "predicate": "instanceOf",
       "to_id": "adr",
       "to_label": "Architecture Decision Record"
     },
     {
       "from_id": "mcp-server",
       "from_label": "MCP Server",
+      "predicate": "implements",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
+      "from_id": "mcp-server",
+      "from_label": "MCP Server",
+      "predicate": "relatedTerm",
       "to_id": "mcp-tool",
       "to_label": "MCP Tool"
     },
     {
       "from_id": "mcp-server",
       "from_label": "MCP Server",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "mcp-server",
-      "from_label": "MCP Server",
+      "predicate": "uses",
       "to_id": "stdio-transport",
       "to_label": "stdio Transport"
     },
     {
       "from_id": "mcp-tool",
       "from_label": "MCP Tool",
-      "to_id": "ai-agent",
-      "to_label": "AI Agent"
-    },
-    {
-      "from_id": "mcp-tool",
-      "from_label": "MCP Tool",
+      "predicate": "partOf",
       "to_id": "mcp-server",
       "to_label": "MCP Server"
     },
     {
       "from_id": "mcp-tool",
       "from_label": "MCP Tool",
+      "predicate": "partOf",
       "to_id": "mcp",
       "to_label": "Model Context Protocol"
     },
     {
+      "from_id": "mcp-tool",
+      "from_label": "MCP Tool",
+      "predicate": "relatedTerm",
+      "to_id": "ai-agent",
+      "to_label": "AI Agent"
+    },
+    {
       "from_id": "memory-file",
       "from_label": "Memory File",
+      "predicate": "partOf",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
       "from_id": "memory-file",
       "from_label": "Memory File",
+      "predicate": "uses",
       "to_id": "superseded-by",
       "to_label": "Superseded-by"
     },
     {
       "from_id": "memory-file",
       "from_label": "Memory File",
+      "predicate": "uses",
       "to_id": "tag",
       "to_label": "Tag"
     },
     {
       "from_id": "memory-file",
       "from_label": "Memory File",
+      "predicate": "uses",
       "to_id": "yaml-front-matter",
       "to_label": "YAML Front Matter"
     },
     {
       "from_id": "mini-retro",
       "from_label": "Mini-Retro",
-      "to_id": "adr",
-      "to_label": "Architecture Decision Record"
-    },
-    {
-      "from_id": "mini-retro",
-      "from_label": "Mini-Retro",
+      "predicate": "partOf",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
+      "from_id": "mini-retro",
+      "from_label": "Mini-Retro",
+      "predicate": "relatedTerm",
+      "to_id": "adr",
+      "to_label": "Architecture Decision Record"
+    },
+    {
       "from_id": "mcp",
       "from_label": "Model Context Protocol",
+      "predicate": "relatedTerm",
       "to_id": "ai-agent",
       "to_label": "AI Agent"
     },
     {
       "from_id": "mcp",
       "from_label": "Model Context Protocol",
+      "predicate": "relatedTerm",
       "to_id": "mcp-server",
       "to_label": "MCP Server"
     },
     {
       "from_id": "mcp",
       "from_label": "Model Context Protocol",
+      "predicate": "relatedTerm",
       "to_id": "mcp-tool",
       "to_label": "MCP Tool"
     },
     {
       "from_id": "mcp",
       "from_label": "Model Context Protocol",
+      "predicate": "relatedTerm",
       "to_id": "stdio-transport",
       "to_label": "stdio Transport"
     },
     {
       "from_id": "open-brain",
       "from_label": "Open-Brain",
+      "predicate": "implements",
       "to_id": "agent-first",
       "to_label": "Agent-first"
     },
     {
       "from_id": "open-brain",
       "from_label": "Open-Brain",
-      "to_id": "knowledge-graph",
-      "to_label": "Knowledge Graph"
-    },
-    {
-      "from_id": "open-brain",
-      "from_label": "Open-Brain",
+      "predicate": "implements",
       "to_id": "local-first",
       "to_label": "Local-first"
     },
     {
       "from_id": "open-brain",
       "from_label": "Open-Brain",
+      "predicate": "uses",
+      "to_id": "knowledge-graph",
+      "to_label": "Knowledge Graph"
+    },
+    {
+      "from_id": "open-brain",
+      "from_label": "Open-Brain",
+      "predicate": "uses",
       "to_id": "mcp-server",
       "to_label": "MCP Server"
     },
     {
       "from_id": "retrieval",
       "from_label": "Retrieval",
+      "predicate": "partOf",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "retrieval",
+      "from_label": "Retrieval",
+      "predicate": "uses",
       "to_id": "knowledge-graph",
       "to_label": "Knowledge Graph"
     },
     {
       "from_id": "retrieval",
       "from_label": "Retrieval",
+      "predicate": "uses",
       "to_id": "mcp-tool",
       "to_label": "MCP Tool"
     },
     {
-      "from_id": "retrieval",
-      "from_label": "Retrieval",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
       "from_id": "semantic-search",
       "from_label": "Semantic Search",
-      "to_id": "lancedb",
-      "to_label": "LanceDB"
-    },
-    {
-      "from_id": "semantic-search",
-      "from_label": "Semantic Search",
+      "predicate": "instanceOf",
       "to_id": "retrieval",
       "to_label": "Retrieval"
     },
     {
       "from_id": "semantic-search",
       "from_label": "Semantic Search",
+      "predicate": "uses",
+      "to_id": "lancedb",
+      "to_label": "LanceDB"
+    },
+    {
+      "from_id": "semantic-search",
+      "from_label": "Semantic Search",
+      "predicate": "uses",
       "to_id": "vector-database",
       "to_label": "Vector Database"
     },
     {
       "from_id": "semantic-search",
       "from_label": "Semantic Search",
+      "predicate": "uses",
       "to_id": "vector-embedding",
       "to_label": "Vector Embedding"
     },
     {
       "from_id": "skill",
       "from_label": "Skill",
-      "to_id": "ai-agent",
-      "to_label": "AI Agent"
-    },
-    {
-      "from_id": "skill",
-      "from_label": "Skill",
-      "to_id": "adr",
-      "to_label": "Architecture Decision Record"
-    },
-    {
-      "from_id": "skill",
-      "from_label": "Skill",
+      "predicate": "partOf",
       "to_id": "open-brain",
       "to_label": "Open-Brain"
     },
     {
-      "from_id": "stdio-transport",
-      "from_label": "stdio Transport",
-      "to_id": "mcp-server",
-      "to_label": "MCP Server"
-    },
-    {
-      "from_id": "stdio-transport",
-      "from_label": "stdio Transport",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "superseded-by",
-      "from_label": "Superseded-by",
-      "to_id": "knowledge-graph",
-      "to_label": "Knowledge Graph"
-    },
-    {
-      "from_id": "superseded-by",
-      "from_label": "Superseded-by",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "superseded-by",
-      "from_label": "Superseded-by",
-      "to_id": "yaml-front-matter",
-      "to_label": "YAML Front Matter"
-    },
-    {
-      "from_id": "tag",
-      "from_label": "Tag",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "tag",
-      "from_label": "Tag",
-      "to_id": "semantic-search",
-      "to_label": "Semantic Search"
-    },
-    {
-      "from_id": "tag",
-      "from_label": "Tag",
-      "to_id": "yaml-front-matter",
-      "to_label": "YAML Front Matter"
-    },
-    {
-      "from_id": "triage",
-      "from_label": "Triage",
+      "from_id": "skill",
+      "from_label": "Skill",
+      "predicate": "relatedTerm",
       "to_id": "ai-agent",
       "to_label": "AI Agent"
     },
     {
+      "from_id": "skill",
+      "from_label": "Skill",
+      "predicate": "relatedTerm",
+      "to_id": "adr",
+      "to_label": "Architecture Decision Record"
+    },
+    {
+      "from_id": "stdio-transport",
+      "from_label": "stdio Transport",
+      "predicate": "partOf",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
+      "from_id": "stdio-transport",
+      "from_label": "stdio Transport",
+      "predicate": "uses",
+      "to_id": "mcp-server",
+      "to_label": "MCP Server"
+    },
+    {
+      "from_id": "superseded-by",
+      "from_label": "Superseded-by",
+      "predicate": "partOf",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "superseded-by",
+      "from_label": "Superseded-by",
+      "predicate": "partOf",
+      "to_id": "yaml-front-matter",
+      "to_label": "YAML Front Matter"
+    },
+    {
+      "from_id": "superseded-by",
+      "from_label": "Superseded-by",
+      "predicate": "relatedTerm",
+      "to_id": "knowledge-graph",
+      "to_label": "Knowledge Graph"
+    },
+    {
+      "from_id": "tag",
+      "from_label": "Tag",
+      "predicate": "partOf",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "tag",
+      "from_label": "Tag",
+      "predicate": "partOf",
+      "to_id": "yaml-front-matter",
+      "to_label": "YAML Front Matter"
+    },
+    {
+      "from_id": "tag",
+      "from_label": "Tag",
+      "predicate": "relatedTerm",
+      "to_id": "semantic-search",
+      "to_label": "Semantic Search"
+    },
+    {
       "from_id": "triage",
       "from_label": "Triage",
+      "predicate": "relatedTerm",
       "to_id": "capture",
       "to_label": "Capture"
     },
     {
       "from_id": "triage",
       "from_label": "Triage",
-      "to_id": "inbox",
-      "to_label": "Inbox"
-    },
-    {
-      "from_id": "triage",
-      "from_label": "Triage",
+      "predicate": "relatedTerm",
       "to_id": "memory-file",
       "to_label": "Memory File"
     },
     {
+      "from_id": "triage",
+      "from_label": "Triage",
+      "predicate": "uses",
+      "to_id": "ai-agent",
+      "to_label": "AI Agent"
+    },
+    {
+      "from_id": "triage",
+      "from_label": "Triage",
+      "predicate": "uses",
+      "to_id": "inbox",
+      "to_label": "Inbox"
+    },
+    {
       "from_id": "vector-database",
       "from_label": "Vector Database",
+      "predicate": "relatedTerm",
       "to_id": "lancedb",
       "to_label": "LanceDB"
     },
     {
       "from_id": "vector-database",
       "from_label": "Vector Database",
+      "predicate": "relatedTerm",
       "to_id": "semantic-search",
       "to_label": "Semantic Search"
     },
     {
       "from_id": "vector-database",
       "from_label": "Vector Database",
+      "predicate": "uses",
       "to_id": "vector-embedding",
       "to_label": "Vector Embedding"
     },
     {
       "from_id": "vector-embedding",
       "from_label": "Vector Embedding",
-      "to_id": "embedding-model",
-      "to_label": "Embedding Model"
+      "predicate": "partOf",
+      "to_id": "vector-database",
+      "to_label": "Vector Database"
     },
     {
       "from_id": "vector-embedding",
       "from_label": "Vector Embedding",
+      "predicate": "relatedTerm",
       "to_id": "lancedb",
       "to_label": "LanceDB"
     },
     {
       "from_id": "vector-embedding",
       "from_label": "Vector Embedding",
+      "predicate": "relatedTerm",
       "to_id": "semantic-search",
       "to_label": "Semantic Search"
     },
     {
       "from_id": "vector-embedding",
       "from_label": "Vector Embedding",
-      "to_id": "vector-database",
-      "to_label": "Vector Database"
+      "predicate": "uses",
+      "to_id": "embedding-model",
+      "to_label": "Embedding Model"
     },
     {
       "from_id": "yaml-front-matter",
       "from_label": "YAML Front Matter",
+      "predicate": "partOf",
       "to_id": "memory-file",
       "to_label": "Memory File"
     },
     {
       "from_id": "yaml-front-matter",
       "from_label": "YAML Front Matter",
+      "predicate": "uses",
       "to_id": "superseded-by",
       "to_label": "Superseded-by"
     },
     {
       "from_id": "yaml-front-matter",
       "from_label": "YAML Front Matter",
+      "predicate": "uses",
       "to_id": "tag",
       "to_label": "Tag"
     }

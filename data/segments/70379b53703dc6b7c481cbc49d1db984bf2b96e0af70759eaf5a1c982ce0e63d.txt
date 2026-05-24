@@ -1,0 +1,1 @@
+> ⚠️ Semantic search via vector embeddings was the retrieval mechanism in the original Open-Brain design concept. That approach was replaced by ontology-based retrieval before implementation. See [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md) and [Retrieval](./retrieval.md) for the current approach.

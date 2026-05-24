@@ -236,6 +236,32 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
+/* Predicate colour coding */
+.predicate-implements    { color: #2563eb; }
+.predicate-instanceOf    { color: #7c3aed; }
+.predicate-partOf        { color: #059669; }
+.predicate-contrasts     { color: #dc2626; }
+.predicate-uses          { color: #d97706; }
+.predicate-relatedTerm   { color: var(--muted); }
+
+/* Predicate badges in concept detail panel */
+.pred-badge {
+  display: inline-block;
+  padding: .05em .35em;
+  border-radius: 3px;
+  font-size: .75em;
+  font-family: var(--font-mono);
+  border: 1px solid currentColor;
+  opacity: .75;
+  margin-left: .2em;
+  white-space: nowrap;
+}
+.pred-implements  { color: #2563eb; }
+.pred-instanceOf  { color: #7c3aed; }
+.pred-partOf      { color: #059669; }
+.pred-contrasts   { color: #dc2626; }
+.pred-uses        { color: #d97706; }
+
 .muted {
   color: var(--muted);
 }
@@ -273,6 +299,15 @@ tr.concept-row.selected {
 /* Hidden row (filtered out by JS) */
 tr.hidden-row {
   display: none;
+}
+
+/* Highlighted document row (from concept → document link) */
+tr.highlight {
+  animation: row-flash 1.5s ease-out;
+}
+@keyframes row-flash {
+  0%   { background: #fef3c7; }
+  100% { background: transparent; }
 }
 
 /* ------------------------------------------------------------------ */
@@ -315,6 +350,15 @@ tr.hidden-row {
 .detail-panel .detail-value {
   flex: 1;
   line-height: 1.6;
+}
+
+.docs-list {
+  margin: .1rem 0 0;
+  padding: 0 0 0 1.1rem;
+  list-style: disc;
+}
+.docs-list li {
+  margin-bottom: .15rem;
 }
 
 .detail-close {

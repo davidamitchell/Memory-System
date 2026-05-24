@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "YAML Front Matter"
     file: yaml-front-matter.md
+    rel: uses
   - term: "Tag"
     file: tag.md
+    rel: uses
   - term: "Superseded-by"
     file: superseded-by.md
+    rel: uses
   - term: "Open-Brain"
     file: open-brain.md
+    rel: partOf
 aliases: ["memory", "note", "brain file", "source document"]
 ---
 

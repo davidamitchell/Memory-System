@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "Memory File"
     file: memory-file.md
+    rel: relatedTerm
   - term: "Capture"
     file: capture.md
+    rel: partOf
   - term: "Triage"
     file: triage.md
+    rel: relatedTerm
   - term: "Open-Brain"
     file: open-brain.md
+    rel: partOf
 aliases: ["inbox folder", "capture inbox"]
 ---
 

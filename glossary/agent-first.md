@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "AI Agent"
     file: ai-agent.md
+    rel: relatedTerm
   - term: "Local-first"
     file: local-first.md
+    rel: relatedTerm
   - term: "Model Context Protocol"
     file: mcp.md
+    rel: uses
   - term: "Open-Brain"
     file: open-brain.md
+    rel: relatedTerm
 aliases: ["agent-native", "agent native", "agent first"]
 ---
 

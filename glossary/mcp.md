@@ -6,12 +6,16 @@ date: 2026-05-23
 related:
   - term: "MCP Server"
     file: mcp-server.md
+    rel: relatedTerm
   - term: "MCP Tool"
     file: mcp-tool.md
+    rel: relatedTerm
   - term: "stdio Transport"
     file: stdio-transport.md
+    rel: relatedTerm
   - term: "AI Agent"
     file: ai-agent.md
+    rel: relatedTerm
 aliases: ["MCP"]
 ---
 
