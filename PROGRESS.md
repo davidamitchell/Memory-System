@@ -240,3 +240,32 @@ Extended `BACKLOG-v2.md` with 5 new work items and 2 new phases, per issue "New 
 1. [`.github/copilot-instructions.md` §5 and §7](../.github/copilot-instructions.md) — the mandate for PROGRESS.md and the Mini-Retro format.
 2. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase work items referenced in this history.
 3. [`BACKLOG-v2.md`](./BACKLOG-v2.md) — implementation-ready roadmap updated during these sessions.
+
+---
+
+## 2026-05-24 — W-0207: GitHub Pages ontology browser
+
+Added a progressively-enhanced static site on GitHub Pages for browsing the ontology without local tooling.
+
+**Changes:**
+- `pipeline/export_json.py`: reads latest `data/ontology/v*.ttl`, emits `docs/data/ontology.json` (26 concepts, 83 relations, 26 documents for W-0201 corpus)
+- `pipeline/export_html.py`: stamps JSON data into `docs/index.html` — pre-rendered tables work with JS disabled
+- `docs/data/ontology.json`: pre-committed export of v0011 ontology
+- `docs/index.html`: four-section static page (Overview, Concepts, Relations, Documents)
+- `docs/style.css`: minimal monospace-light theme, no external fonts or CDN dependencies
+- `docs/app.js`: tab switcher, live search, concept detail panel — all progressive enhancement
+- `.github/workflows/pages.yml`: runs exporters on push to `main`, deploys to GitHub Pages
+- `BACKLOG.md`: W-0202 deferred, W-0207 added (status: ready, blocks W-0203), W-0203 updated (blocked-by adds W-0207)
+
+**Acceptance criteria met:**
+- `python pipeline/export_json.py` produces `docs/data/ontology.json` with counts {concepts: 26, relations: 83, documents: 26}
+- `python pipeline/export_html.py` produces `docs/index.html` with all four sections as plain HTML tables
+- `docs/style.css` and `docs/app.js` present; progressive enhancement layers: tabs, search, detail panel
+- `.github/workflows/pages.yml` deploys on push to `main`
+- All existing tests pass unchanged
+
+**Mini-Retro**
+1. Did the process work? Yes — the plan was well-specified with clear file outputs, a defined JSON schema, and an explicit render order. The batch-mode prov issue (single shared activity for all 26 docs) was discovered during implementation and resolved cleanly by using the concept-id-to-filename mapping instead.
+2. What slowed down or went wrong? The `prov:used` triples in the current ontology all reference a single batch activity, so the document→concept link via prov didn't work. Resolved by matching concept id to stem of `ms:sourceDocument`.
+3. What single change would prevent this next time? Per-document activities (one activity per pipeline run, not one per batch) would make prov-based document→concept mapping work directly. Worth noting for W-0200 refinement.
+4. Is this a pattern? Yes — batch mode collapsed provenance. Future exporters or tools that need per-document attribution should plan for this in the pipeline architecture.

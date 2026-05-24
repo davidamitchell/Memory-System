@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added — W-0207: GitHub Pages ontology browser
+- `pipeline/export_json.py`: exports latest TTL → `docs/data/ontology.json` (concepts, relations, documents)
+- `pipeline/export_html.py`: stamps JSON into `docs/index.html` with pre-rendered tables (no JS required)
+- `docs/data/ontology.json`: pre-committed ontology snapshot (v0011; 26 concepts, 83 relations, 26 documents)
+- `docs/index.html`: four-section static page (Overview, Concepts, Relations, Documents)
+- `docs/style.css`: minimal monospace-light theme, no external fonts or CDN
+- `docs/app.js`: progressive enhancement — tab switcher, live search, concept detail panel
+- `.github/workflows/pages.yml`: exports ontology data and deploys to GitHub Pages on push to `main`
+
+### Changed — W-0207 BACKLOG updates
+- `BACKLOG.md`: W-0202 `status: exploration` → `status: deferred`; W-0207 inserted (status: ready, blocks W-0203, blocked-by W-0201); W-0203 `blocked-by` updated to include W-0207
+
 ### Added — W-0200: 12-processor ontology pipeline (first slice)
 - `pipeline/processors/p01_sourcing.py` through `p12_export.py`: full 12-processor pipeline
 - `pipeline/run_pipeline.py`: CLI orchestrator; accepts single `.md` file or directory

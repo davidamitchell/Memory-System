@@ -226,11 +226,53 @@ The version diff (v0001 → v0002) is the first concrete answer to the "what tri
 
 ---
 
+## W-0207
+
+status: ready
+created: 2026-05-24
+updated: 2026-05-24
+blocks: [W-0203]
+blocked-by: [W-0201]
+research: []
+assumptions:
+  - The latest `data/ontology/v*.ttl` file is the canonical snapshot to export
+  - rdflib is already a declared dependency (requirements.txt)
+  - GitHub Pages can be enabled on this repository and serves from the `docs/` directory
+  - The 26 glossary concept IDs map directly to their source filenames (e.g. `adr` → `glossary/adr.md`), allowing the document→concept link to be derived without prov triples
+uncertainty:
+  - Whether the GitHub Pages environment needs to be manually enabled in repository settings before the workflow can deploy
+  - Whether the single shared `prov:wasGeneratedBy` activity (batch mode) is sufficient for the browser, or whether per-concept provenance should be added in a later pass
+
+### Outcome
+
+A GitHub Pages site at `https://davidamitchell.github.io/Memory-System/` that lets you browse the ontology without local tooling. Four tabs: Overview (counts, version), Concepts (table with detail panel), Relations (edge list), Documents (source files + segment counts). The site is a progressively-enhanced static page: plain HTML tables work without JS; JS adds tab switching, live search, and a concept detail panel.
+
+### Context
+
+The pipeline (W-0200/W-0201) produces a versioned Turtle file but provides no way to explore it without running local Python. This item adds a zero-dependency, always-on browser that is regenerated automatically on every push to `main`. It makes the ontology inspectable for humans and serves as a lightweight integration test: if the exporter runs without error and produces a page with correct counts, the pipeline data is structurally sound.
+
+Two new pipeline scripts handle the export:
+- `pipeline/export_json.py` — parses the latest TTL and emits `docs/data/ontology.json`
+- `pipeline/export_html.py` — stamps the JSON into `docs/index.html` (pre-rendered tables, no JS required)
+
+`docs/style.css` and `docs/app.js` provide the visual layer and progressive enhancements. The GitHub Actions workflow `.github/workflows/pages.yml` runs both exporters and deploys on every push to `main`.
+
+### Acceptance criteria
+
+- `python pipeline/export_json.py` produces `docs/data/ontology.json` with correct counts (26 concepts, 83 relations, 26 documents for the W-0201 corpus)
+- `python pipeline/export_html.py` produces `docs/index.html` that is valid HTML and renders all four sections without JS
+- `docs/style.css` and `docs/app.js` are present; the page enhances correctly with JS enabled
+- `.github/workflows/pages.yml` deploys to GitHub Pages on push to `main`
+- The deployed site is navigable: Overview counts match the ontology, Concepts table shows all 26 nodes, Relations table shows all 83 edges, Documents table shows all 26 source files
+- All existing tests pass unchanged (`python -m pytest tests/ -v`)
+
+---
+
 ## W-0202
 
-status: exploration
+status: deferred
 created: 2026-05-23
-updated: 2026-05-23
+updated: 2026-05-24
 blocks: []
 blocked-by: [W-0201]
 research: []
@@ -270,9 +312,9 @@ The SHA algorithm mismatch (SHA-1 vs SHA-256) is the key risk: the `ms:contentHa
 
 status: ready
 created: 2026-05-23
-updated: 2026-05-23
+updated: 2026-05-24
 blocks: [W-0204]
-blocked-by: [W-0201]
+blocked-by: [W-0201, W-0207]
 research: []
 assumptions:
   - The 26 glossary files constitute ground truth: every concept label, alias, tag, and relatedTerm declared in their front-matter is a known-correct extraction target

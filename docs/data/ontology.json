@@ -1,0 +1,1269 @@
+{
+  "meta": {
+    "version": "v0011",
+    "generated": "2026-05-24T03:14:30Z",
+    "counts": {
+      "concepts": 26,
+      "relations": 83,
+      "documents": 26
+    }
+  },
+  "concepts": [
+    {
+      "id": "agent-first",
+      "label": "Agent-first",
+      "comment": "A design philosophy that treats AI agents as primary users of a system, building in autonomous read/write access, versioned context, and self-correction from the start rather than adding them as afterthoughts.",
+      "aliases": [
+        "agent first",
+        "agent native",
+        "agent-native"
+      ],
+      "tags": [
+        "agent-first",
+        "agent-native",
+        "ai",
+        "architecture",
+        "design"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "ai-agent",
+        "local-first",
+        "mcp",
+        "open-brain"
+      ]
+    },
+    {
+      "id": "ai-agent",
+      "label": "AI Agent",
+      "comment": "An AI system that can autonomously take sequences of actions — including calling external tools — to complete a goal specified in natural language.",
+      "aliases": [
+        "AI assistant",
+        "Copilot agent",
+        "agent",
+        "coding agent"
+      ],
+      "tags": [
+        "agent",
+        "ai",
+        "autonomous",
+        "claude",
+        "copilot",
+        "cursor"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "agent-first",
+        "mcp",
+        "mcp-tool",
+        "skill"
+      ]
+    },
+    {
+      "id": "adr",
+      "label": "Architecture Decision Record",
+      "comment": "A short, structured document that records a significant architectural or design decision, its context, the options considered, and the consequences of the chosen option.",
+      "aliases": [
+        "ADR",
+        "decision record"
+      ],
+      "tags": [
+        "adr",
+        "architecture",
+        "decision",
+        "documentation",
+        "governance"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "madr",
+        "open-brain"
+      ]
+    },
+    {
+      "id": "capture",
+      "label": "Capture",
+      "comment": "The act of storing a new piece of knowledge as a memory file — the write side of the memory system, in contrast to retrieval.",
+      "aliases": [
+        "add memory",
+        "memory capture",
+        "write"
+      ],
+      "tags": [
+        "capture",
+        "friction",
+        "input",
+        "memory",
+        "write"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "inbox",
+        "mcp-tool",
+        "memory-file",
+        "retrieval"
+      ]
+    },
+    {
+      "id": "embedding-model",
+      "label": "Embedding Model",
+      "comment": "A machine-learning model that converts text into a fixed-length vector of numbers representing its semantic content.",
+      "aliases": [
+        "sentence encoder",
+        "text encoder"
+      ],
+      "tags": [
+        "embedding",
+        "model",
+        "nlp",
+        "superseded"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "lancedb",
+        "semantic-search",
+        "vector-embedding"
+      ]
+    },
+    {
+      "id": "inbox",
+      "label": "Inbox",
+      "comment": "A designated `/inbox` folder where memory files can be dropped without a folder decision, title, or full front matter, for later classification by an agent.",
+      "aliases": [
+        "capture inbox",
+        "inbox folder"
+      ],
+      "tags": [
+        "capture",
+        "folder",
+        "inbox",
+        "triage"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "capture",
+        "memory-file",
+        "open-brain",
+        "triage"
+      ]
+    },
+    {
+      "id": "knowledge-graph",
+      "label": "Knowledge Graph",
+      "comment": "A structured network in which entities (concepts, assertions, sources) are connected by typed relationships, enabling reasoning, traversal, and structured query.",
+      "aliases": [
+        "knowledge base graph",
+        "ontology graph"
+      ],
+      "tags": [
+        "graph",
+        "knowledge-graph",
+        "links",
+        "ontology",
+        "structure"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "open-brain",
+        "tag"
+      ]
+    },
+    {
+      "id": "lancedb",
+      "label": "LanceDB",
+      "comment": "An embedded, serverless vector database that stores and searches high-dimensional numerical vectors, requiring no separate database process.",
+      "aliases": [],
+      "tags": [
+        "embedded",
+        "lancedb",
+        "search",
+        "superseded",
+        "vector-database"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "embedding-model",
+        "semantic-search",
+        "vector-database",
+        "vector-embedding"
+      ]
+    },
+    {
+      "id": "local-first",
+      "label": "Local-first",
+      "comment": "A software design philosophy in which the user's local device is the primary source of truth, with cloud storage used for backup and sync rather than as the authoritative store.",
+      "aliases": [
+        "local first",
+        "offline-first"
+      ],
+      "tags": [
+        "architecture",
+        "design",
+        "local-first",
+        "offline",
+        "privacy"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "agent-first",
+        "lancedb",
+        "open-brain"
+      ]
+    },
+    {
+      "id": "madr",
+      "label": "MADR",
+      "comment": "A lightweight Markdown template for writing Architecture Decision Records that enforces the minimum structure needed to capture context, decision, and consequences.",
+      "aliases": [
+        "Markdown Any Decision Records",
+        "Markdown Architectural Decision Records"
+      ],
+      "tags": [
+        "adr",
+        "decision",
+        "format",
+        "madr",
+        "markdown"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "adr"
+      ]
+    },
+    {
+      "id": "mcp-server",
+      "label": "MCP Server",
+      "comment": "A process that implements the Model Context Protocol server side, exposing a named set of tools that AI clients can discover and call.",
+      "aliases": [
+        "mcp_server.py",
+        "open-brain server"
+      ],
+      "tags": [
+        "bridge",
+        "mcp",
+        "python",
+        "server"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "mcp",
+        "mcp-tool",
+        "stdio-transport"
+      ]
+    },
+    {
+      "id": "mcp-tool",
+      "label": "MCP Tool",
+      "comment": "A named, typed capability declared by an MCP server that an AI agent can discover and invoke autonomously.",
+      "aliases": [
+        "MCP capability",
+        "tool call"
+      ],
+      "tags": [
+        "api",
+        "capability",
+        "mcp",
+        "tool"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "ai-agent",
+        "mcp",
+        "mcp-server"
+      ]
+    },
+    {
+      "id": "memory-file",
+      "label": "Memory File",
+      "comment": "A single Markdown file stored in this repository that represents one unit of source knowledge, from which the ontology store derives structured assertions.",
+      "aliases": [
+        "brain file",
+        "memory",
+        "note",
+        "source document"
+      ],
+      "tags": [
+        "file",
+        "markdown",
+        "memory",
+        "note"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "open-brain",
+        "superseded-by",
+        "tag",
+        "yaml-front-matter"
+      ]
+    },
+    {
+      "id": "mini-retro",
+      "label": "Mini-Retro",
+      "comment": "A mandatory four-question retrospective appended to `PROGRESS.md` at the end of every agent session, designed to surface process improvements and convert friction into system changes.",
+      "aliases": [
+        "mini retrospective",
+        "retro",
+        "session retrospective"
+      ],
+      "tags": [
+        "improvement",
+        "mini-retro",
+        "process",
+        "retrospective"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "adr",
+        "open-brain"
+      ]
+    },
+    {
+      "id": "mcp",
+      "label": "Model Context Protocol",
+      "comment": "An open standard that lets AI assistants call external tools and data sources through a structured interface, replacing one-off integrations with a single universal protocol.",
+      "aliases": [
+        "MCP"
+      ],
+      "tags": [
+        "ai",
+        "integration",
+        "mcp",
+        "protocol"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "ai-agent",
+        "mcp-server",
+        "mcp-tool",
+        "stdio-transport"
+      ]
+    },
+    {
+      "id": "open-brain",
+      "label": "Open-Brain",
+      "comment": "The personal AI knowledge store implemented in this repository: a local-first, agent-native knowledge base backed by Markdown files and an ontology-based knowledge graph, exposed to AI tools via the Model Context Protocol.",
+      "aliases": [
+        "GitHub Open-Brain",
+        "Memory-System",
+        "open brain"
+      ],
+      "tags": [
+        "github",
+        "memory-system",
+        "open-brain",
+        "project"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "agent-first",
+        "knowledge-graph",
+        "local-first",
+        "mcp-server"
+      ]
+    },
+    {
+      "id": "retrieval",
+      "label": "Retrieval",
+      "comment": "The process of finding and returning relevant knowledge in response to a query, using ontology traversal, graph pattern matching, or structured query across the knowledge store.",
+      "aliases": [
+        "knowledge retrieval",
+        "recall",
+        "search"
+      ],
+      "tags": [
+        "knowledge",
+        "recall",
+        "retrieval",
+        "search"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "knowledge-graph",
+        "mcp-tool",
+        "open-brain"
+      ]
+    },
+    {
+      "id": "semantic-search",
+      "label": "Semantic Search",
+      "comment": "A search technique that finds documents by conceptual meaning rather than exact keyword matching, using vector similarity as the relevance signal.",
+      "aliases": [
+        "similarity search",
+        "vector search"
+      ],
+      "tags": [
+        "nlp",
+        "retrieval",
+        "search",
+        "similarity",
+        "superseded"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "lancedb",
+        "retrieval",
+        "vector-database",
+        "vector-embedding"
+      ]
+    },
+    {
+      "id": "skill",
+      "label": "Skill",
+      "comment": "A reusable, self-contained Markdown file in `.github/skills/` that provides an AI agent with specialised instructions for a well-defined task type.",
+      "aliases": [
+        "agent skill",
+        "skill module"
+      ],
+      "tags": [
+        "agent",
+        "instruction",
+        "module",
+        "reusable",
+        "skill"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "adr",
+        "ai-agent",
+        "open-brain"
+      ]
+    },
+    {
+      "id": "stdio-transport",
+      "label": "stdio Transport",
+      "comment": "The MCP transport mechanism that uses a process's standard input and standard output streams to exchange JSON-RPC messages between an MCP client and server.",
+      "aliases": [
+        "standard input/output transport",
+        "stdio"
+      ],
+      "tags": [
+        "ipc",
+        "mcp",
+        "protocol",
+        "stdio",
+        "transport"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "mcp",
+        "mcp-server"
+      ]
+    },
+    {
+      "id": "superseded-by",
+      "label": "Superseded-by",
+      "comment": "The memory lifecycle state (and corresponding front matter field) that marks a file as out of date and points to the newer file that replaced it, preserving history while directing readers to current information.",
+      "aliases": [
+        "superseded",
+        "superseded_by",
+        "supersedes"
+      ],
+      "tags": [
+        "lifecycle",
+        "memory",
+        "superseded-by",
+        "versioning"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "knowledge-graph",
+        "memory-file",
+        "yaml-front-matter"
+      ]
+    },
+    {
+      "id": "tag",
+      "label": "Tag",
+      "comment": "A short keyword stored in a memory file's YAML front matter that categorises the file and makes it retrievable by topic even when semantic search returns noisy results.",
+      "aliases": [
+        "category tag",
+        "label"
+      ],
+      "tags": [
+        "categorisation",
+        "metadata",
+        "retrieval",
+        "tag"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "memory-file",
+        "semantic-search",
+        "yaml-front-matter"
+      ]
+    },
+    {
+      "id": "triage",
+      "label": "Triage",
+      "comment": "The process of reviewing inbox files, inferring the correct destination folder and front matter, and moving each file to its permanent location.",
+      "aliases": [
+        "classification",
+        "inbox triage",
+        "memory triage"
+      ],
+      "tags": [
+        "automation",
+        "classification",
+        "inbox",
+        "triage"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "ai-agent",
+        "capture",
+        "inbox",
+        "memory-file"
+      ]
+    },
+    {
+      "id": "vector-database",
+      "label": "Vector Database",
+      "comment": "A database purpose-built to store and retrieve high-dimensional numerical vectors using approximate nearest-neighbour algorithms.",
+      "aliases": [
+        "embedding store",
+        "vector store"
+      ],
+      "tags": [
+        "database",
+        "search",
+        "storage",
+        "vector"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "lancedb",
+        "semantic-search",
+        "vector-embedding"
+      ]
+    },
+    {
+      "id": "vector-embedding",
+      "label": "Vector Embedding",
+      "comment": "A fixed-length list of numbers that encodes the meaning of a piece of text so that semantically similar texts produce numerically similar vectors.",
+      "aliases": [
+        "embedding",
+        "text embedding",
+        "vector representation"
+      ],
+      "tags": [
+        "embedding",
+        "nlp",
+        "representation",
+        "vector"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "embedding-model",
+        "lancedb",
+        "semantic-search",
+        "vector-database"
+      ]
+    },
+    {
+      "id": "yaml-front-matter",
+      "label": "YAML Front Matter",
+      "comment": "A block of YAML key-value metadata at the very top of a Markdown file, delimited by `---` lines, that provides structured fields for indexing and retrieval.",
+      "aliases": [
+        "YAML header",
+        "front matter",
+        "frontmatter"
+      ],
+      "tags": [
+        "front-matter",
+        "markdown",
+        "metadata",
+        "yaml"
+      ],
+      "domain": "VocabularyDomain",
+      "related": [
+        "memory-file",
+        "superseded-by",
+        "tag"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from_id": "agent-first",
+      "from_label": "Agent-first",
+      "to_id": "ai-agent",
+      "to_label": "AI Agent"
+    },
+    {
+      "from_id": "agent-first",
+      "from_label": "Agent-first",
+      "to_id": "local-first",
+      "to_label": "Local-first"
+    },
+    {
+      "from_id": "agent-first",
+      "from_label": "Agent-first",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
+      "from_id": "agent-first",
+      "from_label": "Agent-first",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "ai-agent",
+      "from_label": "AI Agent",
+      "to_id": "agent-first",
+      "to_label": "Agent-first"
+    },
+    {
+      "from_id": "ai-agent",
+      "from_label": "AI Agent",
+      "to_id": "mcp-tool",
+      "to_label": "MCP Tool"
+    },
+    {
+      "from_id": "ai-agent",
+      "from_label": "AI Agent",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
+      "from_id": "ai-agent",
+      "from_label": "AI Agent",
+      "to_id": "skill",
+      "to_label": "Skill"
+    },
+    {
+      "from_id": "adr",
+      "from_label": "Architecture Decision Record",
+      "to_id": "madr",
+      "to_label": "MADR"
+    },
+    {
+      "from_id": "adr",
+      "from_label": "Architecture Decision Record",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "capture",
+      "from_label": "Capture",
+      "to_id": "inbox",
+      "to_label": "Inbox"
+    },
+    {
+      "from_id": "capture",
+      "from_label": "Capture",
+      "to_id": "mcp-tool",
+      "to_label": "MCP Tool"
+    },
+    {
+      "from_id": "capture",
+      "from_label": "Capture",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "capture",
+      "from_label": "Capture",
+      "to_id": "retrieval",
+      "to_label": "Retrieval"
+    },
+    {
+      "from_id": "embedding-model",
+      "from_label": "Embedding Model",
+      "to_id": "lancedb",
+      "to_label": "LanceDB"
+    },
+    {
+      "from_id": "embedding-model",
+      "from_label": "Embedding Model",
+      "to_id": "semantic-search",
+      "to_label": "Semantic Search"
+    },
+    {
+      "from_id": "embedding-model",
+      "from_label": "Embedding Model",
+      "to_id": "vector-embedding",
+      "to_label": "Vector Embedding"
+    },
+    {
+      "from_id": "inbox",
+      "from_label": "Inbox",
+      "to_id": "capture",
+      "to_label": "Capture"
+    },
+    {
+      "from_id": "inbox",
+      "from_label": "Inbox",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "inbox",
+      "from_label": "Inbox",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "inbox",
+      "from_label": "Inbox",
+      "to_id": "triage",
+      "to_label": "Triage"
+    },
+    {
+      "from_id": "knowledge-graph",
+      "from_label": "Knowledge Graph",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "knowledge-graph",
+      "from_label": "Knowledge Graph",
+      "to_id": "tag",
+      "to_label": "Tag"
+    },
+    {
+      "from_id": "lancedb",
+      "from_label": "LanceDB",
+      "to_id": "embedding-model",
+      "to_label": "Embedding Model"
+    },
+    {
+      "from_id": "lancedb",
+      "from_label": "LanceDB",
+      "to_id": "semantic-search",
+      "to_label": "Semantic Search"
+    },
+    {
+      "from_id": "lancedb",
+      "from_label": "LanceDB",
+      "to_id": "vector-database",
+      "to_label": "Vector Database"
+    },
+    {
+      "from_id": "lancedb",
+      "from_label": "LanceDB",
+      "to_id": "vector-embedding",
+      "to_label": "Vector Embedding"
+    },
+    {
+      "from_id": "local-first",
+      "from_label": "Local-first",
+      "to_id": "agent-first",
+      "to_label": "Agent-first"
+    },
+    {
+      "from_id": "local-first",
+      "from_label": "Local-first",
+      "to_id": "lancedb",
+      "to_label": "LanceDB"
+    },
+    {
+      "from_id": "local-first",
+      "from_label": "Local-first",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "madr",
+      "from_label": "MADR",
+      "to_id": "adr",
+      "to_label": "Architecture Decision Record"
+    },
+    {
+      "from_id": "mcp-server",
+      "from_label": "MCP Server",
+      "to_id": "mcp-tool",
+      "to_label": "MCP Tool"
+    },
+    {
+      "from_id": "mcp-server",
+      "from_label": "MCP Server",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
+      "from_id": "mcp-server",
+      "from_label": "MCP Server",
+      "to_id": "stdio-transport",
+      "to_label": "stdio Transport"
+    },
+    {
+      "from_id": "mcp-tool",
+      "from_label": "MCP Tool",
+      "to_id": "ai-agent",
+      "to_label": "AI Agent"
+    },
+    {
+      "from_id": "mcp-tool",
+      "from_label": "MCP Tool",
+      "to_id": "mcp-server",
+      "to_label": "MCP Server"
+    },
+    {
+      "from_id": "mcp-tool",
+      "from_label": "MCP Tool",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
+      "from_id": "memory-file",
+      "from_label": "Memory File",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "memory-file",
+      "from_label": "Memory File",
+      "to_id": "superseded-by",
+      "to_label": "Superseded-by"
+    },
+    {
+      "from_id": "memory-file",
+      "from_label": "Memory File",
+      "to_id": "tag",
+      "to_label": "Tag"
+    },
+    {
+      "from_id": "memory-file",
+      "from_label": "Memory File",
+      "to_id": "yaml-front-matter",
+      "to_label": "YAML Front Matter"
+    },
+    {
+      "from_id": "mini-retro",
+      "from_label": "Mini-Retro",
+      "to_id": "adr",
+      "to_label": "Architecture Decision Record"
+    },
+    {
+      "from_id": "mini-retro",
+      "from_label": "Mini-Retro",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "mcp",
+      "from_label": "Model Context Protocol",
+      "to_id": "ai-agent",
+      "to_label": "AI Agent"
+    },
+    {
+      "from_id": "mcp",
+      "from_label": "Model Context Protocol",
+      "to_id": "mcp-server",
+      "to_label": "MCP Server"
+    },
+    {
+      "from_id": "mcp",
+      "from_label": "Model Context Protocol",
+      "to_id": "mcp-tool",
+      "to_label": "MCP Tool"
+    },
+    {
+      "from_id": "mcp",
+      "from_label": "Model Context Protocol",
+      "to_id": "stdio-transport",
+      "to_label": "stdio Transport"
+    },
+    {
+      "from_id": "open-brain",
+      "from_label": "Open-Brain",
+      "to_id": "agent-first",
+      "to_label": "Agent-first"
+    },
+    {
+      "from_id": "open-brain",
+      "from_label": "Open-Brain",
+      "to_id": "knowledge-graph",
+      "to_label": "Knowledge Graph"
+    },
+    {
+      "from_id": "open-brain",
+      "from_label": "Open-Brain",
+      "to_id": "local-first",
+      "to_label": "Local-first"
+    },
+    {
+      "from_id": "open-brain",
+      "from_label": "Open-Brain",
+      "to_id": "mcp-server",
+      "to_label": "MCP Server"
+    },
+    {
+      "from_id": "retrieval",
+      "from_label": "Retrieval",
+      "to_id": "knowledge-graph",
+      "to_label": "Knowledge Graph"
+    },
+    {
+      "from_id": "retrieval",
+      "from_label": "Retrieval",
+      "to_id": "mcp-tool",
+      "to_label": "MCP Tool"
+    },
+    {
+      "from_id": "retrieval",
+      "from_label": "Retrieval",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "semantic-search",
+      "from_label": "Semantic Search",
+      "to_id": "lancedb",
+      "to_label": "LanceDB"
+    },
+    {
+      "from_id": "semantic-search",
+      "from_label": "Semantic Search",
+      "to_id": "retrieval",
+      "to_label": "Retrieval"
+    },
+    {
+      "from_id": "semantic-search",
+      "from_label": "Semantic Search",
+      "to_id": "vector-database",
+      "to_label": "Vector Database"
+    },
+    {
+      "from_id": "semantic-search",
+      "from_label": "Semantic Search",
+      "to_id": "vector-embedding",
+      "to_label": "Vector Embedding"
+    },
+    {
+      "from_id": "skill",
+      "from_label": "Skill",
+      "to_id": "ai-agent",
+      "to_label": "AI Agent"
+    },
+    {
+      "from_id": "skill",
+      "from_label": "Skill",
+      "to_id": "adr",
+      "to_label": "Architecture Decision Record"
+    },
+    {
+      "from_id": "skill",
+      "from_label": "Skill",
+      "to_id": "open-brain",
+      "to_label": "Open-Brain"
+    },
+    {
+      "from_id": "stdio-transport",
+      "from_label": "stdio Transport",
+      "to_id": "mcp-server",
+      "to_label": "MCP Server"
+    },
+    {
+      "from_id": "stdio-transport",
+      "from_label": "stdio Transport",
+      "to_id": "mcp",
+      "to_label": "Model Context Protocol"
+    },
+    {
+      "from_id": "superseded-by",
+      "from_label": "Superseded-by",
+      "to_id": "knowledge-graph",
+      "to_label": "Knowledge Graph"
+    },
+    {
+      "from_id": "superseded-by",
+      "from_label": "Superseded-by",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "superseded-by",
+      "from_label": "Superseded-by",
+      "to_id": "yaml-front-matter",
+      "to_label": "YAML Front Matter"
+    },
+    {
+      "from_id": "tag",
+      "from_label": "Tag",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "tag",
+      "from_label": "Tag",
+      "to_id": "semantic-search",
+      "to_label": "Semantic Search"
+    },
+    {
+      "from_id": "tag",
+      "from_label": "Tag",
+      "to_id": "yaml-front-matter",
+      "to_label": "YAML Front Matter"
+    },
+    {
+      "from_id": "triage",
+      "from_label": "Triage",
+      "to_id": "ai-agent",
+      "to_label": "AI Agent"
+    },
+    {
+      "from_id": "triage",
+      "from_label": "Triage",
+      "to_id": "capture",
+      "to_label": "Capture"
+    },
+    {
+      "from_id": "triage",
+      "from_label": "Triage",
+      "to_id": "inbox",
+      "to_label": "Inbox"
+    },
+    {
+      "from_id": "triage",
+      "from_label": "Triage",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "vector-database",
+      "from_label": "Vector Database",
+      "to_id": "lancedb",
+      "to_label": "LanceDB"
+    },
+    {
+      "from_id": "vector-database",
+      "from_label": "Vector Database",
+      "to_id": "semantic-search",
+      "to_label": "Semantic Search"
+    },
+    {
+      "from_id": "vector-database",
+      "from_label": "Vector Database",
+      "to_id": "vector-embedding",
+      "to_label": "Vector Embedding"
+    },
+    {
+      "from_id": "vector-embedding",
+      "from_label": "Vector Embedding",
+      "to_id": "embedding-model",
+      "to_label": "Embedding Model"
+    },
+    {
+      "from_id": "vector-embedding",
+      "from_label": "Vector Embedding",
+      "to_id": "lancedb",
+      "to_label": "LanceDB"
+    },
+    {
+      "from_id": "vector-embedding",
+      "from_label": "Vector Embedding",
+      "to_id": "semantic-search",
+      "to_label": "Semantic Search"
+    },
+    {
+      "from_id": "vector-embedding",
+      "from_label": "Vector Embedding",
+      "to_id": "vector-database",
+      "to_label": "Vector Database"
+    },
+    {
+      "from_id": "yaml-front-matter",
+      "from_label": "YAML Front Matter",
+      "to_id": "memory-file",
+      "to_label": "Memory File"
+    },
+    {
+      "from_id": "yaml-front-matter",
+      "from_label": "YAML Front Matter",
+      "to_id": "superseded-by",
+      "to_label": "Superseded-by"
+    },
+    {
+      "from_id": "yaml-front-matter",
+      "from_label": "YAML Front Matter",
+      "to_id": "tag",
+      "to_label": "Tag"
+    }
+  ],
+  "documents": [
+    {
+      "file": "glossary/adr.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "adr"
+      ]
+    },
+    {
+      "file": "glossary/agent-first.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "agent-first"
+      ]
+    },
+    {
+      "file": "glossary/ai-agent.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "ai-agent"
+      ]
+    },
+    {
+      "file": "glossary/capture.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "capture"
+      ]
+    },
+    {
+      "file": "glossary/embedding-model.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "embedding-model"
+      ]
+    },
+    {
+      "file": "glossary/inbox.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "inbox"
+      ]
+    },
+    {
+      "file": "glossary/knowledge-graph.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "knowledge-graph"
+      ]
+    },
+    {
+      "file": "glossary/lancedb.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "lancedb"
+      ]
+    },
+    {
+      "file": "glossary/local-first.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "local-first"
+      ]
+    },
+    {
+      "file": "glossary/madr.md",
+      "segment_count": 5,
+      "concept_ids": [
+        "madr"
+      ]
+    },
+    {
+      "file": "glossary/mcp-server.md",
+      "segment_count": 3,
+      "concept_ids": [
+        "mcp-server"
+      ]
+    },
+    {
+      "file": "glossary/mcp-tool.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "mcp-tool"
+      ]
+    },
+    {
+      "file": "glossary/mcp.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "mcp"
+      ]
+    },
+    {
+      "file": "glossary/memory-file.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "memory-file"
+      ]
+    },
+    {
+      "file": "glossary/mini-retro.md",
+      "segment_count": 5,
+      "concept_ids": [
+        "mini-retro"
+      ]
+    },
+    {
+      "file": "glossary/open-brain.md",
+      "segment_count": 5,
+      "concept_ids": [
+        "open-brain"
+      ]
+    },
+    {
+      "file": "glossary/retrieval.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "retrieval"
+      ]
+    },
+    {
+      "file": "glossary/semantic-search.md",
+      "segment_count": 5,
+      "concept_ids": [
+        "semantic-search"
+      ]
+    },
+    {
+      "file": "glossary/skill.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "skill"
+      ]
+    },
+    {
+      "file": "glossary/stdio-transport.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "stdio-transport"
+      ]
+    },
+    {
+      "file": "glossary/superseded-by.md",
+      "segment_count": 5,
+      "concept_ids": [
+        "superseded-by"
+      ]
+    },
+    {
+      "file": "glossary/tag.md",
+      "segment_count": 5,
+      "concept_ids": [
+        "tag"
+      ]
+    },
+    {
+      "file": "glossary/triage.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "triage"
+      ]
+    },
+    {
+      "file": "glossary/vector-database.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "vector-database"
+      ]
+    },
+    {
+      "file": "glossary/vector-embedding.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "vector-embedding"
+      ]
+    },
+    {
+      "file": "glossary/yaml-front-matter.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "yaml-front-matter"
+      ]
+    }
+  ]
+}
