@@ -1,0 +1,4 @@
+1. **Rubric prompt text:** Writing the exact prompt text (dimension definitions, scoring anchors, output format specification) is the primary implementation task and is out of scope for this research item. A separate task should produce `docs/eval/research-rubric-prompt.md`.
+2. **CI workflow YAML:** The CI workflow design is specified here in prose; the YAML implementation is a separate backlog task.
+3. **Score history:** Should dimension scores be persisted in a JavaScript Object Notation (JSON) file in the repository for trend tracking? This would enable automated detection of systematic quality degradation across items.
+4. **First three gold items:** Which completed items in `Research/completed/` should be designated as the initial gold set? This requires a manual audit pass.

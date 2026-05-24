@@ -1,0 +1,3 @@
+**Prior research connections:**
+- CSDM data model (prerequisite context): `2026-03-08-servicenow-csdm-data-modelling`
+- ITSM module context: covered as part of `2026-03-08-servicenow-csdm-data-modelling`

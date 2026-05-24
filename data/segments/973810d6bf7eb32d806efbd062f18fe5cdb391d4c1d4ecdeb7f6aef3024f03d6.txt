@@ -1,0 +1,1 @@
+5. **DORA (EU Regulation 2022/2554, effective January 2025) classifies AI risk models as ICT systems**, requiring mandatory incident reporting (24h initial notification, 72h detail, 1-month final report) and direct EU oversight of critical third-party AI providers. AI high-risk systems simultaneously fall under the EU AI Act, creating dual compliance requirements.

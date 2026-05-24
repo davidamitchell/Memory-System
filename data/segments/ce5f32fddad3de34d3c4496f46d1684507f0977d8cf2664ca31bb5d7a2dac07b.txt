@@ -1,0 +1,1 @@
+**Technology choice:** SQLite + FTS5 + sqlite-vec (phased) is the correct answer.

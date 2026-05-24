@@ -1,0 +1,20 @@
+| Abbreviation | First use location | Expanded? |
+|---|---|---|
+| LLM | Research Question | Large Language Model (LLM) - yes |
+| RAG | Research Question | Retrieval-Augmented Generation (RAG) - yes |
+| PEFT | Research Question | parameter-efficient fine-tuning (PEFT) - yes |
+| MoE | Research Question | Mixture of Experts (MoE) - yes |
+| LoRA | Approach 2 | Low-Rank Adaptation (LoRA) - yes |
+| CoVe | Approach 4 | chain-of-verification (CoVe) - yes |
+| AI | Supporting questions preface | Artificial Intelligence (AI) - yes |
+| GPT | Supporting questions preface | Generative Pre-trained Transformer (GPT) - yes |
+| QLoRA | Approach 2 | Quantized Low-Rank Adaptation (QLoRA) - yes |
+| AWS | Scope | Amazon Web Services (AWS) - yes |
+| MLOps | Approach 6 | Machine Learning Operations (MLOps) - yes |
+| GPU | Investigation B | graphics processing unit (GPU) - yes |
+| API | not used in body as standalone abbreviation | not applicable |
+| CLI | not used | not applicable |
+| SDK | not used | not applicable |
+| PAT | not used | not applicable |
+| MCP | not used | not applicable |
+| PR | not used | not applicable |

@@ -1,0 +1,1 @@
+**[fact]** The agentevals library (langchain-ai/agentevals) focuses on trajectory evaluation: comparing agent tool-call sequences against expected trajectories, with LLM-as-judge scoring via structured prompts. It uses LangChain chat model integrations and defaults to OpenAI models. Source: https://github.com/langchain-ai/agentevals

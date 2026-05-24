@@ -1,0 +1,4 @@
+**Inferences drawn:**
+- The research corpus at current scale (30–100 items) can be served by BM25 + embedding search (already planned per semantic-full-text-search.md). Knowledge graph construction becomes justified at ~200+ items when cross-item relationship retrieval and global queries become frequent agent tasks.
+- RAPTOR-style hierarchical summarisation is the highest-value technique for this corpus because the items themselves are already well-structured and would produce high-quality hierarchical summaries.
+- Concept maps should be deprecated as a distinct layer in favour of knowledge graphs for all agent-facing use.

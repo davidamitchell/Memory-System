@@ -1,0 +1,1 @@
+Multi-step software agents depend on external knowledge surfaces that can change while the agent is still operating, so Knowledge Graph maintenance quality affects both answer quality and downstream actions. [inference; source: https://davidamitchell.github.io/Research/research/2026-05-12-knowledge-graph-agentic-runtime-dependency.html; https://arxiv.org/abs/2312.10997]

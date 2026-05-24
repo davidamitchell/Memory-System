@@ -1,0 +1,4 @@
+- Is there a plausible regulatory suppressor for software production in the next 5 years, and what would it look like? (EU AI Act addresses *deployment*, not *production* volume — is that sufficient?)
+- What is the elasticity of software demand specifically? Is there a published economic study?
+- Will the maintenance debt crisis (AI-generated code that nobody can maintain) become a practical suppressor of further production?
+- Is there a compute/energy cost floor that will be reached and reverse the cost decline?

@@ -1,0 +1,1 @@
+Processors p05 and p06 are extended to recognise the `raw_document_corpus/` path prefix and assign it the `ResearchDocument` domain. Processor p07 tolerates missing `tags`/`aliases`/`related` by falling back gracefully; the LLM extractor (W-0204) is responsible for extracting semantic content from the prose body.

@@ -1,0 +1,21 @@
+- **Root question:** What tier model lets an enterprise scale controls for AI and low-code use cases without collapsing into either one-size-fits-all bureaucracy or under-governed autonomy?
+- **A. External-framework baseline**
+  - A1. What does the European Union (EU) AI Act classify directly, and what obligations attach to its higher-risk categories?
+  - A2. What does the NIST Artificial Intelligence Risk Management Framework (AI RMF) say about context, risk tolerance, impact magnitude, and human-AI configuration?
+  - A3. What does ISO/IEC 42001 add as a management-system baseline?
+  - A4. What do APRA, the Bank of England, and Basel materials say about proportionality, materiality, and governance in regulated firms?
+- **B. Boundary design**
+  - B1. Which criteria best separate informational, decision-support, bounded-action, and autonomous-action systems?
+  - B2. Which criteria are modifiers rather than primary axes, for example data sensitivity or regulatory trigger points?
+  - B3. When should a use case be classified as no-go rather than as a higher tier?
+- **C. Control mapping**
+  - C1. Which controls should apply to every tier?
+  - C2. Which controls should appear only once a system can influence a material decision?
+  - C3. Which controls should appear only once a system can take direct action?
+  - C4. Which controls should appear only for critical or high-autonomy action?
+- **D. Operability**
+  - D1. Can a business analyst classify a use case using a short intake sequence?
+  - D2. What evidence must be captured so that the classification can be reviewed later?
+- **E. Change over time**
+  - E1. What events should force re-tiering?
+  - E2. Should the enterprise use the highest-triggered tier, or average multiple factors together?

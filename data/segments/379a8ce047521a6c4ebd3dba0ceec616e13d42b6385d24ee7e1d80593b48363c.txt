@@ -1,0 +1,1 @@
+[inference] The following matrix is a synthesis table. Each readiness, cost, time-to-value, and skill judgment is an inferential estimate drawn from the cited sources for that row.

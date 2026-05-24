@@ -1,0 +1,5 @@
+Sources consulted:
+- Primary: McKinsey, "The State of AI: Global Survey 2025" - https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+- Primary: Thoughtworks, "Moving beyond the hype: How to scale AI successfully" - https://www.thoughtworks.com/insights/whitepapers/how-to-scale-ai-successfully
+- Primary: Eric Ries, "Methodology" - https://theleanstartup.com/principles
+- Tertiary: `Research/completed/2026-03-12-exploration-synthesis-gap.md`

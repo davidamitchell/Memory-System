@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Observability and telemetry reference model for governed AI and low-code systems, covering mandatory field taxonomy, correlation rules, privacy boundaries, and category-based retention.
+- Links:
+  - https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/
+  - https://www.w3.org/TR/trace-context/
+  - https://learn.microsoft.com/en-us/power-platform/admin/activity-logging-auditing/activity-logs-power-automate

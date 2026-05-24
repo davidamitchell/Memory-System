@@ -1,0 +1,1 @@
+3. The Workflow Editor — historically the ServiceNow tool closest to a conventional process flowchart — is in maintenance-only status and is not viable for new process documentation, leaving a gap in native capability for human-readable BPM-style process authoring. [High confidence]

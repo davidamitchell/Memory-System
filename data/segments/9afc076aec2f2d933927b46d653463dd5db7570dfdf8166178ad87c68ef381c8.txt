@@ -1,0 +1,8 @@
+1. What is the Theory of Constraints (TOC) and what are its core mechanisms?
+2. What does "backpressure" mean in the context of TOC and operations management (as distinct from network/TCP backpressure)?
+3. How does the Drum-Buffer-Rope (DBR) scheduling method implement backpressure?
+4. How does throughput accounting (TA) provide financial grounding for backpressure decisions?
+5. What WIP limits does TOC prescribe and how do they relate to backpressure?
+6. What does academic peer-reviewed literature say about TOC/DBR effectiveness?
+7. What real-world case studies document backpressure mechanisms in TOC implementations?
+8. How does the Velocity Scheduling System article apply TOC constraint logic to AI-enabled organisations?

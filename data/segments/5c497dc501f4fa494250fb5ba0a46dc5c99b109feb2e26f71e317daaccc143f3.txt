@@ -1,0 +1,5 @@
+**In scope:**
+- Asset specificity in expert knowledge and its transfer implications.
+- Information asymmetry between experts and non-experts.
+- Verification burden and absorptive-capacity constraints on seekers.
+- Transfer mechanisms that preserve specialist depth while improving usability.

@@ -1,0 +1,1 @@
+[fact] The `.github/skills/` submodule directory appears as an empty folder during all Copilot coding agent sessions where `copilot-setup-steps.yml` does not initialise submodules. (S4, S7.)

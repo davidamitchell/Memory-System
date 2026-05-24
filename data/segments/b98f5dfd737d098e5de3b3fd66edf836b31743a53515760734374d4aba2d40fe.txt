@@ -1,0 +1,1 @@
+**Evidence discipline in use:** [fact] = cited public source; [inference] = derived from evidence with stated logic; [assumption] = stated and justified.

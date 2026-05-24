@@ -28,6 +28,14 @@ Distilled from PROGRESS.md mini-retros. Each entry states the class of problem a
 
 ---
 
+## Test corpus committed to wrong branch
+
+**Pattern:** A 50-file research document corpus intended as the latent-extraction test target was assembled on `copilot/ontology-experiment` under `raw_document_corpus/`, while all pipeline development happened on a different branch. This caused confusion about which documents the prose extraction work (W-0204) should target.
+**Rule:** Any file or directory that the pipeline, tests, or eval harness needs to reference must be committed to the working branch (and ultimately `main`) before the work item that depends on it is started. Do not leave test fixtures or corpus files on feature branches.
+**Source:** 2026-05-24 — ADR-0005: raw_document_corpus as primary testing corpus
+
+---
+
 ## Merging main into feature branches early
 
 **Pattern:** Long-running feature branches diverge from `main` and require manual rebases to resolve conflicts introduced by concurrent PRs.

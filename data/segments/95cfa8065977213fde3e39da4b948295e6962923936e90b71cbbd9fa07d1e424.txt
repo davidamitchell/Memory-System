@@ -1,0 +1,9 @@
+| Approach | Readiness | Relative cost | Data requirement | Time-to-value | Best fit | Main limit |
+|---|---|---|---|---|---|---|
+| Prompting plus RAG | production-ready | low to moderate | existing docs and metadata | weeks | broad private knowledge access | retrieval ceiling and latency |
+| RAG plus knowledge graph / better rankers | production-ready | moderate | connected systems plus relevance signals | weeks to months | cross-system enterprise search | index complexity and evaluation burden |
+| PEFT with LoRA / QLoRA | production-ready to early-adopter | moderate | curated exemplars, evaluation set, stable task distribution | 1-3 months | repeated domain tasks, terminology internalisation | still needs MLOps and evaluation discipline |
+| Full fine-tuning | early-adopter | high | larger curated dataset and deployment budget | several months | narrow, repeated workloads at high scale | model management and storage cost |
+| Domain-adaptive pretraining | early-adopter for very large domains | high to very high | massive stable corpus | several months to a year | finance, medicine, legal research, enterprise platforms | heavy data, compute, and talent demand |
+| Training from scratch | uncommon outside frontier or sector-scale actors | very high | enormous corpus and compute | long horizon | vendor or sector-scale foundation efforts | uneconomic for most single enterprises |
+| Tandem / critic layers | production-ready as overlay | moderate | evaluation prompts, policies, routing logic | weeks to months | compliance-sensitive or high-risk answers | added latency and orchestration complexity |

@@ -1,0 +1,4 @@
+**Constraints active:**
+- Focus on practitioner evidence of what works over multi-year timescales, not vendor marketing claims
+- Process Universe, Flow Designer, Playbooks, Workflow Editor, and Process Mining must all be assessed
+- Minimum viable approach must be a specific, actionable recommendation, not a generic "document less" observation

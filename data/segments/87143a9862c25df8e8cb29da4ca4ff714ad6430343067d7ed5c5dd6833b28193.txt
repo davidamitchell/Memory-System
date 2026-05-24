@@ -1,0 +1,7 @@
+- Type: knowledge
+- Description: Synthesised understanding of backpressure as a TOC concept, formalised through the Drum-Buffer-Rope rope mechanism, grounded in academic peer-reviewed literature and mapped to contemporary AI-enabled knowledge-work applications.
+- Links:
+  - [Wikipedia -- Theory of Constraints](https://en.wikipedia.org/wiki/Theory_of_constraints)
+  - [Velocity Scheduling System -- Theory of Constraints and AI](https://www.velocityschedulingsystem.com/blog/theory-of-constraints-ai/)
+  - [Balderstone and Mabin -- TOC Impact Study](https://www.tocinstitute.org/uploads/1/2/7/9/12796657/toc_impact_study.pdf)
+  - [Springer Systematic Literature Review of TOC 2019](https://link.springer.com/chapter/10.1007/978-3-030-18789-7_12)

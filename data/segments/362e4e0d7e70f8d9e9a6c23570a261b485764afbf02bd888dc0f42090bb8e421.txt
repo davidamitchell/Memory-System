@@ -1,0 +1,9 @@
+| Category | Description |
+|---|---|
+| `concept` | Abstract ideas and design patterns |
+| `entity` | Concrete objects in the system |
+| `format` | File formats and data structures |
+| `practice` | Workflows, processes, and conventions |
+| `project` | Named projects or systems defined in this repo |
+| `protocol` | Communication standards and specifications |
+| `tool` | Named external software, databases, or services |

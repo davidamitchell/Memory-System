@@ -1,0 +1,5 @@
+- What are RBNZ's specific supervisory expectations for AI use in NZ-regulated financial institutions? (No public document found — potential Official Information Act request or engagement with RBNZ prudential team.)
+- How do DIA's Algorithm Charter attestation processes work in practice, and which agencies are currently compliant?
+- Are there any NZ cases before the Employment Court or Human Rights Review Tribunal involving AI-assisted HR decisions? (NZLII search warranted with terms: "algorithm", "automated", "AI" + "employment" + 2022-2025.)
+- What corporate AI strategy frameworks (not national strategies) have been published by NZ-headquartered companies? The research surfaced global consulting frameworks but no NZ-specific corporate examples.
+- How should organisations distinguish between exploitation and exploration AI investment in their portfolio planning processes? A decision tool or framework for this would be strategically valuable.

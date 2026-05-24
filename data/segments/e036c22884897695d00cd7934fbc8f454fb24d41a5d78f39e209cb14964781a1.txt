@@ -1,0 +1,5 @@
+1. Characterise LLM training as an ERM problem over token distributions, formally, minimise next-token log loss or cross-entropy.
+2. Apply Firth's Hypothesis: the distributional semantic signal available from text corpora is inherently Level 1 (association, not intervention).
+3. Examine the Linear Representation Hypothesis: would linear probes for causal structure in LLM activations constitute evidence of causal modelling?
+4. Survey empirical studies testing whether LLMs acquire causal representations (e.g., do they learn physical laws, or lexical proxies for them?).
+5. Summarise: where does the evidence place LLMs on Pearl's causal hierarchy?

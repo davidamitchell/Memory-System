@@ -1,0 +1,1 @@
+**[fact]** TOC prescribes five focusing steps: (1) identify the constraint, (2) exploit the constraint, (3) subordinate everything else to the constraint's pace, (4) elevate the constraint, (5) return to step 1 if the constraint shifts. Source: [Wikipedia -- Theory of Constraints](https://en.wikipedia.org/wiki/Theory_of_constraints).

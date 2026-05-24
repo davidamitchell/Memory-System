@@ -1,0 +1,5 @@
+**Out of scope:**
+- Technical implementation of risk tier controls (covered by Q3/Q16)
+- Per-regulation compliance mapping (covered by Q15)
+- Vendor-specific limitations on implementing tier-appropriate controls (covered by Q11)
+- Organisational factors affecting compliance with tier assignment (covered by Q14)

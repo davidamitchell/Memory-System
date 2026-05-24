@@ -1,0 +1,1 @@
+8. [inference] The dark factory variant, meaning full autonomous deployment without human code review, is not viable for regulated environments because the OctopusGarden practitioner identified compliance, debuggability, and security as unresolved challenges. Source: https://news.ycombinator.com/item?id=47226107

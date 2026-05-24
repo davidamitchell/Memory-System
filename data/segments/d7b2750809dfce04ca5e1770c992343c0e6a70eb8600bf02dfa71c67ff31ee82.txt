@@ -1,0 +1,3 @@
+**Out of scope:**
+- Technique-by-technique implementation guidance for SHapley Additive exPlanations (SHAP), Local Interpretable Model-agnostic Explanations (LIME), attention visualization, or internal-circuit tracing tools
+- Product recommendations for improving explainability in either class

@@ -1,0 +1,1 @@
+5. **NZ case law on AI is thin but moving fast.** Wikeley v Kea Investments Ltd [2024] NZCA 609 is the leading case — it flagged AI-hallucinated citations as a material procedural risk. The judiciary published generative AI guidelines in December 2023. No binding case law yet governs the legality of automated government decisions; that terrain is anticipated, not settled.

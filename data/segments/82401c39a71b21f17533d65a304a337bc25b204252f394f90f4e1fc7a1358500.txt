@@ -1,0 +1,1 @@
+3. A 9-dimension rubric structure separating structural compliance (binary/deterministic) from semantic quality (LLM-judged) is more reproducible and maintainable than a single holistic score, because structural dimensions can be evaluated without an LLM and provide a cheaper, faster first-pass filter before incurring LLM judge cost. Confidence: high.

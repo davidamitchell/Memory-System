@@ -1,0 +1,1 @@
+3. No paper or production system in 2022–2025 describes a language *designed from scratch* for LLM agents to produce, with the design objective of addressing generation-layer or goal-layer failure modes. All language-design work addresses human authorship.

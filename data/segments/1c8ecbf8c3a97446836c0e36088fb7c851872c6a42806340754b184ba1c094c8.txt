@@ -1,0 +1,5 @@
+**A. Requirements**
+- A1. What relational queries does the system need to answer over research items?
+- A2. What full-text search capability is needed?
+- A3. What vector/semantic search capability is needed, and at what corpus size does it become useful?
+- A4. What are the write patterns (bulk load, incremental append, updates)?

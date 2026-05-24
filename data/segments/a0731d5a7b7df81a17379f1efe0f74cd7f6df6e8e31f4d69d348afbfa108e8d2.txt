@@ -1,0 +1,1 @@
+**[inference]** A healthy domain target for this repo: D1 and D2 should each maintain 3–5 backlog items (they are directly tied to professional decision-making). D3 is exploratory and should be capped at 3 items at a time to prevent crowding out applied domains. D4 and D5 should not exceed 40% of total backlog combined (currently at ~56%).

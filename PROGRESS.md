@@ -269,3 +269,60 @@ Added a progressively-enhanced static site on GitHub Pages for browsing the onto
 2. What slowed down or went wrong? The `prov:used` triples in the current ontology all reference a single batch activity, so the document→concept link via prov didn't work. Resolved by matching concept id to stem of `ms:sourceDocument`.
 3. What single change would prevent this next time? Per-document activities (one activity per pipeline run, not one per batch) would make prov-based document→concept mapping work directly. Worth noting for W-0200 refinement.
 4. Is this a pattern? Yes — batch mode collapsed provenance. Future exporters or tools that need per-document attribution should plan for this in the pipeline architecture.
+
+---
+
+## 2026-05-24 — Corpus correction: raw_document_corpus/ brought to main branch
+
+Discovered that the 50-file research document corpus intended as the primary prose extraction target was committed on the `copilot/ontology-experiment` branch under `raw_document_corpus/`, not on the main development branch. All pipeline development (W-0200–W-0207) had proceeded without these files available locally.
+
+**Changes:**
+- `raw_document_corpus/` (50 files): checked out from `copilot/ontology-experiment` and committed to the working branch. Documents are dated `2026-02-27` through `2026-05-20` and cover AI strategy, knowledge graphs, agentic systems, governance, and related research.
+- `_docs/adr/0005-raw-document-corpus-primary-testing-corpus.md`: ADR recording the decision to canonise `raw_document_corpus/` as the latent-extraction corpus and clarifying its schema differences from `glossary/`.
+- `learnings.md`: new entry — test corpus must be committed to the working branch before the work item that depends on it is started.
+
+**Front-matter schema differences (glossary vs raw_document_corpus):**
+- `tags` (glossary) → `themes` (raw_document_corpus)
+- `aliases` (glossary) → absent in raw_document_corpus
+- `related: [{file, rel}]` (glossary) → `cites: [slug]` + `related: [slug]` (raw_document_corpus)
+
+**Mini-Retro**
+1. Did the process work? Yes — the corpus was identified by inspecting the other branch and is now in the right place.
+2. What slowed down or went wrong? The corpus was on the wrong branch and wasn't referenced in BACKLOG.md's W-0204 entry, so it wasn't obvious until inspecting branches directly.
+3. What single change would prevent this next time? Any file a work item depends on must be committed to the canonical branch before the item is listed as "ready".
+4. Is this a pattern? Yes — see learnings.md entry added this session.
+
+---
+
+## 2026-05-24 — W-0203 Eval Harness + W-0204 LLM Extractor
+
+**What was done**
+
+W-0203 and W-0204 implemented and all tests passing.
+
+**W-0203 — Eval Harness**
+- Created `pipeline/eval.py`: CLI that runs any extractor against a corpus directory and prints per-file + aggregate P/R/F1 for label, aliases, tags, related fields
+- `--extractor rule-based|llm`, `--json`, `--corpus` flags
+- Created `tests/test_eval_w0203.py` (10 tests — all pass)
+- Baseline scores (rule-based, glossary corpus, 26 files): **label 1.000 / aliases 1.000 / tags 1.000 / related 1.000**
+
+**W-0204 — LLM Extraction Strategy**
+- Extended `pipeline/processors/p07_concept_extraction.py` with `strategy=llm` branch
+- LLM extractor: structured system prompt → JSON `delta_proposal`; uses `openai>=1.0`; reads `OPENAI_API_KEY` and optional `OPENAI_BASE_URL` / `OPENAI_MODEL`; graceful fallback to front-matter on malformed JSON response
+- `_llm_client` module-level variable is swappable seam for tests
+- Created `tests/test_llm_extraction_w0204.py` (16 tests — all pass, mock client used)
+- Added `openai>=1.0` to `requirements.txt`
+
+**Full corpus batch**
+- Fixed malformed YAML front-matter in `raw_document_corpus/2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways.md` (stray inline list after `blocks:`)
+- Ran batch over 86 files (glossary/ + _docs/adr/ + _docs/design/ + raw_document_corpus/)
+- Result: v0038.ttl — **84 concepts, 83 relations, 86 documents**
+- Rebuilt site: `docs/data/ontology.json` + `docs/index.html`
+
+**Test results**: 42 passed, 0 failed
+
+**Mini-Retro**
+1. Did the process work? Yes — both eval harness and LLM strategy are working and tested.
+2. What slowed down? One corpus file had malformed YAML (stray inline list). Fixed directly in source.
+3. What single change would prevent this next time? Validate YAML front-matter at corpus ingestion time and report bad files upfront before running the full batch.
+4. Is this a pattern? Latent data quality issues in corpus files will surface as pipeline exceptions — worth adding a pre-flight YAML validation step before W-0205.

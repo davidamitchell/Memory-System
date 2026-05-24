@@ -1,0 +1,1 @@
+12. **Wells Fargo's responsible AI governance model** — independent validation, bias testing at development, explainability toolkits, and open-source tooling shared industry-wide — is the most publicly documented example of SR 11-7 adapted for ML at a major bank.

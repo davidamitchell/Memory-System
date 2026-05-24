@@ -1,0 +1,5 @@
+1. What is the minimum viable factory architecture for a mid-tier bank that delivers speed benefits while remaining compliant with financial services regulations?
+2. How should mid-tier banks sequence the transition to factory patterns: which software domains should be migrated first, and what sequencing criteria apply?
+3. What governance model replaces the investment board when software production is cheap, and what is the right prioritisation mechanism when scarcity is no longer the binding constraint?
+4. How does the Jevons Paradox play out empirically in organisations that have adopted factory patterns: do they reduce total software investment or increase total output?
+5. Can automated compliance checking (static analysis, formal verification, holdout scenario scoring) close the gap between dark factory throughput and regulated-environment compliance requirements?

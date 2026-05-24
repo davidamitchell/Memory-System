@@ -1,0 +1,1 @@
+**Threads confirmed synthesised:** domain map (A), coverage metrics (B), drift detection (C), prioritisation framework (D), review cadence (E), tooling design (F)

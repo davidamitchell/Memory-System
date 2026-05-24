@@ -1,0 +1,11 @@
+| Failure mode | Layer | Addressed by current output grammar/language approach? | Mechanism |
+|---|---|---|---|
+| Hallucination (structural) | 1 | Yes | Outlines, Guidance — schema enforcement prevents structurally invalid output |
+| Hallucination (semantic/factual) | 1 | No | No grammar can encode world-knowledge correctness |
+| Type errors in code | 1 | Yes | ETH Zurich PLDI 2025 — type-constrained decoding eliminates type-unsafe code |
+| Intent mismatch | 2 | Partially | Schema constrains output shape but not semantic alignment with intent |
+| Under-specification | 2 | No | Schemas cannot express what was intended but not stated |
+| Reward hacking | 3 | No | No output grammar encodes the "true goal" in a checkable form |
+| Specification gaming | 3 | No | Same as reward hacking |
+| Tool misuse | 4 | Partially | Function-calling schemas (OpenAI, Guidance) constrain tool parameter types, but not call ordering or contextual appropriateness |
+| Instruction conflict | 5 | No | Grammar enforcement operates on output, not on the instruction context |

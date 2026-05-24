@@ -1,0 +1,6 @@
+**Out of scope:**
+- Implementation of a specific customised LLM for a specific organisation (this is a research item)
+- Benchmarking specific vector databases or embedding models (infrastructure detail, not architecture)
+- Security and data governance of org-specific training data (a related but separate concern; surface as open question if encountered)
+- Multi-modal organisation context (images, audio, video) unless it arises naturally from an architectural review
+- General LLM evaluation benchmarks not tied to org-context customisation

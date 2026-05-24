@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: A five-stage enterprise governance maturity model for AI and low-code that combines staged appraisal, governance baselines, capability matrices, progression pathways, and an evidence-based assessment method.
+- Links:
+  - https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/maturity-model-overview
+  - https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
+  - https://cmmiinstitute.com/learning/appraisals

@@ -1,0 +1,1 @@
+The SWE-bench performance numbers (Devin 13.86% in 2024, ~80% Verified in early 2026) represent rapid progress but the discriminative subset caveat (73% headline → 11% on unsolved problems) means these numbers cannot be extrapolated to enterprise generalisability. This is noted consistently.

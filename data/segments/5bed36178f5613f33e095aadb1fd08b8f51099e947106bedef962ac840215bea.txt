@@ -1,0 +1,9 @@
+**Facts established:**
+1. LSA is superseded by dense embeddings for agent context retrieval. The performance gap on MTEB benchmarks is large; LSA remains useful only for interpretability or extremely resource-constrained environments.
+2. GraphRAG solves the global-query problem for large corpora (>1M tokens) by pre-generating community summaries via Leiden detection. The limitation is batch-rebuild-only update.
+3. LightRAG extends GraphRAG with incremental updates and dual-level retrieval at 10–100× lower token cost. It is strictly better for dynamic corpora.
+4. HippoRAG's PPR-based retrieval outperforms standard RAG by up to 20% on multi-hop QA benchmarks, with dramatic efficiency gains (10–30× cheaper).
+5. RAPTOR's recursive abstractive hierarchy achieves +20 percentage points on multi-step reasoning benchmarks. The tree structure allows retrieval at multiple abstraction levels.
+6. Concept maps do not add agent-accessible utility beyond what a knowledge graph provides; they are human-facing views.
+7. RRF is the established standard for combining heterogeneous retrieval signals.
+8. A five-layer knowledge architecture maps directly onto the Letta context-engineering framework.

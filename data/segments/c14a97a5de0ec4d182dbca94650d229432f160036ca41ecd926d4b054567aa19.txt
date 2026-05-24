@@ -1,0 +1,4 @@
+**Cluster B: Decay analysis**
+- B1. What percentage of IT Service Management (ITSM) process documentation accurately reflects how work is actually done?
+- B2. What are the root causes of documentation decay, in order of significance?
+- B3. Is decay a tooling problem, a governance problem, or an ownership problem?

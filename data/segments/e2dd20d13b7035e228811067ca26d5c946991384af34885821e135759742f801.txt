@@ -1,0 +1,1 @@
+[inference] The TOC analysis predicts that when software execution is no longer the constraint, the bottleneck migrates upstream to requirement quality, strategic decision-making velocity, and factory-design capability.

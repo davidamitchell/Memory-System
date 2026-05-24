@@ -1,0 +1,1 @@
+LanceDB provides an embedded Python library (`pip install lancedb`) built on the Lance columnar format. It supports vector search, full-text search, and hybrid search. It is designed for multi-modal AI workloads at petabyte scale and is being positioned as a "multi-modal lakehouse." [fact, source: docs.lancedb.com, confirmed by direct access]

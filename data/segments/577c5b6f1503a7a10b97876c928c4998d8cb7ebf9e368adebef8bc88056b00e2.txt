@@ -1,0 +1,14 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| 88% medium priority inflation | YAML front-matter analysis, Research/backlog/*.md, 2026-03-03 | high | Direct count: 22 medium, 1 high, 2 low out of 25 items |
+| D4 = 44% of backlog | Tag analysis: Research/backlog/*.md | high | 11/25 items carry tooling/interface/delivery/youtube/transcripts tags |
+| Five-domain taxonomy covers all items | Tag co-occurrence analysis of all 48 items | medium | Primary domain assignment is inferential for multi-domain items |
+| Four-dimension rubric aligns with AGENTS.md heuristic | AGENTS.md heuristic; Sivoi Insights JTBD; OKR International; Forte Labs PARA | medium | No single source validates exact rubric; synthesis across three frameworks |
+| D1 professional priority | AGENTS.md repo description; Research/completed/2026-02-27-research-backlog-vs-repo-improvement-backlog.md | medium | Professional context inference, not stated explicitly |
+| D2 under-representation | Tag analysis: 2/25 backlog items with agents/agentic/mcp/lsp tags | high | Direct count |
+| 40% drift threshold | RAND research portfolio evaluation; corpus-size arithmetic | medium | First-principles estimate; no historical validation |
+| Monthly cadence | Corpus turnover arithmetic | high | 3 items/day × 20 working days = 60/month throughput vs. 25-item backlog |
+| `research agenda` implementable | Direct inspection of src/research/item.py, src/research/cli.py | high | All required fields already parsed |
+| Rubric embedding in template | Behavioural analysis; PARA prioritisation-at-creation principle | medium | Inferred from best practice; not validated |
+| workflow_dispatch + issue delivery | AGENTS.md "Consequences for tooling design" | high | Explicitly stated |
+| Open Questions under-used | Qualitative review of Research/completed/*.md | medium | Several completed items have unadded Open Questions; not systematically counted |

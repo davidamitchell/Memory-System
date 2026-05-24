@@ -1,0 +1,5 @@
+1. **Survey published cases** — identify 6–10 organisations that have disclosed SWE AI strategy and outcomes. Include at least one hyperscaler (e.g., Google, Microsoft), one large financial services firm, one smaller tech company.
+2. **Extract design variables** — AI system type used, human oversight model, IP and liability governance, time to measurable outcome, failure modes encountered.
+3. **Governance pattern analysis** — what review and approval processes for AI-generated code are being used? What quality gates exist?
+4. **Agentic SWE frontier** — document current state of autonomous coding agents (e.g., Devin, SWE-agent, GitHub Copilot Workspace) and what the evidence says about their real-world performance.
+5. **NZ context** — how do NZ technology organisations (typically smaller teams, less specialised) adapt global SWE AI strategies?

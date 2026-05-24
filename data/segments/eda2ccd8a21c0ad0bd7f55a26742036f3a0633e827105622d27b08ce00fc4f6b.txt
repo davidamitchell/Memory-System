@@ -1,0 +1,1 @@
+Source-marking convention used below: primary sources are original academic papers or first-party practitioner publications; secondary sources are summaries of those publications; tertiary sources are prior completed research items in this repository.

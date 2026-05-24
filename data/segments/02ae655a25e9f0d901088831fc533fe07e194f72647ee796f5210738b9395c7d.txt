@@ -1,0 +1,5 @@
+1. What is the minimum viable LightRAG implementation for this research corpus — what entities and relationships should be extracted, what graph schema is needed? (Implementation planning item — candidate for a backlog item on KG construction pipeline.)
+2. Should RAPTOR-style cluster summaries be generated offline (batch rebuild) or online (generated on first query and cached)? The offline model is more token-efficient but adds a CI/CD step.
+3. Can the existing research item structure (Executive Summary = Layer 2, Key Findings = Layer 1) be used directly as the RAPTOR tree's leaf nodes, or does RAPTOR require its own chunking and re-summarisation?
+4. What is the right staleness threshold for AI/ML research items — 12 months? 18 months? Does this differ by sub-domain (e.g., LLM architectures change faster than epistemological frameworks)?
+5. How should the knowledge graph handle the many-to-many relationships between research items and backlog items (each backlog item `blocks` or `is-blocked-by` others)? Should these dependency edges be first-class nodes in the graph?

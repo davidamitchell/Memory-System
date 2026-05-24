@@ -1,0 +1,1 @@
+8. Using a 1–5 scale per dimension provides trend-tracking signal (a score rising from 3 to 4 indicates improvement even if both pass), but any dimension scoring 1 must trigger a hard FAIL because structural absence is a protocol violation that invalidates the item entirely. Confidence: high.

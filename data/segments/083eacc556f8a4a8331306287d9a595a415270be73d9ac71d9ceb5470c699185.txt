@@ -1,0 +1,1 @@
+[fact] Linear (project management platform) articulates the surviving governance model explicitly: "humans decide and remain accountable, agents execute within defined scopes, the platform manages interactions and visibility. Issues can only be *assigned* to humans, but *delegated* to agents." Source: alexop.dev/posts/the-software-factory, citing linear.app/now.

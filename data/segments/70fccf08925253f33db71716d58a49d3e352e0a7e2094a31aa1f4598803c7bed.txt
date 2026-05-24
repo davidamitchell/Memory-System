@@ -1,0 +1,1 @@
+**Research question restated:** When this repository's research corpus or state management outgrows JSON files, what local embedded database technology should it migrate to — and what schema design supports the queries the system actually needs to answer?

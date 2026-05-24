@@ -1,0 +1,2 @@
+- **[fact]** PEFT and QLoRA materially reduce the memory and deployment barrier relative to full fine-tuning, while domain-adaptive pretraining still assumes a large corpus and substantial compute. Sources: `https://arxiv.org/abs/2106.09685`; `https://arxiv.org/abs/2305.14314`; `https://arxiv.org/abs/2004.10964`
+- **[inference]** Economically, that means most enterprises should spend first on retrieval quality, evaluation infrastructure, and narrow PEFT experiments before considering heavier training regimes.

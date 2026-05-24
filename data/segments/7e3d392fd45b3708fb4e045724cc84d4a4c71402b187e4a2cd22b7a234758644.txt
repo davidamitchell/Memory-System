@@ -1,0 +1,13 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| 55.8% faster task completion with Copilot | Peng et al. 2023, arXiv:2302.06590 | high | Build phase only, JavaScript HTTP server task |
+| SCoT +13.79% Pass@1 over CoT | Li et al. 2023, arXiv:2305.06599 | high | HumanEval, MBPP, MBCPP benchmarks |
+| Prompt patterns as software patterns | White et al. 2023, arXiv:2302.11382 | high | Pattern catalog, CS.SE paper |
+| Bimodal use: acceleration vs. exploration | Barke et al. 2022, arXiv:2206.15000 | high | Grounded theory, 20 participants |
+| Copilot Workspace phase-aware flow | GitHub Blog, github.blog/news-insights/product-news/github-copilot-workspace/ | high | April 2024 technical preview |
+| DORA AI effects on throughput and stability | DORA 2024, services.google.com/fh/files/misc/dora_one_pager_2024.pdf | high | 75%+ respondents using AI daily |
+| Context file ecosystem fragmentation | everydev.ai; aruniyer.github.io | medium | Practitioner accounts, no formal study |
+| MCP prompts primitive capability | modelcontextprotocol.io/docs/learn/server-concepts | high | Primary protocol documentation |
+| 62% using AI; 43% trust AI output | Stack Overflow 2024, survey.stackoverflow.co/2024/ai | high | Survey statistics, ~65,000 respondents |
+| Aider context-selection principles | Aider docs, aider.chat/docs/usage/tips.html | medium | Practitioner documentation |
+| CoT improves complex reasoning at scale | Wei et al. 2022, arXiv:2201.11903 | high | Controlled experiments on three LLMs |

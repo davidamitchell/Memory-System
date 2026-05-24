@@ -1,0 +1,4 @@
+- State updates: incremental appends on each fetch run (1–20 new URLs per run)
+- Research item updates: status changes when items are moved between backlog/in-progress/completed (infrequent, ~1/day max)
+- Transcript storage: larger blobs (thousands of words per transcript), rare inserts
+- Full corpus rebuild: possible (re-index all existing YAML front-matter on first run)

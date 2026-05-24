@@ -1,0 +1,4 @@
+- When the Claude iOS `code` feature is used against this repo, does Claude operate on the live GitHub repo (via Application Programming Interface (API)), or does it clone the repo into a sandbox?
+- Does Claude iOS run any setup steps (install dependencies, init submodules) before starting work? If not, what does it lack at the start of a session?
+- Can Claude iOS be made to respect a setup configuration file (`devcontainer.json`, `copilot-setup-steps.yml`, or a `SETUP.md`)? What mechanism, if any, causes it to run `make dev-install` or `git submodule update --init .github/skills` before starting?
+- How should `.github/copilot-instructions.md` describe setup steps so Claude iOS follows them, as a plain prose instruction ("before starting work, run...") or as a structured block?

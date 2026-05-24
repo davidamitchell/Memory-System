@@ -1,0 +1,1 @@
+4. **Confidence levels for scaling claims:** The claim that H-Neuron density is lower in larger models is based on the ratio data in Table 1 of Gao et al., but this is only six data points across three model families. The pattern is consistent but should be treated as medium confidence rather than a firm scaling law.

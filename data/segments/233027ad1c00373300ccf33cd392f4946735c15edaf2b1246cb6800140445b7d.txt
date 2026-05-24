@@ -1,0 +1,1 @@
+**Research question restated:** Which organisations have published or disclosed coherent AI strategies specifically targeting software engineering, what outcomes have they measured, and what does the trajectory from AI-assisted coding (Type 2) to autonomous software agents (Type 3) look like in practice?

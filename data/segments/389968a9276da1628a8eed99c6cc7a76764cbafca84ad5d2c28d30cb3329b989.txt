@@ -1,0 +1,1 @@
+[fact] Anthropic describes the shift: "Engineers are shifting from writing code to coordinating agents that write code, focusing their own expertise on architecture, system design, and strategic decisions." Source: alexop.dev/posts/the-software-factory, citing claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026.

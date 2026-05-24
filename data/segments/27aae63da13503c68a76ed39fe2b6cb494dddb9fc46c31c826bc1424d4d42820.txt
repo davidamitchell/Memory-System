@@ -1,0 +1,1 @@
+**Root question:** How do H-Neurons form during pre-training, and how can pre-training be modified to prevent them?

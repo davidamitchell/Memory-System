@@ -1,0 +1,5 @@
+- **[fact]** Gartner, Forrester, and directly fetched McKinsey banking articles were not accessible in this session, so the evidence base leans more heavily on official vendor documentation and accessible secondary banking-industry commentary than would be ideal.
+- **[fact]** Public sources do not expose enough pricing detail to calculate a generally valid numeric Total Cost of Ownership (TCO) crossover point between named vendor platforms and bespoke systems.
+- **[fact]** nCino's original `/products` web address returned status code 429, so the research used other official nCino pages that were accessible instead.
+- **[inference]** Vendor case material is structurally biased toward benefit claims; confidence is therefore lower on any claim that relies primarily on vendor marketing rather than on implementation mechanics or independent lifecycle-cost evidence.
+- **[fact]** The exact effect of Artificial Intelligence (AI) on regulated-software assurance cost remains uncertain; the evidence is stronger on development productivity than on audit or regulatory-review compression.

@@ -1,0 +1,1 @@
+2. [assumption] The Jsonformer library is adequately represented by the Outlines finding, as Outlines supersedes it in functionality and adoption. Justification: Outlines documentation positions itself as the production successor to simpler JSON-constraint approaches; no unique capability of Jsonformer was identified that would alter the analysis.

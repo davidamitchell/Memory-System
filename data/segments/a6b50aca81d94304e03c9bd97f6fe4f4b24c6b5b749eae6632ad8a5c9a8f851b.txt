@@ -1,0 +1,1 @@
+**Scope adherence:** No LLM pre-training or fine-tuning content. No vendor product comparisons. Non-software domains excluded.

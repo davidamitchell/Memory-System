@@ -1,0 +1,1 @@
+4. **ChromaDB and LanceDB are both embeddings-first systems that do not provide a relational query layer; using either would require SQLite alongside them anyway, eliminating any benefit over the proposed SQLite-only approach.** ChromaDB's persistent client also pulls in 15+ transitive dependencies including C++ and Rust extensions. [high confidence]

@@ -1,0 +1,1 @@
+2. [fact] DORA 2024 found that adding AI tools to existing team structures produces net negative team delivery outcomes, with lower delivery stability and lower throughput, so tool adoption alone does not deliver software-factory benefits. Source: https://services.google.com/fh/files/misc/2024_final_dora_report.pdf

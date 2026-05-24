@@ -1,0 +1,1 @@
+**[fact]** The existing repository uses GitHub Copilot Command Line Interface (CLI) (COPILOT_GITHUB_TOKEN) for all agent work. The Copilot API does not require an OpenAI API key; it uses the user's GitHub Copilot subscription. Source: `.github/workflows/research-review.yml` and `.github/workflows/research-loop.yml`.

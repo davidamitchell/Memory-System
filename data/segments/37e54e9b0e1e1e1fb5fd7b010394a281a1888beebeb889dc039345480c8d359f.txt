@@ -1,0 +1,1 @@
+2. Flow Designer documents what the ServiceNow platform does automatically (event triggers, conditions, integrations), while Playbooks document what human agents must do step-by-step during case execution; neither tool produces a standalone BPMN-style process map that can serve as authoritative governance documentation independent of the platform. [High confidence]

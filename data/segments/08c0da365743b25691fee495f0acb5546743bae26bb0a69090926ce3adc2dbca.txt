@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item provides a threshold framework for bank-compliance Human-in-the-Loop (HITL) review that treats meaningful challenge as a capacity-and-behaviour control rather than a headcount label, and it specifies the observable indicators needed to prove that reviewers still challenge automated triage under production load. [inference; source: https://www.hkma.gov.hk/media/eng/doc/key-information/guidelines-and-circular/2023/20230209e2a2.pdf; https://ico.org.uk/for-organisations/advice-and-services/audits/data-protection-audit-framework/toolkits/artificial-intelligence/human-review/; https://davidamitchell.github.io/Research/research/2026-04-26-human-in-the-loop-ai-automated-workflows.html]
+- Links:
+  - https://www.hkma.gov.hk/media/eng/doc/key-information/guidelines-and-circular/2023/20230209e2a2.pdf
+  - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC3240751/

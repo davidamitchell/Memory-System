@@ -1,0 +1,1 @@
+2. [high] ETH Zurich PLDI 2025 (arXiv:2504.09246, Muendler et al.) is the sole published approach at specification hierarchy level 3 for LLM code generation, enforcing TypeScript type safety at decoding time via prefix automata and incremental type-checking, reducing compilation errors by more than half on HumanEval and MBPP benchmarks. Source: https://arxiv.org/abs/2504.09246

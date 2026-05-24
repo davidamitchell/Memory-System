@@ -1,0 +1,1 @@
+[fact] Claude Code on the web clones the repository to an Anthropic-managed virtual machine. It does not operate via the GitHub API read-only. (S3: "Repository cloning: Your repository is cloned to an Anthropic-managed virtual machine.")

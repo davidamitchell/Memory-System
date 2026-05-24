@@ -1,0 +1,3 @@
+**Out of scope:**
+- Fully autonomous decisioning with no human review requirement.
+- Workforce policy outside operational oversight design.

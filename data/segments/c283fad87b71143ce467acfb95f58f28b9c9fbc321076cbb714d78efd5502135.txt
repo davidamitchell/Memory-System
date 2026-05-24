@@ -1,0 +1,4 @@
+**Out of scope:**
+- Full tutorial on Lean 4 syntax or proof mechanics
+- Detailed re-investigation of topics already settled in the prerequisite completed items above
+- General LLM benchmarking unrelated to formal verification

@@ -1,0 +1,2 @@
+[fact] ReAct (Yao et al., 2022) produces interleaved Thought/Action/Observation blocks. MRKL (Karpas et al., 2022) produces Action/Action Input blocks. Toolformer (Schick et al., 2023; arXiv:2302.04761) trains models to insert structured API-call tokens into generated text. These are output format *conventions* embedded in prompts or fine-tuning, not formally specified languages. They impose implicit structural constraints with no grammar enforcement — a non-conforming output is possible and occurs in practice.
+Source: https://arxiv.org/abs/2302.04761

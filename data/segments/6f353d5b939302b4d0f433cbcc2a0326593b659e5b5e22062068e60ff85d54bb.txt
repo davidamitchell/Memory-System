@@ -1,0 +1,1 @@
+**Uncertainty check:** The two major uncertainties — private-sector failure rate and NLP classification accuracy — are explicitly labelled as [assumption] with justification. The Risks/Gaps section documents the PDF inaccessibility constraint and vendor case study selection bias.

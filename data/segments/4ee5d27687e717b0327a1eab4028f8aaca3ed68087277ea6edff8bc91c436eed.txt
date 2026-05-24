@@ -1,0 +1,1 @@
+[inference] The main reason to go beyond pure RAG is not that retrieval has failed completely, but that repeated domain vocabulary, concept structure, routing logic, and verification requirements create a performance ceiling that retrieval alone does not remove. (Sources: `https://arxiv.org/abs/2401.05856`; `https://arxiv.org/abs/2106.09685`; `https://arxiv.org/abs/2305.14314`)

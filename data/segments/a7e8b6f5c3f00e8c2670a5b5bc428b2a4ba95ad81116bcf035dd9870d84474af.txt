@@ -1,0 +1,3 @@
+[inference] There is no single repository file that both the Copilot coding agent and Claude Code on the web respect as the environment setup declaration. Each agent has a distinct mechanism:
+- Copilot coding agent: `.github/workflows/copilot-setup-steps.yml` (repo file, GitHub Actions)
+- Claude Code on the web: a Bash setup script configured in the Claude.ai UI (not a repo file)

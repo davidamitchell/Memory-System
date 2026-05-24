@@ -1,0 +1,13 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Stripe Minions merges 1,300+ AI-authored PRs/week | stripe.dev/blog/minions; InfoQ; multiple | high | Corroborated by multiple independent sources |
+| Google 25%+ AI-generated production code | Alphabet Q3 2024 earnings call | medium | Not independently audited; treated as directional |
+| ANZ 40–55% faster development, 3,000 engineers | Finextra 43689; iTnews 601195 | medium | Internal trial data; external validity unclear |
+| DORA 2024: –7.2% delivery stability with higher AI adoption | Google Cloud DORA 2024 | high | Large sample (tens of thousands); primary source |
+| 60% of non-engineers use AI to contribute code daily | GetDX Q4 2025 Impact Report | medium | Single vendor report; directional |
+| Mid-tier banks: primary obstacles are cost and IT demand | Finastra analysis; IBM Institute for Business Value (IBV) 2025 | medium | Multiple vendor sources; consistently aligned |
+| Legacy COBOL systems at mid-tier banks | IBM Institute for Business Value (IBV); Appinventiv; Pega | high | Widely corroborated |
+| Software factory cycle time: hours not weeks | alexop.dev (fictional Beer Commerce example) | low | Illustrative, not empirical; validated by Stripe at scale |
+| TOC bottleneck migrates upstream when coding cost falls | velocityschedulingsystem.com; web synthesis | medium | Theoretical inference, not empirical; consistent with TOC |
+| Dark factory compliance/security unresolved | HN 47226107 (OctopusGarden author) | high | First-person practitioner account |
+| 5–10x team size reduction | Elad Gil, cited in alexop.dev | low | Single VC opinion; not measured |

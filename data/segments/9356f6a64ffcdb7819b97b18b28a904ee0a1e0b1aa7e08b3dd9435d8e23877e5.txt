@@ -1,0 +1,1 @@
+The data quality literature (Phi-1, RefinedWeb) establishes that filtering dramatically changes model behaviour, providing a plausible pathway for pre-training interventions. The absence of direct ablation evidence for H-Neuron reduction via data filtering is a gap in the literature, not a refutation of the hypothesis.

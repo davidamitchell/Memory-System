@@ -1,0 +1,1 @@
+[fact] For this repo, the setup steps must: (1) check out the repository including the private `.github/skills/` submodule, (2) install Python 3.11+, (3) run `pip install -e ".[dev]"` (or `make dev-install`). (S1: checkout with submodule support; S2: Python setup example; `pyproject.toml` in this repo confirms Python 3.11+ requirement.)

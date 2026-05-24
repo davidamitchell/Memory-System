@@ -1,0 +1,1 @@
+The choice of LightRAG over GraphRAG for this corpus is well-supported: a growing research corpus is updated continuously; LightRAG's incremental merge model is operationally sustainable; GraphRAG's full-rebuild model would require weekly batch runs.

@@ -1,0 +1,5 @@
+8. **The four-type use-case typology captures meaningful strategic distinctions:**
+   - *Type 1 — Augmentation*: AI assists humans; humans decide and act. Examples: copilots, analytics dashboards, document summarisation. Risk is primarily quality and over-reliance.
+   - *Type 2 — Agentic builders*: AI generates artefacts (code, reports, contracts, designs) that humans review and approve. Risk is accuracy, IP, and accountability for outputs.
+   - *Type 3 — Delegated authority agents*: AI makes decisions within defined parameters with human escalation paths. Examples: credit pre-screening, fraud flagging, dynamic pricing. Risk is bias, explainability, and regulatory exposure.
+   - *Type 4 — Fully agentic business units*: AI operates an organisational function end-to-end with periodic human governance. Emerging but not yet mainstream. Risk is systemic — loss of oversight, correlated failures, accountability gaps.

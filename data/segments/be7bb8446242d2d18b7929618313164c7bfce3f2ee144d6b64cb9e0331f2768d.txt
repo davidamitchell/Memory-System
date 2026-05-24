@@ -1,0 +1,1 @@
+This item connects to prior work on AI memory (`2026-03-17-ai-memory-systems-rag-neuroscience`) and neurological context management (`2026-03-15-neurological-context-management`), but its core focus is the conceptual and scientific gap between the two prediction paradigms.

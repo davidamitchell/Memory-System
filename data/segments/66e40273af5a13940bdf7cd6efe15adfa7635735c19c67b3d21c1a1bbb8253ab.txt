@@ -1,0 +1,3 @@
+- **Assumption:** Dense embeddings at <500 items are computationally feasible on CPU with local models (Model2Vec). **Justification:** Demonstrated in the context-mode research item by a practitioner running Model2Vec on a 49,746-chunk Obsidian vault without GPU.
+- **Assumption:** LLM-based KG extraction produces sufficient quality on research-item content without extensive prompt tuning. **Justification:** GraphRAG, LightRAG, and HippoRAG all demonstrate strong extraction quality on similar corpus types; research items have clear, extractable entities.
+- **Assumption:** The corpus will reach ~200 items within 6 months at current accumulation rates. **Justification:** Current backlog ~27 items; completing 2–5 items/week reaches 200 items in 3–6 months.

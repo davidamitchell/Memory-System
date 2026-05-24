@@ -1,0 +1,1 @@
+5. **Drift detection threshold: ≥40% domain concentration in items added in the last 30 days.** A secondary signal: the last 5 completed items all from the same domain. The 40% threshold is calibrated to tolerate intentional focused sprints while catching unintentional drift. [inference — calibrated to corpus size and processing rate]

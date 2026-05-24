@@ -1,0 +1,1 @@
+- [fact] Source classification for Section B: Dr. Eliyahu Goldratt's Theory of Constraints is treated as the primary theory source; consultancy and practitioner blog applications of TOC to software and AI-enabled organisations are treated as secondary interpretive sources.

@@ -1,0 +1,3 @@
+- [inference] The analysis weights primary sources above secondary ones. Official job boards, structured public endpoints, and company announcements were treated as decisive where available.
+- [fact] Absolute totals were used cautiously because companies differ in whether they duplicate the same role across multiple locations or expose only subsets publicly.
+- [inference] The role mix is more robust than the raw totals. A company with a board dominated by Sales, Solutions, Security, Product, or Data Center roles is revealing its active bottlenecks even if the exact total is noisy.

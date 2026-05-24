@@ -1,0 +1,1 @@
+[inference] All production-grade structured generation tools (Outlines, Guidance, SGLang) address only Layer 1 structural failures. The deeper failure modes — intent mismatch (Layer 2), reward hacking (Layer 3), tool misuse beyond parameter typing (Layer 4), and instruction conflict (Layer 5) — remain entirely outside the scope of any current output grammar approach.

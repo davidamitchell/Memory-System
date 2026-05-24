@@ -1,0 +1,1 @@
+**Top-level question:** What does Leanstral add to the practical guardrail stack for AI-assisted software, and what does it not solve?

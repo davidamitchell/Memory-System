@@ -1,0 +1,1 @@
+The main analytical move is to separate local code quality from system entropy, because the evidence is genuinely positive on the first and cautionary on the second. [inference; source: https://github.blog/news-insights/research/does-github-copilot-improve-code-quality-heres-what-the-data-says/; https://www.gitclear.com/ai_assistant_code_quality_2025_research]

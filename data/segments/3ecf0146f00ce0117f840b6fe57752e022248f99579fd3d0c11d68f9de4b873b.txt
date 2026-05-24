@@ -1,0 +1,5 @@
+- Question: in a production pipeline with uncontrolled inputs, how does the flexibility of an agentic system affect auditability and formal verification compared with a more predictable deterministic execution model?
+- Scope: runtime lineage reconstruction, state-transition abstractions, formal verification boundaries, and regulated-operation implications.
+- Constraints: full-mode investigation, seeded-source check completed, URL-backed citations only, and mirrored synthesis plus Findings output required.
+- Output: knowledge, specifically a structured synthesis with executive summary, key findings, evidence map, assumptions, analysis, risks and gaps, open questions, and output links.
+- Prior completed items consulted: https://davidamitchell.github.io/Research/research/2026-05-18-rq5-1-stochastic-vs-deterministic-failures.html ; https://davidamitchell.github.io/Research/research/2026-05-18-agentic-explainability-vs-traditional.html ; https://davidamitchell.github.io/Research/research/2026-04-26-ai-lowcode-observability-telemetry-governance.html ; https://davidamitchell.github.io/Research/research/2026-05-09-governance-policy-determinism-vs-stochastic-llm.html

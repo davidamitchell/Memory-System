@@ -1,0 +1,1 @@
+4. sqlite-vec is addable incrementally as a second phase. It installs via `pip install sqlite-vec`, loads via `sqlite_vec.load(db)`, and coexists with FTS5 in the same database file. The pre-v1 stability risk is manageable: it is used only for optional semantic search, not for the primary state store.

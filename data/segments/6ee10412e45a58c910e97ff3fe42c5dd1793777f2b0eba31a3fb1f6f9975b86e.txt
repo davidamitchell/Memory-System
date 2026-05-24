@@ -1,0 +1,4 @@
+**Q5 - How does AI-assisted development change the comparison?**
+- Q5a. Which bespoke cost categories are reduced by AI-assisted development?
+- Q5b. Which cost categories remain stubbornly physical, organisational, or regulatory?
+- Q5c. Does AI erase the platform advantage or merely narrow it?

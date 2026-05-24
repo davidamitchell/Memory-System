@@ -1,0 +1,1 @@
+1. **Understanding pre-training dynamics** — What in the standard pre-training procedure (next-token prediction on diverse web-scale corpora) causes these neurons to form? Is it noisy/contradictory training data? The objective function itself? The model architecture? Scale?

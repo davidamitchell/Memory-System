@@ -1,0 +1,4 @@
+**Out of scope:**
+- The theoretical definitions of RUN vs BUILD from Gartner, McKinsey, or TBM (treat these as known background — covered in the prerequisite item)
+- Benchmark ratios and industry averages (the "what" of RUN/BUILD split targets — covered in the prerequisite item)
+- Financial accounting standards (IFRS, GAAP, CapEx/OpEx) except where they directly constrain the implementation

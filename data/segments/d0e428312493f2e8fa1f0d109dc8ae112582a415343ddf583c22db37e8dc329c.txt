@@ -1,0 +1,6 @@
+[fact] Related internal items identified during the prior-work check:
+- `2026-02-28-ai-strategy-swe-focus.md` for prior measurements on AI-assisted software delivery.
+- `2026-03-14-reliable-software-llm-era.md` for the cognitive-debt and formal-specification thread.
+- `2026-03-21-technology-capability-models.md` for capability-model context.
+- `2026-03-10-nature-of-the-firm-coase-organisations.md` and Thread 2 in `learnings.md` for transaction-cost framing.
+- `2026-02-28-jevons-paradox.md` for the demand-expansion lens.

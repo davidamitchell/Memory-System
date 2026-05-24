@@ -1,0 +1,4 @@
+1. Define the queries we need to answer (requirements first)
+2. Evaluate SQLite + sqlite-vec vs DuckDB vs ChromaDB against requirements
+3. Prototype the schema for research items
+4. Write ADR with recommendation

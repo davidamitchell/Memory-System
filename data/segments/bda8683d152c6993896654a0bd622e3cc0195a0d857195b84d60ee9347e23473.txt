@@ -1,0 +1,1 @@
+**Output format:** Structured research skill output followed by a full Findings section, with an evidence map, assumptions, and a candidate intervention catalogue with feasibility assessment.

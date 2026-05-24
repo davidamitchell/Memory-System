@@ -1,0 +1,1 @@
+7. **Assess relationship to BACKLOG.md** — The `BACKLOG.md` repo improvement backlog and the `Research/backlog/` research agenda serve different purposes (AGENTS.md explicitly documents this distinction). Assess whether any tooling or conventions from BACKLOG.md's prioritisation discipline should be adapted for the research agenda.

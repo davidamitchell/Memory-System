@@ -1,0 +1,2 @@
+**Behavioural lens:**
+- The risk of "knowledge rot" (identified in the memory research item) applies: without lifecycle management, the knowledge graph will accumulate stale and contradicted entries. For the research corpus, each completed item has a date and status field — these can serve as lightweight TTL markers. Items older than 24 months on fast-moving topics (AI/ML) should be flagged for review.

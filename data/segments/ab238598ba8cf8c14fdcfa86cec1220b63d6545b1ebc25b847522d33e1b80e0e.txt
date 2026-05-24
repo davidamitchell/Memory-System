@@ -1,0 +1,5 @@
+- Q1e finding (devcontainer.json does not affect Copilot agent) is consistent with Q3d finding (devcontainer.json serves neither primary agent surface). No contradiction.
+- Q1d finding (no auto-setup without `copilot-setup-steps.yml`) is consistent with Q1b finding (setup steps run before agent starts). No contradiction.
+- Q2d finding (Claude Code web setup script is UI-configured, not a repo file) creates a tension with Q3a (no single file). The tension is not a contradiction; it is the key finding of this item.
+- The W-0035 prior research finding that "submodule access requires `copilot-setup-steps.yml` with `submodules: recursive` and a PAT" is fully consistent with and supported by S1 and S4.
+- The Q3e inference (prose instruction in `CLAUDE.md` as fallback) is an inference from S3's statement that "Claude respects context you've defined in your `CLAUDE.md`". This is not contradicted by any source.

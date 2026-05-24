@@ -1,0 +1,1 @@
+When technology is moving fast — as is currently the case with AI tooling, agent frameworks, and associated patterns — the temptation to skip synthesis is at its highest. There is always a newer thing to explore. The result is an organisation that has explored many things, is exploiting none of them well, and carries a growing invisible debt of un-synthesised learning.

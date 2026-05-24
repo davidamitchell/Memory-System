@@ -1,0 +1,4 @@
+- [fact] No reviewed source defines a canonical formal phase called the synthesis step; the step is a synthesis from repeated pre-scale requirements.
+- [fact] The freshest practitioner evidence is strongly concentrated in AI adoption, so transfer to other technology domains is partly inferential.
+- [fact] Thoughtworks and Boston Consulting Group offer strong practitioner signals on stalled scale-up, but direct causal measurement of "skipped synthesis" as a named variable was not found.
+- [inference] The recommended minimum viable synthesis pack is a practical design proposal, not a directly validated industry standard.

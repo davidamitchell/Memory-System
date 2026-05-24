@@ -1,0 +1,1 @@
+[fact] The Stack Overflow 2024 Developer Survey found that 62% of professional developers are currently using AI tools, and 43% trust the accuracy of AI output. 45% of professional developers believe AI tools are bad or very bad at handling complex tasks, while AI is seen as effective for routine and boilerplate work. Source: https://survey.stackoverflow.co/2024/ai.

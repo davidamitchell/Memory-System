@@ -1,0 +1,1 @@
+**Stage 1 (now, <100 items):** BM25 + dense embedding hybrid search (per `semantic-full-text-search.md`). Add RAPTOR Layer 3–4 generation as a near-zero-cost enhancement that unlocks multi-item query capability immediately, given that Layers 0–2 already exist in every completed item.

@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Structured comparison of predictive processing in brains versus next-token prediction in Large Language Models, with a direct answer on world models, understanding, and consciousness.
+- Links:
+  - https://doi.org/10.1038/nrn2787
+  - https://papers.neurips.cc/paper/7181-attention-is-all-you-need.pdf
+  - https://www.quantamagazine.org/anil-seth-finds-consciousness-in-lifes-push-against-entropy-20210930/

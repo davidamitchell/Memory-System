@@ -1,0 +1,4 @@
+2. Why does the next-token prediction objective produce H-Neurons?
+   2a. What is the training signal that rewards over-compliant responses during pre-training?
+   2b. Is sycophantic and confidently-stated-false text in web corpora a direct cause?
+   2c. What theoretical account exists for hallucination as a structural consequence of NTP?

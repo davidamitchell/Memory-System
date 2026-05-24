@@ -1,0 +1,5 @@
+**Completeness check:**
+- Every atomic sub-question (A1–A4, B1–B6, C1–C3, D1–D2) has a substantive answer in §2.
+- All five sources from the checklist were consulted and marked `[x]`.
+- All major technology alternatives (SQLite+FTS5, sqlite-vec, DuckDB, ChromaDB, LanceDB) were evaluated.
+- Schema covers all query patterns identified in §2 A1.

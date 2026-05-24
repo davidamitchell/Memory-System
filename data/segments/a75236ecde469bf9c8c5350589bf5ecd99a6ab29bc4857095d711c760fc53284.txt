@@ -1,0 +1,7 @@
+**Key claims:**
+1. SQLite FTS5 satisfies full-text search requirements with zero additional dependencies. [fact, high confidence]
+2. sqlite-vec enables vector search within the same SQLite file at Phase 2. [fact, medium confidence — pre-v1 stability risk]
+3. DuckDB is a worse fit than SQLite for row-oriented, small-corpus queries. [inference, high confidence]
+4. ChromaDB and LanceDB are both over-engineered for this use case and introduce heavy dependency trees. [inference, high confidence]
+5. The database must be treated as a derived artefact, rebuildable from YAML front-matter. [inference, high confidence — follows from binary-diff constraint]
+6. Migration is triggered by observable signals, not a fixed item count. [inference, medium confidence]

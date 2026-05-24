@@ -1,0 +1,2 @@
+**Historical lens:**
+W-0004 (restore `devcontainer.json`) was opened because an earlier iteration of this repo had a `devcontainer.json` that was later removed. The assumption at the time appears to have been that `devcontainer.json` would also serve agent environments. This item confirms that assumption was incorrect. W-0004 should be scoped down to the local development use case only.

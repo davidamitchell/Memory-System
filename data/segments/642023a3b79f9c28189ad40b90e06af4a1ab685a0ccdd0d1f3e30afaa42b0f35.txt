@@ -1,0 +1,1 @@
+**Output format:** Research Skill Output (§§0–7) retained verbatim; Findings section seeded from §6 Synthesis and expanded into full subsections. Output type: knowledge.

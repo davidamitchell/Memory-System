@@ -1,0 +1,1 @@
+**AI/knowledge work lens:** The VSS article extends TOC's backpressure logic to AI-enabled organisations. When AI makes execution cheap, the constraint moves to problem selection and system design (CSJ). Distributing AI tools without protecting CSJ is the equivalent of releasing work faster than the constraint can process: it creates noise upstream and reduces system throughput.

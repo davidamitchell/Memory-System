@@ -1,0 +1,5 @@
+The synthesis step sits between them and is easy to skip under time pressure: it feels like overhead when the technology is already "proven" by the exploration and the business wants to move to exploitation immediately. The synthesis step is where the organisation:
+1. Consolidates what was actually learned (not just "it works" but "here is when it works, when it fails, and at what cost")
+2. Decides the exploitation pattern (how will this capability be used consistently, at scale, with what guardrails)
+3. Produces the artefacts that make exploitation repeatable (runbooks, reference architectures, standards, training, policy)
+4. Resets the portfolio signal (what new explorations are now warranted given what was learned)

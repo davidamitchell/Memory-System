@@ -1,0 +1,1 @@
+**Recommendation:** SQLite (FTS5 in Phase 1; sqlite-vec in Phase 2) is the correct local database technology for this repository.

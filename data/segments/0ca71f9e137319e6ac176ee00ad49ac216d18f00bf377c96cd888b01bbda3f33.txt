@@ -1,0 +1,5 @@
+**Area 3 — Work-item tagging:**
+- Q3.1: Why does mandatory tagging fail in practice?
+- Q3.2: What enforcement mechanisms (preventive, detective, remedial) are used for tagging compliance?
+- Q3.3: What is the failure signature of degraded tagging — how does it manifest in the data?
+- Q3.4: Are there automated classification approaches, and what are their documented limits?

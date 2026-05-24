@@ -1,0 +1,7 @@
+1. Identify candidate data product ontologies and vocabularies, starting with DPROD from EKGF and OMG, World Wide Web Consortium (W3C) standards it reuses, and relevant public technical literature from 2020-2026.
+2. For each candidate, document: scope, core classes and properties, formal status (draft, published, deprecated), and the publishing body or author.
+3. Establish which organisations and communities have adopted each, looking for references in catalogue tools such as Apache Atlas, DataHub, OpenMetadata, and Collibra, plus public repositories and standards registries.
+4. Document usage patterns: how is the ontology used in practice, including data contract definition, lineage, catalogue interoperability, and policy enforcement?
+5. Assess currency: when was each ontology last meaningfully updated? Is the community actively maintaining it? Are there open issues or active Working Groups?
+6. Map relationships to adjacent standards: DCAT-3, Data Privacy Vocabulary (DPV), schema.org Dataset, Data Product Descriptor Specification (DPDS), Findable, Accessible, Interoperable, and Reusable (FAIR) principles, and relevant Object Management Group (OMG) materials.
+7. Synthesise a verdict: which data product ontology, if any, has achieved consensus adoption; which is most current; and what are the realistic alternatives if none has achieved critical mass?

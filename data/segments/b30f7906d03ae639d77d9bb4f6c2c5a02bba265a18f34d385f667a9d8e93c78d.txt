@@ -1,0 +1,4 @@
+- Can Leanstral reliably help humans formalize the right properties, not just discharge properties that were already well specified?
+- What independent benchmark should replace or validate FLTEval for repository-scale proof engineering?
+- How should proof-time guarantees be connected to deployment-time policy enforcement so that verified code still cannot trigger unsafe production actions?
+- Which classes of infrastructure-as-code or distributed-systems invariants are most economically amenable to Lean-based formalization in ordinary engineering teams?

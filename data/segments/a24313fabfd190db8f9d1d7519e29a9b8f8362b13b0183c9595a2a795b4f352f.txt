@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: A structured analysis of what the pre-training origin of H-Neurons implies for the limits of post-training alignment and for the design of pre-training data, objectives, and architecture; includes a candidate set of pre-training-time interventions and their estimated feasibility.
+- Links:
+  - https://arxiv.org/abs/2512.01797
+  - https://arxiv.org/abs/2306.11644
+  - https://transformer-circuits.pub/2022/toy_model/index.html

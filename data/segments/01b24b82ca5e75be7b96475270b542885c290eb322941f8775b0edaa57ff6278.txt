@@ -1,0 +1,18 @@
+- **Root question:** which control failures make Microsoft 365 Copilot unsafe on sensitive data, and which controls actually reduce those failures?
+- **A. Access model**
+  - A1. How does Copilot decide which tenant content it may use?
+  - A2. Why does permission sprawl become more dangerous once natural-language retrieval is added?
+- **B. Classification and label behavior**
+  - B1. What do Microsoft documents say about sensitivity labels, encryption, and EXTRACT or VIEW rights?
+  - B2. What inheritance behavior is documented for conversations and for newly generated content?
+- **C. Mitigations**
+  - C1. What does Restricted Content Discovery block, and what does it leave unchanged?
+  - C2. What can DLP for Copilot block, and what blind spots remain?
+  - C3. What audit, retention, and investigation controls exist after Copilot is enabled?
+- **D. Regulatory and deployment exposure**
+  - D1. What do GDPR-related safeguards and AI lifecycle guidance imply for Copilot on sensitive data?
+  - D2. What do GCC, GCC High, DoD, and ITAR-supporting Microsoft environments reduce?
+  - D3. Which risks remain the customer's responsibility even in sovereign deployment?
+- **E. Synthesis**
+  - E1. Which risk categories dominate in regulated environments?
+  - E2. Which control stack is necessary before Copilot use on sensitive data is defensible?

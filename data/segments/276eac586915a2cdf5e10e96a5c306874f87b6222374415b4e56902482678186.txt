@@ -1,0 +1,1 @@
+5. **Template/framework construction** — Draft a structured framework mapping prompt types to SDLC phases, with example prompts for each phase and guidance on when to use each pattern.

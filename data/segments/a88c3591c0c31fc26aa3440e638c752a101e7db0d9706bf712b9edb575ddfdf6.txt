@@ -1,0 +1,4 @@
+**Prior research connections:**
+- `2026-02-28-ai-strategy-swe-focus.md` — documented measured outcomes from AI-assisted coding at scale (Australia and New Zealand Banking Group (ANZ) 40–55% faster development, Google 25%+ AI-generated code), governance models, and the DevOps Research and Assessment (DORA) finding that individual speed gains do not translate to team delivery improvement without process redesign
+- `2026-03-14-reliable-software-llm-era.md` — documented cognitive debt risk from LLM code generation and the role of formal specification (Quint) in maintaining reliability
+- `2026-03-21-technology-capability-models.md` — established the capability taxonomy landscape relevant to organisations rebuilding their technology stack

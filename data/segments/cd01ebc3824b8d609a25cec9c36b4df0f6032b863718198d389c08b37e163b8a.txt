@@ -1,0 +1,20 @@
+```
+Q: What do current and historical hiring patterns reveal about AI company strategy?
+├── Q1: Which functions dominate current hiring at each company?
+│   ├── Q1a: What do Anthropic's live roles emphasise?
+│   ├── Q1b: What do Google DeepMind's live roles emphasise?
+│   ├── Q1c: What do xAI's live roles emphasise?
+│   ├── Q1d: What do Mistral's live roles emphasise?
+│   ├── Q1e: What do Cohere's live roles emphasise?
+│   └── Q1f: What can still be observed for OpenAI and Meta when direct access is constrained?
+├── Q2: What changed over the last 12 to 24 months where archive data is available?
+│   └── Q2a: Which companies show a measurable shift in visible role volume or type?
+├── Q3: Do the hiring mixes align with official public strategy announcements?
+│   ├── Q3a: Enterprise commercialisation and deployment
+│   ├── Q3b: Productisation and consumer surfaces
+│   └── Q3c: Infrastructure, safety, and data operations
+├── Q4: What do high-profile hires reveal that job ads alone do not?
+│   ├── Q4a: Commercial leadership hires
+│   └── Q4b: Research talent concentration and organisational reorganisation
+└── Q5: What are the highest-confidence cross-company signals, and what remains uncertain?
+```

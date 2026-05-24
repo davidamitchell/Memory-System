@@ -1,0 +1,1 @@
+6. A 1–5 scoring scale per dimension provides quality trend-tracking signal across items over time, but any dimension scoring 1 (absent or containing only template placeholder text) must trigger a hard FAIL regardless of the mean score because structural absence is a protocol violation that invalidates the item. Confidence: high.

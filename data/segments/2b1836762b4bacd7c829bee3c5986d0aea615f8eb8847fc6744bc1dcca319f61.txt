@@ -1,0 +1,4 @@
+- What runtime does the Copilot coding agent use when it picks up an assigned GitHub issue? What OS and Python version are available by default?
+- What is `.github/copilot-setup-steps.yml`? What is its exact schema? Does it run before the agent starts planning? Does it support `pip install -e ".[dev]"` and `git submodule update --init`?
+- If `copilot-setup-steps.yml` does not exist, what setup does the agent perform itself? Does it discover and run `make dev-install` from the Makefile automatically?
+- Does `devcontainer.json` affect the Copilot coding agent's container environment, or only Codespaces?

@@ -1,0 +1,16 @@
+- **Root question:** how much of workaround automation demand can central engineering realistically absorb within three years, and how tightly does that answer depend on throughput?
+  - **A. Throughput and debt accumulation**
+    - A1. What public evidence links delivery bottlenecks to shadow IT, citizen development, or workaround demand?
+    - A2. What public evidence links architectural or team dependency structure to slower throughput and queue growth?
+    - A3. Does public evidence provide a cross-firm coefficient for throughput shortfall versus debt accumulation?
+  - **B. Demand classification**
+    - B1. Which kinds of workaround demand are tractable for central engineering?
+    - B2. Which kinds of demand remain resistant because they are exception-heavy, unstable, non-digital, or governance-limited?
+    - B3. What does the rollout literature say about scaling citizen-development or RPA-like demand into governed delivery?
+  - **C. AI-assisted productivity**
+    - C1. What do bounded lab tasks imply about potential coding uplift?
+    - C2. What do realistic repository tasks imply about end-to-end engineering uplift?
+    - C3. What does DORA imply about throughput gains versus stability losses at system level?
+  - **D. Three-year synthesis**
+    - D1. Given the demand mix and throughput range, what closeable share is realistic?
+    - D2. What would need to be true for the answer to move materially upward?

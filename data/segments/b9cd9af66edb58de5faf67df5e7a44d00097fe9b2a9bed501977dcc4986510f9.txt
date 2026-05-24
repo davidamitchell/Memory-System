@@ -1,0 +1,1 @@
+4. Pydantic Evals defaults to GPT-4o as its LLM judge and provides no documented integration with the GitHub Copilot Application Programming Interface (API), making it unsuitable for this repository without a custom adapter that adds engineering complexity without delivering benefits beyond a direct Copilot CLI prompt approach. Confidence: high.

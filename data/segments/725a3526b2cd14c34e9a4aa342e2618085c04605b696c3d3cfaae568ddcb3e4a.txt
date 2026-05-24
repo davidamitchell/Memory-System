@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item provides a practical institutional design model for making strategically relevant knowledge the path of least effort through ownership clarity, permission coherence, trusted defaults, and exception-based governance. [inference; source: https://doi.org/10.1287/inte.4.3.28; https://davidamitchell.github.io/Research/research/2026-04-26-permission-safe-rag-enterprise-information-architecture.html; https://davidamitchell.github.io/Research/research/2026-05-16-governance-structures-build-mode-without-full-accountability-colocation.html]
+- Links:
+  - https://doi.org/10.1287/inte.4.3.28
+  - https://doi.org/10.1037/0033-295X.106.4.643
+  - https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79

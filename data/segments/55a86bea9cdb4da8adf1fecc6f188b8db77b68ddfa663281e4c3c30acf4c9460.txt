@@ -1,0 +1,1 @@
+[fact] Submodule initialisation is achievable by including `actions/checkout@v4` with `submodules: recursive` or `submodules: true` in the setup steps. For private submodules (like `davidamitchell/Skills`), a PAT with read access to the submodule repository must be provided as the `token` parameter. (S4, S7.)

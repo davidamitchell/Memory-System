@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Knowledge item on how agentic flexibility shifts auditability and formal verification from exact replay and proof toward bounded abstractions, richer telemetry, and deterministic final control surfaces. [inference; source: https://www.prismmodelchecker.org/manual/Main/AllOnOnePage; https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-12; https://davidamitchell.github.io/Research/research/2026-05-09-governance-policy-determinism-vs-stochastic-llm.html]
+- Links:
+  - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-12
+  - https://www.prismmodelchecker.org/manual/Main/AllOnOnePage
+  - https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/

@@ -1,0 +1,3 @@
+- Which metric bundle best predicts future remediation cost in AI-heavy repositories: clone ratio plus hotspot decline, or change coupling plus Cognitive Complexity?
+- Can a controlled longitudinal study instrument two otherwise similar teams, one with enforced architectural review and one with prompt-first generation, to estimate entropy-growth differentials directly?
+- What review-process changes most effectively restore scrutiny when developers grow accustomed to accepting AI suggestions?

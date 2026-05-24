@@ -1,0 +1,3 @@
+- `copilot-setup-steps.yml` schema may not support submodule initialisation.
+- Claude iOS may not run any local setup steps at all; it may be read-only against the GitHub API.
+- The answer may require separate mechanisms for each agent surface.

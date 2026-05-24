@@ -1,0 +1,5 @@
+**Constraints:**
+- Distinguish capability debt as an organisational concept from software technical debt
+- Ground claims in observable enterprise patterns and flag inferences explicitly
+- Expand acronyms on first use
+- Extend prior repository work on systems capability debt rather than duplicate it

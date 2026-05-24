@@ -1,0 +1,6 @@
+**In scope:**
+- Definition and mechanisms of backpressure in systems thinking and operations management
+- Theory of Constraints (TOC) principles (Goldratt's work and academic extensions)
+- Academic peer-reviewed research on backpressure as a TOC implementation mechanism
+- Real-world white papers and case studies documenting backpressure in production systems
+- Relationship between backpressure, throughput accounting, and drum-buffer-rope scheduling

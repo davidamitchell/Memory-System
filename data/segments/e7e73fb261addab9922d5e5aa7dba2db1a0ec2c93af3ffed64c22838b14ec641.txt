@@ -1,0 +1,4 @@
+**Out of scope:**
+- Detailed architectural patterns for deep modules, covered in `2026-04-30-deep-modules-ai-augmented-codebases`
+- Test-Driven Development (TDD) as a complexity control mechanism, covered in `2026-04-30-tdd-feedback-loops-ai-augmented-dev`
+- Strategic roles and design investment, covered in `2026-04-30-strategic-tactical-division-ai-teams`

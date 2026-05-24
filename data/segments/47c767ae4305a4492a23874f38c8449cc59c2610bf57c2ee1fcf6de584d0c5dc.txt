@@ -1,0 +1,1 @@
+**Regulatory lens:** [inference] The EU AI Act's high-risk system requirements (traceability, human oversight, robustness) implicitly push toward level 2–3 structured outputs as a minimum for regulated applications, because only schema-enforced outputs are consistently parseable by audit tools. There is no regulatory requirement for level 4–5 output language design as of 2026.

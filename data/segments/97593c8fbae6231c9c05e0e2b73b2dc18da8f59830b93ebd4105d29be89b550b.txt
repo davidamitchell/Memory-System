@@ -1,0 +1,4 @@
+1. The `state/index.json` file exceeds 500 entries (lookup performance degrades noticeably; the prior research item noted 10,000 as the theoretical limit, but cognitive cost of large JSON diffs arrives much earlier)
+2. The owner needs to answer cross-item queries that require more than `grep` over Markdown files (e.g., "all completed items tagged 'ai-strategy' sorted by date")
+3. A semantic search capability is being built (`Research/backlog/2026-03-02-semantic-full-text-search.md` is in backlog and is a direct trigger)
+4. The pipeline begins running in parallel (concurrent write safety requires ACID transactions)

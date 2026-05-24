@@ -1,0 +1,7 @@
+1. Study the ODRL 2.2 W3C Recommendation and vocabulary with focus on structures directly applicable to KG governance.
+2. Review Solid, ODRL Profile for Access Control (OAC), and related identity specifications to understand how richer ODRL rules relate to WAC and Access Control Policies (ACP).
+3. Examine how named graphs or datasets can be annotated with ODRL policies and how middleware, connectors, or query interception can enforce them.
+4. Review data-space implementations, especially the International Data Spaces Association (IDSA), Dataspace Protocol (DSP), and Eclipse Dataspace Components (EDC), to separate policy expression from runtime enforcement.
+5. Investigate runtime identity mechanisms such as WebID, OpenID Connect (OIDC), OAuth 2.0, Demonstration of Proof-of-Possession at the Application Layer (DPoP), and Verifiable Credentials (VCs) where they are actually evidenced in the reviewed material.
+6. Assess emerging tooling such as OAC, draft ODRL evaluator semantics, and ODRL-related policy engines.
+7. Synthesize a practical pattern guide for attaching ODRL policies to a KG, enforcing them at query time, and auditing post-access duties.

@@ -1,0 +1,1 @@
+**[fact]** Current priority distribution in 25-item backlog: `high` = 1 (4%), `medium` = 22 (88%), `low` = 2 (8%). The item being researched (this item) was one of two `high` items; upon completion, only 1 `high` item remains in backlog.

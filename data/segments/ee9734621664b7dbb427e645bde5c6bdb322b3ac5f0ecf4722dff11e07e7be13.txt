@@ -1,0 +1,4 @@
+**D. Synthesis with prior repository research**
+- D1. Where does Leanstral sit on the specification hierarchy from informal language to full proof?
+- D2. Does Leanstral reduce the cognitive-debt problem identified in earlier research?
+- D3. How does it relate to Intent Driven Development rather than replace it?

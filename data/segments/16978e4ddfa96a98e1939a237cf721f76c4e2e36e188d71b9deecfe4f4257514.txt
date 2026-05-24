@@ -1,0 +1,6 @@
+1. *"Find all completed research items tagged with X"* — SELECT items WHERE status = 'completed' AND tag IN (...)
+2. *"Has URL Y already been fetched?"* — SELECT 1 FROM processed WHERE url = Y (currently handled by `state/index.json`)
+3. *"Which sources in items tagged 'transformers' have not been checked?"* — JOIN items → tags → sources WHERE checked = 0
+4. *"List items by priority and status for the Kanban view"* — SELECT ... ORDER BY priority, status, added
+5. *"Find items whose titles or questions mention keyword Z"* — full-text search (FTS)
+6. *"Find research items semantically related to a query embedding"* — vector similarity search

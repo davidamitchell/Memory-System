@@ -1,0 +1,7 @@
+Supporting questions:
+- What is Leanstral? What architecture does it use, what problem does it solve, and what is the current maturity of the project?
+- How does Leanstral relate to the Lean 4 theorem prover and its ecosystem (mathlib and Lake)?
+- What role can AI agents play in formal proof construction - as proof search, proof repair, or proof synthesis tools - and what are the known limits?
+- How does this connect to the broader formal-methods landscape already investigated (Quint, Temporal Logic of Actions (TLA+), Dafny, Coq, Agda, `2026-03-14-reliable-software-llm-era`, `2026-03-10-formal-spec-intent-alignment-agentic-coding`)?
+- What does the Claude Code data-wipe incident - and the associated Hacker News (HN) discussion of AI agent autonomy ("Humans hesitate - AI agents don't") - add to the existing picture of AI agent risks and the case for explicit guardrails?
+- Where does formal proof engineering sit on the spectrum of guardrail approaches: is it complementary to or in competition with runtime checks, policy enforcement, and human oversight?

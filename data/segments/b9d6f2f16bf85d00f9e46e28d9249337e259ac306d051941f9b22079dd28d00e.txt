@@ -1,0 +1,1 @@
+6. **The database file must be treated as a derived artefact excluded from git, rebuildable from YAML front-matter on demand, because all embedded database formats (SQLite, DuckDB, ChromaDB, LanceDB) produce binary files that are not git-diffable.** YAML front-matter in Markdown files remains the source of truth for research item metadata. [high confidence]

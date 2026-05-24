@@ -1,0 +1,1 @@
+**[fact]** Neo4j is the most widely used graph database for knowledge graph storage; FalkorDB (Redis-based) and NetworkX (in-memory Python) are lighter alternatives for smaller corpora. LLM-to-graph integration patterns are documented for both (Neo4j blog; LlamaIndex integration). Source: neo4j.com developer blog; LlamaIndex knowledge graph examples.

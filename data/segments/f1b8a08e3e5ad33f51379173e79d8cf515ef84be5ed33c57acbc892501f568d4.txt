@@ -1,0 +1,1 @@
+[fact] Forbes Business Council (2025) distinguishes AI-native from AI-first: AI-first companies prioritise AI as a core capability to augment existing workflows; AI-native companies have AI woven into every layer, where AI agents don't just support but actively own and run key business processes. Source: web search (forbes.com/councils/forbesbusinesscouncil/2025/10/22).

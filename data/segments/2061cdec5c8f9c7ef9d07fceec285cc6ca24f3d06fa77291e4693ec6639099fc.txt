@@ -1,0 +1,1 @@
+2. **D4 (Research Tooling & Delivery) has drifted to 44% of backlog.** 11 of 25 items relate to tooling, interface, delivery, and transcript fetching. This crowding reduces space for AI Strategy (D1) and Agentic Systems (D2) items, which are more directly tied to professional decision-making. [fact — derived from tag analysis]

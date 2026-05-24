@@ -1,0 +1,9 @@
+- Type: knowledge, tool, backlog-item
+- Description:
+  - **Knowledge:** Domain map (5 domains with primary tags); four-dimension prioritisation rubric (scoring 1–3 per dimension, 10–12 = high, 6–9 = medium, 4–5 = low); drift detection thresholds (≥40% domain concentration in last 30 days or last 5 completions); monthly agenda review checklist (6 questions); current backlog diagnosis (priority inflation at 88% medium; D4 tooling drift at 44%; D2 agentic gap)
+  - **Tool:** `python -m src.main research agenda` command specification — extends `src/research/cli.py` using `ResearchItem.from_file()`, domain-map constant, Markdown report output, no new dependencies
+  - **Backlog items spawned:** `implement-research-agenda-command` (implement the `research agenda` CLI command and associated workflow); `research-domains-config` (move domain map to `config/domains.yaml`)
+- Links:
+  - `Research/completed/2026-02-27-research-backlog-vs-repo-improvement-backlog.md` (two-backlog distinction; priority mechanism differences)
+  - https://fortelabs.com/blog/para/ (PARA method — actionability-based prioritisation)
+  - https://mrx.sivoinsights.com/blog/how-jobs-to-be-done-connects-research-strategy-and-execution (JTBD — outcome-based priority)

@@ -1,0 +1,8 @@
+-- FTS5 index over research item content
+CREATE VIRTUAL TABLE IF NOT EXISTS items_fts USING fts5(
+    id UNINDEXED,
+    title,
+    question,
+    findings,
+    content='items'
+);

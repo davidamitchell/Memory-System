@@ -1,0 +1,4 @@
+**Constraints:**
+- Must produce a classification scheme that is operable by business analysts, not just risk specialists
+- Must be compatible with at least one major external regulatory framework (EU AI Act or NIST AI RMF 1.0)
+- Sources must be assessable for applicability to a regulated enterprise (financial services context preferred)

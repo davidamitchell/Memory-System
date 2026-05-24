@@ -1,0 +1,1 @@
+[inference] Calendar-driven reviews catch drift but arrive after the fact; change-triggered updates prevent drift. The most maintainable model combines both: mandatory documentation update as a change closure criterion, plus a quarterly review to catch drift from organic changes that bypassed the formal process.

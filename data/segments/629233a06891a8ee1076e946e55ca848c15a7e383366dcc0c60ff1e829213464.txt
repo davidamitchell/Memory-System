@@ -1,0 +1,19 @@
+- **Root question:** Does Artificial Intelligence (AI)-assisted coding increase software entropy over time without architectural guardrails, and how should teams measure that risk?
+- **A. Theory**
+  - A1. What do Hunt and Thomas mean by broken windows and software rot?
+  - A2. How do deep modules and information hiding change the expected entropy trajectory?
+  - A3. Which classic and modern complexity metrics map to these theories?
+- **B. Task-level empirical evidence**
+  - B1. Do controlled studies show better or worse local code quality with GitHub Copilot and related tools?
+  - B2. What kinds of defects or weaknesses appear even when task-level quality improves?
+- **C. Longitudinal empirical evidence**
+  - C1. Do repository-scale studies show more duplication, churn, or refactoring decline in the AI era?
+  - C2. What evidence exists for weaker human scrutiny or degraded feedback loops?
+- **D. Metric sensitivity**
+  - D1. Which metrics are most sensitive to local understandability problems?
+  - D2. Which metrics are most sensitive to cross-module cost-of-change problems?
+  - D3. Which metrics behave as early indicators versus lagging indicators?
+- **E. Synthesis**
+  - E1. Is the entropy hypothesis supported directly, indirectly, or not at all?
+  - E2. Is growth best described as linear, super-linear, or thresholded?
+  - E3. What warning signs should guarded teams watch before maintainability collapses?

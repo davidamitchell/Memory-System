@@ -337,7 +337,7 @@ The SHA algorithm mismatch (SHA-1 vs SHA-256) is the key risk: the `ms:contentHa
 
 ## W-0203
 
-status: ready
+status: done
 created: 2026-05-23
 updated: 2026-05-24
 blocks: [W-0204]
@@ -373,9 +373,9 @@ This is the thinnest possible first step for latent extraction: no new model, no
 
 ## W-0204
 
-status: ready
+status: done
 created: 2026-05-23
-updated: 2026-05-23
+updated: 2026-05-24
 blocks: [W-0205]
 blocked-by: [W-0203]
 research: []
@@ -384,6 +384,7 @@ assumptions:
   - A structured prompt (system prompt defining the schema + user prompt with document content) is sufficient to get consistent JSON output from an LLM
   - One research document is sufficient for the first slice — the goal is to establish viability, not coverage
   - The W-0203 eval harness is used to validate that the LLM extractor performs acceptably on the glossary corpus before being run on unstructured prose
+  - Primary testing corpus is `raw_document_corpus/` (50 files from `copilot/ontology-experiment` branch — see ADR-0005)
 uncertainty:
   - Which LLM to use (local model vs API call); the processor interface is agnostic — the choice is an implementation decision for this item
   - Whether the LLM requires a structured output schema (JSON mode / function calling) or whether prompt engineering is sufficient

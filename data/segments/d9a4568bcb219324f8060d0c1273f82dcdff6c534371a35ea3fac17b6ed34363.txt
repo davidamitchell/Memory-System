@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Analysis of ServiceNow's five native process documentation capabilities (Process Universe, Flow Designer, Playbooks, Workflow Editor, Process Mining), the structural causes of process documentation decay in ITSM platforms (80% inaccuracy rate, governance and ownership failures), the governance model required for documentation to stay current (named owners, RACI, change-triggered updates, three-board structure), and the minimum viable documentation approach (out-of-box templates plus delta plus escalation paths plus RACI). Includes assessment of why Process Mining is a conformance tool rather than a governance substitute, and identification of the CSDM-process documentation coordination gap.
+- Links:
+  - https://www.ctms-itsm.com/blogs/how-itsm-are-using-process-maps/ (CTMS practitioner survey — primary data on process map accuracy)
+  - https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/success/workbook/governance-basics.pdf (ServiceNow governance workbook — three-board governance model)
+  - https://us.fitgap.com/stack-guides/standardize-it-process-requirements-with-a-minimum-viable-process-blueprint (FitGap minimum viable process blueprint)

@@ -1,0 +1,1 @@
+7. **The `research agenda` CLI command can be implemented using only existing dependencies and extending existing CLI patterns.** `ResearchItem.from_file()` already parses all needed fields. The command adds a domain map constant and reporting logic to `src/research/cli.py`. [fact — derived from source inspection]

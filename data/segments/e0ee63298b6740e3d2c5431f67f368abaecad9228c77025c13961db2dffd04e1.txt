@@ -1,0 +1,3 @@
+**Branch E, what improves transfer without destroying depth?**
+- E1: Which transfer methods reduce ambiguity or increase absorptive capacity?
+- E2: Which methods merely translate enough shared context to let specialists and non-specialists coordinate?

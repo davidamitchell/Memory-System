@@ -1,0 +1,1 @@
+10. **No NZ technology companies (Xero, Trade Me, Datacom) have published SWE AI outcome data;** the closest regional case is ANZ (Australian parent), whose deployment is directly relevant to ANZ NZ engineering teams and provides a useful benchmark for NZ financial services organisations considering similar programmes.

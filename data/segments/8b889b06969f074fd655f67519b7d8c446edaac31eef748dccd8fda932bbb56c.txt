@@ -1,0 +1,1 @@
+When technology is moving fast, what is the synthesis step between exploration and exploitation, why is it so commonly skipped, what are the costs of skipping it, and what strategies allow organisations to move from exploration to exploitation without stifling either — while still making the investment pay off?

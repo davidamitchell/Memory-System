@@ -1,0 +1,1 @@
+6. The minimal concrete action for this repo is: (a) create `.github/workflows/copilot-setup-steps.yml` with checkout + Python + `pip install -e ".[dev]"` and a PAT for the submodule; (b) add a setup instruction block to `CLAUDE.md` / `AGENTS.md`; (c) configure a setup script in the Claude.ai project settings.

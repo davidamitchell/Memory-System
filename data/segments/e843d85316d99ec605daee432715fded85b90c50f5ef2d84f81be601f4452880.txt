@@ -1,0 +1,7 @@
+**In scope:**
+- Theoretical framing: software entropy as defined in *The Pragmatic Programmer* (Hunt & Thomas); entropy as a measure of disorder, unpredictability, and resistance to change in software systems
+- Empirical evidence of accelerated complexity growth in AI-generated codebases: before-and-after studies, longitudinal comparisons, or practitioner case studies
+- Objective complexity metrics applicable to AI-generated code: cyclomatic complexity (McCabe metric), coupling (afferent/efferent), cohesion, cognitive complexity (SonarQube definition), time-to-change (lead time for a small well-understood change), defect rates per unit of new code
+- Comparison between minimally guardrailed, prompt-first projects and projects with active architectural investment: how quickly maintainability degrades in the absence of guardrails
+- The "broken windows" analogy: whether AI coding accelerates the broken-windows effect by generating locally reasonable but globally incoherent code at high velocity
+- Shallow versus deep module structures as a complexity control mechanism: reference to John Ousterhout's *A Philosophy of Software Design*

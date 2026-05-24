@@ -1,0 +1,14 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| HSBC: 60% false positive reduction, 2–4× crime detection | https://www.hsbc.com/news-and-views/views/hsbc-views/harnessing-the-power-of-ai-to-fight-financial-crime | high | Disclosed by HSBC and Google Cloud |
+| JPMorgan: 95% false positive reduction, $1.5B savings | https://aiexpert.network/ai-at-jpmorgan/ | medium | Aggregated from multiple industry sources; primary JPMorgan disclosure limited |
+| SR 11-7 applies to AI/ML via broad model definition | https://kpmg.com/us/en/articles/2024/artificial-intelligence-and-model-risk-management.html | high | Confirmed by multiple regulatory and industry sources |
+| APRA CPS 230 board accountability for AI critical ops | https://www.validata.ai/post/cps-230-demystified-what-it-means-for-ai-and-automation | high | Official APRA standard, effective July 2025 |
+| DORA classifies AI as ICT, incident reporting timelines | https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act | high | Regulation text confirmed by EBA |
+| RBNZ no AI-specific guidance as of early 2025 | https://assets.kpmg.com/content/dam/kpmg/nz/pdf/2024/04/kpmg-financial-services-navigating-resilience-and-resolution.pdf | high | Consistent across KPMG NZ, RBNZ policy pages |
+| NZ banks Pillar 3 no standalone AI section | https://www.anz.com/content/dam/anzcom/shareholder/June-2024-Pillar-3-Disclosure.pdf | high | Verified against ANZ disclosure documents |
+| CFPB requires specific adverse action reasons for AI credit | https://www.consumerfinance.gov/about-us/newsroom/cfpb-issues-guidance-on-credit-denials-by-lenders-using-artificial-intelligence/ | high | Official CFPB guidance 2022/2023 |
+| Fed warns AI perpetuates direct and indirect discrimination | https://www.arnoldporter.com/en/perspectives/blogs/enforcement-edge/2023/08/the-fed-warns-about-ai-bias | high | Fed Vice Chair statement 2023 |
+| IIF-EY 2024: 66% have/plan C-suite AI ethics oversight | https://www.iif.com/portals/0/Files/content/Innovation/2024%20IIF-EY%20Survey%20Report%20on%20AI_ML%20Use%20in%20Financial%20Services_Public%2001.08.25.pdf | high | Published IIF-EY survey 2024 |
+| BIS Project Aurora: cross-institutional AML AI | https://www.bis.org/fsi/publ/insights63.pdf | high | BIS FSI Insights No. 63, Dec 2024 |
+| Wells Fargo independent validation and explainability toolkit | https://venturebeat.com/ai/embracing-responsibility-with-explainable-ai | medium | Industry reporting; Wells Fargo primary source limited |

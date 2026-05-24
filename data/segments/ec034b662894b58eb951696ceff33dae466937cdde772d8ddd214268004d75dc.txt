@@ -1,0 +1,1 @@
+**Outstanding gaps:** The 40% drift threshold and 5-domain taxonomy are inferences without empirical validation against historical data. Both are flagged with medium confidence and noted in Risks/Gaps.

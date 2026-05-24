@@ -1,0 +1,5 @@
+1. Review Popper's original demarcation criterion and his account of empirical content and degrees of testability.
+2. Map falsifiability onto Vapnik-Chervonenkis (VC) dimension and the growth function: how does a model with higher VC dimension score on Popperian falsifiability?
+3. Examine Kolmogorov complexity as a formal proxy for explanation length and its relationship to Minimum Description Length (MDL).
+4. Construct a formal framework distinguishing mechanistic models (low Kolmogorov complexity relative to predictive accuracy) from interpolative models (high Vapnik-Chervonenkis dimension, low excluded-observation content).
+5. Identify where modern deep learning sits in this framework.

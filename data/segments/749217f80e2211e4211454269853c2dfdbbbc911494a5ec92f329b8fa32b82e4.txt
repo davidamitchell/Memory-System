@@ -1,0 +1,6 @@
+Sources consulted:
+- Primary: Thoughtworks, "Moving beyond the hype: How to scale AI successfully" - https://www.thoughtworks.com/insights/whitepapers/how-to-scale-ai-successfully
+- Primary: Boston Consulting Group, "Where's the Value in AI?" - https://www.bcg.com/publications/2024/wheres-value-in-ai
+- Primary: Chief Information Officer (CIO), "Beyond pilots: How successful enterprises move from AI experiments to scalable transformation" - https://www.cio.com/article/4036767/beyond-pilots-how-successful-enterprises-move-from-ai-experiments-to-scalable-transformation.html
+- Tertiary: `Research/completed/2026-03-12-exploration-synthesis-gap.md`
+- Tertiary: `Research/completed/2026-02-28-exploit-explore-ai-portfolio-framework.md`

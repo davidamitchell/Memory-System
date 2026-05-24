@@ -1,0 +1,4 @@
+**Constraints confirmed:**
+- No new credentials or external services
+- Owner accesses repo via GitHub website / iOS only — any agenda report must be visible as a file commit or GitHub issue
+- Tooling must extend `src/research/cli.py` following existing patterns (type hints, `ruff`-compliant, tests in `tests/`)

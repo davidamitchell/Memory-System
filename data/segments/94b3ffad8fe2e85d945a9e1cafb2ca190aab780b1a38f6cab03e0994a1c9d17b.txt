@@ -1,0 +1,6 @@
+**In scope:**
+- Corporate AI strategies explicitly targeting SWE productivity: code generation, review, test generation, documentation, deployment automation
+- Organisations that have disclosed SWE AI programme results with measurable outcomes (cycle time, defect rates, PR throughput, cost per feature)
+- The progression from copilot-style augmentation (Type 1) through agentic builders (Type 2) toward autonomous coding agents (Type 3)
+- Governance models for AI-generated code: review standards, liability, IP ownership
+- NZ-relevant examples where accessible

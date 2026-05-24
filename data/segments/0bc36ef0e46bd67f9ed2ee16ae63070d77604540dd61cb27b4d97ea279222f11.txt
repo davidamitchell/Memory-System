@@ -1,0 +1,3 @@
+- [assumption] Public job boards are incomplete representations of total hiring, but role mix is still strategically informative because companies choose which functions they expose and refresh.
+- [assumption] The Built In mirror of OpenAI roles was sufficiently current for role-type sampling, but not strong enough for precise headcount comparison.
+- [assumption] The archived Lever counts for Mistral are exact visible postings for those snapshots, while archived HTML pages for other companies are lower bounds only.

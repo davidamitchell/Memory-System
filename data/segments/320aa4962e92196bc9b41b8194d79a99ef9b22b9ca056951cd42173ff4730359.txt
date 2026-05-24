@@ -1,0 +1,1 @@
+3. The credential constraint analysis is consistent across Q5a–Q5d: all three named frameworks require credentials not in the approved table; the custom approach does not.

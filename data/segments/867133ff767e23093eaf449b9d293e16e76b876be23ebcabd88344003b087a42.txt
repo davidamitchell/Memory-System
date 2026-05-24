@@ -1,0 +1,1 @@
+12. **Open Questions from completed items are an under-used backlog input.** The research template includes an Open Questions section, and several completed items contain questions not yet added as backlog items. The agenda review checklist should explicitly scan Open Questions sections for unadded follow-on items. [inference — observation from completed items review]

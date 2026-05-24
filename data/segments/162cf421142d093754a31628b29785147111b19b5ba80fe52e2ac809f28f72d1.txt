@@ -1,0 +1,1 @@
+3. **Assess evaluation credibility** - Which benchmarks are independently maintained and reproducible? Which scores are vendor self-reported versus externally verified? What are the known limitations, gaming risks, or blind spots of each benchmark?

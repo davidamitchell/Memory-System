@@ -1,0 +1,1 @@
+7. **Drift detection threshold: ≥40% domain concentration in items added in the last 30 days.** Secondary signal: last 5 completed items all from the same domain. The 40% threshold tolerates intentional focused sprints while catching unintentional drift. [medium confidence — calibrated estimate, not empirically validated]

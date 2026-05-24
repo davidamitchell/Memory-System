@@ -1,0 +1,1 @@
+3. [inference] Theory of Constraints (TOC) predicts that when AI dramatically reduces software engineering cost, the system bottleneck migrates upstream to requirement quality, decision-making velocity, and factory design, meaning the investment case shifts from engineering headcount to specification discipline, backpressure infrastructure, and strategic clarity.

@@ -1,0 +1,5 @@
+1. Define explainability using formal literature that distinguishes transparency, post hoc explanation, and contrastive explanation.
+2. Test whether multi-step LLM-based systems have a structural local explainability disadvantage before scale is introduced.
+3. Test how far deterministic software loses explainability once it becomes a production-scale distributed system.
+4. Compare where the two classes converge, especially in global and post hoc explainability.
+5. Produce a verdict about whether the gap is erased, narrowed, or persistent across dimensions.

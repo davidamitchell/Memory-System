@@ -1,0 +1,8 @@
+```text
+review_status: self-review completed
+acronym_audit: complete
+domain_term_audit: rewritten into plain language where no authoritative external definition was used
+claim_audit: complete
+findings_parity: maintained
+remaining_uncertainty: threshold values depend on effort and staffing assumptions
+```

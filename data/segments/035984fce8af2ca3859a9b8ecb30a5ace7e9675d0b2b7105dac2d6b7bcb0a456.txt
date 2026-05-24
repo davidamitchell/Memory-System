@@ -1,0 +1,18 @@
+- **Root question:** when a banking analyst receives a polished AI-written compliance narrative, what evidence shows that the prose can shift reviewer behaviour, and what controls are necessary so the narrative remains a proposal rather than a truth substitute?
+- **A. Behavioural mechanism**
+  - A1. What does the automation-bias literature show about over-reliance on automated recommendations?
+  - A2. Does the timing of AI advice, before or after an independent judgment, change human accuracy?
+  - A3. Do reviewers trust AI recommendations more when the recommendation matches their prior intuition?
+  - A4. Do natural-language explanations create a special over-reliance risk when they are convincing but wrong?
+- **B. Generative-language mechanism**
+  - B1. What evidence shows that Large Language Models (LLMs) produce user-agreeing or helpful but false outputs?
+  - B2. What official risk language describes confident but false generated content?
+  - B3. How do these properties translate into AI-written compliance narratives?
+- **C. Interface and workflow controls**
+  - C1. Which design choices measurably increase verification intensity or reduce passive acceptance?
+  - C2. Which controls are required by official oversight guidance?
+  - C3. Which controls keep evidence visible enough for a reviewer to challenge the narrative?
+- **D. Banking and accountability implications**
+  - D1. What do banking and AML supervisors say about poor governance or poor oversight of compliance technology?
+  - D2. What do AML obligations imply for unsupported AI-generated narrative summaries?
+  - D3. Which human-accountability controls remain necessary if AI narrative is used?

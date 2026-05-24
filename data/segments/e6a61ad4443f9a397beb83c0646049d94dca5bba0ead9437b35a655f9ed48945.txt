@@ -1,0 +1,4 @@
+1. **Domain map definition** — Define the primary research domains for this repository and their strategic priority:
+   - What are the 4–6 top-level domains? (Proposed: AI strategy and governance; agentic systems and architecture; cognitive science and AI foundations; research tooling and process; NZ regulatory and financial services context; emerging technology trends)
+   - How does each domain relate to the owner's professional context (NZ financial services, SWE, personal intellectual development)?
+   - What is the appropriate balance across domains? Should some domains always have ≥2 items in the backlog? Should some be capped?

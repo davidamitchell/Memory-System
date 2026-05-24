@@ -1,0 +1,1 @@
+5. The two-agent setup problem requires two separate mechanisms: `copilot-setup-steps.yml` (Copilot) and a UI-configured setup script (Claude Code web). There is no single file that closes both gaps.

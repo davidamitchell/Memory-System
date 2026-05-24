@@ -1,0 +1,1 @@
+Governance structures that correlate with successful implementations share: (a) independent validation function separate from model developers, (b) continuous monitoring with drift detection, (c) documented explainability for regulatory examination, (d) board-level accountability rather than delegated ownership at operational level only.

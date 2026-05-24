@@ -1,0 +1,4 @@
+**Approach sub-question 5 — Knowledge layering:**
+- Q5.1: What are the canonical abstraction layers for a knowledge management system?
+- Q5.2: How does pull-based injection work and what is the agent's trigger for selecting a layer depth?
+- Q5.3: How do knowledge layers map to episodic/semantic/procedural memory classifications?

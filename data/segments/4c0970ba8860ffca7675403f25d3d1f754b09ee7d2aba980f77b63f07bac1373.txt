@@ -1,0 +1,4 @@
+**Out of scope:**
+- Building an enterprise-specific forecasting model.
+- Claiming a universal cross-sector coefficient for debt accumulation where no public dataset supports one.
+- Vendor-specific product recommendations.

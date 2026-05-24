@@ -1,0 +1,1 @@
+4. **Compare minimally guardrailed versus guardrailed projects** - Survey available case studies, open-source project analyses, and practitioner retrospectives comparing projects built with strict SE fundamentals versus those built with minimal architectural guidance. If controlled studies are unavailable, document inference chains and label accordingly.

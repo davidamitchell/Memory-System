@@ -1,0 +1,3 @@
+**Out of scope:**
+- Fine-tuning, Reinforcement Learning from Human Feedback (RLHF), and alignment techniques
+- Specific LLM architectures, Transformer internals are supporting context, not the primary focus

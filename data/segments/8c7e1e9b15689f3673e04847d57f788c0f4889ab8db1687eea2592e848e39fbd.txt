@@ -1,0 +1,1 @@
+But those results still fall short of proving invariant causal world models, because probe-based evidence is not the same as interventional proof, and robustness improves when explicit causal constraints are added. [inference; source: https://arxiv.org/abs/2404.14082; https://aclanthology.org/2024.emnlp-main.381/]

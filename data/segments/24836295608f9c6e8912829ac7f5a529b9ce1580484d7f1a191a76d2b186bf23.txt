@@ -1,0 +1,5 @@
+**Out of scope:**
+- Choice of graph database platform, covered in [Mitchell (2026) Hosted Software-as-a-Service graph database options for knowledge ontology](https://davidamitchell.github.io/Research/research/2026-05-12-graph-db-saas-knowledge-ontology.html)
+- Runtime access patterns and failure modes, covered in [Mitchell (2026) Knowledge Graph in the live execution path of multi-step Large Language Model (LLM) systems: architecture and failure modes](https://davidamitchell.github.io/Research/research/2026-05-12-knowledge-graph-agentic-runtime-dependency.html)
+- Web ontology language selection
+- Access policies and digital-rights design

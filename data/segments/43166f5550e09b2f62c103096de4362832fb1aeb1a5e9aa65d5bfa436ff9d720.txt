@@ -1,0 +1,4 @@
+**Constraints:**
+- This item depends on the findings of Q1-Q12 and Q14-Q15 to define what governance capabilities exist and therefore what maturity stages can be meaningfully defined
+- Existing maturity frameworks must be assessed for adequacy before constructing a new one, because a new maturity model is only warranted if existing frameworks are materially insufficient
+- The model must address the gap between capability possession, having a tool or policy, and capability exercise, using it effectively and consistently, because a model based only on possession will overstate maturity

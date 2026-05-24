@@ -1,0 +1,3 @@
+**B. Lean 4 foundation**
+- B1. What guarantees does Lean 4 provide that make proof engineering materially different from ordinary AI coding?
+- B2. What do mathlib, Lake, elan, and leanchecker contribute to practical proof engineering?

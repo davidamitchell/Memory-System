@@ -1,0 +1,1 @@
+**Technical lens:** DBR is a pull-based production scheduling method. The rope is the pull signal: new work enters only when the constraint has capacity. This is structurally equivalent to reactive streams backpressure in software (a downstream demand signal to an upstream producer), but the TOC version operates at hour-to-day granularity rather than millisecond granularity.

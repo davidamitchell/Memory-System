@@ -1,0 +1,1 @@
+[inference] The Peng et al. experiment measured a single Build-phase task (implementing a server). The 55.8% figure is not a whole-SDLC estimate. Extrapolating it to other phases — particularly Discovery, Requirements, or Design — is not supported by the study.

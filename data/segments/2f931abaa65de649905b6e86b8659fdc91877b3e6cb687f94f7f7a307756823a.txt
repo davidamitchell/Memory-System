@@ -1,0 +1,8 @@
+- All questions in the decomposition tree are answered with evidence-backed claims.
+- All [fact] labels map to a primary source (S1–S7).
+- All [inference] labels are derived from evidence and the reasoning is stated.
+- The one remaining [assumption] (clone path on Anthropic VMs) is labelled and justified.
+- No unsupported causal leaps identified.
+- Contradictions: none identified. Tensions (UI-configured vs. repo-configured) are explained, not contradicted.
+- Unresolvable uncertainties (submodule access for Claude Code web) are flagged in §5 and in Risks, Gaps.
+- §6 Synthesis is complete and directly actionable.

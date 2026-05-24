@@ -1,0 +1,7 @@
+**B. Technology evaluation**
+- B1. Does SQLite + FTS5 satisfy A1 and A2 without external dependencies?
+- B2. Does sqlite-vec satisfy A3 while staying within the SQLite ecosystem?
+- B3. How does DuckDB compare to SQLite on A1–A4 for this use case?
+- B4. Does ChromaDB's persistent client mode satisfy A3 without server infrastructure?
+- B5. Does LanceDB embedded OSS satisfy A3 at this corpus scale?
+- B6. Which technology has the best fit with the git-based, binary-artefact constraint?

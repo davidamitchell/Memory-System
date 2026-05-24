@@ -1,0 +1,7 @@
+**For Claude Code on the web (iOS):**
+- Environment: Anthropic-managed Ubuntu 24.04 VM, runs as root.
+- Clones the repo (does not use GitHub API). Default branch cloned.
+- Setup controlled by: a Bash setup script configured in the Claude.ai UI (not a repo file).
+- `devcontainer.json` and `copilot-setup-steps.yml` are both ignored.
+- Instruction fallback: `CLAUDE.md` / `AGENTS.md` setup instruction block.
+- Submodule status for Skills: unconfirmed whether clone includes submodules; likely requires explicit `git submodule update --init` in the setup script.

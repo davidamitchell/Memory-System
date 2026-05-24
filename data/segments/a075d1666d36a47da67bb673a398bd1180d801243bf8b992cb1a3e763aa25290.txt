@@ -1,0 +1,1 @@
+**Research question restated:** What is backpressure infrastructure, specifically as it pertains to the Theory of Constraints (TOC), and what does academic research and real-world white papers say about its practical application?

@@ -1,0 +1,2 @@
+**Operational lens:**
+- The LayerÑ0–4 architecture requires different tooling at each layer: sqlite-vec for embedding storage (Layer 1–2), NetworkX or FalkorDB for graph storage (Layer 3), a schema definition file (Layer 4). These are all local-first, open-source-compatible, consistent with repo constraints.

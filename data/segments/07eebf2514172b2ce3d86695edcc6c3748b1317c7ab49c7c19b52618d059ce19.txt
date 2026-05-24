@@ -1,0 +1,2 @@
+**Narrative glue removed:**
+- No causal chain is claimed beyond what the evidence supports. The claim is that governance/ownership failure correlates with decay, not that any specific governance structure guarantees accuracy.

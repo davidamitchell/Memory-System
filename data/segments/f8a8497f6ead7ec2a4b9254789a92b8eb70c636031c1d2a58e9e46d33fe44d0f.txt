@@ -1,0 +1,1 @@
+1. **HSBC's AI-driven AML system (Google Cloud Dynamic Risk Assessment) reduced false positive alerts by 60% and increased confirmed financial crime detection by 2–4×**, processing billions of transactions in days rather than weeks. This is the most cited disclosed case of AI applied to AML with specific outcome metrics.

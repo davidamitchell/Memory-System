@@ -1,0 +1,1 @@
+**Constraints:** Must run in GitHub Actions using available credentials (GITHUB_TOKEN, COPILOT_GITHUB_TOKEN). No new external services without owner approval. Evaluation must complete within 5 minutes per research item to be practical in CI.

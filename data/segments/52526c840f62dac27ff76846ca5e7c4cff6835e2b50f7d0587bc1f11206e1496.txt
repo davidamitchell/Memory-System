@@ -1,0 +1,1 @@
+What benchmarks, metrics, and evaluation methodologies are used to measure the quality of Artificial Intelligence (AI) coding harnesses, including Integrated Development Environment (IDE) plugins, agentic coding assistants, and code completion tools, and which vendors and open-source projects score highest on those measures as of 2025-2026?

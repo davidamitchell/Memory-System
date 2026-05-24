@@ -1,0 +1,1 @@
+7. **No major enterprise is documented as running Type 3 (autonomous deployment with delegated authority) for production software at scale;** all financial services firms (JPMorgan, Goldman Sachs, Morgan Stanley, ANZ) and major platform providers (GitHub/Microsoft) maintain mandatory human review as the non-negotiable control point for AI-generated code before deployment.

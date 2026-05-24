@@ -1,0 +1,6 @@
+**Branch D — Prioritisation framework**
+- D1. What dimensions determine a research item's strategic value?
+- D2. What scoring rubric maps those dimensions to high/medium/low?
+- D3. How does the JTBD framework apply to research item prioritisation?
+- D4. Do OKRs provide useful top-down prioritisation constraints?
+- D5. Does PARA provide useful structural analogies?

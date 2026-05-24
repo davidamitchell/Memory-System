@@ -1,0 +1,5 @@
+**In scope:**
+- Evidence on throughput, coordination bottlenecks, queueing, and workaround demand or shadow Information Technology (IT) demand in large organisations.
+- Classification of workaround automation demand into demand that centrally governed software delivery can absorb versus demand that remains structurally resistant.
+- Sensitivity analysis over defensible AI-assisted software delivery productivity ranges.
+- Adjacent completed repository items that materially sharpen the demand, governance, and delivery-side interpretation.

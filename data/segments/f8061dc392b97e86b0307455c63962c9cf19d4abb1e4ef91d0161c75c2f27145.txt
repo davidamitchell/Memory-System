@@ -1,0 +1,1 @@
+The `BACKLOG.md` repo improvement backlog has its own prioritisation discipline (Epic numbering, slice sequencing). The research backlog (`Research/backlog/`) lacks an equivalent discipline. This research item is about designing that discipline.

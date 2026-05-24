@@ -1,0 +1,1 @@
+4. Submodule initialisation in `copilot-setup-steps.yml` requires a Personal Access Token (PAT) with read access to `davidamitchell/Skills` stored as a repository secret in the `copilot` GitHub Actions environment, because `GITHUB_TOKEN` is scoped to the current repository only and cannot access the private submodule. (high confidence)

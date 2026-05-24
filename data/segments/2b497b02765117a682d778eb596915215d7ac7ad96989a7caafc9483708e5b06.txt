@@ -1,0 +1,4 @@
+- Has RBNZ communicated any supervisory expectations for AI in risk models through off-cycle guidance, speeches, or supervisory dialogue — rather than published standards? A review of RBNZ speeches and Financial Stability Reports post-2022 may surface informal expectations.
+- How do NZ banks' Australian parent groups' APRA CPS 230 implementation plans interact with their NZ operations? Is there a documented interface?
+- Would BIS Project Aurora's cross-institutional AML model be viable in NZ given Privacy Act constraints? This may warrant a separate research item.
+- As RBNZ develops its policy roadmap for 2025–2026, AI governance is likely to emerge as a standalone topic — is there existing consultation documentation or discussion papers to monitor?

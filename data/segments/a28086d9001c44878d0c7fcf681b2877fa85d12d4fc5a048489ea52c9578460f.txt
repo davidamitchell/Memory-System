@@ -1,0 +1,1 @@
+**Constraints:** Focus on patterns suitable for production systems with strict service-level objectives and auditable failure handling.

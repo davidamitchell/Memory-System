@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: A cross-company analysis of how current and historical hiring patterns reveal a shift from pure frontier research toward commercialisation, deployment, governance, productisation, and compute operations.
+- Links:
+- https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true
+- https://api.lever.co/v0/postings/mistral?mode=json
+- https://developers.openai.com/blog/openai-for-developers-2025

@@ -1,0 +1,1 @@
+[inference] The eight-phase split is a working decomposition, not a universally standardised taxonomy. Different organisations use coarser splits (plan/build/ship) or finer ones. The eight-phase model is chosen here because it maps onto the distinct context requirements identified in the prompt engineering literature.

@@ -1,0 +1,3 @@
+- How should a formal verifier expose partial-progress evidence so the circuit-breaker can distinguish "slow but converging" from "oscillating and unsafe" without trusting the stochastic layer's self-report?
+- What verifier designs keep proof or model-check latency predictable enough for tight enterprise service-level objectives when policy complexity grows?
+- Which telemetry-derived budget classes are stable enough to update automatically, and which always require human approval through the control plane?

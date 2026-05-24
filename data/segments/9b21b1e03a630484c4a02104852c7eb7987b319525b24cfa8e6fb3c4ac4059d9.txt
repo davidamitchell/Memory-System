@@ -1,0 +1,3 @@
+- Which published financial-services incidents most clearly connect stochastic model variance to audit or compliance breach, rather than to general model-risk concern?
+- What minimum evidence package should a reviewer see before overturning or approving a model-generated governance recommendation in a high-volume workflow?
+- Can a standard policy-decision schema be defined for privacy classification, access approval, and regulatory-report drafting so that the same deterministic controls can govern all three?

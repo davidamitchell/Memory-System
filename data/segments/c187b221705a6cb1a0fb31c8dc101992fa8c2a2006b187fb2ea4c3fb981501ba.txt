@@ -1,0 +1,1 @@
+- [fact] Source classification for Section C: named company statements (Anthropic, Linear) are treated as primary disclosures about their own operating models; practitioner essays and consultancy estimates are treated as secondary evidence used to triangulate organisational implications.

@@ -1,0 +1,8 @@
+- review_result: pass
+- acronym_audit: passed
+- domain_term_audit: passed
+- claim_label_audit: passed
+- source_url_audit: passed
+- synthesis_findings_parity: aligned
+- confidence_assessment: medium
+- remaining_gaps: no universal bank-wide alert-count ceiling was found, so the final threshold remains capacity-ratio based and locally calibrated.

@@ -1,0 +1,6 @@
+**Area 1 — Application definition governance:**
+- Q1.1: What formal definition does the TBM framework use for "application", and at which layer of its taxonomy does it sit?
+- Q1.2: What boundary criteria distinguish an application from a platform, interface, or infrastructure component?
+- Q1.3: Who owns application definitions in practice, and what is the governance process for resolving edge cases?
+- Q1.4: What is the governance process for maintaining the application register as systems evolve?
+- Q1.5: What is the documented prerequisite relationship between the application register and downstream artefacts (team taxonomy, tagging)?

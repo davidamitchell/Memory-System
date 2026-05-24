@@ -1,0 +1,10 @@
+**Facts established:**
+- TBM ATUM positions applications at Layer 3 (Solutions) with four defining attributes: business capability delivery, defined ownership, support model, and lifecycle (TBM Council)
+- LeanIX boundary criteria for application vs. platform/interface/component are publicly documented and adopted by practitioners (LeanIX)
+- Application register is a Phase 1 deliverable in KPMG's 18-month model; team taxonomy is Phase 3 (KPMG)
+- Joint CIO+CFO sponsorship is the documented success pattern across three independent sources (KPMG, EY, Serviceware)
+- Forrester TEI: 270% ROI, sub-6-month payback for mature ITFM (Rego Consulting citing Forrester)
+- US federal agencies invested $1.5M–$28.9M per agency (GAO-25-106488)
+- 18 of 26 federal agencies failed to implement reliable cost allocation after 8 years (GAO-25-106488)
+- ISG identifies People and Data dimensions as primary failure causes (ISG)
+- People-dimension resistance (siloed mindsets) ranks ahead of tooling or data quality as root cause of stalls (ISG)

@@ -1,0 +1,1 @@
+[inference] The initial assumption in this item's frontmatter ("devcontainer.json does not affect the Copilot coding agent") is confirmed. W-0004 (restoring `devcontainer.json`) is therefore a separate concern from ensuring the Copilot coding agent has a correct environment; neither file closes the other's gap.

@@ -1,0 +1,1 @@
+SQLite is the obvious starting point (stdlib, file-based, git-friendly), but may need extensions for vector search (sqlite-vss, sqlite-vec). Alternatives include DuckDB (analytics), LanceDB (vector-native), or ChromaDB.

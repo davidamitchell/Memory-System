@@ -1,0 +1,4 @@
+- **[assumption]** Private-sector TBM failure rates are lower than the 69% federal rate. Justification: clearer commercial incentives and faster decision cycles; no equivalent private-sector audit exists for comparison.
+- **[assumption]** Automated NLP classification of work items achieves 70–85% accuracy at category level. Justification: extrapolated from general NLP benchmarks and practitioner accounts; no primary source measuring RUN/BUILD classification accuracy was found.
+- **[assumption]** KPMG's 18-month phased model is representative of industry practice. Justification: the phase logic is independently consistent with TBM Council guidance and Praecipio practitioner steps.
+- **[assumption]** Private-sector implementation costs are $2M–$10M for mid-to-large organisations. Justification: derived from federal data ($1.5M–$28.9M) with a discount for federal procurement overhead; no independent private-sector cost data found.

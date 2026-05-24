@@ -1,0 +1,3 @@
+- Which empirical benchmark would best distinguish latent world structure from grounded action-ready world model in a way both mechanistic interpretability and planning researchers would accept?
+- How much embodiment is actually necessary for meaning-like understanding: sensorimotor grounding, persistent tool use, interoception analogues, or full biological self-maintenance?
+- Could an artificial system satisfy Seth-like consciousness criteria without biology if it possessed robust interoceptive self-modeling and survival-relevant embodiment?

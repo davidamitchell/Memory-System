@@ -1,0 +1,4 @@
+**Constraints active:**
+- No benchmark model comparisons; focus is on prompt design and tooling, not model selection.
+- Practitioner accounts and controlled experiments preferred over vendor marketing claims.
+- Three sources (OpenAI prompt guide, Cursor docs, Anthropic extended thinking) were inaccessible during investigation — findings relying on them are labelled `[assumption]` or `[inference]` with the inaccessibility noted.

@@ -1,0 +1,3 @@
+- Would a Cedar-to-OPA publication pipeline reduce policy-authoring error enough to justify a second policy language in the first release?
+- Which existing bank platforms already provide append-only audit storage, so the evidence plane can extend them instead of creating a new logging subsystem?
+- Which runtime surfaces remain outside reachable PEP control in the target institution, and should those become explicit exception classes in the UELGF operating model?

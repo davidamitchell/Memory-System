@@ -1,0 +1,1 @@
+[fact] Root question broken into atomic sub-questions:

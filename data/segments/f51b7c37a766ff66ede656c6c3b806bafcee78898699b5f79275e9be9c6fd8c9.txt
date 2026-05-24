@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Formal criterion that combines finite-sample logical content, description length, and novelty testing to separate mechanistic models from interpolative fits in contemporary machine learning. [inference; source: https://plato.stanford.edu/entries/popper/; https://arxiv.org/abs/math/0406077; https://pmc.ncbi.nlm.nih.gov/articles/PMC12341957/]
+- Links:
+  - https://plato.stanford.edu/entries/popper/
+  - https://arxiv.org/abs/math/0406077
+  - https://arxiv.org/abs/1812.11118

@@ -1,0 +1,1 @@
+1. [fact] The software factory pattern is production-validated: Stripe Minions merges 1,300+ AI-authored PRs/week at enterprise scale, using blueprints (deterministic + agentic hybrid pipelines), a 500-tool MCP server, and isolated devboxes, demonstrating that full-cycle autonomous coding is viable in production rather than merely theoretical.

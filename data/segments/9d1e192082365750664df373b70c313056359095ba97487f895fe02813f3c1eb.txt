@@ -1,0 +1,5 @@
+**Out of scope:**
+- General web ontology design, covered in completed item `2026-05-12-web-ontologies-production-knowledge-graph-agentic`
+- Data mesh ownership and contracts, covered in completed item `2026-05-12-knowledge-graph-data-product-agentic`
+- Graph database platform selection, covered in completed item `2026-05-12-graph-db-saas-knowledge-ontology`
+- Digital Rights Management (DRM) for media content

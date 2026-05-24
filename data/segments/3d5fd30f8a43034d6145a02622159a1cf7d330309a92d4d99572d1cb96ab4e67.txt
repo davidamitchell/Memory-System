@@ -1,0 +1,1 @@
+The evidence weighs most strongly in favour of treating capability debt as an operational synthesis construct rather than as an already-standardised academic term. [inference; source: http://c2.com/doc/oopsla92.html; https://martinfowler.com/bliki/TechnicalDebtQuadrant.html; https://cmmiinstitute.com/learning/appraisals; https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1765804/]

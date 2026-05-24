@@ -1,0 +1,5 @@
+1. Formalise what an audit trail must capture to reconstruct one agent run, including prompts, retrieval, tool use, model configuration, outputs, and side effects.
+2. Compare the formal models that current verification tools actually support, including finite-state, probabilistic, and nondeterministic state-transition systems.
+3. Distinguish what can be verified exactly, what can only be verified after abstraction, and what remains approximate or runtime-only in agentic pipelines.
+4. Connect those technical limits to regulated operating environments that require traceability, contestability, and durable event logs.
+5. Synthesize the flexibility-predictability frontier for production design.

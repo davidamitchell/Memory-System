@@ -1,0 +1,1 @@
+**[assumption]** A 30-day window is appropriate for addition drift detection. **Justification:** The autonomous loop runs weekdays at 3 items/day, so 30 days represents ~60 items of throughput — enough to observe meaningful distribution patterns. A 7-day window would be too noisy; a 90-day window too slow to catch drift.

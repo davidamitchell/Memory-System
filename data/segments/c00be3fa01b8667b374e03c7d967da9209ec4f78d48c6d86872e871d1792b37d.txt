@@ -1,0 +1,1 @@
+6. **Surface gaps and open questions** - Where is the benchmark coverage weakest? What aspects of coding tool quality remain unmeasured by current frameworks? What do practitioners report that benchmarks miss?

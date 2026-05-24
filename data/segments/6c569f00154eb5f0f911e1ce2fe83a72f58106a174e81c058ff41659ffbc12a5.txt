@@ -1,0 +1,1 @@
+1. The Process Universe is a design-time reference library of ITIL 4-aligned process templates, KPIs, and RACI charts that accelerates ServiceNow implementations but does not automatically maintain process documentation as operational reality evolves. [High confidence]

@@ -1,0 +1,14 @@
+- Root question: What institutional design makes the most relevant knowledge path also the cheapest practical path for workers?
+  - A. Low-effort behaviour
+    - A1. Why do people prefer low-effort information paths?
+    - A2. Which effort types matter most, search, access, interpretation, coordination, or social risk?
+  - B. Strategic relevance
+    - B1. What makes a knowledge path strategically relevant rather than merely easy?
+    - B2. When do low-cost paths undermine relevance quality?
+  - C. Institutional alignment mechanisms
+    - C1. Which designs reduce the need for cross-unit information processing?
+    - C2. Which designs increase information-processing capacity when interdependence cannot be removed?
+    - C3. Which norms and local-rule mechanisms make knowledge sharing safe enough to be used?
+  - D. Operating model
+    - D1. Which governance patterns keep friction low without collapsing quality control?
+    - D2. Which indicators show that the relevant path is becoming the path of least effort?

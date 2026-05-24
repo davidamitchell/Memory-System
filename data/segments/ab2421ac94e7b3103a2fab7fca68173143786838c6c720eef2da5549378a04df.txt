@@ -1,0 +1,1 @@
+The prior research in this repository on context compression, context layers, and memory systems establishes that the context management problem is well understood at the prompt level. This item explores whether the problem requires going deeper - into the weights of the model itself.

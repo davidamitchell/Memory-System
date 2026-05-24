@@ -1,0 +1,5 @@
+**Out of scope:**
+- Languages designed for humans to write that happen to be used with LLMs (TypeScript, Rust, Python with type annotations) — these are covered in `2026-03-10-formal-spec-intent-alignment-agentic-coding.md`
+- Prompt engineering techniques that constrain model behaviour through instruction rather than grammar/type enforcement
+- Post-hoc validation pipelines (e.g. schema validators, linters applied after generation) unless they are architecturally inseparable from the language design
+- LLM fine-tuning approaches that target failure modes by adjusting weights rather than output grammar

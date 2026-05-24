@@ -1,0 +1,5 @@
+**Technical lens:** The rubric must be machine-parseable. If the judge outputs a free-form report, the CI step that parses pass/fail becomes fragile. The rubric prompt should instruct the judge to output a structured table:
+```
+| Dimension | Score (1-5) | Reasoning |
+```
+followed by a final `OVERALL: PASS` or `OVERALL: FAIL` line. This mirrors the pattern already used in `research-review-prompt.md` and is parseable with a simple `grep`.

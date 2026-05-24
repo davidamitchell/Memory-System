@@ -1,0 +1,1 @@
+[fact] The OctopusGarden author defines "dark factory" by contrast with "human-in-the-loop" factories: in the dark factory model, no human reviews code before production; convergence is determined by automated holdout test scoring. The author acknowledges this creates compliance and debuggability problems. Source: HN 47226107.

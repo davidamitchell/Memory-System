@@ -1,0 +1,1 @@
+There is a related AGENTS.md instruction: "When the Backlog Is Empty: Review `Research/backlog/` — pick up a research item that hasn't been started." But there is no guidance on *which* item to pick up or how to assess whether the overall backlog is healthy.

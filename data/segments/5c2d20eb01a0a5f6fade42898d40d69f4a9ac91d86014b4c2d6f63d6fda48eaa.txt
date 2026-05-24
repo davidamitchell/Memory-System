@@ -1,0 +1,3 @@
+- [inference; source: https://www.youtube.com/watch?v=8sS9UJzb_t4; https://www.youtube.com/watch?v=ykfQD1_WPBQ] Do the inaccessible 2025 transcripts contain a more explicit statement that LLMs are acceptable in code or other externally checkable domains while remaining unfit for consequential world action?
+- [inference; source: https://openreview.net/pdf?id=BZ5a1r-kVsf] How far does LeCun think optimization-based reasoning can go without a richer world model when the task is symbolic rather than physical?
+- [inference; source: https://openreview.net/pdf?id=BZ5a1r-kVsf] Which parts of LeCun's proposed architecture, especially the world model, critic, and configurator, are intended as immediate engineering proposals versus long-horizon research directions?

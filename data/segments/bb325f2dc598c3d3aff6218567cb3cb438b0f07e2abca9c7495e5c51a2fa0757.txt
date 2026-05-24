@@ -1,0 +1,1 @@
+1. **Establish the theoretical baseline** - Summarise the entropy model from *The Pragmatic Programmer* and the broken-windows theory as applied to software. Locate Ousterhout's deep modules / shallow modules framework and its predicted impact on long-term maintainability. Define the metrics that would operationalise each theory.

@@ -1,0 +1,1 @@
+1. **The Microsoft/GitHub/MIT RCT (2023) found that developers using GitHub Copilot completed a specified JavaScript task 55.8% faster** (1h11m vs 2h41m; 95% CI: 21–89%; P=0.0017), with the strongest benefit for less experienced and older developers — but the result applies to a single bounded task and does not generalize to complex multi-file enterprise work.

@@ -1,0 +1,8 @@
+-- Transcript storage (optional — large blobs)
+CREATE TABLE IF NOT EXISTS transcripts (
+    url          TEXT PRIMARY KEY,
+    content      TEXT NOT NULL,
+    fetched_at   TEXT NOT NULL,
+    word_count   INTEGER
+);
+```

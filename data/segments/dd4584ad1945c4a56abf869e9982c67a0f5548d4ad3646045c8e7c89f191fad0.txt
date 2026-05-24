@@ -1,0 +1,1 @@
+The RUN vs BUILD split is a recurring conversation in IT leadership, but the gap between "we should measure this" and "we do measure this reliably" is enormous in practice. The obstacles are not conceptual — they are organisational and operational:

@@ -1,0 +1,4 @@
+**Constraints:**
+- Logging requirements must be grounded in both operational need (debugging, incident response) and regulatory obligation (audit, compliance evidence generation)
+- Must address the privacy tension: logging prompt content may capture personal data; the resolution of this tension must be evidence-based
+- This item requires Q2 (identity) and Q3 (enforcement architecture) as inputs because logging must be identity-attributed and placed at enforcement points

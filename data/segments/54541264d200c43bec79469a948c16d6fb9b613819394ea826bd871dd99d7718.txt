@@ -1,0 +1,4 @@
+**Cluster C: Governance models that work**
+- C1. What ownership structure (roles, accountabilities) is required for process documentation to stay current?
+- C2. What review cadences are recommended, and what triggers out-of-cycle updates?
+- C3. What governance structures does ServiceNow itself recommend for platform and process governance?

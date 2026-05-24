@@ -1,0 +1,1 @@
+2. **Survey empirical evidence of AI-generated code complexity** - Search for studies that measure complexity trends in codebases with high AI code contribution. Include research on Copilot-generated code quality (Microsoft Research), academic papers, and practitioner longitudinal reports.

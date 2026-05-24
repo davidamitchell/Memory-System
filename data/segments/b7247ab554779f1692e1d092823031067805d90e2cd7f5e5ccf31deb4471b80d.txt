@@ -1,0 +1,1 @@
+The IP governance finding is underweighted in most corporate AI strategy discussions. An organisation that cannot assert copyright over its AI-generated code has a weaker IP position than one that carefully documents human authorship contributions. This is a non-obvious strategic implication that deserves prominence in any NZ technology governance framework.

@@ -1,0 +1,1 @@
+**Research question restated:** What techniques — LSA/LSE, knowledge graphs, concept maps, hierarchical document compression, and layered abstraction — most effectively represent large knowledge corpora for agent retrieval-augmented systems under context-window constraints, and how should they be combined for intent-aligned, precision retrieval?

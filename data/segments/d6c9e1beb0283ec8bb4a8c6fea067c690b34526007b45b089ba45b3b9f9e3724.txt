@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item documents DPROD's current structure, publication state, adoption signals, and relationship to DCAT, DPV, schema.org, FAIR, DPDS, and major catalog-platform models. [fact; source: https://www.omg.org/spec/DPROD/dprod-ontology.ttl; https://www.w3.org/TR/vocab-dcat-3/; https://www.w3.org/community/dpvcg/; https://schema.org/Dataset; https://www.go-fair.org/fair-principles/; https://dpds.opendatamesh.org/specifications/dpds/1.0.0/]
+- Links:
+  - https://www.omg.org/spec/DPROD/
+  - https://www.omg.org/spec/DPROD/dprod-ontology.ttl
+  - https://www.w3.org/TR/vocab-dcat-3/

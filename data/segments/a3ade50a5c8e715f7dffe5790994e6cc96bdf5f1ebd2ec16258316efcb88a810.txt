@@ -1,0 +1,1 @@
+3. [high] No paper or production system in 2022–2025 describes a programming language designed from the ground up for LLM agents to produce as their primary output format, with language constructs chosen to structurally address generation-layer or goal-layer failure modes. Source: Comprehensive search of arXiv cs.PL/cs.AI, PLDI/NeurIPS/ICML/ICLR 2022–2025 (this investigation).

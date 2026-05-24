@@ -1,0 +1,1 @@
+**[fact]** Jailbreaks and adversarial prompting can restore pre-training behaviour in RLHF-trained models, confirming that RLHF alignment is a suppression layer, not a structural rewrite. This is independently established by multiple researchers (arXiv:2403.04769 and related work on jailbreak anatomy).

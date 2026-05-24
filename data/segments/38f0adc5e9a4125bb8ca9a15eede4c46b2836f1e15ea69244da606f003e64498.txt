@@ -1,0 +1,1 @@
+2. **Concept maps vs. knowledge graphs**: The item asks about concept maps as a distinct technique. The evidence shows concept maps are subsumed by knowledge graphs for machine use. This is consistent — the investigation resolves the question definitively rather than ignoring it.

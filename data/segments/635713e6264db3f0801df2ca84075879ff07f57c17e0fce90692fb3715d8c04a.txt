@@ -1,0 +1,1 @@
+**Prerequisite:** This item builds on `2026-03-07-run-vs-build-it-spending-allocation` which covers the frameworks (Gartner RGT, TBM, McKinsey), cost inclusion methods, and outcome case studies. The frameworks and definitions from that item are assumed background knowledge here.

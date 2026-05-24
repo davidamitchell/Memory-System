@@ -1,0 +1,4 @@
+**Inferences with medium-to-high confidence:**
+- [inference] The current governance apparatus (SAFe, investment boards, QA teams, front doors) is rationally explained by software scarcity, and much of it would become unnecessary overhead if software production were cheap and fast.
+- [inference] TOC predicts the bottleneck shifts upstream when software execution is no longer the constraint.
+- [inference] Mid-tier banks have an approximately 2–4 year window before AI-native competitors close the regulatory and data gaps.

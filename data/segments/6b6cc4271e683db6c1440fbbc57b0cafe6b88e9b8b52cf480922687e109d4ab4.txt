@@ -1,0 +1,1 @@
+What deterministic control-plane patterns are required to operate hybrid Large Language Model (LLM), Energy-Based Model (EBM), and formal-verifier reasoning loops safely under real-time infrastructure constraints, including bounded-latency convergence failure modes?

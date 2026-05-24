@@ -1,0 +1,4 @@
+- What is the actual productivity impact of AI coding tools on complex multi-system software work (architectural decisions, integration design) as opposed to task-completion speed on bounded coding exercises?
+- At what agent capability threshold (SWE-bench score, real-world deployment rate) will enterprises begin relaxing human review gates for lower-risk production changes?
+- How are NZ technology organisations (Xero, Trade Me, Datacom) actually deploying AI coding tools, and what governance frameworks are they using? A structured interview programme would be needed to answer this question.
+- Does AI code review (not just code generation) address the DORA delivery stability problem — i.e., can AI-assisted review compensate for AI-accelerated code volume?

@@ -1,0 +1,2 @@
+[fact] "Code as Policies" (Liang et al., 2023; arXiv:2209.07753) uses Python as the LLM's output language for robot policies. The LLM generates Python programs that call domain-specific robot APIs. Python is not a purpose-built LLM-output language — it is a general-purpose language used because it is in the training distribution and supports hierarchical code generation. The contribution is the *design pattern* (LLM → executable code → robot action), not a new language.
+Source: https://arxiv.org/abs/2209.07753; https://code-as-policies.github.io

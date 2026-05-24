@@ -1,0 +1,4 @@
+- What is the empirical maintenance ratio for production agent workarounds after twelve months in stable enterprise use, broken down by review, operations, and incident recovery?
+- How different are the breakeven thresholds for low-frequency but high-value work compared with high-frequency transactional work?
+- What project-history datasets could replace the six-month, nine-month, and twelve-month debt-class archetypes with observed delivery distributions?
+- How much option value does a deliberate recurring-agent pilot create when it is used to discover the right target-state system design rather than as an indefinite workaround?

@@ -1,0 +1,11 @@
+**In scope:**
+- Leanstral: architecture, goals, current capabilities, limitations, open-source status, and community reception (`https://news.ycombinator.com/item?id=47404796`)
+- Lean 4 as a foundation: the interactive theorem prover (ITP) and programming language, and its use for both mathematics and software verification
+- AI-assisted formal verification as a category: proof search agents, Large Language Model (LLM)-based proof synthesis, and Lean integrations such as LeanDojo, ReProver, Copra, and Lean Copilot
+- Synthesis with prior completed research:
+  - `2026-03-14-reliable-software-llm-era` - cognitive debt, Quint, and reliability in the LLM era
+  - `2026-03-10-formal-spec-intent-alignment-agentic-coding` - formal intent specification hierarchy and expressiveness/verifiability tradeoff
+  - `2026-03-16-intent-driven-development` - the broader Intent Driven Development (IDD) landscape
+- The Claude Code data-wipe incident and HN community discussion on AI agent autonomy
+- Cross-referencing historical digest themes: "AI agents need every guardrail made explicit", "Don't mistake AI visibility for actual control", and "Stop trusting AI agents to guess your intent"
+- Positioning formal proof engineering as a guardrail mechanism: does it complement or substitute for runtime controls and human oversight?

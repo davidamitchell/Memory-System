@@ -1,0 +1,2 @@
+- [ ] [Clarke et al. (2018) Model Checking, MIT Press](https://mitpress.mit.edu/9780262038553/model-checking/) - seeded canonical textbook locator checked, but the accessible evidence extracted for this item came from PRISM, Storm, and SPIN documentation plus accessible papers.
+- [ ] [Baier and Katoen (2008) Principles of Model Checking, MIT Press](https://mitpress.mit.edu/9780262026499/principles-of-model-checking/) - seeded canonical textbook locator checked, but the publisher page did not yield extractable content in this environment.

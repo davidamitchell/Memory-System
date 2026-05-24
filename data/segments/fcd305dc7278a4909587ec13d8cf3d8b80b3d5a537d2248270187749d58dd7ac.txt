@@ -1,0 +1,3 @@
+**Architectural interventions:**
+- Reduce superposition density by widening FFN intermediate dimensions without proportionally scaling parameters elsewhere, allowing each feature to be more orthogonally encoded. **[inference, derived from Elhage et al. superposition theory]** Feasibility: medium — increases compute but does not change the training objective. Estimated effectiveness: speculative.
+- Architectural priors that explicitly promote neuron specialisation (e.g., auxiliary sparsity loss on FFN activations that penalises co-activation of semantically distinct features). **[inference]** Feasibility: low — experimental and not validated at scale.

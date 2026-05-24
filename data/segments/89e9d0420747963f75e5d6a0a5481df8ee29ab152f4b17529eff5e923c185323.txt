@@ -1,0 +1,2 @@
+**Governance lens:**
+The three-board governance model (strategic/portfolio/technical) recommended by ServiceNow addresses the organisational dimension of the decay problem. However, evidence of organisations that have successfully run this model for multi-year timescales is limited in the sources consulted. The governance recommendations are normative (what should be done) rather than empirical (what organisations do successfully). This is a gap in the evidence base.

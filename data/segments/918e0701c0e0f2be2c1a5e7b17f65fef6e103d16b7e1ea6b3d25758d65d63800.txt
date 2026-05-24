@@ -1,0 +1,1 @@
+Entity resolution should be conservative before merge and trace-preserving after merge, while conflict handling should distinguish structural invalidity from legitimate disagreement between sources. [inference; source: https://arxiv.org/abs/1905.06397; https://www.wikidata.org/wiki/Help:Merge; https://www.w3.org/TR/shacl/; https://www.wikidata.org/wiki/Help:Sources]

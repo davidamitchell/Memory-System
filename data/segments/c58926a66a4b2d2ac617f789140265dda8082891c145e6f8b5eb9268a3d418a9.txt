@@ -1,0 +1,1 @@
+**[fact]** YAML fields available for coverage analysis: `tags` (domain signal), `priority` (urgency signal), `added` (recency/age signal), `status` (lifecycle), `completed` (completion date), `blocks` (dependency signal), `output` (type signal).

@@ -1,0 +1,1 @@
+[inference] The organisational-entropy risk mirrors the desire-path evidence already captured in Thread 2 of `learnings.md`: informal work-arounds can accumulate faster than formal governance adapts.

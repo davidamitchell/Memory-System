@@ -1,0 +1,3 @@
+- Which observable indicators best predict that a seeker is approaching an abandonment threshold before the transfer visibly fails?
+- Which organisational roles most effectively serve as trusted intermediaries when the seeker cannot yet absorb the specialist knowledge directly?
+- How much can modern interactive tools reduce verification cost without creating false confidence in partially understood expert knowledge?

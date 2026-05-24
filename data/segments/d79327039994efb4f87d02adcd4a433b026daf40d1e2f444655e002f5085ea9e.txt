@@ -1,0 +1,1 @@
+5. The rubric prompt should instruct the judge to output a machine-parseable structured table (dimension | score 1–5 | reasoning) followed by a single `OVERALL: PASS` or `OVERALL: FAIL` line, enabling CI parsing with a simple `grep` command — the same approach proven reliable in the existing `research-review.yml` workflow. Confidence: high.

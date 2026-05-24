@@ -1,0 +1,9 @@
+**In scope:**
+- What must be logged for AI systems: prompt content, response content, model version, token counts, confidence scores, retrieved context (for Retrieval-Augmented Generation (RAG) systems), tool calls made by agents, and decisions taken
+- What must be logged for low-code automations: trigger events, action sequences, data inputs and outputs, Application Programming Interface (API) calls made, errors and exceptions, and human override events
+- Logging granularity and frequency: the trade-offs between full-fidelity logging (expensive, privacy-sensitive) and summary logging (cheaper, less auditable)
+- Decision traceability: how to link an automated decision back to the data inputs, model version, prompt template, and user intent that produced it, sufficient for post-incident reconstruction and compliance audit
+- Cross-system correlation: how to correlate events across multiple systems when an AI agent or automation workflow spans multiple platforms (correlation IDs, distributed tracing)
+- Attribution linkage: connecting system-level actions back to the user or process that initiated them, consistent with the identity model (Q2) and the enforcement architecture (Q3)
+- Retention and access: how long different categories of log data must be retained, who can access them, and under what conditions (regulatory retention requirements, right to erasure obligations)
+- Privacy constraints on logging: what cannot be logged (or must be pseudonymised) under data protection obligations

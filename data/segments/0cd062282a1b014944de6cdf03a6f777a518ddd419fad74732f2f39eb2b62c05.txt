@@ -1,0 +1,5 @@
+- [inference] No empirical study directly measures whether software engineering is the primary organisational constraint before and after AI adoption at the same organisation, so the TOC analysis remains theoretical.
+- [fact] The dark-factory compliance problem is unresolved for regulated environments. Source: https://news.ycombinator.com/item?id=47226107
+- [fact] The 5–10x team-size figures cited by practitioners are estimates rather than controlled study results. Source: https://alexop.dev/posts/the-software-factory/
+- [inference] The Jevons Paradox risk is widely discussed but not yet measured empirically in AI-native software contexts. Source: https://www.economicshelp.org/blog/220917/economics/jevons-paradox-definition-and-explanation/
+- [inference] Stripe's results relied on large bespoke tooling investments that mid-tier banks cannot replicate immediately. Sources: https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents, https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/core-banking-modernization-makers

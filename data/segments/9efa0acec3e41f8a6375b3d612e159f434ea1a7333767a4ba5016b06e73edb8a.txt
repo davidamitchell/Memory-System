@@ -1,0 +1,4 @@
+**Out of scope:**
+- User-interface or product-experience considerations
+- Formal policy encoding details, covered in the policy and formal verification companion item
+- Generative state abstraction design details, covered in the interface companion item

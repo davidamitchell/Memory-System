@@ -1,0 +1,1 @@
+1. The only tooling approach satisfying this repository's no-new-credentials constraint is a custom GitHub Copilot CLI-based implementation, because DeepEval, Pydantic Evals, and agentevals each require OpenAI or Anthropic API keys not listed in the approved credentials table in AGENTS.md. Confidence: high.

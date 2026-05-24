@@ -1,0 +1,9 @@
+**In scope:**
+- ODRL 2.2 information model: Policies, Rules (permissions, prohibitions, duties), Parties, Actions, Constraints, and Assets
+- Representing ODRL policies as Resource Description Framework (RDF) triples within or attached to a KG
+- Patterns for using ODRL to express read or write access on identified graph partitions, conditional usage permissions based on software-agent identity or purpose, and data-use obligations such as attribution or deletion after use
+- Relationship between ODRL and other access control frameworks: Web Access Control (WAC), Attribute-Based Access Control (ABAC), and dataset licenses such as Creative Commons and the Open Government Licence
+- Policy enforcement at query time: intercepting SPARQL Protocol and RDF Query Language (SPARQL) queries, applying named-graph-level policies, and returning filtered results
+- Relationship of ODRL to Solid pods and Linked Data Platform access control
+- Runtime identity: how software-agent identity is expressed and authenticated so ODRL party constraints can be evaluated at runtime
+- Relationship of ODRL to Ricardian contracts and machine-readable licence stacks

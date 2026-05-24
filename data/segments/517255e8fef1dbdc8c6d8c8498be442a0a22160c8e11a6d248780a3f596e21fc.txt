@@ -1,0 +1,5 @@
+**Constraints:**
+- Depends on RQ1 (invariant registration, which is a subset of the intent capture problem) and RQ4 (the PIP uses the intent baseline to detect suppression, so the representation must be evaluable by the PIP's anomaly detection, not just by the PDP)
+- The representation must be specific enough to be evaluable against tool calls, vague natural language is insufficient
+- The representation must be stable enough to survive legitimate operating context change, over-specification that flags legitimate evolution is a failure mode
+- The false-positive problem (flagging legitimate scope evolution) and the false-negative problem (missing genuine drift) must both be explicitly addressed, and the amendment protocol is the mechanism for the former

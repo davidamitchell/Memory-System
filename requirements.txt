@@ -3,4 +3,4 @@ sentence-transformers
 watchdog
 mcp
 pyarrow
-rdflib>=6.3
+rdflib>=6.3openai>=1.0

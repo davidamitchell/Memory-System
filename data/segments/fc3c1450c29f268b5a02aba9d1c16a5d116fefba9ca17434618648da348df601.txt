@@ -1,0 +1,9 @@
+**In scope:**
+- LeCun's primary paper, "A Path Towards Autonomous Machine Intelligence" (OpenReview, 2022)
+- Brown University host material and lecture video for "World Models: Enabling the AI Revolution"
+- The accessible official April 2025 interview material checked in this session
+- The seeded VivaTech keynote URL, checked in this session and treated according to what is actually accessible at that URL
+- The Pioneer Works host page and official YouTube page for "Do LLMs Understand?"
+- The technical mechanism LeCun identifies as the deficit: no predictive world model for action, weak common sense from text alone, and limited reasoning in token-only generative systems
+- The proposed alternative architecture, Joint Embedding Predictive Architecture (JEPA) and Hierarchical Joint Embedding Predictive Architecture (H-JEPA)
+- Whether LeCun's position shifts between the 2022 paper and the later public talks

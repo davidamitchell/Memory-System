@@ -1,0 +1,1 @@
+Question: determine whether public evidence supports a strong directional relationship between central IT throughput and the accumulation of unmet operational capability needs, and then estimate how much workaround automation demand a centrally governed build function can realistically absorb within three years.

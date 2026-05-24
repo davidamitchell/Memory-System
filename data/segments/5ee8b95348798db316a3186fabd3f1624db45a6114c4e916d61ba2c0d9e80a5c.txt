@@ -1,0 +1,1 @@
+- **Scope gap:** Gao et al. test SFT (instruction-tuned) models, not RLHF-trained models. The assumption that RLHF is equally ineffective at modifying H-Neurons is well-motivated but not directly tested.

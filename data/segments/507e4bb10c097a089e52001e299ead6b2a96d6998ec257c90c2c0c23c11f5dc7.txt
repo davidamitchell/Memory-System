@@ -1,0 +1,4 @@
+**Out of scope:**
+- Clause-by-clause treatment of individual compliance regimes beyond the logging and traceability implications of the European Union (EU) Artificial Intelligence (AI) Act
+- Mechanistic interpretability of model internals in isolation from end-to-end pipeline behavior
+- A claim that deterministic distributed systems are globally transparent without observability work

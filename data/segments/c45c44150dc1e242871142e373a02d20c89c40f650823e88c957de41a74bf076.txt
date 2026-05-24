@@ -1,0 +1,1 @@
+**Research question:** Given that H-Neurons emerge during pre-training, what does this reveal about how hallucination-prone behaviour is encoded during that phase, and what concrete changes to pre-training data, objectives, or architecture could reduce H-Neuron formation?

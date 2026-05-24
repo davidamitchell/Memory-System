@@ -1,0 +1,1 @@
+SQLite FTS5 (built into SQLite since 3.9.0 / 2015) provides BM25 ranking, phrase search, prefix search, and NEAR queries. [fact, source: sqlite.org/fts5.html, confirmed by direct documentation access]

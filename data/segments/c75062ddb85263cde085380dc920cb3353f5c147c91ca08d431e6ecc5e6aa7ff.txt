@@ -1,0 +1,3 @@
+**Out of scope:**
+- Vendor selection for a specific model provider or orchestration platform.
+- Organisation-specific budgeting recommendations without comparable benchmark data.

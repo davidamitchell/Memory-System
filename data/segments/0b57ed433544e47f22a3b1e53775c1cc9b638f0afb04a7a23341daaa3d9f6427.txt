@@ -1,0 +1,5 @@
+**Area 6 — Failure modes:**
+- Q6.1: What is the empirical failure rate of TBM programmes in large organisations?
+- Q6.2: What are the primary root causes of stalled or failed programmes?
+- Q6.3: What does a gamed or degraded model look like, and how is it detected?
+- Q6.4: What is the "now what?" stall point and how do organisations escape it?

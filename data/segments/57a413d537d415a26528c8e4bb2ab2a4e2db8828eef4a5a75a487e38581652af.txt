@@ -1,0 +1,5 @@
+**In scope:**
+- Quantitative and behavioural indicators of oversight degradation in high-volume review queues.
+- Capacity, rest-cycle, and deliberately planted-error testing mechanisms that preserve reviewer challenge capability.
+- Auditability of challenge and veto capacity under model-risk governance expectations.
+- Mapping to Federal Reserve model-risk expectations and similar supervisory guidance.

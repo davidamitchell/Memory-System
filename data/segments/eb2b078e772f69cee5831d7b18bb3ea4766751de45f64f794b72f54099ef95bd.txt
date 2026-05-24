@@ -1,0 +1,1 @@
+Design work happens here **before** implementation. Files in this folder are living documents — they evolve as the design is refined.

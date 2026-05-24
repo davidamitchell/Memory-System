@@ -1,0 +1,1 @@
+2. H-Neurons exhibit parameter inertia during SFT: they rank among the model parameters that change least during the transition from base to instruction-tuned model, with average cosine-similarity rank of ≈0.97 in Mistral-Small (P < 0.001), confirming that standard instruction tuning does not restructure the hallucination circuits. [confidence: high]

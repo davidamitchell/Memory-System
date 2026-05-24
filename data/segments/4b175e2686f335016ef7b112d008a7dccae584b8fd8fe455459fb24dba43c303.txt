@@ -1,0 +1,11 @@
+**Key findings:**
+1. Peng et al. (2023) measured a 55.8% task completion speed increase using GitHub Copilot in a controlled Build-phase experiment; this figure does not extend to full-SDLC estimates.
+2. Li et al. (2023) SCoT prompting outperforms CoT by up to 13.79% Pass@1 on code generation benchmarks by using sequence/branch/loop structures as intermediate reasoning steps rather than narrative prose.
+3. White et al. (2023) formalised prompt patterns as software patterns — reusable solutions applicable to SDLC phase tasks, combining persona, context manager, CoT, and output template patterns.
+4. Barke et al. (2022) found that programmers use AI coding assistants in two distinct modes — acceleration (known task) and exploration (ambiguous task) — and that prompts designed for one mode underperform in the other; SDLC phase maps to mode.
+5. GitHub Copilot Workspace (2024) is the production implementation of phase-aware decomposition: issue → spec → plan → code → test → review, with full human editability at the plan level.
+6. DORA 2024 found that AI adoption improves individual metrics (+2.1% productivity, +3.4% code quality) but reduces delivery throughput (-1.5%) and stability (-7.2%), attributing the instability to larger code batch sizes.
+7. Persistent context files (AGENTS.md, CLAUDE.md, `.cursorrules`, `.github/copilot-instructions.md`) encode phase guidance statically; the ecosystem is fragmented, with no single format supported by all tools.
+8. MCP (Model Context Protocol, 2024) provides a `prompts` primitive that enables dynamic, runtime-delivered phase-specific prompt templates, addressing the fragmentation and static limitations of context files.
+9. Stack Overflow 2024 found that 43% of developers trust AI output accuracy and 45% consider AI poor at complex tasks, consistent with gains concentrating in well-scoped Build/Testing tasks.
+10. Aider's documented principles — provide only relevant files, break goals into single steps, plan before generating — are direct empirical applications of context selection and decomposition theory.

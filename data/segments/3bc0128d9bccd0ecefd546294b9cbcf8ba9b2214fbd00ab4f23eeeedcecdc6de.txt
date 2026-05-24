@@ -1,0 +1,4 @@
+**Out of scope:**
+- Technical ML architecture comparisons (not a research-into-models question)
+- Detailed legal advice or specific compliance guidance (research-grade, not practitioner-grade)
+- Jurisdictions with no relevance to NZ-headquartered or NZ-operating organisations

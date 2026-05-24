@@ -1,0 +1,1 @@
+**Constraints:** Publicly accessible documentation, open-source tooling, and GitHub ecosystem; no proprietary organisational code.

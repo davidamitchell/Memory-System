@@ -1,0 +1,17 @@
+1. Define the transition boundary.
+   - 1.1 What does exploration mean in the organisational learning literature?
+   - 1.2 What does exploitation mean in the organisational learning literature?
+   - 1.3 What observable signal shows that an exploration is ready to leave pure learning mode?
+2. Define the synthesis step.
+   - 2.1 Is there a named, canonical "synthesis step" in the literature, or is this a cross-source construct?
+   - 2.2 What decisions and artefacts must exist before exploitation can be repeated at scale?
+3. Explain why synthesis is skipped.
+   - 3.1 What motivational or incentive mechanisms make synthesis less attractive than exploration?
+   - 3.2 What time-pressure and visibility dynamics make leaders underinvest in synthesis?
+4. Map the cost of skipping synthesis.
+   - 4.1 What scale-up failures appear when governance, architecture, workflow, and ownership are unresolved?
+   - 4.2 What knowledge and portfolio costs appear when learning is not codified?
+5. Identify workable strategies.
+   - 5.1 Which practices preserve learning speed while still forcing codification?
+   - 5.2 Which organisational structures convert isolated lessons into reusable capability?
+   - 5.3 What cadence works when the next tool arrives before the current one is fully exploited?

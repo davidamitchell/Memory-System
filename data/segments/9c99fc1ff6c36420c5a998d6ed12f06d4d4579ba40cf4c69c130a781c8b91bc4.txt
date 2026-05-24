@@ -1,0 +1,4 @@
+**Claim labelling check:**
+- All facts are mapped to sources (sqlite.org, github.com/asg017/sqlite-vec, duckdb.org, docs.trychroma.com, docs.lancedb.com, prior completed item).
+- All inferences are labelled and derived from evidence.
+- No unsupported assumptions in §3.

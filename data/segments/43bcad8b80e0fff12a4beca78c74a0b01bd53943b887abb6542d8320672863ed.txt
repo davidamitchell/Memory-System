@@ -1,0 +1,1 @@
+1. The claim that Pydantic Evals "defaults to GPT-4o" is consistent with the source documentation retrieved (https://pydantic.dev/articles/llm-as-a-judge states "`LLMJudge` evaluator sends your rubric and the task output to an LLM (GPT-4o by default)").

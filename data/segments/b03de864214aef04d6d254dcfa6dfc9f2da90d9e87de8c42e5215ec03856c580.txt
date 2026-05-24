@@ -1,0 +1,6 @@
+**In scope:**
+- Published corporate AI strategies where efficiency (cost reduction, throughput improvement, error reduction, cycle time) is the stated primary driver
+- National or sector strategies where economic productivity is the dominant justification
+- Case studies with at least one quantified outcome (cost saved, FTE equivalent, throughput gain)
+- Industries where efficiency gains are well-documented: financial services, manufacturing, logistics, agriculture, healthcare administration
+- Patterns across successful programmes: governance structures, build vs buy choices, data readiness, change management approaches

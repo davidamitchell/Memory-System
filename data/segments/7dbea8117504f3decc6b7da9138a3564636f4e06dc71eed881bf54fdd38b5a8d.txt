@@ -1,0 +1,1 @@
+- **MCP adoption maturity:** MCP was introduced in November 2024. Evidence for MCP `prompts` primitive use in production SDLC workflows is absent; claims about its capability are based on the protocol specification, not deployment experience.

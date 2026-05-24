@@ -1,0 +1,8 @@
+**In scope:**
+- Definition and structure of the data product ontology, its core classes, properties, and design intent
+- Known implementations: the Data Product Ontology (DPROD) from the Enterprise Knowledge Graph Forum (EKGF) and Object Management Group (OMG), and any related academic or industry-produced ontologies
+- Adopters: organisations, vendors, and standards bodies that reference or implement the ontology
+- Usage patterns: how the ontology is applied (tooling, catalogues, data contracts, data mesh governance)
+- Currency: date of last substantive update, maintenance status, and community activity level
+- Related standards and vocabularies: Data Catalog Vocabulary (DCAT), Data Privacy Vocabulary (DPV), schema.org Dataset, Data Product Descriptor Specification (DPDS), and relevant International Organization for Standardization (ISO) data-quality standards such as ISO 8000
+- Comparison: where the data product ontology overlaps with or defers to related standards

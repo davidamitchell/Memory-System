@@ -1,0 +1,1 @@
+How can Karl Popper's criterion of demarcation and falsifiability be mathematically formalised to distinguish between a model that explains a physical mechanism and one that merely interpolates observational data?

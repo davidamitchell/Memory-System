@@ -1,0 +1,4 @@
+**Branch B — Governance models**
+- B1: What human oversight models are organisations using for AI-generated code?
+- B2: What is the IP and copyright status of AI-generated code?
+- B3: What security and quality gate practices are documented?

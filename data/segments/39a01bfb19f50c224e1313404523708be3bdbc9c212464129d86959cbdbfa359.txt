@@ -1,0 +1,1 @@
+The Jevons Paradox research item (completed 2026-02-28) raised the open question of whether AI reducing code production costs leads to proportional increases in code produced — the SWE AI strategy question is inseparable from that demand-response dynamic.

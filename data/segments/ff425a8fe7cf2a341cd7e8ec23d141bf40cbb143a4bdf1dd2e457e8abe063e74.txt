@@ -1,0 +1,1 @@
+**Political risk:** The current government's light-touch approach is subject to electoral revision. If Labour returns to government, a shift toward binding algorithmic accountability standards is probable given their prior Algorithm Charter work. Organisations building AI-dependent processes should design for this regulatory shift, not against it.

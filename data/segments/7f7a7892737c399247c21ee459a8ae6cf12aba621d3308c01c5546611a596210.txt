@@ -1,0 +1,6 @@
+**[inference]** The optimal ranking combination for the research corpus is:
+1. Semantic cosine similarity (embedding-based): captures query-document relevance at the semantic level
+2. BM25 keyword match: captures exact term overlap, critical for precise queries
+3. Graph centrality (PPR from matched nodes): surfaces related knowledge the agent may not have explicitly queried
+4. Recency: for dynamic knowledge (e.g., recent research items outranking older ones on fast-moving topics)
+Combined via RRF, these four signals provide broad coverage without requiring score calibration. LLM reranking (cross-encoder) is a valid final step for the top-K candidates but adds ~300ms latency per reranking pass; appropriate for high-stakes queries, overkill for routine retrieval.

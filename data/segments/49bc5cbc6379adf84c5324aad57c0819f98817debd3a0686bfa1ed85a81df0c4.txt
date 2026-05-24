@@ -1,0 +1,1 @@
+3. The Workflow Editor, historically the closest native ServiceNow tool to a standalone process map, is in maintenance-only status and should not be used for new process documentation. [High confidence]

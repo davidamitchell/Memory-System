@@ -1,0 +1,1 @@
+1. The structured generation field has reached production maturity at specification hierarchy level 2 (schema/grammar enforcement). Two production libraries (Outlines, Guidance) with tens of thousands of GitHub stars and funding/adoption demonstrate this.

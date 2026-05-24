@@ -1,0 +1,5 @@
+- Every claim in §§0–6 is labeled as [fact], [inference], or [assumption].
+- The final synthesis introduces no claims that are absent from the investigation and reasoning sections.
+- The acronym audit was completed against the full document text, with first-use expansions confirmed for LLM, PP, PC, FEP, AT, GPT, and AI.
+- [fact] The main unresolved limits are source-access gaps for some books and the still-open dispute about how much latent structure is sufficient for genuine world modeling. Sources: https://proceedings.iclr.cc/paper_files/paper/2024/file/0a6059857ae5c82ea9726ee9282a7145-Paper-Conference.pdf ; https://doi.org/10.1111/nyas.15125
+- [inference] The note is ready to seed Findings because the strongest conclusion survives the main skeptical and optimistic counterarguments without depending on any inaccessible source. Sources: https://doi.org/10.1038/nrn2787 ; https://doi.org/10.1111/nyas.15125 ; https://www.quantamagazine.org/anil-seth-finds-consciousness-in-lifes-push-against-entropy-20210930/

@@ -8,6 +8,7 @@ Canonical domain map:
   Vocabulary                → ms:VocabularyDomain
   ArchitectureDecisionRecord → ms:ArchitectureDecisionRecordDomain
   Design                    → ms:DesignDomain
+  ResearchDocument          → ms:ResearchDocumentDomain
   Project                   → ms:ProjectDomain
   Meeting                   → ms:MeetingDomain
   Journal                   → ms:JournalDomain
@@ -24,6 +25,7 @@ _DOMAIN_URI_MAP = {
     "Vocabulary": "ms:VocabularyDomain",
     "ArchitectureDecisionRecord": "ms:ArchitectureDecisionRecordDomain",
     "Design": "ms:DesignDomain",
+    "ResearchDocument": "ms:ResearchDocumentDomain",
     "Project": "ms:ProjectDomain",
     "Meeting": "ms:MeetingDomain",
     "Journal": "ms:JournalDomain",

@@ -1,0 +1,5 @@
+[inference] Mapping each approach to the specification hierarchy from `2026-03-10-formal-spec-intent-alignment-agentic-coding.md`:
+- Outlines / Guidance / Jsonformer: **level 2** (structured output / schema constraints). They enforce format and field types, but not semantic content or behavioural invariants.
+- LMQL: **level 2–3** (structured output + simple type constraints such as `INT(N)`, set membership). Approaches level 3 in limited domains.
+- SGLang: **level 2** (structured output / grammar enforcement via compressed FSMs; the framework provides the scaffold for level-2 outputs).
+- ETH Zurich PLDI 2025 (see Branch B): **level 3** (type annotations with incremental type-checking; specifically TypeScript type constraints enforced at generation time).

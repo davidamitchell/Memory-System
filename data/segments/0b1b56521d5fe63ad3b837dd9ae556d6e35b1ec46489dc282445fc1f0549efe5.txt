@@ -1,0 +1,1 @@
+The exploit/explore framing from March (1991) is particularly important here: AI strategy in an exploit mode looks very different from AI strategy in an explore mode, and conflating them leads to poor investment allocation and risk mis-assessment.

@@ -1,0 +1,1 @@
+3. **DuckDB's columnar-vectorised OLAP engine is optimised for large-table analytical scans — a query pattern that does not match this repository's workload of point lookups by status, tag joins, and URL deduplication.** DuckDB also has no built-in vector search extension. [high confidence]

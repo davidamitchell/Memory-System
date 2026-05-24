@@ -1,0 +1,7 @@
+**In scope:**
+- Published benchmark suites and public leaderboards: Software Engineering Benchmark (SWE-bench), SWE-bench Verified, HumanEval, Mostly Basic Programming Problems (MBPP), LiveCodeBench, BigCodeBench, AgentEval, and any comparable coding-specific evaluation frameworks
+- Evaluation metrics: pass@k (probability at least one of k generated samples passes all unit tests, as defined in [Chen et al. (2021)](https://arxiv.org/abs/2107.03374)), task completion rate, regression rate, cost-per-task, edit acceptance rate, hallucination rate on code, and any composite or vendor-defined quality scores
+- Commercial AI coding tools: GitHub Copilot, Cursor, Devin (Cognition), Replit Agent, Amazon Q Developer, Google Gemini Code Assist, JetBrains AI, Microsoft Copilot (IDE)
+- Open-source and community-maintained tools: Aider, Continue.dev, Cline, OpenHands (formerly OpenDevin), SWE-agent, and comparable projects
+- Independent evaluations (academic papers, neutral third-party benchmarks, developer surveys such as Stack Overflow Developer Survey)
+- Vendor-published benchmark results, with explicit credibility assessment (self-reported vs. independently reproduced)

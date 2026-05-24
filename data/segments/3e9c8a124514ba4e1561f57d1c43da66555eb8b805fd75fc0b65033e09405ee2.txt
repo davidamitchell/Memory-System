@@ -1,0 +1,3 @@
+- Which specific Microsoft 365 Copilot generated-file workflows still lack verified public documentation for deterministic sensitivity-label inheritance in production tenants?
+- How should organizations classify and govern Copilot-generated derivative documents when the source set mixes labeled and unlabeled content?
+- Which regulator or procurement frameworks will begin requiring explicit evidence of Copilot oversharing assessment, web-grounding control, and post-use audit configuration as part of AI assurance?

@@ -1,0 +1,1 @@
+4. **Map candidates to the specification hierarchy.** Place each approach on the informal → structured output → type annotations → rich type system → formal verification continuum. Assess whether any approach occupies the "designed for LLM generation at level 4–5" position, or whether the field has only reached level 2–3.

@@ -1,0 +1,1 @@
+**[fact]** The existing `research-review.yml` workflow applies three checks: citation-discipline (all factual claims sourced), speculation-control (uncertain claims labeled), and remove-ai-slop (prose direct and free of formulaic patterns). These three checks represent the current operational definition of "acceptable quality." Source: `.github/workflows/research-review.yml`.

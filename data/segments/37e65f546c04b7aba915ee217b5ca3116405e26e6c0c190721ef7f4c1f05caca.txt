@@ -1,0 +1,1 @@
+Machine-readable vocabularies matter when catalogues, marketplaces, and governance tools need to exchange descriptions of datasets, services, ownership, policy, and lifecycle state across organisational boundaries. [fact; source: https://www.w3.org/TR/vocab-dcat-3/; https://www.go-fair.org/fair-principles/]

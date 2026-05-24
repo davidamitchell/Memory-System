@@ -1,0 +1,3 @@
+**Cluster E: CSDM and module integration**
+- E1. How are process maps connected to CI records and service definitions in the CSDM?
+- E2. When a process change occurs (new escalation path, changed approval chain), what in the platform needs to change alongside the documentation?

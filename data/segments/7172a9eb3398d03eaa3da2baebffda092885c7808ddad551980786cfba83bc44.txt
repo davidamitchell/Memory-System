@@ -1,0 +1,1 @@
+LanceDB's design target (petabyte scale, multi-modal) is significantly beyond the scope of this repository (hundreds of research items). The additional complexity and dependency weight is not justified. [inference]

@@ -1,0 +1,1 @@
+[fact] The default runner is `ubuntu-latest`, which as of mid-2025 resolves to Ubuntu 22.04 or 24.04 depending on GitHub's runner pool. The runner includes whatever Python version ships with those Ubuntu images (Python 3.10 on Ubuntu 22.04; Python 3.12 on Ubuntu 24.04). (S2: example uses `ubuntu-latest`; S5: example uses `ubuntu-24.04` explicitly.)

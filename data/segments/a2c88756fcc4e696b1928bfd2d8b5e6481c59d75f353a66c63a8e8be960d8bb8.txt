@@ -1,0 +1,6 @@
+1. **Define evaluation dimensions**: Map the research item format (§0–§7, Findings, Evidence Map) to a set of measurable quality criteria
+2. **Write rubric for each dimension**: For each criterion, define 1–5 scoring levels with explicit, unambiguous descriptions
+3. **Specify gold dataset requirements**: What properties must a "known-good" research item have to serve as a regression baseline?
+4. **Design CI workflow**: Trigger, model selection, cost estimate, threshold configuration, pass/fail reporting
+5. **Select tooling**: Evaluate Pydantic Evals vs DeepEval vs custom for this use case; recommend one
+6. **Produce artefacts**: (a) rubric document as a versioned file in this repo; (b) CI workflow YAML Ain't Markup Language (YAML) specification (not implementation — a separate task)

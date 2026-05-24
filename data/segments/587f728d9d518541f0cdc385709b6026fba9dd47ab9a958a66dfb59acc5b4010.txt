@@ -1,0 +1,8 @@
+**Sources used:**
+- **S1** (primary): https://docs.github.com/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent: GitHub official documentation for the Copilot coding agent environment
+- **S2** (primary): https://github.blog/ai-and-ml/github-copilot/onboarding-your-ai-peer-programmer-setting-up-github-copilot-coding-agent-for-success/: GitHub official blog post with `copilot-setup-steps.yml` examples
+- **S3** (primary): https://code.claude.com/docs/en/claude-code-on-the-web: Anthropic official Claude Code on the web documentation
+- **S4** (secondary): https://github.com/orgs/community/discussions/180953: Community report confirming submodule gap for Copilot coding agent
+- **S5** (secondary): https://github.com/orgs/community/discussions/172430: Community example of working `copilot-setup-steps.yml` for Python
+- **S6** (secondary): https://github.com/orgs/community/discussions/170877: Community discussion on `copilot-setup-steps.yml` constraints (no reusable workflows)
+- **S7** (prior research): https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-03-28-agent-instruction-loading-and-skills-access.md (W-0035 findings on submodule gap and PAT requirement for private submodules)

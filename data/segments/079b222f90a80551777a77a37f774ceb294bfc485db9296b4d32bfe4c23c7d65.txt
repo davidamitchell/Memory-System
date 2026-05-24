@@ -1,0 +1,1 @@
+**Constraints:** Evidence should come primarily from vendor documentation, regulator guidance, standards bodies, and official Microsoft governance material. Analyst or practitioner material can sharpen implementation implications but does not override primary evidence.

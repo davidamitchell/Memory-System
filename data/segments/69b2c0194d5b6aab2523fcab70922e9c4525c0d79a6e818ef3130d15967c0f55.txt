@@ -1,0 +1,4 @@
+JTBD, OKR, and PARA each contribute a different constraint to the prioritisation rubric:
+- JTBD contributes the "decision dependency" dimension — priority derives from downstream use, not topic interest
+- OKR contributes the concept of top-down quarterly constraints — a research OKR can override the bottom-up rubric for specific items
+- PARA contributes the insight that "Project-level" research (needed for current active work) should always be `high`, regardless of other dimensions

@@ -1,0 +1,5 @@
+**Branch A — Domain map**
+- A1. What are the 4–6 top-level research domains for this repo?
+- A2. What are the primary tags that map to each domain?
+- A3. What is the current domain distribution of the 25-item backlog and 23-item completed corpus?
+- A4. What is the appropriate minimum/maximum item count per domain?

@@ -1,0 +1,6 @@
+**In scope:**
+- Deterministic circuit-breaker patterns with statically verified fallback states
+- Transaction boundary design between probabilistic generation and deterministic actuation
+- Dynamic energy-function recalibration from runtime telemetry without destabilizing convergence
+- Latency and convergence bounds as policy and constraint complexity scales
+- Observability signals needed to trigger safe degradation and rollback paths

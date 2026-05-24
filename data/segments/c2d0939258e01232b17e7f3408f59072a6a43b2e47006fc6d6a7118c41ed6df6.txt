@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Lifecycle management guidance for Knowledge Graphs that support multi-step software agents, covering versioned publication, provenance, conservative entity resolution, and hybrid snapshot-plus-delta freshness control. [inference; source: https://github.com/dbpedia/databus/blob/master/docs/version.md; https://www.w3.org/TR/prov-o/; https://arxiv.org/abs/1905.06397; https://www.wikidata.org/wiki/Wikidata:Database_download]
+- Links:
+  - https://github.com/dbpedia/databus/blob/master/docs/version.md
+  - https://www.w3.org/TR/prov-o/
+  - https://arxiv.org/abs/1905.06397

@@ -1,0 +1,4 @@
+**Out of scope:**
+- Technical knowledge-representation standards for databases.
+- Skill-assessment frameworks for hiring and promotion.
+- A full welfare analysis of intellectual-property policy.

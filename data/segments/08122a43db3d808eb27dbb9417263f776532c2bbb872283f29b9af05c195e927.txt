@@ -1,0 +1,4 @@
+**Q4 - What does full lifecycle TCO include?**
+- Q4a. Which cost categories are systematically omitted from sticker-price comparisons?
+- Q4b. Do vendor implementation materials themselves show these omitted costs?
+- Q4c. Which of these costs are invariant to the choice of platform, and which are vendor-specific?

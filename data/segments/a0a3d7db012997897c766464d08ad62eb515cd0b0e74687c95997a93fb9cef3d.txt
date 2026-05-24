@@ -1,0 +1,1 @@
+[fact] Claude Code on the web runs on Ubuntu 24.04 as root. (S3: "Scripts run as root on Ubuntu 24.04, so `apt install` and most language package managers work.")

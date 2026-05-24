@@ -1,0 +1,2 @@
+**Q4.4 — Board argument structure:**
+The argument that lands with boards is sequenced as: (1) cost transparency (we do not know what we spend on what), (2) benchmark-driven identification of inefficiency (we spend more than peers on application X), (3) reallocating savings to growth initiatives (freeing up $Nm for strategic priorities). The argument that does not land is leading with the RUN/BUILD ratio itself — boards respond to savings and strategic reinvestment, not to an abstract ratio improvement. [inference, synthesised from EY/Rego/Serviceware]

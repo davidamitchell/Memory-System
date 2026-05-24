@@ -1,0 +1,6 @@
+**Branch A — Organisational strategies and outcomes**
+- A1: What specific productivity metrics has Microsoft/GitHub disclosed for GitHub Copilot adoption at scale?
+- A2: What has Google disclosed about AI's share of code production and its impact on engineering workflows?
+- A3: What outcomes has ANZ Bank reported from its 3,000-engineer GitHub Copilot deployment?
+- A4: What has DORA (Google's State of DevOps) found about AI's effect on delivery performance metrics?
+- A5: What productivity outcomes do financial services firms (JPMorgan, Goldman Sachs) report from AI coding programmes?

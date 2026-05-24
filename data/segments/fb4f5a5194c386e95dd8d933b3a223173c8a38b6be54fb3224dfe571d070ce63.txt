@@ -1,0 +1,1 @@
+Queries 1–4 are relational; 5 is FTS; 6 is vector. [inference: derived from workflow and codebase review]

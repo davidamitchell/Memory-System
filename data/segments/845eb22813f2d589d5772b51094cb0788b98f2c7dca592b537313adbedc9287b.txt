@@ -1,0 +1,1 @@
+12. Reusable workflows (specified via `uses:` at the job level) are not supported in `copilot-setup-steps` jobs; all steps must be specified inline in the workflow file, which prevents extracting common setup logic into a shared workflow. (medium confidence: confirmed by community discussion S6; not mentioned in primary GitHub documentation)

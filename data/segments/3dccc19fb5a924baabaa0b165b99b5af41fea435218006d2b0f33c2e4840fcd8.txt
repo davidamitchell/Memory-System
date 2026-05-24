@@ -1,0 +1,6 @@
+- **[fact]** OpenAI's official careers pages and xAI's official site were blocked by Cloudflare during this session.
+- **[fact]** Meta's AI careers page required login, so no direct current role census was possible.
+- **[fact]** Glassdoor, Indeed, Bloomberg, and The Information were blocked, while Hacker News returned rate limiting, so triangulation from job boards and premium reporting was incomplete.
+- **[fact]** Levels.fyi was reachable, but not in a way that exposed comparable team-level compensation signals across companies.
+- **[fact]** Historical role-volume comparison is strongest for Mistral and weaker elsewhere because archived public APIs were unavailable and some archived pages were partial.
+- **[inference]** OpenAI and Meta conclusions are directionally strong but numerically weaker than the Mistral, Anthropic, Google DeepMind, xAI, and Cohere findings.

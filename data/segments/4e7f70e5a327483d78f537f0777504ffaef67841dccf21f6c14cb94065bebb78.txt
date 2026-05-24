@@ -1,0 +1,1 @@
+**Scope confirmed:** In scope are implementation mechanics, governance processes, sequencing dependencies, and failure modes drawn from practitioner accounts and post-implementation reviews. Out of scope are theoretical framework definitions (covered in prerequisite item `2026-03-07-run-vs-build-it-spending-allocation`), benchmark ratios, and accounting standards.

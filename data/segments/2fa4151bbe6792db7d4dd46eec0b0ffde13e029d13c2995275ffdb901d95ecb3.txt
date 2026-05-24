@@ -1,0 +1,8 @@
+**In scope:**
+- How organisations define "application" in practice — the governance process, who decides, how edge cases (shared platforms, vendor bundles, middleware) are resolved, and how the definition is maintained over time
+- How teams are defined and kept consistent — the challenge of a shared team taxonomy when org structures change, when work cuts across teams, and when contracts don't align with internal team boundaries
+- How work-item (ticket) tagging is enforced or incentivised — tooling choices, training, gamification, automation, and what happens when tagging breaks down
+- How contracts and vendor agreements are mapped to applications — the data model and the operational process for keeping that mapping current
+- Who sponsors these programmes, how the initial investment is justified, and what the change management approach looks like
+- The sequence and dependencies of the implementation — what has to be true before each step can work
+- Failure modes: what breaks first, what is harder than expected, and how organisations recover

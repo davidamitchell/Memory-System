@@ -1,0 +1,1 @@
+To what extent do Large Language Models (LLMs) optimise strictly for linguistic form and statistical token distribution rather than constructing internal, invariant causal models of reality?

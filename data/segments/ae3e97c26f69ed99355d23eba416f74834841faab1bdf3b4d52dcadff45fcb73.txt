@@ -1,0 +1,4 @@
+**Out of scope:**
+- Detailed reinvestigation of the multi-armed bandit or reinforcement learning (RL) formulations of explore–exploit (covered in prior items)
+- Full organisational change management theory beyond what is directly relevant to the synthesis step
+- Vendor-specific tooling evaluation

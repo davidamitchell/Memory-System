@@ -1,0 +1,2 @@
+**Check 3: Is the claim "no purpose-built LLM-output language exists" strong enough to be stated?**
+The evidence base is: comprehensive web search across arXiv, PLDI, NeurIPS, ICML, ICLR 2022–2025 proceedings; all named sources in the research item's source list were checked; no primary source contradicts this claim. The correct epistemic label is [inference] — the absence of evidence from a comprehensive but not exhaustive search supports this claim with high confidence but not certainty. Stated as inference in §2. ✓

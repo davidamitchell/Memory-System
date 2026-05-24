@@ -1,0 +1,1 @@
+- [inference; source: https://cmmiinstitute.com/learning/appraisals; https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook; https://www.iso.org/standard/81230.html; https://davidamitchell.github.io/Research/research/2026-04-26-ai-governance-culture-incentives-behaviour.html] The assessment mechanism should use the following rules.

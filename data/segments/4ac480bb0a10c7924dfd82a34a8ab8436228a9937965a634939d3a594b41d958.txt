@@ -1,0 +1,1 @@
+The case studies from the prerequisite item (National Grid, Liberty Mutual, UPMC, Hermes Parcel) describe *what* was achieved. This item asks *how* — the implementation mechanics, the organisational prerequisites, and the change management required to make the numbers trustworthy.

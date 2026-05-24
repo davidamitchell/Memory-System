@@ -1,0 +1,1 @@
+[inference] For intelligence, many tasks reward latent structure and pattern compression, so LLMs can appear broadly capable, but planning- and embodiment-heavy domains reveal the absence of the sensorimotor loop that predictive processing treats as central. Sources: https://arxiv.org/pdf/2005.14165 ; https://doi.org/10.1111/nyas.15125

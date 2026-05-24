@@ -1,0 +1,1 @@
+**Constraints:** Builds directly on Phase 2, especially Research Question 2.4 on Pearl's Causal Hierarchy theorem, and must ground claims in formal properties rather than anecdote.

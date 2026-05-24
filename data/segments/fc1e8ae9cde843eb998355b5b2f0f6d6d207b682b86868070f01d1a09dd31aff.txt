@@ -1,0 +1,7 @@
+**Output section:**
+- Type: `knowledge`
+- Description: Survey of structured generation tools and languages for LLM output (2022–2026), mapping each to the specification hierarchy and failure mode taxonomy. Finding: no purpose-built LLM-output language at levels 4–5 exists; production maturity is at level 2; research frontier is at level 3 (ETH Zurich PLDI 2025).
+- Key sources:
+  - https://arxiv.org/abs/2504.09246 — ETH Zurich PLDI 2025: type-constrained decoding for TypeScript
+  - https://github.com/dottxt-ai/outlines — Outlines: production-grade level-2 structured generation
+  - https://arxiv.org/abs/2212.06094 — LMQL: academic progenitor of constrained LLM output (PLDI 2023)

@@ -1,0 +1,1 @@
+[inference] The Workflow Editor is not viable for new process documentation. Its graphical flowchart output has been the closest native SNOW equivalent to a process map, but the platform has moved away from it. The implication is that SNOW does not have a dedicated tool for authoring standalone BPM-style process documentation separate from automation configuration.

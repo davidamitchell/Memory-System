@@ -1,0 +1,5 @@
+**In scope:**
+- Mathematical formalisation of Popper's falsifiability criterion in the context of statistical learning theory
+- Relationship between Vapnik-Chervonenkis (VC) dimension and the amount of observational possibility a model class rules out
+- Kolmogorov complexity and Minimum Description Length (MDL) as operationalisations of explanation length and Occam's Razor
+- Distinguishing explanatory models from purely interpolative curve-fitting models

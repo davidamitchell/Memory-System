@@ -1,0 +1,2 @@
+**Q1.1 — TBM application definition:**
+The TBM Council ATUM (Application, Technology, and Usage Model) positions applications at Layer 3 (Solutions) of a 4-layer cost taxonomy: IT Tower → IT Sub-tower → Solution → Business Capability. An "application" in TBM is a software unit delivering a business capability with a defined owner, support model, and lifecycle. [fact, TBM Council ATUM documentation]

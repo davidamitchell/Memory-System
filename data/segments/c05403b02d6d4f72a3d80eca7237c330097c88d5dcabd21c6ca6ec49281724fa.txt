@@ -1,0 +1,2 @@
+[fact] The ETH Zurich approach is formalised first for a simply-typed lambda calculus and then extended to TypeScript. It is a generation-time enforcement mechanism, not a post-hoc validator.
+Source: https://arxiv.org/abs/2504.09246

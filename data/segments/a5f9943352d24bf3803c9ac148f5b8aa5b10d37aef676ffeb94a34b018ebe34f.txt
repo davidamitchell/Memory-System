@@ -1,0 +1,1 @@
+**Economic lens:** TA reframes the cost of WIP from a balance sheet item to a flow constraint. Excess WIP is not just a storage cost; it masks problems, extends lead times, and prevents the constraint from working on the right jobs. Backpressure (via the rope) directly reduces this cost.
