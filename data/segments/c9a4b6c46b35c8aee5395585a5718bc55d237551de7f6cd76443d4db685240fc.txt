@@ -1,0 +1,5 @@
+subgraph Store["Storage Layer"]
+        DSTORE[Document Store]
+        OSTORE[Ontology Store]
+        RS[Resolver Service]
+    end

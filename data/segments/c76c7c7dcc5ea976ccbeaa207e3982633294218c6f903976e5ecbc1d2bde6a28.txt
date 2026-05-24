@@ -1,0 +1,1 @@
+The pipeline is end-to-end and produces correct, provenance-traced Turtle. Extraction is **rule-based**: it reads explicitly declared fields from YAML front-matter. This works perfectly for the glossary corpus (structured, hand-authored) and provides a verifiable ground truth for evaluating future extraction strategies.

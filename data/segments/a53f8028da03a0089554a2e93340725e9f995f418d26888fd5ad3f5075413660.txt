@@ -1,0 +1,1 @@
+Following ADR-0002 (move from vector storage to ontology), the system requires a concrete architecture for how ontologies are built, structured, versioned, and queried.

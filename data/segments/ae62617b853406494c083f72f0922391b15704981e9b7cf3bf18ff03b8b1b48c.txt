@@ -1,0 +1,6 @@
+| Component | Description |
+|---|---|
+| **Extraction Activity** | A recorded execution instance of a Concept Extraction Processor that produced a set of candidate assertions |
+| **Processor Version** | The versioned identity of a processor (name + semver), recorded on every Extraction Activity |
+| **Assertion Lineage** | The supersession and invalidation history of an Assertion Node across ontology versions |
+| **Trust Metadata** | Attached to a Document Source or Prepared Document. Fields: `source_authority` (authoritative / secondary / inferred / unknown), `freshness_date` (ISO-8601), `approval_state` (pending / accepted / rejected). Confidence weighting is deferred — see Open Questions |

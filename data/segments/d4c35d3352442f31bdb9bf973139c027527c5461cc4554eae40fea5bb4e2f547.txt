@@ -1,0 +1,14 @@
+| # | Processor | Input | Output | Responsibility |
+|---|-----------|-------|--------|----------------|
+| 1 | **Sourcing Processor** | Document Source | Raw Document | Capture immutable source verbatim |
+| 2 | **Preparation Processor** | Raw Document | Prepared Document | Clean and normalise content |
+| 3 | **Segmentation Processor** | Prepared Document | Prepared Segments | Split into content-addressed, immutable fragments |
+| 4 | **Metadata Processor** | Source + Prepared Document | Metadata Envelope | Attach retrieval, lineage, and trust metadata |
+| 5 | **Domain Classification Processor** | Prepared Document | Domain Signals | Candidate domain labels from content analysis |
+| 6 | **Domain Matching Processor** | Domain Signals | Domain Document | Map candidates to canonical upper ontology domains |
+| 7 | **Concept Extraction Processor** | Domain Document + Segments | Delta Proposal + Extraction Activity | Extract candidate assertions with segment evidence links |
+| 8 | **Ontology Build Processor** | Delta Proposal | Candidate Domain Updates | Construct or update domain ontology graph |
+| 9 | **Consistency Validation Processor** | Candidate Updates | Validation Report | Detect contradictions, circular definitions, collisions |
+| 10 | **Reconciliation Processor** | Validation Conflicts | Canonical Merge Resolution | Resolve semantic conflicts; route upper ontology changes to Alignment Governance |
+| 11 | **Version Commit Processor** | Validated Graph State | Versioned Ontology | Tag, diff, and commit an immutable snapshot |
+| 12 | **Export Processor** | Versioned Ontology | OWL / RDF-Turtle / JSON-LD | Serialise for external tooling and archival |

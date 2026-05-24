@@ -1,0 +1,5 @@
+P1->>P2: raw document
+    P2->>P3: prepared document
+    P3->>Store: store Prepared Segments (content-addressed)
+    P2->>P4: prepared document
+    P4->>Store: attach Trust Metadata

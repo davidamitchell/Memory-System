@@ -1,0 +1,2 @@
+*Add tokenisation, POS tagging, and NER as an enrichment step in p02.*
+Feeds richer signal (named entity spans, dependency parses) to p07. Evaluate whether NLP preprocessing improves extraction quality over Phase 3 baseline. spaCy or equivalent; no model training required at this phase.

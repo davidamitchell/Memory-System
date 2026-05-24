@@ -1,0 +1,1 @@
+This ADR supersedes ADR-0003. The design is still at the conceptual level; library and deployment choices are deferred.

@@ -1,0 +1,2 @@
+*Attach numeric confidence scores to extracted assertions.*
+Score derives from extraction method (rule-based > LLM-certain > LLM-uncertain), source authority, and segment evidence count. Consistency validation and reconciliation processors use scores to rank competing assertions. Evaluated: does the confidence model correctly rank assertions from authoritative vs inferred sources?

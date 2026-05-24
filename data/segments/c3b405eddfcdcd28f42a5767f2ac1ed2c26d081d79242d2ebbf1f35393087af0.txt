@@ -1,0 +1,1 @@
+**Entry gate:** Do not advance to Plan until you can state the task in one sentence and have confirmed no existing file supersedes the work.

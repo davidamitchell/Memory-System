@@ -1,0 +1,5 @@
+| Layer | Name | Description |
+|-------|------|-------------|
+| Source | **Sourced Document (Raw)** | Verbatim copy from the source; never modified |
+| Prepared | **Sourced Document (Prepared)** | Cleaned, stripped of markup/images/non-readable chars; enriched with metadata (source, retrieval time, method, MIME type, lineage, tags) |
+| Scoped | **Domain Document** | A prepared document assigned to one or more domain buckets |

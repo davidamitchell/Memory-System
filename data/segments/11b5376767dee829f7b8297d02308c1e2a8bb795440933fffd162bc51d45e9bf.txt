@@ -1,0 +1,1 @@
+An assertion in the ontology links back through an Extraction Activity to the Prepared Segment that evidences it.

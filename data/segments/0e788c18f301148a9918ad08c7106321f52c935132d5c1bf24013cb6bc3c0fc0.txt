@@ -1,0 +1,2 @@
+*Single glossary file → end-to-end pipeline → queryable concept card.*
+All 12 processors wired. Ground truth established. The glossary corpus forms the evaluation baseline for all future phases.

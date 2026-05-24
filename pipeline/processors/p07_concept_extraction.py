@@ -53,9 +53,13 @@ def run(state: dict, repo_root: Path) -> dict:  # noqa: ARG001
         for r in fm.get("related", [])
     ]
 
+    # Label: prefer front_matter title; fall back to the slug (already set in p02
+    # for docs without front matter — title is extracted from H1 there)
+    label = fm.get("title", "") or source_slug.replace("-", " ").title()
+
     delta_proposal = {
         "assertion_id": assertion_id,
-        "label": fm.get("title", ""),
+        "label": label,
         "comment": state.get("bold_definition", ""),
         "aliases": fm.get("aliases", []),
         "tags": fm.get("tags", []),

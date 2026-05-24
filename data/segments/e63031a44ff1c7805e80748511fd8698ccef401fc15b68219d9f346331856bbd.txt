@@ -1,0 +1,3 @@
+1. An **upper ontology** — a domain-agnostic taxonomy of all domains known to the system
+2. A set of **lower (domain) ontologies** — per-domain concept graphs derived from source documents
+3. A **document processing pipeline** — a set of processors that extract, clean, enrich, and transform source documents into ontological concepts

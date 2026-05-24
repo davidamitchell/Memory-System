@@ -1,0 +1,6 @@
+ex:assertion/001
+    a ex:AssertionNode ;
+    ex:claim "LanceDB is an embedded vector database" ;
+    ex:confidence "0.92"^^xsd:decimal ;
+    ex:evidencedBy ex:segment/abc123 ;
+    prov:wasGeneratedBy ex:activity/extract-2026-05-23-001 .

@@ -1,0 +1,4 @@
+```turtle
+@prefix ex:   <https://memory.example.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .

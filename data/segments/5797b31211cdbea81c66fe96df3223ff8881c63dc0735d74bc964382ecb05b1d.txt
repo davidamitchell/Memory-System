@@ -1,0 +1,7 @@
+CL1[Mini-Retro — four questions] --> CL2[Act on retro]
+    CL2 --> CL3[Append PROGRESS.md]
+    CL3 --> CL4[Update CHANGELOG.md]
+    CL4 --> CL5[Write ADRs if needed]
+    CL5 --> CL6[Expand glossary if needed]
+    CL6 --> CL7[Verify Done checklist]
+    CL7 --> CL8[report_progress — final push]

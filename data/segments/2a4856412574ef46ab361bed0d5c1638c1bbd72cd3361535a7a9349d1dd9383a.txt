@@ -1,0 +1,5 @@
+ex:segment/abc123
+    a ex:PreparedSegment ;
+    ex:contentHash "sha256:e3b0c44298fc1c149afbf4c8996fb924..." ;
+    ex:sourceDocument ex:doc/lancedb-overview-2026 .
+```

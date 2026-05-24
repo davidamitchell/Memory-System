@@ -1,0 +1,5 @@
+| Component | Description |
+|-----------|-------------|
+| **Document Store** | Object storage for raw artefacts, prepared documents, and segments |
+| **Ontology Store** | Graph store for current ontology state (triple store or property graph — deferred) |
+| **Resolver Service** | Maps content-addressed URIs (`sha256:…`) to physical storage locations |

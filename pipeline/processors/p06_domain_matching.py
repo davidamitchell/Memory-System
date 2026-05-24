@@ -5,11 +5,13 @@ in the ``ms:`` namespace.  Tie-break rule: first signal wins when
 multiple signals are present.
 
 Canonical domain map:
-  Vocabulary → ms:VocabularyDomain
-  Project    → ms:ProjectDomain
-  Meeting    → ms:MeetingDomain
-  Journal    → ms:JournalDomain
-  General    → ms:GeneralDomain
+  Vocabulary                → ms:VocabularyDomain
+  ArchitectureDecisionRecord → ms:ArchitectureDecisionRecordDomain
+  Design                    → ms:DesignDomain
+  Project                   → ms:ProjectDomain
+  Meeting                   → ms:MeetingDomain
+  Journal                   → ms:JournalDomain
+  General                   → ms:GeneralDomain
 """
 from __future__ import annotations
 
@@ -20,6 +22,8 @@ logger = logging.getLogger(__name__)
 
 _DOMAIN_URI_MAP = {
     "Vocabulary": "ms:VocabularyDomain",
+    "ArchitectureDecisionRecord": "ms:ArchitectureDecisionRecordDomain",
+    "Design": "ms:DesignDomain",
     "Project": "ms:ProjectDomain",
     "Meeting": "ms:MeetingDomain",
     "Journal": "ms:JournalDomain",

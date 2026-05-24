@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open-Brain Ontology Browser — v0021</title>
+  <title>Open-Brain Ontology Browser — v0031</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <h1>Open-Brain Ontology Browser</h1>
-  <p class="subtitle">Version <strong>v0021</strong> &middot; 2026-05-24T09:46:53Z</p>
+  <p class="subtitle">Version <strong>v0031</strong> &middot; 2026-05-24T09:50:53Z</p>
   <nav id="main-nav" aria-label="Sections">
     <a href="#overview">Overview</a>
     <a href="#concepts">Concepts</a>
@@ -23,17 +23,17 @@
   <h2>Overview</h2>
   <table class="stats">
     <tbody>
-      <tr><th>Ontology version</th><td>v0021</td></tr>
-      <tr><th>Generated</th><td>2026-05-24T09:46:53Z</td></tr>
-      <tr><th>Concepts</th><td>26</td></tr>
+      <tr><th>Ontology version</th><td>v0031</td></tr>
+      <tr><th>Generated</th><td>2026-05-24T09:50:53Z</td></tr>
+      <tr><th>Concepts</th><td>32</td></tr>
       <tr><th>Relations</th><td>83</td></tr>
-      <tr><th>Source documents</th><td>26</td></tr>
+      <tr><th>Source documents</th><td>32</td></tr>
     </tbody>
   </table>
 </section>
 
 <section id="concepts" aria-label="Concepts">
-  <h2>Concepts <span class="count">(26)</span></h2>
+  <h2>Concepts <span class="count">(32)</span></h2>
   <table id="concepts-table">
     <thead>
       <tr>
@@ -44,6 +44,30 @@
       </tr>
     </thead>
     <tbody>
+    <tr class="concept-row" data-id="0001-standardise-agent-instructions" data-concept="{&quot;id&quot;: &quot;0001-standardise-agent-instructions&quot;, &quot;label&quot;: &quot;0001 \u2014 Standardise agent instruction files&quot;, &quot;comment&quot;: &quot;&quot;, &quot;aliases&quot;: [], &quot;tags&quot;: [], &quot;domain&quot;: &quot;ArchitectureDecisionRecordDomain&quot;, &quot;related&quot;: [], &quot;docs&quot;: [&quot;_docs/adr/0001-standardise-agent-instructions.md&quot;]}" tabindex="0">
+      <td><strong>0001 — Standardise agent instruction files</strong><br><small class="muted"></small></td>
+      <td>ArchitectureDecisionRecordDomain</td>
+      <td class="num">0</td>
+      <td class="num">0</td>
+    </tr>
+    <tr class="concept-row" data-id="0002-move-from-vector-storage-to-ontology" data-concept="{&quot;id&quot;: &quot;0002-move-from-vector-storage-to-ontology&quot;, &quot;label&quot;: &quot;0002 \u2014 Move from vector storage to ontology-based knowledge representation&quot;, &quot;comment&quot;: &quot;&quot;, &quot;aliases&quot;: [], &quot;tags&quot;: [], &quot;domain&quot;: &quot;ArchitectureDecisionRecordDomain&quot;, &quot;related&quot;: [], &quot;docs&quot;: [&quot;_docs/adr/0002-move-from-vector-storage-to-ontology.md&quot;]}" tabindex="0">
+      <td><strong>0002 — Move from vector storage to ontology-based knowledge representation</strong><br><small class="muted"></small></td>
+      <td>ArchitectureDecisionRecordDomain</td>
+      <td class="num">0</td>
+      <td class="num">0</td>
+    </tr>
+    <tr class="concept-row" data-id="0003-ontology-architecture" data-concept="{&quot;id&quot;: &quot;0003-ontology-architecture&quot;, &quot;label&quot;: &quot;0003 \u2014 Ontology architecture: upper ontology, lower ontologies, and the document processing pipeline&quot;, &quot;comment&quot;: &quot;&quot;, &quot;aliases&quot;: [], &quot;tags&quot;: [], &quot;domain&quot;: &quot;ArchitectureDecisionRecordDomain&quot;, &quot;related&quot;: [], &quot;docs&quot;: [&quot;_docs/adr/0003-ontology-architecture.md&quot;]}" tabindex="0">
+      <td><strong>0003 — Ontology architecture: upper ontology, lower ontologies, and the document processing pipeline</strong><br><small class="muted"></small></td>
+      <td>ArchitectureDecisionRecordDomain</td>
+      <td class="num">0</td>
+      <td class="num">0</td>
+    </tr>
+    <tr class="concept-row" data-id="0004-provenance-model-and-control-plane" data-concept="{&quot;id&quot;: &quot;0004-provenance-model-and-control-plane&quot;, &quot;label&quot;: &quot;0004 \u2014 Provenance model, control plane, and architectural principles&quot;, &quot;comment&quot;: &quot;&quot;, &quot;aliases&quot;: [], &quot;tags&quot;: [], &quot;domain&quot;: &quot;ArchitectureDecisionRecordDomain&quot;, &quot;related&quot;: [], &quot;docs&quot;: [&quot;_docs/adr/0004-provenance-model-and-control-plane.md&quot;]}" tabindex="0">
+      <td><strong>0004 — Provenance model, control plane, and architectural principles</strong><br><small class="muted"></small></td>
+      <td>ArchitectureDecisionRecordDomain</td>
+      <td class="num">0</td>
+      <td class="num">0</td>
+    </tr>
     <tr class="concept-row" data-id="agent-first" data-concept="{&quot;id&quot;: &quot;agent-first&quot;, &quot;label&quot;: &quot;Agent-first&quot;, &quot;comment&quot;: &quot;A design philosophy that treats AI agents as primary users of a system, building in autonomous read/write access, versioned context, and self-correction from the start rather than adding them as afterthoughts.&quot;, &quot;aliases&quot;: [&quot;agent first&quot;, &quot;agent native&quot;, &quot;agent-native&quot;], &quot;tags&quot;: [&quot;agent-first&quot;, &quot;agent-native&quot;, &quot;ai&quot;, &quot;architecture&quot;, &quot;design&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;ai-agent&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;local-first&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;mcp&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}], &quot;docs&quot;: [&quot;glossary/agent-first.md&quot;]}" tabindex="0">
       <td><strong>Agent-first</strong><br><small class="muted">A design philosophy that treats AI agents as primary users of a system, building in autonomous read/write access, versio…</small></td>
       <td>VocabularyDomain</td>
@@ -61,6 +85,12 @@
       <td>VocabularyDomain</td>
       <td class="num">5</td>
       <td class="num">2</td>
+    </tr>
+    <tr class="concept-row" data-id="build-loop-harness" data-concept="{&quot;id&quot;: &quot;build-loop-harness&quot;, &quot;label&quot;: &quot;Build Loop Harness&quot;, &quot;comment&quot;: &quot;Drift correction:&quot;, &quot;aliases&quot;: [], &quot;tags&quot;: [&quot;agent-workflow&quot;, &quot;build-loop&quot;, &quot;context-management&quot;, &quot;self-improvement&quot;], &quot;domain&quot;: &quot;DesignDomain&quot;, &quot;related&quot;: [], &quot;docs&quot;: [&quot;_docs/design/build-loop-harness.md&quot;]}" tabindex="0">
+      <td><strong>Build Loop Harness</strong><br><small class="muted">Drift correction:</small></td>
+      <td>DesignDomain</td>
+      <td class="num">4</td>
+      <td class="num">0</td>
     </tr>
     <tr class="concept-row" data-id="capture" data-concept="{&quot;id&quot;: &quot;capture&quot;, &quot;label&quot;: &quot;Capture&quot;, &quot;comment&quot;: &quot;The act of storing a new piece of knowledge as a memory file \u2014 the write side of the memory system, in contrast to retrieval.&quot;, &quot;aliases&quot;: [&quot;add memory&quot;, &quot;memory capture&quot;, &quot;write&quot;], &quot;tags&quot;: [&quot;capture&quot;, &quot;friction&quot;, &quot;input&quot;, &quot;memory&quot;, &quot;write&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;inbox&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;mcp-tool&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;memory-file&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;retrieval&quot;, &quot;rel&quot;: &quot;contrasts&quot;}], &quot;docs&quot;: [&quot;glossary/capture.md&quot;]}" tabindex="0">
       <td><strong>Capture</strong><br><small class="muted">The act of storing a new piece of knowledge as a memory file — the write side of the memory system, in contrast to retri…</small></td>
@@ -133,6 +163,12 @@
       <td>VocabularyDomain</td>
       <td class="num">4</td>
       <td class="num">4</td>
+    </tr>
+    <tr class="concept-row" data-id="ontology-system-design" data-concept="{&quot;id&quot;: &quot;ontology-system-design&quot;, &quot;label&quot;: &quot;Ontology-Based Memory System \u2014 Design&quot;, &quot;comment&quot;: &quot;&quot;, &quot;aliases&quot;: [], &quot;tags&quot;: [], &quot;domain&quot;: &quot;DesignDomain&quot;, &quot;related&quot;: [], &quot;docs&quot;: [&quot;_docs/design/ontology-system-design.md&quot;]}" tabindex="0">
+      <td><strong>Ontology-Based Memory System — Design</strong><br><small class="muted"></small></td>
+      <td>DesignDomain</td>
+      <td class="num">0</td>
+      <td class="num">0</td>
     </tr>
     <tr class="concept-row" data-id="open-brain" data-concept="{&quot;id&quot;: &quot;open-brain&quot;, &quot;label&quot;: &quot;Open-Brain&quot;, &quot;comment&quot;: &quot;The personal AI knowledge store implemented in this repository: a local-first, agent-native knowledge base backed by Markdown files and an ontology-based knowledge graph, exposed to AI tools via the Model Context Protocol.&quot;, &quot;aliases&quot;: [&quot;GitHub Open-Brain&quot;, &quot;Memory-System&quot;, &quot;open brain&quot;], &quot;tags&quot;: [&quot;github&quot;, &quot;memory-system&quot;, &quot;open-brain&quot;, &quot;project&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;agent-first&quot;, &quot;rel&quot;: &quot;implements&quot;}, {&quot;id&quot;: &quot;knowledge-graph&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;local-first&quot;, &quot;rel&quot;: &quot;implements&quot;}, {&quot;id&quot;: &quot;mcp-server&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/open-brain.md&quot;]}" tabindex="0">
       <td><strong>Open-Brain</strong><br><small class="muted">The personal AI knowledge store implemented in this repository: a local-first, agent-native knowledge base backed by Mar…</small></td>
@@ -636,7 +672,7 @@
 </section>
 
 <section id="documents" aria-label="Documents">
-  <h2>Documents <span class="count">(26)</span></h2>
+  <h2>Documents <span class="count">(32)</span></h2>
   <table id="documents-table">
     <thead>
       <tr>
@@ -646,6 +682,36 @@
       </tr>
     </thead>
     <tbody>
+    <tr data-file="_docs/adr/0001-standardise-agent-instructions.md">
+      <td><code>_docs/adr/0001-standardise-agent-instructions.md</code></td>
+      <td class="num">4</td>
+      <td><a href="#0001-standardise-agent-instructions" class="concept-link" data-id="0001-standardise-agent-instructions">0001 — Standardise agent instruction files</a></td>
+    </tr>
+    <tr data-file="_docs/adr/0002-move-from-vector-storage-to-ontology.md">
+      <td><code>_docs/adr/0002-move-from-vector-storage-to-ontology.md</code></td>
+      <td class="num">9</td>
+      <td><a href="#0002-move-from-vector-storage-to-ontology" class="concept-link" data-id="0002-move-from-vector-storage-to-ontology">0002 — Move from vector storage to ontology-based knowledge representation</a></td>
+    </tr>
+    <tr data-file="_docs/adr/0003-ontology-architecture.md">
+      <td><code>_docs/adr/0003-ontology-architecture.md</code></td>
+      <td class="num">15</td>
+      <td><a href="#0003-ontology-architecture" class="concept-link" data-id="0003-ontology-architecture">0003 — Ontology architecture: upper ontology, lower ontologies, and the document processing pipeline</a></td>
+    </tr>
+    <tr data-file="_docs/adr/0004-provenance-model-and-control-plane.md">
+      <td><code>_docs/adr/0004-provenance-model-and-control-plane.md</code></td>
+      <td class="num">24</td>
+      <td><a href="#0004-provenance-model-and-control-plane" class="concept-link" data-id="0004-provenance-model-and-control-plane">0004 — Provenance model, control plane, and architectural principles</a></td>
+    </tr>
+    <tr data-file="_docs/design/build-loop-harness.md">
+      <td><code>_docs/design/build-loop-harness.md</code></td>
+      <td class="num">41</td>
+      <td><a href="#build-loop-harness" class="concept-link" data-id="build-loop-harness">Build Loop Harness</a></td>
+    </tr>
+    <tr data-file="_docs/design/ontology-system-design.md">
+      <td><code>_docs/design/ontology-system-design.md</code></td>
+      <td class="num">51</td>
+      <td><a href="#ontology-system-design" class="concept-link" data-id="ontology-system-design">Ontology-Based Memory System — Design</a></td>
+    </tr>
     <tr data-file="glossary/adr.md">
       <td><code>glossary/adr.md</code></td>
       <td class="num">4</td>
@@ -782,7 +848,7 @@
 </main>
 
 <footer>
-  <p>Generated from <code>data/ontology/v0021.ttl</code> &middot;
+  <p>Generated from <code>data/ontology/v0031.ttl</code> &middot;
   <a href="https://github.com/davidamitchell/Memory-System">Memory-System</a></p>
 </footer>
 

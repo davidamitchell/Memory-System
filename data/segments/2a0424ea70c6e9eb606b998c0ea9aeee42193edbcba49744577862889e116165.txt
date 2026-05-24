@@ -1,0 +1,8 @@
+| Component | Description |
+|-----------|-------------|
+| **Upper Ontology** | Stable domain taxonomy and alignment model. Mutates only through governed acceptance |
+| **Domain Ontology** | Domain-scoped concept graph; the lower ontology tier |
+| **Lower Ontology** | The collective set of all domain ontologies |
+| **Ontology Delta Proposal** | Candidate assertions produced by extraction — not yet accepted into the graph |
+| **Assertion Node** | An accepted ontology fact with confidence score and provenance links |
+| **Versioned Ontology** | Immutable snapshot of the ontology at a point in time, tagged with a semantic version, carrying a semantic diff and rollback pointer |

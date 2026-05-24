@@ -1,0 +1,2 @@
+CP->>P11: validated + approved state
+    P11->>Store: commit Versioned Ontology (semver tag + diff + rollback pointer)

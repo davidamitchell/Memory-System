@@ -1,0 +1,89 @@
+@prefix ms: <https://memory.example.org/ms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://memory.example.org/ms/assertion/0003-ontology-architecture> a ms:AssertionNode ;
+    rdfs:label "0003 — Ontology architecture: upper ontology, lower ontologies, and the document processing pipeline" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T094959> ;
+    ms:inDomain ms:GeneralDomain .
+
+<https://memory.example.org/ms/activity/extract-20260524T094959> a ms:ExtractionActivity ;
+    prov:endedAtTime "2026-05-24T09:49:59+00:00"^^xsd:dateTime ;
+    prov:used <https://memory.example.org/ms/segment/03a5898b11814352f9ea19cc1465949617a1fed69a2b9d582069e4f1a4bb1382>,
+        <https://memory.example.org/ms/segment/2d9d0ceb2f5bc06ad8407514a7486bf7cfc44ada39626c56c27a3496ce66c6db>,
+        <https://memory.example.org/ms/segment/33c94c1df442de6f11204a9400208af0a1377c30b570e85137c5dce612937f98>,
+        <https://memory.example.org/ms/segment/45453874109666d99f58be8896f6ddeea2cd1017b764cdaf89286e7906beef98>,
+        <https://memory.example.org/ms/segment/58de2cdd19e8747272c295c14d2a470c41d558eee2b5058aea40dae92dcb5400>,
+        <https://memory.example.org/ms/segment/6bcbb9973067e73a58f78ccb5e064cb52541e62ecd171ce341fd432cc073efb0>,
+        <https://memory.example.org/ms/segment/7f492d2124787c927292975e8d63880b520d9b4191cd368281f589e9392f6750>,
+        <https://memory.example.org/ms/segment/935069a0e62555ea717c7aebf566525444385373aa4f9f4a0f5b8fff256f3b10>,
+        <https://memory.example.org/ms/segment/a53f8028da03a0089554a2e93340725e9f995f418d26888fd5ad3f5075413660>,
+        <https://memory.example.org/ms/segment/a857158989dccaee7965fab179f62c0df455599605466be98771348307e533ab>,
+        <https://memory.example.org/ms/segment/cb3243b0b9fd7aa44d76e97a885c3f5345443571dbf819d8e165d1fd9f9bd696>,
+        <https://memory.example.org/ms/segment/ce81b5f5ff7a40b323f4ee44bae5d7d4f5f82a3476444e9be90895925e5ac22a>,
+        <https://memory.example.org/ms/segment/d6ac1a57fea542e76061d0fb9efa6b62ccc328e56d96779cfe86080097f7009c>,
+        <https://memory.example.org/ms/segment/e7203d5e32587ecff7deec0b864fc88ff3fce1a4ab24bff6db777103ecf59797>,
+        <https://memory.example.org/ms/segment/f6cd963dcbf980b8372262eb32d633eb6cb8641fa594999ad82e2bc9a5f68a7c> ;
+    prov:wasAssociatedWith <https://memory.example.org/ms/processor/concept-extractor-v1.0.0> .
+
+<https://memory.example.org/ms/segment/03a5898b11814352f9ea19cc1465949617a1fed69a2b9d582069e4f1a4bb1382> a ms:PreparedSegment ;
+    ms:contentHash "sha256:03a5898b11814352f9ea19cc1465949617a1fed69a2b9d582069e4f1a4bb1382" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/2d9d0ceb2f5bc06ad8407514a7486bf7cfc44ada39626c56c27a3496ce66c6db> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2d9d0ceb2f5bc06ad8407514a7486bf7cfc44ada39626c56c27a3496ce66c6db" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/33c94c1df442de6f11204a9400208af0a1377c30b570e85137c5dce612937f98> a ms:PreparedSegment ;
+    ms:contentHash "sha256:33c94c1df442de6f11204a9400208af0a1377c30b570e85137c5dce612937f98" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/45453874109666d99f58be8896f6ddeea2cd1017b764cdaf89286e7906beef98> a ms:PreparedSegment ;
+    ms:contentHash "sha256:45453874109666d99f58be8896f6ddeea2cd1017b764cdaf89286e7906beef98" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/58de2cdd19e8747272c295c14d2a470c41d558eee2b5058aea40dae92dcb5400> a ms:PreparedSegment ;
+    ms:contentHash "sha256:58de2cdd19e8747272c295c14d2a470c41d558eee2b5058aea40dae92dcb5400" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/6bcbb9973067e73a58f78ccb5e064cb52541e62ecd171ce341fd432cc073efb0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6bcbb9973067e73a58f78ccb5e064cb52541e62ecd171ce341fd432cc073efb0" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/7f492d2124787c927292975e8d63880b520d9b4191cd368281f589e9392f6750> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7f492d2124787c927292975e8d63880b520d9b4191cd368281f589e9392f6750" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/935069a0e62555ea717c7aebf566525444385373aa4f9f4a0f5b8fff256f3b10> a ms:PreparedSegment ;
+    ms:contentHash "sha256:935069a0e62555ea717c7aebf566525444385373aa4f9f4a0f5b8fff256f3b10" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/a53f8028da03a0089554a2e93340725e9f995f418d26888fd5ad3f5075413660> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a53f8028da03a0089554a2e93340725e9f995f418d26888fd5ad3f5075413660" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/a857158989dccaee7965fab179f62c0df455599605466be98771348307e533ab> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a857158989dccaee7965fab179f62c0df455599605466be98771348307e533ab" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/cb3243b0b9fd7aa44d76e97a885c3f5345443571dbf819d8e165d1fd9f9bd696> a ms:PreparedSegment ;
+    ms:contentHash "sha256:cb3243b0b9fd7aa44d76e97a885c3f5345443571dbf819d8e165d1fd9f9bd696" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/ce81b5f5ff7a40b323f4ee44bae5d7d4f5f82a3476444e9be90895925e5ac22a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ce81b5f5ff7a40b323f4ee44bae5d7d4f5f82a3476444e9be90895925e5ac22a" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/d6ac1a57fea542e76061d0fb9efa6b62ccc328e56d96779cfe86080097f7009c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d6ac1a57fea542e76061d0fb9efa6b62ccc328e56d96779cfe86080097f7009c" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/e7203d5e32587ecff7deec0b864fc88ff3fce1a4ab24bff6db777103ecf59797> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e7203d5e32587ecff7deec0b864fc88ff3fce1a4ab24bff6db777103ecf59797" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/f6cd963dcbf980b8372262eb32d633eb6cb8641fa594999ad82e2bc9a5f68a7c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:f6cd963dcbf980b8372262eb32d633eb6cb8641fa594999ad82e2bc9a5f68a7c" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+

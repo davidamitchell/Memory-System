@@ -1,0 +1,1 @@
+This mirrors the [BFO](https://basic-formal-ontology.org/) / [SUMO](https://www.ontologyportal.org/) pattern and is well-suited to a multi-domain memory system.

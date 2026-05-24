@@ -1,0 +1,9 @@
+| Convention | Where defined | How the harness uses it |
+|---|---|---|
+| Mini-Retro | `copilot-instructions.md` §7 | Phase 6 step 1 |
+| "Done" checklist | `copilot-instructions.md` §7 | Phase 6 step 7 |
+| ADR protocol | `copilot-instructions.md` §4, `_docs/adr/` | Phase 6 step 5, Phase 7 |
+| Backlog management | `copilot-instructions.md` §3, `BACKLOG.md` | Entry step 2, Phase 5, Phase 7 |
+| Skill usage | `copilot-instructions.md` §2 | Entry step 5, Focus Rules |
+| Chain-of-thought | `copilot-instructions.md` §13 | Integrated throughout Execute |
+| Knowledge graphing | `copilot-instructions.md` §7 | Phase 4 validation |

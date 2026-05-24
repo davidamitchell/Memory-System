@@ -4,11 +4,13 @@ Produces candidate domain labels from content analysis using a rule-based
 approach.  ML/LLM classification is deferred (W-0200 assumption).
 
 Rule table:
-  - ``glossary/`` path prefix → ``Vocabulary``
-  - ``projects/`` path prefix → ``Project``
-  - ``meetings/`` path prefix → ``Meeting``
-  - ``journal/`` path prefix  → ``Journal``
-  - Default                   → ``General``
+  - ``glossary/`` path prefix    → ``Vocabulary``
+  - ``_docs/adr/`` path prefix   → ``ArchitectureDecisionRecord``
+  - ``_docs/design/`` path prefix → ``Design``
+  - ``projects/`` path prefix    → ``Project``
+  - ``meetings/`` path prefix    → ``Meeting``
+  - ``journal/`` path prefix     → ``Journal``
+  - Default                      → ``General``
 """
 from __future__ import annotations
 
@@ -19,6 +21,8 @@ logger = logging.getLogger(__name__)
 
 _PATH_DOMAIN_MAP = {
     "glossary/": "Vocabulary",
+    "_docs/adr/": "ArchitectureDecisionRecord",
+    "_docs/design/": "Design",
     "projects/": "Project",
     "meetings/": "Meeting",
     "journal/": "Journal",

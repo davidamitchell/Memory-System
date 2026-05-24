@@ -1,0 +1,18 @@
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Trigger as Trigger / Scheduler
+    participant P1 as Sourcing
+    participant P2 as Preparation
+    participant P3 as Segmentation
+    participant P4 as Metadata
+    participant P5 as Domain Classification
+    participant P6 as Domain Matching
+    participant P7 as Concept Extraction
+    participant P8 as Ontology Build
+    participant P9 as Consistency Validation
+    participant P10 as Reconciliation
+    participant CP as Control Plane
+    participant P11 as Version Commit
+    participant P12 as Export
+    participant Store as Storage

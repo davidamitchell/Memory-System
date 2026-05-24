@@ -1,0 +1,1741 @@
+@prefix ms: <https://memory.example.org/ms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://memory.example.org/ms/assertion/0001-standardise-agent-instructions> a ms:AssertionNode ;
+    rdfs:label "0001 — Standardise agent instruction files" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:inDomain ms:ArchitectureDecisionRecordDomain .
+
+<https://memory.example.org/ms/assertion/0002-move-from-vector-storage-to-ontology> a ms:AssertionNode ;
+    rdfs:label "0002 — Move from vector storage to ontology-based knowledge representation" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:inDomain ms:ArchitectureDecisionRecordDomain .
+
+<https://memory.example.org/ms/assertion/0003-ontology-architecture> a ms:AssertionNode ;
+    rdfs:label "0003 — Ontology architecture: upper ontology, lower ontologies, and the document processing pipeline" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:inDomain ms:ArchitectureDecisionRecordDomain .
+
+<https://memory.example.org/ms/assertion/0004-provenance-model-and-control-plane> a ms:AssertionNode ;
+    rdfs:label "0004 — Provenance model, control plane, and architectural principles" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:inDomain ms:ArchitectureDecisionRecordDomain .
+
+<https://memory.example.org/ms/assertion/build-loop-harness> a ms:AssertionNode ;
+    rdfs:label "Build Loop Harness" ;
+    rdfs:comment "Drift correction:" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:hasTag "agent-workflow",
+        "build-loop",
+        "context-management",
+        "self-improvement" ;
+    ms:inDomain ms:DesignDomain .
+
+<https://memory.example.org/ms/assertion/mini-retro> a ms:AssertionNode ;
+    rdfs:label "Mini-Retro" ;
+    rdfs:comment "A mandatory four-question retrospective appended to `PROGRESS.md` at the end of every agent session, designed to surface process improvements and convert friction into system changes." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "mini retrospective",
+        "retro",
+        "session retrospective" ;
+    ms:hasTag "improvement",
+        "mini-retro",
+        "process",
+        "retrospective" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/adr> .
+
+<https://memory.example.org/ms/assertion/ontology-system-design> a ms:AssertionNode ;
+    rdfs:label "Ontology-Based Memory System — Design" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:inDomain ms:DesignDomain .
+
+<https://memory.example.org/ms/assertion/madr> a ms:AssertionNode ;
+    rdfs:label "MADR" ;
+    rdfs:comment "A lightweight Markdown template for writing Architecture Decision Records that enforces the minimum structure needed to capture context, decision, and consequences." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "Markdown Any Decision Records",
+        "Markdown Architectural Decision Records" ;
+    ms:hasTag "adr",
+        "decision",
+        "format",
+        "madr",
+        "markdown" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:instanceOf <https://memory.example.org/ms/assertion/adr> .
+
+<https://memory.example.org/ms/assertion/skill> a ms:AssertionNode ;
+    rdfs:label "Skill" ;
+    rdfs:comment "A reusable, self-contained Markdown file in `.github/skills/` that provides an AI agent with specialised instructions for a well-defined task type." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "agent skill",
+        "skill module" ;
+    ms:hasTag "agent",
+        "instruction",
+        "module",
+        "reusable",
+        "skill" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/adr>,
+        <https://memory.example.org/ms/assertion/ai-agent> .
+
+<https://memory.example.org/ms/assertion/triage> a ms:AssertionNode ;
+    rdfs:label "Triage" ;
+    rdfs:comment "The process of reviewing inbox files, inferring the correct destination folder and front matter, and moving each file to its permanent location." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "classification",
+        "inbox triage",
+        "memory triage" ;
+    ms:hasTag "automation",
+        "classification",
+        "inbox",
+        "triage" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/capture>,
+        <https://memory.example.org/ms/assertion/memory-file> ;
+    ms:uses <https://memory.example.org/ms/assertion/ai-agent>,
+        <https://memory.example.org/ms/assertion/inbox> .
+
+<https://memory.example.org/ms/segment/02025ad314135690b44443723bd8273a2c0f81beb7ac2f6264323a3f332d035f> a ms:PreparedSegment ;
+    ms:contentHash "sha256:02025ad314135690b44443723bd8273a2c0f81beb7ac2f6264323a3f332d035f" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/02feb532b12c3d05a8673a8f28ad597f6c511528555f317f24653d7c25e1ebd5> a ms:PreparedSegment ;
+    ms:contentHash "sha256:02feb532b12c3d05a8673a8f28ad597f6c511528555f317f24653d7c25e1ebd5" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/035255b83910007737e3596fc832ae0c6616a95acc1d789348b9762504bfc9e9> a ms:PreparedSegment ;
+    ms:contentHash "sha256:035255b83910007737e3596fc832ae0c6616a95acc1d789348b9762504bfc9e9" ;
+    ms:sourceDocument "glossary/vector-database.md" .
+
+<https://memory.example.org/ms/segment/03a5898b11814352f9ea19cc1465949617a1fed69a2b9d582069e4f1a4bb1382> a ms:PreparedSegment ;
+    ms:contentHash "sha256:03a5898b11814352f9ea19cc1465949617a1fed69a2b9d582069e4f1a4bb1382" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/03cb94c21f6197dbb173cd0c8746e9cb56e9bb3643e545bf3c71cdd1d865644b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:03cb94c21f6197dbb173cd0c8746e9cb56e9bb3643e545bf3c71cdd1d865644b" ;
+    ms:sourceDocument "_docs/adr/0001-standardise-agent-instructions.md" .
+
+<https://memory.example.org/ms/segment/041213806eea54742f89c6244f913ff06d68a1009c33df59f8d3fe39c8a87eb5> a ms:PreparedSegment ;
+    ms:contentHash "sha256:041213806eea54742f89c6244f913ff06d68a1009c33df59f8d3fe39c8a87eb5" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/042532571cf0cc365530b7d1561cad427e24eeb96b30763928f3aa69d42f291f> a ms:PreparedSegment ;
+    ms:contentHash "sha256:042532571cf0cc365530b7d1561cad427e24eeb96b30763928f3aa69d42f291f" ;
+    ms:sourceDocument "glossary/agent-first.md" .
+
+<https://memory.example.org/ms/segment/0485213788d4ae0d30e6abb9d189af5369010f796d597fbf51ee82c0e7236fb6> a ms:PreparedSegment ;
+    ms:contentHash "sha256:0485213788d4ae0d30e6abb9d189af5369010f796d597fbf51ee82c0e7236fb6" ;
+    ms:sourceDocument "glossary/embedding-model.md" .
+
+<https://memory.example.org/ms/segment/04dc850cd7e83fcc344d8472e3cc1e24f084cee6999f2dee576a5fd9a7d1505d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:04dc850cd7e83fcc344d8472e3cc1e24f084cee6999f2dee576a5fd9a7d1505d" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/08b9231cb0ba04ec8312d21dc8863a7891f786d1bf6f116e4443c7601fcfe5c2> a ms:PreparedSegment ;
+    ms:contentHash "sha256:08b9231cb0ba04ec8312d21dc8863a7891f786d1bf6f116e4443c7601fcfe5c2" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/08d2ab51840d1e53efb72035c6109d27eb80f98ba0bf135a4aab27aa23c0e448> a ms:PreparedSegment ;
+    ms:contentHash "sha256:08d2ab51840d1e53efb72035c6109d27eb80f98ba0bf135a4aab27aa23c0e448" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/0956f042703e66d69aa91cf4600767a07ecf12b2317721c4b311c56b7fb73c4b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:0956f042703e66d69aa91cf4600767a07ecf12b2317721c4b311c56b7fb73c4b" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/0be0d21a65bd3772ba5fb054306cf51963a7a2be391894e815c2e816ccfe183e> a ms:PreparedSegment ;
+    ms:contentHash "sha256:0be0d21a65bd3772ba5fb054306cf51963a7a2be391894e815c2e816ccfe183e" ;
+    ms:sourceDocument "glossary/embedding-model.md" .
+
+<https://memory.example.org/ms/segment/0cfadfa6b28885e38fd2f79701a047ac38708e15bee5c65eeb8c6dfe4c68e4ce> a ms:PreparedSegment ;
+    ms:contentHash "sha256:0cfadfa6b28885e38fd2f79701a047ac38708e15bee5c65eeb8c6dfe4c68e4ce" ;
+    ms:sourceDocument "glossary/yaml-front-matter.md" .
+
+<https://memory.example.org/ms/segment/0ddc0897eac8d87ef72cfb80e77d84e2f473777fe07521ac623f200551f95c56> a ms:PreparedSegment ;
+    ms:contentHash "sha256:0ddc0897eac8d87ef72cfb80e77d84e2f473777fe07521ac623f200551f95c56" ;
+    ms:sourceDocument "glossary/skill.md" .
+
+<https://memory.example.org/ms/segment/0e788c18f301148a9918ad08c7106321f52c935132d5c1bf24013cb6bc3c0fc0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:0e788c18f301148a9918ad08c7106321f52c935132d5c1bf24013cb6bc3c0fc0" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/0f90c156a44623e24e81eef8e6c5c690d1ad124e83b4ef467d238c9f32972423> a ms:PreparedSegment ;
+    ms:contentHash "sha256:0f90c156a44623e24e81eef8e6c5c690d1ad124e83b4ef467d238c9f32972423" ;
+    ms:sourceDocument "glossary/semantic-search.md" .
+
+<https://memory.example.org/ms/segment/11b5376767dee829f7b8297d02308c1e2a8bb795440933fffd162bc51d45e9bf> a ms:PreparedSegment ;
+    ms:contentHash "sha256:11b5376767dee829f7b8297d02308c1e2a8bb795440933fffd162bc51d45e9bf" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/1296aeb6f427cb2e6e18f9ee30c4ea7661db05c0c983de69570a19a916be2915> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1296aeb6f427cb2e6e18f9ee30c4ea7661db05c0c983de69570a19a916be2915" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+
+<https://memory.example.org/ms/segment/12e783657cbc0a9cd5ac331aa4d9b1e5352801d2d1d60a3ebc621bdc3d8d284a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:12e783657cbc0a9cd5ac331aa4d9b1e5352801d2d1d60a3ebc621bdc3d8d284a" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/1320eb2680e43eda8d75876a09a880bf03649592b86cb1a428bfac11553fadc9> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1320eb2680e43eda8d75876a09a880bf03649592b86cb1a428bfac11553fadc9" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/13bb4b981a9aa8b9c699edcb4c75bc1dcfcd8e08929b39dc61810434940e92ce> a ms:PreparedSegment ;
+    ms:contentHash "sha256:13bb4b981a9aa8b9c699edcb4c75bc1dcfcd8e08929b39dc61810434940e92ce" ;
+    ms:sourceDocument "glossary/adr.md" .
+
+<https://memory.example.org/ms/segment/15320d5eb452c949f1dfe0873a952a4533c9459a08fe0f84cf52c728a1a873cf> a ms:PreparedSegment ;
+    ms:contentHash "sha256:15320d5eb452c949f1dfe0873a952a4533c9459a08fe0f84cf52c728a1a873cf" ;
+    ms:sourceDocument "glossary/mcp.md" .
+
+<https://memory.example.org/ms/segment/16f33f4122589e4257de8ffc535d0b4d889a7a9d3e0341418b09d7154645038a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:16f33f4122589e4257de8ffc535d0b4d889a7a9d3e0341418b09d7154645038a" ;
+    ms:sourceDocument "glossary/mcp-server.md" .
+
+<https://memory.example.org/ms/segment/1772704371a850fdfb244a62ca5f34adcb7fd4f6fdb6dfdab3b91e3ff5ff133d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1772704371a850fdfb244a62ca5f34adcb7fd4f6fdb6dfdab3b91e3ff5ff133d" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/17bbf6aef488f9971c29c2b66af65ef8005fbd6510f2fef935fe2c7528fc14bd> a ms:PreparedSegment ;
+    ms:contentHash "sha256:17bbf6aef488f9971c29c2b66af65ef8005fbd6510f2fef935fe2c7528fc14bd" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/181ce5e9dcb5cc2bfe0532ca08eb232651e35e33957c92affd3e02b32f047dba> a ms:PreparedSegment ;
+    ms:contentHash "sha256:181ce5e9dcb5cc2bfe0532ca08eb232651e35e33957c92affd3e02b32f047dba" ;
+    ms:sourceDocument "glossary/superseded-by.md" .
+
+<https://memory.example.org/ms/segment/187c708e52f78a293694cf9bd96e040be16f5b3b6d5fd3009ff7b3ac12ffb1ff> a ms:PreparedSegment ;
+    ms:contentHash "sha256:187c708e52f78a293694cf9bd96e040be16f5b3b6d5fd3009ff7b3ac12ffb1ff" ;
+    ms:sourceDocument "glossary/triage.md" .
+
+<https://memory.example.org/ms/segment/1889aa5f2e0e0765b9a4d39e2bfc29967bf68e410b52abb51e752c83b8cfee86> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1889aa5f2e0e0765b9a4d39e2bfc29967bf68e410b52abb51e752c83b8cfee86" ;
+    ms:sourceDocument "glossary/madr.md" .
+
+<https://memory.example.org/ms/segment/192e6924363938e168214ce2d489cfe6b27cf616618bda9d7fa3fdc8e58ceeb9> a ms:PreparedSegment ;
+    ms:contentHash "sha256:192e6924363938e168214ce2d489cfe6b27cf616618bda9d7fa3fdc8e58ceeb9" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/1a6363dcb2325696574b3ea73d4f8574c4e01cacb99193ff78defb66f532a042> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1a6363dcb2325696574b3ea73d4f8574c4e01cacb99193ff78defb66f532a042" ;
+    ms:sourceDocument "glossary/mcp-server.md" .
+
+<https://memory.example.org/ms/segment/1d992cbf1e33ddc8360e405604dd913600b8564428ecea2d0c957bb879ba3926> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1d992cbf1e33ddc8360e405604dd913600b8564428ecea2d0c957bb879ba3926" ;
+    ms:sourceDocument "glossary/local-first.md" .
+
+<https://memory.example.org/ms/segment/1e50c8843bd43df40c7f14953a5ccc7383fbd1a154eb8173dc4929b1947e0831> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1e50c8843bd43df40c7f14953a5ccc7383fbd1a154eb8173dc4929b1947e0831" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/204402c5afdba56fe8d3300c3c15007e241fee79c3fbadd568e0bfe922b80bf0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:204402c5afdba56fe8d3300c3c15007e241fee79c3fbadd568e0bfe922b80bf0" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/20c5efaa5a63da3a57896129fe268859a893e93dee030dc77c9c40994aaa62ad> a ms:PreparedSegment ;
+    ms:contentHash "sha256:20c5efaa5a63da3a57896129fe268859a893e93dee030dc77c9c40994aaa62ad" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/20fbe71505fe0610a16066e9cbd4160b96fba6605993c61563476c69dbaea943> a ms:PreparedSegment ;
+    ms:contentHash "sha256:20fbe71505fe0610a16066e9cbd4160b96fba6605993c61563476c69dbaea943" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/2153eec0084dcb613c115af5b8a4d1afefe9a00d4b87a6a1167794ac4933767f> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2153eec0084dcb613c115af5b8a4d1afefe9a00d4b87a6a1167794ac4933767f" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/22a38ebf9a2b6b1823e9e476363168bf273e064392cecf0b5fc9b44210ce3906> a ms:PreparedSegment ;
+    ms:contentHash "sha256:22a38ebf9a2b6b1823e9e476363168bf273e064392cecf0b5fc9b44210ce3906" ;
+    ms:sourceDocument "glossary/mcp.md" .
+
+<https://memory.example.org/ms/segment/22bdcb33a2a8ae1b8a5e477cf941469ee5cbde5359486111a00319b5c9301064> a ms:PreparedSegment ;
+    ms:contentHash "sha256:22bdcb33a2a8ae1b8a5e477cf941469ee5cbde5359486111a00319b5c9301064" ;
+    ms:sourceDocument "glossary/lancedb.md" .
+
+<https://memory.example.org/ms/segment/2306ca1e295a11204076fa5a7fdfce2cc18338ba9806ce2549f84e9caaf351d4> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2306ca1e295a11204076fa5a7fdfce2cc18338ba9806ce2549f84e9caaf351d4" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/23dad49da9797f9e108aba9e9d3e669b020d425a6169d6ad76f40cf0cb2d0748> a ms:PreparedSegment ;
+    ms:contentHash "sha256:23dad49da9797f9e108aba9e9d3e669b020d425a6169d6ad76f40cf0cb2d0748" ;
+    ms:sourceDocument "glossary/superseded-by.md" .
+
+<https://memory.example.org/ms/segment/23e41690296f29353d6ccce62bc81e7b631352ef19ec7abf014e2be83ea51e65> a ms:PreparedSegment ;
+    ms:contentHash "sha256:23e41690296f29353d6ccce62bc81e7b631352ef19ec7abf014e2be83ea51e65" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/2529eb7b1f8d22ee4b4d5d80bee4cbeea6ff126c075754a0f36b7b28970a5546> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2529eb7b1f8d22ee4b4d5d80bee4cbeea6ff126c075754a0f36b7b28970a5546" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/25e12801f58feac1c2e1436b9969cae18e07db80ea57ae76362b5c2bb2942d8d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:25e12801f58feac1c2e1436b9969cae18e07db80ea57ae76362b5c2bb2942d8d" ;
+    ms:sourceDocument "glossary/open-brain.md" .
+
+<https://memory.example.org/ms/segment/273f303dd05e3a5332309ba6b204ec2c8b3fb6f56c1141febe6d029736a8203a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:273f303dd05e3a5332309ba6b204ec2c8b3fb6f56c1141febe6d029736a8203a" ;
+    ms:sourceDocument "glossary/capture.md" .
+
+<https://memory.example.org/ms/segment/2785b70d3c35c85c48ddbc9acbcd267a5c22816ad0db9f16c7877f051f0417cb> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2785b70d3c35c85c48ddbc9acbcd267a5c22816ad0db9f16c7877f051f0417cb" ;
+    ms:sourceDocument "_docs/adr/0001-standardise-agent-instructions.md" .
+
+<https://memory.example.org/ms/segment/29358e2f0106355bc8ca5d35fb1eb09f92d200cd8b9bb8eb75afe85520751345> a ms:PreparedSegment ;
+    ms:contentHash "sha256:29358e2f0106355bc8ca5d35fb1eb09f92d200cd8b9bb8eb75afe85520751345" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/295d1663e1e7cb7ea6b0ba2560969c4c95ca6c70db20789a655bd81ddb743c77> a ms:PreparedSegment ;
+    ms:contentHash "sha256:295d1663e1e7cb7ea6b0ba2560969c4c95ca6c70db20789a655bd81ddb743c77" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/2a0424ea70c6e9eb606b998c0ea9aeee42193edbcba49744577862889e116165> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2a0424ea70c6e9eb606b998c0ea9aeee42193edbcba49744577862889e116165" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/2a4856412574ef46ab361bed0d5c1638c1bbd72cd3361535a7a9349d1dd9383a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2a4856412574ef46ab361bed0d5c1638c1bbd72cd3361535a7a9349d1dd9383a" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md",
+        "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/2ce8961b47584f78620deaad2b1c133b2a7fe27fd48897f241bc727dd367d925> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2ce8961b47584f78620deaad2b1c133b2a7fe27fd48897f241bc727dd367d925" ;
+    ms:sourceDocument "glossary/skill.md" .
+
+<https://memory.example.org/ms/segment/2d66d6b9897e655ee16a2b3265ddf434bbeecac66baf5e73a98ec343e4e4f9f8> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2d66d6b9897e655ee16a2b3265ddf434bbeecac66baf5e73a98ec343e4e4f9f8" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/2d97212da412f02430c286e3493cb8f6759a339d71f77f0162e8c0476b165351> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2d97212da412f02430c286e3493cb8f6759a339d71f77f0162e8c0476b165351" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/2d9d0ceb2f5bc06ad8407514a7486bf7cfc44ada39626c56c27a3496ce66c6db> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2d9d0ceb2f5bc06ad8407514a7486bf7cfc44ada39626c56c27a3496ce66c6db" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/2edd723e1ff65f3d226919f84cfe07960b0c7628f68db883c6ebdf7d2adf46d5> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2edd723e1ff65f3d226919f84cfe07960b0c7628f68db883c6ebdf7d2adf46d5" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/2f33a5137e596fe45f457845b23761f423aa3a9c418b9b172de9817e5646ee7d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2f33a5137e596fe45f457845b23761f423aa3a9c418b9b172de9817e5646ee7d" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/311cd8ca9ae81c3035859ef09f303f9a72afc021c200826f8ae5a56f1bbe188a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:311cd8ca9ae81c3035859ef09f303f9a72afc021c200826f8ae5a56f1bbe188a" ;
+    ms:sourceDocument "glossary/triage.md" .
+
+<https://memory.example.org/ms/segment/319ab9aea766393d2ad1a5c530cf9131c6d9c00735d104adce2c94bc7437f3fd> a ms:PreparedSegment ;
+    ms:contentHash "sha256:319ab9aea766393d2ad1a5c530cf9131c6d9c00735d104adce2c94bc7437f3fd" ;
+    ms:sourceDocument "glossary/local-first.md" .
+
+<https://memory.example.org/ms/segment/32b75711f54129fb82cba0ac606a1c98fd9845d8234a02a050761ddf9319fdfc> a ms:PreparedSegment ;
+    ms:contentHash "sha256:32b75711f54129fb82cba0ac606a1c98fd9845d8234a02a050761ddf9319fdfc" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/336234d930e63fd6a7172c802e6f72db87968d6a361901d7e2389e85818fc136> a ms:PreparedSegment ;
+    ms:contentHash "sha256:336234d930e63fd6a7172c802e6f72db87968d6a361901d7e2389e85818fc136" ;
+    ms:sourceDocument "glossary/superseded-by.md" .
+
+<https://memory.example.org/ms/segment/33be4895c243a72d70dc6a8330b663c6f46bf59c42e94d85bf48d0222a7fe647> a ms:PreparedSegment ;
+    ms:contentHash "sha256:33be4895c243a72d70dc6a8330b663c6f46bf59c42e94d85bf48d0222a7fe647" ;
+    ms:sourceDocument "glossary/mini-retro.md" .
+
+<https://memory.example.org/ms/segment/33c94c1df442de6f11204a9400208af0a1377c30b570e85137c5dce612937f98> a ms:PreparedSegment ;
+    ms:contentHash "sha256:33c94c1df442de6f11204a9400208af0a1377c30b570e85137c5dce612937f98" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/3413621909eb8e437d5611652a375f5246f439b53faa2c274f9e2f0947ddc86c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:3413621909eb8e437d5611652a375f5246f439b53faa2c274f9e2f0947ddc86c" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/34d025ca8a3f58eb6eb2f14eb3362f1b3cd0b5f8d67ada86aef9ebebff2ba683> a ms:PreparedSegment ;
+    ms:contentHash "sha256:34d025ca8a3f58eb6eb2f14eb3362f1b3cd0b5f8d67ada86aef9ebebff2ba683" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/350ab33199965f38fe072e5abbdeeb969f7dee970c4eb3263e0caf92ddba981e> a ms:PreparedSegment ;
+    ms:contentHash "sha256:350ab33199965f38fe072e5abbdeeb969f7dee970c4eb3263e0caf92ddba981e" ;
+    ms:sourceDocument "glossary/ai-agent.md" .
+
+<https://memory.example.org/ms/segment/36c3f7253ee2bd0cbf33623e82f99b3d49ad95ace3762426a89ca320e72b2565> a ms:PreparedSegment ;
+    ms:contentHash "sha256:36c3f7253ee2bd0cbf33623e82f99b3d49ad95ace3762426a89ca320e72b2565" ;
+    ms:sourceDocument "glossary/tag.md" .
+
+<https://memory.example.org/ms/segment/372040ac752937ac4f9d4108a40610c08e394ac85873a5faba1fbd6e48a1f391> a ms:PreparedSegment ;
+    ms:contentHash "sha256:372040ac752937ac4f9d4108a40610c08e394ac85873a5faba1fbd6e48a1f391" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+
+<https://memory.example.org/ms/segment/388b677fab45ae9e7694832ba06d918008e2295c4ec1edce1d6eda6dc55a1016> a ms:PreparedSegment ;
+    ms:contentHash "sha256:388b677fab45ae9e7694832ba06d918008e2295c4ec1edce1d6eda6dc55a1016" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/38fd04db04806f600ad1c4eebff534ae2ef4a8d12b4d8f4e840c8762d4b73e97> a ms:PreparedSegment ;
+    ms:contentHash "sha256:38fd04db04806f600ad1c4eebff534ae2ef4a8d12b4d8f4e840c8762d4b73e97" ;
+    ms:sourceDocument "glossary/mcp.md" .
+
+<https://memory.example.org/ms/segment/391200aecbe4e10ecbf6fabca79cd48d394758242cbc88dfae1966093a79ca9e> a ms:PreparedSegment ;
+    ms:contentHash "sha256:391200aecbe4e10ecbf6fabca79cd48d394758242cbc88dfae1966093a79ca9e" ;
+    ms:sourceDocument "glossary/open-brain.md" .
+
+<https://memory.example.org/ms/segment/3b6e46bb29af30e919aa9fb914823204da9658fc8b40ced086f5ef140b077d4a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:3b6e46bb29af30e919aa9fb914823204da9658fc8b40ced086f5ef140b077d4a" ;
+    ms:sourceDocument "glossary/inbox.md" .
+
+<https://memory.example.org/ms/segment/3de4b006898b1c99de600e010499941cd7e9ce19db27b8a66922a2ccb41883be> a ms:PreparedSegment ;
+    ms:contentHash "sha256:3de4b006898b1c99de600e010499941cd7e9ce19db27b8a66922a2ccb41883be" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/3ff13e6ef4ae08a09408f95210018245dc92cf3bc5c2345c6aa1a0afd9623fb6> a ms:PreparedSegment ;
+    ms:contentHash "sha256:3ff13e6ef4ae08a09408f95210018245dc92cf3bc5c2345c6aa1a0afd9623fb6" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/40798e90da8a26529cb14afea6c216fe8274c4ca1ed9a7d5f014e5e350ab9053> a ms:PreparedSegment ;
+    ms:contentHash "sha256:40798e90da8a26529cb14afea6c216fe8274c4ca1ed9a7d5f014e5e350ab9053" ;
+    ms:sourceDocument "glossary/memory-file.md" .
+
+<https://memory.example.org/ms/segment/41d08590c5cfb2385392beaec96246db978cc644026c58e1d3e5f6e74c507448> a ms:PreparedSegment ;
+    ms:contentHash "sha256:41d08590c5cfb2385392beaec96246db978cc644026c58e1d3e5f6e74c507448" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/4249fcf15d7959a6ac68e85d85b54f159f29c138b27c7948973e1c304ae033d2> a ms:PreparedSegment ;
+    ms:contentHash "sha256:4249fcf15d7959a6ac68e85d85b54f159f29c138b27c7948973e1c304ae033d2" ;
+    ms:sourceDocument "glossary/mini-retro.md" .
+
+<https://memory.example.org/ms/segment/4403c7efad7609cdeb9d9efb2392fcd6000585d67fb46595bb3bfd174bfe7048> a ms:PreparedSegment ;
+    ms:contentHash "sha256:4403c7efad7609cdeb9d9efb2392fcd6000585d67fb46595bb3bfd174bfe7048" ;
+    ms:sourceDocument "glossary/superseded-by.md" .
+
+<https://memory.example.org/ms/segment/45453874109666d99f58be8896f6ddeea2cd1017b764cdaf89286e7906beef98> a ms:PreparedSegment ;
+    ms:contentHash "sha256:45453874109666d99f58be8896f6ddeea2cd1017b764cdaf89286e7906beef98" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/457015d294f177dcfdac7cf79576d92c1fbeaedc3d4d03cdb3b7225c74655b0b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:457015d294f177dcfdac7cf79576d92c1fbeaedc3d4d03cdb3b7225c74655b0b" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/45a3639b55d4a38a22d3b695908440fc13d70b12b8216f6a33c6f5f97ae9dedb> a ms:PreparedSegment ;
+    ms:contentHash "sha256:45a3639b55d4a38a22d3b695908440fc13d70b12b8216f6a33c6f5f97ae9dedb" ;
+    ms:sourceDocument "glossary/knowledge-graph.md" .
+
+<https://memory.example.org/ms/segment/46594efdcd39841d6e793e2a49c30d3e2d1d727fe725015800f99708c224ead6> a ms:PreparedSegment ;
+    ms:contentHash "sha256:46594efdcd39841d6e793e2a49c30d3e2d1d727fe725015800f99708c224ead6" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/46ea0f5f0f611e6092beb6691f4d996a96e302351c9ae737c1a9bf9c5562091d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:46ea0f5f0f611e6092beb6691f4d996a96e302351c9ae737c1a9bf9c5562091d" ;
+    ms:sourceDocument "glossary/stdio-transport.md" .
+
+<https://memory.example.org/ms/segment/473f9c3f2044c6c93c9910f9a2b22fd643ab31b757a8bf6a34595900cd6fae36> a ms:PreparedSegment ;
+    ms:contentHash "sha256:473f9c3f2044c6c93c9910f9a2b22fd643ab31b757a8bf6a34595900cd6fae36" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/48d42afb8c233b030972a1f79fca8415c7db9ec77ddd59a77dfebe5de109cde6> a ms:PreparedSegment ;
+    ms:contentHash "sha256:48d42afb8c233b030972a1f79fca8415c7db9ec77ddd59a77dfebe5de109cde6" ;
+    ms:sourceDocument "glossary/madr.md" .
+
+<https://memory.example.org/ms/segment/49a3792f0be2c7550d6ca704cfb9b24fe3aa655c2a75aaee38441ceefa211f6d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:49a3792f0be2c7550d6ca704cfb9b24fe3aa655c2a75aaee38441ceefa211f6d" ;
+    ms:sourceDocument "glossary/retrieval.md" .
+
+<https://memory.example.org/ms/segment/4a387ca238c9796ed42369f4f70a23499ec0db02cf9cb8b32a2fba90ce178bc8> a ms:PreparedSegment ;
+    ms:contentHash "sha256:4a387ca238c9796ed42369f4f70a23499ec0db02cf9cb8b32a2fba90ce178bc8" ;
+    ms:sourceDocument "glossary/triage.md" .
+
+<https://memory.example.org/ms/segment/4a48fd09e0733ea7ed58abc2ee75539c404d9accdfb2a1fa8c9478baae7ec01c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:4a48fd09e0733ea7ed58abc2ee75539c404d9accdfb2a1fa8c9478baae7ec01c" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/4b3d279b265e6a902160052cbf5d106c2892b7426f424f48d4ed0afaabc77d36> a ms:PreparedSegment ;
+    ms:contentHash "sha256:4b3d279b265e6a902160052cbf5d106c2892b7426f424f48d4ed0afaabc77d36" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/4d1fbc996eeb3e91d771fda8ad5cb496306bf36140e83ee1de176376310b2e33> a ms:PreparedSegment ;
+    ms:contentHash "sha256:4d1fbc996eeb3e91d771fda8ad5cb496306bf36140e83ee1de176376310b2e33" ;
+    ms:sourceDocument "glossary/semantic-search.md" .
+
+<https://memory.example.org/ms/segment/4fb2928382098b9d0497b61983ca8b6a84575d5346e0f0a95b25e27b1825bbe7> a ms:PreparedSegment ;
+    ms:contentHash "sha256:4fb2928382098b9d0497b61983ca8b6a84575d5346e0f0a95b25e27b1825bbe7" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/5065e44ae80ea132ebc2a01a1e0bae8f3c7ea2855e62729e7bfdaef234d8d31a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:5065e44ae80ea132ebc2a01a1e0bae8f3c7ea2855e62729e7bfdaef234d8d31a" ;
+    ms:sourceDocument "glossary/mini-retro.md" .
+
+<https://memory.example.org/ms/segment/518cefac8d12d39cc7fe6befac7de443be2764aec4afa61dada7f8693790f813> a ms:PreparedSegment ;
+    ms:contentHash "sha256:518cefac8d12d39cc7fe6befac7de443be2764aec4afa61dada7f8693790f813" ;
+    ms:sourceDocument "glossary/retrieval.md" .
+
+<https://memory.example.org/ms/segment/53f2ddcbffafa782954e3d04b42d0b8f71c1f5bef02beb684c0e8a98a5af0cc0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:53f2ddcbffafa782954e3d04b42d0b8f71c1f5bef02beb684c0e8a98a5af0cc0" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/540ea1dd4805a5f37dc2ce754f5cc98eca63b570c9e9ee85f94f42469d03191f> a ms:PreparedSegment ;
+    ms:contentHash "sha256:540ea1dd4805a5f37dc2ce754f5cc98eca63b570c9e9ee85f94f42469d03191f" ;
+    ms:sourceDocument "glossary/tag.md" .
+
+<https://memory.example.org/ms/segment/5797b31211cdbea81c66fe96df3223ff8881c63dc0735d74bc964382ecb05b1d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:5797b31211cdbea81c66fe96df3223ff8881c63dc0735d74bc964382ecb05b1d" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/58a6662962afa8a2a233a958e55e058cf951ed675daff13b239ee4da0549195b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:58a6662962afa8a2a233a958e55e058cf951ed675daff13b239ee4da0549195b" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/58de2cdd19e8747272c295c14d2a470c41d558eee2b5058aea40dae92dcb5400> a ms:PreparedSegment ;
+    ms:contentHash "sha256:58de2cdd19e8747272c295c14d2a470c41d558eee2b5058aea40dae92dcb5400" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/59f7dfdea0bcfa7fac01c41520e92de2f300142de33bd3eff65961a803682fff> a ms:PreparedSegment ;
+    ms:contentHash "sha256:59f7dfdea0bcfa7fac01c41520e92de2f300142de33bd3eff65961a803682fff" ;
+    ms:sourceDocument "glossary/adr.md" .
+
+<https://memory.example.org/ms/segment/5c2d518e72690b69714a3b5b96e53a1a037a6d0daaa7f49ec8ebb9113e99c0ec> a ms:PreparedSegment ;
+    ms:contentHash "sha256:5c2d518e72690b69714a3b5b96e53a1a037a6d0daaa7f49ec8ebb9113e99c0ec" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/5fbaedbdbeb50b586282081d80f454b5d1ab37d97d4f398d230b355152ff8521> a ms:PreparedSegment ;
+    ms:contentHash "sha256:5fbaedbdbeb50b586282081d80f454b5d1ab37d97d4f398d230b355152ff8521" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/5fced77856423dd218da0f1eec7d1aca307a3992f73b415d6fb7a8a2b158ba3c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:5fced77856423dd218da0f1eec7d1aca307a3992f73b415d6fb7a8a2b158ba3c" ;
+    ms:sourceDocument "glossary/triage.md" .
+
+<https://memory.example.org/ms/segment/62263abf3f569111f3cd9c64d377aee9466e472d1ce37df21033f92f8b2f6d3c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:62263abf3f569111f3cd9c64d377aee9466e472d1ce37df21033f92f8b2f6d3c" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/63ff39793312bae79620212bfce1ce67fccf8b539ffb21515857cf2792adcddf> a ms:PreparedSegment ;
+    ms:contentHash "sha256:63ff39793312bae79620212bfce1ce67fccf8b539ffb21515857cf2792adcddf" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/64a3dcc4cca1e5abc2843a1d466d697b658d858a777bbe33f948d902c377a64d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:64a3dcc4cca1e5abc2843a1d466d697b658d858a777bbe33f948d902c377a64d" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/64efcebb6171b3398dec5245fd9d3547821e514221bc62dd2e6e27074dabce13> a ms:PreparedSegment ;
+    ms:contentHash "sha256:64efcebb6171b3398dec5245fd9d3547821e514221bc62dd2e6e27074dabce13" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/678da90db4b4414158b95f63ffcfc555ddebc518df06101a1816d1d6ba765af2> a ms:PreparedSegment ;
+    ms:contentHash "sha256:678da90db4b4414158b95f63ffcfc555ddebc518df06101a1816d1d6ba765af2" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/67995812c5ca48d1388489eebad6ef2d0058a6bd163dc45b026d540710d3b9b0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:67995812c5ca48d1388489eebad6ef2d0058a6bd163dc45b026d540710d3b9b0" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/69e9a2aca931e6ccf2231f3f653335de72b720cf1d4d7194e8340ac21ec5b1f9> a ms:PreparedSegment ;
+    ms:contentHash "sha256:69e9a2aca931e6ccf2231f3f653335de72b720cf1d4d7194e8340ac21ec5b1f9" ;
+    ms:sourceDocument "glossary/stdio-transport.md" .
+
+<https://memory.example.org/ms/segment/6ab4e7d9cfaba87123ed8b2605fb2f72291527fa9ccf56dbb6470b240c21a4a6> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6ab4e7d9cfaba87123ed8b2605fb2f72291527fa9ccf56dbb6470b240c21a4a6" ;
+    ms:sourceDocument "glossary/agent-first.md" .
+
+<https://memory.example.org/ms/segment/6b71f60f786c2430dc7e3ceda5cf24b8df403401418df061bf65f712c1a9814c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6b71f60f786c2430dc7e3ceda5cf24b8df403401418df061bf65f712c1a9814c" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/6bcbb9973067e73a58f78ccb5e064cb52541e62ecd171ce341fd432cc073efb0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6bcbb9973067e73a58f78ccb5e064cb52541e62ecd171ce341fd432cc073efb0" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/6c17f36cccdf4a0b085dadb02140214f1748b8d4507977720fc7884f84400784> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6c17f36cccdf4a0b085dadb02140214f1748b8d4507977720fc7884f84400784" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/6c6eee8b9d6d1b30f32d0d1c2fa7ebf6ada1f34084ab0e780389d2797ddc75ab> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6c6eee8b9d6d1b30f32d0d1c2fa7ebf6ada1f34084ab0e780389d2797ddc75ab" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/6cdbc010f10d3764bc0a42947fb2f0df8a99599c5d22b0558a3bb83d4ab98a19> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6cdbc010f10d3764bc0a42947fb2f0df8a99599c5d22b0558a3bb83d4ab98a19" ;
+    ms:sourceDocument "glossary/open-brain.md" .
+
+<https://memory.example.org/ms/segment/6f25ce1b37f0c407221da8e22b37b533710fcd03e258db60956e6049f0040322> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6f25ce1b37f0c407221da8e22b37b533710fcd03e258db60956e6049f0040322" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/6fe6aee6479b8a72766820684083a0eb85c4fcea2f24c4bf83d665c49f7c1163> a ms:PreparedSegment ;
+    ms:contentHash "sha256:6fe6aee6479b8a72766820684083a0eb85c4fcea2f24c4bf83d665c49f7c1163" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/70379b53703dc6b7c481cbc49d1db984bf2b96e0af70759eaf5a1c982ce0e63d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:70379b53703dc6b7c481cbc49d1db984bf2b96e0af70759eaf5a1c982ce0e63d" ;
+    ms:sourceDocument "glossary/semantic-search.md" .
+
+<https://memory.example.org/ms/segment/704bcb800aa1ff1e7e22ceba2034602bacf89970184a3e0c37c508c7d1d0ee17> a ms:PreparedSegment ;
+    ms:contentHash "sha256:704bcb800aa1ff1e7e22ceba2034602bacf89970184a3e0c37c508c7d1d0ee17" ;
+    ms:sourceDocument "glossary/memory-file.md" .
+
+<https://memory.example.org/ms/segment/726e9d0c2dffb3deb922f6cfd95ca7c29bea482cfce9f337ce0531b4cd69b3d0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:726e9d0c2dffb3deb922f6cfd95ca7c29bea482cfce9f337ce0531b4cd69b3d0" ;
+    ms:sourceDocument "glossary/capture.md" .
+
+<https://memory.example.org/ms/segment/729c4a784426d2f43773865d98cc30762d7a82d5a0174159f51e9d350c643cae> a ms:PreparedSegment ;
+    ms:contentHash "sha256:729c4a784426d2f43773865d98cc30762d7a82d5a0174159f51e9d350c643cae" ;
+    ms:sourceDocument "glossary/mcp-tool.md" .
+
+<https://memory.example.org/ms/segment/7411d628ff38b07c03c289d4d59bbbccc838776955a7bcba5132843d787f77be> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7411d628ff38b07c03c289d4d59bbbccc838776955a7bcba5132843d787f77be" ;
+    ms:sourceDocument "glossary/adr.md" .
+
+<https://memory.example.org/ms/segment/7567e7c5d1d6ae15d3a0b150db2a230b8921fcb45ffa866c30a0065acf65893d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7567e7c5d1d6ae15d3a0b150db2a230b8921fcb45ffa866c30a0065acf65893d" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/758ba088f8c1521c005722f486332f539b01d97f81a678b3f3baacc89ec9fcd4> a ms:PreparedSegment ;
+    ms:contentHash "sha256:758ba088f8c1521c005722f486332f539b01d97f81a678b3f3baacc89ec9fcd4" ;
+    ms:sourceDocument "glossary/mini-retro.md" .
+
+<https://memory.example.org/ms/segment/779e9699fc5bea760a3e3dd93700d0709422c1f1075c37256948a49839bc388c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:779e9699fc5bea760a3e3dd93700d0709422c1f1075c37256948a49839bc388c" ;
+    ms:sourceDocument "glossary/madr.md" .
+
+<https://memory.example.org/ms/segment/7849643af6e9b0661f197df8693c36bbc2f376295467781b15a75d67034a6291> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7849643af6e9b0661f197df8693c36bbc2f376295467781b15a75d67034a6291" ;
+    ms:sourceDocument "glossary/vector-database.md" .
+
+<https://memory.example.org/ms/segment/7b9663c3f912b5308d84b6a6913b68890c9bf41dcc309fb8a7bab240c3467cb0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7b9663c3f912b5308d84b6a6913b68890c9bf41dcc309fb8a7bab240c3467cb0" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/7cecaef966ae91506c0e6e2f2c5d55deda03f2a8e87e4e0a971e6d3c05b0ee7b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7cecaef966ae91506c0e6e2f2c5d55deda03f2a8e87e4e0a971e6d3c05b0ee7b" ;
+    ms:sourceDocument "glossary/stdio-transport.md" .
+
+<https://memory.example.org/ms/segment/7f492d2124787c927292975e8d63880b520d9b4191cd368281f589e9392f6750> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7f492d2124787c927292975e8d63880b520d9b4191cd368281f589e9392f6750" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/7fb25289b0e7424843356b7694864867aea47a2af415ff42cb3b8020c68ac275> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7fb25289b0e7424843356b7694864867aea47a2af415ff42cb3b8020c68ac275" ;
+    ms:sourceDocument "glossary/yaml-front-matter.md" .
+
+<https://memory.example.org/ms/segment/811be43f3c0f30a345cad2cab7f816f7d4d726c4e70679697138de49a2b8a42a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:811be43f3c0f30a345cad2cab7f816f7d4d726c4e70679697138de49a2b8a42a" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/869fd8b3bc5ecd31877203e0d2eff7e3036b879892f91c56aa5a738a69884ac2> a ms:PreparedSegment ;
+    ms:contentHash "sha256:869fd8b3bc5ecd31877203e0d2eff7e3036b879892f91c56aa5a738a69884ac2" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md",
+        "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/895aeab655d1d96fcb347fb49299975ad92c0d1ace7df1793ed1baa11e5b9c1c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:895aeab655d1d96fcb347fb49299975ad92c0d1ace7df1793ed1baa11e5b9c1c" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/8b786233bd3a75e03e0b78729f3f34014c469f91c956d8669dc59b6f79f86ac8> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8b786233bd3a75e03e0b78729f3f34014c469f91c956d8669dc59b6f79f86ac8" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/8c8d16f8ef5ada723007f42405dc280a2c48055441e8296042e52f9ee7207e3c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8c8d16f8ef5ada723007f42405dc280a2c48055441e8296042e52f9ee7207e3c" ;
+    ms:sourceDocument "glossary/lancedb.md" .
+
+<https://memory.example.org/ms/segment/8d9910598d6de901183db3141c021de523c40616ceb8b8b5a23050c46df187b6> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8d9910598d6de901183db3141c021de523c40616ceb8b8b5a23050c46df187b6" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/8e30aca674d3f27b8e40e52eaeeca5019655b5a0500c18254ecc53b2f59cb1a4> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8e30aca674d3f27b8e40e52eaeeca5019655b5a0500c18254ecc53b2f59cb1a4" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/8e68f0cb90bd5a5b1ac42dd060bfd691e3e5ed06ec615d4dc5915e6e261e6a47> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8e68f0cb90bd5a5b1ac42dd060bfd691e3e5ed06ec615d4dc5915e6e261e6a47" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+
+<https://memory.example.org/ms/segment/8eeeb9ea7f195802bc92092b2abce685e6576f15b19620c01a58063d1f2ee907> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8eeeb9ea7f195802bc92092b2abce685e6576f15b19620c01a58063d1f2ee907" ;
+    ms:sourceDocument "glossary/tag.md" .
+
+<https://memory.example.org/ms/segment/8f350de4c703262a084516e6b50f971c2037712a882c0b337d229eb631d34c55> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8f350de4c703262a084516e6b50f971c2037712a882c0b337d229eb631d34c55" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/905cf01b6fb8d9e6a166de0fe32ace5c1b25e647051ef8533fb9b28cca139d62> a ms:PreparedSegment ;
+    ms:contentHash "sha256:905cf01b6fb8d9e6a166de0fe32ace5c1b25e647051ef8533fb9b28cca139d62" ;
+    ms:sourceDocument "glossary/capture.md" .
+
+<https://memory.example.org/ms/segment/90a3dff6cee0ab51bab6523d890c4ab82cb2f091775b04e04959bf07c9b74b97> a ms:PreparedSegment ;
+    ms:contentHash "sha256:90a3dff6cee0ab51bab6523d890c4ab82cb2f091775b04e04959bf07c9b74b97" ;
+    ms:sourceDocument "glossary/semantic-search.md" .
+
+<https://memory.example.org/ms/segment/91b308c0f7e4796977f7c3c5924c478e480724a2620e7a7328c15180029e2176> a ms:PreparedSegment ;
+    ms:contentHash "sha256:91b308c0f7e4796977f7c3c5924c478e480724a2620e7a7328c15180029e2176" ;
+    ms:sourceDocument "glossary/yaml-front-matter.md" .
+
+<https://memory.example.org/ms/segment/92da87c2af56ea3ed4e24221b9d996c6ce49ae9231aed0b5a8602bbc83f278d2> a ms:PreparedSegment ;
+    ms:contentHash "sha256:92da87c2af56ea3ed4e24221b9d996c6ce49ae9231aed0b5a8602bbc83f278d2" ;
+    ms:sourceDocument "glossary/adr.md" .
+
+<https://memory.example.org/ms/segment/935069a0e62555ea717c7aebf566525444385373aa4f9f4a0f5b8fff256f3b10> a ms:PreparedSegment ;
+    ms:contentHash "sha256:935069a0e62555ea717c7aebf566525444385373aa4f9f4a0f5b8fff256f3b10" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/97871326faefde9fa099e552861dc3f8ed1ec5e978bc3c51c81b480fed39a29d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:97871326faefde9fa099e552861dc3f8ed1ec5e978bc3c51c81b480fed39a29d" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/97d15ac9085945d37126e594e78e9bbfa9898f8de950b096f9c0809f4a5afb5b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:97d15ac9085945d37126e594e78e9bbfa9898f8de950b096f9c0809f4a5afb5b" ;
+    ms:sourceDocument "glossary/retrieval.md" .
+
+<https://memory.example.org/ms/segment/97d838b2be9e7508473b3d3fe34beaed050dd3aa135bda0ae06816373baeb1fd> a ms:PreparedSegment ;
+    ms:contentHash "sha256:97d838b2be9e7508473b3d3fe34beaed050dd3aa135bda0ae06816373baeb1fd" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/98f15e6073fc2e53633a2a0e5621746d66a24de12f9a57169d9076f12556ba7a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:98f15e6073fc2e53633a2a0e5621746d66a24de12f9a57169d9076f12556ba7a" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/9ca93fb5b3967d8c2e237984cdf59f13f2c56cc857f7ab822119a7cdf9f61c88> a ms:PreparedSegment ;
+    ms:contentHash "sha256:9ca93fb5b3967d8c2e237984cdf59f13f2c56cc857f7ab822119a7cdf9f61c88" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/9fb2744963c3c1f5e2528147721d8c39584d5a7f131b3104ee884b780aea0c59> a ms:PreparedSegment ;
+    ms:contentHash "sha256:9fb2744963c3c1f5e2528147721d8c39584d5a7f131b3104ee884b780aea0c59" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/9fdfdef44a590d2eaa41f2d19f3fb79f304656047a901a651e486d158377e1c9> a ms:PreparedSegment ;
+    ms:contentHash "sha256:9fdfdef44a590d2eaa41f2d19f3fb79f304656047a901a651e486d158377e1c9" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/a09055df616cddeabe8b28870c96818e7225ab54359b8f79a2e06e6b2c02acef> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a09055df616cddeabe8b28870c96818e7225ab54359b8f79a2e06e6b2c02acef" ;
+    ms:sourceDocument "glossary/madr.md" .
+
+<https://memory.example.org/ms/segment/a2e439a275221186376b77e4a2c65513fc7da23e181d2c8d16cd5f9dfb425e04> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a2e439a275221186376b77e4a2c65513fc7da23e181d2c8d16cd5f9dfb425e04" ;
+    ms:sourceDocument "glossary/mcp-tool.md" .
+
+<https://memory.example.org/ms/segment/a3397ecea6cf3d979edd2cc8d4fb2d1000d1bc580f8b2641602e79a080b4ac73> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a3397ecea6cf3d979edd2cc8d4fb2d1000d1bc580f8b2641602e79a080b4ac73" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/a38e320bab8d22a546b319af8b9fbe91d585a2cc5b9f04a9f7fe89590d2fa19d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a38e320bab8d22a546b319af8b9fbe91d585a2cc5b9f04a9f7fe89590d2fa19d" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/a4440c18a4a1f6ebb1cdb9788ad4113fb012cbaa7dee8bf7796b934c630b5306> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a4440c18a4a1f6ebb1cdb9788ad4113fb012cbaa7dee8bf7796b934c630b5306" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/a4da3943df587ff8be17b364fec464a3dc8b4be8763cc9581de6970326ac63c1> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a4da3943df587ff8be17b364fec464a3dc8b4be8763cc9581de6970326ac63c1" ;
+    ms:sourceDocument "glossary/retrieval.md" .
+
+<https://memory.example.org/ms/segment/a50681882181fefaaa31759338a87417c970717dba97873dd0475c164a4d0e4d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a50681882181fefaaa31759338a87417c970717dba97873dd0475c164a4d0e4d" ;
+    ms:sourceDocument "glossary/local-first.md" .
+
+<https://memory.example.org/ms/segment/a53f8028da03a0089554a2e93340725e9f995f418d26888fd5ad3f5075413660> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a53f8028da03a0089554a2e93340725e9f995f418d26888fd5ad3f5075413660" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/a659e701bd8acdeda1908e9de5d693c0558c9a47a27e564a14f7970c2768ee57> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a659e701bd8acdeda1908e9de5d693c0558c9a47a27e564a14f7970c2768ee57" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/a697cbbd065d1be713b6b788f0b4872a526952d161a033f502db730ab6470f3d> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a697cbbd065d1be713b6b788f0b4872a526952d161a033f502db730ab6470f3d" ;
+    ms:sourceDocument "glossary/lancedb.md" .
+
+<https://memory.example.org/ms/segment/a780b12d2e556e978d10bf25db548f5978f4981659d43d136bc5c4531f989d71> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a780b12d2e556e978d10bf25db548f5978f4981659d43d136bc5c4531f989d71" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/a7ab55368bd73b14fc746408b96e2aedb1785e262f19a2be993c6741124d51cf> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a7ab55368bd73b14fc746408b96e2aedb1785e262f19a2be993c6741124d51cf" ;
+    ms:sourceDocument "glossary/knowledge-graph.md" .
+
+<https://memory.example.org/ms/segment/a82ee7240e7234d454131c22f45dfd47c9fc8592508581c3f9f1e219a768adac> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a82ee7240e7234d454131c22f45dfd47c9fc8592508581c3f9f1e219a768adac" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md",
+        "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/a857158989dccaee7965fab179f62c0df455599605466be98771348307e533ab> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a857158989dccaee7965fab179f62c0df455599605466be98771348307e533ab" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/a85d7adb1c975b992b2e18a2f9bdc68aa56b641464f0c6e7d87766cd47d0f1b1> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a85d7adb1c975b992b2e18a2f9bdc68aa56b641464f0c6e7d87766cd47d0f1b1" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/a8b2230be2b238fb4ec068de8cb1144783c279c36eb4cd30d5dd97a40632973a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a8b2230be2b238fb4ec068de8cb1144783c279c36eb4cd30d5dd97a40632973a" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/a9df497289c2ef2ca5bc3b9e3974d8c0f2fab820b5719bb0d65a530bea0c7770> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a9df497289c2ef2ca5bc3b9e3974d8c0f2fab820b5719bb0d65a530bea0c7770" ;
+    ms:sourceDocument "glossary/inbox.md" .
+
+<https://memory.example.org/ms/segment/aaa2f2e79de6f19b3ad088f19e8001012ef247e30d567aea9a36ebdd40e4f806> a ms:PreparedSegment ;
+    ms:contentHash "sha256:aaa2f2e79de6f19b3ad088f19e8001012ef247e30d567aea9a36ebdd40e4f806" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/ac116e61b30300886aa713c223dcb65dd6d242c3dd61c9c9aa23081e76f614d6> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ac116e61b30300886aa713c223dcb65dd6d242c3dd61c9c9aa23081e76f614d6" ;
+    ms:sourceDocument "glossary/mcp-tool.md" .
+
+<https://memory.example.org/ms/segment/ae21810f72359f7babb20c10720025efd7dea4421fcd764d37a0f59a23df137f> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ae21810f72359f7babb20c10720025efd7dea4421fcd764d37a0f59a23df137f" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/ae62617b853406494c083f72f0922391b15704981e9b7cf3bf18ff03b8b1b48c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ae62617b853406494c083f72f0922391b15704981e9b7cf3bf18ff03b8b1b48c" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/aeadcd009da40995da551dbbf5e46dfe5705e1be9588d62d8924444906cae961> a ms:PreparedSegment ;
+    ms:contentHash "sha256:aeadcd009da40995da551dbbf5e46dfe5705e1be9588d62d8924444906cae961" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/af5c077bdd7cd8397b3bafb1e2f79f7b8e0ab7520e52629e0a9076bb99bed4fd> a ms:PreparedSegment ;
+    ms:contentHash "sha256:af5c077bdd7cd8397b3bafb1e2f79f7b8e0ab7520e52629e0a9076bb99bed4fd" ;
+    ms:sourceDocument "glossary/yaml-front-matter.md" .
+
+<https://memory.example.org/ms/segment/b03ec5d86c3225fd3d65f815b1ff95672565b866c2425f24531a0788bd463510> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b03ec5d86c3225fd3d65f815b1ff95672565b866c2425f24531a0788bd463510" ;
+    ms:sourceDocument "glossary/lancedb.md" .
+
+<https://memory.example.org/ms/segment/b046c8d6e95d7e3cbd6c7b429d22f682b4dd50961cec40032f2a33c712624b55> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b046c8d6e95d7e3cbd6c7b429d22f682b4dd50961cec40032f2a33c712624b55" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md",
+        "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/b0c5aadd85966a5a24569326dffd55ffa4896df597740fe33933c5cbca347242> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b0c5aadd85966a5a24569326dffd55ffa4896df597740fe33933c5cbca347242" ;
+    ms:sourceDocument "glossary/yaml-front-matter.md" .
+
+<https://memory.example.org/ms/segment/b133ad5714fc777843bf476c0a6ad90c91068616919fb93228e0492903a3d14b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b133ad5714fc777843bf476c0a6ad90c91068616919fb93228e0492903a3d14b" ;
+    ms:sourceDocument "glossary/skill.md" .
+
+<https://memory.example.org/ms/segment/b1daa0b6fc0d785bcc04a37bc7931b94832d0a63c5cae4fde8f44d1cc9d1fa0a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b1daa0b6fc0d785bcc04a37bc7931b94832d0a63c5cae4fde8f44d1cc9d1fa0a" ;
+    ms:sourceDocument "glossary/knowledge-graph.md" .
+
+<https://memory.example.org/ms/segment/b1f4df2f777dcc2ad224f2fe7a394dc551f6f967312a23994b75f574c9824f95> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b1f4df2f777dcc2ad224f2fe7a394dc551f6f967312a23994b75f574c9824f95" ;
+    ms:sourceDocument "glossary/embedding-model.md" .
+
+<https://memory.example.org/ms/segment/b4a607cd560dc17ea73c82d3455325d05a4627fe1340a3a838260ad399500706> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b4a607cd560dc17ea73c82d3455325d05a4627fe1340a3a838260ad399500706" ;
+    ms:sourceDocument "glossary/skill.md" .
+
+<https://memory.example.org/ms/segment/b53a3b3ace2c01379208a6ea5ca9c2362ebcf3b7eb4aca7075054dad63d854ad> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b53a3b3ace2c01379208a6ea5ca9c2362ebcf3b7eb4aca7075054dad63d854ad" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/b6b910a1318237974062bdfa008087d2c636f025be2304ce1e3fed7ff0bc4592> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b6b910a1318237974062bdfa008087d2c636f025be2304ce1e3fed7ff0bc4592" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/b6e391d9795a4f1c964738c4ddae12a4c48b6197308917a004cb87f77734cc24> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b6e391d9795a4f1c964738c4ddae12a4c48b6197308917a004cb87f77734cc24" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/b8d0cc7f29330875d9a72b3e69c9609c9c189e06cb8c8d2417b850b73285f584> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b8d0cc7f29330875d9a72b3e69c9609c9c189e06cb8c8d2417b850b73285f584" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/b9a2c97fff30b6b9d615c61af8d03931d854db7bd92297c0adf25fb8d1cfc7e5> a ms:PreparedSegment ;
+    ms:contentHash "sha256:b9a2c97fff30b6b9d615c61af8d03931d854db7bd92297c0adf25fb8d1cfc7e5" ;
+    ms:sourceDocument "glossary/ai-agent.md" .
+
+<https://memory.example.org/ms/segment/bac5ce6743dce3448d0ccea3c04ac0eb9123c25ba56980a5f3f2e667ea9cde7e> a ms:PreparedSegment ;
+    ms:contentHash "sha256:bac5ce6743dce3448d0ccea3c04ac0eb9123c25ba56980a5f3f2e667ea9cde7e" ;
+    ms:sourceDocument "glossary/open-brain.md" .
+
+<https://memory.example.org/ms/segment/bae95cc1446c5e4eba769f0d01d0c314399e0fa29eb10bb94ce207f3eb9bfa15> a ms:PreparedSegment ;
+    ms:contentHash "sha256:bae95cc1446c5e4eba769f0d01d0c314399e0fa29eb10bb94ce207f3eb9bfa15" ;
+    ms:sourceDocument "glossary/tag.md" .
+
+<https://memory.example.org/ms/segment/bb8ea417087fca18c9e0887821fd1594e1464d75aa93ed4f7138680bc93e4840> a ms:PreparedSegment ;
+    ms:contentHash "sha256:bb8ea417087fca18c9e0887821fd1594e1464d75aa93ed4f7138680bc93e4840" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/bc830bf8a0fe53c38d2bd55d264f21e13f03a604cf13c3f062c1c713db130fae> a ms:PreparedSegment ;
+    ms:contentHash "sha256:bc830bf8a0fe53c38d2bd55d264f21e13f03a604cf13c3f062c1c713db130fae" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/bd05c532bfbee13614a39c1734ad002ae14044786b37f472c5c26865f879a058> a ms:PreparedSegment ;
+    ms:contentHash "sha256:bd05c532bfbee13614a39c1734ad002ae14044786b37f472c5c26865f879a058" ;
+    ms:sourceDocument "glossary/inbox.md" .
+
+<https://memory.example.org/ms/segment/be05676f20d693e15a9d58cabf33e47395eb6955775d84a0d4d705b7ab489a7a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:be05676f20d693e15a9d58cabf33e47395eb6955775d84a0d4d705b7ab489a7a" ;
+    ms:sourceDocument "glossary/tag.md" .
+
+<https://memory.example.org/ms/segment/be0e776e8486b30401d8e76e63333349149394ec47b9a8d0706c3ab8fff6c4d4> a ms:PreparedSegment ;
+    ms:contentHash "sha256:be0e776e8486b30401d8e76e63333349149394ec47b9a8d0706c3ab8fff6c4d4" ;
+    ms:sourceDocument "glossary/vector-database.md" .
+
+<https://memory.example.org/ms/segment/c3b405eddfcdcd28f42a5767f2ac1ed2c26d081d79242d2ebbf1f35393087af0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c3b405eddfcdcd28f42a5767f2ac1ed2c26d081d79242d2ebbf1f35393087af0" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/c4ae0f8ba19622c21eb56ce9e982c40f1092e806a07e51371377c363ba328730> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c4ae0f8ba19622c21eb56ce9e982c40f1092e806a07e51371377c363ba328730" ;
+    ms:sourceDocument "glossary/yaml-front-matter.md" .
+
+<https://memory.example.org/ms/segment/c50d65b9881f3734984bb8b75dc1cf1b29c81a7094ba1a477616738d3c527bb1> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c50d65b9881f3734984bb8b75dc1cf1b29c81a7094ba1a477616738d3c527bb1" ;
+    ms:sourceDocument "glossary/superseded-by.md" .
+
+<https://memory.example.org/ms/segment/c62915393e427ad965aca08453cf27d9066327c7e6b40df0429eafd225731b3b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c62915393e427ad965aca08453cf27d9066327c7e6b40df0429eafd225731b3b" ;
+    ms:sourceDocument "glossary/semantic-search.md" .
+
+<https://memory.example.org/ms/segment/c6a7078473b058d2efbd173a5ec36eff69071f220dcb93ccda02a62ddd01c593> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c6a7078473b058d2efbd173a5ec36eff69071f220dcb93ccda02a62ddd01c593" ;
+    ms:sourceDocument "glossary/stdio-transport.md" .
+
+<https://memory.example.org/ms/segment/c7507e18129f19253688813b5a0089fe975b50247878178a46c0e5c70f13b036> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c7507e18129f19253688813b5a0089fe975b50247878178a46c0e5c70f13b036" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/c75b5ffed043720aa49ff99ec7da4b6ae2e58329ce33ab4aa02791130d98166a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c75b5ffed043720aa49ff99ec7da4b6ae2e58329ce33ab4aa02791130d98166a" ;
+    ms:sourceDocument "glossary/agent-first.md" .
+
+<https://memory.example.org/ms/segment/c76c7c7dcc5ea976ccbeaa207e3982633294218c6f903976e5ecbc1d2bde6a28> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c76c7c7dcc5ea976ccbeaa207e3982633294218c6f903976e5ecbc1d2bde6a28" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/c99924010d051ffe842da57820f961fc98c8146d5704fc1b03afa71e0f7c867b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c99924010d051ffe842da57820f961fc98c8146d5704fc1b03afa71e0f7c867b" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/c99dcca6b7b9078fcadb52563e89c66452bc6c691364318483ac1988bb457759> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c99dcca6b7b9078fcadb52563e89c66452bc6c691364318483ac1988bb457759" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/c9a4b6c46b35c8aee5395585a5718bc55d237551de7f6cd76443d4db685240fc> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c9a4b6c46b35c8aee5395585a5718bc55d237551de7f6cd76443d4db685240fc" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/c9bbcdf6123e776b8ba5dccb3029a9bd94bbf7d1b7bcac5ba19b6b8222f8b8d1> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c9bbcdf6123e776b8ba5dccb3029a9bd94bbf7d1b7bcac5ba19b6b8222f8b8d1" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/c9c4437dffd8f546159078f12851ac360ea721f278071cb6bf41cc86f7ff7569> a ms:PreparedSegment ;
+    ms:contentHash "sha256:c9c4437dffd8f546159078f12851ac360ea721f278071cb6bf41cc86f7ff7569" ;
+    ms:sourceDocument "glossary/memory-file.md" .
+
+<https://memory.example.org/ms/segment/cabe70b9b49afaf1ce0232858e6c64f73075e95a538334039fdeaf65c5c98d8a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:cabe70b9b49afaf1ce0232858e6c64f73075e95a538334039fdeaf65c5c98d8a" ;
+    ms:sourceDocument "glossary/mcp.md" .
+
+<https://memory.example.org/ms/segment/cb3243b0b9fd7aa44d76e97a885c3f5345443571dbf819d8e165d1fd9f9bd696> a ms:PreparedSegment ;
+    ms:contentHash "sha256:cb3243b0b9fd7aa44d76e97a885c3f5345443571dbf819d8e165d1fd9f9bd696" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md",
+        "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/ce81b5f5ff7a40b323f4ee44bae5d7d4f5f82a3476444e9be90895925e5ac22a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ce81b5f5ff7a40b323f4ee44bae5d7d4f5f82a3476444e9be90895925e5ac22a" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/d01a7ec1108294d9c0ca5cf9ee419dc018d0bc92548b85dfd41d98b80a609cd4> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d01a7ec1108294d9c0ca5cf9ee419dc018d0bc92548b85dfd41d98b80a609cd4" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/d195e3408ddcf71633ff86828c3b4af8945db0b2ec3ada064a609bcdd0c0e530> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d195e3408ddcf71633ff86828c3b4af8945db0b2ec3ada064a609bcdd0c0e530" ;
+    ms:sourceDocument "glossary/vector-database.md" .
+
+<https://memory.example.org/ms/segment/d25b6a63107b794384c8d5a8882937049192ce299a38faae0f07689a198dfa20> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d25b6a63107b794384c8d5a8882937049192ce299a38faae0f07689a198dfa20" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/d38b9539e67e72a9a5ea707111ecdd2174b3c75d51a8de019e0d39f2abc3d386> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d38b9539e67e72a9a5ea707111ecdd2174b3c75d51a8de019e0d39f2abc3d386" ;
+    ms:sourceDocument "glossary/embedding-model.md" .
+
+<https://memory.example.org/ms/segment/d3d4d060ebd18724df2a8bd00f9abaef18d4fea440dd4923ded4025f0b352303> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d3d4d060ebd18724df2a8bd00f9abaef18d4fea440dd4923ded4025f0b352303" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/d4ab67f9d9ce63daf7358d44a9e904b8b68c446ddee6c5d1f2f247ab7f439bf7> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d4ab67f9d9ce63daf7358d44a9e904b8b68c446ddee6c5d1f2f247ab7f439bf7" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/d4c35d3352442f31bdb9bf973139c027527c5461cc4554eae40fea5bb4e2f547> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d4c35d3352442f31bdb9bf973139c027527c5461cc4554eae40fea5bb4e2f547" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/d6ac1a57fea542e76061d0fb9efa6b62ccc328e56d96779cfe86080097f7009c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d6ac1a57fea542e76061d0fb9efa6b62ccc328e56d96779cfe86080097f7009c" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/d8ba7342b0b7e45fe126fa91ec1c8584aca7f44c6a4d38b462e1608c449b8c96> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d8ba7342b0b7e45fe126fa91ec1c8584aca7f44c6a4d38b462e1608c449b8c96" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/db014ca18502053b6d9b4f9e41e305afec85ec467b52a7b115442e3b414095ba> a ms:PreparedSegment ;
+    ms:contentHash "sha256:db014ca18502053b6d9b4f9e41e305afec85ec467b52a7b115442e3b414095ba" ;
+    ms:sourceDocument "_docs/adr/0001-standardise-agent-instructions.md" .
+
+<https://memory.example.org/ms/segment/db10eaa5d7f80cc5065e9f6f7f6cb4ba78b23aead122a0dc09caf390ec36154e> a ms:PreparedSegment ;
+    ms:contentHash "sha256:db10eaa5d7f80cc5065e9f6f7f6cb4ba78b23aead122a0dc09caf390ec36154e" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/dd0d2036b6dca76fd503a868ce94b54a7db65d380a857baaee85fd0d472f4aa9> a ms:PreparedSegment ;
+    ms:contentHash "sha256:dd0d2036b6dca76fd503a868ce94b54a7db65d380a857baaee85fd0d472f4aa9" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/ddb9db945aa71dfcfd59833b76e673f54e7642fcd2ed24b520fec5ce4b6b06ff> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ddb9db945aa71dfcfd59833b76e673f54e7642fcd2ed24b520fec5ce4b6b06ff" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/ddf3c959aa357eb83b7b7692b6cd51119f1a1df18b4f3cd1119f3dce814422d0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ddf3c959aa357eb83b7b7692b6cd51119f1a1df18b4f3cd1119f3dce814422d0" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/deaa82be6610a1441806d83fd7ee7c70ea750abdef07b6edb5d1555a8b6da53c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:deaa82be6610a1441806d83fd7ee7c70ea750abdef07b6edb5d1555a8b6da53c" ;
+    ms:sourceDocument "glossary/mcp-server.md" .
+
+<https://memory.example.org/ms/segment/df026c34e62a4e7e5ad0254f0c5c467076a0a0d83f0d387bcb4ffdd44c084903> a ms:PreparedSegment ;
+    ms:contentHash "sha256:df026c34e62a4e7e5ad0254f0c5c467076a0a0d83f0d387bcb4ffdd44c084903" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/e0a004283b075eea68145d74c3ca565c8cd1a5ee9dfc0ddc51d2b9437af50de9> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e0a004283b075eea68145d74c3ca565c8cd1a5ee9dfc0ddc51d2b9437af50de9" ;
+    ms:sourceDocument "glossary/local-first.md" .
+
+<https://memory.example.org/ms/segment/e0b0dd1b082330785401262fe38d6feb37ef9c19b90394da31834e26016cade3> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e0b0dd1b082330785401262fe38d6feb37ef9c19b90394da31834e26016cade3" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/e2aa4b325828159f2a4fb79cb6b9f757f3b2e20f7ca582b175beffd7d62db092> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e2aa4b325828159f2a4fb79cb6b9f757f3b2e20f7ca582b175beffd7d62db092" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/e2bf6ff4f76fe0c7ef976a73d4698380a9417f90c54f40f3022a57ca0ac20de1> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e2bf6ff4f76fe0c7ef976a73d4698380a9417f90c54f40f3022a57ca0ac20de1" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/e3b8fd9dd4ec2a1fcc1f38d84430a81e4496819f7770dd83dfc0109e905105a2> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e3b8fd9dd4ec2a1fcc1f38d84430a81e4496819f7770dd83dfc0109e905105a2" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/e63031a44ff1c7805e80748511fd8698ccef401fc15b68219d9f346331856bbd> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e63031a44ff1c7805e80748511fd8698ccef401fc15b68219d9f346331856bbd" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/e6a66693a1ad4d3ec43d4eb79604a65f30949b085eac5859aeff2b97d52f5d42> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e6a66693a1ad4d3ec43d4eb79604a65f30949b085eac5859aeff2b97d52f5d42" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/e6cde356a5781de8cbbdf3f61ba0d70b38d2656a85a1e3f95f4f9d48701fd578> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e6cde356a5781de8cbbdf3f61ba0d70b38d2656a85a1e3f95f4f9d48701fd578" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/e7203d5e32587ecff7deec0b864fc88ff3fce1a4ab24bff6db777103ecf59797> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e7203d5e32587ecff7deec0b864fc88ff3fce1a4ab24bff6db777103ecf59797" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/e725acf5e2b7e2ded587dfd14163db91b50a9e630ca67e0d01f09223dfc074a0> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e725acf5e2b7e2ded587dfd14163db91b50a9e630ca67e0d01f09223dfc074a0" ;
+    ms:sourceDocument "glossary/capture.md" .
+
+<https://memory.example.org/ms/segment/e782310a76137ee26017cd0af1f7092ba357f6479086c6d135a248d3ff88e5fe> a ms:PreparedSegment ;
+    ms:contentHash "sha256:e782310a76137ee26017cd0af1f7092ba357f6479086c6d135a248d3ff88e5fe" ;
+    ms:sourceDocument "glossary/memory-file.md" .
+
+<https://memory.example.org/ms/segment/eaf2bebacd5d364c1e6be3dd6ff55edc62ffadcafa55d8c1d38f8279a7cabee7> a ms:PreparedSegment ;
+    ms:contentHash "sha256:eaf2bebacd5d364c1e6be3dd6ff55edc62ffadcafa55d8c1d38f8279a7cabee7" ;
+    ms:sourceDocument "_docs/design/ontology-system-design.md" .
+
+<https://memory.example.org/ms/segment/ebaba6db7dd23bfe636d79d24036bf8ae9e473a5c29502965ad92e7231f4647a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ebaba6db7dd23bfe636d79d24036bf8ae9e473a5c29502965ad92e7231f4647a" ;
+    ms:sourceDocument "_docs/adr/0001-standardise-agent-instructions.md" .
+
+<https://memory.example.org/ms/segment/eeaf53f5c8ed9ba80b5b963a60aa413fc183c155306c8c90a01a949d7602ec3a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:eeaf53f5c8ed9ba80b5b963a60aa413fc183c155306c8c90a01a949d7602ec3a" ;
+    ms:sourceDocument "glossary/knowledge-graph.md" .
+
+<https://memory.example.org/ms/segment/ef0704c5c7256695cd487f882ee66ebd116eba2f0f7adcdb866c02ed087631ad> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ef0704c5c7256695cd487f882ee66ebd116eba2f0f7adcdb866c02ed087631ad" ;
+    ms:sourceDocument "_docs/design/build-loop-harness.md" .
+
+<https://memory.example.org/ms/segment/ef08b18c921d59496308f6b6531975a8379b2bbd1bf3ff71404fd619e0d2a18f> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ef08b18c921d59496308f6b6531975a8379b2bbd1bf3ff71404fd619e0d2a18f" ;
+    ms:sourceDocument "glossary/ai-agent.md" .
+
+<https://memory.example.org/ms/segment/ef0aed49b92213c9676a21cb6e2087b1ab0abf1febcdaf4ee11fbf41b49a97e3> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ef0aed49b92213c9676a21cb6e2087b1ab0abf1febcdaf4ee11fbf41b49a97e3" ;
+    ms:sourceDocument "glossary/ai-agent.md" .
+
+<https://memory.example.org/ms/segment/f1b901847390b0ed7e374e7c1e464ec17b46a427c487a5ad6cbd2906405083d5> a ms:PreparedSegment ;
+    ms:contentHash "sha256:f1b901847390b0ed7e374e7c1e464ec17b46a427c487a5ad6cbd2906405083d5" ;
+    ms:sourceDocument "glossary/madr.md" .
+
+<https://memory.example.org/ms/segment/f4761e4954612a5bb851d7d99836ca9e6d8871526953552e1a7badf2eb3b558c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:f4761e4954612a5bb851d7d99836ca9e6d8871526953552e1a7badf2eb3b558c" ;
+    ms:sourceDocument "_docs/adr/0002-move-from-vector-storage-to-ontology.md" .
+
+<https://memory.example.org/ms/segment/f52d1f2b4438d0017ca1a2c6a28c4c4fcb364c2afca92f7a8fad78433b0fd601> a ms:PreparedSegment ;
+    ms:contentHash "sha256:f52d1f2b4438d0017ca1a2c6a28c4c4fcb364c2afca92f7a8fad78433b0fd601" ;
+    ms:sourceDocument "glossary/agent-first.md" .
+
+<https://memory.example.org/ms/segment/f6cd963dcbf980b8372262eb32d633eb6cb8641fa594999ad82e2bc9a5f68a7c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:f6cd963dcbf980b8372262eb32d633eb6cb8641fa594999ad82e2bc9a5f68a7c" ;
+    ms:sourceDocument "_docs/adr/0003-ontology-architecture.md" .
+
+<https://memory.example.org/ms/segment/f9d4c32324dbde1fc2123ce9609b1003527733b0e867b88f31190e887097f103> a ms:PreparedSegment ;
+    ms:contentHash "sha256:f9d4c32324dbde1fc2123ce9609b1003527733b0e867b88f31190e887097f103" ;
+    ms:sourceDocument "glossary/inbox.md" .
+
+<https://memory.example.org/ms/segment/fa688311c9a5f3172016fced2fbd15581adc839c829278d7235cc5787bb807e1> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fa688311c9a5f3172016fced2fbd15581adc839c829278d7235cc5787bb807e1" ;
+    ms:sourceDocument "glossary/mcp-tool.md" .
+
+<https://memory.example.org/ms/segment/fb40e87c4184a95e55c091c70c32406b0571dd0632a4f896645f57b1b8eade8a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fb40e87c4184a95e55c091c70c32406b0571dd0632a4f896645f57b1b8eade8a" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+
+<https://memory.example.org/ms/segment/fc3466f4bf8a168fedc2852aae44ef7497fa2d73a884eb669eaedfc600a2ad77> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fc3466f4bf8a168fedc2852aae44ef7497fa2d73a884eb669eaedfc600a2ad77" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/fcdbec59348a0ea753d855986080e85cf9279a9568ab4a18f9d4a9331794d433> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fcdbec59348a0ea753d855986080e85cf9279a9568ab4a18f9d4a9331794d433" ;
+    ms:sourceDocument "glossary/open-brain.md" .
+
+<https://memory.example.org/ms/segment/fd27d22c58c0010a6705ad600352821131b8b59f81bfdd05aee34b5f909bdcb5> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fd27d22c58c0010a6705ad600352821131b8b59f81bfdd05aee34b5f909bdcb5" ;
+    ms:sourceDocument "glossary/mini-retro.md" .
+
+<https://memory.example.org/ms/segment/fefc07147fc3ef1df6ab85e6448376e76b0bda752d79c856b70fdbc97446b87f> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fefc07147fc3ef1df6ab85e6448376e76b0bda752d79c856b70fdbc97446b87f" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/segment/ff47a51bb1b7a2407370f51a304da1a719e00a39fff68ffe75a44d35c4f6ecbe> a ms:PreparedSegment ;
+    ms:contentHash "sha256:ff47a51bb1b7a2407370f51a304da1a719e00a39fff68ffe75a44d35c4f6ecbe" ;
+    ms:sourceDocument "_docs/adr/0004-provenance-model-and-control-plane.md" .
+
+<https://memory.example.org/ms/assertion/capture> a ms:AssertionNode ;
+    rdfs:label "Capture" ;
+    rdfs:comment "The act of storing a new piece of knowledge as a memory file — the write side of the memory system, in contrast to retrieval." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "add memory",
+        "memory capture",
+        "write" ;
+    ms:contrasts <https://memory.example.org/ms/assertion/retrieval> ;
+    ms:hasTag "capture",
+        "friction",
+        "input",
+        "memory",
+        "write" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:uses <https://memory.example.org/ms/assertion/inbox>,
+        <https://memory.example.org/ms/assertion/mcp-tool>,
+        <https://memory.example.org/ms/assertion/memory-file> .
+
+<https://memory.example.org/ms/assertion/embedding-model> a ms:AssertionNode ;
+    rdfs:label "Embedding Model" ;
+    rdfs:comment "A machine-learning model that converts text into a fixed-length vector of numbers representing its semantic content." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "sentence encoder",
+        "text encoder" ;
+    ms:hasTag "embedding",
+        "model",
+        "nlp",
+        "superseded" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/lancedb>,
+        <https://memory.example.org/ms/assertion/semantic-search> ;
+    ms:uses <https://memory.example.org/ms/assertion/vector-embedding> .
+
+<https://memory.example.org/ms/assertion/inbox> a ms:AssertionNode ;
+    rdfs:label "Inbox" ;
+    rdfs:comment "A designated `/inbox` folder where memory files can be dropped without a folder decision, title, or full front matter, for later classification by an agent." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "capture inbox",
+        "inbox folder" ;
+    ms:hasTag "capture",
+        "folder",
+        "inbox",
+        "triage" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/capture>,
+        <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/memory-file>,
+        <https://memory.example.org/ms/assertion/triage> .
+
+<https://memory.example.org/ms/assertion/local-first> a ms:AssertionNode ;
+    rdfs:label "Local-first" ;
+    rdfs:comment "A software design philosophy in which the user's local device is the primary source of truth, with cloud storage used for backup and sync rather than as the authoritative store." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "local first",
+        "offline-first" ;
+    ms:hasTag "architecture",
+        "design",
+        "local-first",
+        "offline",
+        "privacy" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/agent-first>,
+        <https://memory.example.org/ms/assertion/lancedb>,
+        <https://memory.example.org/ms/assertion/open-brain> .
+
+<https://memory.example.org/ms/assertion/retrieval> a ms:AssertionNode ;
+    rdfs:label "Retrieval" ;
+    rdfs:comment "The process of finding and returning relevant knowledge in response to a query, using ontology traversal, graph pattern matching, or structured query across the knowledge store." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "knowledge retrieval",
+        "recall",
+        "search" ;
+    ms:hasTag "knowledge",
+        "recall",
+        "retrieval",
+        "search" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:uses <https://memory.example.org/ms/assertion/knowledge-graph>,
+        <https://memory.example.org/ms/assertion/mcp-tool> .
+
+<https://memory.example.org/ms/assertion/stdio-transport> a ms:AssertionNode ;
+    rdfs:label "stdio Transport" ;
+    rdfs:comment "The MCP transport mechanism that uses a process's standard input and standard output streams to exchange JSON-RPC messages between an MCP client and server." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "standard input/output transport",
+        "stdio" ;
+    ms:hasTag "ipc",
+        "mcp",
+        "protocol",
+        "stdio",
+        "transport" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/mcp> ;
+    ms:uses <https://memory.example.org/ms/assertion/mcp-server> .
+
+<https://memory.example.org/ms/assertion/superseded-by> a ms:AssertionNode ;
+    rdfs:label "Superseded-by" ;
+    rdfs:comment "The memory lifecycle state (and corresponding front matter field) that marks a file as out of date and points to the newer file that replaced it, preserving history while directing readers to current information." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "superseded",
+        "superseded_by",
+        "supersedes" ;
+    ms:hasTag "lifecycle",
+        "memory",
+        "superseded-by",
+        "versioning" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/memory-file>,
+        <https://memory.example.org/ms/assertion/yaml-front-matter> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/knowledge-graph> .
+
+<https://memory.example.org/ms/assertion/adr> a ms:AssertionNode ;
+    rdfs:label "Architecture Decision Record" ;
+    rdfs:comment "A short, structured document that records a significant architectural or design decision, its context, the options considered, and the consequences of the chosen option." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "ADR",
+        "decision record" ;
+    ms:hasTag "adr",
+        "architecture",
+        "decision",
+        "documentation",
+        "governance" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:uses <https://memory.example.org/ms/assertion/madr> .
+
+<https://memory.example.org/ms/assertion/agent-first> a ms:AssertionNode ;
+    rdfs:label "Agent-first" ;
+    rdfs:comment "A design philosophy that treats AI agents as primary users of a system, building in autonomous read/write access, versioned context, and self-correction from the start rather than adding them as afterthoughts." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "agent first",
+        "agent native",
+        "agent-native" ;
+    ms:hasTag "agent-first",
+        "agent-native",
+        "ai",
+        "architecture",
+        "design" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/ai-agent>,
+        <https://memory.example.org/ms/assertion/local-first>,
+        <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:uses <https://memory.example.org/ms/assertion/mcp> .
+
+<https://memory.example.org/ms/assertion/knowledge-graph> a ms:AssertionNode ;
+    rdfs:label "Knowledge Graph" ;
+    rdfs:comment "A structured network in which entities (concepts, assertions, sources) are connected by typed relationships, enabling reasoning, traversal, and structured query." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "knowledge base graph",
+        "ontology graph" ;
+    ms:hasTag "graph",
+        "knowledge-graph",
+        "links",
+        "ontology",
+        "structure" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:uses <https://memory.example.org/ms/assertion/tag> .
+
+<https://memory.example.org/ms/assertion/tag> a ms:AssertionNode ;
+    rdfs:label "Tag" ;
+    rdfs:comment "A short keyword stored in a memory file's YAML front matter that categorises the file and makes it retrievable by topic even when semantic search returns noisy results." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "category tag",
+        "label" ;
+    ms:hasTag "categorisation",
+        "metadata",
+        "retrieval",
+        "tag" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/memory-file>,
+        <https://memory.example.org/ms/assertion/yaml-front-matter> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/semantic-search> .
+
+<https://memory.example.org/ms/assertion/vector-database> a ms:AssertionNode ;
+    rdfs:label "Vector Database" ;
+    rdfs:comment "A database purpose-built to store and retrieve high-dimensional numerical vectors using approximate nearest-neighbour algorithms." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "embedding store",
+        "vector store" ;
+    ms:hasTag "database",
+        "search",
+        "storage",
+        "vector" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/lancedb>,
+        <https://memory.example.org/ms/assertion/semantic-search> ;
+    ms:uses <https://memory.example.org/ms/assertion/vector-embedding> .
+
+<https://memory.example.org/ms/assertion/yaml-front-matter> a ms:AssertionNode ;
+    rdfs:label "YAML Front Matter" ;
+    rdfs:comment "A block of YAML key-value metadata at the very top of a Markdown file, delimited by `---` lines, that provides structured fields for indexing and retrieval." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "YAML header",
+        "front matter",
+        "frontmatter" ;
+    ms:hasTag "front-matter",
+        "markdown",
+        "metadata",
+        "yaml" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/memory-file> ;
+    ms:uses <https://memory.example.org/ms/assertion/superseded-by>,
+        <https://memory.example.org/ms/assertion/tag> .
+
+<https://memory.example.org/ms/assertion/mcp-server> a ms:AssertionNode ;
+    rdfs:label "MCP Server" ;
+    rdfs:comment "A process that implements the Model Context Protocol server side, exposing a named set of tools that AI clients can discover and call." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "mcp_server.py",
+        "open-brain server" ;
+    ms:hasTag "bridge",
+        "mcp",
+        "python",
+        "server" ;
+    ms:implements <https://memory.example.org/ms/assertion/mcp> ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/mcp-tool> ;
+    ms:uses <https://memory.example.org/ms/assertion/stdio-transport> .
+
+<https://memory.example.org/ms/assertion/vector-embedding> a ms:AssertionNode ;
+    rdfs:label "Vector Embedding" ;
+    rdfs:comment "A fixed-length list of numbers that encodes the meaning of a piece of text so that semantically similar texts produce numerically similar vectors." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "embedding",
+        "text embedding",
+        "vector representation" ;
+    ms:hasTag "embedding",
+        "nlp",
+        "representation",
+        "vector" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/vector-database> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/lancedb>,
+        <https://memory.example.org/ms/assertion/semantic-search> ;
+    ms:uses <https://memory.example.org/ms/assertion/embedding-model> .
+
+<https://memory.example.org/ms/assertion/ai-agent> a ms:AssertionNode ;
+    rdfs:label "AI Agent" ;
+    rdfs:comment "An AI system that can autonomously take sequences of actions — including calling external tools — to complete a goal specified in natural language." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "AI assistant",
+        "Copilot agent",
+        "agent",
+        "coding agent" ;
+    ms:hasTag "agent",
+        "ai",
+        "autonomous",
+        "claude",
+        "copilot",
+        "cursor" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/agent-first> ;
+    ms:uses <https://memory.example.org/ms/assertion/mcp>,
+        <https://memory.example.org/ms/assertion/mcp-tool>,
+        <https://memory.example.org/ms/assertion/skill> .
+
+<https://memory.example.org/ms/assertion/lancedb> a ms:AssertionNode ;
+    rdfs:label "LanceDB" ;
+    rdfs:comment "An embedded, serverless vector database that stores and searches high-dimensional numerical vectors, requiring no separate database process." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:hasTag "embedded",
+        "lancedb",
+        "search",
+        "superseded",
+        "vector-database" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:instanceOf <https://memory.example.org/ms/assertion/vector-database> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/semantic-search> ;
+    ms:uses <https://memory.example.org/ms/assertion/embedding-model>,
+        <https://memory.example.org/ms/assertion/vector-embedding> .
+
+<https://memory.example.org/ms/assertion/mcp> a ms:AssertionNode ;
+    rdfs:label "Model Context Protocol" ;
+    rdfs:comment "An open standard that lets AI assistants call external tools and data sources through a structured interface, replacing one-off integrations with a single universal protocol." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "MCP" ;
+    ms:hasTag "ai",
+        "integration",
+        "mcp",
+        "protocol" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/ai-agent>,
+        <https://memory.example.org/ms/assertion/mcp-server>,
+        <https://memory.example.org/ms/assertion/mcp-tool>,
+        <https://memory.example.org/ms/assertion/stdio-transport> .
+
+<https://memory.example.org/ms/assertion/mcp-tool> a ms:AssertionNode ;
+    rdfs:label "MCP Tool" ;
+    rdfs:comment "A named, typed capability declared by an MCP server that an AI agent can discover and invoke autonomously." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "MCP capability",
+        "tool call" ;
+    ms:hasTag "api",
+        "capability",
+        "mcp",
+        "tool" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/mcp>,
+        <https://memory.example.org/ms/assertion/mcp-server> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/ai-agent> .
+
+<https://memory.example.org/ms/assertion/semantic-search> a ms:AssertionNode ;
+    rdfs:label "Semantic Search" ;
+    rdfs:comment "A search technique that finds documents by conceptual meaning rather than exact keyword matching, using vector similarity as the relevance signal." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "similarity search",
+        "vector search" ;
+    ms:hasTag "nlp",
+        "retrieval",
+        "search",
+        "similarity",
+        "superseded" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:instanceOf <https://memory.example.org/ms/assertion/retrieval> ;
+    ms:uses <https://memory.example.org/ms/assertion/lancedb>,
+        <https://memory.example.org/ms/assertion/vector-database>,
+        <https://memory.example.org/ms/assertion/vector-embedding> .
+
+<https://memory.example.org/ms/assertion/memory-file> a ms:AssertionNode ;
+    rdfs:label "Memory File" ;
+    rdfs:comment "A single Markdown file stored in this repository that represents one unit of source knowledge, from which the ontology store derives structured assertions." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "brain file",
+        "memory",
+        "note",
+        "source document" ;
+    ms:hasTag "file",
+        "markdown",
+        "memory",
+        "note" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/open-brain> ;
+    ms:uses <https://memory.example.org/ms/assertion/superseded-by>,
+        <https://memory.example.org/ms/assertion/tag>,
+        <https://memory.example.org/ms/assertion/yaml-front-matter> .
+
+<https://memory.example.org/ms/assertion/open-brain> a ms:AssertionNode ;
+    rdfs:label "Open-Brain" ;
+    rdfs:comment "The personal AI knowledge store implemented in this repository: a local-first, agent-native knowledge base backed by Markdown files and an ontology-based knowledge graph, exposed to AI tools via the Model Context Protocol." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T095042> ;
+    ms:aliases "GitHub Open-Brain",
+        "Memory-System",
+        "open brain" ;
+    ms:hasTag "github",
+        "memory-system",
+        "open-brain",
+        "project" ;
+    ms:implements <https://memory.example.org/ms/assertion/agent-first>,
+        <https://memory.example.org/ms/assertion/local-first> ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:uses <https://memory.example.org/ms/assertion/knowledge-graph>,
+        <https://memory.example.org/ms/assertion/mcp-server> .
+
+<https://memory.example.org/ms/activity/extract-20260524T095042> a ms:ExtractionActivity ;
+    prov:endedAtTime "2026-05-24T09:50:42+00:00"^^xsd:dateTime ;
+    prov:used <https://memory.example.org/ms/segment/02025ad314135690b44443723bd8273a2c0f81beb7ac2f6264323a3f332d035f>,
+        <https://memory.example.org/ms/segment/02feb532b12c3d05a8673a8f28ad597f6c511528555f317f24653d7c25e1ebd5>,
+        <https://memory.example.org/ms/segment/035255b83910007737e3596fc832ae0c6616a95acc1d789348b9762504bfc9e9>,
+        <https://memory.example.org/ms/segment/03a5898b11814352f9ea19cc1465949617a1fed69a2b9d582069e4f1a4bb1382>,
+        <https://memory.example.org/ms/segment/03cb94c21f6197dbb173cd0c8746e9cb56e9bb3643e545bf3c71cdd1d865644b>,
+        <https://memory.example.org/ms/segment/041213806eea54742f89c6244f913ff06d68a1009c33df59f8d3fe39c8a87eb5>,
+        <https://memory.example.org/ms/segment/042532571cf0cc365530b7d1561cad427e24eeb96b30763928f3aa69d42f291f>,
+        <https://memory.example.org/ms/segment/0485213788d4ae0d30e6abb9d189af5369010f796d597fbf51ee82c0e7236fb6>,
+        <https://memory.example.org/ms/segment/04dc850cd7e83fcc344d8472e3cc1e24f084cee6999f2dee576a5fd9a7d1505d>,
+        <https://memory.example.org/ms/segment/08b9231cb0ba04ec8312d21dc8863a7891f786d1bf6f116e4443c7601fcfe5c2>,
+        <https://memory.example.org/ms/segment/08d2ab51840d1e53efb72035c6109d27eb80f98ba0bf135a4aab27aa23c0e448>,
+        <https://memory.example.org/ms/segment/0956f042703e66d69aa91cf4600767a07ecf12b2317721c4b311c56b7fb73c4b>,
+        <https://memory.example.org/ms/segment/0be0d21a65bd3772ba5fb054306cf51963a7a2be391894e815c2e816ccfe183e>,
+        <https://memory.example.org/ms/segment/0cfadfa6b28885e38fd2f79701a047ac38708e15bee5c65eeb8c6dfe4c68e4ce>,
+        <https://memory.example.org/ms/segment/0ddc0897eac8d87ef72cfb80e77d84e2f473777fe07521ac623f200551f95c56>,
+        <https://memory.example.org/ms/segment/0e788c18f301148a9918ad08c7106321f52c935132d5c1bf24013cb6bc3c0fc0>,
+        <https://memory.example.org/ms/segment/0f90c156a44623e24e81eef8e6c5c690d1ad124e83b4ef467d238c9f32972423>,
+        <https://memory.example.org/ms/segment/11b5376767dee829f7b8297d02308c1e2a8bb795440933fffd162bc51d45e9bf>,
+        <https://memory.example.org/ms/segment/1296aeb6f427cb2e6e18f9ee30c4ea7661db05c0c983de69570a19a916be2915>,
+        <https://memory.example.org/ms/segment/12e783657cbc0a9cd5ac331aa4d9b1e5352801d2d1d60a3ebc621bdc3d8d284a>,
+        <https://memory.example.org/ms/segment/1320eb2680e43eda8d75876a09a880bf03649592b86cb1a428bfac11553fadc9>,
+        <https://memory.example.org/ms/segment/13bb4b981a9aa8b9c699edcb4c75bc1dcfcd8e08929b39dc61810434940e92ce>,
+        <https://memory.example.org/ms/segment/15320d5eb452c949f1dfe0873a952a4533c9459a08fe0f84cf52c728a1a873cf>,
+        <https://memory.example.org/ms/segment/16f33f4122589e4257de8ffc535d0b4d889a7a9d3e0341418b09d7154645038a>,
+        <https://memory.example.org/ms/segment/1772704371a850fdfb244a62ca5f34adcb7fd4f6fdb6dfdab3b91e3ff5ff133d>,
+        <https://memory.example.org/ms/segment/17bbf6aef488f9971c29c2b66af65ef8005fbd6510f2fef935fe2c7528fc14bd>,
+        <https://memory.example.org/ms/segment/181ce5e9dcb5cc2bfe0532ca08eb232651e35e33957c92affd3e02b32f047dba>,
+        <https://memory.example.org/ms/segment/187c708e52f78a293694cf9bd96e040be16f5b3b6d5fd3009ff7b3ac12ffb1ff>,
+        <https://memory.example.org/ms/segment/1889aa5f2e0e0765b9a4d39e2bfc29967bf68e410b52abb51e752c83b8cfee86>,
+        <https://memory.example.org/ms/segment/192e6924363938e168214ce2d489cfe6b27cf616618bda9d7fa3fdc8e58ceeb9>,
+        <https://memory.example.org/ms/segment/1a6363dcb2325696574b3ea73d4f8574c4e01cacb99193ff78defb66f532a042>,
+        <https://memory.example.org/ms/segment/1d992cbf1e33ddc8360e405604dd913600b8564428ecea2d0c957bb879ba3926>,
+        <https://memory.example.org/ms/segment/1e50c8843bd43df40c7f14953a5ccc7383fbd1a154eb8173dc4929b1947e0831>,
+        <https://memory.example.org/ms/segment/204402c5afdba56fe8d3300c3c15007e241fee79c3fbadd568e0bfe922b80bf0>,
+        <https://memory.example.org/ms/segment/20c5efaa5a63da3a57896129fe268859a893e93dee030dc77c9c40994aaa62ad>,
+        <https://memory.example.org/ms/segment/20fbe71505fe0610a16066e9cbd4160b96fba6605993c61563476c69dbaea943>,
+        <https://memory.example.org/ms/segment/2153eec0084dcb613c115af5b8a4d1afefe9a00d4b87a6a1167794ac4933767f>,
+        <https://memory.example.org/ms/segment/22a38ebf9a2b6b1823e9e476363168bf273e064392cecf0b5fc9b44210ce3906>,
+        <https://memory.example.org/ms/segment/22bdcb33a2a8ae1b8a5e477cf941469ee5cbde5359486111a00319b5c9301064>,
+        <https://memory.example.org/ms/segment/2306ca1e295a11204076fa5a7fdfce2cc18338ba9806ce2549f84e9caaf351d4>,
+        <https://memory.example.org/ms/segment/23dad49da9797f9e108aba9e9d3e669b020d425a6169d6ad76f40cf0cb2d0748>,
+        <https://memory.example.org/ms/segment/23e41690296f29353d6ccce62bc81e7b631352ef19ec7abf014e2be83ea51e65>,
+        <https://memory.example.org/ms/segment/2529eb7b1f8d22ee4b4d5d80bee4cbeea6ff126c075754a0f36b7b28970a5546>,
+        <https://memory.example.org/ms/segment/25e12801f58feac1c2e1436b9969cae18e07db80ea57ae76362b5c2bb2942d8d>,
+        <https://memory.example.org/ms/segment/273f303dd05e3a5332309ba6b204ec2c8b3fb6f56c1141febe6d029736a8203a>,
+        <https://memory.example.org/ms/segment/2785b70d3c35c85c48ddbc9acbcd267a5c22816ad0db9f16c7877f051f0417cb>,
+        <https://memory.example.org/ms/segment/29358e2f0106355bc8ca5d35fb1eb09f92d200cd8b9bb8eb75afe85520751345>,
+        <https://memory.example.org/ms/segment/295d1663e1e7cb7ea6b0ba2560969c4c95ca6c70db20789a655bd81ddb743c77>,
+        <https://memory.example.org/ms/segment/2a0424ea70c6e9eb606b998c0ea9aeee42193edbcba49744577862889e116165>,
+        <https://memory.example.org/ms/segment/2a4856412574ef46ab361bed0d5c1638c1bbd72cd3361535a7a9349d1dd9383a>,
+        <https://memory.example.org/ms/segment/2ce8961b47584f78620deaad2b1c133b2a7fe27fd48897f241bc727dd367d925>,
+        <https://memory.example.org/ms/segment/2d66d6b9897e655ee16a2b3265ddf434bbeecac66baf5e73a98ec343e4e4f9f8>,
+        <https://memory.example.org/ms/segment/2d97212da412f02430c286e3493cb8f6759a339d71f77f0162e8c0476b165351>,
+        <https://memory.example.org/ms/segment/2d9d0ceb2f5bc06ad8407514a7486bf7cfc44ada39626c56c27a3496ce66c6db>,
+        <https://memory.example.org/ms/segment/2edd723e1ff65f3d226919f84cfe07960b0c7628f68db883c6ebdf7d2adf46d5>,
+        <https://memory.example.org/ms/segment/2f33a5137e596fe45f457845b23761f423aa3a9c418b9b172de9817e5646ee7d>,
+        <https://memory.example.org/ms/segment/311cd8ca9ae81c3035859ef09f303f9a72afc021c200826f8ae5a56f1bbe188a>,
+        <https://memory.example.org/ms/segment/319ab9aea766393d2ad1a5c530cf9131c6d9c00735d104adce2c94bc7437f3fd>,
+        <https://memory.example.org/ms/segment/32b75711f54129fb82cba0ac606a1c98fd9845d8234a02a050761ddf9319fdfc>,
+        <https://memory.example.org/ms/segment/336234d930e63fd6a7172c802e6f72db87968d6a361901d7e2389e85818fc136>,
+        <https://memory.example.org/ms/segment/33be4895c243a72d70dc6a8330b663c6f46bf59c42e94d85bf48d0222a7fe647>,
+        <https://memory.example.org/ms/segment/33c94c1df442de6f11204a9400208af0a1377c30b570e85137c5dce612937f98>,
+        <https://memory.example.org/ms/segment/3413621909eb8e437d5611652a375f5246f439b53faa2c274f9e2f0947ddc86c>,
+        <https://memory.example.org/ms/segment/34d025ca8a3f58eb6eb2f14eb3362f1b3cd0b5f8d67ada86aef9ebebff2ba683>,
+        <https://memory.example.org/ms/segment/350ab33199965f38fe072e5abbdeeb969f7dee970c4eb3263e0caf92ddba981e>,
+        <https://memory.example.org/ms/segment/36c3f7253ee2bd0cbf33623e82f99b3d49ad95ace3762426a89ca320e72b2565>,
+        <https://memory.example.org/ms/segment/372040ac752937ac4f9d4108a40610c08e394ac85873a5faba1fbd6e48a1f391>,
+        <https://memory.example.org/ms/segment/388b677fab45ae9e7694832ba06d918008e2295c4ec1edce1d6eda6dc55a1016>,
+        <https://memory.example.org/ms/segment/38fd04db04806f600ad1c4eebff534ae2ef4a8d12b4d8f4e840c8762d4b73e97>,
+        <https://memory.example.org/ms/segment/391200aecbe4e10ecbf6fabca79cd48d394758242cbc88dfae1966093a79ca9e>,
+        <https://memory.example.org/ms/segment/3b6e46bb29af30e919aa9fb914823204da9658fc8b40ced086f5ef140b077d4a>,
+        <https://memory.example.org/ms/segment/3de4b006898b1c99de600e010499941cd7e9ce19db27b8a66922a2ccb41883be>,
+        <https://memory.example.org/ms/segment/3ff13e6ef4ae08a09408f95210018245dc92cf3bc5c2345c6aa1a0afd9623fb6>,
+        <https://memory.example.org/ms/segment/40798e90da8a26529cb14afea6c216fe8274c4ca1ed9a7d5f014e5e350ab9053>,
+        <https://memory.example.org/ms/segment/41d08590c5cfb2385392beaec96246db978cc644026c58e1d3e5f6e74c507448>,
+        <https://memory.example.org/ms/segment/4249fcf15d7959a6ac68e85d85b54f159f29c138b27c7948973e1c304ae033d2>,
+        <https://memory.example.org/ms/segment/4403c7efad7609cdeb9d9efb2392fcd6000585d67fb46595bb3bfd174bfe7048>,
+        <https://memory.example.org/ms/segment/45453874109666d99f58be8896f6ddeea2cd1017b764cdaf89286e7906beef98>,
+        <https://memory.example.org/ms/segment/457015d294f177dcfdac7cf79576d92c1fbeaedc3d4d03cdb3b7225c74655b0b>,
+        <https://memory.example.org/ms/segment/45a3639b55d4a38a22d3b695908440fc13d70b12b8216f6a33c6f5f97ae9dedb>,
+        <https://memory.example.org/ms/segment/46594efdcd39841d6e793e2a49c30d3e2d1d727fe725015800f99708c224ead6>,
+        <https://memory.example.org/ms/segment/46ea0f5f0f611e6092beb6691f4d996a96e302351c9ae737c1a9bf9c5562091d>,
+        <https://memory.example.org/ms/segment/473f9c3f2044c6c93c9910f9a2b22fd643ab31b757a8bf6a34595900cd6fae36>,
+        <https://memory.example.org/ms/segment/48d42afb8c233b030972a1f79fca8415c7db9ec77ddd59a77dfebe5de109cde6>,
+        <https://memory.example.org/ms/segment/49a3792f0be2c7550d6ca704cfb9b24fe3aa655c2a75aaee38441ceefa211f6d>,
+        <https://memory.example.org/ms/segment/4a387ca238c9796ed42369f4f70a23499ec0db02cf9cb8b32a2fba90ce178bc8>,
+        <https://memory.example.org/ms/segment/4a48fd09e0733ea7ed58abc2ee75539c404d9accdfb2a1fa8c9478baae7ec01c>,
+        <https://memory.example.org/ms/segment/4b3d279b265e6a902160052cbf5d106c2892b7426f424f48d4ed0afaabc77d36>,
+        <https://memory.example.org/ms/segment/4d1fbc996eeb3e91d771fda8ad5cb496306bf36140e83ee1de176376310b2e33>,
+        <https://memory.example.org/ms/segment/4fb2928382098b9d0497b61983ca8b6a84575d5346e0f0a95b25e27b1825bbe7>,
+        <https://memory.example.org/ms/segment/5065e44ae80ea132ebc2a01a1e0bae8f3c7ea2855e62729e7bfdaef234d8d31a>,
+        <https://memory.example.org/ms/segment/518cefac8d12d39cc7fe6befac7de443be2764aec4afa61dada7f8693790f813>,
+        <https://memory.example.org/ms/segment/53f2ddcbffafa782954e3d04b42d0b8f71c1f5bef02beb684c0e8a98a5af0cc0>,
+        <https://memory.example.org/ms/segment/540ea1dd4805a5f37dc2ce754f5cc98eca63b570c9e9ee85f94f42469d03191f>,
+        <https://memory.example.org/ms/segment/5797b31211cdbea81c66fe96df3223ff8881c63dc0735d74bc964382ecb05b1d>,
+        <https://memory.example.org/ms/segment/58a6662962afa8a2a233a958e55e058cf951ed675daff13b239ee4da0549195b>,
+        <https://memory.example.org/ms/segment/58de2cdd19e8747272c295c14d2a470c41d558eee2b5058aea40dae92dcb5400>,
+        <https://memory.example.org/ms/segment/59f7dfdea0bcfa7fac01c41520e92de2f300142de33bd3eff65961a803682fff>,
+        <https://memory.example.org/ms/segment/5c2d518e72690b69714a3b5b96e53a1a037a6d0daaa7f49ec8ebb9113e99c0ec>,
+        <https://memory.example.org/ms/segment/5fbaedbdbeb50b586282081d80f454b5d1ab37d97d4f398d230b355152ff8521>,
+        <https://memory.example.org/ms/segment/5fced77856423dd218da0f1eec7d1aca307a3992f73b415d6fb7a8a2b158ba3c>,
+        <https://memory.example.org/ms/segment/62263abf3f569111f3cd9c64d377aee9466e472d1ce37df21033f92f8b2f6d3c>,
+        <https://memory.example.org/ms/segment/63ff39793312bae79620212bfce1ce67fccf8b539ffb21515857cf2792adcddf>,
+        <https://memory.example.org/ms/segment/64a3dcc4cca1e5abc2843a1d466d697b658d858a777bbe33f948d902c377a64d>,
+        <https://memory.example.org/ms/segment/64efcebb6171b3398dec5245fd9d3547821e514221bc62dd2e6e27074dabce13>,
+        <https://memory.example.org/ms/segment/678da90db4b4414158b95f63ffcfc555ddebc518df06101a1816d1d6ba765af2>,
+        <https://memory.example.org/ms/segment/67995812c5ca48d1388489eebad6ef2d0058a6bd163dc45b026d540710d3b9b0>,
+        <https://memory.example.org/ms/segment/69e9a2aca931e6ccf2231f3f653335de72b720cf1d4d7194e8340ac21ec5b1f9>,
+        <https://memory.example.org/ms/segment/6ab4e7d9cfaba87123ed8b2605fb2f72291527fa9ccf56dbb6470b240c21a4a6>,
+        <https://memory.example.org/ms/segment/6b71f60f786c2430dc7e3ceda5cf24b8df403401418df061bf65f712c1a9814c>,
+        <https://memory.example.org/ms/segment/6bcbb9973067e73a58f78ccb5e064cb52541e62ecd171ce341fd432cc073efb0>,
+        <https://memory.example.org/ms/segment/6c17f36cccdf4a0b085dadb02140214f1748b8d4507977720fc7884f84400784>,
+        <https://memory.example.org/ms/segment/6c6eee8b9d6d1b30f32d0d1c2fa7ebf6ada1f34084ab0e780389d2797ddc75ab>,
+        <https://memory.example.org/ms/segment/6cdbc010f10d3764bc0a42947fb2f0df8a99599c5d22b0558a3bb83d4ab98a19>,
+        <https://memory.example.org/ms/segment/6f25ce1b37f0c407221da8e22b37b533710fcd03e258db60956e6049f0040322>,
+        <https://memory.example.org/ms/segment/6fe6aee6479b8a72766820684083a0eb85c4fcea2f24c4bf83d665c49f7c1163>,
+        <https://memory.example.org/ms/segment/70379b53703dc6b7c481cbc49d1db984bf2b96e0af70759eaf5a1c982ce0e63d>,
+        <https://memory.example.org/ms/segment/704bcb800aa1ff1e7e22ceba2034602bacf89970184a3e0c37c508c7d1d0ee17>,
+        <https://memory.example.org/ms/segment/726e9d0c2dffb3deb922f6cfd95ca7c29bea482cfce9f337ce0531b4cd69b3d0>,
+        <https://memory.example.org/ms/segment/729c4a784426d2f43773865d98cc30762d7a82d5a0174159f51e9d350c643cae>,
+        <https://memory.example.org/ms/segment/7411d628ff38b07c03c289d4d59bbbccc838776955a7bcba5132843d787f77be>,
+        <https://memory.example.org/ms/segment/7567e7c5d1d6ae15d3a0b150db2a230b8921fcb45ffa866c30a0065acf65893d>,
+        <https://memory.example.org/ms/segment/758ba088f8c1521c005722f486332f539b01d97f81a678b3f3baacc89ec9fcd4>,
+        <https://memory.example.org/ms/segment/779e9699fc5bea760a3e3dd93700d0709422c1f1075c37256948a49839bc388c>,
+        <https://memory.example.org/ms/segment/7849643af6e9b0661f197df8693c36bbc2f376295467781b15a75d67034a6291>,
+        <https://memory.example.org/ms/segment/7b9663c3f912b5308d84b6a6913b68890c9bf41dcc309fb8a7bab240c3467cb0>,
+        <https://memory.example.org/ms/segment/7cecaef966ae91506c0e6e2f2c5d55deda03f2a8e87e4e0a971e6d3c05b0ee7b>,
+        <https://memory.example.org/ms/segment/7f492d2124787c927292975e8d63880b520d9b4191cd368281f589e9392f6750>,
+        <https://memory.example.org/ms/segment/7fb25289b0e7424843356b7694864867aea47a2af415ff42cb3b8020c68ac275>,
+        <https://memory.example.org/ms/segment/811be43f3c0f30a345cad2cab7f816f7d4d726c4e70679697138de49a2b8a42a>,
+        <https://memory.example.org/ms/segment/869fd8b3bc5ecd31877203e0d2eff7e3036b879892f91c56aa5a738a69884ac2>,
+        <https://memory.example.org/ms/segment/895aeab655d1d96fcb347fb49299975ad92c0d1ace7df1793ed1baa11e5b9c1c>,
+        <https://memory.example.org/ms/segment/8b786233bd3a75e03e0b78729f3f34014c469f91c956d8669dc59b6f79f86ac8>,
+        <https://memory.example.org/ms/segment/8c8d16f8ef5ada723007f42405dc280a2c48055441e8296042e52f9ee7207e3c>,
+        <https://memory.example.org/ms/segment/8d9910598d6de901183db3141c021de523c40616ceb8b8b5a23050c46df187b6>,
+        <https://memory.example.org/ms/segment/8e30aca674d3f27b8e40e52eaeeca5019655b5a0500c18254ecc53b2f59cb1a4>,
+        <https://memory.example.org/ms/segment/8e68f0cb90bd5a5b1ac42dd060bfd691e3e5ed06ec615d4dc5915e6e261e6a47>,
+        <https://memory.example.org/ms/segment/8eeeb9ea7f195802bc92092b2abce685e6576f15b19620c01a58063d1f2ee907>,
+        <https://memory.example.org/ms/segment/8f350de4c703262a084516e6b50f971c2037712a882c0b337d229eb631d34c55>,
+        <https://memory.example.org/ms/segment/905cf01b6fb8d9e6a166de0fe32ace5c1b25e647051ef8533fb9b28cca139d62>,
+        <https://memory.example.org/ms/segment/90a3dff6cee0ab51bab6523d890c4ab82cb2f091775b04e04959bf07c9b74b97>,
+        <https://memory.example.org/ms/segment/91b308c0f7e4796977f7c3c5924c478e480724a2620e7a7328c15180029e2176>,
+        <https://memory.example.org/ms/segment/92da87c2af56ea3ed4e24221b9d996c6ce49ae9231aed0b5a8602bbc83f278d2>,
+        <https://memory.example.org/ms/segment/935069a0e62555ea717c7aebf566525444385373aa4f9f4a0f5b8fff256f3b10>,
+        <https://memory.example.org/ms/segment/97871326faefde9fa099e552861dc3f8ed1ec5e978bc3c51c81b480fed39a29d>,
+        <https://memory.example.org/ms/segment/97d15ac9085945d37126e594e78e9bbfa9898f8de950b096f9c0809f4a5afb5b>,
+        <https://memory.example.org/ms/segment/97d838b2be9e7508473b3d3fe34beaed050dd3aa135bda0ae06816373baeb1fd>,
+        <https://memory.example.org/ms/segment/98f15e6073fc2e53633a2a0e5621746d66a24de12f9a57169d9076f12556ba7a>,
+        <https://memory.example.org/ms/segment/9ca93fb5b3967d8c2e237984cdf59f13f2c56cc857f7ab822119a7cdf9f61c88>,
+        <https://memory.example.org/ms/segment/9fb2744963c3c1f5e2528147721d8c39584d5a7f131b3104ee884b780aea0c59>,
+        <https://memory.example.org/ms/segment/9fdfdef44a590d2eaa41f2d19f3fb79f304656047a901a651e486d158377e1c9>,
+        <https://memory.example.org/ms/segment/a09055df616cddeabe8b28870c96818e7225ab54359b8f79a2e06e6b2c02acef>,
+        <https://memory.example.org/ms/segment/a2e439a275221186376b77e4a2c65513fc7da23e181d2c8d16cd5f9dfb425e04>,
+        <https://memory.example.org/ms/segment/a3397ecea6cf3d979edd2cc8d4fb2d1000d1bc580f8b2641602e79a080b4ac73>,
+        <https://memory.example.org/ms/segment/a38e320bab8d22a546b319af8b9fbe91d585a2cc5b9f04a9f7fe89590d2fa19d>,
+        <https://memory.example.org/ms/segment/a4440c18a4a1f6ebb1cdb9788ad4113fb012cbaa7dee8bf7796b934c630b5306>,
+        <https://memory.example.org/ms/segment/a4da3943df587ff8be17b364fec464a3dc8b4be8763cc9581de6970326ac63c1>,
+        <https://memory.example.org/ms/segment/a50681882181fefaaa31759338a87417c970717dba97873dd0475c164a4d0e4d>,
+        <https://memory.example.org/ms/segment/a53f8028da03a0089554a2e93340725e9f995f418d26888fd5ad3f5075413660>,
+        <https://memory.example.org/ms/segment/a659e701bd8acdeda1908e9de5d693c0558c9a47a27e564a14f7970c2768ee57>,
+        <https://memory.example.org/ms/segment/a697cbbd065d1be713b6b788f0b4872a526952d161a033f502db730ab6470f3d>,
+        <https://memory.example.org/ms/segment/a780b12d2e556e978d10bf25db548f5978f4981659d43d136bc5c4531f989d71>,
+        <https://memory.example.org/ms/segment/a7ab55368bd73b14fc746408b96e2aedb1785e262f19a2be993c6741124d51cf>,
+        <https://memory.example.org/ms/segment/a82ee7240e7234d454131c22f45dfd47c9fc8592508581c3f9f1e219a768adac>,
+        <https://memory.example.org/ms/segment/a857158989dccaee7965fab179f62c0df455599605466be98771348307e533ab>,
+        <https://memory.example.org/ms/segment/a85d7adb1c975b992b2e18a2f9bdc68aa56b641464f0c6e7d87766cd47d0f1b1>,
+        <https://memory.example.org/ms/segment/a8b2230be2b238fb4ec068de8cb1144783c279c36eb4cd30d5dd97a40632973a>,
+        <https://memory.example.org/ms/segment/a9df497289c2ef2ca5bc3b9e3974d8c0f2fab820b5719bb0d65a530bea0c7770>,
+        <https://memory.example.org/ms/segment/aaa2f2e79de6f19b3ad088f19e8001012ef247e30d567aea9a36ebdd40e4f806>,
+        <https://memory.example.org/ms/segment/ac116e61b30300886aa713c223dcb65dd6d242c3dd61c9c9aa23081e76f614d6>,
+        <https://memory.example.org/ms/segment/ae21810f72359f7babb20c10720025efd7dea4421fcd764d37a0f59a23df137f>,
+        <https://memory.example.org/ms/segment/ae62617b853406494c083f72f0922391b15704981e9b7cf3bf18ff03b8b1b48c>,
+        <https://memory.example.org/ms/segment/aeadcd009da40995da551dbbf5e46dfe5705e1be9588d62d8924444906cae961>,
+        <https://memory.example.org/ms/segment/af5c077bdd7cd8397b3bafb1e2f79f7b8e0ab7520e52629e0a9076bb99bed4fd>,
+        <https://memory.example.org/ms/segment/b03ec5d86c3225fd3d65f815b1ff95672565b866c2425f24531a0788bd463510>,
+        <https://memory.example.org/ms/segment/b046c8d6e95d7e3cbd6c7b429d22f682b4dd50961cec40032f2a33c712624b55>,
+        <https://memory.example.org/ms/segment/b0c5aadd85966a5a24569326dffd55ffa4896df597740fe33933c5cbca347242>,
+        <https://memory.example.org/ms/segment/b133ad5714fc777843bf476c0a6ad90c91068616919fb93228e0492903a3d14b>,
+        <https://memory.example.org/ms/segment/b1daa0b6fc0d785bcc04a37bc7931b94832d0a63c5cae4fde8f44d1cc9d1fa0a>,
+        <https://memory.example.org/ms/segment/b1f4df2f777dcc2ad224f2fe7a394dc551f6f967312a23994b75f574c9824f95>,
+        <https://memory.example.org/ms/segment/b4a607cd560dc17ea73c82d3455325d05a4627fe1340a3a838260ad399500706>,
+        <https://memory.example.org/ms/segment/b53a3b3ace2c01379208a6ea5ca9c2362ebcf3b7eb4aca7075054dad63d854ad>,
+        <https://memory.example.org/ms/segment/b6b910a1318237974062bdfa008087d2c636f025be2304ce1e3fed7ff0bc4592>,
+        <https://memory.example.org/ms/segment/b6e391d9795a4f1c964738c4ddae12a4c48b6197308917a004cb87f77734cc24>,
+        <https://memory.example.org/ms/segment/b8d0cc7f29330875d9a72b3e69c9609c9c189e06cb8c8d2417b850b73285f584>,
+        <https://memory.example.org/ms/segment/b9a2c97fff30b6b9d615c61af8d03931d854db7bd92297c0adf25fb8d1cfc7e5>,
+        <https://memory.example.org/ms/segment/bac5ce6743dce3448d0ccea3c04ac0eb9123c25ba56980a5f3f2e667ea9cde7e>,
+        <https://memory.example.org/ms/segment/bae95cc1446c5e4eba769f0d01d0c314399e0fa29eb10bb94ce207f3eb9bfa15>,
+        <https://memory.example.org/ms/segment/bb8ea417087fca18c9e0887821fd1594e1464d75aa93ed4f7138680bc93e4840>,
+        <https://memory.example.org/ms/segment/bc830bf8a0fe53c38d2bd55d264f21e13f03a604cf13c3f062c1c713db130fae>,
+        <https://memory.example.org/ms/segment/bd05c532bfbee13614a39c1734ad002ae14044786b37f472c5c26865f879a058>,
+        <https://memory.example.org/ms/segment/be05676f20d693e15a9d58cabf33e47395eb6955775d84a0d4d705b7ab489a7a>,
+        <https://memory.example.org/ms/segment/be0e776e8486b30401d8e76e63333349149394ec47b9a8d0706c3ab8fff6c4d4>,
+        <https://memory.example.org/ms/segment/c3b405eddfcdcd28f42a5767f2ac1ed2c26d081d79242d2ebbf1f35393087af0>,
+        <https://memory.example.org/ms/segment/c4ae0f8ba19622c21eb56ce9e982c40f1092e806a07e51371377c363ba328730>,
+        <https://memory.example.org/ms/segment/c50d65b9881f3734984bb8b75dc1cf1b29c81a7094ba1a477616738d3c527bb1>,
+        <https://memory.example.org/ms/segment/c62915393e427ad965aca08453cf27d9066327c7e6b40df0429eafd225731b3b>,
+        <https://memory.example.org/ms/segment/c6a7078473b058d2efbd173a5ec36eff69071f220dcb93ccda02a62ddd01c593>,
+        <https://memory.example.org/ms/segment/c7507e18129f19253688813b5a0089fe975b50247878178a46c0e5c70f13b036>,
+        <https://memory.example.org/ms/segment/c75b5ffed043720aa49ff99ec7da4b6ae2e58329ce33ab4aa02791130d98166a>,
+        <https://memory.example.org/ms/segment/c76c7c7dcc5ea976ccbeaa207e3982633294218c6f903976e5ecbc1d2bde6a28>,
+        <https://memory.example.org/ms/segment/c99924010d051ffe842da57820f961fc98c8146d5704fc1b03afa71e0f7c867b>,
+        <https://memory.example.org/ms/segment/c99dcca6b7b9078fcadb52563e89c66452bc6c691364318483ac1988bb457759>,
+        <https://memory.example.org/ms/segment/c9a4b6c46b35c8aee5395585a5718bc55d237551de7f6cd76443d4db685240fc>,
+        <https://memory.example.org/ms/segment/c9bbcdf6123e776b8ba5dccb3029a9bd94bbf7d1b7bcac5ba19b6b8222f8b8d1>,
+        <https://memory.example.org/ms/segment/c9c4437dffd8f546159078f12851ac360ea721f278071cb6bf41cc86f7ff7569>,
+        <https://memory.example.org/ms/segment/cabe70b9b49afaf1ce0232858e6c64f73075e95a538334039fdeaf65c5c98d8a>,
+        <https://memory.example.org/ms/segment/cb3243b0b9fd7aa44d76e97a885c3f5345443571dbf819d8e165d1fd9f9bd696>,
+        <https://memory.example.org/ms/segment/cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b>,
+        <https://memory.example.org/ms/segment/ce81b5f5ff7a40b323f4ee44bae5d7d4f5f82a3476444e9be90895925e5ac22a>,
+        <https://memory.example.org/ms/segment/d01a7ec1108294d9c0ca5cf9ee419dc018d0bc92548b85dfd41d98b80a609cd4>,
+        <https://memory.example.org/ms/segment/d195e3408ddcf71633ff86828c3b4af8945db0b2ec3ada064a609bcdd0c0e530>,
+        <https://memory.example.org/ms/segment/d25b6a63107b794384c8d5a8882937049192ce299a38faae0f07689a198dfa20>,
+        <https://memory.example.org/ms/segment/d38b9539e67e72a9a5ea707111ecdd2174b3c75d51a8de019e0d39f2abc3d386>,
+        <https://memory.example.org/ms/segment/d3d4d060ebd18724df2a8bd00f9abaef18d4fea440dd4923ded4025f0b352303>,
+        <https://memory.example.org/ms/segment/d4ab67f9d9ce63daf7358d44a9e904b8b68c446ddee6c5d1f2f247ab7f439bf7>,
+        <https://memory.example.org/ms/segment/d4c35d3352442f31bdb9bf973139c027527c5461cc4554eae40fea5bb4e2f547>,
+        <https://memory.example.org/ms/segment/d6ac1a57fea542e76061d0fb9efa6b62ccc328e56d96779cfe86080097f7009c>,
+        <https://memory.example.org/ms/segment/d8ba7342b0b7e45fe126fa91ec1c8584aca7f44c6a4d38b462e1608c449b8c96>,
+        <https://memory.example.org/ms/segment/db014ca18502053b6d9b4f9e41e305afec85ec467b52a7b115442e3b414095ba>,
+        <https://memory.example.org/ms/segment/db10eaa5d7f80cc5065e9f6f7f6cb4ba78b23aead122a0dc09caf390ec36154e>,
+        <https://memory.example.org/ms/segment/dd0d2036b6dca76fd503a868ce94b54a7db65d380a857baaee85fd0d472f4aa9>,
+        <https://memory.example.org/ms/segment/ddb9db945aa71dfcfd59833b76e673f54e7642fcd2ed24b520fec5ce4b6b06ff>,
+        <https://memory.example.org/ms/segment/ddf3c959aa357eb83b7b7692b6cd51119f1a1df18b4f3cd1119f3dce814422d0>,
+        <https://memory.example.org/ms/segment/deaa82be6610a1441806d83fd7ee7c70ea750abdef07b6edb5d1555a8b6da53c>,
+        <https://memory.example.org/ms/segment/df026c34e62a4e7e5ad0254f0c5c467076a0a0d83f0d387bcb4ffdd44c084903>,
+        <https://memory.example.org/ms/segment/e0a004283b075eea68145d74c3ca565c8cd1a5ee9dfc0ddc51d2b9437af50de9>,
+        <https://memory.example.org/ms/segment/e0b0dd1b082330785401262fe38d6feb37ef9c19b90394da31834e26016cade3>,
+        <https://memory.example.org/ms/segment/e2aa4b325828159f2a4fb79cb6b9f757f3b2e20f7ca582b175beffd7d62db092>,
+        <https://memory.example.org/ms/segment/e2bf6ff4f76fe0c7ef976a73d4698380a9417f90c54f40f3022a57ca0ac20de1>,
+        <https://memory.example.org/ms/segment/e3b8fd9dd4ec2a1fcc1f38d84430a81e4496819f7770dd83dfc0109e905105a2>,
+        <https://memory.example.org/ms/segment/e63031a44ff1c7805e80748511fd8698ccef401fc15b68219d9f346331856bbd>,
+        <https://memory.example.org/ms/segment/e6a66693a1ad4d3ec43d4eb79604a65f30949b085eac5859aeff2b97d52f5d42>,
+        <https://memory.example.org/ms/segment/e6cde356a5781de8cbbdf3f61ba0d70b38d2656a85a1e3f95f4f9d48701fd578>,
+        <https://memory.example.org/ms/segment/e7203d5e32587ecff7deec0b864fc88ff3fce1a4ab24bff6db777103ecf59797>,
+        <https://memory.example.org/ms/segment/e725acf5e2b7e2ded587dfd14163db91b50a9e630ca67e0d01f09223dfc074a0>,
+        <https://memory.example.org/ms/segment/e782310a76137ee26017cd0af1f7092ba357f6479086c6d135a248d3ff88e5fe>,
+        <https://memory.example.org/ms/segment/eaf2bebacd5d364c1e6be3dd6ff55edc62ffadcafa55d8c1d38f8279a7cabee7>,
+        <https://memory.example.org/ms/segment/ebaba6db7dd23bfe636d79d24036bf8ae9e473a5c29502965ad92e7231f4647a>,
+        <https://memory.example.org/ms/segment/eeaf53f5c8ed9ba80b5b963a60aa413fc183c155306c8c90a01a949d7602ec3a>,
+        <https://memory.example.org/ms/segment/ef0704c5c7256695cd487f882ee66ebd116eba2f0f7adcdb866c02ed087631ad>,
+        <https://memory.example.org/ms/segment/ef08b18c921d59496308f6b6531975a8379b2bbd1bf3ff71404fd619e0d2a18f>,
+        <https://memory.example.org/ms/segment/ef0aed49b92213c9676a21cb6e2087b1ab0abf1febcdaf4ee11fbf41b49a97e3>,
+        <https://memory.example.org/ms/segment/f1b901847390b0ed7e374e7c1e464ec17b46a427c487a5ad6cbd2906405083d5>,
+        <https://memory.example.org/ms/segment/f4761e4954612a5bb851d7d99836ca9e6d8871526953552e1a7badf2eb3b558c>,
+        <https://memory.example.org/ms/segment/f52d1f2b4438d0017ca1a2c6a28c4c4fcb364c2afca92f7a8fad78433b0fd601>,
+        <https://memory.example.org/ms/segment/f6cd963dcbf980b8372262eb32d633eb6cb8641fa594999ad82e2bc9a5f68a7c>,
+        <https://memory.example.org/ms/segment/f9d4c32324dbde1fc2123ce9609b1003527733b0e867b88f31190e887097f103>,
+        <https://memory.example.org/ms/segment/fa688311c9a5f3172016fced2fbd15581adc839c829278d7235cc5787bb807e1>,
+        <https://memory.example.org/ms/segment/fb40e87c4184a95e55c091c70c32406b0571dd0632a4f896645f57b1b8eade8a>,
+        <https://memory.example.org/ms/segment/fc3466f4bf8a168fedc2852aae44ef7497fa2d73a884eb669eaedfc600a2ad77>,
+        <https://memory.example.org/ms/segment/fcdbec59348a0ea753d855986080e85cf9279a9568ab4a18f9d4a9331794d433>,
+        <https://memory.example.org/ms/segment/fd27d22c58c0010a6705ad600352821131b8b59f81bfdd05aee34b5f909bdcb5>,
+        <https://memory.example.org/ms/segment/fefc07147fc3ef1df6ab85e6448376e76b0bda752d79c856b70fdbc97446b87f>,
+        <https://memory.example.org/ms/segment/ff47a51bb1b7a2407370f51a304da1a719e00a39fff68ffe75a44d35c4f6ecbe> ;
+    prov:wasAssociatedWith <https://memory.example.org/ms/processor/concept-extractor-v1.0.0> .
+

@@ -1,0 +1,2 @@
+- **Small improvement** (wording, a missing rule, a clarification): update this document and the condensed reference in `copilot-instructions.md` §17 directly, in the same session.
+- **Structural change** (adding or removing a phase, changing the loop shape, redefining the entry gate): write an ADR first (`_docs/adr/`), then update both documents. The harness is an architectural decision — structural changes need a decision record.

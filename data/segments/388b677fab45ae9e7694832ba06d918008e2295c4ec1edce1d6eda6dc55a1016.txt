@@ -1,0 +1,8 @@
+| Check | How |
+|---|---|
+| Behaviour preserved | Run existing tests / lint if available |
+| No secrets committed | Scan staged diff for tokens, keys, passwords |
+| Links resolve | Any new cross-links point to files that exist |
+| Front matter complete | New `.md` files have all required YAML fields |
+| Tags are canonical | New tags checked against existing tag vocabulary |
+| Knowledge graph health | 3 related files identified and linked |

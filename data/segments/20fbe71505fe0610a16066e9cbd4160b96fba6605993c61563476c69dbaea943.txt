@@ -1,0 +1,3 @@
+P6->>P7: domain document + segments
+    P7->>Store: record Extraction Activity (processor version, segments used)
+    P7->>P8: Delta Proposal

@@ -1,0 +1,2 @@
+*Extend `delta_proposal` to carry typed predicates.*
+Move from `ms:relatedTerm` (undifferentiated) to labelled relations (e.g. `ms:partOf`, `ms:causedBy`, `ms:instanceOf`). A minimal relation type vocabulary is defined in the upper ontology. Evaluate: does typed extraction on the glossary corpus recover the implicit relation types that the hand-authored `related:` fields imply?

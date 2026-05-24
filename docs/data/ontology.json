@@ -1,14 +1,62 @@
 {
   "meta": {
-    "version": "v0021",
-    "generated": "2026-05-24T09:46:53Z",
+    "version": "v0031",
+    "generated": "2026-05-24T09:50:53Z",
     "counts": {
-      "concepts": 26,
+      "concepts": 32,
       "relations": 83,
-      "documents": 26
+      "documents": 32
     }
   },
   "concepts": [
+    {
+      "id": "0001-standardise-agent-instructions",
+      "label": "0001 — Standardise agent instruction files",
+      "comment": "",
+      "aliases": [],
+      "tags": [],
+      "domain": "ArchitectureDecisionRecordDomain",
+      "related": [],
+      "docs": [
+        "_docs/adr/0001-standardise-agent-instructions.md"
+      ]
+    },
+    {
+      "id": "0002-move-from-vector-storage-to-ontology",
+      "label": "0002 — Move from vector storage to ontology-based knowledge representation",
+      "comment": "",
+      "aliases": [],
+      "tags": [],
+      "domain": "ArchitectureDecisionRecordDomain",
+      "related": [],
+      "docs": [
+        "_docs/adr/0002-move-from-vector-storage-to-ontology.md"
+      ]
+    },
+    {
+      "id": "0003-ontology-architecture",
+      "label": "0003 — Ontology architecture: upper ontology, lower ontologies, and the document processing pipeline",
+      "comment": "",
+      "aliases": [],
+      "tags": [],
+      "domain": "ArchitectureDecisionRecordDomain",
+      "related": [],
+      "docs": [
+        "_docs/adr/0003-ontology-architecture.md"
+      ]
+    },
+    {
+      "id": "0004-provenance-model-and-control-plane",
+      "label": "0004 — Provenance model, control plane, and architectural principles",
+      "comment": "",
+      "aliases": [],
+      "tags": [],
+      "domain": "ArchitectureDecisionRecordDomain",
+      "related": [],
+      "docs": [
+        "_docs/adr/0004-provenance-model-and-control-plane.md"
+      ]
+    },
     {
       "id": "agent-first",
       "label": "Agent-first",
@@ -117,6 +165,23 @@
       ],
       "docs": [
         "glossary/adr.md"
+      ]
+    },
+    {
+      "id": "build-loop-harness",
+      "label": "Build Loop Harness",
+      "comment": "Drift correction:",
+      "aliases": [],
+      "tags": [
+        "agent-workflow",
+        "build-loop",
+        "context-management",
+        "self-improvement"
+      ],
+      "domain": "DesignDomain",
+      "related": [],
+      "docs": [
+        "_docs/design/build-loop-harness.md"
       ]
     },
     {
@@ -522,6 +587,18 @@
       ],
       "docs": [
         "glossary/mcp.md"
+      ]
+    },
+    {
+      "id": "ontology-system-design",
+      "label": "Ontology-Based Memory System — Design",
+      "comment": "",
+      "aliases": [],
+      "tags": [],
+      "domain": "DesignDomain",
+      "related": [],
+      "docs": [
+        "_docs/design/ontology-system-design.md"
       ]
     },
     {
@@ -1493,6 +1570,48 @@
     }
   ],
   "documents": [
+    {
+      "file": "_docs/adr/0001-standardise-agent-instructions.md",
+      "segment_count": 4,
+      "concept_ids": [
+        "0001-standardise-agent-instructions"
+      ]
+    },
+    {
+      "file": "_docs/adr/0002-move-from-vector-storage-to-ontology.md",
+      "segment_count": 9,
+      "concept_ids": [
+        "0002-move-from-vector-storage-to-ontology"
+      ]
+    },
+    {
+      "file": "_docs/adr/0003-ontology-architecture.md",
+      "segment_count": 15,
+      "concept_ids": [
+        "0003-ontology-architecture"
+      ]
+    },
+    {
+      "file": "_docs/adr/0004-provenance-model-and-control-plane.md",
+      "segment_count": 24,
+      "concept_ids": [
+        "0004-provenance-model-and-control-plane"
+      ]
+    },
+    {
+      "file": "_docs/design/build-loop-harness.md",
+      "segment_count": 41,
+      "concept_ids": [
+        "build-loop-harness"
+      ]
+    },
+    {
+      "file": "_docs/design/ontology-system-design.md",
+      "segment_count": 51,
+      "concept_ids": [
+        "ontology-system-design"
+      ]
+    },
     {
       "file": "glossary/adr.md",
       "segment_count": 4,
