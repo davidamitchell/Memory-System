@@ -23,7 +23,7 @@ Distilled from PROGRESS.md mini-retros. Each entry states the class of problem a
 ## Open Questions in design documents
 
 **Pattern:** Design documents without an explicit "Open Questions" section bury uncertainty in prose, causing re-decisions in later sessions.
-**Rule:** Every new design document in `docs/design/` must include an "Open Questions" section.
+**Rule:** Every new design document in `_docs/design/` must include an "Open Questions" section.
 **Source:** 2026-05-23 — Ontology architecture design and setup
 
 ---
@@ -70,7 +70,7 @@ Distilled from PROGRESS.md mini-retros. Each entry states the class of problem a
 
 ## Glossary cross-linking is for memory files, not design documents
 
-**Pattern:** The Wikipedia-style cross-linking rule (§16) was applied in `docs/design/build-loop-harness.md`, which is a protocol document, not a memory file.
+**Pattern:** The Wikipedia-style cross-linking rule (§16) was applied in `_docs/design/build-loop-harness.md`, which is a protocol document, not a memory file.
 **Rule:** Only apply glossary cross-links in memory files (journal, meetings, projects, ADRs). Design documents and protocol docs should use plain prose.
 **Source:** 2026-05-23 — build-loop-harness glossary link removal
 

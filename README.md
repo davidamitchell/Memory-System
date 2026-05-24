@@ -34,20 +34,20 @@ A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-
 ```
 
 1. **Storage** — Knowledge lives as [memory files](./glossary/memory-file.md) (`.md` files) in `/meetings`, `/journal`, and `/projects`, and as versioned ontology snapshots in the Ontology Store.
-2. **Processing Pipeline** — A 12-processor pipeline (see [ADR-0004](./docs/adr/0004-provenance-model-and-control-plane.md)) extracts concepts from source documents, builds domain ontologies, validates consistency, and commits versioned ontology snapshots.
+2. **Processing Pipeline** — A 12-processor pipeline (see [ADR-0004](./_docs/adr/0004-provenance-model-and-control-plane.md)) extracts concepts from source documents, builds domain ontologies, validates consistency, and commits versioned ontology snapshots.
 3. **Ontology Store** — An upper ontology (domain taxonomy) and per-domain lower ontologies, serialised as OWL/RDF/JSON-LD. Every assertion traces back to a content-addressed source segment.
 4. **MCP Bridge** — The [MCP server](./glossary/mcp-server.md) exposes [MCP tools](./glossary/mcp-tool.md) to any MCP-compatible AI client for querying and writing to the knowledge store.
 5. **Auto-sync** — Every write is automatically committed and pushed to GitHub.
 
-See the [design space](./docs/design/ontology-system-design.md) for full component and sequence diagrams.
+See the [design space](./_docs/design/ontology-system-design.md) for full component and sequence diagrams.
 
 ---
 
 ## Status
 
-The architecture is fully designed (ADR-0002 through ADR-0004, `docs/design/`). The ontology-based MCP server is **not yet implemented**. Active work is focused on implementing the processing pipeline and ontology store.
+The architecture is fully designed (ADR-0002 through ADR-0004, `_docs/design/`). The ontology-based MCP server is **not yet implemented**. Active work is focused on implementing the processing pipeline and ontology store.
 
-> For historical context on the original vector-storage concept that this design replaces, see [`getting-started-prompt.md`](./getting-started-prompt.md) (archived) and [ADR-0002](./docs/adr/0002-move-from-vector-storage-to-ontology.md).
+> For historical context on the original vector-storage concept that this design replaces, see [`getting-started-prompt.md`](./getting-started-prompt.md) (archived) and [ADR-0002](./_docs/adr/0002-move-from-vector-storage-to-ontology.md).
 
 ---
 
@@ -80,7 +80,8 @@ Memory-System/
 │   ├── skills/                  # Agent skills submodule (davidamitchell/Skills)
 │   └── workflows/
 │       └── sync-skills.yml      # Weekly skills submodule update
-├── docs/
+├── docs/                        # GitHub Pages site (index.html, style.css, app.js, data/)
+├── _docs/
 │   ├── adr/                     # Architecture Decision Records (MADR format)
 │   └── design/                  # Conceptual design space — components and diagrams
 ├── glossary/                    # Controlled vocabulary — one definition file per term
@@ -111,8 +112,8 @@ Memory-System/
 ## Further Reading
 
 - [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) — rules for AI agents working in this repo
-- [`docs/design/ontology-system-design.md`](./docs/design/ontology-system-design.md) — full architecture: components, pipeline, diagrams
-- [`docs/adr/README.md`](./docs/adr/README.md) — all Architecture Decision Records
+- [`_docs/design/ontology-system-design.md`](./_docs/design/ontology-system-design.md) — full architecture: components, pipeline, diagrams
+- [`_docs/adr/README.md`](./_docs/adr/README.md) — all Architecture Decision Records
 - [`glossary/README.md`](./glossary/README.md) — controlled vocabulary: definitions for every key term in the system
 - [`definition_scheme.md`](./definition_scheme.md) — the schema every glossary definition file must follow
 

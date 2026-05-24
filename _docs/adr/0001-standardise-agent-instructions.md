@@ -19,5 +19,5 @@ Move all [AI agent](../../glossary/ai-agent.md) instructions to `.github/copilot
 
 ## References
 
-1. [`docs/adr/README.md`](./README.md) — index of all ADRs in this repository.
+1. [`_docs/adr/README.md`](./README.md) — index of all ADRs in this repository.
 2. [`.github/copilot-instructions.md`](../../.github/copilot-instructions.md) — the file this decision establishes as the agent instruction source.

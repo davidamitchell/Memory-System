@@ -49,10 +49,10 @@ Documents enter the pipeline via `pipeline/run_pipeline.py`. Each document flows
 
 | Research item | Informs |
 |---|---|
-| `docs/adr/0002-move-from-vector-storage-to-ontology.md` | W-0200, W-0201 |
-| `docs/adr/0003-ontology-architecture.md` | W-0200, W-0201 |
-| `docs/adr/0004-provenance-model-and-control-plane.md` | W-0200, W-0201, W-0202 |
-| `docs/design/ontology-system-design.md` | W-0200, W-0201, W-0202 |
+| `_docs/adr/0002-move-from-vector-storage-to-ontology.md` | W-0200, W-0201 |
+| `_docs/adr/0003-ontology-architecture.md` | W-0200, W-0201 |
+| `_docs/adr/0004-provenance-model-and-control-plane.md` | W-0200, W-0201, W-0202 |
+| `_docs/design/ontology-system-design.md` | W-0200, W-0201, W-0202 |
 
 ---
 
@@ -82,7 +82,7 @@ updated: 2026-05-23
 completed: 2026-05-23
 blocks: [W-0201]
 blocked-by: []
-research: [docs/adr/0004-provenance-model-and-control-plane.md, docs/design/ontology-system-design.md]
+research: [_docs/adr/0004-provenance-model-and-control-plane.md, _docs/design/ontology-system-design.md]
 assumptions:
   - rdflib is sufficient for the in-memory graph (no triple-store server required); if performance is unacceptable at 26 files, W-0201 migrates — but this is tested, not assumed
   - Glossary files (26 files, one concept each, structured front-matter with title/tags/related/aliases) are the right input corpus: curated, small, already linked to each other
@@ -163,7 +163,7 @@ created: 2026-05-23
 updated: 2026-05-23
 blocks: []
 blocked-by: []
-research: [docs/adr/0004-provenance-model-and-control-plane.md]
+research: [_docs/adr/0004-provenance-model-and-control-plane.md]
 assumptions:
   - The Turtle format established in W-0200 is stable; W-0201 only extends it (additive)
   - All 26 glossary files share the same front-matter schema; no file will require a new processor branch
@@ -268,6 +268,33 @@ Two new pipeline scripts handle the export:
 
 ---
 
+## W-0208
+
+status: todo
+created: 2026-05-24
+updated: 2026-05-24
+blocks: []
+blocked-by: [W-0207]
+research: []
+
+### Outcome
+
+GitHub Pages is served cleanly from `main` via the GitHub Actions workflow (`pages.yml`), not from a feature branch via the "Deploy from branch" setting.
+
+### Context
+
+Pages was temporarily pointed at the `copilot/check-access-github-repository` branch (the W-0207 feature branch) using the "Deploy from branch → /docs" setting so the site could be previewed before merging. Once W-0207 merges to `main`, Pages should be reconfigured in the repository Settings → Pages → Source to **GitHub Actions** so that `pages.yml` controls all future deployments. The "Deploy from branch" mode and the Actions-based workflow conflict; only one should be active.
+
+The `_docs/adr/` and `_docs/design/` reorganisation (done in W-0208 prep) also means the `docs/` folder now contains only site assets — no further directory cleanup is needed when switching to Actions-based deploy.
+
+### Acceptance criteria
+
+- Repository Settings → Pages → Source is set to **GitHub Actions** (not "Deploy from branch")
+- A push to `main` triggers `pages.yml` and the site redeploys successfully
+- The site at `https://davidamitchell.github.io/Memory-System/` reflects the latest ontology
+
+---
+
 ## W-0202
 
 status: deferred
@@ -288,7 +315,7 @@ uncertainty:
 
 ### Outcome
 
-A design note (in `docs/design/` or as a PROGRESS entry) that evaluates whether git's object store can serve as the Resolver Service backing store, replacing the `data/segments/` directory. The evaluation covers: SHA algorithm compatibility, retrieval primitive (`git cat-file`), history (`git log`), and whether explicit PROV-O triples are still necessary given git's built-in provenance.
+A design note (in `_docs/design/` or as a PROGRESS entry) that evaluates whether git's object store can serve as the Resolver Service backing store, replacing the `data/segments/` directory. The evaluation covers: SHA algorithm compatibility, retrieval primitive (`git cat-file`), history (`git log`), and whether explicit PROV-O triples are still necessary given git's built-in provenance.
 
 ### Context
 
@@ -303,7 +330,7 @@ The SHA algorithm mismatch (SHA-1 vs SHA-256) is the key risk: the `ms:contentHa
 - Determine the git object hash algorithm in use in this repository (`git config --get extensions.objectformat` or `git rev-parse --show-object-format`)
 - Verify that `git cat-file blob <sha>` can retrieve a committed segment file by its object hash
 - Compare: does the git blob SHA of `data/segments/<sha256-hex>.txt` equal the SHA-256 hash of the file content, or are they different? (Git SHA-1 objects are computed over `blob <size>\0<content>`, not raw content)
-- Write up the finding as a dated entry in `PROGRESS.md` or a short note in `docs/design/`
+- Write up the finding as a dated entry in `PROGRESS.md` or a short note in `_docs/design/`
 - Conclude with one of: (a) git object store IS the Resolver Service — update W-0200/W-0201 acceptance criteria to remove `data/segments/` directory; or (b) git object store is useful for history but not for direct SHA-256 URI resolution — keep `data/segments/` and document why
 
 ---
@@ -454,7 +481,7 @@ The minimal relation vocabulary is determined by annotation, not assumption: a h
 
 ### Acceptance criteria
 
-- A minimal relation type vocabulary (5–8 types plus `ms:relatedTerm` catch-all) is defined and documented in `docs/design/` or as a schema section in the ontology
+- A minimal relation type vocabulary (5–8 types plus `ms:relatedTerm` catch-all) is defined and documented in `_docs/design/` or as a schema section in the ontology
 - A human annotation of 5–10 glossary files' `related:` edges with typed predicates is committed to `data/eval/typed-relations-ground-truth.json`
 - The LLM extractor (W-0204 strategy) is extended to output typed predicates in `delta_proposal.typed_relations`
 - p08 (Ontology Build) writes typed predicates to Turtle alongside `ms:relatedTerm`
@@ -475,7 +502,7 @@ The minimal relation vocabulary is determined by annotation, not assumption: a h
 6. [rdflib](https://rdflib.readthedocs.io/) — the Python RDF library used in W-0200 and W-0201 for in-memory graph construction, SPARQL queries, and Turtle serialisation.
 7. [W3C PROV-O](https://www.w3.org/TR/prov-o/) — the provenance ontology used in the Turtle pattern (ADR-0004).
 8. [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/) — the query language used in `pipeline/queries/*.rq`; queries written here run unchanged against any SPARQL endpoint.
-9. [`docs/design/ontology-system-design.md §9`](./docs/design/ontology-system-design.md) — target state and proposed extraction phases; context for W-0203–W-0206.
+9. [`_docs/design/ontology-system-design.md §9`](./_docs/design/ontology-system-design.md) — target state and proposed extraction phases; context for W-0203–W-0206.
 
 ---
 
@@ -772,11 +799,11 @@ The markdown/LanceDB layer is optimised for unstructured, narrative knowledge �
 - Evaluate extending `mcp_server.py` with SQL-backed tools: what is the additional dependency surface (supabase-py or psycopg2), and how does it affect the server's test and deployment footprint?
 - Assess agent ergonomics: is it clearer for an agent to call `supabase.query_contacts()` via a dedicated server, or `memory.query_contacts()` via the unified server?
 - Assess two-MCP-server client config cleanliness: does `.vscode/mcp.json` support multiple servers cleanly, and do all target clients honour the full config?
-- Document findings and recommendation in `docs/adr/NNNN-supabase-mcp-integration-architecture.md` before starting W-0112.
+- Document findings and recommendation in `_docs/adr/NNNN-supabase-mcp-integration-architecture.md` before starting W-0112.
 
 ### Acceptance criteria
 
-- An ADR exists at `docs/adr/NNNN-supabase-mcp-integration-architecture.md` that records the chosen approach (two servers or unified server) with explicit reasoning covering: maintenance cost, tool surface design, agent ergonomics, and multi-server client config behaviour
+- An ADR exists at `_docs/adr/NNNN-supabase-mcp-integration-architecture.md` that records the chosen approach (two servers or unified server) with explicit reasoning covering: maintenance cost, tool surface design, agent ergonomics, and multi-server client config behaviour
 - The ADR documents which MCP clients were tested and the result of running two simultaneous MCP servers in each
 - A prototype or proof-of-concept (throwaway code, not production) was used to validate the chosen approach before the ADR was finalised — this is documented in the ADR
 - W-0112 is unblocked: the implementation approach is clear enough to begin schema design
@@ -856,11 +883,11 @@ The human door is a lightweight read/write web interface over the structured Sup
 - Evaluate Supabase Auth options for a single-user personal tool: magic link, GitHub OAuth, and simple API key (bearer token via environment variable). Score each on: setup complexity, day-to-day UX, and risk of accidental exposure.
 - Confirm that Supabase RLS policies allow the frontend (using the anon key + user JWT) to read and write rows owned by the authenticated user, without needing a server-side proxy.
 - Set up the Vercel project, connect it to the repository, and configure environment variables (Supabase URL, anon key, auth secret).
-- Document the auth decision in `docs/adr/NNNN-human-door-auth-model.md`.
+- Document the auth decision in `_docs/adr/NNNN-human-door-auth-model.md`.
 
 ### Acceptance criteria
 
-- An ADR exists at `docs/adr/NNNN-human-door-auth-model.md` documenting the chosen auth flow and the reasoning
+- An ADR exists at `_docs/adr/NNNN-human-door-auth-model.md` documenting the chosen auth flow and the reasoning
 - A Vercel project is deployed from the repository with a login screen (no content beyond auth)
 - Supabase Auth is configured and a test login (magic link or OAuth) succeeds end-to-end from the Vercel deployment
 - RLS policies on the tables created in W-0112 are tested from the frontend context (anon key + user JWT)
@@ -1181,7 +1208,7 @@ updated: 2026-03-07
 
 ### Outcome
 
-Repository structure is standardised: single `.github/copilot-instructions.md` source of truth, `.github/skills` submodule, `sync-skills.yml` workflow, `BACKLOG.md`, `PROGRESS.md`, `CHANGELOG.md`, and `docs/adr/` all present and consistent.
+Repository structure is standardised: single `.github/copilot-instructions.md` source of truth, `.github/skills` submodule, `sync-skills.yml` workflow, `BACKLOG.md`, `PROGRESS.md`, `CHANGELOG.md`, and `_docs/adr/` all present and consistent.
 
 ### Context
 

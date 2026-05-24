@@ -3,7 +3,7 @@ title: "LanceDB"
 category: tool
 tags: [lancedb, vector-database, embedded, search, superseded]
 date: 2026-05-23
-superseded_by: "docs/adr/0002-move-from-vector-storage-to-ontology.md"
+superseded_by: "_docs/adr/0002-move-from-vector-storage-to-ontology.md"
 related:
   - term: "Vector Database"
     file: vector-database.md
@@ -16,7 +16,7 @@ related:
 aliases: []
 ---
 
-> ⚠️ Superseded by [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md). LanceDB was the original design concept for the retrieval layer of Open-Brain. It was replaced by the ontology-based architecture before full implementation. The legacy prototype (`mcp_server.py`) references LanceDB but is not the system.
+> ⚠️ Superseded by [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md). LanceDB was the original design concept for the retrieval layer of Open-Brain. It was replaced by the ontology-based architecture before full implementation. The legacy prototype (`mcp_server.py`) references LanceDB but is not the system.
 
 **An embedded, serverless vector database that stores and searches high-dimensional numerical vectors, requiring no separate database process.**
 
@@ -28,7 +28,7 @@ LanceDB stores vectors — numerical representations of text or other data — a
 
 ## Usage in This System
 
-LanceDB is **not** the retrieval layer of this system. It was the original design concept; the decision to replace it with an ontology-based knowledge representation is recorded in [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md). The legacy prototype `mcp_server.py` contains LanceDB code but represents the abandoned approach, not the target architecture.
+LanceDB is **not** the retrieval layer of this system. It was the original design concept; the decision to replace it with an ontology-based knowledge representation is recorded in [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md). The legacy prototype `mcp_server.py` contains LanceDB code but represents the abandoned approach, not the target architecture.
 
 ## Related Terms
 
@@ -40,4 +40,4 @@ LanceDB is **not** the retrieval layer of this system. It was the original desig
 ## References
 
 1. [LanceDB Documentation](https://lancedb.github.io/lancedb/) — API reference, quickstart, and performance tuning.
-2. [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) — decision to replace LanceDB with ontology-based storage.
+2. [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md) — decision to replace LanceDB with ontology-based storage.

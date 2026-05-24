@@ -98,7 +98,7 @@ When a defined term appears in **any** file in this repository:
 - Use the relative path from the file's location to `glossary/`.
   - From repo root: `[Term](./glossary/term.md)`
   - From a first-level subfolder (`projects/`, `journal/`, etc.): `[Term](../glossary/term.md)`
-  - From a second-level subfolder (`docs/adr/`): `[Term](../../glossary/term.md)`
+  - From a second-level subfolder (`_docs/adr/`): `[Term](../../glossary/term.md)`
 - Do not link terms inside YAML front matter, code blocks, or inline code spans.
 
 ### 5. Aliases

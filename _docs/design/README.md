@@ -20,5 +20,5 @@ Design work happens here **before** implementation. Files in this folder are liv
 
 ## References
 
-1. [`docs/adr/README.md`](../adr/README.md) — Architecture Decision Records that formalise decisions made in this design space
+1. [`_docs/adr/README.md`](../adr/README.md) — Architecture Decision Records that formalise decisions made in this design space
 2. [`.github/copilot-instructions.md`](../../.github/copilot-instructions.md) — agent instructions governing this repository

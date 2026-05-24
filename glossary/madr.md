@@ -30,7 +30,7 @@ Status: proposed | accepted | superseded | deprecated
 
 ## Usage in This System
 
-- All ADRs in `docs/adr/` use the MADR format.
+- All ADRs in `_docs/adr/` use the MADR format.
 - The `decisions` skill in `.github/skills/decisions/SKILL.md` provides the canonical template and guidance for this repository.
 
 ## Related Terms

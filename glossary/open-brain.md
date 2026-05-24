@@ -27,7 +27,7 @@ The core design goals are:
 - **Zero recurring cost**: uses free, open-source components and GitHub free tier.
 - **Self-improving**: agents are constituted as "Architects", mandated to improve the system's structure as they work.
 
-The knowledge representation is ontology-based: concepts are structured as a typed graph of upper and lower ontologies, not a flat vector index. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) for the decision and [ADR-0004](../docs/adr/0004-provenance-model-and-control-plane.md) for the full architecture.
+The knowledge representation is ontology-based: concepts are structured as a typed graph of upper and lower ontologies, not a flat vector index. See [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md) for the decision and [ADR-0004](../_docs/adr/0004-provenance-model-and-control-plane.md) for the full architecture.
 
 The name "Open-Brain" distinguishes the system from closed, vendor-proprietary memory features (e.g. ChatGPT Memory, Claude Projects) that lock knowledge inside a single vendor's platform.
 
@@ -36,7 +36,7 @@ The name "Open-Brain" distinguishes the system from closed, vendor-proprietary m
 - The repository root is the Open-Brain installation.
 - `README.md` is the user-facing introduction to Open-Brain.
 - `getting-started-prompt.md` preserves the original vector-storage concept (archived).
-- The ontology-based MCP server is under active design; see `docs/design/ontology-system-design.md`.
+- The ontology-based MCP server is under active design; see `_docs/design/ontology-system-design.md`.
 
 ## Related Terms
 

@@ -16,7 +16,7 @@ related:
 aliases: ["vector search", "similarity search"]
 ---
 
-> ⚠️ Semantic search via vector embeddings was the retrieval mechanism in the original Open-Brain design concept. That approach was replaced by ontology-based retrieval before implementation. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) and [Retrieval](./retrieval.md) for the current approach.
+> ⚠️ Semantic search via vector embeddings was the retrieval mechanism in the original Open-Brain design concept. That approach was replaced by ontology-based retrieval before implementation. See [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md) and [Retrieval](./retrieval.md) for the current approach.
 
 **A search technique that finds documents by conceptual meaning rather than exact keyword matching, using vector similarity as the relevance signal.**
 
@@ -41,5 +41,5 @@ Semantic search is **not** the retrieval mechanism of this system. It was the or
 
 ## References
 
-1. [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) — decision to replace vector/semantic search with ontology-based retrieval.
+1. [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md) — decision to replace vector/semantic search with ontology-based retrieval.
 2. [SBERT: Semantic Textual Similarity](https://www.sbert.net/docs/usage/semantic_textual_similarity.html) — background on cosine similarity as a relevance metric.

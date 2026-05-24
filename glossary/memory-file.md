@@ -41,4 +41,4 @@ Memory files are plain text, human-readable, and git-versioned. Files that are n
 ## References
 
 1. [`.github/copilot-instructions.md` §9–10](../.github/copilot-instructions.md) — naming convention and required front matter for memory files.
-2. [`docs/adr/0004-provenance-model-and-control-plane.md`](../docs/adr/0004-provenance-model-and-control-plane.md) — how source documents are processed into ontology assertions.
+2. [`_docs/adr/0004-provenance-model-and-control-plane.md`](../_docs/adr/0004-provenance-model-and-control-plane.md) — how source documents are processed into ontology assertions.

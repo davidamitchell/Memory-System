@@ -127,7 +127,7 @@ Three logical stores (physical implementation deferred):
 - Upper ontology changes require Alignment Governance review — this introduces a human (or governed automated) gate
 - Rollback is always safe: history is append-only, the active pointer is the only mutable state
 - The provenance Turtle pattern above is the target assertion format; it can be extended but not simplified away
-- The design document (`docs/design/ontology-system-design.md`) is updated to v2 reflecting these changes
+- The design document (`_docs/design/ontology-system-design.md`) is updated to v2 reflecting these changes
 
 ## Open Questions
 
@@ -140,9 +140,9 @@ Three logical stores (physical implementation deferred):
 
 ## References
 
-1. [`docs/adr/0003-ontology-architecture.md`](./0003-ontology-architecture.md) — superseded; established the foundation this ADR builds on
-2. [`docs/adr/0002-move-from-vector-storage-to-ontology.md`](./0002-move-from-vector-storage-to-ontology.md) — established the direction
-3. [`docs/design/ontology-system-design.md`](../design/ontology-system-design.md) — updated component and sequence diagrams
+1. [`_docs/adr/0003-ontology-architecture.md`](./0003-ontology-architecture.md) — superseded; established the foundation this ADR builds on
+2. [`_docs/adr/0002-move-from-vector-storage-to-ontology.md`](./0002-move-from-vector-storage-to-ontology.md) — established the direction
+3. [`_docs/design/ontology-system-design.md`](../design/ontology-system-design.md) — updated component and sequence diagrams
 4. [W3C PROV-O](https://www.w3.org/TR/prov-o/) — the provenance ontology used in the Turtle pattern
 5. [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) — reference upper ontology pattern
 6. [OWL 2 Web Ontology Language](https://www.w3.org/TR/owl2-overview/) — target serialisation standard

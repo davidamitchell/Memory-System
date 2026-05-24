@@ -23,8 +23,8 @@ The format used in this repository is MADR (Markdown Any Decision Records), whic
 
 ## Usage in This System
 
-- ADRs live in `docs/adr/` and are named `NNNN-short-title.md` (zero-padded four-digit sequence number).
-- The `docs/adr/README.md` file maintains the index of all ADRs.
+- ADRs live in `_docs/adr/` and are named `NNNN-short-title.md` (zero-padded four-digit sequence number).
+- The `_docs/adr/README.md` file maintains the index of all ADRs.
 - Status values are `proposed → accepted → superseded / deprecated`.
 - Use the `decisions` skill from `.github/skills/decisions/SKILL.md` when writing a new ADR.
 
@@ -37,4 +37,4 @@ The format used in this repository is MADR (Markdown Any Decision Records), whic
 
 1. [ADR GitHub Organisation](https://adr.github.io/) — canonical resource for ADR formats and tooling.
 2. [Michael Nygard: Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) — the original ADR proposal.
-3. [`docs/adr/README.md`](../docs/adr/README.md) — the ADR index for this repository.
+3. [`_docs/adr/README.md`](../_docs/adr/README.md) — the ADR index for this repository.

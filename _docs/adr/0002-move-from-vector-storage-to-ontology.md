@@ -33,11 +33,11 @@ Vector embeddings may still be used as an implementation detail within individua
 - `requirements.txt` will be updated to remove LanceDB/sentence-transformer dependencies and add ontology tooling
 - `copilot-setup-steps.yml` will be updated to remove the embedding model pre-warm step
 - The README.md, `copilot-instructions.md`, and all glossary terms referencing the vector layer will be updated
-- A new design space (`docs/design/`) documents the target architecture
+- A new design space (`_docs/design/`) documents the target architecture
 - This is a breaking change to the storage layer; existing `.lancedb/` folders can be discarded
 
 ## References
 
-1. [`docs/adr/0003-ontology-architecture.md`](./0003-ontology-architecture.md) — the architectural detail of the upper/lower ontology design
-2. [`docs/design/ontology-system-design.md`](../design/ontology-system-design.md) — component and sequence diagrams for the new architecture
-3. [`docs/adr/README.md`](./README.md) — index of all ADRs in this repository
+1. [`_docs/adr/0003-ontology-architecture.md`](./0003-ontology-architecture.md) — the architectural detail of the upper/lower ontology design
+2. [`_docs/design/ontology-system-design.md`](../design/ontology-system-design.md) — component and sequence diagrams for the new architecture
+3. [`_docs/adr/README.md`](./README.md) — index of all ADRs in this repository

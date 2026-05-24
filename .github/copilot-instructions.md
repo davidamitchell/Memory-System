@@ -12,7 +12,7 @@ You are the **Architect** of this knowledge store, not just a user. This reposit
 - Add new knowledge faithfully and accurately.
 - Proactively improve the structure, links, and quality of existing knowledge.
 
-> **Architecture:** This system is an ontology-based knowledge store. The design is fully recorded in [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md), [ADR-0003](../docs/adr/0003-ontology-architecture.md), [ADR-0004](../docs/adr/0004-provenance-model-and-control-plane.md), and the [design space](../docs/design/ontology-system-design.md). Read these before making any architectural decisions. A legacy vector-storage prototype (`mcp_server.py`) exists in the repository but is not the system — it is replaced by the ontology architecture.
+> **Architecture:** This system is an ontology-based knowledge store. The design is fully recorded in [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md), [ADR-0003](../_docs/adr/0003-ontology-architecture.md), [ADR-0004](../_docs/adr/0004-provenance-model-and-control-plane.md), and the [design space](../_docs/design/ontology-system-design.md). Read these before making any architectural decisions. A legacy vector-storage prototype (`mcp_server.py`) exists in the repository but is not the system — it is replaced by the ontology architecture.
 
 ---
 
@@ -41,7 +41,7 @@ The backlog is `BACKLOG.md` at the repo root. Use the `backlog-manager` skill fr
 
 ## 4. Architecture Decision Records
 
-Every non-trivial architectural or design decision must be recorded as an [ADR](../glossary/adr.md) in `docs/adr/`. Use the `decisions` skill from `.github/skills/decisions/SKILL.md`. Format is [MADR](../glossary/madr.md). Files named `docs/adr/NNNN-short-title.md`.
+Every non-trivial architectural or design decision must be recorded as an [ADR](../glossary/adr.md) in `_docs/adr/`. Use the `decisions` skill from `.github/skills/decisions/SKILL.md`. Format is [MADR](../glossary/madr.md). Files named `_docs/adr/NNNN-short-title.md`.
 
 ---
 
@@ -136,8 +136,8 @@ The goal is a memory system that is **measurably better after every ten sessions
 | `/meetings` | Notes from meetings, calls, and conversations |
 | `/journal` | Daily thoughts, reflections, and observations |
 | `/projects` | Project-specific context, decisions, and specs |
-| `docs/adr/` | Architecture Decision Records |
-| `docs/design/` | Conceptual design space — component and sequence diagrams, open questions |
+| `_docs/adr/` | Architecture Decision Records |
+| `_docs/design/` | Conceptual design space — component and sequence diagrams, open questions |
 
 New top-level folders may be added when an existing folder is clearly insufficient. Document the reason in the file that prompted the change.
 
@@ -273,7 +273,7 @@ When a defined term appears in **any** file in this repository, link it **on its
 - Use relative paths from the file's location to `glossary/`:
   - From repo root: `[Term](./glossary/term.md)`
   - From a first-level subfolder (`projects/`, `journal/`, `meetings/`): `[Term](../glossary/term.md)`
-  - From a second-level subfolder (`docs/adr/`): `[Term](../../glossary/term.md)`
+  - From a second-level subfolder (`_docs/adr/`): `[Term](../../glossary/term.md)`
 
 ### Definition file requirements (summary)
 
@@ -297,7 +297,7 @@ Full requirements: [`definition_scheme.md`](../definition_scheme.md)
 
 ## 17. Build Loop Harness
 
-Every session follows the **Build Loop Harness** defined in [`docs/design/build-loop-harness.md`](../docs/design/build-loop-harness.md). The full protocol lives there. This section is the condensed always-on reference.
+Every session follows the **Build Loop Harness** defined in [`_docs/design/build-loop-harness.md`](../_docs/design/build-loop-harness.md). The full protocol lives there. This section is the condensed always-on reference.
 
 ### The five-phase loop
 
@@ -340,7 +340,7 @@ ENTRY → PLAN → EXECUTE (loop) → CLOSE → SELF-IMPROVE
 
 ### Self-improve
 
-After close, ask: was any harness phase slow, skipped, or unexpectedly valuable? If the harness needs changing, **make the change now** — update `docs/design/build-loop-harness.md` and this section in the same session. Small improvements (wording, a missing rule, a clarification): update directly. Structural changes (adding/removing phases, changing the loop shape): write an ADR first, then update both documents. Do not defer to a backlog item.
+After close, ask: was any harness phase slow, skipped, or unexpectedly valuable? If the harness needs changing, **make the change now** — update `_docs/design/build-loop-harness.md` and this section in the same session. Small improvements (wording, a missing rule, a clarification): update directly. Structural changes (adding/removing phases, changing the loop shape): write an ADR first, then update both documents. Do not defer to a backlog item.
 
 ### Focus rules (non-negotiable)
 
@@ -356,8 +356,8 @@ After close, ask: was any harness phase slow, skipped, or unexpectedly valuable?
 ## References
 
 1. [Model Context Protocol](https://modelcontextprotocol.io/) — the open standard powering the MCP tools in this repository.
-2. [MADR](https://adr.github.io/madr/) — the format used for Architecture Decision Records in `docs/adr/`.
+2. [MADR](https://adr.github.io/madr/) — the format used for Architecture Decision Records in `_docs/adr/`.
 3. [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) — the format used for `CHANGELOG.md`.
 4. [`glossary/README.md`](../glossary/README.md) — index of all defined terms referenced in this file.
 5. [`definition_scheme.md`](../definition_scheme.md) — the schema for all definition files.
-6. [`docs/design/build-loop-harness.md`](../docs/design/build-loop-harness.md) — full Build Loop Harness protocol.
+6. [`_docs/design/build-loop-harness.md`](../_docs/design/build-loop-harness.md) — full Build Loop Harness protocol.

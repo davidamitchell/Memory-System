@@ -14,7 +14,7 @@ related:
 aliases: ["sentence encoder", "text encoder"]
 ---
 
-> ⚠️ Embedding models were part of the original vector-storage design concept for Open-Brain. That approach was replaced by the ontology-based architecture before full implementation. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md). Embedding models are **not** used in the current system.
+> ⚠️ Embedding models were part of the original vector-storage design concept for Open-Brain. That approach was replaced by the ontology-based architecture before full implementation. See [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md). Embedding models are **not** used in the current system.
 
 **A machine-learning model that converts text into a fixed-length vector of numbers representing its semantic content.**
 
@@ -36,5 +36,5 @@ Embedding models are **not** used in this system. The legacy prototype `mcp_serv
 
 ## References
 
-1. [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) — decision to replace the vector/embedding approach with ontology-based knowledge representation.
+1. [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md) — decision to replace the vector/embedding approach with ontology-based knowledge representation.
 2. [BAAI/bge-small-en-v1.5 on Hugging Face](https://huggingface.co/BAAI/bge-small-en-v1.5) — the model that was selected for the superseded design.

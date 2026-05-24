@@ -42,14 +42,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - References section updated: LanceDB and Model2Vec entries removed
 
 
-- `docs/design/build-loop-harness.md` Phase 7 — updated to require direct edits for small improvements; ADR only gates structural changes
+- `_docs/design/build-loop-harness.md` Phase 7 — updated to require direct edits for small improvements; ADR only gates structural changes
 - `.github/copilot-instructions.md` §17 Self-improve — updated to match
 
 ### Added
 - `learnings.md` — distilled rules from all PROGRESS.md mini-retros
 
 ### Fixed
-- `docs/design/build-loop-harness.md` — removed glossary cross-links from intro (design docs are not memory files)
+- `_docs/design/build-loop-harness.md` — removed glossary cross-links from intro (design docs are not memory files)
 
 ### Changed — Full pivot documentation coherence pass
 - `README.md` — Rewritten as single-architecture doc; removed dual-track framing, Quick Start, LanceDB and embedding model references
@@ -63,20 +63,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `glossary/knowledge-graph.md` — Rewritten to describe the ontology as the knowledge graph implementation
 - `glossary/memory-file.md` — Removed LanceDB vector index as derived artefact; source document framing added
 - `glossary/embedding-model.md` — Marked superseded; current production model framing removed
-- `docs/design/build-loop-harness.md` — Phase 1 step 4 changed from "Call `search_brain`" to "Search the repository"
+- `_docs/design/build-loop-harness.md` — Phase 1 step 4 changed from "Call `search_brain`" to "Search the repository"
 
 ### Added
-- `docs/design/build-loop-harness.md` — full Build Loop Harness protocol: five phases (Entry, Plan, Execute, Close, Self-Improve), validation checklist, drift correction, self-correction, Mermaid diagram, open questions
+- `_docs/design/build-loop-harness.md` — full Build Loop Harness protocol: five phases (Entry, Plan, Execute, Close, Self-Improve), validation checklist, drift correction, self-correction, Mermaid diagram, open questions
 - `.github/copilot-instructions.md` §17 — condensed always-on Build Loop Harness reference with focus rules
 
 
-- `docs/adr/0002-move-from-vector-storage-to-ontology.md` — decision to replace LanceDB vector storage with an ontology-based knowledge representation
-- `docs/adr/0003-ontology-architecture.md` — decision establishing upper/lower ontology structure and the 11-processor pipeline
-- `docs/adr/README.md` — updated index with ADR-0002 and ADR-0003
+- `_docs/adr/0002-move-from-vector-storage-to-ontology.md` — decision to replace LanceDB vector storage with an ontology-based knowledge representation
+- `_docs/adr/0003-ontology-architecture.md` — decision establishing upper/lower ontology structure and the 11-processor pipeline
+- `_docs/adr/README.md` — updated index with ADR-0002 and ADR-0003
 
 ### Changed
 - `README.md` — updated heading, added ontology direction notice, added target architecture diagram, updated repository layout
-- `.github/copilot-instructions.md` — added architecture direction notice in §1, added `docs/design/` to folder structure table
+- `.github/copilot-instructions.md` — added architecture direction notice in §1, added `_docs/design/` to folder structure table
 
 - `definition_scheme.md` — mandatory schema, requirements, and cross-linking rules for all definition files
 - `glossary/` folder with 26 definition files covering the full knowledge domain of this memory system
@@ -111,7 +111,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `BACKLOG.md` in backlog-manager skill format
 - `PROGRESS.md` for append-only session history
 - `CHANGELOG.md` (this file)
-- `docs/adr/` with ADR index and first decision record
+- `_docs/adr/` with ADR index and first decision record
 - `## 13. Chain-of-Thought Reasoning` section in `.github/copilot-instructions.md` with memory-system-specific reasoning steps
 
 ### Removed

@@ -23,7 +23,7 @@ This is richer than a simple `## Related` link list: the ontology encodes explic
 
 ## Usage in This System
 
-- The ontology store is the knowledge graph of this system. See `docs/design/ontology-system-design.md` for the component and sequence diagrams.
+- The ontology store is the knowledge graph of this system. See `_docs/design/ontology-system-design.md` for the component and sequence diagrams.
 - The 12-processor pipeline (defined in ADR-0004) is responsible for populating the knowledge graph from source documents.
 - `## Related` sections in Markdown files are informal link annotations; they are not the knowledge graph itself.
 
@@ -35,5 +35,5 @@ This is richer than a simple `## Related` link list: the ontology encodes explic
 ## References
 
 1. [Wikipedia: Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_graph) — definition and academic background.
-2. [`docs/adr/0004-provenance-model-and-control-plane.md`](../docs/adr/0004-provenance-model-and-control-plane.md) — ADR defining the ontology architecture.
-3. [`docs/design/ontology-system-design.md`](../docs/design/ontology-system-design.md) — full component and sequence diagrams for the knowledge graph implementation.
+2. [`_docs/adr/0004-provenance-model-and-control-plane.md`](../_docs/adr/0004-provenance-model-and-control-plane.md) — ADR defining the ontology architecture.
+3. [`_docs/design/ontology-system-design.md`](../_docs/design/ontology-system-design.md) — full component and sequence diagrams for the knowledge graph implementation.

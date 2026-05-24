@@ -24,7 +24,7 @@ MCP servers communicate with clients over a transport. The standard choice for l
 ## Usage in This System
 
 - `mcp_server.py` at the repo root is a **legacy prototype** from the original vector-storage design. It is not the target system.
-- The ontology-based MCP server is not yet built. Its tool interface will be defined and recorded in an ADR as part of implementation. See `docs/design/ontology-system-design.md` for the architecture.
+- The ontology-based MCP server is not yet built. Its tool interface will be defined and recorded in an ADR as part of implementation. See `_docs/design/ontology-system-design.md` for the architecture.
 - `.vscode/mcp.json` currently points to `mcp_server.py`; this will be updated when the ontology server is implemented.
 
 ## Related Terms
@@ -36,4 +36,4 @@ MCP servers communicate with clients over a transport. The standard choice for l
 ## References
 
 1. [Model Context Protocol — Server Concepts](https://modelcontextprotocol.io/docs/concepts/servers) — what a server is, how it declares tools, and how the lifecycle works.
-2. [`docs/design/ontology-system-design.md`](../docs/design/ontology-system-design.md) — target system architecture the MCP server will expose.
+2. [`_docs/design/ontology-system-design.md`](../_docs/design/ontology-system-design.md) — target system architecture the MCP server will expose.

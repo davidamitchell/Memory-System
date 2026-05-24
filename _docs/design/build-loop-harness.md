@@ -173,7 +173,7 @@ Ask these three questions about the **harness itself**, not just the work:
 If a change is warranted, **make it now** — do not defer to a backlog item. This is §7 in action: "Do not just answer — make the change."
 
 - **Small improvement** (wording, a missing rule, a clarification): update this document and the condensed reference in `copilot-instructions.md` §17 directly, in the same session.
-- **Structural change** (adding or removing a phase, changing the loop shape, redefining the entry gate): write an ADR first (`docs/adr/`), then update both documents. The harness is an architectural decision — structural changes need a decision record.
+- **Structural change** (adding or removing a phase, changing the loop shape, redefining the entry gate): write an ADR first (`_docs/adr/`), then update both documents. The harness is an architectural decision — structural changes need a decision record.
 
 Either way, the change ships this session. A backlog item is only appropriate when the change requires research or involves decisions outside the current scope.
 
@@ -199,7 +199,7 @@ These rules keep the agent on the critical path:
 |---|---|---|
 | Mini-Retro | `copilot-instructions.md` §7 | Phase 6 step 1 |
 | "Done" checklist | `copilot-instructions.md` §7 | Phase 6 step 7 |
-| ADR protocol | `copilot-instructions.md` §4, `docs/adr/` | Phase 6 step 5, Phase 7 |
+| ADR protocol | `copilot-instructions.md` §4, `_docs/adr/` | Phase 6 step 5, Phase 7 |
 | Backlog management | `copilot-instructions.md` §3, `BACKLOG.md` | Entry step 2, Phase 5, Phase 7 |
 | Skill usage | `copilot-instructions.md` §2 | Entry step 5, Focus Rules |
 | Chain-of-thought | `copilot-instructions.md` §13 | Integrated throughout Execute |
@@ -266,6 +266,6 @@ flowchart TD
 ## Related
 
 - [`.github/copilot-instructions.md`](../../.github/copilot-instructions.md) — the constitution this harness operates within
-- [`docs/design/ontology-system-design.md`](./ontology-system-design.md) — example of a multi-phase design document produced using a prior iteration of this loop
-- [`docs/adr/README.md`](../adr/README.md) — ADR index; harness changes require an ADR
+- [`_docs/design/ontology-system-design.md`](./ontology-system-design.md) — example of a multi-phase design document produced using a prior iteration of this loop
+- [`_docs/adr/README.md`](../adr/README.md) — ADR index; harness changes require an ADR
 - [`BACKLOG.md`](../../BACKLOG.md) — work items raised during harness execution

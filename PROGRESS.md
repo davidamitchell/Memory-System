@@ -59,7 +59,7 @@ Three targeted corrections from the current session:
 2. **Glossary links removed from build-loop-harness.md** — design/protocol documents should use plain prose; the Wikipedia-style cross-linking rule applies only to memory files.
 3. **Self-Improve now mandates making changes** — Phase 7 of `build-loop-harness.md` and §17 of `copilot-instructions.md` both previously said "raise a backlog item" for harness changes, contradicting §7's "do not just answer — make the change." Both updated: small improvements ship in the same session; structural changes require an ADR first.
 
-**Files updated:** `docs/design/build-loop-harness.md`, `.github/copilot-instructions.md`, `CHANGELOG.md`, `learnings.md`
+**Files updated:** `_docs/design/build-loop-harness.md`, `.github/copilot-instructions.md`, `CHANGELOG.md`, `learnings.md`
 
 **Mini-Retro**
 1. Did the process work? Yes — all three issues were small, well-scoped corrections. No ambiguity about intent.
@@ -83,7 +83,7 @@ Completed a full documentation coherence pass to align all docs with the definit
 - `glossary/knowledge-graph.md` — Rewritten to describe the ontology as the knowledge graph implementation.
 - `glossary/memory-file.md` — Removed "LanceDB vector index is a derived artefact" sentence; source document framing added.
 - `glossary/embedding-model.md` — Superseded notice added; current production model framing removed.
-- `docs/design/build-loop-harness.md` — Phase 1 step 4 changed from "Call `search_brain`" to "Search the repository."
+- `_docs/design/build-loop-harness.md` — Phase 1 step 4 changed from "Call `search_brain`" to "Search the repository."
 
 **Mini-Retro**
 1. Did the process work? Yes — a systematic file-by-file pass with explicit superseded notices is the right approach for this kind of architectural pivot.
@@ -95,7 +95,7 @@ Completed a full documentation coherence pass to align all docs with the definit
 
 ## 2026-05-23 — Build Loop Harness
 
-Defined the Build Loop Harness: a seven-phase protocol (Entry, Plan, Execute, Validate, Correct, Close, Self-Improve) that keeps agents focused, reduces drift, manages context, leverages skills, and produces a self-correcting and self-improving workflow. Created `docs/design/build-loop-harness.md` with the full protocol including a Mermaid flowchart, validation checklist, focus rules, and open questions. Added §17 to `.github/copilot-instructions.md` as a condensed always-on reference. Updated `docs/design/README.md` index and `CHANGELOG.md`.
+Defined the Build Loop Harness: a seven-phase protocol (Entry, Plan, Execute, Validate, Correct, Close, Self-Improve) that keeps agents focused, reduces drift, manages context, leverages skills, and produces a self-correcting and self-improving workflow. Created `_docs/design/build-loop-harness.md` with the full protocol including a Mermaid flowchart, validation checklist, focus rules, and open questions. Added §17 to `.github/copilot-instructions.md` as a condensed always-on reference. Updated `_docs/design/README.md` index and `CHANGELOG.md`.
 
 **Mini-Retro**
 1. Did the process work? Yes — the existing repo conventions (§7 mini-retro, §13 chain-of-thought, skills protocol, backlog) gave clear anchoring points for each phase of the harness, so the design was coherent with no contradictions.
@@ -119,13 +119,13 @@ Reviewed ADR-0004 draft. Applied feedback: added standard MADR sections (Context
 
 ## 2026-05-23 — Ontology architecture design and setup
 
-Updated the skills submodule to the latest commit. Created `docs/design/` as the new conceptual design space, with a full ontology-system-design document covering all architectural components, the 11-processor pipeline, a component diagram, and a sequence diagram. Wrote ADR-0002 (move from vector storage to ontology) and ADR-0003 (upper/lower ontology architecture and processing pipeline). Updated README.md and `.github/copilot-instructions.md` to reflect the direction change. Updated CHANGELOG.md and `docs/adr/README.md` index.
+Updated the skills submodule to the latest commit. Created `_docs/design/` as the new conceptual design space, with a full ontology-system-design document covering all architectural components, the 11-processor pipeline, a component diagram, and a sequence diagram. Wrote ADR-0002 (move from vector storage to ontology) and ADR-0003 (upper/lower ontology architecture and processing pipeline). Updated README.md and `.github/copilot-instructions.md` to reflect the direction change. Updated CHANGELOG.md and `_docs/adr/README.md` index.
 
 **Mini-Retro**
 1. Did the process work? Yes — the design questions in the problem statement mapped cleanly onto ADRs and a design document.
 2. What slowed down or went wrong? The problem statement raised an open question about additional processors needed beyond the obvious ones. These were answered (Consistency Validation, Merge/Reconciliation, Export/Serialisation) and added to both ADR-0003 and the design document.
 3. What single change would prevent this next time? The open questions section in the design document is the right place to surface unresolved design choices. Future design sessions should start by reviewing and closing those questions.
-4. Is this a pattern? Yes — design documents without an explicit "Open Questions" section tend to bury uncertainty in prose. The `docs/design/` convention now includes this section by default.
+4. Is this a pattern? Yes — design documents without an explicit "Open Questions" section tend to bury uncertainty in prose. The `_docs/design/` convention now includes this section by default.
 
 ---
 
@@ -186,7 +186,7 @@ Audited all open pull requests against `main`. Only one open PR existed at the t
 
 ## 2026-03-08 — Mobile capture discovery backlog (W-0003–W-0015) and doc validation
 
-Added 13 discovery backlog items (W-0003 through W-0015) covering all viable mobile capture and retrieval paths: Slack bot, Claude iOS MCP, ChatGPT Actions, Gemini/Google ecosystem, Grok/X DM bot, iOS Shortcuts + GitHub API, Raycast/Alfred, `remember` CLI, Telegram bot, `inbox/` folder, Apple Watch dictation, self-hosted MCP server options, and LanceDB index rebuild evaluation. Fixed W-0002 duplicate `### Notes` / `---` formatting artifact. Fixed CHANGELOG.md duplicate [Unreleased] entries and added mobile capture changelog entry. Fixed stale `AGENTS.md` link in `projects/2026-03-07-copilot-headless-mode.md`. Added ADR index table to `docs/adr/README.md`. Strengthened archived header in `getting-started-prompt.md`.
+Added 13 discovery backlog items (W-0003 through W-0015) covering all viable mobile capture and retrieval paths: Slack bot, Claude iOS MCP, ChatGPT Actions, Gemini/Google ecosystem, Grok/X DM bot, iOS Shortcuts + GitHub API, Raycast/Alfred, `remember` CLI, Telegram bot, `inbox/` folder, Apple Watch dictation, self-hosted MCP server options, and LanceDB index rebuild evaluation. Fixed W-0002 duplicate `### Notes` / `---` formatting artifact. Fixed CHANGELOG.md duplicate [Unreleased] entries and added mobile capture changelog entry. Fixed stale `AGENTS.md` link in `projects/2026-03-07-copilot-headless-mode.md`. Added ADR index table to `_docs/adr/README.md`. Strengthened archived header in `getting-started-prompt.md`.
 
 **Mini-Retro**
 1. Did the process work? Yes — the issue was fully specified with exact content for each backlog item, making this a clean writing task.

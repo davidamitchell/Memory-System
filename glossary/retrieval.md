@@ -38,4 +38,4 @@ Retrieval quality is a first-class engineering concern. Poor retrieval — retur
 ## References
 
 1. [W3C SPARQL Query Language](https://www.w3.org/TR/sparql11-query/) — structured query language for RDF graph retrieval.
-2. [`docs/design/ontology-system-design.md`](../docs/design/ontology-system-design.md) — the retrieval architecture for the ontology store.
+2. [`_docs/design/ontology-system-design.md`](../_docs/design/ontology-system-design.md) — the retrieval architecture for the ontology store.

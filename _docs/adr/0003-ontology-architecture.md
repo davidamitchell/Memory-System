@@ -69,7 +69,7 @@ Three additional processors needed to complete a production-grade versionable on
 
 ## Consequences
 
-- A new `docs/design/` folder documents the full component and sequence diagrams
+- A new `_docs/design/` folder documents the full component and sequence diagrams
 - The processor pipeline is the primary unit of testability and extension
 - Ontology versioning satisfies the audit/lineage requirements that vector storage could not meet
 - Export/serialisation enables interoperability with standard ontology tooling (Protégé, SPARQL endpoints)
@@ -77,8 +77,8 @@ Three additional processors needed to complete a production-grade versionable on
 
 ## References
 
-1. [`docs/adr/0002-move-from-vector-storage-to-ontology.md`](./0002-move-from-vector-storage-to-ontology.md) — the parent decision establishing why we moved to ontologies
-2. [`docs/design/ontology-system-design.md`](../design/ontology-system-design.md) — component diagram and sequence diagram for this architecture
-3. [`docs/adr/README.md`](./README.md) — index of all ADRs in this repository
+1. [`_docs/adr/0002-move-from-vector-storage-to-ontology.md`](./0002-move-from-vector-storage-to-ontology.md) — the parent decision establishing why we moved to ontologies
+2. [`_docs/design/ontology-system-design.md`](../design/ontology-system-design.md) — component diagram and sequence diagram for this architecture
+3. [`_docs/adr/README.md`](./README.md) — index of all ADRs in this repository
 4. [Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/) — reference upper ontology pattern
 5. [OWL 2 Web Ontology Language](https://www.w3.org/TR/owl2-overview/) — target serialisation format
