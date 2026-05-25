@@ -210,8 +210,10 @@ def test_nlp_annotations_passed_to_llm_prompt() -> None:
     messages = call_args.kwargs.get("messages") or call_args.args[0] if call_args.args else call_args.kwargs["messages"]
     user_message = next(m["content"] for m in messages if m["role"] == "user")
 
-    # The NLP section should appear in the prompt
-    assert "NLP pre-analysis" in user_message or "Named entities" in user_message or "noun phrases" in user_message
+    # The NLP section must appear in the prompt with all expected headers
+    assert "NLP pre-analysis" in user_message
+    assert "Named entities" in user_message
+    assert "noun phrases" in user_message
 
 
 def test_llm_with_nlp_produces_valid_delta_proposal() -> None:

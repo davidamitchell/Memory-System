@@ -37,6 +37,10 @@ logger = logging.getLogger(__name__)
 
 PROCESSOR_VERSION = "concept-extractor-v1.1.0"
 
+# Maximum number of NLP annotation items (entities, noun chunks) included in
+# the LLM prompt.  Keeps prompt size bounded while providing useful signal.
+_MAX_NLP_ITEMS_IN_PROMPT = 20
+
 # ---------------------------------------------------------------------------
 # LLM client — swappable for testing
 # ---------------------------------------------------------------------------
@@ -97,11 +101,11 @@ def _format_nlp_annotations(annotations: dict) -> str:
     lines = []
     entities = annotations.get("entities", [])
     if entities:
-        ent_strs = [f"{e['text']} ({e['label']})" for e in entities[:20]]
+        ent_strs = [f"{e['text']} ({e['label']})" for e in entities[:_MAX_NLP_ITEMS_IN_PROMPT]]
         lines.append("Named entities: " + ", ".join(ent_strs))
     chunks = annotations.get("noun_chunks", [])
     if chunks:
-        chunk_strs = [c["text"] for c in chunks[:20]]
+        chunk_strs = [c["text"] for c in chunks[:_MAX_NLP_ITEMS_IN_PROMPT]]
         lines.append("Key noun phrases: " + ", ".join(chunk_strs))
     return "\n".join(lines)
 

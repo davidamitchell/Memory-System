@@ -38,6 +38,10 @@ _FRONT_MATTER_RE = re.compile(r"^---\s*\n(.*?\n)---\s*\n", re.DOTALL)
 _BOLD_DEF_RE = re.compile(r"^\*\*(.+?)\*\*\s*$", re.MULTILINE)
 _H1_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
 
+# Limit text fed to spaCy to avoid excessive processing on very long documents.
+# en_core_web_sm processes ~3 k tokens/s; 8 000 chars ≈ 1 500 tokens ≈ sub-second.
+_MAX_NLP_TEXT_LENGTH = 8000
+
 # ---------------------------------------------------------------------------
 # spaCy model — loaded lazily and cached
 # ---------------------------------------------------------------------------
@@ -84,7 +88,7 @@ def _enrich_with_nlp(text: str) -> dict:
         token that is not punctuation or whitespace.
     """
     # Cap to avoid excessive processing on very long documents
-    capped = text[:8000]
+    capped = text[:_MAX_NLP_TEXT_LENGTH]
     nlp = _get_nlp_model()
     doc = nlp(capped)
 
