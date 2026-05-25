@@ -18,6 +18,8 @@ The memory system is an ontology-based knowledge graph that makes personal and r
 
 **Execution model:** All pipeline processing runs inside GitHub Actions. There is no local deployment and no CLI interaction required from the user. The user's interface is GitHub: push a document, assign an issue to Copilot, or trigger a workflow manually. GitHub Actions workflows are the trigger functions for every pipeline run. The only deployment target is GitHub (repository storage, GitHub Actions compute, GitHub Pages output).
 
+**View layer:** The GitHub Pages browser (`docs/`) is the primary human-facing interface. **Mobile is the primary viewing device.** The site is designed mobile-first: base styles target small screens; desktop layout is a progressive enhancement applied at `min-width: 641px`. All future UI work must start from mobile constraints — touch targets, bottom navigation, single-column layouts, full-width inputs — and enhance for larger screens, not the reverse.
+
 The system is agent-native, GitHub-native, and designed to improve the quality of its own structure over time. Additional input sources may be added in the future; the pipeline's input/output interface is stable and source-agnostic.
 
 ---
@@ -674,7 +676,37 @@ The eval harness (W-0203) uses `--extractor rule-based` explicitly to establish 
 
 ---
 
-## References
+## W-0213
+
+status: done
+created: 2026-05-25
+updated: 2026-05-25
+blocks: []
+blocked-by: [W-0210]
+research: []
+assumptions:
+  - Mobile is the primary viewing device for the GitHub Pages browser
+  - Progressive enhancement is maintained: semantic HTML works without JS; CSS adds layout; JS adds behaviour
+  - The breakpoint between mobile and desktop layouts is 641 px (min-width media query)
+rationale:
+  - The previous `docs/style.css` was written desktop-first: base styles targeted ~1040 px wide viewports; mobile behaviour was bolted on via `@media (max-width: 640px)` overrides. This is fragile — adding any new component requires remembering to add a mobile override, and omitting one silently degrades the primary use case.
+  - Inverting the cascade (mobile base → `@media (min-width: 641px)` desktop enhancements) ensures every new component is usable on mobile by default, and desktop layout is an explicit opt-in.
+
+### Outcome
+
+`docs/style.css` is rewritten as true mobile-first:
+- **Base styles** target small screens: bottom tab navigation (fixed 56 px bar), concept card layout, compact header, full-width search, stacked relation pair, full-width back button.
+- **`@media (min-width: 641px)`** layers on desktop enhancements: top horizontal nav, max-width centred content, table layout for concepts, constrained search width, side-by-side relation pair, inline back button.
+- No behaviour changes: all existing visual appearance and interactions are preserved. The change is purely structural (cascade direction).
+
+### Acceptance criteria
+
+- `docs/style.css` contains no `@media (max-width: ...)` rules — all responsive rules use `@media (min-width: 641px)` ✓
+- Mobile layout (≤640 px): bottom tab bar, concept cards, full-width search, stacked `.rel-pair`, full-width back button ✓
+- Desktop layout (≥641 px): top nav in header, max-width 1040 px content, standard table rows for concepts, search capped at 340 px, side-by-side `.rel-pair` ✓
+- All 42 existing tests pass unchanged ✓
+
+---
 
 1. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase research items; historical record.
 2. [`definition_scheme.md`](./definition_scheme.md) — the schema and requirements for all glossary definition files.

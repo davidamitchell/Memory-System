@@ -29,6 +29,7 @@ Six constraints govern all design decisions. See [ADR-0004](../adr/0004-provenan
 | **Upper Ontology Stability** | Upper ontology mutations require explicit alignment governance acceptance |
 | **Bidirectional Traceability** | Concepts resolve to source evidence; source evidence resolves to derived assertions |
 | **GitHub-Native Execution** | There is no deployment target outside GitHub. All pipeline processing runs inside GitHub Actions. No local CLI interaction is required from the user. GitHub Actions workflows are the sole trigger functions. |
+| **Mobile-First View Layer** | The GitHub Pages browser is designed for mobile as the primary device. Base CSS targets small screens (≤640 px); desktop layout is a progressive enhancement at `min-width: 641px`. All future view-layer additions must start from mobile constraints. |
 
 > **Extraction strategy:** The primary corpus (`raw_document_corpus/`) is unstructured prose. Rule-based extraction (which reads explicit YAML front-matter fields) cannot produce a proper ontology from prose. LLM extraction via `gh models run` is always required for the production corpus. Rule-based extraction is retained as the evaluation baseline for the structured glossary corpus (see W-0203). `llm` is the default strategy (see W-0212).
 
