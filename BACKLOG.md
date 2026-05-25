@@ -14,7 +14,11 @@ superseded_by: ""
 
 ## Vision
 
-The memory system is an ontology-based knowledge graph that makes personal and research knowledge queryable and traversable. Input begins with documents from the Research repository — markdown files with structured front-matter processed through a 12-processor pipeline into a queryable RDF knowledge graph stored as Turtle. The system is agent-native, local-first, and designed to improve the quality of its own structure over time. Additional input sources may be added in the future; the pipeline's input/output interface is stable and source-agnostic.
+The memory system is an ontology-based knowledge graph that makes personal and research knowledge queryable and traversable. Input begins with documents from the Research repository — markdown files processed through a 12-processor pipeline into a queryable RDF knowledge graph stored as Turtle.
+
+**Execution model:** All pipeline processing runs inside GitHub Actions. There is no local deployment and no CLI interaction required from the user. The user's interface is GitHub: push a document, assign an issue to Copilot, or trigger a workflow manually. GitHub Actions workflows are the trigger functions for every pipeline run. The only deployment target is GitHub (repository storage, GitHub Actions compute, GitHub Pages output).
+
+The system is agent-native, GitHub-native, and designed to improve the quality of its own structure over time. Additional input sources may be added in the future; the pipeline's input/output interface is stable and source-agnostic.
 
 ---
 
@@ -22,11 +26,17 @@ The memory system is an ontology-based knowledge graph that makes personal and r
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
+│                     TRIGGER LAYER                              │
+│   GitHub Actions workflow (push / schedule / workflow_dispatch)│
+│   User pushes documents → workflow fires automatically         │
+└────────────────────────────┬───────────────────────────────────┘
+                             │
+┌────────────────────────────▼───────────────────────────────────┐
 │                        INPUT LAYER                             │
-│   glossary/ (active)  ·  Research repository docs (next)      │
+│   raw_document_corpus/ (primary)  ·  glossary/ (eval baseline)│
 │   Additional sources: to be determined                        │
 └────────────────────────────┬───────────────────────────────────┘
-                             │  pipeline/run_pipeline.py <path>
+                             │  pipeline/run_pipeline.py --strategy llm
 ┌────────────────────────────▼───────────────────────────────────┐
 │                    12-PROCESSOR PIPELINE                       │
 │   1 Ingest · 2 Parse · 3 Segment · 4 Provenance               │
@@ -36,12 +46,13 @@ The memory system is an ontology-based knowledge graph that makes personal and r
                              │  data/ontology/vNNNN.ttl
 ┌────────────────────────────▼───────────────────────────────────┐
 │                        QUERY LAYER                             │
-│   pipeline/query.py (SPARQL via rdflib)                        │
+│   GitHub Pages browser (live)                                  │
+│   pipeline/query.py (SPARQL via rdflib — development only)    │
 │   Future: MCP tools — ontology server not yet implemented     │
 └────────────────────────────────────────────────────────────────┘
 ```
 
-Documents enter the pipeline via `pipeline/run_pipeline.py`. Each document flows through all 12 processors and produces a versioned Turtle file in `data/ontology/`. The query layer runs SPARQL queries via rdflib against the Turtle graph; the same `.rq` query files will work unchanged against any external SPARQL endpoint when the graph store is upgraded. The legacy vector prototype (`mcp_server.py`) is not the target architecture — see ADR-0002.
+Documents enter the pipeline via a GitHub Actions workflow (`pipeline.yml` — see W-0211). The workflow authenticates the `gh` CLI via `GITHUB_TOKEN`, runs `pipeline/run_pipeline.py` with the `llm` strategy (see W-0212), and commits the updated ontology back to main. The `pages.yml` workflow then redeploys the GitHub Pages site automatically. Direct CLI invocation (`python pipeline/run_pipeline.py`) remains available for development and testing but is not the user-facing execution path. The legacy vector prototype (`mcp_server.py`) is not the target architecture — see ADR-0002.
 
 ---
 
@@ -577,6 +588,89 @@ Concept rows and relation rows now navigate to full detail pages (hash routes `#
 - Back button from relation page returns to `#relations` list ✓
 - Browser back/forward works ✓
 - All 42 existing tests pass unchanged ✓
+
+---
+
+## W-0211
+
+status: ready
+created: 2026-05-25
+updated: 2026-05-25
+blocks: [W-0212]
+blocked-by: [W-0207]
+research: []
+assumptions:
+  - The `gh` CLI is pre-installed on ubuntu-latest GitHub Actions runners
+  - `gh models run` is authenticated automatically via `GITHUB_TOKEN` in the Actions environment — the same mechanism used by the LLM extraction strategy in p07
+  - The workflow should commit the updated ontology directly back to main (not open a PR) since ontology updates are a deterministic consequence of document ingestion
+  - Re-processing the full corpus on each trigger is the correct default; per-file incremental processing introduces consistency risks and is deferred
+  - The existing `pages.yml` workflow (triggered on push to main) will redeploy the GitHub Pages site automatically after the ontology commit
+  - A commit message containing `[skip ci]` prevents the ontology commit from re-triggering the pipeline
+uncertainty:
+  - Whether `gh models run` requires the `gh-models` extension to be installed separately (`gh extension install github/gh-models`) in the runner environment, or whether it ships with `gh` on ubuntu-latest
+  - Whether `GITHUB_TOKEN` has the necessary scope for GitHub Models API calls, or whether a repository secret (`GH_PAT` or `GH_MODEL_TOKEN`) is required
+  - What the pipeline runtime cost per full corpus run is on the free tier (86 documents × LLM calls per document); if cost or latency is unacceptable, a changed-files-only strategy is the fallback
+
+### Outcome
+
+`.github/workflows/pipeline.yml` — a GitHub Actions workflow that is the trigger function for all pipeline processing. When documents are pushed to `raw_document_corpus/` or `glossary/` on main (or a `workflow_dispatch` is fired manually), the workflow runs the full batch pipeline with the `llm` strategy, commits the updated ontology snapshot, and the site redeploys automatically. No user terminal or local Python environment is required.
+
+### Context
+
+The pipeline (W-0200/W-0201) is currently triggered by direct CLI invocation (`python pipeline/run_pipeline.py`). There is no way for the system to process new documents without a local development environment. This item closes that gap: the workflow makes GitHub Actions the sole trigger function for pipeline execution, matching the design principle that there is no deployment target outside GitHub and no CLI interaction required from the user.
+
+The LLM strategy (p07 `strategy=llm`) is the required extraction path for the primary corpus (`raw_document_corpus/` — unstructured prose). Rule-based extraction is retained as the eval harness baseline (see W-0203) but is not the production strategy. W-0212 makes `llm` the pipeline default.
+
+The `gh` CLI is already used by p07 for `gh models run` calls. In a GitHub Actions environment, `gh auth` is satisfied automatically by the `GITHUB_TOKEN` available to every workflow run. This means no additional secrets configuration is required — the same authentication that the agent sandbox uses already works in production.
+
+### Acceptance criteria
+
+- `.github/workflows/pipeline.yml` exists and triggers on push to main when any file in `raw_document_corpus/` or `glossary/` changes
+- Workflow also triggers on `workflow_dispatch` with a `strategy` input (default `llm`) allowing manual full-corpus reprocessing
+- Workflow steps: checkout → set up Python → install dependencies → authenticate `gh` via `GITHUB_TOKEN` → run `pipeline/run_pipeline.py` with LLM strategy → regenerate `docs/data/ontology.json` → commit updated artefacts back to main with `[skip ci]`
+- If no corpus files changed (e.g. a push that only edits docs), the workflow exits cleanly without running the pipeline or committing
+- The commit includes: `data/ontology/vNNNN.ttl`, `docs/data/ontology.json`, `docs/index.html` (if regenerated)
+- A `workflow_dispatch` run with no inputs triggers a full corpus run successfully
+- All existing tests pass unchanged (`python -m pytest tests/ -v`)
+
+---
+
+## W-0212
+
+status: ready
+created: 2026-05-25
+updated: 2026-05-25
+blocks: []
+blocked-by: [W-0211]
+research: []
+assumptions:
+  - The `llm` strategy is production-ready (implemented in W-0204, enriched in W-0205)
+  - The GitHub Actions environment (W-0211) provides authenticated `gh` CLI for `gh models run` calls
+  - The W-0203 eval harness passes `--extractor` explicitly, so changing the pipeline default does not affect eval runs
+  - All existing tests mock `_gh_models_caller`, so no test changes are required from the default switch
+  - `run_pipeline.py` should expose a `--strategy` CLI flag so the eval harness and development use can override the default when needed
+rationale:
+  - Rule-based extraction depends entirely on explicit YAML front-matter fields (`related:`, `aliases:`, `tags:`). The primary corpus (`raw_document_corpus/`) is unstructured prose — it does not carry these fields. Running rule-based extraction on prose produces only a title and minimal tags: no concept relations, no aliases derived from text, no typed predicates. A proper ontology cannot be built from prose with rule-based extraction alone.
+  - LLM extraction is therefore always required for the production use case. Making `llm` the default removes a footgun: if someone runs the pipeline against a prose corpus without specifying a strategy, they currently get silent no-op extractions rather than an error.
+  - Rule-based is not removed. It remains the correct strategy for the glossary corpus and the W-0203 eval harness, where perfect front-matter fidelity is the measurement target. The strategy flag retains its value as an explicit override.
+
+### Outcome
+
+`pipeline/processors/p07_concept_extraction.py` changes `state.get("strategy", "rule-based")` to `state.get("strategy", "llm")`. `pipeline/run_pipeline.py` gains a `--strategy` flag (default `llm`). `pipeline/README.md` is updated to document the strategy flag, explain when rule-based is appropriate, and note the rationale for the default. The BACKLOG and design doc record this as a decided question.
+
+### Context
+
+The strategy flag was introduced in W-0204 as a pluggable extraction seam: rule-based (reads front-matter) or llm (sends prose to `gh models run`). At that time, both strategies were experimental and rule-based was the tested baseline. Now that the primary corpus is established as unstructured prose (`raw_document_corpus/`) and the LLM strategy is validated (W-0204/W-0205), rule-based as the default is a liability: it silently produces sparse extractions on prose inputs without signalling that anything is wrong.
+
+The eval harness (W-0203) uses `--extractor rule-based` explicitly to establish the structured-corpus baseline. The `--strategy` flag on `run_pipeline.py` makes this override explicit and self-documenting. No test changes are required.
+
+### Acceptance criteria
+
+- `p07_concept_extraction.py`: default strategy changes from `rule-based` to `llm`
+- `pipeline/run_pipeline.py`: `--strategy` flag added with default `llm`; `--strategy rule-based` restores the old behaviour
+- `pipeline/README.md` updated: documents `--strategy` flag, explains when `rule-based` is appropriate (eval harness, structured corpus testing), and records the rationale for the default change
+- `pipeline/eval.py` is unchanged (it already passes strategy via `--extractor` explicitly)
+- All existing tests pass unchanged (`python -m pytest tests/ -v`)
 
 ---
 
