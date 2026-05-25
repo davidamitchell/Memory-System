@@ -23,11 +23,16 @@ You are the **Architect** of this knowledge store, not just a user. This reposit
 [Skills](../glossary/skill.md) are available at `.github/skills/`. Key skills:
 
 - `backlog-manager` — `.github/skills/backlog-manager/SKILL.md`
+- `backlog-worker` — `.github/skills/backlog-worker/SKILL.md`
 - `research` — `.github/skills/research/SKILL.md`
 - `technical-writer` — `.github/skills/technical-writer/SKILL.md`
 - `code-review` — `.github/skills/code-review/SKILL.md`
 - `strategy-author` — `.github/skills/strategy-author/SKILL.md`
-- `decisions` — `.github/skills/decisions/SKILL.md`
+- `adr` — `.github/skills/adr/SKILL.md`
+- `swe` — `.github/skills/swe/SKILL.md`
+- `tdd` — `.github/skills/tdd/SKILL.md`
+- `feedback` — `.github/skills/feedback/SKILL.md`
+- `remove-ai-slop` — `.github/skills/remove-ai-slop/SKILL.md`
 
 > If no skill fits, note the gap in `BACKLOG.md` and proceed without synthesising a substitute.
 
@@ -41,7 +46,7 @@ The backlog is `BACKLOG.md` at the repo root. Use the `backlog-manager` skill fr
 
 ## 4. Architecture Decision Records
 
-Every non-trivial architectural or design decision must be recorded as an [ADR](../glossary/adr.md) in `_docs/adr/`. Use the `decisions` skill from `.github/skills/decisions/SKILL.md`. Format is [MADR](../glossary/madr.md). Files named `_docs/adr/NNNN-short-title.md`.
+Every non-trivial architectural or design decision must be recorded as an [ADR](../glossary/adr.md) in `_docs/adr/`. Use the `adr` skill from `.github/skills/adr/SKILL.md`. Format is [MADR](../glossary/madr.md). Files named `_docs/adr/NNNN-short-title.md`.
 
 ---
 

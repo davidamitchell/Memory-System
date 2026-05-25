@@ -228,9 +228,9 @@ The version diff (v0001 → v0002) is the first concrete answer to the "what tri
 
 ## W-0207
 
-status: ready
+status: done
 created: 2026-05-24
-updated: 2026-05-24
+updated: 2026-05-25
 blocks: [W-0203]
 blocked-by: [W-0201]
 research: []
@@ -415,9 +415,9 @@ The design principle is: the extractor is a pluggable strategy in p07. Swapping 
 
 ## W-0205
 
-status: ready
+status: active
 created: 2026-05-23
-updated: 2026-05-23
+updated: 2026-05-25
 blocks: [W-0206]
 blocked-by: [W-0204]
 research: []
