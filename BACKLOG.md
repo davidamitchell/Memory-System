@@ -493,6 +493,43 @@ The minimal relation vocabulary is determined by annotation, not assumption: a h
 
 ---
 
+## W-0209
+
+status: done
+created: 2026-05-25
+updated: 2026-05-25
+blocks: []
+blocked-by: [W-0207]
+research: []
+assumptions:
+  - The target viewing platform is mobile (primary) and desktop (secondary)
+  - Progressive enhancement is maintained: plain HTML tables work without JS; JS layers on mobile UX
+  - The GitHub Pages site is the browsing surface
+uncertainty:
+  - Whether card layout for concepts is sufficient or whether future rich mobile views (e.g. swipe gestures, inline definition cards) are needed
+
+### Outcome
+
+The GitHub Pages ontology browser is mobile-first. Key improvements shipped:
+- **Bottom tab navigation** (fixed, 56 px): nav links move from the sticky header to a fixed bottom bar on ≤640 px viewports, giving thumb-reachable navigation
+- **Concept card layout**: concept table rows render as full-width cards on mobile, with label prominent, domain as a labelled sub-line, and tag/related counts inline
+- **Bottom sheet detail panel**: the concept detail panel is a fixed bottom sheet (65 vh max, above the nav bar) with a backdrop overlay and body scroll lock on mobile
+- **Horizontal scroll wrappers**: relations and documents tables are wrapped in `.table-scroll` divs, preventing horizontal overflow on narrow viewports
+- **Full-width search**: search input expands to full viewport width on mobile
+- `pipeline/export_html.py` updated to emit `data-label` attributes on all table cells and `.table-scroll` wrappers on relations and documents tables
+- `docs/index.html` regenerated
+
+### Acceptance criteria
+
+- Bottom nav bar visible on viewport ≤640 px
+- Concept rows render as cards (no horizontal overflow) on narrow viewports
+- Tapping a concept card opens the detail panel as a bottom sheet with a backdrop
+- Relations and documents tables scroll horizontally on narrow viewports
+- Search input is full-width on mobile
+- All 42 existing tests pass unchanged (`python -m pytest tests/ -v`)
+
+---
+
 ## References
 
 1. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase research items; historical record.

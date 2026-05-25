@@ -81,9 +81,9 @@ def render_concepts(data: dict) -> str:
         rows.append(
             f'    <tr class="concept-row" data-id="{cid}" data-concept="{concept_json}" tabindex="0">\n'
             f'      <td><strong>{label}</strong><br><small class="muted">{comment_short}</small></td>\n'
-            f'      <td>{domain}</td>\n'
-            f'      <td class="num">{n_tags}</td>\n'
-            f'      <td class="num">{n_related}</td>\n'
+            f'      <td data-label="Domain">{domain}</td>\n'
+            f'      <td class="num" data-label="Tags">{n_tags}</td>\n'
+            f'      <td class="num" data-label="Related">{n_related}</td>\n'
             f'    </tr>'
         )
 
@@ -119,9 +119,9 @@ def render_relations(data: dict) -> str:
         to_label = h(r["to_label"])
         rows.append(
             f'    <tr>\n'
-            f'      <td><a href="#{from_id}" class="concept-link" data-id="{from_id}">{from_label}</a></td>\n'
-            f'      <td class="predicate predicate-{predicate}">{predicate}</td>\n'
-            f'      <td><a href="#{to_id}" class="concept-link" data-id="{to_id}">{to_label}</a></td>\n'
+            f'      <td data-label="From"><a href="#{from_id}" class="concept-link" data-id="{from_id}">{from_label}</a></td>\n'
+            f'      <td class="predicate predicate-{predicate}" data-label="Predicate">{predicate}</td>\n'
+            f'      <td data-label="To"><a href="#{to_id}" class="concept-link" data-id="{to_id}">{to_label}</a></td>\n'
             f'    </tr>'
         )
 
@@ -129,6 +129,7 @@ def render_relations(data: dict) -> str:
     return f"""
 <section id="relations" aria-label="Relations">
   <h2>Relations <span class="count">({len(data['relations'])})</span></h2>
+  <div class="table-scroll">
   <table id="relations-table">
     <thead>
       <tr>
@@ -141,6 +142,7 @@ def render_relations(data: dict) -> str:
 {rows_html}
     </tbody>
   </table>
+  </div>
 </section>
 """.strip()
 
@@ -163,9 +165,9 @@ def render_documents(data: dict) -> str:
         concepts_cell = ", ".join(concept_links) if concept_links else '<span class="muted">—</span>'
         rows.append(
             f'    <tr data-file="{fname}">\n'
-            f'      <td><code>{fname}</code></td>\n'
-            f'      <td class="num">{seg_count}</td>\n'
-            f'      <td>{concepts_cell}</td>\n'
+            f'      <td data-label="File"><code>{fname}</code></td>\n'
+            f'      <td class="num" data-label="Segments">{seg_count}</td>\n'
+            f'      <td data-label="Concepts">{concepts_cell}</td>\n'
             f'    </tr>'
         )
 
@@ -173,6 +175,7 @@ def render_documents(data: dict) -> str:
     return f"""
 <section id="documents" aria-label="Documents">
   <h2>Documents <span class="count">({len(data['documents'])})</span></h2>
+  <div class="table-scroll">
   <table id="documents-table">
     <thead>
       <tr>
@@ -185,6 +188,7 @@ def render_documents(data: dict) -> str:
 {rows_html}
     </tbody>
   </table>
+  </div>
 </section>
 """.strip()
 

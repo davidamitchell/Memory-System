@@ -326,3 +326,30 @@ W-0203 and W-0204 implemented and all tests passing.
 2. What slowed down? One corpus file had malformed YAML (stray inline list). Fixed directly in source.
 3. What single change would prevent this next time? Validate YAML front-matter at corpus ingestion time and report bad files upfront before running the full batch.
 4. Is this a pattern? Latent data quality issues in corpus files will surface as pipeline exceptions — worth adding a pre-flight YAML validation step before W-0205.
+
+---
+
+## 2026-05-25 — W-0209: Mobile-first view layer for the ontology browser
+
+Progressively built out the GitHub Pages ontology browser for mobile viewports as the primary target.
+
+**Changes:**
+- `docs/style.css`: replaced the minimal `@media (max-width: 640px)` block with a mobile-first responsive layout — bottom tab navigation (fixed 56 px bar), concept card layout, detail panel as bottom sheet with backdrop, full-width search, `.table-scroll` horizontal-scroll wrapper support, compact header
+- `docs/app.js`: injects `#detail-backdrop` element; adds `backdrop.classList.add/remove('active')` and `document.body.style.overflow` scroll lock when the detail panel opens/closes; backdrop click closes the panel
+- `pipeline/export_html.py`: added `data-label` attributes to concept, relations, and documents table cells; wrapped relations and documents tables in `<div class="table-scroll">` for horizontal scroll on narrow viewports
+- `docs/index.html`: regenerated from updated exporter (157,902 bytes)
+- `BACKLOG.md`: W-0209 added as `status: done`
+
+**Acceptance criteria met:**
+- Bottom nav bar on ≤640 px ✓
+- Concept rows as cards on mobile ✓
+- Detail panel as bottom sheet + backdrop + scroll lock ✓
+- Relations and documents tables scroll horizontally ✓
+- Full-width search on mobile ✓
+- All 42 tests pass unchanged ✓
+
+**Mini-Retro**
+1. Did the process work? Yes — the progressive enhancement principle was easy to follow: all CSS is in `style.css`, all mobile JS is additive in `app.js`, and the static HTML continues to work without JS.
+2. What slowed down? Nothing significant. The main design decision was whether to hide the desktop header nav entirely on mobile (replaced by bottom bar) vs show both — hiding the header nav entirely on mobile is cleaner and avoids duplicating tap targets.
+3. What single change would prevent friction next time? The `table-scroll` wrapper is now in the HTML template (`export_html.py`) for relations and documents, but concept table uses CSS card layout instead — future work (swipe gestures, pinch-zoom, search-as-you-type) should stay in `app.js` as progressive layers.
+4. Is this a pattern? Yes — mobile-first progressive enhancement: start with semantic HTML, add CSS layout layers by viewport, add JS behaviour on top. Each layer is independent and degrades gracefully.

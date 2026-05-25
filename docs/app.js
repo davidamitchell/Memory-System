@@ -99,6 +99,12 @@
 
   const detailPanel = document.getElementById('concept-detail');
 
+  // Inject backdrop element for mobile bottom-sheet overlay
+  var backdrop = document.createElement('div');
+  backdrop.id = 'detail-backdrop';
+  document.body.appendChild(backdrop);
+  backdrop.addEventListener('click', function () { closeDetail(); });
+
   function renderDetail(concept) {
     if (!detailPanel) return;
 
@@ -150,6 +156,8 @@
         '<span class="detail-value">' + docsHtml + '</span></div>';
 
     detailPanel.hidden = false;
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
 
     // Bind close button
     detailPanel.querySelector('.detail-close').addEventListener('click', function () {
@@ -184,6 +192,8 @@
     if (!detailPanel) return;
     detailPanel.hidden = true;
     detailPanel.innerHTML = '';
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
     // Remove selected state from all rows
     document.querySelectorAll('tr.concept-row.selected').forEach(function (r) {
       r.classList.remove('selected');
