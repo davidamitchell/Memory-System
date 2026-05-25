@@ -4,5 +4,4 @@ watchdog
 mcp
 pyarrow
 rdflib>=6.3
-openai>=1.0
 spacy>=3.7

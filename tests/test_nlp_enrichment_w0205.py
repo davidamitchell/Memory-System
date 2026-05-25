@@ -5,7 +5,7 @@ A mock spaCy model is used so that the tests pass without requiring the
 ``en_core_web_sm`` model to be downloaded (though it is used when
 running the full eval harness).
 
-A mock LLM client is used for p07 tests so no API key is required.
+A mock gh-models caller is used for p07 tests so no ``gh`` CLI is required.
 """
 from __future__ import annotations
 
@@ -53,17 +53,17 @@ def _make_mock_nlp(entities=(), noun_chunks=(), tokens=()):
 
 
 # ---------------------------------------------------------------------------
-# Helpers — mock LLM client (reused from W-0204 pattern)
+# Helpers — mock gh models caller (replaces W-0204 OpenAI client pattern)
 # ---------------------------------------------------------------------------
 
-def _make_mock_llm_client(response_json: dict):
+def _make_mock_llm_caller(response_json: dict):
+    """Return a callable that mimics _gh_models_caller with a fixed response."""
     content = json.dumps(response_json)
-    message = SimpleNamespace(content=content)
-    choice = SimpleNamespace(message=message)
-    completion = SimpleNamespace(choices=[choice])
-    client = MagicMock()
-    client.chat.completions.create.return_value = completion
-    return client
+
+    def _mock(model: str, system_prompt: str, user_prompt: str) -> str:  # noqa: ARG001
+        return content
+
+    return _mock
 
 
 _MOCK_LLM_RESPONSE = {
@@ -193,7 +193,12 @@ def test_nlp_annotations_passed_to_llm_prompt() -> None:
         noun_chunks=["autonomous agent", "knowledge graph"],
         tokens=["agent"],
     )
-    mock_llm = _make_mock_llm_client(_MOCK_LLM_RESPONSE)
+
+    captured_prompts: list[dict] = []
+
+    def _capturing_caller(model: str, system_prompt: str, user_prompt: str) -> str:
+        captured_prompts.append({"model": model, "system": system_prompt, "user": user_prompt})
+        return json.dumps(_MOCK_LLM_RESPONSE)
 
     state: dict = {"source_path": _TEST_FILE, "strategy": "llm", "nlp": True}
     state = p01_sourcing.run(state, REPO_ROOT)
@@ -202,13 +207,11 @@ def test_nlp_annotations_passed_to_llm_prompt() -> None:
     for proc in [p03_segmentation, p04_metadata, p05_domain_classification, p06_domain_matching]:
         state = proc.run(state, REPO_ROOT)
 
-    # Capture the prompt sent to the LLM
-    with patch.object(p07_concept_extraction, "_llm_client", mock_llm):
+    with patch.object(p07_concept_extraction, "_gh_models_caller", _capturing_caller):
         state = p07_concept_extraction.run(state, REPO_ROOT)
 
-    call_args = mock_llm.chat.completions.create.call_args
-    messages = call_args.kwargs.get("messages") or call_args.args[0] if call_args.args else call_args.kwargs["messages"]
-    user_message = next(m["content"] for m in messages if m["role"] == "user")
+    assert len(captured_prompts) == 1
+    user_message = captured_prompts[0]["user"]
 
     # The NLP section must appear in the prompt with all expected headers
     assert "NLP pre-analysis" in user_message
@@ -230,7 +233,7 @@ def test_llm_with_nlp_produces_valid_delta_proposal() -> None:
         noun_chunks=["ai agent"],
         tokens=["AI", "agent"],
     )
-    mock_llm = _make_mock_llm_client(_MOCK_LLM_RESPONSE)
+    mock_llm = _make_mock_llm_caller(_MOCK_LLM_RESPONSE)
 
     state: dict = {"source_path": _TEST_FILE, "strategy": "llm", "nlp": True}
     state = p01_sourcing.run(state, REPO_ROOT)
@@ -238,7 +241,7 @@ def test_llm_with_nlp_produces_valid_delta_proposal() -> None:
         state = p02_preparation.run(state, REPO_ROOT)
     for proc in [p03_segmentation, p04_metadata, p05_domain_classification, p06_domain_matching]:
         state = proc.run(state, REPO_ROOT)
-    with patch.object(p07_concept_extraction, "_llm_client", mock_llm):
+    with patch.object(p07_concept_extraction, "_gh_models_caller", mock_llm):
         state = p07_concept_extraction.run(state, REPO_ROOT)
 
     proposal = state["delta_proposal"]
