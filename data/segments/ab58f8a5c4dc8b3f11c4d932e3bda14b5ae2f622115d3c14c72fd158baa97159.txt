@@ -1,0 +1,1 @@
+10. Playbooks are the native ServiceNow documentation tool most resistant to decay, because agents encounter them during case execution and are more likely to notice and flag divergence between the Playbook and operational reality than they are to consult a static process map. [Medium confidence — inference from behavioural analysis, not direct empirical study]

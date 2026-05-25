@@ -1,0 +1,1 @@
+`sqlite-vec` is installable via `pip install sqlite-vec`. After loading the extension (`sqlite_vec.load(db)`), it provides `vec0` virtual tables for KNN search. It coexists with FTS5 in the same `.db` file, meaning a single database file can serve both relational queries, full-text search, and vector search. [fact, source: alexgarcia.xyz/sqlite-vec/python.html, confirmed]

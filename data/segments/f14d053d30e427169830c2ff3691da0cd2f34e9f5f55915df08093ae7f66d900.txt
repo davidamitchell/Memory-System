@@ -1,0 +1,1 @@
+**[fact]** TOC applications in healthcare have been documented in peer-reviewed literature, applying constraint identification and buffer management to patient flow and operating theatre scheduling. Source: [Springer -- Systematic Literature Review of TOC](https://link.springer.com/chapter/10.1007/978-3-030-18789-7_12).

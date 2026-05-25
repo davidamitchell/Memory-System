@@ -1,0 +1,6 @@
+**Out of scope:**
+- Full implementation of a search or RAG system (covered by `2026-03-02-semantic-full-text-search.md`)
+- Low-level memory storage benchmarks and ephemeral/persistent memory classification (covered by `2026-03-02-agent-memory-management-context-injection.md`)
+- Agent decision-making and DIKW integration (covered by `2026-03-02-integrative-framework-agent-decision-making.md`)
+- Training-time knowledge encoding (fine-tuning, ROME/MEMIT weight editing)
+- Real-time streaming knowledge updates

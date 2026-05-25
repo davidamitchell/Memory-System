@@ -1,0 +1,3 @@
+**Out of scope:**
+- Broader AML policy design unrelated to AI assistance.
+- General-purpose writing assistants outside regulated compliance workflows.

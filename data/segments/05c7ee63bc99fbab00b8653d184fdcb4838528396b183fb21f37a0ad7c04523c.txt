@@ -1,0 +1,1 @@
+[fact] `copilot-setup-steps.yml` supports any shell command that GitHub Actions supports, including `pip install -e ".[dev]"` and `git submodule update --init`. (S1: shows `npm ci` and `pip install` in examples; S5: working example uses `pip install -r requirements.txt`.)

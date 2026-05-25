@@ -1,0 +1,1 @@
+[fact] Checking out a private submodule from `copilot-setup-steps.yml` requires a PAT with read access to `davidamitchell/Skills`, stored as a repository secret in the `copilot` GitHub Actions environment. (S4, S7: "Submodule access requires `copilot-setup-steps.yml` with `submodules: recursive` and a PAT.")

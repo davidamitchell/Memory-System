@@ -1,0 +1,6 @@
+**[inference]** A five-layer knowledge architecture is the most principled structure for a large research corpus:
+- **Layer 0 — Raw documents:** Full text, all detail preserved. Never enters the context window by default; only accessed when an agent needs exact quotes or full content.
+- **Layer 1 — Extractive summaries:** Key sentences selected by BM25 or information salience. ~20% of original length. Returned when the agent needs specific factual claims.
+- **Layer 2 — Abstractive document summaries:** LLM-generated 3–5 sentence summaries per document. Used for initial triage and relevance assessment.
+- **Layer 3 — Knowledge graph nodes:** Entity and relationship triples; community detection summaries (RAPTOR cluster summaries or GraphRAG community reports). Used for global queries and multi-hop reasoning.
+- **Layer 4 — Domain schema / ontology:** Top-level concepts and their relationships across the entire corpus. Used for query planning and intent routing.

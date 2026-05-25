@@ -1,0 +1,1 @@
+**Recommended approach:** Option C. The `copilot-setup-steps.yml` is the decisive fix for the Copilot agent. The UI setup script + instruction block provides the best available coverage for Claude Code web given its architecture constraints.

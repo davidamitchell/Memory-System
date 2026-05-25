@@ -1,0 +1,1 @@
+Agent-first (also called agent-native) is a design philosophy for software systems. A system is agent-first when it is designed from the ground up for autonomous AI use, rather than being a human-facing application with AI bolted on. The three hallmarks of an agent-first system are:

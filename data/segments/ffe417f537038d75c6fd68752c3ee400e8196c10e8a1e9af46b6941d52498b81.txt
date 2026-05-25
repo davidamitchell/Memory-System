@@ -1,0 +1,1 @@
+8. Process maps in ServiceNow have no native structured linkage to CSDM records (CI or Business Service), meaning that process changes and CSDM changes must be coordinated manually via governance, not automatically through platform relationships. [Medium confidence — inferred from absence of evidence; possible undocumented capability in recent releases]

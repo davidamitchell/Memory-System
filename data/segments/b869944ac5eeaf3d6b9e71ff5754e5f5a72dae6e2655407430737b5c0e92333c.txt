@@ -1,0 +1,2 @@
+**Q2.4 — Shared services and platform teams:**
+Platform teams (providing shared capabilities like identity, messaging, monitoring) are typically modelled as shared cost pools and allocated to consuming applications via activity-based costing (ABC). The allocation driver is usually service consumption metrics (API calls, storage gigabytes, ticket volume). FTE time-logging supplements or replaces consumption metrics where instrumentation is absent. [fact, TBM Council ATUM / prerequisite item]

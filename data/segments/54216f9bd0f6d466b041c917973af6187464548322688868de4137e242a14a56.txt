@@ -1,0 +1,1 @@
+**[inference]** At 1,000–10,000 document scale, LSA's SVD computation is CPU-tractable (hours, not days) but the quality gap vs. dense embeddings is large enough that LSA should not be the primary retrieval mechanism for new systems. LSA remains useful as a baseline or for topic-modelling side tasks, not primary semantic search.

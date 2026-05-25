@@ -1,0 +1,3 @@
+- GitHub Copilot's coding agent is the primary automated agent, triggered via GitHub Issues assigned to `@copilot`.
+- Claude Desktop is a secondary agent, connected to the same `mcp_server.py` via a local MCP connection.
+- `.github/copilot-instructions.md` is the constitution all agents must read before acting.

@@ -1,0 +1,3 @@
+- `Research/completed/2026-02-28-ai-strategy.md` - broader framing for how AI companies convert model capability into competitive advantage
+- `Research/completed/2026-02-28-ai-strategy-swe-focus.md` - prior evidence that leading labs are productising developer tooling and agent workflows
+- `Research/completed/2026-04-02-ai-funding-and-capital-investment-landscape.md` - capital allocation context for the infrastructure and commercial hiring signals in this item

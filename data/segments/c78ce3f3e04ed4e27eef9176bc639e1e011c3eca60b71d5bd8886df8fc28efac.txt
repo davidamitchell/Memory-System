@@ -1,0 +1,1 @@
+- **[inference]** Organisation-customised intelligence is not only a model problem; it is an expert-knowledge capture problem. Subject-matter experts still have to define evaluation sets, mark authoritative sources, and decide which heuristics deserve to be baked into the system rather than retrieved ad hoc.

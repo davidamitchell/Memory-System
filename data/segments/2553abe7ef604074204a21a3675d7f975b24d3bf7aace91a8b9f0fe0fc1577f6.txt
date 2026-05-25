@@ -1,0 +1,3 @@
+**D. Migration**
+- D1. What observable signals should trigger a migration from JSON + YAML to the chosen DB?
+- D2. What is the migration path from the current `StateStore` and YAML front-matter to the new schema?

@@ -1,0 +1,1 @@
+**Regulatory and alignment lens:** If H-Neuron density becomes a reportable model characteristic (analogous to perplexity), regulators could require that it be measured and disclosed. This would create an incentive for labs to invest in pre-training interventions, since reporting a high H-Neuron density would be reputationally costly.

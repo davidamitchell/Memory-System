@@ -1,0 +1,3 @@
+- **Technical lens**
+  - **[fact]** The technical primitives that recur across vendors are metadata or product models, workflow engines, integration APIs, and shared runtime operations. Sources: primary [x] https://www.salesforce.com/products/platform/overview/ ; primary [x] https://developer.ncino.com/ ; primary [x] https://www.temenos.com/products/core-banking/ ; primary [x] https://www.thoughtmachine.net/vault-core
+  - **[inference]** This means the technical moat of a banking SaaS platform is mostly reusable infrastructure plus reusable domain representation, not custom bank logic.

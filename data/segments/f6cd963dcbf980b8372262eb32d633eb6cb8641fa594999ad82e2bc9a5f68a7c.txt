@@ -1,0 +1,5 @@
+| # | Processor | Rationale |
+|---|-----------|-----------|
+| 9 | **Consistency Validation** | Checks for contradictions, circular definitions, and broken axioms across domain ontologies before a version is committed |
+| 10 | **Ontology Merge / Reconciliation** | Resolves concept collisions when two domain ontologies claim the same term with different definitions; produces a canonical merged representation in the upper ontology |
+| 11 | **Export / Serialisation** | Converts the internal ontology representation to standard interchange formats (OWL, RDF/Turtle, JSON-LD) for downstream tools and long-term archival |

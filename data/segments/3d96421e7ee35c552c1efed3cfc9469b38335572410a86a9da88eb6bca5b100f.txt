@@ -1,0 +1,9 @@
+**Check 5: Acronym scan.**
+- LLM — Large Language Model (expanded on first use in research question) ✓
+- DSL — domain-specific language ✓
+- FSM — finite state machine ✓
+- CFG — context-free grammar ✓
+- IR — intermediate representation ✓
+- KV — key-value (cache) ✓
+- PLDI — Programming Language Design and Implementation ✓
+- MECE — mutually exclusive and collectively exhaustive ✓

@@ -1,0 +1,2 @@
+[fact] **Guidance (Microsoft)** enforces output constraints using LLGuidance — a token-level grammar enforcement engine. Its core LLGuidance engine was adopted by OpenAI for enforcing user-provided JSON Schema in their API. As of early 2026, Guidance has ~21,000 GitHub stars and is benchmarked as best-in-class on JSONSchemaBench for structure compliance and inference speed.
+Source: https://github.com/guidance-ai/guidance; https://www.microsoft.com/en-us/research/project/guidance-control-lm-output/

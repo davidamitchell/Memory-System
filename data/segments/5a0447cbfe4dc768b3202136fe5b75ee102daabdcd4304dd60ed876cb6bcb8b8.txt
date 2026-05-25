@@ -1,0 +1,1 @@
+This item is explicitly motivated by the observation that process mapping has to be maintainable and used so that it is meaningful and maintained — a high bar that most organisations do not meet. The research should produce specific, actionable guidance on what conditions make that possible in a ServiceNow context.

@@ -1,0 +1,4 @@
+3. What does pre-training data quality research say about hallucination formation?
+   3a. What effect does web-corpus noise and sycophantic text have on model behaviour?
+   3b. What filtering and deduplication strategies reduce hallucination rates?
+   3c. Does synthetic "textbook quality" data reduce over-compliance behaviour?

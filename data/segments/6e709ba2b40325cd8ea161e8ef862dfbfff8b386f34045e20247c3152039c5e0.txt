@@ -1,0 +1,1 @@
+> ⚠️ Embedding models were part of the original vector-storage design concept for Open-Brain. That approach was replaced by the ontology-based architecture before full implementation. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md). Embedding models are **not** used in the current system.

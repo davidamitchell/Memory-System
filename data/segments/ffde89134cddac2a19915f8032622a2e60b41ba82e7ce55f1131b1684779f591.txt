@@ -1,0 +1,1 @@
+The `2026-02-27-sources-of-research.md` backlog item addresses where new research input comes from (sources). This item addresses the orthogonal question: once input is available, how do you decide what to investigate and in what order?

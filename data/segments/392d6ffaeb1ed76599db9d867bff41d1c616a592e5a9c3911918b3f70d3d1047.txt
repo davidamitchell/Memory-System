@@ -1,0 +1,6 @@
+- Type: knowledge, backlog-item
+- Description: Technology recommendation (SQLite + FTS5 + sqlite-vec phased), 5-table schema design, migration trigger criteria. Spawns implementation backlog item for Phase 1 SQLite migration.
+- Links:
+  - https://sqlite.org/fts5.html (SQLite FTS5 extension documentation)
+  - https://github.com/asg017/sqlite-vec (sqlite-vec extension for KNN vector search)
+  - https://duckdb.org/why_duckdb (DuckDB design rationale)

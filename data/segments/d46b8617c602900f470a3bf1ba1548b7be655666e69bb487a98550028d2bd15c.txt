@@ -1,0 +1,4 @@
+- **[fact]** Are the commercial hiring waves at Anthropic, Mistral, Cohere, and OpenAI translating into durable revenue concentration in enterprise and regulated-industry products?
+- **[fact]** Are compensation premiums now clustering more around compute, safety, human-data, and deployment roles than around classic research-scientist roles?
+- **[fact]** Will Meta's Superintelligence Labs eventually become visible in public job-board composition, or will leadership concentration remain the clearer public signal?
+- **[fact]** Does xAI's current emphasis on Human Data and Data Center roles persist once the next infrastructure phase is completed?

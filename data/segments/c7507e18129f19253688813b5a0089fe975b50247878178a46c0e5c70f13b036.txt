@@ -1,0 +1,7 @@
+**Drift correction:**
+1. Stop the current item.
+2. Re-read the one-sentence intent from Entry.
+3. Identify the furthest point at which the approach was still correct.
+4. Revert or scope-trim from that point.
+5. Update the plan checklist to reflect what actually needs to happen.
+6. Log the correction in `report_progress`.

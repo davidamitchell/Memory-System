@@ -1,0 +1,16 @@
+- **Root question:** what deterministic architecture keeps a hybrid reasoning stack safe when iterative search cannot be trusted to converge before an infrastructure decision deadline?
+- **A. Supervisory safety architecture**
+  - A1. What runtime-supervision pattern safely transfers authority from an advanced controller to a safe baseline?
+  - A2. What concrete circuit-breaker states, counters, and probe rules map to hybrid reasoning loops?
+- **B. Transaction boundaries**
+  - B1. Where should stochastic reasoning stop and deterministic actuation begin?
+  - B2. Which boundary contracts reduce duplicated or unsafe side effects under retries and partial failure?
+- **C. Telemetry and adaptation**
+  - C1. Which telemetry classes should influence compute budget or fallback choice?
+  - C2. Which telemetry-driven adaptations risk destabilizing the optimization objective itself?
+- **D. Latency and complexity**
+  - D1. How do harder reasoning problems change iterative-compute demand?
+  - D2. What deadline and scheduling rules preserve deterministic service outcomes?
+- **E. Degradation and rollback**
+  - E1. Which fallback states are safe enough to pre-verify?
+  - E2. Which observability signals should trip degrade, deny, or human-review modes?

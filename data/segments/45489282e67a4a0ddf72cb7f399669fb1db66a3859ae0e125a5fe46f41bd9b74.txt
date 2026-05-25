@@ -1,0 +1,20 @@
+- **Root question:** What is LeCun's actual architectural argument against LLMs as a route to autonomous machine intelligence?
+- **A. Core architecture**
+  - A1. What does the 2022 paper say intelligence needs?
+  - A2. What role do predictive world models play in planning, common sense, and safe action?
+  - A3. What alternative architecture does LeCun propose?
+- **B. LLM critique**
+  - B1. What does LeCun say text-trained LLMs can do?
+  - B2. What does he say they cannot do?
+  - B3. What are his exact technical reasons for saying scaling is insufficient?
+- **C. Domain boundary**
+  - C1. Where do the accessible sources place the negative boundary, namely consequential real-world action?
+  - C2. Do the accessible sources also support a positive boundary for constrained symbolic or formally checkable tasks?
+  - C3. Which parts of that positive boundary remain weakly evidenced in this runtime?
+- **D. Position evolution**
+  - D1. Is the 2025 to 2026 public framing consistent with the 2022 paper?
+  - D2. Does LeCun sharpen the rhetoric without changing the mechanism?
+- **E. Output discipline**
+  - E1. Which claims are direct facts from source text?
+  - E2. Which claims are inferences from multiple accessible sources?
+  - E3. Which claims remain assumptions because the needed transcript was not accessible?

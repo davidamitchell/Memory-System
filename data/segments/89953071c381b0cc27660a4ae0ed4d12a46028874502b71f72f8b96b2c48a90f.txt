@@ -1,0 +1,2 @@
+**Relevance to this corpus specifically:**
+- The `Research/completed/` directory is the ideal candidate for a RAPTOR-style hierarchy. Each item has an Executive Summary (Layer 2 already exists), Key Findings (Layer 1 candidates), and full content (Layer 0). A RAPTOR tree across these items would require generating only Layer 3 (cluster summaries) and Layer 4 (corpus-level summary). This is a minimal-additional-work implementation path.

@@ -1,0 +1,7 @@
+subgraph Control["Control Plane"]
+        VG[Validation Gate]
+        AG[Alignment Governance]
+        VCG[Version Commit Gate]
+        RC[Rollback Controller]
+        IC[Invalidation Controller]
+    end

@@ -1,0 +1,4 @@
+**Area 5 — Sequencing and change management:**
+- Q5.1: What is the documented phase sequence of a full TBM/ITFM implementation?
+- Q5.2: Can the application register, team taxonomy, and work-item tagging be built in parallel, or is there a hard dependency order?
+- Q5.3: Who resists, and what are the documented resistance patterns?

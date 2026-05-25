@@ -1,0 +1,6 @@
+This schema supports:
+- A1 (relational queries): direct SQL over `items`, `tags`, `sources`
+- A2 (FTS): `items_fts` FTS5 virtual table with BM25 ranking
+- A3 (vector search): `vec0` virtual table via sqlite-vec added as a later migration step
+- A4 (write patterns): append-friendly; `INSERT OR IGNORE` on `processed` for dedup
+- Deduplication: `processed` table replaces `state/index.json` at migration point

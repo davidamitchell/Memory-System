@@ -1,0 +1,17 @@
+- **Root question:** What can an AIBOM actually make safer in agentic, tool-using, stateful artificial intelligence systems, and what remains unsafe even when the AIBOM is accurate and complete?
+  - **A. Risk taxonomy**
+    - A1. Which agentic security and governance risks are primarily structural?
+    - A2. Which risks are primarily semantic, behavioral, or inferential?
+    - A3. Which risks sit between those categories and therefore receive only partial benefit from AIBOM coverage?
+  - **B. Genuine mitigation**
+    - B1. Which risks become easier to detect or constrain when components, versions, permissions, and runtime divergence are recorded?
+    - B2. Which SBOM value propositions transfer into an AIBOM with minimal distortion?
+  - **C. False assurance**
+    - C1. Which documented attacks succeed through legitimate channels even when the declared component set is accurate?
+    - C2. Which runtime-state failures invalidate the idea that inventory completeness equals safety?
+  - **D. Opacity boundary**
+    - D1. Which parts of model behavior can be documented at the boundary of the system?
+    - D2. Which parts remain opaque even with model cards, traces, and runtime capture?
+  - **E. Measurement**
+    - E1. Which metrics can show that AIBOM adoption improved structural control?
+    - E2. Which metrics can detect when an AIBOM is creating false assurance rather than genuine risk reduction?

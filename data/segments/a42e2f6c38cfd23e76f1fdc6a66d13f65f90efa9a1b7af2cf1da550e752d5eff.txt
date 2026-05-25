@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Enterprise risk-tier model for AI and low-code use cases, with a no-go overlay, explicit tier boundaries, and proportional control expectations for informational, decision-support, bounded-action, and autonomous or critical-action systems.
+- Links:
+- https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- https://airc.nist.gov/airmf-resources/airmf/5-sec-core/
+- https://handbook.apra.gov.au/ppg/cpg-230

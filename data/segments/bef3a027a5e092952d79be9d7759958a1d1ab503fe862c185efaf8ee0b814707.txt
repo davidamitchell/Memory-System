@@ -1,0 +1,4 @@
+- What is the minimum viable TBM scope — the subset of the full taxonomy that delivers enough value in under six months to justify continued investment and can be completed before sponsor tenure risk materialises? (Potential backlog item; medium priority)
+- How do organisations with >50% cloud workloads adapt the application register and team taxonomy when infrastructure costs are usage-based rather than fixed allocation? (Potential backlog item; medium priority)
+- Are there documented private-sector cases of stalled TBM programmes that were successfully restarted, and what governance or structural changes enabled the restart? (Potential backlog item; low priority)
+- How does the RUN/BUILD allocation interact with CapEx/OpEx capitalisation accounting — when BUILD work is capitalised, does the TBM model track the asset separately from ongoing run costs, and how is the amortisation stream handled? (Potential backlog item; medium priority)

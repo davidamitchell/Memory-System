@@ -1,0 +1,1 @@
+[inference] For meaning, predictive processing treats representation as inseparable from active engagement with the world, whereas LLM training allows useful abstraction to emerge without direct worldly action but also leaves grounding and truth-tracking fragile. Sources: https://www.fil.ion.ucl.ac.uk/~karl/Whatever%20next.pdf ; https://doi.org/10.1145/3442188.3445922

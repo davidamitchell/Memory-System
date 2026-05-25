@@ -1,0 +1,6 @@
+1. Survey academic and practitioner literature on Knowledge Graph lifecycle management, especially update strategies, versioning patterns, and schema migration tooling.
+2. Investigate entity resolution approaches at scale, especially blocking or indexing before matching and conservative merge practices.
+3. Review provenance models for Knowledge Graphs, including RDF 1.2 triple terms, named graphs, and the Provenance Ontology (PROV-O), and assess how they support trust propagation and update prioritisation.
+4. Examine conflict detection and resolution patterns, including assertion-level contradiction, ontology-level inconsistency, and temporal staleness.
+5. Review continuous Knowledge Graph update pipeline architectures, especially Wikidata and DBpedia-style snapshot plus incremental update patterns.
+6. Synthesize the evidence into recommended lifecycle practices and decision criteria for teams maintaining a Knowledge Graph as a dependency for multi-step software agents.

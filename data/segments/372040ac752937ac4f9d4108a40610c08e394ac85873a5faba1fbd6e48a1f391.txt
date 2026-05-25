@@ -1,0 +1,1 @@
+Embeddings are what make semantic search possible. Instead of matching keywords, a search engine embeds the query and then finds the stored vectors closest to it — returning documents that are topically related rather than lexically identical.

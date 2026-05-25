@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Synthesis of the software factory concept, its organisational implications via TOC analysis, and specific recommendations for mid-tier banks. Adds to learnings.md Thread 2 (transaction costs and organisational form) and introduces the software factory as the mechanism by which the software-scarcity constraint is elevated.
+- Links:
+  - Most important source 1: https://alexop.dev/posts/the-software-factory/
+  - Most important source 2: https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents
+  - Most important source 3: https://news.ycombinator.com/item?id=47226107

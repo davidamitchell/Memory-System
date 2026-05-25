@@ -1,0 +1,4 @@
+**Inferences made:**
+- TOC backpressure and network/systems backpressure share a conceptual structure (upstream signal to protect downstream resource) but differ in mechanism and domain.
+- CONWIP is a simpler backpressure implementation than DBR: system-boundary WIP cap rather than constraint-specific rope.
+- The AI-era application of TOC (VSS article) is conceptually sound as an extension of the exploitation and subordination steps.

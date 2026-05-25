@@ -1,0 +1,1 @@
+7. The rubric prompt should output a machine-parseable structured table (dimension | score | reasoning) followed by a single `OVERALL: PASS` or `OVERALL: FAIL` line, enabling the CI step to parse results with a simple `grep` — the same pattern proven in the existing `research-review.yml`. Confidence: high.

@@ -1,0 +1,4 @@
+- The domain map (5 domains) is consistent with the tag distribution observed in both backlog and completed corpus. No tag clusters fall outside the 5-domain taxonomy.
+- The prioritisation rubric (4 dimensions, 4–12 score, mapped to high/medium/low) is consistent with the AGENTS.md heuristic. The rubric is a formalisation, not a replacement.
+- The drift threshold (40%, 30-day window) is consistent with the corpus size and processing rate. No internal contradiction.
+- The monthly review cadence is consistent with the corpus turnover rate (~8-week backlog at 3 items/day). No contradiction.

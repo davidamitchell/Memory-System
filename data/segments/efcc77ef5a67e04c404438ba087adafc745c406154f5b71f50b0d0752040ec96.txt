@@ -1,0 +1,3 @@
+- How should organisations price the trade-off between faster access and increased local misuse risk for different classes of knowledge assets?
+- Which intervention has the highest return first, permission cleanup, clearer ownership maps, better integrator roles, or psychological-safety work in the highest-friction teams?
+- What is the smallest set of pathway telemetry that can predict when unofficial routes are about to displace the authoritative path?

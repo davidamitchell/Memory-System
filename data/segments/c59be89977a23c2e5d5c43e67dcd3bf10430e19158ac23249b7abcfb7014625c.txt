@@ -1,0 +1,4 @@
+**Out of scope:**
+- AI strategies where exploration (new business models, new markets) is the primary driver — see separate backlog item
+- Theoretical frameworks without evidence of implementation
+- Cases with no accessible outcome data

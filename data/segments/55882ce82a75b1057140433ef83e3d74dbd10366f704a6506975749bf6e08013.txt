@@ -1,0 +1,2 @@
+- [assumption] Clark's 2013 open-access paper is a sufficient proxy for the inaccessible 2016 *Surfing Uncertainty* book. **Justification:** the core hierarchical-generative-model and action-oriented claims used here appear directly in the 2013 paper.
+- [assumption] Seth's public interviews are sufficient to support the consciousness comparison in this item. **Justification:** the comparison depends on his explicit public claims that consciousness is rooted in biological embodiment and that the FEP is not itself a theory of consciousness.

@@ -1,0 +1,2 @@
+**Regulatory lens:**
+For regulated organisations (financial services, healthcare), the compliance use case for process documentation is distinct from the operational use case. Audit requirements for process documentation typically demand: version-controlled approval records, evidence that defined processes are followed, and clear ownership. Process Mining provides conformance data but not approval records. Authored documentation provides approval records but not conformance data. Regulated organisations need both.

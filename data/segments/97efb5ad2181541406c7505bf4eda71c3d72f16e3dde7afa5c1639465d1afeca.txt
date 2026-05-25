@@ -1,0 +1,1 @@
+**Risks/gaps:** No independent audits of the 25% Google AI code figure. NZ-specific case data absent. The SWE-bench discriminative subset finding means agent capability progress is less generalised than headline numbers suggest.

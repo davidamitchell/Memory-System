@@ -1,0 +1,1 @@
+4. **Data readiness is the primary technical blocker.** 85% of failed AI projects cite data as a core issue (multiple enterprise surveys). 61% of companies report their data is not yet ready for generative AI. Organisations with higher data maturity see significantly more financial impact from AI.

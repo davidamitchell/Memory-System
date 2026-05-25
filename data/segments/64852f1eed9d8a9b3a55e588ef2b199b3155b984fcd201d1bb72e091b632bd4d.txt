@@ -1,0 +1,1 @@
+[fact] This section retains the full output from running the research skill. Sections §0–§5 are the investigation, and §6 seeds the Findings section below.

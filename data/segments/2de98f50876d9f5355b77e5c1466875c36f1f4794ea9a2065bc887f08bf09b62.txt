@@ -1,0 +1,5 @@
+- The 80% decay figure is from a single survey at an ITSM-specific event. While directionally credible, no large-scale multi-organisation study was found to corroborate it.
+- Gartner research on ITSM process governance was not accessible (paywall). This is the most significant evidence gap — Gartner produces the most systematically collected data on enterprise ITSM practice maturity.
+- No empirical evidence was found of organisations that have successfully maintained ServiceNow process documentation over multi-year timescales with specific governance structures. The governance recommendations are normative, not empirically validated against actual outcomes.
+- ServiceNow's recent releases (Xanadu, Yokohama, 2024–2025) may have introduced new process documentation capabilities not captured in the sources consulted. The Process Universe specifically may have more recent features than the sources reflect.
+- Process Mining's data quality limitations are described but not quantified. How widespread the "inconsistent event logging" problem is in typical ServiceNow installations is unclear.

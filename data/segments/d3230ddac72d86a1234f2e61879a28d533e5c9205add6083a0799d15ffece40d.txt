@@ -1,0 +1,4 @@
+3. **Research drift detection** — Define what research drift looks like in this corpus and how to detect it:
+   - Proposed signal: if ≥40% of backlog items added in the last 30 days share a primary domain tag, that domain is drifting toward over-representation
+   - Secondary signal: if the last 5 completed items are all from the same domain, the loop may be stuck in a local area
+   - Assess: what threshold is appropriate? What is the expected false-positive rate (drift signal fired when the concentration is intentional, e.g., during a focused research sprint)?

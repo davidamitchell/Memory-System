@@ -1,0 +1,1 @@
+3. Claude Code on the web uses an Anthropic-managed Ubuntu 24.04 VM with a UI-configured Bash setup script. There is no repository file that Claude Code on the web reads for setup instructions.

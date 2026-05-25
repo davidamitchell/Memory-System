@@ -1,0 +1,2 @@
+**Economic lens:**
+- The one-time cost of building a knowledge graph and RAPTOR hierarchy for 500 research items (≈1.5M tokens at ~$0.50/M = <$1 at current API prices) is negligible. The maintenance cost (1 new item per day × 3,000 tokens = 3,000 tokens/day ≈ $0.0015/day) is also negligible. The dominant cost is engineering time to implement the pipeline, not API usage.

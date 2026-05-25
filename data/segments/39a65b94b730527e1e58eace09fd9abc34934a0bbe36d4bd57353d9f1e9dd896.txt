@@ -1,0 +1,7 @@
+**In scope:**
+- Domain map: defining the key research domains relevant to this repo's owner (NZ financial services AI, agentic systems, research tooling, cognitive science and AI foundations) and their relative strategic importance
+- Coverage metrics: how to measure whether the backlog and completed corpus are balanced across domains, and how to detect when one domain is crowding out others
+- Prioritisation methodology: what factors should determine a research item's priority (`high`/`medium`/`low`) beyond intuition — strategic urgency, dependency unblocking, knowledge gap severity, time-sensitivity
+- Research drift detection: how to notice when a series of backlog additions is narrowing to a single sub-topic (e.g., six consecutive items all about agent memory) and when that is appropriate vs. when it indicates loss of strategic focus
+- Agenda review cadence: how often the backlog should be reviewed as a whole (vs. item by item), and what questions to ask during that review
+- Tooling: a lightweight analysis command (`python -m src.main research agenda`) that reports tag distribution, domain coverage, and priority queue state

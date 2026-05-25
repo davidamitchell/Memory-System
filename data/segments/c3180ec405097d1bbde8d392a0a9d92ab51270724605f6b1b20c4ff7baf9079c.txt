@@ -1,0 +1,1 @@
+- **DORA causality:** DORA 2024 reports correlations between AI adoption and delivery outcomes; it does not identify which specific AI practices drive the stability decrease. The batch-size attribution is DORA's own inference from the data, not a direct causal measurement.

@@ -1,0 +1,8 @@
+```text
+review-status: pass
+acronym-audit: complete
+domain-term-audit: complete
+claim-audit: complete
+findings-parity: aligned
+source-audit: url-backed
+```

@@ -1,0 +1,1 @@
+6. **Synthesise.** Produce a structured assessment: which failure modes are currently addressed by purpose-built approaches, which are not, and what would a comprehensive agent-output language need to include to address the full taxonomy.

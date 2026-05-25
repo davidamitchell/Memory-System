@@ -1,0 +1,5 @@
+- [x] [SQLite docs](https://sqlite.org)
+- [x] [sqlite-vec](https://github.com/asg017/sqlite-vec)
+- [x] [DuckDB](https://duckdb.org)
+- [x] [ChromaDB](https://docs.trychroma.com)
+- [x] [LanceDB](https://lancedb.github.io/lancedb/)

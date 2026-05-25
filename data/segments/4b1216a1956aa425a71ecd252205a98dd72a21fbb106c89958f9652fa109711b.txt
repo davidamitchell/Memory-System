@@ -1,0 +1,1 @@
+6. **Synthesise** - Produce a structured assessment: does the evidence support the entropy hypothesis? What are the key metrics for monitoring code health in AI-augmented teams? What early warning signs indicate a codebase is accumulating entropy faster than it can be repaid?

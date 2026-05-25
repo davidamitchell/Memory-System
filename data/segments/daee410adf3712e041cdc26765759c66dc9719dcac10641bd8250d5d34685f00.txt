@@ -1,0 +1,1 @@
+**[fact]** The existing `research-review.yml` workflow implements a custom LLM-as-judge evaluation using the GitHub Copilot CLI: it passes a structured prompt (from `research-review-prompt.md`) to the Copilot CLI in autopilot mode and parses the output for "OVERALL: FAIL" / "OVERALL: PASS". It requires only COPILOT_GITHUB_TOKEN. Source: `.github/workflows/research-review.yml`.

@@ -1,0 +1,4 @@
+- How do TOC practitioners handle dynamic constraints where the bottleneck location shifts week to week? Does the rope mechanism remain effective?
+- Is there peer-reviewed evidence for TOC/DBR applied specifically to knowledge work or software delivery organisations?
+- How does the VSS article's "critical systemic judgment as constraint" model relate to established knowledge management and organisational learning frameworks?
+- What is the empirical relationship between CONWIP and DBR effectiveness when constraints are unstable?

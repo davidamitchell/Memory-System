@@ -1,0 +1,6 @@
+1. Examine Microsoft's own documentation on how M365 Copilot accesses content through Microsoft Graph, including how sensitivity labels and access controls are, and are not, honored during generative tasks.
+2. Investigate whether Copilot-generated outputs, summaries, bullet lists, and drafted documents inherit, propagate, or strip sensitivity labels, and separate conversation inheritance from file creation behavior where Microsoft documents them differently.
+3. Review Microsoft's current oversharing-remediation guidance, especially SharePoint Restricted Content Discovery (RCD), Microsoft Purview Data Security Posture Management (DSPM), and DLP for Copilot.
+4. Map relevant regulatory and standards guidance, including GDPR automated-decision safeguards, National Institute of Standards and Technology (NIST) Artificial Intelligence Risk Management Framework (AI RMF), United Kingdom (UK) National Cyber Security Centre (NCSC) secure AI guidance, and United States (US) government-cloud and ITAR positioning.
+5. Compare deployment tiers, commercial Microsoft 365 Copilot versus Government Community Cloud (GCC), GCC High, and Department of Defense (DoD), and identify which risks they reduce and which they leave to tenant governance.
+6. Synthesize a risk taxonomy of risk mechanism -> regulatory exposure -> control -> residual gap.

@@ -1,0 +1,1 @@
+Definition files in `glossary/` use an extended schema defined in `definition_scheme.md`, which adds `category`, `related`, and `aliases` fields.

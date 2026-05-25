@@ -1,0 +1,5 @@
+A local database enables:
+- Full-text search across all research content
+- Relational queries (find all items tagged with "transformers" that are completed)
+- Persistent state without large JSON diffs in git
+- Potential vector search for semantic retrieval

@@ -1,0 +1,1 @@
+- [assumption; source: https://www.gitclear.com/ai_assistant_code_quality_2025_research] GitClear's repository-scale trends are treated as partly AI-associated rather than fully AI-isolated, because the report is observational and cannot eliminate every confounder across 2020 to 2024.

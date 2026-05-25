@@ -1,0 +1,4 @@
+**Cluster A: Phase taxonomy and phase-specific AI tasks**
+- A1. What are the eight target SDLC phases and what is the primary AI task in each?
+- A2. How do the phases differ in their context requirements for effective prompting?
+- A3. What evidence exists that phase-aware prompting outperforms ad hoc prompting?

@@ -1,0 +1,6 @@
+- [ ] What is the confidence weighting model for Trust Metadata — numeric score, tier-based, or rule-derived?
+- [ ] Is Alignment Governance a human approval gate, an automated consistency check, or both in different contexts?
+- [ ] How does rollback propagate when downstream domain ontologies depend on an upper ontology version being rolled back?
+- [ ] What triggers a Version Commit — every ingest, a scheduled batch, or a manual gate?
+- [ ] Can a document span multiple domains, and if so, how are conflicting domain assignments resolved?
+- [ ] How is the upper ontology seeded — manually authored, bootstrapped from BFO/SUMO/schema.org, or hybrid?

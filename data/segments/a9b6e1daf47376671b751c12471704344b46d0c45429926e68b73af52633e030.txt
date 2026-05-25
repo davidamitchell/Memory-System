@@ -1,0 +1,2 @@
+- access_note_mitpress_locators: checked; direct content extraction unavailable in this environment.
+- access_note_eurlex_locator: checked; extracted Article 12 wording taken from the European Commission service-desk mirror.

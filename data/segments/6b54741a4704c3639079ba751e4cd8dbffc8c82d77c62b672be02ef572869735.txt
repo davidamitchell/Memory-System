@@ -1,0 +1,1 @@
+**Historical lens:** The current `research-review.yml` was itself introduced as a quality gate after early research items failed human review for citation gaps. The pattern is established: the repository uses agent-based quality gates, and they work. The rubric eval extends this pattern rather than introducing a new one.

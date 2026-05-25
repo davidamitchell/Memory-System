@@ -1,0 +1,1 @@
+- **Assumption:** The CTMS/Ivanti LIVE practitioner survey is broadly representative of ITSM practitioners and not skewed toward a specific sector or tool set. **Justification:** The Ivanti LIVE event is a cross-sector ITSM event, not ServiceNow-specific; the 80% figure is consistent with the qualitative consensus across other sources even if the exact percentage is uncertain.

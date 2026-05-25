@@ -1,0 +1,5 @@
+**Branch E — Agenda review cadence**
+- E1. How often should the backlog be reviewed as a whole?
+- E2. What questions must a review answer?
+- E3. What is the minimum viable output from a review?
+- E4. How should the review be triggered given the owner's GitHub-only access?

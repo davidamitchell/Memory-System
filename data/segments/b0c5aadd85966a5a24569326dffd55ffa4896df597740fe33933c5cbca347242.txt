@@ -1,0 +1,1 @@
+The required fields in every memory file are: `title` (human-readable display name), `date` (ISO 8601), `tags` (list of strings for categorisation), and `superseded_by` (path to a newer file if this one is out of date, or an empty string).

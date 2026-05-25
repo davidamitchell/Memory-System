@@ -1,0 +1,1 @@
+[ADR-0003](./0003-ontology-architecture.md) established the two-tier ontology shape (upper/lower), the document model (raw → prepared → domain), and an 11-processor pipeline. Three gaps were identified after review:

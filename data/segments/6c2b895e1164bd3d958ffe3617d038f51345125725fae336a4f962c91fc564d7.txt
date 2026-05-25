@@ -1,0 +1,2 @@
+[fact] Type-constrained decoding constrains generation to *TypeScript* — an existing, human-designed language with a rich type system. It does not design a new language for LLM output. The language design space (what constructs are available, their semantics, their type rules) is inherited from TypeScript. What is novel is the enforcement mechanism (incremental type-checking during generation).
+Source: https://arxiv.org/abs/2504.09246

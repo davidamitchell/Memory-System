@@ -1,0 +1,1 @@
+6. ReAct, MRKL, and Toolformer output format conventions occupy specification hierarchy level 1–2 weakly (informal conventions with optional enforcement). They are not languages.

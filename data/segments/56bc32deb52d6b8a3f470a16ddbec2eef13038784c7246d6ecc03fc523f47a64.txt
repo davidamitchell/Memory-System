@@ -1,0 +1,6 @@
+2. **Prompt pattern survey** — Survey existing prompt engineering literature and practitioner guides for patterns applicable to each SDLC phase:
+   - Role/persona prompting (e.g., "Act as a senior security reviewer…")
+   - Chain-of-thought and structured reasoning prompts
+   - Few-shot examples for code generation and review
+   - Constraint-framing prompts for requirements and design
+   - Iterative/loop prompts for refinement

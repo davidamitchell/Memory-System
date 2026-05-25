@@ -1,0 +1,6 @@
+**In scope:**
+- Organisations where AI's primary strategic role is risk identification, prevention, or mitigation (not merely a risk that must be managed)
+- Key risk domains: credit risk (loan default prediction), fraud detection, AML/KYC compliance, operational risk (failure prediction, anomaly detection), model risk management for AI systems themselves
+- Regulatory frameworks relevant to risk-reducing AI: RBNZ BS11/BS2A, APRA CPS 230, DORA, OCC model risk guidance (SR 11-7), Basel III/IV AI implications
+- Governance structures for AI risk models: validation, monitoring, explainability requirements
+- NZ financial sector context: RBNZ supervised entities

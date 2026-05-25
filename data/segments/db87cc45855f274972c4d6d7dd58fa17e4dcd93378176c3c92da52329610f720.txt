@@ -1,0 +1,5 @@
+**Constraints:**
+- Must produce findings expressed as reference architecture artefacts (component diagrams, interface contracts, or equivalent structured specifications) rather than only prose
+- Must be grounded in the UELGF complete framework specification (`2026-04-27-uelgf-synthesis-complete-framework`), and all tooling choices must map to specific UELGF components (Policy Decision Point (PDP), Policy Administration Point (PAP), Policy Information Point (PIP), Policy Enforcement Point (PEP), runtime feedback loop)
+- Must address the distinction between tools that are already present in a typical large financial institution's approved tooling estate versus tools that require new approval (net-new vs extend-existing)
+- Must include a minimum viable stack, the smallest set of tooling changes that enables a meaningful subset of UELGF capabilities, to support organisations at different governance maturity levels

@@ -1,0 +1,1 @@
+[fact; source: https://doi.org/10.1111/j.1468-0335.1937.tb00002.x; https://doi.org/10.1287/inte.4.3.28; https://doi.org/10.1037/0033-295X.106.4.643] Workers face knowledge-seeking as a cost problem, because search, coordination, and interpretation effort shape which pathway they actually use, while organisations face the same problem as an information-processing design problem.

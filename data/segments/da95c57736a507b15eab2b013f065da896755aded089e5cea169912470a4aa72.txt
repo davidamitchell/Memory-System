@@ -1,0 +1,9 @@
+**In scope:**
+- Architectural patterns for organisation-specific LLM customisation: RAG, fine-tuning (full and PEFT), domain-adaptive pretraining, knowledge graph augmentation, mixture-of-experts routing, model merging / model soup, and layered/tandem/adversarial multi-model architectures
+- Feasibility dimensions: technology readiness level, compute and data cost estimates, time-to-value for each approach, and skill/team requirements for a typical mid-to-large enterprise
+- Organisations and vendors already doing this: Bloomberg GPT, MedPaLM, Harvey AI, Morgan Stanley OpenAI deployment, Glean, Notion AI, enterprise RAG platforms (Cohere, Vertex AI Search, Amazon Web Services (AWS) Bedrock Knowledge Bases)
+- RAG failure modes and limitations that motivate going beyond RAG: knowledge boundary problems, retrieval precision ceilings, context window constraints, latency, and cost at scale
+- Concept generation as an alternative or complement: generating a synthetic domain vocabulary, concept library, or training corpus from org-specific data
+- Adversarial and tandem multi-model architectures: Constitutional AI, Mixture-of-Agents (MoA), debate-based reasoning, model routing
+- Prior completed research in this repository directly adjacent to this item: `2026-03-15-context-compression-rag-enterprise-knowledge`, `2026-03-15-context-layers-aligned-decisions-synthesis`, `2026-03-02-agent-memory-management-context-injection`
+- Prior backlog items: `2026-03-17-ai-memory-systems-rag-neuroscience`, `2026-03-18-api-context-hubs-rag-mcp`

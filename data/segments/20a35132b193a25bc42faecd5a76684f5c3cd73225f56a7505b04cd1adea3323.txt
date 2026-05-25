@@ -1,0 +1,3 @@
+- Source substitution: NIST Artificial Intelligence Risk Management Framework landing page cited in place of the legacy seeded PDF URL.
+- Source substitution: NTIA Software Bill of Materials landing page cited in place of the legacy seeded 2019 PDF URL.
+- Source substitution: Claude Opus 4.6 system-card URL cited in place of the legacy Anthropic `model-card` URL.

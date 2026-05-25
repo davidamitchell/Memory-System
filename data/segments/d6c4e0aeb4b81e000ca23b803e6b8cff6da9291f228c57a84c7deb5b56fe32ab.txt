@@ -1,0 +1,4 @@
+5. **Agenda review cadence and checklist** — Design a lightweight monthly agenda review:
+   - What questions should the review answer? (Coverage balanced? Any domain with 0 items? Any items > 60 days old with no progress? Any completed items that spawned Open Questions that have not been added to backlog?)
+   - Who/what triggers the review? (Proposed: `workflow_dispatch`-triggered analysis that posts a summary as a GitHub issue for the owner to review)
+   - What is the minimum useful output from the review? (Proposed: a list of coverage gaps and a prioritised "next 5 items to research" recommendation)

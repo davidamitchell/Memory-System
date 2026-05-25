@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item produces a bounded, low-confidence estimate that central engineering throughput is a major directional driver of workaround accumulation, but that only about 25% to 50% of current workaround automation demand is likely to be closeable within three years under realistic AI-assisted delivery assumptions. [inference; source: https://link.springer.com/article/10.1007/s10257-020-00472-6; https://link.springer.com/article/10.1007/s12599-018-0542-4; https://arxiv.org/abs/2507.09089; https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report]
+- Links:
+  - https://link.springer.com/article/10.1007/s10257-020-00472-6
+  - https://link.springer.com/article/10.1007/s12599-018-0542-4
+  - https://arxiv.org/abs/2507.09089

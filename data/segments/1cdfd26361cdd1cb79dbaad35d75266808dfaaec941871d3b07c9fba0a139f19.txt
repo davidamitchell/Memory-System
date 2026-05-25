@@ -1,0 +1,1 @@
+4. **RAPTOR vs. GraphRAG**: Both apply hierarchical summarisation but with different goals. RAPTOR creates a retrieval tree for document-level queries. GraphRAG creates community summaries for entity-relationship global queries. They are complementary, not competing. No contradiction.

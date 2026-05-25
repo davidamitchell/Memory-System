@@ -1,0 +1,7 @@
+**[inference]** Monthly agenda review checklist (minimum viable):
+1. Domain balance: does each of the 5 domains have ≥1 item in backlog?
+2. Priority health: are fewer than 50% of backlog items rated `medium` with ≥5 rated `high`? (Target: ≥3 `high`, ≤60% `medium`, ≥1 `low`)
+3. Drift check: any domain >40% of items added in last 30 days?
+4. Age check: any items added >60 days ago still in backlog? (May indicate the item is premature or no longer relevant)
+5. Open Questions check: do completed items' Open Questions sections contain questions not yet added to backlog?
+6. Coverage gaps: any domain with 0 items in both backlog and in-progress? (Requires addition)

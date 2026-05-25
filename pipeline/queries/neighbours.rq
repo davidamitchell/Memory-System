@@ -1,0 +1,33 @@
+# neighbours.rq — Two-hop concept neighbourhood query.
+#
+# Returns direct and second-hop neighbours of a given AssertionNode via
+# ms:relatedTerm edges.  Bind the root node URI to ?root before executing.
+#
+# Example (rdflib prepareQuery / initBindings):
+#   from rdflib import URIRef
+#   g.query(QUERY, initBindings={"root": URIRef("https://memory.example.org/ms/assertion/vector-embedding")})
+#
+# Prefixes match those used in the Turtle snapshots.
+
+PREFIX ms:   <https://memory.example.org/ms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+    ?hop
+    ?directNode
+    ?directLabel
+    ?secondNode
+    ?secondLabel
+WHERE {
+    BIND(1 AS ?hop)
+    ?root ms:relatedTerm ?directNode .
+    OPTIONAL { ?directNode rdfs:label ?directLabel }
+
+    OPTIONAL {
+        BIND(2 AS ?hop)
+        ?directNode ms:relatedTerm ?secondNode .
+        FILTER(?secondNode != ?root)
+        OPTIONAL { ?secondNode rdfs:label ?secondLabel }
+    }
+}
+ORDER BY ?hop ?directLabel ?secondLabel

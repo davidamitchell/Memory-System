@@ -1,0 +1,1 @@
+**Constraints:** Focus on work where the language/format design is explicit and the LLM-as-author framing is stated or clearly implied. Distinguish research prototypes from production-grade tools. Prefer primary sources (papers, repo READMEs, design documents).

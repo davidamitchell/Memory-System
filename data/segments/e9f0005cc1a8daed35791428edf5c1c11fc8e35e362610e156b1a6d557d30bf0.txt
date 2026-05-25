@@ -1,0 +1,1 @@
+**[fact]** TOC defines three key measurements: throughput (the rate at which the system generates money through sales), inventory (money invested in things intended to sell), and operating expense (money spent turning inventory into throughput). Source: [Wikipedia -- Theory of Constraints](https://en.wikipedia.org/wiki/Theory_of_constraints).

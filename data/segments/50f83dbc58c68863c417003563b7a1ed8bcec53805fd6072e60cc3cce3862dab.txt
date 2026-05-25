@@ -1,0 +1,1 @@
+10. Restoring `devcontainer.json` (W-0004) does not close any agent environment gap for either primary agent surface; its value is limited to Codespaces and local VS Code dev container setups, which the repo owner does not use. (high confidence)

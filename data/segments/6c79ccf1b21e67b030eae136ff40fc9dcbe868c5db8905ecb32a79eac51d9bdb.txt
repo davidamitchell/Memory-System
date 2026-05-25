@@ -1,0 +1,17 @@
+- **Root question:** what should count as capability debt, how should it be measured, and why does it matter more once agentic AI removes human pacing constraints?
+- **A. Definition and taxonomy**
+  - A1. What does debt mean in Cunningham's and Fowler's original framing?
+  - A2. Which organisational prerequisites for safe scale are explicit in CMMI, Westrum, NIST, DORA, AWS, and MIT Sloan?
+  - A3. Which missing prerequisites should be grouped into a capability-debt taxonomy?
+- **B. Measurement**
+  - B1. Which reviewed frameworks provide observable indicators rather than slogans?
+  - B2. Which indicators are likely to lead incidents rather than merely describe them afterward?
+  - B3. How can review quality, workaround demand, permission sprawl, and skill freshness be tracked over time?
+- **C. Amplification**
+  - C1. What shows that workarounds emerge when central systems are too slow or too weak?
+  - C2. What shows that agentic AI increases consequence speed beyond human-paced governance?
+  - C3. How does reduced human practice intensity weaken the very review capacity needed to absorb that acceleration?
+- **D. Sequencing and hidden debt**
+  - D1. Which sources say autonomy should be earned only after controls and evaluation exist?
+  - D2. Which parts of capability debt must be reduced before scale on high-consequence surfaces?
+  - D3. How does tool-led adoption without shared review investment create hidden debt?

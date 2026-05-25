@@ -2,6 +2,133 @@
 
 ---
 
+## 2026-05-23 — W-0200: 12-processor ontology pipeline (first slice)
+
+Built the full end-to-end ontology pipeline for a single glossary file (`glossary/vector-embedding.md`).
+
+**Changes:**
+- `pipeline/processors/p01_sourcing.py` – p12_export.py: all 12 processors
+- `pipeline/run_pipeline.py`: CLI orchestrator (single file and directory mode)
+- `pipeline/query.py`: concept card CLI (`text` and `json` formats, `--related` flag)
+- `pipeline/queries/concept_card.rq`: portable SPARQL SELECT query
+- `pipeline/README.md`: processor table, namespace prefix table, output locations
+- `tests/test_pipeline_w0200.py`: 9 acceptance tests (all passing)
+- `data/ontology/v0001.ttl`: 35-triple Turtle snapshot
+- `data/reports/validation-v0001.json`: 0 conflicts
+- `data/reports/diff-initial-v0001.json`: +35 triples from baseline
+
+**Acceptance criteria met:**
+- `python pipeline/run_pipeline.py glossary/vector-embedding.md` → `data/ontology/v0001.ttl` ✓
+- ≥12 triples (actual: 35) ✓
+- `data/reports/validation-v0001.json` written, 0 conflicts ✓
+- `python pipeline/query.py "vector embedding"` prints concept card ✓
+- All 9 pytest tests pass ✓
+
+**Mini-Retro**
+1. Did the process work? Yes — 12 processors in sequence, each returning `{**state, new_keys}`, made the orchestrator trivial. The hardest part was getting the namespace URI consistent across all processors (solved by defining `_ms()` once per processor file).
+2. What slowed down or went wrong? The `rdflib` `PROV` import path changed between versions (`from rdflib.namespace import PROV` is correct for 7.x). Small friction but worth noting for future rdflib updates.
+3. What single change would prevent this next time? A shared `pipeline/namespaces.py` exporting `MS`, `PROV`, and `_ms()` would eliminate the per-file boilerplate and prevent any namespace drift. That belongs in W-0201 prep.
+4. Is this a pattern? Yes — the "define constants locally per processor" pattern scales badly. Shared namespace module should be the first thing created when expanding to W-0201.
+
+---
+
+## 2026-05-23 — Consolidated two backlog files into BACKLOG.md
+
+Rewrote `BACKLOG-v2.md` to reflect the actual system direction: ontology-based knowledge graph, inputs starting with Research repository documents.
+
+**Changes:**
+- Vision and Architecture sections replaced entirely (removed LanceDB/vector/capture-surface framing)
+- W-0100, W-0101, W-0106, W-0107 marked `obsolete` (LanceDB-era, superseded by ADR-0002)
+- All surface capture items (W-0102–W-0105, W-0108–W-0115) marked `deferred`
+- Active Phase 1 (W-0200, W-0201, W-0202) promoted to top of file
+- Deferred phases consolidated under a `## Deferred` section
+- Research Cross-Reference and Outstanding Discovery tables updated
+- LanceDB and Model2Vec entries removed from References
+
+**Mini-Retro**
+1. Did the process work? Yes — the scope was clear: defer capture surfaces, correct the vision, promote the active items. Python rewrites for bulk status changes and block reordering were faster and less error-prone than multiple individual edits.
+2. What slowed down or went wrong? Nothing significant. The phase-reordering step required a Python extract-and-reassemble rather than a simple text replacement because the active block was at the end of a 68 KB file.
+3. What single change would prevent this next time? A "phase order" index at the top of the backlog file would make it obvious when phases are out of priority order.
+4. Is this a pattern? Yes — when a large architectural pivot happens, the backlog accumulates stale framing that compounds over sessions. The earlier the realignment, the less debt accumulates. Backlog coherence should be part of the self-improve step.
+
+
+
+Three targeted corrections from the current session:
+
+1. **"Search the repository" explained** — clarified that Phase 1 Entry step 4 means running 2–3 grep/glob queries before writing anything, to find existing work and surface retrieval-quality signals.
+2. **Glossary links removed from build-loop-harness.md** — design/protocol documents should use plain prose; the Wikipedia-style cross-linking rule applies only to memory files.
+3. **Self-Improve now mandates making changes** — Phase 7 of `build-loop-harness.md` and §17 of `copilot-instructions.md` both previously said "raise a backlog item" for harness changes, contradicting §7's "do not just answer — make the change." Both updated: small improvements ship in the same session; structural changes require an ADR first.
+
+**Files updated:** `_docs/design/build-loop-harness.md`, `.github/copilot-instructions.md`, `CHANGELOG.md`, `learnings.md`
+
+**Mini-Retro**
+1. Did the process work? Yes — all three issues were small, well-scoped corrections. No ambiguity about intent.
+2. What slowed down or went wrong? A missing heading in `learnings.md` was left by a prior edit that matched only the paragraph text; required a follow-up fix. Pattern: always view the file after editing to catch broken formatting.
+3. What single change would prevent this next time? View the edited file immediately after every `edit` call to catch structural breakage before the next step.
+4. Is this a pattern? Yes — the broken heading is a repeat of the earlier duplicate-content issue (see ADR-0004 retro). Add "view file after edit" to the validation checklist or as a standing rule.
+
+
+
+Completed a full documentation coherence pass to align all docs with the definitive architecture: ontology-based knowledge store (Open-Brain). The original vector/LanceDB design was replaced before implementation; all documentation now reflects this as a full pivot with no dual-track framing.
+
+**Files updated:**
+- `README.md` — Rewritten as single-architecture doc. Removed dual-track "current vector / target ontology" structure, Quick Start, LanceDB cost line, embedding model references.
+- `.github/copilot-instructions.md` — §1 (architecture), §11 (MCP tools), §12 (git), §13 (chain-of-thought), §15 (headless mode), §17 (Build Loop Harness entry), References.
+- `.github/copilot-setup-steps.yml` — Removed embedding model pre-warm step (LanceDB-era artefact).
+- `glossary/open-brain.md` — Definition now describes ontology-based knowledge graph.
+- `glossary/lancedb.md` — Superseded notice added; reframed as a design concept replaced before implementation.
+- `glossary/retrieval.md` — Rewritten around ontology traversal and graph queries.
+- `glossary/semantic-search.md` — Superseded notice added; reframed as the replaced approach.
+- `glossary/mcp-server.md` — Legacy prototype notice added; removed LanceDB references.
+- `glossary/knowledge-graph.md` — Rewritten to describe the ontology as the knowledge graph implementation.
+- `glossary/memory-file.md` — Removed "LanceDB vector index is a derived artefact" sentence; source document framing added.
+- `glossary/embedding-model.md` — Superseded notice added; current production model framing removed.
+- `_docs/design/build-loop-harness.md` — Phase 1 step 4 changed from "Call `search_brain`" to "Search the repository."
+
+**Mini-Retro**
+1. Did the process work? Yes — a systematic file-by-file pass with explicit superseded notices is the right approach for this kind of architectural pivot.
+2. What slowed down or went wrong? Context compaction mid-session meant the four completed changes (README, copilot-instructions, copilot-setup-steps, open-brain glossary) were not committed; all work had to be resumed from the summary.
+3. What single change would prevent this next time? Call `report_progress` after every 2–3 file edits, not at the end of a session. Mid-session commits prevent work loss on compaction.
+4. Is this a pattern? Yes — any large documentation pass should be chunked into 2–3 file commits to keep state recoverable.
+
+---
+
+## 2026-05-23 — Build Loop Harness
+
+Defined the Build Loop Harness: a seven-phase protocol (Entry, Plan, Execute, Validate, Correct, Close, Self-Improve) that keeps agents focused, reduces drift, manages context, leverages skills, and produces a self-correcting and self-improving workflow. Created `_docs/design/build-loop-harness.md` with the full protocol including a Mermaid flowchart, validation checklist, focus rules, and open questions. Added §17 to `.github/copilot-instructions.md` as a condensed always-on reference. Updated `_docs/design/README.md` index and `CHANGELOG.md`.
+
+**Mini-Retro**
+1. Did the process work? Yes — the existing repo conventions (§7 mini-retro, §13 chain-of-thought, skills protocol, backlog) gave clear anchoring points for each phase of the harness, so the design was coherent with no contradictions.
+2. What slowed down or went wrong? Nothing significant. The main design decision was whether to embed the full harness in `copilot-instructions.md` or split it into a design document with a summary in instructions; the split approach keeps instructions scannable while preserving full detail.
+3. What single change would prevent friction next time? The harness itself is now the answer — Entry's "state intent in one sentence" gate would have caught any ambiguity at the start.
+4. Is this a pattern? Yes — structural meta-work (defining how to do work) benefits from the same loop as object-level work. The harness is now self-referential: it was produced using the conventions it encodes.
+
+---
+
+## 2026-05-23 — ADR-0004: provenance model and control plane
+
+Reviewed ADR-0004 draft. Applied feedback: added standard MADR sections (Context, Decision, Consequences, References), made ADR-0004 supersede ADR-0003 explicitly, completed the PROV-O Turtle provenance example, defined Trust Metadata fields (source_authority, freshness_date, approval_state) with confidence weighting deferred to Open Questions, added Resolver Service identifier scheme (SHA-256 content URIs), added Prepared Segment to the document model. Updated design document to v2 with the full provenance and control plane architecture, 12-processor pipeline, new component diagram, updated sequence diagram. Marked ADR-0003 superseded.
+
+**Mini-Retro**
+1. Did the process work? Yes — the review identified the exact gaps (no MADR structure, incomplete Turtle example, undefined Trust Metadata) and each was addressed directly.
+2. What slowed down or went wrong? The design document edit left duplicate content because the old_str matched only the header. Caught and fixed with a truncation.
+3. What single change would prevent this next time? When replacing an entire file's content, use bash truncation rather than the edit tool to avoid partial-match issues.
+4. Is this a pattern? Yes — replacing large documents via edit is error-prone. Add this to the agent instructions or use a bash write pattern for full-file replacements.
+
+---
+
+## 2026-05-23 — Ontology architecture design and setup
+
+Updated the skills submodule to the latest commit. Created `_docs/design/` as the new conceptual design space, with a full ontology-system-design document covering all architectural components, the 11-processor pipeline, a component diagram, and a sequence diagram. Wrote ADR-0002 (move from vector storage to ontology) and ADR-0003 (upper/lower ontology architecture and processing pipeline). Updated README.md and `.github/copilot-instructions.md` to reflect the direction change. Updated CHANGELOG.md and `_docs/adr/README.md` index.
+
+**Mini-Retro**
+1. Did the process work? Yes — the design questions in the problem statement mapped cleanly onto ADRs and a design document.
+2. What slowed down or went wrong? The problem statement raised an open question about additional processors needed beyond the obvious ones. These were answered (Consistency Validation, Merge/Reconciliation, Export/Serialisation) and added to both ADR-0003 and the design document.
+3. What single change would prevent this next time? The open questions section in the design document is the right place to surface unresolved design choices. Future design sessions should start by reviewing and closing those questions.
+4. Is this a pattern? Yes — design documents without an explicit "Open Questions" section tend to bury uncertainty in prose. The `_docs/design/` convention now includes this section by default.
+
+---
+
 ## 2026-03-07 — Copilot headless-mode setup
 
 Added `.github/copilot-setup-steps.yml` and `.vscode/mcp.json` so GitHub Copilot's coding agent can operate on this memory system from the GitHub web UI or mobile app with no local IDE. Added Section 15 (headless mode) to `.github/copilot-instructions.md`. Rebased PR onto main after main introduced `.github/copilot-instructions.md` (superseding `AGENTS.md`); moved the headless-mode section from the old AGENTS.md addition into copilot-instructions.md accordingly.
@@ -59,7 +186,7 @@ Audited all open pull requests against `main`. Only one open PR existed at the t
 
 ## 2026-03-08 — Mobile capture discovery backlog (W-0003–W-0015) and doc validation
 
-Added 13 discovery backlog items (W-0003 through W-0015) covering all viable mobile capture and retrieval paths: Slack bot, Claude iOS MCP, ChatGPT Actions, Gemini/Google ecosystem, Grok/X DM bot, iOS Shortcuts + GitHub API, Raycast/Alfred, `remember` CLI, Telegram bot, `inbox/` folder, Apple Watch dictation, self-hosted MCP server options, and LanceDB index rebuild evaluation. Fixed W-0002 duplicate `### Notes` / `---` formatting artifact. Fixed CHANGELOG.md duplicate [Unreleased] entries and added mobile capture changelog entry. Fixed stale `AGENTS.md` link in `projects/2026-03-07-copilot-headless-mode.md`. Added ADR index table to `docs/adr/README.md`. Strengthened archived header in `getting-started-prompt.md`.
+Added 13 discovery backlog items (W-0003 through W-0015) covering all viable mobile capture and retrieval paths: Slack bot, Claude iOS MCP, ChatGPT Actions, Gemini/Google ecosystem, Grok/X DM bot, iOS Shortcuts + GitHub API, Raycast/Alfred, `remember` CLI, Telegram bot, `inbox/` folder, Apple Watch dictation, self-hosted MCP server options, and LanceDB index rebuild evaluation. Fixed W-0002 duplicate `### Notes` / `---` formatting artifact. Fixed CHANGELOG.md duplicate [Unreleased] entries and added mobile capture changelog entry. Fixed stale `AGENTS.md` link in `projects/2026-03-07-copilot-headless-mode.md`. Added ADR index table to `_docs/adr/README.md`. Strengthened archived header in `getting-started-prompt.md`.
 
 **Mini-Retro**
 1. Did the process work? Yes — the issue was fully specified with exact content for each backlog item, making this a clean writing task.
@@ -105,3 +232,144 @@ Extended `BACKLOG-v2.md` with 5 new work items and 2 new phases, per issue "New 
 2. What slowed down or went wrong? Phase renumbering required careful edits in multiple places (phase headers, Outstanding Discovery, Research Cross-Reference). No errors, but this is mechanical work that is easy to miss.
 3. What single change would prevent this next time? A script or table of contents in BACKLOG-v2.md that maps phase numbers to phase names would make renumbering visible at a glance — worth raising as a backlog item.
 4. Is this a pattern? Phase renumbering has now happened once. If it happens again, a structured phase index or YAML front-matter list of phases would eliminate the manual touch points.
+
+---
+
+## References
+
+1. [`.github/copilot-instructions.md` §5 and §7](../.github/copilot-instructions.md) — the mandate for PROGRESS.md and the Mini-Retro format.
+2. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase work items referenced in this history.
+3. [`BACKLOG-v2.md`](./BACKLOG-v2.md) — implementation-ready roadmap updated during these sessions.
+
+---
+
+## 2026-05-24 — W-0207: GitHub Pages ontology browser
+
+Added a progressively-enhanced static site on GitHub Pages for browsing the ontology without local tooling.
+
+**Changes:**
+- `pipeline/export_json.py`: reads latest `data/ontology/v*.ttl`, emits `docs/data/ontology.json` (26 concepts, 83 relations, 26 documents for W-0201 corpus)
+- `pipeline/export_html.py`: stamps JSON data into `docs/index.html` — pre-rendered tables work with JS disabled
+- `docs/data/ontology.json`: pre-committed export of v0011 ontology
+- `docs/index.html`: four-section static page (Overview, Concepts, Relations, Documents)
+- `docs/style.css`: minimal monospace-light theme, no external fonts or CDN dependencies
+- `docs/app.js`: tab switcher, live search, concept detail panel — all progressive enhancement
+- `.github/workflows/pages.yml`: runs exporters on push to `main`, deploys to GitHub Pages
+- `BACKLOG.md`: W-0202 deferred, W-0207 added (status: ready, blocks W-0203), W-0203 updated (blocked-by adds W-0207)
+
+**Acceptance criteria met:**
+- `python pipeline/export_json.py` produces `docs/data/ontology.json` with counts {concepts: 26, relations: 83, documents: 26}
+- `python pipeline/export_html.py` produces `docs/index.html` with all four sections as plain HTML tables
+- `docs/style.css` and `docs/app.js` present; progressive enhancement layers: tabs, search, detail panel
+- `.github/workflows/pages.yml` deploys on push to `main`
+- All existing tests pass unchanged
+
+**Mini-Retro**
+1. Did the process work? Yes — the plan was well-specified with clear file outputs, a defined JSON schema, and an explicit render order. The batch-mode prov issue (single shared activity for all 26 docs) was discovered during implementation and resolved cleanly by using the concept-id-to-filename mapping instead.
+2. What slowed down or went wrong? The `prov:used` triples in the current ontology all reference a single batch activity, so the document→concept link via prov didn't work. Resolved by matching concept id to stem of `ms:sourceDocument`.
+3. What single change would prevent this next time? Per-document activities (one activity per pipeline run, not one per batch) would make prov-based document→concept mapping work directly. Worth noting for W-0200 refinement.
+4. Is this a pattern? Yes — batch mode collapsed provenance. Future exporters or tools that need per-document attribution should plan for this in the pipeline architecture.
+
+---
+
+## 2026-05-24 — Corpus correction: raw_document_corpus/ brought to main branch
+
+Discovered that the 50-file research document corpus intended as the primary prose extraction target was committed on the `copilot/ontology-experiment` branch under `raw_document_corpus/`, not on the main development branch. All pipeline development (W-0200–W-0207) had proceeded without these files available locally.
+
+**Changes:**
+- `raw_document_corpus/` (50 files): checked out from `copilot/ontology-experiment` and committed to the working branch. Documents are dated `2026-02-27` through `2026-05-20` and cover AI strategy, knowledge graphs, agentic systems, governance, and related research.
+- `_docs/adr/0005-raw-document-corpus-primary-testing-corpus.md`: ADR recording the decision to canonise `raw_document_corpus/` as the latent-extraction corpus and clarifying its schema differences from `glossary/`.
+- `learnings.md`: new entry — test corpus must be committed to the working branch before the work item that depends on it is started.
+
+**Front-matter schema differences (glossary vs raw_document_corpus):**
+- `tags` (glossary) → `themes` (raw_document_corpus)
+- `aliases` (glossary) → absent in raw_document_corpus
+- `related: [{file, rel}]` (glossary) → `cites: [slug]` + `related: [slug]` (raw_document_corpus)
+
+**Mini-Retro**
+1. Did the process work? Yes — the corpus was identified by inspecting the other branch and is now in the right place.
+2. What slowed down or went wrong? The corpus was on the wrong branch and wasn't referenced in BACKLOG.md's W-0204 entry, so it wasn't obvious until inspecting branches directly.
+3. What single change would prevent this next time? Any file a work item depends on must be committed to the canonical branch before the item is listed as "ready".
+4. Is this a pattern? Yes — see learnings.md entry added this session.
+
+---
+
+## 2026-05-24 — W-0203 Eval Harness + W-0204 LLM Extractor
+
+**What was done**
+
+W-0203 and W-0204 implemented and all tests passing.
+
+**W-0203 — Eval Harness**
+- Created `pipeline/eval.py`: CLI that runs any extractor against a corpus directory and prints per-file + aggregate P/R/F1 for label, aliases, tags, related fields
+- `--extractor rule-based|llm`, `--json`, `--corpus` flags
+- Created `tests/test_eval_w0203.py` (10 tests — all pass)
+- Baseline scores (rule-based, glossary corpus, 26 files): **label 1.000 / aliases 1.000 / tags 1.000 / related 1.000**
+
+**W-0204 — LLM Extraction Strategy**
+- Extended `pipeline/processors/p07_concept_extraction.py` with `strategy=llm` branch
+- LLM extractor: structured system prompt → JSON `delta_proposal`; uses `openai>=1.0`; reads `OPENAI_API_KEY` and optional `OPENAI_BASE_URL` / `OPENAI_MODEL`; graceful fallback to front-matter on malformed JSON response
+- `_llm_client` module-level variable is swappable seam for tests
+- Created `tests/test_llm_extraction_w0204.py` (16 tests — all pass, mock client used)
+- Added `openai>=1.0` to `requirements.txt`
+
+**Full corpus batch**
+- Fixed malformed YAML front-matter in `raw_document_corpus/2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways.md` (stray inline list after `blocks:`)
+- Ran batch over 86 files (glossary/ + _docs/adr/ + _docs/design/ + raw_document_corpus/)
+- Result: v0038.ttl — **84 concepts, 83 relations, 86 documents**
+- Rebuilt site: `docs/data/ontology.json` + `docs/index.html`
+
+**Test results**: 42 passed, 0 failed
+
+**Mini-Retro**
+1. Did the process work? Yes — both eval harness and LLM strategy are working and tested.
+2. What slowed down? One corpus file had malformed YAML (stray inline list). Fixed directly in source.
+3. What single change would prevent this next time? Validate YAML front-matter at corpus ingestion time and report bad files upfront before running the full batch.
+4. Is this a pattern? Latent data quality issues in corpus files will surface as pipeline exceptions — worth adding a pre-flight YAML validation step before W-0205.
+
+---
+
+## 2026-05-25 — W-0209: Mobile-first view layer for the ontology browser
+
+Progressively built out the GitHub Pages ontology browser for mobile viewports as the primary target.
+
+**Changes:**
+- `docs/style.css`: replaced the minimal `@media (max-width: 640px)` block with a mobile-first responsive layout — bottom tab navigation (fixed 56 px bar), concept card layout, detail panel as bottom sheet with backdrop, full-width search, `.table-scroll` horizontal-scroll wrapper support, compact header
+- `docs/app.js`: injects `#detail-backdrop` element; adds `backdrop.classList.add/remove('active')` and `document.body.style.overflow` scroll lock when the detail panel opens/closes; backdrop click closes the panel
+- `pipeline/export_html.py`: added `data-label` attributes to concept, relations, and documents table cells; wrapped relations and documents tables in `<div class="table-scroll">` for horizontal scroll on narrow viewports
+- `docs/index.html`: regenerated from updated exporter (157,902 bytes)
+- `BACKLOG.md`: W-0209 added as `status: done`
+
+**Acceptance criteria met:**
+- Bottom nav bar on ≤640 px ✓
+- Concept rows as cards on mobile ✓
+- Detail panel as bottom sheet + backdrop + scroll lock ✓
+- Relations and documents tables scroll horizontally ✓
+- Full-width search on mobile ✓
+- All 42 tests pass unchanged ✓
+
+---
+
+## 2026-05-25 — W-0210: Concept and relation detail pages with hash routing
+
+Replaced the mobile bottom-sheet detail panel with full hash-routed detail pages for both concepts and relations.
+
+**Changes:**
+- `docs/app.js`: full rewrite — hash router (`#concept/<id>`, `#relation/<from>/<pred>/<to>`), `showConceptPage()`, `showRelationPage()`, updated row bindings; removed old bottom-sheet code
+- `docs/style.css`: replaced `.detail-panel` block with detail-page styles (`.back-btn`, `.dp-content`, `.dp-section`, `.dp-list`, `.rel-pair`, `.rel-card`, `.edge-link`); added relation row cursor; removed backdrop/bottom-sheet CSS from mobile block
+- `pipeline/export_html.py`: relation rows now have `class="relation-row"`, `tabindex="0"`, `data-from/pred/to`, `data-relation` JSON; removed `#concept-detail` div; concept links use `href="#concept/<id>"`
+- `docs/index.html`: regenerated (175,934 bytes)
+- `BACKLOG.md`: W-0210 added as `status: done`
+
+**Acceptance criteria met:**
+- Clicking concept row → `#concept/<id>` full-page view ✓
+- Clicking relation row → `#relation/<from>/<pred>/<to>` full-page view ✓
+- Back buttons return to list ✓
+- Browser back/forward works ✓
+- All 42 tests pass unchanged ✓
+
+**Mini-Retro**
+1. Did the process work? Yes — the progressive enhancement principle was easy to follow: all CSS is in `style.css`, all mobile JS is additive in `app.js`, and the static HTML continues to work without JS.
+2. What slowed down? Nothing significant. The main design decision was whether to hide the desktop header nav entirely on mobile (replaced by bottom bar) vs show both — hiding the header nav entirely on mobile is cleaner and avoids duplicating tap targets.
+3. What single change would prevent friction next time? The `table-scroll` wrapper is now in the HTML template (`export_html.py`) for relations and documents, but concept table uses CSS card layout instead — future work (swipe gestures, pinch-zoom, search-as-you-type) should stay in `app.js` as progressive layers.
+4. Is this a pattern? Yes — mobile-first progressive enhancement: start with semantic HTML, add CSS layout layers by viewport, add JS behaviour on top. Each layer is independent and degrades gracefully.

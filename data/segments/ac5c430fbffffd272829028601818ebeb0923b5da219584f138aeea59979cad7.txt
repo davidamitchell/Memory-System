@@ -1,0 +1,1 @@
+2. Jsonformer is adequately represented by the Outlines and Guidance findings, as both supersede it in functionality (Outlines supports regex, JSON Schema, and context-free grammars; Jsonformer supports JSON only) and adoption (Outlines has 3M+ downloads; Jsonformer has no equivalent adoption signal). Checking Jsonformer separately would not change any finding.

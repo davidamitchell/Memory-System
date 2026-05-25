@@ -1,0 +1,1 @@
+4. All current structured generation approaches address Layer 1 structural failures exclusively. Layers 2–5 of the failure mode taxonomy are not addressed by any output grammar or language design currently in active development.

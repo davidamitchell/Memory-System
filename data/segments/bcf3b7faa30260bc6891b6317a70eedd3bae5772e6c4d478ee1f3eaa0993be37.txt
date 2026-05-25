@@ -1,0 +1,4 @@
+**Pre-output checks (§8):**
+- Citation discipline: no bare assertions; all factual claims have URLs; "multiple sources" is never used without naming each — confirmed
+- Speculation control: evaluative terms ("most reliable", "most maintainable") are anchored to stated criteria (behavioural embeddedness, maintenance cost) — confirmed
+- AI-slop scan: no "N independent fields converge on" constructions; no symmetrical contrast scaffolding; no near-verbatim repetition across sections — confirmed

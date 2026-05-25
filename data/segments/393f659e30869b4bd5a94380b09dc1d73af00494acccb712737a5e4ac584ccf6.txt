@@ -1,0 +1,2 @@
+[fact] Outlines and Guidance address Layer 1 structural failures: malformed JSON, missing required fields, wrong field types, format violations. They do not prevent semantic hallucination — the LLM can still generate factually wrong content inside a valid schema structure.
+Source: https://dottxt-ai.github.io/outlines/latest/; https://zenvanriel.nl/ai-engineer-blog/outlines-structured-generation/

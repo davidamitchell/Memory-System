@@ -1,0 +1,4 @@
+**Out of scope:**
+- Deep technical benchmarking of individual AI coding tools (covered in prior research)
+- Model architecture or LLM training details
+- New Zealand-specific regulatory analysis

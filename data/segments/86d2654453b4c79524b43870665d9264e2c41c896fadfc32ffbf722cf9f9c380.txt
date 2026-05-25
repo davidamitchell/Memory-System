@@ -1,0 +1,7 @@
+-- Sources per item
+CREATE TABLE IF NOT EXISTS sources (
+    id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    item_id  TEXT NOT NULL REFERENCES items(id) ON DELETE CASCADE,
+    url      TEXT NOT NULL,
+    checked  INTEGER NOT NULL DEFAULT 0  -- 0=unchecked, 1=checked
+);

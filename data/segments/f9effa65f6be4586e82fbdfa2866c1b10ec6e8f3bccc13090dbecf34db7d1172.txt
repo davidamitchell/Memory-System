@@ -1,0 +1,3 @@
+**Branch A, what makes expert knowledge asset-specific?**
+- A1: What does asset specificity mean when the asset is expert knowledge rather than machinery?
+- A2: Why does specificity make the knowledge harder to price, verify, or redeploy?

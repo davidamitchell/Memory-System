@@ -1,0 +1,15 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Application register prerequisite for team taxonomy and tagging | KPMG 18-month model, TBM Council | high | Phase 1 deliverable; Phase 3 depends on it |
+| Application boundary criteria (4 attributes) | TBM Council ATUM, LeanIX | high | Two independent sources agree |
+| KPMG 18-month phase sequence | KPMG Empowering TBM Program | high | PDF not directly readable; synthesised from web search summaries |
+| Joint CIO+CFO sponsorship pattern | KPMG, EY, Serviceware | high | Three independent sources converge |
+| Tagging fails due to principal-agent misalignment | Practitioner accounts (Jira/ServiceNow implementations) | medium | Inference; no single primary source; consistent with multiple accounts |
+| Degraded tagging = silent RUN drift | ITFM practitioner literature, GAO incomplete taxonomy finding | medium | Inference synthesised from multiple partial sources |
+| 18/26 federal agencies failed after 8 years | GAO-25-106488 (July 2025) | high | Primary source; PDF not directly readable |
+| ISG People dimension is top failure cause | ISG Multi-Dimensional TBM Framework | high | PDF not directly readable; synthesised from web search |
+| Forrester 270% ROI, sub-6-month payback | Forrester TEI via Rego Consulting | medium | Secondary citation; Forrester original not directly accessed |
+| Retail client $2M/year savings | Praecipio Consulting | medium | Vendor case study; single source |
+| Financial services client: 90% forecasting accuracy, 75% cycle time | Praecipio Consulting | medium | Vendor case study; single source |
+| Federal implementation costs $1.5M–$28.9M | GAO-25-106488 | high | Primary source |
+| "Now what?" stall — model without decision process | EY, Serviceware, Forrester TEI analysis | medium | Inference synthesised across sources |

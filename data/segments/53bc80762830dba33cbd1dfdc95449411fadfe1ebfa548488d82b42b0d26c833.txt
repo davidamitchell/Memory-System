@@ -1,0 +1,4 @@
+**A. Leanstral itself**
+- A1. What do Mistral's official materials say Leanstral is?
+- A2. What is officially disclosed about model size, availability, integration surface, and evaluation?
+- A3. How mature is the release, judged from public artifacts?

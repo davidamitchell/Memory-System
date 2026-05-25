@@ -1,0 +1,3 @@
+- What changes when language models are trained with explicit interaction data, simulator interventions, or multimodal world grounding rather than text alone?
+- Can future interventional interpretability methods distinguish decodable causal variables from truly mechanism-governing internal representations at frontier scale?
+- Which observed causal-task gains come from stored textual world knowledge, which come from learned abstraction, and which require external tool scaffolding?

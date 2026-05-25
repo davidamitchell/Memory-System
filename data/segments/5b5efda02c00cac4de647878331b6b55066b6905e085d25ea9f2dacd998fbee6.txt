@@ -1,0 +1,1 @@
+- [fact] Source classification for Section D: bank-modernisation reports from vendors and consultancies are treated as primary disclosures about observed client patterns but secondary evidence for industry-wide conclusions; McKinsey sector analysis is treated as secondary synthesis.

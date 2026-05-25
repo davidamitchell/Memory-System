@@ -1,0 +1,1 @@
+**Constraints:** Publicly accessible sources. Neuroscience and cognitive science literature (Friston, Clark, Seth, Helmholtz). LLM mechanistic interpretability papers (arXiv, 2020–2026). Web search for recent debate and synthesis pieces.

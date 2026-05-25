@@ -1,0 +1,8 @@
+**Key findings:**
+1. The controlled evidence for individual task speed improvement is strong: 55.8% faster (RCT) and 40–55% faster (ANZ internal trial) for well-specified coding tasks. These numbers do not generalise to complex multi-file or architectural work.
+2. Google (Sundar Pichai, 2024 earnings): >25% of new code is AI-generated, reviewed by engineers. This is the largest single documented deployment of AI code generation in production.
+3. DORA 2024: higher AI adoption associates with worse delivery stability (–7.2%) and throughput (–1.5%) at the team level, not better. The individual-to-team translation requires workflow redesign.
+4. The agentic frontier has advanced from 14% (Devin, SWE-bench, March 2024) to ~80% on curated tasks and ~46% on multi-file enterprise tasks by early 2026. Headline leaderboard scores overstate generalised capability.
+5. All major enterprise deployments maintain mandatory human review before deployment. Type 3 (autonomous deployment) is not in production at scale.
+6. IP: AI-generated code without meaningful human authorship is uncopyrightable. Code provenance tracking is an emerging governance practice.
+7. No NZ technology companies have published SWE AI outcome data. ANZ's deployment (Australian parent) is the closest regional case.

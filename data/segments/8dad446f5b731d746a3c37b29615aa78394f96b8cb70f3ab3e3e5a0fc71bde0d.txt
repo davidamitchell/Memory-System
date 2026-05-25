@@ -1,0 +1,1 @@
+1. **LSA utility**: The item's scope includes LSA/LSE as a primary technique, but the evidence shows LSA is superseded for agent context retrieval. This is not a contradiction — LSA is worth understanding to frame the historical baseline and to know when *not* to use it. The scope is accurate; the conclusion is that LSA is not a recommended primary technique.

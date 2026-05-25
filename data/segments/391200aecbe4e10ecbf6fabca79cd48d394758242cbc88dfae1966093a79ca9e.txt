@@ -1,0 +1,4 @@
+- The repository root is the Open-Brain installation.
+- `README.md` is the user-facing introduction to Open-Brain.
+- `getting-started-prompt.md` preserves the original vector-storage concept (archived).
+- The ontology-based MCP server is under active design; see `_docs/design/ontology-system-design.md`.

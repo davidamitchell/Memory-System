@@ -1,0 +1,5 @@
+2. **Coverage metric design** — Define measurable coverage metrics derivable from YAML front-matter:
+   - *Tag density per domain*: for each domain, how many backlog items are tagged with its primary tags?
+   - *Completion rate per domain*: of all items ever added per domain, what fraction has been completed?
+   - *Recency balance*: when was the most recent item added per domain, and when was the most recent item completed per domain?
+   - *Priority distribution*: what fraction of backlog items are `high` vs. `medium` vs. `low`? Is there priority inflation (everything becomes high)?

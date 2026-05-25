@@ -1,0 +1,4 @@
+1. Review empirical evidence on tone, confidence, and truth-perception effects in AI-assisted review.
+2. Map required transparency and oversight obligations to concrete user-interface and workflow controls.
+3. Analyse legal and operational accountability implications when analysts rely on unsupported AI output.
+4. Produce an auditable control checklist for banking compliance implementations.

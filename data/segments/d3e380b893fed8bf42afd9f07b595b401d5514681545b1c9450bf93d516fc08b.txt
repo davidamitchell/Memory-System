@@ -1,0 +1,1 @@
+5. ChromaDB and LanceDB are embeddings-first. They do not provide a relational query layer — a schema with `items`, `tags`, `sources`, and `processed` tables would still require SQLite alongside them. Running two separate database files for the same corpus adds complexity without benefit.

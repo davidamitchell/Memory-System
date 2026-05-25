@@ -1,0 +1,10 @@
+Prior completed research qualifying the same control surfaces:
+- [UELGF complete framework synthesis](https://davidamitchell.github.io/Research/research/2026-04-27-uelgf-synthesis-complete-framework.html)
+- [UELGF policy architecture and 8-layer context](https://davidamitchell.github.io/Research/research/2026-04-27-uelgf-policy-architecture-8-layer-context.html)
+- [PDP universal policy synchronisation and integrity](https://davidamitchell.github.io/Research/research/2026-04-27-pdp-universal-policy-synchronisation-integrity.html)
+- [PAP dynamic policy profiling and proportionality](https://davidamitchell.github.io/Research/research/2026-04-27-pap-dynamic-policy-profiling-proportionality.html)
+- [PIP invariant anomaly detection](https://davidamitchell.github.io/Research/research/2026-04-27-pip-invariant-anomaly-detection.html)
+- [Out-of-band policy invalidation and remediation](https://davidamitchell.github.io/Research/research/2026-04-27-out-of-band-policy-invalidation-remediation.html)
+- [AI agent identity and access management in the enterprise](https://davidamitchell.github.io/Research/research/2026-04-26-ai-agent-identity-access-management-enterprise.html)
+- [AI low-code observability and telemetry governance](https://davidamitchell.github.io/Research/research/2026-04-26-ai-lowcode-observability-telemetry-governance.html)
+- [Cryptographic intent preservation at runtime evaluation](https://davidamitchell.github.io/Research/research/2026-04-27-cryptographic-intent-preservation-runtime-evaluation.html)

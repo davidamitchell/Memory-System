@@ -1,0 +1,1 @@
+9. [inference] Cognitive debt (the accumulated understanding deficit from LLM code generation replacing understand-while-coding) is the primary reliability risk at factory scale: at 1,300 PRs/week, even low defect rates that pass automated testing produce meaningful production-failure volume, and formal specification provides the principal structural countermeasure.

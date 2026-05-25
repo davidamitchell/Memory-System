@@ -1,0 +1,1 @@
+2. The claim that the Copilot CLI approach "runs within the 5-minute constraint" is consistent with the observed behaviour of `research-review.yml`, which completes in under 5 minutes for all observed runs.

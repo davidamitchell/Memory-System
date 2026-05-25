@@ -1,0 +1,6 @@
+- **Type:** knowledge, artefact
+- **Description:** Specification of a 9-dimension LLM-as-judge evaluation rubric for this repository's research loop agent, including dimension definitions, scoring anchors (1–5), hard FAIL conditions, gold dataset requirements, CI workflow design, and tooling selection rationale. The artefact is the rubric specification embedded in this item and suitable for extraction as `docs/eval/research-rubric-prompt.md`.
+- **Key sources:**
+  1. Hamel Husain "Your AI Product Needs Evals" — https://hamel.dev/blog/posts/evals/
+  2. Pydantic LLM-as-a-Judge guide — https://pydantic.dev/articles/llm-as-a-judge
+  3. Research/completed/2026-03-10-agent-evaluation-cross-repo-analysis.md (prior art: 5-component MVF framework)

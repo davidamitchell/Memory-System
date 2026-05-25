@@ -1,0 +1,8 @@
+**In scope:**
+- The representation formalism for asset-level intent: the triple (authorised-capability-set, authorised-data-scope, authorised-action-envelope), each component independently verifiable against tool calls
+- The Ricardian Contract architecture applied to intent: binding a human-readable intent statement to a machine-processable capability declaration via a content-addressed hash
+- The formal amendment protocol: cryptographically chaining governed scope extensions to the original intent, preserving lineage while updating the evaluable baseline
+- Semantic stability analysis: conditions under which a bit-for-bit identical intent artefact produces false positives (flagging legitimate evolution as task creep) or false negatives (failing to flag genuine drift)
+- The Data, Information, Knowledge, Wisdom (DIKW) transformation function from tool-call Data to the Knowledge level of the intent representation: what the PDP needs to evaluate a tool call against the intent triple
+- The Language Designed for Large Language Model (LLM) Agent Output constraint: the representation must be a format that agents can evaluate against, not just humans read
+- Intent-Driven Development (IDD) applied to the Getting Started phase intent capture

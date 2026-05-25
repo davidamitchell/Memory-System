@@ -1,0 +1,5 @@
+[inference] The four native capabilities operate at different layers and serve different audiences:
+- Process Universe: design-time reference for process architects and implementation teams
+- Flow Designer: runtime automation for developers/admins configuring what the system does automatically
+- Playbooks: runtime guidance for agents executing manual process steps
+- Process Mining: analytical discovery for process owners and improvement teams identifying deviations

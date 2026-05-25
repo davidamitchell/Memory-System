@@ -1,0 +1,1 @@
+**[fact]** The owner accesses the repo via GitHub website / iOS app only. A `workflow_dispatch`-triggered GitHub Actions workflow can run the agenda analysis and post results as a GitHub issue comment, making results visible without a local terminal. This is the prescribed pattern for owner-accessible reporting in this repo. Source: AGENTS.md "Consequences for tooling design".

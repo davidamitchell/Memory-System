@@ -1,0 +1,3 @@
+- Memory files live in `/meetings`, `/journal`, and `/projects`.
+- Filename convention: `YYYY-MM-DD-<kebab-case-title>.md`.
+- Every memory file should end with a `## Related` section linking to related files for human navigation.

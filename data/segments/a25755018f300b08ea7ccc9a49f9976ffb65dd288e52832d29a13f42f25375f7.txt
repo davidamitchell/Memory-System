@@ -1,0 +1,1 @@
+Robust and verifiable risk-measurement methods remain an open challenge, so the metric formulas proposed here should be treated as operational starting points rather than settled industry standards. [inference; source: https://www.nist.gov/itl/ai-risk-management-framework]

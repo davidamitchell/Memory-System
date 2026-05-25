@@ -1,0 +1,1 @@
+A structured protocol that keeps any AI agent working in this repository focused, reduces context drift, manages complexity, leverages available skills, and produces a system that measurably improves session over session.

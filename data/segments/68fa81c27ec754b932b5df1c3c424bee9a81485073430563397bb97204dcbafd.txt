@@ -1,0 +1,4 @@
+**Branch B — Theory of Constraints (TOC) analysis**
+- B1: Is software engineering capacity genuinely the system constraint in most organisations today?
+- B2: What does TOC predict happens when the constraint is removed or dramatically reduced?
+- B3: What becomes the new constraint after software scarcity is resolved?

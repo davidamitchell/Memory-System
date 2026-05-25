@@ -1,0 +1,3 @@
+- How do TOC practitioners handle dynamic constraints (where the bottleneck shifts frequently)? Does backpressure via the rope still function effectively when the drum location changes?
+- Is there peer-reviewed evidence of TOC/DBR applied to knowledge work or software development contexts?
+- How does the Velocity Scheduling System's CSJ-as-constraint model relate to established knowledge management frameworks?

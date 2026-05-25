@@ -1,0 +1,1 @@
+In a production pipeline with uncontrolled inputs, how does the trade-off between the flexibility of an agentic system and the predictability of a deterministic execution model affect the auditability and formal verification of the system's runtime state?

@@ -1,0 +1,1 @@
+The issue that seeds this item draws a sharp contrast: LLMs are "random next token generators" while humans "constantly generate models of the world." This intuition maps onto a genuine scientific debate.

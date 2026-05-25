@@ -1,0 +1,14 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Dense embeddings outperform LSA on MTEB | MTEB benchmark; markaicode.com embedding comparison (2024) | high | Multiple independent sources |
+| GraphRAG outperforms standard RAG on global queries | Edge et al. arXiv:2404.16130 | high | Primary source; peer-reviewed at Microsoft Research |
+| GraphRAG requires full rebuild for incremental updates | arXiv:2410.05779 (LightRAG framing); GraphRAG docs | high | Architectural fact, confirmed across sources |
+| LightRAG 10–100× lower token costs, matching accuracy | arXiv:2410.05779; EMNLP 2025 | high | Primary source with benchmark data |
+| HippoRAG +20% multi-hop QA, 10–30× cheaper | arXiv:2405.14831; NeurIPS 2024 | high | Peer-reviewed primary source |
+| RAPTOR +20pp on QuALITY, F1 55.7% on QASPER | arXiv:2401.18059; ICLR 2024 | high | Peer-reviewed primary source |
+| Concept maps not machine-readable for agent retrieval | realkm.com (2024); NVIDIA KG+LLM blog | high | Consistent across practitioner and academic sources |
+| KG subsumes concept map navigability for machine use | NVIDIA KG+LLM blog; MDPI KG+LLM survey (2025) | high | Multiple independent sources |
+| RRF native in all major vector search engines | Azure AI Search docs; Milvus; MongoDB Atlas (2024) | high | Verified across 6+ platforms |
+| KG construction <$1 for 500 items | Estimated from arXiv:2410.05779 token benchmarks | medium | Estimate; depends on model choice |
+| Five-layer architecture maps onto Letta framework | Letta blog; 2026-03-02-agent-memory-management-context-injection.md KF12 | high | Internal consistency across research items |
+| Knowledge rot risk for AI/ML items >12–18 months | Enterprise wiki post-mortems; Zep/Graphiti temporal design | medium | No domain-specific timing data; extrapolated |

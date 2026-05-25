@@ -1,0 +1,1 @@
+10. **The rubric must be embedded at item-addition time, not only at review time.** Priority inflation occurs because the default is `medium` and there is no friction at creation. The CLI template in `src/research/cli.py` and the AGENTS.md item-addition instructions should reference the rubric. [medium confidence — behavioural inference]

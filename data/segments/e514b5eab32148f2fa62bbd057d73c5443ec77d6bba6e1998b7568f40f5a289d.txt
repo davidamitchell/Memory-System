@@ -1,0 +1,1 @@
+10. The three structural hard FAILs (acronym expansion, executive summary quality, Evidence Map coverage) represent the most actionable additions to the current quality gate because the existing `research-review.yml` already checks citation discipline, speculation control, and AI slop removal — the new gate closes the gaps not covered by the existing workflow. Confidence: high.

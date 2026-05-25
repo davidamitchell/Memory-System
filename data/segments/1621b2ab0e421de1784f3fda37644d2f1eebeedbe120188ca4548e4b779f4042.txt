@@ -1,0 +1,1 @@
+Base foundation models are trained on the public internet. They encode broad world knowledge but have two structural gaps for organisational use:

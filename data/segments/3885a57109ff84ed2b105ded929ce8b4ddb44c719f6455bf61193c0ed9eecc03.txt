@@ -1,0 +1,4 @@
+**Scope confirmed:**
+- In: LSA/LSE, knowledge graphs (including GraphRAG, LightRAG, HippoRAG), concept maps, document compression (RAPTOR, abstractive summarisation), knowledge layering, and context prioritisation signals (RRF, graph centrality, cosine similarity).
+- Out: full RAG system implementation, memory storage benchmarks, agent decision-making frameworks, training-time encoding.
+- Scale target: 100–10,000 document corpora, local-first/open-source-compatible.

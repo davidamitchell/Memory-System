@@ -1,0 +1,1 @@
+9. **D1 (AI Strategy & Governance) should have a protected minimum of ≥2 backlog items.** As the domain most directly tied to the owner's professional context (NZ financial services AI), it should not be allowed to drain to zero by the autonomous loop without triggering a coverage alert. [inference — professional context assessment]

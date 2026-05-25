@@ -1,0 +1,5 @@
+**Cluster C: Emergent strategies in production tooling**
+- C1. How does GitHub Copilot Workspace implement phase-aware decomposition?
+- C2. What is Aider's commit-oriented prompting approach, and what context management principles does it reveal?
+- C3. What do practitioner accounts say about bimodal use (acceleration vs. exploration modes)?
+- C4. What is the role of Claude Code/Copilot Coding Agent skills and SDLC phase guidance?

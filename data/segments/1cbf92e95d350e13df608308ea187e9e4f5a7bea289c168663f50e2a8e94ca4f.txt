@@ -1,0 +1,1 @@
+**Constraints:** Evidence must be from named organisations with disclosed data. Speculative claims about future states must be labelled [inference] or [assumption]. Primary sources (peer-reviewed papers, earnings calls, official company disclosures) receive higher weight than secondary aggregators.

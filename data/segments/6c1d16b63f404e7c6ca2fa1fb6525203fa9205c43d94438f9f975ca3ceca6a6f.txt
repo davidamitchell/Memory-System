@@ -1,0 +1,5 @@
+This item connects directly to:
+- `2026-03-14-reliable-software-llm-era` (cognitive debt and the Quint formal specification language approach)
+- `2026-03-10-formal-spec-intent-alignment-agentic-coding` (the formal specification hierarchy from informal to fully verified)
+- `2026-03-16-intent-driven-development` (layered intent artefacts and human-in-the-loop control)
+- The ongoing AI agent risk and guardrails theme

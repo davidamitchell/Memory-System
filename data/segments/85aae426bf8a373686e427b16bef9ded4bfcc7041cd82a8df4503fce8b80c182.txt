@@ -1,0 +1,1 @@
+The strongest contrary evidence is narrower: some models can generate good causal arguments from text metadata, and some controlled interpretability studies recover structured internal algorithms, which suggests partial abstraction rather than mere bag-of-words shallowness. [inference; source: https://openreview.net/forum?id=mqoxLkX210; https://arxiv.org/abs/2301.05217]

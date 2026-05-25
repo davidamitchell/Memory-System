@@ -1,0 +1,7 @@
+**[inference]** The custom Copilot CLI approach is the correct choice for this repository. It:
+1. Requires no new credentials (COPILOT_GITHUB_TOKEN already approved and in use).
+2. Follows the established pattern in `research-review.yml` — extending it rather than replacing it.
+3. Allows the rubric prompt to be version-controlled as a plain `.md` file in the repository, visible to the owner and editable via the GitHub web interface.
+4. Can produce structured output (dimension scores + reasoning) by designing the prompt to output a machine-parseable format (e.g., a table with scores and a final OVERALL line).
+5. Runs within the 5-minute constraint (current review workflow completes well under 5 minutes per item).
+The main risk is that the Copilot CLI model version may change, causing evaluation drift. Mitigation: version the rubric prompt and compare scores over time.

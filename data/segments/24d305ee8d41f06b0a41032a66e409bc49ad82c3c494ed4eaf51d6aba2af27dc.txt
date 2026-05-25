@@ -1,0 +1,30 @@
+```
+What rubric and CI design should evaluate the research loop agent's output?
+│
+├── Q1: What are the measurable quality dimensions of a completed research item?
+│   ├── Q1a: What structural elements are required by the research protocol?
+│   ├── Q1b: Which elements are most diagnostic of agent failure modes?
+│   └── Q1c: Which elements can be scored deterministically vs. require LLM judgment?
+│
+├── Q2: What does a 1–5 rubric look like for each dimension?
+│   ├── Q2a: What explicit anchors distinguish a score-1 response from a score-5?
+│   ├── Q2b: Can the rubric be specified without requiring the judge to make subjective quality assessments?
+│   └── Q2c: How do pydantic-evals and similar tools structure their rubric prompts?
+│
+├── Q3: What properties define a "known-good" gold dataset item?
+│   ├── Q3a: What minimum evidence requirements constitute a passing item?
+│   ├── Q3b: How should the gold set be populated initially?
+│   └── Q3c: How should the gold set be refreshed as the protocol evolves?
+│
+├── Q4: How should the CI workflow be designed?
+│   ├── Q4a: What triggers the eval (push to main, PR, or scheduled)?
+│   ├── Q4b: Which model is the cost-optimal judge given the 5-minute constraint?
+│   ├── Q4c: What is the per-item token cost for a full rubric eval?
+│   └── Q4d: How should pass/fail thresholds be configured to avoid false positives?
+│
+└── Q5: Which tooling approach fits this repository's constraints?
+    ├── Q5a: Does DeepEval fit? What credentials does it require?
+    ├── Q5b: Does Pydantic Evals fit? What does it require beyond COPILOT_GITHUB_TOKEN?
+    ├── Q5c: Does agentevals fit? What does it require?
+    └── Q5d: Does a custom Copilot-CLI-based approach fit the constraint set?
+```

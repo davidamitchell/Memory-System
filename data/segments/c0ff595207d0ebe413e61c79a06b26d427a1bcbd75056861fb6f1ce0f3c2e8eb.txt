@@ -1,0 +1,5 @@
+**In scope:**
+- A formal comparison of explainability across local explainability, explaining one concrete output, global explainability, explaining overall system behaviour, and contrastive explainability, explaining why one outcome occurred instead of another
+- Whether deterministic distributed software loses enough practical transparency at production scale to approach the opacity of LLM-based systems
+- Whether any explainability gap is structural, present before scaling, or mainly contingent on tooling, observability, and system design
+- Governance and audit implications where explainability is needed for reconstruction, contestability, and accountability

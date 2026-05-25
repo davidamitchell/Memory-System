@@ -1,0 +1,1 @@
+**[fact]** `src/research/item.py` provides `ResearchItem.from_file(path)` which reads YAML front-matter into a dataclass with `tags`, `priority`, `status`, `added`, `completed`, `blocks`. All fields needed for agenda analysis are already parsed. Source: direct inspection of `src/research/item.py`.

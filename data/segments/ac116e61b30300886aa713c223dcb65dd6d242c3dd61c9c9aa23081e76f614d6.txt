@@ -1,0 +1,3 @@
+- `search_brain(query: str) → list[dict]` — semantic search over all memory files.
+- `add_memory(title: str, content: str, folder: str) → str` — creates a new timestamped memory file.
+- `refactor_memory(file_path: str, new_content: str) → str` — overwrites an existing memory file.

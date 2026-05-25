@@ -1,0 +1,4 @@
+**Stuck correction** (same item fails twice):
+1. Note the blocker as a new `BACKLOG.md` item.
+2. Move past the item — do not spin.
+3. Record the skip in the plan checklist with a ↩ marker and a one-line reason.

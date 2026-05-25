@@ -1,0 +1,1 @@
+Overparameterized models can interpolate training data and still generalize on held-out data, so predictive success alone no longer cleanly distinguishes explanation from curve-fitting. [fact; source: https://research.google/pubs/understanding-deep-learning-requires-rethinking-generalization/; https://arxiv.org/abs/1812.11118; https://openreview.net/forum?id=B1g5sA4twr]

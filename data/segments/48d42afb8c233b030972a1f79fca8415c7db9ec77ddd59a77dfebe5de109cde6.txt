@@ -1,0 +1,1 @@
+MADR is intentionally minimal — it avoids the verbose "options considered" tables found in other ADR formats when they are not needed, but accommodates them when they are. Files are plain Markdown, which means they are readable without tooling, diff-friendly, and can be stored in any git repository.

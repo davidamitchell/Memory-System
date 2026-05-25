@@ -1,0 +1,4 @@
+**Assumptions with low empirical support:**
+- [assumption] "Most organisations" have software engineering as their primary constraint; this is plausible but not empirically verified at scale.
+- [assumption] The 5–10x team-size reduction claimed by Elad Gil is directionally plausible but not measured in controlled settings.
+- [assumption] The 2–4 year window for mid-tier banks is a judgment, not an empirical finding.

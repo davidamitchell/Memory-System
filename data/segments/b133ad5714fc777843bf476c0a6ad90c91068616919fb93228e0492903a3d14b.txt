@@ -1,0 +1,1 @@
+A skill is a modular unit of agent instructions. Where `.github/copilot-instructions.md` defines the global rules that apply to every agent action in this repository, a skill provides deep, task-specific guidance for a particular class of work — writing a backlog item, authoring a decision record, reviewing code, or conducting research.

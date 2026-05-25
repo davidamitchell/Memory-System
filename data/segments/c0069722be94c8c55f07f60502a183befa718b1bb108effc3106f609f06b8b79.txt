@@ -1,0 +1,1 @@
+[inference] This confirms the finding from `2026-03-10-formal-spec-intent-alignment-agentic-coding.md`: type-constrained decoding is the highest-resolution currently-deployed structural intervention — but it occupies level 3 of the specification hierarchy and constrains output to an existing language, not a purpose-built one.

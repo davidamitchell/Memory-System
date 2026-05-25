@@ -1,0 +1,3 @@
+- Does `.github/copilot-setup-steps.yml` run before the Copilot coding agent reads instructions or after?
+- Does Claude iOS `code` feature clone the repo or operate via GitHub API?
+- Can a single `devcontainer.json` serve both Codespaces and the Copilot coding agent?

@@ -1,0 +1,1 @@
+**Constraints:** Focus on techniques with published evidence of effectiveness at 100–10,000 document scale. Prefer implementations that remain local-first / open-source-compatible. Academic and practitioner sources both acceptable.

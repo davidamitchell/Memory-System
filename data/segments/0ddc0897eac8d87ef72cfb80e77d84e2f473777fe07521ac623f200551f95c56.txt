@@ -1,0 +1,1 @@
+Skills live in the `.github/skills/` submodule (pointing to `davidamitchell/Skills`). Each skill is a `SKILL.md` file in its own subdirectory. An agent that needs to perform a task covered by a skill reads that skill's SKILL.md before starting, rather than improvising its own approach.

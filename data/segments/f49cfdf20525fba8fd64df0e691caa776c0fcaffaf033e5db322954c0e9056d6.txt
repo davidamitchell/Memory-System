@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Pattern guide for attaching ODRL policies to Knowledge Graph assets, evaluating them with external identity and policy engines, and separating query-time filtering from post-access duty execution. [inference; source: https://www.w3.org/TR/odrl-model/; https://w3c.github.io/odrl/bp/; https://w3c.github.io/odrl/formal-semantics/]
+- Links:
+  - https://www.w3.org/TR/odrl-model/
+  - https://w3c.github.io/odrl/bp/
+  - https://w3c.github.io/odrl/formal-semantics/

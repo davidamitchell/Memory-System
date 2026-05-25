@@ -1,0 +1,1 @@
+Six constraints govern all design decisions. See [ADR-0004](../adr/0004-provenance-model-and-control-plane.md) for rationale.

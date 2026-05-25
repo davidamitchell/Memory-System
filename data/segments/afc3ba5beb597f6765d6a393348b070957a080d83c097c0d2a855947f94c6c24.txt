@@ -1,0 +1,5 @@
+**Out of scope:**
+- General data mesh architecture (except as context for ontology adoption)
+- Implementation of a specific data product ontology in this repository
+- Vendor-proprietary data product schemas not grounded in a public ontology
+- Full tutorial on ontology languages (Resource Description Framework (RDF), Web Ontology Language (OWL), SPARQL)

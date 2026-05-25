@@ -1,0 +1,1 @@
+- [fact] Source classification for Section E: alexop.dev is treated as a primary practitioner source for the claimed factory investment pattern; Stripe's publicly described tooling practices are treated as primary company evidence; the investment reallocation conclusion remains an inference from those sources plus the prior repository items.

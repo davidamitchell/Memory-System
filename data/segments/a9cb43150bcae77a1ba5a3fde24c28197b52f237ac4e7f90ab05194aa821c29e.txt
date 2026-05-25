@@ -1,0 +1,3 @@
+- Under what conditions does a deterministic distributed system become so dependency-heavy that its practical local replay advantage also disappears?
+- Which governance artefacts, traces, rules, approvals, or counterfactual explanations, are most useful to non-specialist reviewers in each system class?
+- How much could advances in tracing internal model circuits reduce the local explainability deficit for multi-step LLM-based systems without eliminating their residual variance?

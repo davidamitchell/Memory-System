@@ -1,0 +1,12 @@
+1. **Mini-Retro** (four questions from §7 of `copilot-instructions.md`):
+   - Did the process work?
+   - What slowed down or went wrong?
+   - What single change would prevent this next time?
+   - Is this a pattern?
+2. **Act on the retro** — do not just answer the questions. If the answer is "document it", document it now. If it is "add a backlog item", add it now.
+3. **Append to `PROGRESS.md`** — dated entry with session summary and mini-retro.
+4. **Update `CHANGELOG.md`** under `[Unreleased]` if any user-visible behaviour changed.
+5. **Write ADRs** for any non-trivial architectural or design decisions made this session.
+6. **Expand the glossary** for any new terms introduced.
+7. **Verify the "Done" checklist** from §7 of `copilot-instructions.md` item by item.
+8. **Run `report_progress`** one final time to push all changes.

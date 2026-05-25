@@ -1,0 +1,6 @@
+3. **Emergent strategies in production** — Investigate how leading tools and communities have operationalised phase-aware prompting:
+   - GitHub Copilot Workspace (phase-aware task decomposition)
+   - Cursor (context-window management, codebase-aware prompts)
+   - Claude Code / Copilot Coding Agent (skills, AGENTS.md, structured instructions)
+   - Aider (commit-oriented prompting)
+   - OpenAI Codex successor patterns

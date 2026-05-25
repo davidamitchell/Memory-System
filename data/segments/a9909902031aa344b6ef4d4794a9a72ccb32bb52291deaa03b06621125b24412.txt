@@ -1,0 +1,1 @@
+[fact] Stripe's Minions shows that software-factory patterns can operate in production at enterprise scale, while DORA 2024 shows that adding AI tools without redesigning the operating model harms team outcomes. Sources: https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents, https://services.google.com/fh/files/misc/2024_final_dora_report.pdf

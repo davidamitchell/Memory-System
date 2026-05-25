@@ -1,0 +1,1 @@
+**Constraints:** Builds on `2026-03-05-h-neurons-in-llms` — must be researched after that item is complete. Much of this item will require first-principles reasoning from the paper's findings plus the broader pre-training and training-dynamics literature, as direct pre-training interventions for H-Neuron suppression are not yet established in the literature.

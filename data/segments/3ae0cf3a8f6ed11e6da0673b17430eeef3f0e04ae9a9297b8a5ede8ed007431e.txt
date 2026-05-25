@@ -1,0 +1,3 @@
+**Branch B, where does information asymmetry enter?**
+- B1: Why can seekers not fully know the value of expert knowledge before disclosure?
+- B2: Why do credentials and reputation only partly solve that problem?

@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Structured comparison of where explainability diverges and converges between multi-step Large Language Model-based systems and deterministic software systems, with emphasis on local replay, global opacity, and governance-grade explanation surfaces. [inference; source: https://arxiv.org/abs/1702.08608; https://sre.google/sre-book/monitoring-distributed-systems/; https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/reproducible-output]
+- Links:
+  - https://arxiv.org/abs/1702.08608
+  - https://arxiv.org/abs/1711.00399
+  - https://sre.google/sre-book/monitoring-distributed-systems/

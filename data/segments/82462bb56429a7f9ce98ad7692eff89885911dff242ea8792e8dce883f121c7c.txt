@@ -1,0 +1,1 @@
+If we decide to use a local database for indexing and state (rather than JSON files), what are the requirements and what technology should we choose?

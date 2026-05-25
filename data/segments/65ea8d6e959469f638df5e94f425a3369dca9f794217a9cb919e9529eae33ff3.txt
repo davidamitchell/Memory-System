@@ -1,0 +1,3 @@
+**Quantified uncertainty:**
+- The 80% figure (inaccurate process maps) comes from a single practitioner survey (CTMS/Ivanti LIVE), not a multi-study meta-analysis. It is directionally credible but not statistically robust.
+- The 56% figure (no time to keep diagrams current) is from the same CTMS source set. Both figures are consistent with the broader practitioner consensus that process documentation decay is widespread.

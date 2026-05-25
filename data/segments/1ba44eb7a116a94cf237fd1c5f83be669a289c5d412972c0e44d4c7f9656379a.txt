@@ -1,0 +1,4 @@
+1. Identify empirical research on alert overload, over-reliance on automated recommendations (automation bias), and reviewer throughput limits.
+2. Define metrics for meaningful challenge capacity, including review depth, overturn rates, time-on-task, and escalation quality.
+3. Assess intervention designs such as rest cycles, random challenge sampling, and simulated failure injections that deliberately plant errors.
+4. Derive an audit-ready framework for testing and evidencing effective human challenge capacity.

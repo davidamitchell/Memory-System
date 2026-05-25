@@ -1,0 +1,2 @@
+*Measure what the pipeline extracts against what it should extract.*
+Define precision/recall metrics for concept extraction, alias grouping, and relation extraction. Run the existing rule-based extractor against the glossary corpus and record the baseline scores. This harness is the gate for all subsequent phases: every new extraction strategy is only accepted if it meets or exceeds baseline on the structured corpus.

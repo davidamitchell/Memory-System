@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Present-day Large Language Models are best supported as statistical text optimisers with partial and uneven causal competence, not as verified invariant causal world models. [inference; source: https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-18-rq2-4-causal-hierarchy-formal-limits.md; https://openreview.net/forum?id=mqoxLkX210; https://opencausalab.github.io/CaLM]
+- Links:
+  - https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-18-rq2-4-causal-hierarchy-formal-limits.md
+  - https://arxiv.org/abs/2404.14082
+  - https://openreview.net/forum?id=mqoxLkX210

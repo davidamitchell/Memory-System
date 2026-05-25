@@ -1,0 +1,8 @@
+**In scope:**
+- The specific finding in arXiv:2512.01797 that H-Neurons are already predictive in base pre-trained models — before RLHF or instruction tuning
+- What it means mechanistically for a neuron to "emerge during pre-training": what training signal causes these neurons to form?
+- The relationship between pre-training data characteristics (noise, misinformation, distributional bias) and H-Neuron formation
+- The relationship between the next-token prediction objective and the encoding of over-compliance behaviour at the neuron level
+- What RLHF and instruction tuning can and cannot do to reverse or suppress H-Neurons that already exist
+- Implications for scaling: does scaling pre-training compute increase or decrease H-Neuron density?
+- Practical interventions at the pre-training stage: data curation, curriculum learning, objective modification, architectural choices

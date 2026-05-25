@@ -1,0 +1,7 @@
+**8.1 Citation-discipline:**
+- Acronym scan: LLM, DSL, FSM, CFG, IR, KV, PLDI, MECE — all expanded on first use. ✓
+- Citation check: every factual claim has a URL. ✓
+- Web-search-synthesis prohibition: no claim attributes findings to "multiple sources" without naming each. ✓
+- Primary-source requirement: PLDI 2025 paper cited via arXiv (primary); SGLang via NeurIPS proceedings (primary); LMQL via arXiv (primary). ✓
+- Scope-match check: no source cited outside its stated scope. ✓
+- Epistemic label audit: all inferences labelled; all assumptions labelled. ✓

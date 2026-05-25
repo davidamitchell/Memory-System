@@ -1,0 +1,1 @@
+[inference] Stripe's production evidence and DORA's negative results point to the same conclusion: software factories require an operating-model redesign rather than simple tool adoption. Sources: https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents, https://services.google.com/fh/files/misc/2024_final_dora_report.pdf

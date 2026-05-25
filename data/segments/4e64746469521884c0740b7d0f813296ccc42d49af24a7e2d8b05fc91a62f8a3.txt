@@ -1,0 +1,2 @@
+[fact] The PayPal declarative DSL (arXiv:2512.19769, 2025) is a declarative DSL for orchestrating LLM agent *workflows* — the DSL is written by engineers to orchestrate agents, not produced by agents as output. The LLM executes within the DSL's control flow; the DSL is not the LLM's output language.
+Source: https://arxiv.org/pdf/2512.19769

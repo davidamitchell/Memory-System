@@ -1,0 +1,8 @@
+**Completeness check:**
+- §0 Initialise: ✅ Research question restated; scope, constraints, output format confirmed
+- §1 Question Decomposition: ✅ Six branches covering all approach sub-questions; each branch decomposed to atomic questions
+- §2 Investigation: ✅ All sources checked; claims labelled [fact]/[inference]/[assumption]; evidence gathered for each atomic question
+- §3 Reasoning: ✅ Facts, inferences, and assumptions separated; no unsupported generalisations
+- §4 Consistency Check: ✅ One potential contradiction identified and resolved
+- §5 Depth and Breadth Expansion: ✅ Technical, economic, behavioural, professional, and historical lenses applied
+- §6 Synthesis: ✅ 12 key findings; all with confidence labels; evidence map complete

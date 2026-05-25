@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Research synthesis on Leanstral as a specialized Lean 4 proof-engineering agent, the surrounding Lean theorem-proving ecosystem, and why formal proofs must be combined with ordinary operational guardrails rather than treated as a standalone answer to agentic software risk.
+- Links:
+  - https://mistral.ai/news/leanstral
+  - https://lean-lang.org/doc/reference/latest/
+  - https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-code-deletes-developers-production-setup-including-its-database-and-snapshots-2-5-years-of-records-were-nuked-in-an-instant

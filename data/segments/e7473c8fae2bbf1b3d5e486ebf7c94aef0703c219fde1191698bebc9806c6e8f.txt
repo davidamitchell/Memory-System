@@ -1,0 +1,2 @@
+[fact] "Dafny as Verification-Aware Intermediate Language for Code Generation" (arXiv:2501.06283, 2025) proposes using Dafny — a formally verified language — as an intermediate step: LLMs generate Dafny specifications, which are mechanically verified, and then compiled to a target language. This positions Dafny (a human-designed formal verification language) as an LLM output target. Dafny is not purpose-built for LLM output; it is repurposed as one.
+Source: https://arxiv.org/pdf/2501.06283v1

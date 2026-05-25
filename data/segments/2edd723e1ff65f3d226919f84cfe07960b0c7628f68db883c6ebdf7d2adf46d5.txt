@@ -1,0 +1,1 @@
+Vector embeddings may still be used as an implementation detail within individual processors (e.g., concept clustering) but are no longer the primary retrieval and storage mechanism.

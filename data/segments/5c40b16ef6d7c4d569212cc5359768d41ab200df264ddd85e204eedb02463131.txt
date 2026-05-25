@@ -1,0 +1,8 @@
+**Section completeness:**
+- §0: research question restated, scope confirmed, prior research checked — complete
+- §1: six clusters covering all Approach sub-questions, each decomposed to atomic questions — complete
+- §2: all clusters investigated, every claim labelled fact/inference/assumption, sources cited — complete
+- §3: reasoning discipline applied, narrative glue removed, uncertainty quantified — complete
+- §4: consistency check completed, one structural gap surfaced and noted — complete
+- §5: five analytical lenses applied with substantive content in each — complete
+- §6: all seven synthesis components populated with specific content — complete

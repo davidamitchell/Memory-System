@@ -1,0 +1,1 @@
+**Output format:** Structured synthesis with evidence map, key findings, governance patterns, and NZ-specific section.

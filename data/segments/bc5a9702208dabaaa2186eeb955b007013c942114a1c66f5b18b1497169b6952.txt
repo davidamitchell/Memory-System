@@ -1,0 +1,4 @@
+**Branch C — Research drift detection**
+- C1. What does drift look like in this corpus?
+- C2. What statistical threshold separates intentional focus from problematic drift?
+- C3. What is an appropriate detection window (last N items added vs. last N days)?

@@ -1,0 +1,1 @@
+**[inference]** Concept maps are not natively machine-readable at the level of precision required for automated agent retrieval. CmapTools exports XML but the schema is designed for human navigation tools, not semantic query engines. Converting a concept map to RDF/OWL for SPARQL querying requires significant additional schema work.

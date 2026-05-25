@@ -1,0 +1,10 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| TOC rope implements backpressure as a time-based work release signal | Wikipedia -- Theory of Constraints; IJPR 2017 | high | Directly described in Goldratt's original text and confirmed by peer-reviewed order release study |
+| DBR originated in Goldratt and Fox's "The Race" (1986) | Wikipedia -- Theory of Constraints (cite 7) | high | Wikipedia cites the source directly |
+| TOC implementations consistently improve throughput and lead times | Balderstone and Mabin; Springer Systematic Review 2019 | high | Confirmed across multiple independent literature reviews |
+| TA measures backpressure costs via inventory and throughput metrics | Dugdale and Jones 1998; Springer TA chapter | high | Peer-reviewed study of UK manufacturers |
+| Five focusing steps provide the repeatable backpressure-design process | Goldratt 1984; Wikipedia | high | Foundational claim from primary source |
+| CSJ is the binding constraint in AI-enabled knowledge work | VSS article 2026 | medium | Practitioner analysis; consistent with TOC doctrine but not peer-reviewed |
+| CONWIP is a simpler backpressure variant than DBR | 6sigma.us CONWIP overview | medium | Industry overview; consistent with academic DBR literature |
+| DBR healthcare applications documented | Springer Systematic Review 2019 | medium | Systematic review confirms healthcare applications but individual studies not reviewed in depth here |

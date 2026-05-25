@@ -1,0 +1,1 @@
+This pattern is described in BACKLOG.md W-0012 and shaped into a build item as W-0102 in BACKLOG.md. It is not yet implemented.

@@ -1,0 +1,6 @@
+**Branch A — Survey the existing structured generation landscape**
+- A1. What approaches constrain what an LLM can emit (schema/grammar enforcement)?
+- A2. For each approach: is it designed for LLM-as-author, or for human-as-author?
+- A3. What is each approach's level on the specification hierarchy (level 1–5)?
+- A4. What failure mode(s) does each approach structurally address?
+- A5. What is the production maturity and adoption of each approach?

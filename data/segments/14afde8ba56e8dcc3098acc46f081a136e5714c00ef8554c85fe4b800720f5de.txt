@@ -1,0 +1,1 @@
+**Constraints:** Builds directly on Research Question 5.1, must connect back to formal verification theory from the seeded model-checking sources, must check the seeded sources even where they are replaced by accessible equivalents, and must use URL-backed citations throughout.

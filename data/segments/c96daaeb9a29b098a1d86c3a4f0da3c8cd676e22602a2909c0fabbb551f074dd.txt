@@ -1,0 +1,4 @@
+- Files are named `<kebab-case-topic>.md`
+- Each design document carries a **Status** (`draft` → `reviewed` → `accepted` → `superseded`)
+- When a design decision is finalised, a corresponding [ADR](../adr/README.md) is written and linked back here
+- Diagrams use [Mermaid](https://mermaid.js.org/) embedded in fenced code blocks (`\`\`\`mermaid`)

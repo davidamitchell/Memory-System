@@ -1,0 +1,4 @@
+**Constraints:**
+- Every factual claim about LeCun's argument must be tied to an accessible source URL checked in this session
+- Where a host page is accessible but a full transcript is not, the item must say so explicitly and lower confidence accordingly
+- The item must distinguish between what LeCun directly states, what follows as a synthesis from his accessible material, and what remains uncertain because transcript-level evidence was unavailable in this runtime

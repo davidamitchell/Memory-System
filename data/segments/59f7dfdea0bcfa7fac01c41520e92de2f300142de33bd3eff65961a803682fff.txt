@@ -1,0 +1,1 @@
+An Architecture Decision Record (ADR) is a lightweight governance document that captures why a significant technical decision was made, not just what was decided. The "why" is the part most likely to be forgotten, and the part most needed when the decision is later revisited or challenged.

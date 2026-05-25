@@ -1,0 +1,1 @@
+Triggered when the drift check (Phase 3) or a validation failure (Phase 4) signals a problem.

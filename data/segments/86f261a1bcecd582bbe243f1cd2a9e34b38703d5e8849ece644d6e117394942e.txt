@@ -1,0 +1,1 @@
+- **[inference]** The field is moving along a familiar sequence: search over enterprise content, then RAG over enterprise content, then hybrid systems that selectively internalise repeated domain structure while keeping fresh evidence external.

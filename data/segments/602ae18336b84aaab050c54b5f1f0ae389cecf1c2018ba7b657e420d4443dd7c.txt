@@ -1,0 +1,1 @@
+Concrete observable signals that indicate it is time to migrate from JSON + YAML to SQLite:

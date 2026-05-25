@@ -1,0 +1,4 @@
+- **C1. Designs that reduce information-processing demand**
+  - [fact; source: https://doi.org/10.1287/inte.4.3.28] Galbraith identifies slack resources and self-contained tasks as two primary ways to reduce information-processing demand under uncertainty.
+  - [fact; source: https://davidamitchell.github.io/Research/research/2026-03-12-team-size-limits-brooks-dunbar-network-theory.html] Coordination overhead rises rapidly as the number of relationships in a working group increases, which makes small, bounded, high-trust units easier to coordinate than large groups.
+  - [inference; source: https://doi.org/10.1287/inte.4.3.28; https://davidamitchell.github.io/Research/research/2026-03-12-team-size-limits-brooks-dunbar-network-theory.html] The lowest-friction relevant pathway is often achieved by shrinking the number of handoffs and owners a worker must traverse, while extra repositories or approval steps usually increase path cost.

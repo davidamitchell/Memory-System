@@ -1,0 +1,4 @@
+**Q2 - What are the true primitives and behavioural guarantees?**
+- Q2a. What platform-level properties come from Salesforce rather than from a specific FSC implementation?
+- Q2b. What platform-level properties come from nCino's product architecture and operating model?
+- Q2c. Are these properties unique to Salesforce FSC and nCino, or common across modern banking platforms?

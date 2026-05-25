@@ -1,0 +1,1 @@
+None of these is a "living process documentation" tool in the sense of an authoritatively maintained, human-readable process map connected to the operational reality. The closest approach is Playbooks (as a runtime representation of the intended process), but Playbooks require active maintenance when processes change.

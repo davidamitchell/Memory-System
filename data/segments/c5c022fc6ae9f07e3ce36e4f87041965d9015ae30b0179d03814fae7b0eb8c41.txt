@@ -1,0 +1,5 @@
+1. **Core mechanics** — Read the original 1865 Jevons argument and at least one modern economic treatment of the rebound effect. Distinguish direct rebound (same use, more of it), indirect rebound (money saved spent elsewhere), and economy-wide (macro) rebound.
+2. **Sector deep-dive** — Compile at least six historical examples across different sectors, documenting: the efficiency gain, the expected reduction in consumption, and the actual observed change in consumption.
+3. **Counter-examples** — Identify cases where efficiency improvements *did not* produce a demand rebound and characterise what structural factors suppressed the paradox (saturation, substitution, regulation, low income elasticity, etc.).
+4. **SWE / code-production commentary** — Survey who is writing or speaking about falling code costs and Jevons-style dynamics; capture their predictions and the mechanisms they propose.
+5. **Speculative framework** — Synthesise the above into a personal 1/5/10-year forecast, clearly labelled as speculation, anchored to the historical pattern.

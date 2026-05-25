@@ -1,0 +1,1 @@
+10. The existing `research-review.yml` workflow already implements LLM-as-judge document evaluation using the Copilot CLI; the rubric eval gate is an extension of this pattern, not a new architecture, and can reuse the same trigger, parsing, and issue-creation logic. Confidence: high.

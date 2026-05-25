@@ -1,0 +1,1 @@
+Triage decouples the two concerns that create capture friction: getting the information into the system (must be instant) and organising it correctly (can be deferred). By separating these, the inbox pattern eliminates the "what folder does this go in?" decision from the capture moment.

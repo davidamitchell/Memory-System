@@ -1,0 +1,1 @@
+3. **A five-domain taxonomy covers the corpus without gaps.** D1 AI Strategy & Governance; D2 Agentic Systems & Architecture; D3 Cognitive Science & Foundations; D4 Research Tooling & Delivery; D5 Knowledge Management & Process. All 48 items (backlog + completed) map to exactly one primary domain. [inference — derived from tag co-occurrence analysis]

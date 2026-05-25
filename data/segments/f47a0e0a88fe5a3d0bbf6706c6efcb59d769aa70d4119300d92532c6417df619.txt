@@ -1,0 +1,4 @@
+**Out of scope:**
+- Building a full automated cross-repo analysis pipeline
+- Evaluating non-research-loop agent implementations
+- Safety evaluation (OWASP LLM Top 10 integration) — this is a separate concern

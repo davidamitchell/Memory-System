@@ -1,0 +1,7 @@
+**Facts established:**
+- Current backlog has 25 items; priority distribution is 1 high (4%), 22 medium (88%), 2 low (8%) — severe medium inflation
+- D4 (Research Tooling & Delivery) dominates at 44% of backlog; D2 (Agentic Systems) is under-represented at 8%
+- D3 (Cognitive Science) has a 4-item cluster all spawned from one completed item — local drift from a single source
+- YAML front-matter fields `tags`, `priority`, `added`, `completed`, `blocks` are sufficient for all agenda analysis
+- Existing `src/research/item.py` and `src/research/cli.py` provide clean extension points
+- Owner's access model requires GitHub-triggerable reporting (workflow_dispatch → GitHub issue)

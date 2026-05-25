@@ -1,0 +1,4 @@
+- [Compliance Risks of Relying on Stochastic Large Language Model (LLM) Outputs for Governance, Privacy, and Regulatory Decisions](https://davidamitchell.github.io/Research/research/2026-05-09-compliance-risks-stochastic-llm-governance-decisions.html)
+- [Data Governance Standards and Regulations Applied to Artificial Intelligence (AI) Systems and Multi-Step Autonomous AI Deployments](https://davidamitchell.github.io/Research/research/2026-05-09-data-governance-standards-ai-agentic-applicability.html)
+- [How can enterprise data governance frameworks be consistently enforced within Artificial Intelligence (AI) and visual, minimal-code application environments?](https://davidamitchell.github.io/Research/research/2026-04-26-data-governance-ai-lowcode-enterprise-enforcement.html)
+- [What is Microsoft 365 Copilot Cowork and what are its enterprise governance risks?](https://davidamitchell.github.io/Research/research/2026-04-26-ms-copilot-cowork.html)

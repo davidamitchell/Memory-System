@@ -1,0 +1,3 @@
+- The term "backpressure" is not a standard TOC term. TOC literature uses "rope," "work release," or "buffer management." The conceptual mapping is accurate but cross-discipline search may miss relevant TOC literature that does not use the word "backpressure."
+- Academic coverage of TOC in knowledge work and software organisations is sparse. The VSS article fills a practical gap but is not peer-reviewed.
+- CONWIP is treated here as a backpressure variant; rigorous comparison of CONWIP vs. DBR effectiveness is a separate research question.

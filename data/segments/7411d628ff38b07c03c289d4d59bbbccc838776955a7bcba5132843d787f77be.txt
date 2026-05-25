@@ -1,0 +1,1 @@
+ADRs are stored alongside the code or content they govern, are written at decision time (not retroactively), and are append-only: once accepted, an ADR is never edited to change its decision. If the decision changes, a new ADR is written that supersedes the old one.

@@ -1,0 +1,4 @@
+**Open questions:**
+- How should effective dimension, margin bounds, or compression bounds replace raw Vapnik-Chervonenkis dimension when the model family is a modern transformer or diffusion architecture?
+- What is the best practical coding scheme for measuring description length in fitted neural networks without smuggling in arbitrary engineering choices?
+- Which intervention or regime-shift tests are decisive enough to let a statistical model earn a genuine mechanistic claim in physics or biology?

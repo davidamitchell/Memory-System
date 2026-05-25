@@ -1,0 +1,1 @@
+[fact] ServiceNow Process Mining implementation issues include: inconsistent event recording producing misleading maps, legacy data gaps distorting true flow, and heavily customised process states that the mining algorithm cannot reliably interpret. Source: https://servicenowspectaculars.com/servicenow-process-mining-implementation-issues-2026/.

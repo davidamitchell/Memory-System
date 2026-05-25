@@ -1,0 +1,16 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| NZ AI Strategy released July 2025, MBIE-led, principles-based | MBIE "Investing with Confidence" (2025) | high | Primary source; official government document |
+| NZ strategy projects $76B GDP uplift by 2038 | MBIE AI Strategy (2025) | medium | Economic modelling assumptions not independently verified |
+| NZ uses existing laws, no new AI-specific legislation | MBIE strategy; DLA Piper analysis (2025) | high | Cross-confirmed by multiple commentators |
+| EU AI Act: four risk tiers (unacceptable/high/limited/minimal) | EU AI Act consolidated text (2024) | high | Primary source |
+| NIST AI RMF: Govern/Map/Measure/Manage | NIST AI RMF 1.0 (2023) | high | Primary source |
+| ISO/IEC 42001:2023 is certifiable AI management system standard | ISO/IEC 42001:2023; EC Council commentary | high | Well-documented |
+| DORA applies to AI systems affecting financial operational resilience | Wheelhouse Advisors; DORA Reg 2022/2554 | high | Scope confirmed in regulatory analysis |
+| Singapore Model AI Gov Framework (2024) has 9 dimensions | IMDA/AI Verify Foundation (May 2024) | high | Primary source |
+| Wikeley v Kea Investments Ltd [2024] NZCA 609 — AI hallucination in court | Wilson Harle commentary; NZ Bar Association | high | Case confirmed; procedural context only |
+| No binding NZ case law on automated government decisions | Simpson Grierson analysis; PMCSA report 2023 | high | Confirmed as at research date |
+| National-led coalition: light-touch, pro-growth AI stance | MBIE proactive release; RNZ coverage (2025) | high | Consistent across sources |
+| Labour/Greens: stronger oversight preference | Party platforms; historical record (Algorithm Charter) | medium | Inference from stated priorities; no AI-specific policy document from Labour in 2025 |
+| March (1991): exploitation traps organisational learning | March, J.G. (1991) *Organization Science* | high | Foundational primary source; widely replicated |
+| Exploitation AI: quick return, limited durable advantage | March (1991); BCG/McKinsey agentic AI analyses (2024-25) | medium | Inference applied to AI context; well-supported by analogous cases |

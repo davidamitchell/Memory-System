@@ -1,0 +1,7 @@
+**In scope:**
+- Specification of evaluation dimensions for a completed research item (§2 evidence quality, §6 synthesis completeness, claim sourcing, executive summary quality, Key Finding structure, Evidence Map coverage)
+- Rubric formalisation: each dimension as a scored criterion with explicit scoring guidance (not open-ended prompts)
+- Trajectory evaluation: did the agent follow the research protocol (consult required sources, apply taxonomy vocabulary, write all §0–§7 sections)?
+- Gold dataset design: what constitutes a known-good research item for regression baseline?
+- CI integration: how to run the rubric evaluation on every commit to main that modifies Research/completed/? What cost threshold is acceptable?
+- Tooling selection: which of DeepEval, Pydantic Evals, agentevals, or custom implementation best fits this repository's constraints?

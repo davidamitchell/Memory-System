@@ -1,0 +1,6 @@
+| Component | Description |
+|-----------|-------------|
+| **Extraction Activity** | Recorded execution of a Concept Extraction Processor that produced a set of candidate assertions |
+| **Processor Version** | Versioned identity (name + semver) recorded on every Extraction Activity |
+| **Assertion Lineage** | Supersession and invalidation history of an Assertion Node across versions |
+| **Trust Metadata** | Attached to a Document Source or Prepared Document: `source_authority` (authoritative / secondary / inferred / unknown), `freshness_date` (ISO-8601), `approval_state` (pending / accepted / rejected) |

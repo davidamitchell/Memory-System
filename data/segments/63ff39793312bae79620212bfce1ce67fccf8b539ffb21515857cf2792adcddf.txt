@@ -1,0 +1,6 @@
+subgraph Doc_Layer["Document Layer"]
+        RAW[Raw Document]
+        PREP[Prepared Document]
+        SEG[Prepared Segments]
+        DD[Domain Document]
+    end

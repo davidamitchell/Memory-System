@@ -1,0 +1,1 @@
+6. **GitHub Copilot Coding Agent (GA September 2025) and comparable agentic tools operate as Type 2 (agentic builder, human-gated):** the agent creates a draft pull request; mandatory human review and branch protection rules apply before any merge to production, and this model is consistent across all major enterprise deployments reviewed.

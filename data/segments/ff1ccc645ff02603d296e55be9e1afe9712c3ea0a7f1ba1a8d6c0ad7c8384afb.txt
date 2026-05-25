@@ -1,0 +1,2 @@
+- [assumption] The explore-to-exploit transition in fast-moving AI contexts is representative enough to inform broader fast-moving digital technology portfolios. Justification: the strongest fresh practitioner evidence is AI-specific, while the question is slightly broader.
+- [assumption] A compact synthesis pack can usually remain lightweight without losing critical operating detail. Justification: the sources specify what must be decided, but they do not specify a universal artefact size or template.

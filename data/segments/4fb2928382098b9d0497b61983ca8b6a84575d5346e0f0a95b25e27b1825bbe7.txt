@@ -1,0 +1,7 @@
+| Control | Responsibility |
+|---------|----------------|
+| **Validation Gate** | Blocks promotion of any graph state that fails consistency validation |
+| **Alignment Governance** | Reviews and accepts or rejects proposed upper ontology mutations |
+| **Version Commit Gate** | Commits a validated, approved graph state as a new immutable version |
+| **Rollback Controller** | Reverts the active ontology pointer to a prior version; does not delete history |
+| **Invalidation Controller** | Marks Assertion Nodes as superseded when contradicting evidence is accepted |

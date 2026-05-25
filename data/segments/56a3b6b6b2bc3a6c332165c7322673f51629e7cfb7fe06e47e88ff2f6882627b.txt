@@ -1,0 +1,4 @@
+**Branch C — Purpose-built agent-output languages**
+- C1. Does any academic paper or production system describe a language whose *primary intended author* is an LLM?
+- C2. Are intermediate representation (IR) approaches (e.g. Dafny as verification IR, Code as Policies) in scope?
+- C3. Are ReAct/Toolformer/MRKL tool-call formats a language in any meaningful sense?

@@ -1,0 +1,1 @@
+8. **AI-generated code without meaningful human authorship is uncopyrightable in most jurisdictions,** including the US and UK, requiring organisations to document human contributions during AI-assisted development; code provenance tracking tools have emerged specifically to flag AI-generated outputs that match open-source code with restrictive licences.

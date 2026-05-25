@@ -1,0 +1,5 @@
+**Out of scope:**
+- Detailed implementation guides for specific Salesforce or nCino features
+- Regulatory compliance requirements specific to individual jurisdictions
+- Vendor contract negotiations or pricing strategies
+- Non-banking SaaS platforms (e.g. Human Resources (HR), Enterprise Resource Planning (ERP)) unless directly analogous

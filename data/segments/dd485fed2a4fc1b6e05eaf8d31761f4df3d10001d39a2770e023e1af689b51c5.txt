@@ -1,0 +1,7 @@
+**In scope:**
+- Schema and ontology versioning strategies for Knowledge Graphs used in production multi-step software agents, including additive changes, separately versioned named graphs, meaning Resource Description Framework (RDF) datasets with distinct graph identifiers, and migration tooling
+- Entity resolution, meaning identifying records or nodes that refer to the same real-world entity, and deduplication for a Knowledge Graph populated from multiple sources
+- Knowledge freshness: how to detect stale facts, prioritise updates, and propagate changes without full reingestion
+- Conflict detection: identifying when two sources assert contradictory facts about the same entity and how to resolve them
+- Provenance and lineage, meaning traceable records of which source contributed each fact and how that affects trust and update prioritisation
+- Continuous ingestion pipeline design: trigger-based versus scheduled updates, and incremental versus full refresh

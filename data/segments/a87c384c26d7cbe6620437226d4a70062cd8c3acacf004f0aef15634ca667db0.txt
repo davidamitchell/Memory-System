@@ -1,0 +1,1 @@
+**Research question restated:** What, if anything, do enterprise banking Software as a Service (SaaS) platforms provide as true invariants independent of customer implementation effort, and how does their full lifecycle economics compare with bespoke software before and after Artificial Intelligence (AI)-assisted development?

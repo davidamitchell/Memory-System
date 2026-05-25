@@ -1,0 +1,5 @@
+**Branch A — The Software Factory model**
+- A1: What is the "software factory" concept and what are its key architectural components?
+- A2: What evidence exists that the factory pattern works at production scale?
+- A3: What are the documented failure modes and unresolved challenges?
+- A4: What is the "dark factory" variant, and how does it differ from human-in-the-loop factories?

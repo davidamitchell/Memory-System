@@ -1,0 +1,1 @@
+4. **Barke et al. (2022) found that AI coding assistant use is bimodal: acceleration mode (developer knows what to do, uses AI to execute faster) vs. exploration mode (developer is uncertain, uses AI to discover options); prompt patterns optimised for one mode underperform in the other, and SDLC phase strongly predicts mode.** Source: arXiv:2206.15000. Confidence: high.

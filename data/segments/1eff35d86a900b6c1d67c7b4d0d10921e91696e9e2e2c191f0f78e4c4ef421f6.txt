@@ -1,0 +1,2 @@
+**Unresolvable uncertainties:**
+- The exact accuracy of LightRAG vs. GraphRAG on the specific query types this research corpus will face (citation-style lookups, cross-item relationship queries) is unknown without empirical testing. The benchmarks available are on general multi-hop QA datasets, not research item corpora.

@@ -1,0 +1,6 @@
+**Concrete recommendations:**
+1. Create `.github/workflows/copilot-setup-steps.yml` with: checkout (submodules: recursive, token: `SKILLS_PAT`), setup-python@v5 (3.11), `pip install -e ".[dev]"`.
+2. Add a `## Setup` instruction block to `CLAUDE.md` / `AGENTS.md` with `git submodule update --init .github/skills` and `pip install -e ".[dev]"`.
+3. Configure a setup script in Claude.ai project settings (UI only) with the same two commands.
+4. Scope W-0004 (`devcontainer.json`) to local development only; it does not fix the agent gap.
+5. Create a new backlog item to verify submodule access for Claude Code web (separate credential question).

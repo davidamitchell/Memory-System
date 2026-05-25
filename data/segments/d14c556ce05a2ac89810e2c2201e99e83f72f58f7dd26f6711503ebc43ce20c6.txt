@@ -1,0 +1,7 @@
+**Branch E — Investment and prioritisation shifts**
+- E1: Where should organisations invest once software production cost declines sharply?
+- E2: What new capabilities become critical when the bottleneck shifts from coding to factory design?
+- E1a: Which infrastructure investments compound across all agent-executed work?
+- E1b: Which human capabilities remain scarce even if coding capacity becomes abundant?
+- E2a: Which governance capabilities become more important when prioritisation replaces execution as the bottleneck?
+- E2b: Which capabilities are uniquely important for regulated sectors such as banking?

@@ -1,0 +1,3 @@
+**Unresolvable uncertainties:**
+- The exact clone path on Anthropic's VM is not documented (S3). The setup script path must be verified by running a test session.
+- Whether Claude Code on the web initialises git submodules during the repository clone step is not documented (S3 says only "We clone your repository"). This was flagged as a gap in W-0035 and remains unverified.

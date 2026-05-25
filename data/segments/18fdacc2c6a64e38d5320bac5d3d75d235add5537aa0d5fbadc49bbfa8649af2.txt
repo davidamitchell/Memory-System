@@ -1,0 +1,7 @@
+-- Processed URLs (replaces state/index.json)
+CREATE TABLE IF NOT EXISTS processed (
+    url         TEXT PRIMARY KEY,
+    fetched_at  TEXT NOT NULL,
+    title       TEXT,
+    source_id   TEXT
+);

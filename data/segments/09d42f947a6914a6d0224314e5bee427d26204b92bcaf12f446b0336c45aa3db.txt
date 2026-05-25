@@ -1,0 +1,1 @@
+[fact] The clearest direct cost signals are Thoughtworks' report that nearly 40% remain stuck at pilots and proofs of concept and Boston Consulting Group's report that 74% struggle to scale AI value. Source: https://www.thoughtworks.com/insights/whitepapers/how-to-scale-ai-successfully ; https://www.bcg.com/publications/2024/wheres-value-in-ai

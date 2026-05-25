@@ -1,0 +1,5 @@
+**Area 2 — Team taxonomy and contract alignment:**
+- Q2.1: What cross-functional team composition is needed to maintain a team taxonomy?
+- Q2.2: At what phase of an 18-month TBM implementation is the team taxonomy typically deployed?
+- Q2.3: What is the known difficulty of mapping legacy application portfolio to stable product-oriented value streams?
+- Q2.4: How are shared services and platform teams modelled in the team taxonomy?

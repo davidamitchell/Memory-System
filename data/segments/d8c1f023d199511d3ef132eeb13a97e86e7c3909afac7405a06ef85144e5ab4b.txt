@@ -1,0 +1,4 @@
+**Branch B — Type-constrained decoding (ETH Zurich PLDI 2025)**
+- B1. What exactly does type-constrained decoding do, and what failure modes does it address?
+- B2. Is it designing a new language or constraining generation to an existing one?
+- B3. Where does it sit on the specification hierarchy?

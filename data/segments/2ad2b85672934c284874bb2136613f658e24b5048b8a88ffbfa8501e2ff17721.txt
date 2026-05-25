@@ -1,0 +1,6 @@
+- **Type:** knowledge, backlog-item
+- **Description:** Confirmed that `copilot-setup-steps.yml` is the correct mechanism for Copilot coding agent environment setup (supports Python install, submodule init via PAT, runs before agent starts). Confirmed that Claude Code on the web uses an Anthropic-managed Ubuntu 24.04 VM with a UI-configured Bash setup script (not a repo file). `devcontainer.json` does not affect either agent surface. No single file covers both agents. Directly informs W-0036 implementation.
+- **Links:**
+  - https://docs.github.com/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent: authoritative `copilot-setup-steps.yml` schema and behaviour
+  - https://code.claude.com/docs/en/claude-code-on-the-web: authoritative Claude Code on the web environment and setup script documentation
+  - https://github.com/orgs/community/discussions/180953: community confirmation of submodule gap and PAT workaround for Copilot coding agent

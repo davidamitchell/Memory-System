@@ -1,0 +1,1 @@
+**[fact]** Current backlog (25 items) and completed corpus (23 items) tag analysis (derived directly from repo files, 2026-03-03):

@@ -1,0 +1,2 @@
+*All 26 glossary files → full graph → traversable concept neighbourhood.*
+Multi-file merging, graph traversal queries, ~80 typed `relatedTerm` edges. The first real graph, not a toy.

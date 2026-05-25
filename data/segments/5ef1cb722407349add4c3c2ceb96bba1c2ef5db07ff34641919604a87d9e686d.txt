@@ -1,0 +1,12 @@
+```sql
+-- Core research items table
+CREATE TABLE IF NOT EXISTS items (
+    id          TEXT PRIMARY KEY,  -- filename without extension, e.g. "2026-02-28-ai-strategy"
+    path        TEXT NOT NULL,     -- relative path, e.g. "Research/completed/..."
+    title       TEXT NOT NULL,
+    status      TEXT NOT NULL CHECK(status IN ('backlog','in-progress','completed')),
+    priority    TEXT NOT NULL CHECK(priority IN ('high','medium','low')),
+    added       TEXT,              -- ISO date string
+    started     TEXT,
+    completed   TEXT
+);

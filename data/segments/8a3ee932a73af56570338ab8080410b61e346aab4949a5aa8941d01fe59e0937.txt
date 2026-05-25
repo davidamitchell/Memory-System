@@ -1,0 +1,1 @@
+[assumption] The clone path on Anthropic's VMs follows a conventional path. Justification: the exact clone path is not published in the S3 documentation; `ask Claude to run check-tools` is the recommended way to inspect. The script would need to be verified by running a test session.

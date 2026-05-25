@@ -1,0 +1,5 @@
+ex:activity/extract-2026-05-23-001
+    a ex:ExtractionActivity ;
+    prov:used ex:segment/abc123 ;
+    prov:wasAssociatedWith ex:processor/concept-extractor-v1.2.0 ;
+    prov:endedAtTime "2026-05-23T04:00:00Z"^^xsd:dateTime .

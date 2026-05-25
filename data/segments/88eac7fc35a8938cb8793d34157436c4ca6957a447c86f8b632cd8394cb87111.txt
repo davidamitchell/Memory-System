@@ -1,0 +1,3 @@
+- The ontology store is the knowledge graph of this system. See `docs/design/ontology-system-design.md` for the component and sequence diagrams.
+- The 12-processor pipeline (defined in ADR-0004) is responsible for populating the knowledge graph from source documents.
+- `## Related` sections in Markdown files are informal link annotations; they are not the knowledge graph itself.

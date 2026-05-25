@@ -1,0 +1,3 @@
+- What public benchmark can reliably measure multi-day or multi-session engineering work that crosses external services, review loops, and deployment boundaries?
+- Which metric best captures post-generation review burden, not just whether tests eventually pass?
+- Will major commercial IDE assistants converge on shared public harness benchmarks, or will internal evals such as CursorBench become the dominant decision surface?

@@ -1,0 +1,1 @@
+5. Documentation decay is caused primarily by treating process mapping as a one-off project deliverable rather than a governed ongoing practice, with lack of named ownership and absence of change-triggered update requirements as the two most direct operational causes. [High confidence — consistent across multiple independent practitioner sources]

@@ -1,0 +1,2 @@
+**Q2.1 — Team composition:**
+The cross-functional team required to build and maintain the team taxonomy includes: IT operations leads, finance business partners, application owners, and representatives from each major business unit. Praecipio and KPMG both document this composition as standard. [fact, Praecipio/KPMG] A dedicated TBM Office or ITFM centre of excellence typically stewards the taxonomy long-term. [fact, KPMG]

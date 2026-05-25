@@ -1,0 +1,22 @@
+- [ ] [Popper (1959) The Logic of Scientific Discovery](https://archive.org/details/logicofscientifi0000popp) - primary source locator
+- [ ] [Vapnik (1995) The Nature of Statistical Learning Theory](https://archive.org/details/natureofstatisti0037vapn) - primary source locator
+- [x] [Internet Encyclopedia of Philosophy Karl Popper: Philosophy of Science](https://iep.utm.edu/pop-sci/) - accessible summary of falsifiability, demarcation, and ad hoc immunisation
+- [x] [Stanford Encyclopedia of Philosophy Karl Popper](https://plato.stanford.edu/entries/popper/) - accessible summary of falsifiability, empirical content, basic statements, and testability
+- [x] [Routledge The Logic of Scientific Discovery](https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447) - chapter structure confirming falsifiability, degrees of testability, simplicity, and corroboration
+- [x] [Rissanen (1978) Modeling by shortest data description](https://research.ibm.com/publications/modeling-by-shortest-data-description) - abstract of the original Minimum Description Length proposal
+- [x] [Grunwald (2004) A tutorial introduction to the minimum description length principle](https://arxiv.org/abs/math/0406077) - accessible technical tutorial on Minimum Description Length
+- [x] [Li and Vitanyi (2008) An Introduction to Kolmogorov Complexity and Its Applications](https://doi.org/10.1007/978-0-387-49820-1) - standard reference for Kolmogorov complexity and its relation to description length
+- [x] [Livni (2017) VC Dimension and the Fundamental Theorem](https://www.cs.princeton.edu/~rlivni/cos511/lectures/lect3.pdf) - lecture note defining shattered sets and Vapnik-Chervonenkis dimension
+- [x] [Kakade (2020) Growth Functions and the VC dimension](https://homes.cs.washington.edu/~sham/courses/stat928/lectures/lecture24.pdf) - lecture note defining the growth function and Sauer bound
+- [x] [Stover (n.d.) Vapnik-Chervonenkis Dimension](https://mathworld.wolfram.com/Vapnik-ChervonenkisDimension.html) - compact definition of shattering and Vapnik-Chervonenkis dimension
+- [x] [Wikipedia contributors (n.d.) Vapnik-Chervonenkis dimension](https://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_dimension) - accessible definition of shattering and Vapnik-Chervonenkis dimension
+- [x] [Wikipedia contributors (n.d.) Vapnik-Chervonenkis theory](https://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory) - accessible description of growth functions and generalization context
+- [x] [Wikipedia contributors (n.d.) Minimum description length](https://en.wikipedia.org/wiki/Minimum_description_length) - accessible statement of the two-part code form
+- [x] [Wikipedia contributors (n.d.) Kolmogorov complexity](https://en.wikipedia.org/wiki/Kolmogorov_complexity) - accessible definition of shortest-program complexity
+- [x] [Zhang et al. (2017) Understanding deep learning requires rethinking generalization](https://research.google/pubs/understanding-deep-learning-requires-rethinking-generalization/) - random-label fitting result
+- [x] [Belkin et al. (2019) Reconciling modern machine-learning practice and the classical bias-variance trade-off](https://arxiv.org/abs/1812.11118) - double descent and interpolation
+- [x] [Nakkiran et al. (2020) Deep double descent: where bigger models and more data hurt](https://openreview.net/forum?id=B1g5sA4twr) - effective model complexity and empirical double descent
+- [x] [Nielsen et al. (2025) The rise of scientific machine learning](https://pmc.ncbi.nlm.nih.gov/articles/PMC12341957/) - mechanistic models versus machine learning prediction
+- [x] [Lillicrap and Kording (2019) What does it mean to understand a neural network?](https://arxiv.org/abs/1907.06374) - learning rules versus weight-level understanding
+- [x] [Research repo (2026-02-28) Predictive processing, active inference](https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-02-28-predictive-processing-active-inference.md) - prior repository item on falsifiability of a broad mathematical framework
+- [x] [Research repo (2026-02-28) Free energy, entropy, and life](https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-02-28-free-energy-entropy-and-life.md) - prior repository item on framework-level versus process-level testability

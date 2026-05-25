@@ -1,0 +1,3 @@
+**Branch C, when does transfer fail on the recipient side?**
+- C1: What is absorptive capacity?
+- C2: How do causal ambiguity, locality, and tacitness raise the recipient's learning burden?

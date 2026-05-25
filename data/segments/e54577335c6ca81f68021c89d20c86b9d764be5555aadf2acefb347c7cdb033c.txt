@@ -1,0 +1,5 @@
+**Approach sub-question 1 — LSA/LSE foundations and relevance:**
+- Q1.1: What does SVD-based LSA preserve and what does it discard?
+- Q1.2: How does LSA retrieval quality compare to modern dense embeddings (SBERT, Model2Vec) on information retrieval benchmarks?
+- Q1.3: Is LSA computationally viable at 1,000–10,000 document scale compared to embedding-based approaches?
+- Q1.4: Are there regimes where LSA still outperforms or complements dense embeddings?

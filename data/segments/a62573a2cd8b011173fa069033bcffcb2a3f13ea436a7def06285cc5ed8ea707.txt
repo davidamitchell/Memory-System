@@ -1,0 +1,1 @@
+**Output format:** Full §0–§7 structured synthesis. Primary artefact is the rubric specification, embedded in §6 and expanded in Findings. Secondary artefact is CI workflow design.

@@ -1,0 +1,1 @@
+3. `copilot-setup-steps.yml` must be present on the repository's default branch to take effect; a file on a non-default branch will not be picked up by the Copilot coding agent. (medium confidence: documented in primary source S1; corroborated by community report S5 noting confusion when file was on non-default branch)

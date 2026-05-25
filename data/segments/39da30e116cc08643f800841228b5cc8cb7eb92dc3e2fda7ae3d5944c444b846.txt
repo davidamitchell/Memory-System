@@ -1,0 +1,1 @@
+1. The only tooling approach that satisfies this repository's no-new-credentials constraint is a custom Copilot CLI-based implementation, because all named evaluation frameworks (DeepEval, Pydantic Evals, agentevals) require OpenAI or Anthropic API keys not approved for this repository. Confidence: high.

@@ -1,0 +1,1 @@
+**Scope confirmed:** Organisational strategies and disclosed outcomes only — not model benchmarks, not tool reviews. Focus areas: (a) concrete productivity/quality metrics from named organisations, (b) governance models for AI-generated code, (c) current state of autonomous coding agents, (d) NZ context.

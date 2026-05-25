@@ -1,0 +1,1 @@
+9. **JPMorgan Chase (200,000+ employees, OmniAI and LLM Suite) reports 10–20% developer productivity gains from AI-assisted coding,** lower than the GitHub Copilot RCT figure, consistent with the DORA finding that broader enterprise deployment yields more modest aggregate gains than controlled task experiments.

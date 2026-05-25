@@ -1,0 +1,1 @@
+Five controls govern ontology state transitions. They are distinct from data processors:

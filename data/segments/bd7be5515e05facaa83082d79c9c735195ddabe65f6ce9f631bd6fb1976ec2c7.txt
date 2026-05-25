@@ -1,0 +1,4 @@
+- What are the independently audited (not self-reported) efficiency outcomes for NZ's largest AI deployments? (Could become a separate research item.)
+- What specific efficiency use cases are most tractable for NZ SMEs given their data and capability constraints? (Practical guide scope.)
+- Does the Jevons paradox apply to efficiency-mode AI — does automating tasks create enough new demand to neutralise net efficiency gains? (Macroeconomics research item.)
+- What is the change management methodology used by ANZ and other high-performing organisations? Is it codified? (Process research item.)

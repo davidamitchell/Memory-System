@@ -1,0 +1,6 @@
+1. **Understand the software factory model** — fetch and analyse the primary source article (alexop.dev), the Hacker News (HN) discussions, and documented implementations (Stripe Minions, Gas Town, StrongDM)
+2. **Apply TOC analysis** — is software engineering genuinely the system constraint in most organisations? What does TOC predict happens when a constraint is removed vs. elevated?
+3. **Map organisational implications** — which current structures (SAFe, investment boards, Quality Assurance (QA) teams, Product Owners (POs)) exist because of software scarcity? Which survive when scarcity is removed?
+4. **Define AI-native** — what does it mean specifically, how does it differ from AI-assisted or AI-first, and what does an AI-native organisation look like structurally?
+5. **Banking sector analysis** — synthesise the specific challenges (legacy, regulation, data) and opportunities (domain moats, AI-accelerated modernisation) for mid-tier banks
+6. **Cross-reference prior research** — identify what adds to existing threads in this repository vs. what is new territory

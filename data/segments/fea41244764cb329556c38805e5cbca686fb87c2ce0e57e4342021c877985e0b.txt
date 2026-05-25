@@ -1,0 +1,1 @@
+The consulted evidence supports the second explanation more strongly than the first, because there is repeated positive evidence for some causal-task competence, but not for full intervention-stable world modelling. [inference; source: https://openreview.net/forum?id=mqoxLkX210; https://opencausalab.github.io/CaLM; https://aclanthology.org/2024.emnlp-main.381/]

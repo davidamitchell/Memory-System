@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Evidence base for what distinguishes successful efficiency-focused AI programmes from those that fail to deliver. Key case studies (ANZ), design variables (10-20-70 rule, build-vs-buy, data readiness), failure modes (pilot-itis, data poverty, absent change management), and NZ-specific context (SME gap, $76B projection risk).
+- Links:
+  - https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024 (McKinsey State of AI 2024)
+  - https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value (BCG AI Adoption 2024)
+  - https://aiforum.org.nz/reports/ai-in-action-key-findings-from-new-zealands-third-ai-productivity-report/ (AI Forum NZ Third Productivity Report)

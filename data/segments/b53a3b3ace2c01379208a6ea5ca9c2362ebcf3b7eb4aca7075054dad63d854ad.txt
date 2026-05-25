@@ -1,0 +1,2 @@
+*Introduce `subClassOf` / `rdf:type` hierarchy.*
+Extracted concepts are assigned to class nodes, not just a flat assertion list. Enables is-a reasoning and aligns with OWL semantics. Evaluated against a small set of known hierarchical relationships in the glossary (e.g. `VectorEmbedding subClassOf Representation`).

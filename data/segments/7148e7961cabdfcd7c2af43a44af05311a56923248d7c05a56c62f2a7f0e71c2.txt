@@ -1,0 +1,1 @@
+[fact] The setup steps run before the Copilot coding agent begins its planning and coding work. (S1: "The steps in this job will be executed in GitHub Actions before Copilot starts working.")

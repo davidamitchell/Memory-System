@@ -1,0 +1,9 @@
+- [x] [Jevons (1865) The Coal Question — Energy History Yale](https://energyhistory.yale.edu/w-stanley-jevons-the-coal-question-1865/)
+- [x] Nordhaus, W. (1996). "Do real-output and real-wage measures capture reality? The history of lighting suggests not." Cowles Foundation Discussion Paper. — consulted via citations in lighting/Jevons literature
+- [ ] Saunders, H.D. (1992). "The Khazzoom-Brookes postulate and neoclassical growth." *The Energy Journal.* — not directly consulted; underlying argument covered by secondary sources
+- [ ] Sorrell, S. (2007). "The Rebound Effect." UK Energy Research Centre. — not directly consulted; rebound taxonomy covered by web research
+- [ ] Alcott, B. (2005). "Jevons' paradox." *Ecological Economics.* — not directly consulted
+- [ ] York, R. (2006). "Ecological paradoxes." *Organization & Environment.* — not directly consulted
+- [ ] Polimeni, J.M. et al. (2008). *The Jevons Paradox and the Myth of Resource Efficiency Improvements*. — not directly consulted
+- [ ] Bloom, N. et al. NBER working papers — not directly consulted
+- [x] Current essays/posts on AI coding costs and Jevons (Proxify, MomoView, Kamiwaza, HackerRank, Northeastern, NPR) — consulted via web search

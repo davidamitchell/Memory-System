@@ -1,0 +1,1 @@
+This folder contains conceptual and architectural design artefacts for the [Memory System](../../README.md).

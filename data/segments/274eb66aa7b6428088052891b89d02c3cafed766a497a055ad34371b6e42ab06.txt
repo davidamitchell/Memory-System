@@ -1,0 +1,1 @@
+[fact] `.github/workflows/copilot-setup-steps.yml` is a standard GitHub Actions workflow file with one required constraint: the workflow must contain a job named exactly `copilot-setup-steps`. Any steps placed in this job are executed by GitHub Actions before the Copilot coding agent starts working. (S1, S2.)

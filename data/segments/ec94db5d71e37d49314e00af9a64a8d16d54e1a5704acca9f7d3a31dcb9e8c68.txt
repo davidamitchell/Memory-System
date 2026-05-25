@@ -1,0 +1,4 @@
+**Out of scope:**
+- General AI ethics or bias research not specifically tied to data security or compliance
+- Adversarial attacks on AI systems, prompt injection and jailbreaking, as a primary topic rather than as a control consideration
+- Non-M365 GenAI tools unless used explicitly for comparison against M365 Copilot risk profiles

@@ -1,0 +1,1 @@
+[fact] The default branch is cloned. A specific branch can be requested by specifying it in the task prompt. (S3: "The repo will be cloned with the default branch on your GitHub repo. If you would like to check out a specific branch, you can specify that in the prompt.")

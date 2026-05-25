@@ -1,0 +1,6 @@
+- The `mcp_server.py` [MCP server](../../glossary/mcp-server.md) will be redesigned to query the ontology rather than a vector index
+- `requirements.txt` will be updated to remove LanceDB/sentence-transformer dependencies and add ontology tooling
+- `copilot-setup-steps.yml` will be updated to remove the embedding model pre-warm step
+- The README.md, `copilot-instructions.md`, and all glossary terms referencing the vector layer will be updated
+- A new design space (`_docs/design/`) documents the target architecture
+- This is a breaking change to the storage layer; existing `.lancedb/` folders can be discarded

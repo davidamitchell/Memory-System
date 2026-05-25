@@ -1,0 +1,2 @@
+- Access note: seeded Association for Computational Linguistics (ACL) Anthology URL -> unrelated 2020 International Conference on Computational Linguistics (COLING) paper; replaced with Internet Archive locator plus accessible modern discussions.
+- Access note: seeded Bender and Kambhampati DOI landings -> 403 in this runtime; Kambhampati consulted via arXiv; Bender retained as identified but not consulted.

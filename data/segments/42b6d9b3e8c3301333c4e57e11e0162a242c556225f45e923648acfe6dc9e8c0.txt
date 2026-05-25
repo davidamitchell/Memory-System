@@ -1,0 +1,5 @@
+1. **KG construction pipeline:** What entities and relationships should be extracted from research items, and what graph schema is optimal? (Candidate backlog item: `knowledge-graph-construction-pipeline`)
+2. **RAPTOR offline vs. on-demand:** Should cluster summaries be generated in a CI/CD step (offline) or cached on first query (on-demand)? Offline is more token-efficient; on-demand avoids stale cache management.
+3. **Existing item structure as RAPTOR input:** Can the Executive Summary fields be used directly as Layer 2 leaf nodes in the RAPTOR tree, or does RAPTOR's clustering require raw text re-chunking?
+4. **Staleness threshold:** What is the right review trigger (12 months? 18 months?) and does it vary by tag (e.g., `llm`, `agents` = 12 months; `philosophy`, `neuroscience` = 24 months)?
+5. **Backlog dependency edges in the graph:** Should research item `blocks`/`is-blocked-by` relationships from YAML front matter be first-class edges in the knowledge graph?

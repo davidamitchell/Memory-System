@@ -1,0 +1,4 @@
+1. Does Claude Code on the web initialise git submodules during the repository clone step, or does it perform a shallow or non-recursive clone? This directly determines whether a PAT/credential is needed for the UI setup script to access `davidamitchell/Skills`. (Proposed backlog item: `2026-03-29-claude-code-web-submodule-credential.md`, priority: high, blocks implementation of the Claude Code setup script.)
+2. What is the exact working directory and environment of the UI setup script on Anthropic's Ubuntu VMs? Can it be verified with a `check-tools` session?
+3. Does `copilot-setup-steps.yml` support `make dev-install` directly (calling the Makefile target), or is it safer to call `pip install -e ".[dev]"` explicitly to avoid a dependency on `make` being available?
+4. Is W-0004 (restore `devcontainer.json`) still worthwhile as documentation for local development, or should it be closed as out of scope given that neither primary agent surface uses it?

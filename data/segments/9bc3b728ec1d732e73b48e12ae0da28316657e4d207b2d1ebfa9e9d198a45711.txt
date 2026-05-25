@@ -1,0 +1,5 @@
+**C. Adjacent proof-agent landscape**
+- C1. What problems do LeanDojo and ReProver solve?
+- C2. What does Copra add beyond fine-tuned tactic generation?
+- C3. What does Lean Copilot add for human-in-the-loop workflows?
+- C4. Where does Leanstral appear to differ from these systems?

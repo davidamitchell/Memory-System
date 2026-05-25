@@ -1,0 +1,5 @@
+alt conflicts detected
+        CP->>P10: route conflicts to Reconciliation
+        P10->>CP: canonical resolution
+        CP-->>CP: upper ontology changes → Alignment Governance review
+    end

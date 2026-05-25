@@ -1,0 +1,2 @@
+**Q1.4 — Register maintenance:**
+Application registers require quarterly review at minimum, triggered additionally by: major architectural changes, M&A activity, significant vendor contract renewals, and platform retirements. Without a mandated review cadence, register accuracy degrades within 12 months of initial population. [inference, based on practitioner accounts and LeanIX governance guidance] The governance body (TBM Council or PMO) owns the review process; individual application owners are responsible for flagging changes. [fact, TBM Council guidance]

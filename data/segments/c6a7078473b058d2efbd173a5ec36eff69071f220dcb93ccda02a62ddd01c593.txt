@@ -1,0 +1,5 @@
+- `.vscode/mcp.json` configures the MCP client (VS Code Copilot or the headless Copilot sandbox) to launch `mcp_server.py` via stdio:
+  ```json
+  { "type": "stdio", "command": "python", "args": ["mcp_server.py"] }
+  ```
+- This configuration works identically in a local VS Code session and in the GitHub Actions sandbox spun up for headless Copilot mode.

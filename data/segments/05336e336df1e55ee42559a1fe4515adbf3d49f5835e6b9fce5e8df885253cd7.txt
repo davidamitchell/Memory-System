@@ -1,0 +1,5 @@
+1. Has ServiceNow introduced a native BPM-style process documentation tool (distinct from Playbooks and Flow Designer) in recent releases? This would materially change the capability inventory.
+2. Are there published case studies of organisations that have run the three-board governance model for ServiceNow process documentation for 3+ years? This would provide empirical validation for the governance model.
+3. How does Process Mining's conformance checking capability integrate with Playbook authoring — can mining output directly inform which Playbook steps need updating? If so, the feedback loop between discovery and authored documentation could be tighter than inferred here.
+4. What is the specific mechanism by which ServiceNow's change management process can enforce a documentation update check before a change can be closed? Is this configurable out-of-box or does it require custom scripting?
+5. For regulated financial services organisations, what specific audit evidence does a Playbook provide versus a BPMN diagram? This affects whether Playbooks alone satisfy compliance documentation requirements.

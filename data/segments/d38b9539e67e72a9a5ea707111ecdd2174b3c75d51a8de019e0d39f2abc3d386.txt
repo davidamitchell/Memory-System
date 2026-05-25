@@ -1,0 +1,1 @@
+Embedding models are **not** used in this system. The legacy prototype `mcp_server.py` references `BAAI/bge-small-en-v1.5` via `sentence-transformers`, but this code is from the superseded design. The `.github/copilot-setup-steps.yml` no longer pre-warms any embedding model.

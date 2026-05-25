@@ -1,0 +1,1 @@
+For corpus queries A1–A4 (relational/FTS), ChromaDB is an inferior fit: it is embeddings-first and its metadata query syntax is less expressive than SQL. It would not replace a relational layer — the research workflow needs both relational and semantic search. [inference]

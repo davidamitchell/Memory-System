@@ -1,0 +1,1 @@
+Human behavior is part of the mechanism: if Artificial Intelligence (AI) output is accepted quickly and at scale, review quality becomes the scarce resource and structural debt can accumulate faster than teams notice. [inference; source: https://arxiv.org/abs/2506.04785; https://arxiv.org/abs/2303.08733; https://arxiv.org/abs/2108.09293]

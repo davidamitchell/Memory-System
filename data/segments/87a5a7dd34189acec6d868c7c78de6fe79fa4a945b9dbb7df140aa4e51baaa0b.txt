@@ -1,0 +1,5 @@
+**Branch B — Coverage metrics**
+- B1. Which YAML fields carry domain-relevant signals?
+- B2. What is the current priority distribution (high/medium/low) across the backlog?
+- B3. Is there priority inflation (most items rated medium with insufficient differentiation)?
+- B4. What is tag density per domain in current backlog vs. completed corpus?

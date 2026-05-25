@@ -1,0 +1,2 @@
+*Swap p07 for a prompt-based extractor on one unstructured research document.*
+The extractor produces the same `delta_proposal` dict shape; p08–p12 are unchanged. Evaluate output against the Phase 2 harness (using the glossary as proxy ground truth). First evidence that latent extraction is viable on this architecture.

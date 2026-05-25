@@ -1,0 +1,1 @@
+This creates a directed edge in the knowledge graph from the old file to the new one. Anyone landing on the old file via search or a stale link is immediately directed to the current version. The old file remains fully readable and git-versioned.

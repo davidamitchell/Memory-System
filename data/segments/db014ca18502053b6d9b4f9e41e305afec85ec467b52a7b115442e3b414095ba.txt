@@ -1,0 +1,1 @@
+Agent instructions lived in AGENTS.md at the repo root. The standard across the davidamitchell organisation is .github/copilot-instructions.md. AGENTS.md was referenced from README.md as the "constitution".

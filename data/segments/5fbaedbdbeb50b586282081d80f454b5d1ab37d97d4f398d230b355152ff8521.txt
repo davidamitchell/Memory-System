@@ -1,0 +1,3 @@
+| Component | Description |
+|---|---|
+| **Prepared Segment** | Immutable, content-addressed fragment of a Prepared Document. The atomic unit of evidence for assertion provenance. Identified by a content hash (SHA-256 URI scheme) |

@@ -1,0 +1,1 @@
+2. **Google's CEO disclosed in 2024 earnings calls that over 25% of Google's new code is AI-generated,** reviewed by human engineers before submission to production systems across Search, Cloud, and YouTube — the largest publicly disclosed AI code generation deployment.

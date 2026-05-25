@@ -1,0 +1,1 @@
+The more speculative step is moving from "trained on token prediction" to "cannot learn any useful abstraction", and the consulted evidence does not justify that stronger negative claim. [inference; source: https://arxiv.org/abs/2301.05217; https://openreview.net/forum?id=mqoxLkX210]

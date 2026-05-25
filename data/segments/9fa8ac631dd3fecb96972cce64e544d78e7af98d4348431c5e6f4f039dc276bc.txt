@@ -1,0 +1,1 @@
+[inference] The Process Universe reduces design time by providing standardised ITIL 4 process maps that organisations can adopt or adapt, but it does not automatically keep those maps current as operational reality evolves — that depends entirely on governance. The Universe is a starting point, not a maintenance mechanism.

@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Reference architecture and tooling specification for implementing the UELGF rail with policy publication, stateless evaluation, telemetry feedback, and revocable workload credentials in a regulated financial institution.
+- Links:
+  - https://www.openpolicyagent.org/docs/management-bundles
+  - https://opentelemetry.io/docs/collector/architecture/
+  - https://developer.hashicorp.com/vault/docs/concepts/lease

@@ -1,0 +1,1 @@
+2. The cost of producing high-quality standardised integrated software is going towards zero. AI coding agents (Claude Code, GitHub Copilot Agent, Cursor), software factory patterns (Stripe Minions, Gas Town), and multi-agent orchestration frameworks are making it feasible for small teams to ship what previously required large specialist teams.

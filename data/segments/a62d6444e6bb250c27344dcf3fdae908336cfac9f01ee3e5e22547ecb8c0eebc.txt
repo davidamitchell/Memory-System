@@ -1,0 +1,1 @@
+8. There is no single repository file that both agents respect as an environment setup declaration; closing the setup gap for both agents requires at minimum `copilot-setup-steps.yml` (repo file) for Copilot and a UI-configured setup script (outside the repository) for Claude Code web. (high confidence)

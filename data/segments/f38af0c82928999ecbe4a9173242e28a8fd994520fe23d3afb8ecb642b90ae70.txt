@@ -1,0 +1,1 @@
+Use the `decisions` [skill](../../glossary/skill.md) in `.github/skills/decisions/SKILL.md` when writing ADRs.

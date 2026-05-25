@@ -1,0 +1,1 @@
+5. The "Code as Policies" IR approach and Dafny-as-IR approach both repurpose existing languages as LLM output targets. Neither constitutes a new language designed for LLM generation.

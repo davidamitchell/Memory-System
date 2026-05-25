@@ -1,0 +1,4 @@
+Three converging mechanisms explain how phase-aware tooling improves outcomes:
+1. **Context selection** — providing only phase-relevant context reduces noise; Aider's "minimal files" principle and White et al.'s context manager pattern both express this.
+2. **Reasoning structure** — using code-native intermediate steps (SCoT) rather than narrative steps when the output is code.
+3. **Mode matching** — designing prompts for acceleration or exploration depending on phase ambiguity; [inference] Barke et al.'s bimodal finding predicts failure when acceleration-mode prompts are applied to exploration-mode tasks.

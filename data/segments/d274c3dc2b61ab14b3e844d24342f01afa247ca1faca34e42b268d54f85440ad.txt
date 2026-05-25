@@ -1,0 +1,4 @@
+**Uncertainties acknowledged:**
+- sqlite-vec pre-v1 status: breaking changes before 1.0 are possible. Mitigated by phasing.
+- Dependency weight of ChromaDB and LanceDB is characterised from documentation structure rather than direct `pip install` audit. Labelled as inference.
+- The 500-entry migration trigger is a heuristic, not a benchmarked figure.

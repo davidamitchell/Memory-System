@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Synthesis of AI risk reduction strategy in financial services: case studies (HSBC, JPMorgan), regulatory frameworks (SR 11-7, APRA CPS 230, DORA), governance structures, failure modes (bias, drift), and NZ applicability (RBNZ gap analysis).
+- Links:
+  - https://www.hsbc.com/news-and-views/views/hsbc-views/harnessing-the-power-of-ai-to-fight-financial-crime
+  - https://www.bis.org/fsi/publ/insights63.pdf
+  - https://www.consumerfinance.gov/about-us/newsroom/cfpb-issues-guidance-on-credit-denials-by-lenders-using-artificial-intelligence/

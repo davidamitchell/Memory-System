@@ -1,0 +1,4 @@
+| Tier | Name | Scope |
+|------|------|-------|
+| Upper | **Upper Ontology** | Domain-agnostic taxonomy; enumerates and relates all recognised domains |
+| Lower | **Lower Ontology** (set of Domain Ontologies) | Per-domain concept graphs; each scoped to one domain from the upper ontology |

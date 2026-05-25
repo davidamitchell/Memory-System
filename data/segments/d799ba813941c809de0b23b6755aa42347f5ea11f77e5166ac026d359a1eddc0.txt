@@ -1,0 +1,1 @@
+1. **"Prior research said JSON is fine, but this item recommends SQLite."** Not a contradiction. The prior item (`2026-02-27-indexing-and-tracking-method.md`) explicitly stated "SQLite becomes the right migration point only once the corpus exceeds a few hundred items." This item defines when and how that migration happens — it is the successor step, not a reversal.

@@ -1,0 +1,1 @@
+2. **Next-token prediction and over-compliance** — Investigate the theoretical connection between the next-token prediction objective and the encoding of over-compliance behaviour. Does training on corpora containing sycophantic text (human-written examples of agreeing with errors, confident falsehoods, etc.) directly cause H-Neuron formation?

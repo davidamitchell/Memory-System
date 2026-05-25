@@ -1,0 +1,7 @@
+**In scope:**
+- Identification and categorisation of invariants across four categories: (1) out-of-the-box functional capabilities, (2) platform primitives, (3) platform behavioural guarantees, (4) economic invariants
+- Initial focus platforms: Salesforce (Customer Relationship Management (CRM) and Financial Services Cloud (FSC)) and nCino; extended to other widely used enterprise banking Software as a Service (SaaS) platforms where relevant
+- Total Cost of Ownership (TCO) analysis including costs frequently excluded from procurement analysis: licensing, system integration, configuration/customisation, data integration/migration, operational support, vendor-driven upgrades and regression testing, training, governance, and administration overhead
+- Validation of the assumption that enterprise organisations typically rent SaaS platforms rather than build bespoke systems
+- Comparison across two time horizons: pre-AI era (approximately the last 10 years) and AI-assisted era (current)
+- Bespoke software baseline assumes modern practices: Domain-Driven Design (DDD), Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion (SOLID) principles, Clean Architecture

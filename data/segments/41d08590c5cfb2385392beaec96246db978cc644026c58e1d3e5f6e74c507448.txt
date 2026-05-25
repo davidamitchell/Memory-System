@@ -1,0 +1,4 @@
+1. **Decompose the task** into a numbered checklist. Maximum 7 items. If more items are needed, the scope is too large — split it.
+2. **State the Definition of Done** (see §7 of `copilot-instructions.md`).
+3. **Name at least one risk or unknown.** If you cannot name one, you have not looked hard enough.
+4. **Commit the plan** as a `report_progress` call before making any file changes.

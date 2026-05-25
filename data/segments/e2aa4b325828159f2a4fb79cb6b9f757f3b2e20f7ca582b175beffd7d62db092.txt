@@ -1,0 +1,8 @@
+| Principle | Constraint |
+|-----------|-----------|
+| **Immutable Source Fidelity** | Raw source artefacts are stored verbatim and never modified |
+| **Deterministic Transformation** | Every derived artefact is reproducible from source + processor version |
+| **Assertion Provenance** | Every accepted ontology assertion must resolve to at least one supporting Prepared Segment |
+| **Control/Data Separation** | Transformation processors (data plane) are distinct from governance and version control (control plane) |
+| **Upper Ontology Stability** | Upper ontology mutations require explicit alignment governance acceptance |
+| **Bidirectional Traceability** | Concepts resolve to source evidence; source evidence resolves to derived assertions |

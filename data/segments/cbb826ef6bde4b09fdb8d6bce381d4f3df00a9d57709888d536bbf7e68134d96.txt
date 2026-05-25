@@ -1,0 +1,2 @@
+**How evidence was weighed:**
+Primary sources (GitHub official documentation S1, S2; Anthropic official documentation S3) were treated as definitive for schema and behaviour claims. Community discussions (S4, S5, S6) were used to corroborate gaps not covered in official documentation (e.g., no auto-install behaviour, PAT requirement for private submodules, reusable workflow restriction). Prior research W-0035 was treated as established prior art for the submodule gap finding.

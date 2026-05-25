@@ -1,0 +1,3 @@
+- What freshness service-level objective should separate authoritative graph state from consumable derivatives for a given agent workflow?
+- When should a team promote a contradiction from a source-level disagreement into a schema or shapes-level validation rule?
+- What review evidence is sufficient to auto-merge duplicate entities in a domain with weak or missing external identifiers?

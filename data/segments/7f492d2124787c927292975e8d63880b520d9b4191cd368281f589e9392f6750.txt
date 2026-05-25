@@ -1,0 +1,2 @@
+Date: 2026-05-23
+Status: superseded by [0004-provenance-model-and-control-plane.md](./0004-provenance-model-and-control-plane.md)

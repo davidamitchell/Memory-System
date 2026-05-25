@@ -1,0 +1,10 @@
+- **§0**: Research question restated verbatim from item. Scope confirmed. Prior work cross-reference complete. ✓
+- **§1**: Question decomposed into five branches. All branches are resolvable with evidence gathered in §2. ✓
+- **§2**: Evidence gathered for all major candidates. Source marks updated in source list (Outlines, Guidance, LMQL, SGLang, ETH Zurich, Code as Policies, ReAct/Toolformer all marked `[x]`). All facts have source URLs. All inferences labelled `[inference]`. ✓
+- **§3**: Narrative glue removed; only declarative statements. ✓
+- **§4**: Five consistency checks run; one substantive finding (arXiv ID correction). ✓
+- **§5**: Five analytical lenses applied (technical, economic, historical, behavioural, regulatory). Each lens adds a non-redundant insight. ✓
+- **§6**: All seven components populated with substantive content. Executive summary states a specific, falsifiable claim in the first sentence. 10 key findings, each ≥20 words with subject/verb/object. Evidence map has one row per key finding. Two assumptions, each with justification. Analysis explains evidence weighting. Risks are specific and bounded. Open questions are scoped and non-generic. ✓
+- **Evidence sufficiency**: At least two independent sources agree on each high-confidence claim (Outlines: GitHub + TechCrunch + AWS blog; Guidance: GitHub + Microsoft Research; ETH Zurich: arXiv + PLDI proceedings + ETH SRI lab page). ✓
+- **Claim labelling**: All claims labelled [fact], [inference], or [assumption]. ✓
+- **Acronyms**: All expanded on first use. ✓

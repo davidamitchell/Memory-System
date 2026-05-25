@@ -1,0 +1,1 @@
+1. The Copilot coding agent environment is fully controlled by `copilot-setup-steps.yml`. Without it, the agent gets a bare Ubuntu runner with auto-checkout but no Python package installs and no submodule initialisation.

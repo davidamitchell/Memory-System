@@ -1,0 +1,1 @@
+1. **Priority inflation renders the priority field ineffective.** 88% of 25 backlog items are rated `medium`. The autonomous loop's selection algorithm degrades to oldest-first when all items are equally prioritised. [high confidence — direct measurement]

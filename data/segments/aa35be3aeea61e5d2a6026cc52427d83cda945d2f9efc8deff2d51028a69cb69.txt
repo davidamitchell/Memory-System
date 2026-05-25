@@ -1,0 +1,21 @@
+```
+Root: What environment does each agent start in, and how to make both run correct setup?
+├── Q1: Copilot coding agent environment
+│   ├── Q1a: What Operating System (OS) and default Python does the Copilot agent run on?
+│   ├── Q1b: What is copilot-setup-steps.yml (location, schema, trigger point)?
+│   ├── Q1c: Does copilot-setup-steps.yml support pip install and git submodule init?
+│   ├── Q1d: Without copilot-setup-steps.yml, does Copilot auto-run any setup?
+│   └── Q1e: Does devcontainer.json affect the Copilot coding agent?
+├── Q2: Claude Code on the web (iOS) environment
+│   ├── Q2a: Does Claude Code web clone the repo or operate via GitHub API?
+│   ├── Q2b: What OS does Claude Code web run on?
+│   ├── Q2c: What setup script mechanism does Claude Code web support?
+│   ├── Q2d: Does the setup script live in the repo or in the Claude.ai User Interface (UI)?
+│   └── Q2e: Does Claude Code web respect devcontainer.json or copilot-setup-steps.yml?
+└── Q3: Consistency
+    ├── Q3a: Is there a single file both agents respect for environment setup?
+    ├── Q3b: What is the correct copilot-setup-steps.yml for this repo's requirements?
+    ├── Q3c: What is the Claude Code web setup script for this repo?
+    ├── Q3d: Does devcontainer.json serve any purpose for the two primary agent surfaces?
+    └── Q3e: What prose instruction in CLAUDE.md/copilot-instructions.md covers the gap?
+```

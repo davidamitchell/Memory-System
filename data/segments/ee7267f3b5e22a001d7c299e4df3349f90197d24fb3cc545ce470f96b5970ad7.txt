@@ -1,0 +1,3 @@
+**Out of scope:**
+- Single-team optimisation without organisation-level governance implications.
+- Purely theoretical synthesis without actionable design guidance.

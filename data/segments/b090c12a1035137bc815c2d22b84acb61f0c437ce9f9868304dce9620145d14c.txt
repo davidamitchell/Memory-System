@@ -1,0 +1,1 @@
+[inference] The distinction between "language *for* LLM agents to orchestrate" and "language LLM agents *produce*" is consistently blurred in the literature. The overwhelming majority of 2022–2025 work on "LLM agent languages" addresses orchestration (how to programme agents as a human) rather than output format (what the LLM emits).

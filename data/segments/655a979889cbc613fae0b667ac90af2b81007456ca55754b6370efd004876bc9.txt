@@ -1,0 +1,5 @@
+**In scope:**
+- Published enforcement actions, regulatory guidance, or advisory opinions where Artificial Intelligence (AI) or LLM variability contributed to compliance failure
+- Academic and industry risk assessments of LLM-based decision-making in regulated domains such as financial services, healthcare, and data protection
+- Specific risk categories: inconsistent outcomes across similarly situated cases, inability to audit decision paths, hallucinated regulatory citations, and classification errors
+- Guidance from regulators and standards bodies, including the Information Commissioner's Office (ICO), the Article 29 Working Party guidance later endorsed by the European Data Protection Board (EDPB), the Bank of England, the Prudential Regulation Authority (PRA), the Financial Conduct Authority (FCA), the Office of the Comptroller of the Currency (OCC), the Federal Reserve, the Federal Deposit Insurance Corporation (FDIC), the Federal Trade Commission (FTC), and the National Institute of Standards and Technology (NIST)

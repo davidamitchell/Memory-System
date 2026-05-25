@@ -1,0 +1,1 @@
+**Output format:** Full research skill output (sections 0-7), then Findings section populated from section 6.

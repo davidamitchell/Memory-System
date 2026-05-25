@@ -1,0 +1,4 @@
+**Branch F — Tooling design**
+- F1. What data can be derived purely from YAML front-matter?
+- F2. What is the command interface and output format?
+- F3. How does the `agenda` command integrate with existing CLI patterns in `src/research/cli.py`?

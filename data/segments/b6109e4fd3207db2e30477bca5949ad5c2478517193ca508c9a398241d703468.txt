@@ -1,0 +1,1 @@
+**Constraints:** Focus on evidence grounded in practitioner publications, open-source tooling documentation, research papers, and well-documented real-world implementations. Recency matters — prioritise 2023–2025 sources.

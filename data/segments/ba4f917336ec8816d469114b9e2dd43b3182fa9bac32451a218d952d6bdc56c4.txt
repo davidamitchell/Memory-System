@@ -1,0 +1,7 @@
+- [fact] Finding 1 is supported by Anthropic's Greenhouse board composition and Anthropic's September 2025 enterprise expansion announcement.
+- [fact] Finding 2 is supported by Google DeepMind's Greenhouse board composition and the March 2025 Gemini Robotics announcement.
+- [fact] Finding 3 is supported by xAI's Greenhouse board composition and the December 2024 Memphis expansion announcement.
+- [fact] Finding 4 is supported by exact visible posting counts from archived and current Mistral job boards, plus the Le Chat Enterprise launch.
+- [fact] Finding 5 is supported by Cohere's Ashby board composition and official North, private deployment, and public-sector pages.
+- [fact] Finding 6 is supported by the Built In OpenAI jobs mirror and OpenAI's 2025 developer roundup.
+- [fact] Findings 7 and 8 are synthesis claims derived from Findings 1-6 plus the Meta Superintelligence Labs memo coverage.

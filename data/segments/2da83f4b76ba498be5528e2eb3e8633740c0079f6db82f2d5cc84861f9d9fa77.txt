@@ -1,0 +1,1 @@
+**Scope confirmed:** Meta-level agenda management only. Output must derive all signals from existing YAML front-matter fields (`tags`, `priority`, `status`, `added`, `completed`). No new external services. Tooling must be invocable as `python -m src.main research agenda` and as a GitHub Actions step.

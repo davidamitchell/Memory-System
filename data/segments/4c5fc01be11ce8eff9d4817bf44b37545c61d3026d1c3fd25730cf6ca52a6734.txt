@@ -1,0 +1,5 @@
+**Constraints:**
+- Prioritise published, reproducible benchmarks over anecdotal developer reviews or marketing claims
+- Flag clearly where numbers are vendor self-reported versus independently verified
+- Focus on the 2024-2026 window: this is a fast-moving field and older evaluations may not reflect current tool capabilities
+- "Quality" is scoped to coding task effectiveness (correctness, completeness, regression safety), not to ergonomics or pricing alone

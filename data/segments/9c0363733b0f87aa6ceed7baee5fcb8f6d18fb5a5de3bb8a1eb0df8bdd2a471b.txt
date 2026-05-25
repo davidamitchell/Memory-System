@@ -1,0 +1,1 @@
+However, formal verification has historically been expensive, brittle, and limited in scope. The question is whether AI assistance makes it practically accessible for non-specialist engineering teams, and whether the expressiveness of the Lean 4 type system is sufficient to encode the guardrails that matter in real-world software.

@@ -1,0 +1,4 @@
+- What internal metric set best distinguishes stable workaround demand that is tractable for centrally governed software delivery from structurally resistant demand in a large-enterprise queue?
+- How much of current workaround demand is caused by missing platform capability versus missing decision rights, governance, or data quality?
+- What new field evidence will emerge on AI-assisted throughput in production engineering organisations with high compliance and release-quality bars?
+- Can a reliable early-warning metric for the accumulation of unmet operational capability needs be built from shadow-IT discovery, workaround inventory growth, and queue lead-time data?

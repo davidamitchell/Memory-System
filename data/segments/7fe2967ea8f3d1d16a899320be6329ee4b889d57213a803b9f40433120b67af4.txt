@@ -1,0 +1,5 @@
+**In scope:**
+- Behavioural effects of polished AI narrative output on compliance analysts.
+- User-interface indicators that expose uncertainty and provenance, including confidence markers, citation traces, and signals showing whether the draft includes the key supporting documents, transactions, and policy references needed for review.
+- Regulatory implications under European Union (EU) AI Act Article 14 and relevant financial-crime compliance expectations.
+- Liability allocation risks when analysts adopt unsupported AI summaries.

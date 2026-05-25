@@ -1,0 +1,6 @@
+- Type: knowledge, backlog-item
+- Description: A practical implementation blueprint for cross-repository architecture inspection that separates deterministic extraction, normalized evidence, policy evaluation, and Copilot- or RepoSwarm-based synthesis for a GitHub-first workflow.
+- Links:
+  - https://raw.githubusercontent.com/github/awesome-copilot/main/skills/architecture-blueprint-generator/SKILL.md
+  - https://raw.githubusercontent.com/reposwarm/reposwarm/main/README.md
+  - https://www.openpolicyagent.org/docs/latest/

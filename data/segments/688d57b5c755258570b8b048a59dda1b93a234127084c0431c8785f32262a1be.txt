@@ -1,0 +1,4 @@
+1. Establish the best-supported directional relationship between central delivery throughput, cross-team coordination cost, and workaround demand or shadow Information Technology (IT) demand.
+2. Separate workaround demand into categories that are tractable for centrally governed software delivery, meaning stable and economically automatable, versus categories that remain resistant because they are exception-heavy, unstable, under-governed, or still depend on human judgement and organisational redesign.
+3. Bracket realistic AI-assisted throughput gains using a mix of controlled experiments, real-world randomized controlled trial evidence, and DevOps Research and Assessment (DORA) system-level findings.
+4. Combine the two ranges into a bounded three-year answer, and make every inferential step explicit.

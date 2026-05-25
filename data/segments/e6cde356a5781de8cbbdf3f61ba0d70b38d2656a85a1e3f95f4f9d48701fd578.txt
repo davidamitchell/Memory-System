@@ -1,0 +1,5 @@
+CL8 --> SI1{Harness phase\nslow or skipped?}
+    SI1 -- yes --> SI2[Raise backlog item for harness change]
+    SI1 -- no --> SI3{Phase caught\nan issue?}
+    SI3 --> END([Session complete])
+```

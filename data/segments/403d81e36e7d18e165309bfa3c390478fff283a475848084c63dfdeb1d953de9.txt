@@ -1,0 +1,5 @@
+- The ANZ 40–55% figure is from a controlled internal trial on structured tasks; its applicability to complex enterprise software work (e.g., architectural changes, multi-system integration) is unverified.
+- No independent audit of Google's >25% AI code claim. The figure may be subject to definitional variation (AI-suggested code that is accepted vs. AI-drafted code with minimal human modification).
+- NZ-specific outcome data is entirely absent from the public record. Any NZ strategy built on global evidence is extrapolating from different scale, team composition, and codebase maturity contexts.
+- The SWE-bench discriminative subset finding raises questions about whether benchmark improvement trajectories overstate progress on genuinely novel software engineering problems. If true, the path from Type 2 to Type 3 may be longer than headline numbers suggest.
+- Governance frameworks for AI-generated code are evolving faster than case law. The IP positions documented here reflect current rulings and may change.

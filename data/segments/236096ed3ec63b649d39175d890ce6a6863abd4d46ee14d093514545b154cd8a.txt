@@ -1,0 +1,19 @@
+- **Root question:** Which maturity model best supports staged, evidence-based improvement of AI and low-code governance in enterprises?
+- **A. Existing maturity models**
+  - A1. What does CMMI contribute on staged progression and benchmarking?
+  - A2. What does the Microsoft agentic AI maturity model contribute on AI-specific staging?
+  - A3. What do MIT Center for Information Systems Research (MIT CISR) and DevOps Research and Assessment (DORA) contribute on cumulative capability building and outcomes?
+  - A4. What do the National Institute of Standards and Technology (NIST) Artificial Intelligence Risk Management Framework (AI RMF), International Organization for Standardization (ISO) / International Electrotechnical Commission (IEC) 42001, the Responsible AI Toolkit, and the British Standards Institution (BSI) AI Foundation Framework contribute on governance baselines and assurance?
+- **B. Gap analysis**
+  - B1. Which required governance surfaces are absent or only weakly specified in each external model?
+  - B2. Which gaps matter most for regulated, multi-vendor AI and low-code environments?
+- **C. Stage design**
+  - C1. How many stages are useful without collapsing meaningful distinctions?
+  - C2. What boundary criteria distinguish one stage from the next?
+  - C3. Which dimensions must gate maturity instead of being averaged away?
+- **D. Progression pathways**
+  - D1. What sequence of improvements is supported by the evidence?
+  - D2. Which artefacts and operating signals prove progression?
+- **E. Assessment**
+  - E1. How should organisations evidence maturity objectively?
+  - E2. How should behavioural maturity affect structural maturity claims?

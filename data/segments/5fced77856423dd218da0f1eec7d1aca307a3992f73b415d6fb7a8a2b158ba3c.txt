@@ -1,0 +1,1 @@
+Triage is the second step of the inbox pattern. After items are captured into `/inbox` without a folder decision, a triage step processes them: an agent (or the human owner) reads each inbox file, decides whether it belongs in `meetings/`, `journal/`, or `projects/`, writes or completes its front matter (title, date, tags), and moves the file to its destination.

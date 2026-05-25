@@ -1,0 +1,1 @@
+In the original Open-Brain design, `BAAI/bge-small-en-v1.5` (a 384-dimension model from the Beijing Academy of Artificial Intelligence) was selected as the embedding model for LanceDB-backed semantic search. `Model2Vec` (`potion-base-8M`) was under evaluation as a faster alternative. Neither is used in the current ontology-based system.

@@ -1,0 +1,1 @@
+**Output format:** Knowledge (domain map, coverage metrics, prioritisation rubric, drift thresholds, agenda review checklist) + tool specification (CLI command design) + backlog items (for implementation).

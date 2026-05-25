@@ -1,0 +1,1 @@
+**On scoring scale:** A 1–5 scale is preferred over binary pass/fail at the dimension level because it allows tracking quality trends over time (a score moving from 3 to 4 is signal even if both pass). However, score 1 on any structural dimension must be treated as a hard FAIL, because structural absence is a protocol violation that invalidates the item entirely.

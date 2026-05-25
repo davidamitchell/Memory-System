@@ -1,0 +1,1 @@
+The skills architecture separates concerns: the constitution (copilot-instructions.md) governs behaviour, while skills govern craft. This means skills can be shared across repositories via the submodule, while the constitution remains repository-specific.

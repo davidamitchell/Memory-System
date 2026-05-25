@@ -1,0 +1,1 @@
+2. The query patterns (A1–A4) are row-oriented: point lookups by status, tag JOIN, deduplication by URL. DuckDB's columnar OLAP engine is optimised for the opposite pattern (scanning millions of rows across few columns). SQLite's row-oriented B-tree engine is the better fit.

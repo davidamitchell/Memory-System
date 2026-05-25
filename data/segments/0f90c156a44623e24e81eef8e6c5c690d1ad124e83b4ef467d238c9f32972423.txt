@@ -1,0 +1,1 @@
+This is fundamentally different from keyword search (which requires exact word overlap) or full-text search (which ranks by term frequency). Semantic search can match a query like "what did I decide about the database?" with a document titled "LanceDB architecture" even if the word "database" appears nowhere in that file.

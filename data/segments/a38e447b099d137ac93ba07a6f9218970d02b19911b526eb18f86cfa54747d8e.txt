@@ -1,0 +1,4 @@
+1. Define backpressure as used in TOC and operations management contexts
+2. Trace academic and primary-source evidence for backpressure as a TOC implementation mechanism
+3. Survey real-world case studies or white papers applying backpressure in TOC implementations
+4. Connect backpressure to key TOC constructs: drum-buffer-rope, throughput accounting, Work in Progress (WIP) limits

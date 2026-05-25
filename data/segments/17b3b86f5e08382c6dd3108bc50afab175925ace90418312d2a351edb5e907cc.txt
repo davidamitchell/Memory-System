@@ -1,0 +1,4 @@
+**Out of scope:**
+- Individual research item prioritisation within a sprint (covered by the autonomous loop's item selection)
+- Backlog item filing mechanics (covered by existing CLI tooling and `2026-02-27-simple-process-for-adding-research-item.md`)
+- The content of any specific research domain (this is meta-level agenda management, not object-level research)

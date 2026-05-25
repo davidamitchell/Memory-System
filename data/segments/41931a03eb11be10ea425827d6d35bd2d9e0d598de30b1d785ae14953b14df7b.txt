@@ -1,0 +1,1 @@
+[inference] For this repo, this means `pip install -e ".[dev]"` is not run, meaning the `src` package is not importable, ruff is not installed, and pytest is not available at the start of every Copilot coding agent session, unless `copilot-setup-steps.yml` is present.

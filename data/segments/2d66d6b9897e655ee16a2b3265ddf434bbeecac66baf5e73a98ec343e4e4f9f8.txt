@@ -1,0 +1,4 @@
+**Wrong assumption:**
+1. Update the plan checklist to cross out the invalidated assumption.
+2. Add a replacement item.
+3. Log the assumption change in `report_progress`.

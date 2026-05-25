@@ -1,0 +1,3 @@
+- Type: knowledge
+- Description: Structured findings on Jevons Paradox mechanics, historical sector evidence, counter-examples, and speculative 1/5/10-year framework for AI-assisted software production.
+- Links:

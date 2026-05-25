@@ -1,0 +1,4 @@
+The minimal MADR structure is:
+```
+Date: YYYY-MM-DD
+Status: proposed | accepted | superseded | deprecated

@@ -1,0 +1,1 @@
+[inference] Feasibility is therefore more organisational than mathematical: enterprises need authoritative corpora, evaluation sets, routing logic, and subject-matter ownership at least as much as they need graphics processing unit (GPU) budget. (Sources: `https://arxiv.org/abs/2401.05856`; `https://www.nature.com/articles/s42256-023-00626-4`)

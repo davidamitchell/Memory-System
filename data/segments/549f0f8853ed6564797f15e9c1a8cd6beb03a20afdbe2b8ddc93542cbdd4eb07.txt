@@ -1,0 +1,1 @@
+- **Inaccessible source:** Kalai et al. (2025) "Why language models hallucinate" is cited in Gao et al. but the full text was not directly accessed for this research item. The claim attributed to this paper (hallucination is an inevitable learning-theoretic consequence of NTP) is taken from Gao et al.'s characterisation of it.

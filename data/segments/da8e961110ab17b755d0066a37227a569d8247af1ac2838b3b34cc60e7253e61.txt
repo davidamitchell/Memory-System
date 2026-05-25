@@ -1,0 +1,1 @@
+DuckDB has no built-in vector search extension, which means adding semantic search would require integrating a separate vector store anyway. [fact, source: duckdb.org extension documentation]

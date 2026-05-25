@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Research on the feasibility and architecture of organisation-customised Large Language Model layers, concluding that the viable enterprise design is a layered hybrid stack combining retrieval, selective adaptation, and verifier patterns rather than a standalone organisation-trained model.
+- Links:
+  - https://arxiv.org/abs/2303.17564
+  - https://arxiv.org/abs/2401.05856
+  - https://www.harvey.ai/blog/expanding-harveys-model-offerings

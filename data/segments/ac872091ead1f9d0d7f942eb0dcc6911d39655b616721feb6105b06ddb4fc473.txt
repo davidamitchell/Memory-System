@@ -1,0 +1,1 @@
+The four-signal RRF (cosine + BM25 + PPR + recency) is the recommended ranking combination. LLM cross-encoder reranking is optional and should be added only if retrieval quality falls short after the four-signal RRF is deployed.

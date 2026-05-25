@@ -1,0 +1,1 @@
+What are the current and emergent best practices for crafting AI agent prompts and tooling guidance tailored to each phase of the Software Development Life Cycle (SDLC) — covering discovery, requirements, design, planning, building, testing, reviewing, and iteration — and how can a structured prompt framework improve AI-assisted SDLC efficiency?

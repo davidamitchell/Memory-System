@@ -1,0 +1,3 @@
+1. Synthesize the behavioural and organisational theories that explain why low-effort knowledge paths dominate.
+2. Derive institutional design rules that make relevant knowledge cheaper to find and safer to use than informal substitutes.
+3. Propose measurable operating indicators and follow-on implementation backlog candidates.

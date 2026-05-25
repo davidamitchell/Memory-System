@@ -1,0 +1,1 @@
+The decision was made to move toward an **ontology-based** representation, where knowledge is structured as a graph of concepts, properties, and relationships — enabling richer retrieval, domain-scoped queries, and versionable knowledge artefacts.

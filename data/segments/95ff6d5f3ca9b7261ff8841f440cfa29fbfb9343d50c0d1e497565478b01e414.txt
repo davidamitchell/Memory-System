@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Comparative analysis of SWE AI strategies and outcomes across 6+ organisations, with governance pattern analysis, agentic frontier assessment (SWE-bench trajectory), and NZ context.
+- Links:
+  - https://arxiv.org/abs/2302.06590 (GitHub Copilot productivity RCT)
+  - https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report (DORA 2024)
+  - https://www.swebench.com/ (SWE-bench leaderboard)

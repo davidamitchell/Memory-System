@@ -1,0 +1,1 @@
+Conclusions about inferential opacity may change at the margin as interpretability improves, but the current source set still supports only partial, not complete, reasoning visibility. [inference; source: https://www.anthropic.com/claude-opus-4-6-system-card; https://www.nist.gov/itl/ai-risk-management-framework]

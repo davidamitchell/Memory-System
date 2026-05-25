@@ -1,0 +1,4 @@
+**Approach sub-question 6 — Context prioritisation:**
+- Q6.1: What ranking signals are most effective for ordering retrieved knowledge (cosine similarity, graph centrality, recency, structural salience)?
+- Q6.2: How does RRF combine incompatible ranking signals without calibration, and what are its limitations?
+- Q6.3: Is LLM reranking worth the additional latency for knowledge retrieval (vs. intent-type routing)?

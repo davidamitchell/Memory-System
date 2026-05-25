@@ -1,0 +1,1 @@
+3. **Map candidates to the failure mode taxonomy.** For each identified approach, use the five-layer taxonomy from the taxonomy item to label which failure modes it structurally addresses and which it does not. Identify gaps: are there layers that no current approach covers?

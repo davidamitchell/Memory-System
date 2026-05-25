@@ -1,0 +1,1 @@
+Open-Brain is agent-first in all three senses: agents use `add_memory` and `refactor_memory` to write (not just `search_brain` to read), the git history is available as context, and the constitution explicitly mandates that agents act as "Architects" who improve the system rather than just users who consume it.

@@ -1,0 +1,1 @@
+The best-supported answer to the research question is therefore that no single benchmark is authoritative, but SWE-bench Verified is the strongest public anchor, and the current visible leaders in directly comparable public leaderboard evidence are open or benchmark-native agent systems. [inference; source: https://www.swebench.com/verified.html; https://www.swebench.com/]

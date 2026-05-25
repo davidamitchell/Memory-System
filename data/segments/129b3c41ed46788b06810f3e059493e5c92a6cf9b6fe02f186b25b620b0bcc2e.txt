@@ -1,0 +1,1 @@
+- [fact] **Method note:** Current role counts below were captured from public career endpoints on 2026-04-19. Exact totals are strongest where a structured public jobs endpoint existed. OpenAI and Meta required secondary or partial public sources because the official pages were blocked or gated.

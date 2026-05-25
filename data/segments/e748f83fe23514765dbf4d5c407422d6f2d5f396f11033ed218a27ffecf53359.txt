@@ -1,0 +1,1 @@
+GitHub's enterprise Accenture study (GitHub blog, 2024) found 90%+ of enterprise developers report greater job fulfilment when using Copilot, and code suggestion acceptance rates of 21–24%. [fact — source: GitHub blog enterprise study] The study is vendor-sponsored; treat quantitative claims as directional.

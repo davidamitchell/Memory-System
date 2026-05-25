@@ -1,0 +1,1 @@
+[fact] **Scope confirmed:** Organisational and strategic dimensions. Not tool comparisons or model benchmarks. Evidence must be labelled [fact], [inference], or [assumption].

@@ -1,0 +1,4 @@
+**Out of scope:**
+- Deep runtime observability (distributed tracing, Application Performance Monitoring (APM)) — focus is static/structural analysis
+- Architecture design methodologies (Domain-Driven Design (DDD), event storming) — focus is inspection of existing codebases, not greenfield design
+- Commercial architecture-management platforms that require proprietary connectors or non-public APIs

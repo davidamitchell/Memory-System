@@ -1,0 +1,5 @@
+- **[ ]** https://ncino.com/products - returned status code 429 during this session.
+- **[ ]** https://www.gartner.com/en/banking-financial-services - returned status code 403 during this session.
+- **[ ]** https://www.forrester.com/research/financial-services-technology/ - returned status code 404 during this session.
+- **[ ]** Direct McKinsey banking build-versus-buy article - identified via search results, but fetch failed during this session.
+- **[ ]** Mambu platform deep-dive page - the landing web address returned a page-not-found shell during this session, so it was not used as evidence.

@@ -1,0 +1,1 @@
+The knowledge representation is ontology-based: concepts are structured as a typed graph of upper and lower ontologies, not a flat vector index. See [ADR-0002](../docs/adr/0002-move-from-vector-storage-to-ontology.md) for the decision and [ADR-0004](../docs/adr/0004-provenance-model-and-control-plane.md) for the full architecture.

@@ -1,0 +1,4 @@
+- ADRs live in `docs/adr/` and are named `NNNN-short-title.md` (zero-padded four-digit sequence number).
+- The `docs/adr/README.md` file maintains the index of all ADRs.
+- Status values are `proposed → accepted → superseded / deprecated`.
+- Use the `decisions` skill from `.github/skills/decisions/SKILL.md` when writing a new ADR.

@@ -1,0 +1,22 @@
+- **Branch A - Gap definition**
+  - A1. What exactly is missing when a base foundation model faces private organisational knowledge?
+  - A2. What additional gap exists for organisation-salient public knowledge such as specific regulators, competitors, and jurisdictions?
+  - A3. Which parts of that gap can RAG solve, and which parts remain unsolved?
+- **Branch B - Adaptation landscape**
+  - B1. What do LoRA, QLoRA, and broader PEFT methods change economically versus full fine-tuning?
+  - B2. When does domain-adaptive pretraining become justified?
+  - B3. What is the status of model merging and other heavier adaptation methods?
+- **Branch C - Real deployments**
+  - C1. What architecture did BloombergGPT use, and what did it gain?
+  - C2. What architecture did Med-PaLM use, and what limits remained?
+  - C3. How do Harvey, Morgan Stanley, and Glean currently combine retrieval, adaptation, and orchestration?
+- **Branch D - Layered, tandem, and adversarial patterns**
+  - D1. What does a layered architecture mean operationally?
+  - D2. When do tandem or routing architectures improve outcomes?
+  - D3. When do critic or verifier models add value?
+- **Branch E - Concept generation**
+  - E1. Is concept extraction or synthetic corpus generation a credible complement to RAG?
+  - E2. Is concept generation better understood as ontology extraction, synthetic supervision, or full replacement for retrieval?
+- **Branch F - Feasibility synthesis**
+  - F.1 Which approaches are production-ready, early-adopter, or still research-only for a mid-to-large enterprise?
+  - F.2 What skill, data, and evaluation stack is required for each?

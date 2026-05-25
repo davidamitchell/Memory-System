@@ -1,0 +1,4 @@
+- **Judge model drift:** The Copilot CLI model may change without notice, causing score drift over time. Accepted risk; mitigated by versioning the rubric prompt and monitoring score distributions.
+- **Rubric calibration:** The 1–5 anchors need calibration against real items. If 80%+ of items score 4–5 on a given dimension, the anchors are too loose and should be tightened.
+- **Copilot API availability:** The eval gate has the same COPILOT_GITHUB_TOKEN dependency as the existing review workflow; if access changes, both fail. Accepted risk.
+- **Gold set refresh discipline:** The gold set refresh requirement is easy to forget when `research-prompt.md` is updated. A TODO comment in the research protocol or a `CODEOWNERS` rule linking protocol changes to gold set reviews would reduce this risk.

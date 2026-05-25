@@ -1,0 +1,1 @@
+2. **The `sqlite-vec` extension (`pip install sqlite-vec`) enables KNN vector search within the same SQLite database file as FTS5, adding semantic retrieval capability without introducing a second database technology.** sqlite-vec is pre-v1 and may have breaking changes before 1.0; this risk is managed by deferring its integration to Phase 2. [medium confidence]

@@ -1,0 +1,1 @@
+2. `.github/workflows/copilot-setup-steps.yml` is a standard GitHub Actions workflow file that must contain a job named exactly `copilot-setup-steps`; steps in this job run before the Copilot agent starts work and support all GitHub Actions step types including `actions/setup-python`, `pip install`, and `actions/checkout@v4` with `submodules: recursive`. (high confidence)

@@ -1,0 +1,3 @@
+- [Business-led low-code agent governance](https://davidamitchell.github.io/Research/research/2026-04-24-business-led-low-code-agent-governance.html)
+- [Where should governance enforcement points be implemented within enterprise architecture?](https://davidamitchell.github.io/Research/research/2026-04-26-ai-lowcode-governance-enforcement-architecture.html)
+- [Deployment pipeline as the enforceable control gate for citizen-developed agents](https://davidamitchell.github.io/Research/research/2026-04-26-deployment-pipeline-citizen-development-governed-gate.html)

@@ -1,0 +1,3 @@
+- [Business-led low-code agent governance](https://davidamitchell.github.io/Research/research/2026-04-24-business-led-low-code-agent-governance.html)
+- [Enterprise AI capability model for use-case maturity decisions](https://davidamitchell.github.io/Research/research/2026-04-22-enterprise-ai-capability-model.html)
+- [Governance enforcement architecture for AI and low-code](https://davidamitchell.github.io/Research/research/2026-04-26-ai-lowcode-governance-enforcement-architecture.html)

@@ -1,0 +1,1 @@
+9. **Model drift is the primary operational failure mode for deployed risk models.** AI models trained pre-pandemic underperformed during 2020–2021 stress periods because underlying data distributions shifted. Best practice now requires continuous drift monitoring with defined retraining triggers.

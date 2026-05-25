@@ -1,0 +1,6 @@
+**In scope:**
+- Formal or operational definitions of capability debt as distinct from, but related to, technical debt, specifically covering process gaps, permission sprawl, review quality degradation, and skill inventory deficits
+- Maturity models, scorecard frameworks, and leading-indicator approaches that link capability debt measures to future AI-related incident risk
+- Empirical evidence on how pre-existing capability debt, including legacy systems, business-unit workarounds, and under-resourced central functions, amplifies risk when agentic AI removes the natural friction of human review rates
+- Sequencing models for deciding when to reduce capability debt before scaling AI, and when accepting debt is tolerable
+- Hidden organisational debt created by promoting individual AI tools without investment in review infrastructure, quality systems, or collective judgment capacity

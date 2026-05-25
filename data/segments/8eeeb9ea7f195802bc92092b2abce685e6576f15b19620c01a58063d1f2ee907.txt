@@ -1,0 +1,1 @@
+Tags are the primary filter used when retrieving files by topic in addition to semantic search. They also appear in the `glossary/` front matter as part of the extended schema defined in `definition_scheme.md`.

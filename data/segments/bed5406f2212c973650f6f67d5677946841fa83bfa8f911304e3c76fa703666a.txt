@@ -1,0 +1,12 @@
+1. What deterministic circuit-breaker architecture best protects control paths?
+   1a. What are the trigger conditions for non-convergence and unsafe uncertainty?
+   1b. What fallback baselines can be pre-verified for safe execution?
+2. Where should probabilistic-to-deterministic transaction boundaries sit?
+   2a. Which boundary patterns reduce unsafe side effects?
+   2b. How should boundary contracts be enforced and audited?
+3. How can runtime telemetry be injected into energy functions safely?
+   3a. Which telemetry classes improve adaptation versus destabilize optimization?
+   3b. What guardrails prevent oscillation or runaway behavior?
+4. What are realistic latency bounds for EBM-guided reasoning at increasing constraint complexity?
+   4a. How does complexity growth affect convergence-time distribution?
+   4b. Which scheduling and time-budget policies preserve deterministic service outcomes?

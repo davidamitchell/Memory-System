@@ -1,0 +1,5 @@
+**Out of scope:**
+- Reinforcement learning from human feedback (RLHF) or instruction tuning mechanics (unless directly relevant to the world-model question)
+- Detailed implementation of specific LLM architectures beyond what is needed to contrast with PP
+- Clinical neurology, pharmacology, or pathological cases unless they illuminate the core question
+- The engineering question of "how to build better Artificial Intelligence (AI)" — this is a conceptual/scientific research item

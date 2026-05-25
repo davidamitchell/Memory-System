@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Structured benchmark map and evidence-backed comparison of public coding-harness evaluation measures, with explicit separation between public leaderboard evidence, vendor studies, and internal evals. [fact; source: https://www.swebench.com/verified.html; https://cursor.com/blog/cursorbench; https://github.blog/news-insights/research/does-github-copilot-improve-code-quality-heres-what-the-data-says/]
+- Links:
+  - https://www.swebench.com/verified.html
+  - https://cursor.com/blog/cursorbench
+  - https://github.blog/news-insights/research/does-github-copilot-improve-code-quality-heres-what-the-data-says/

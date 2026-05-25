@@ -1,0 +1,1 @@
+3. **Pre-training data quality research** — Survey the literature on how pre-training data quality affects model behaviour. What do we know about the effect of noisy, contradictory, or sycophantic text in training corpora on hallucination rates? What deduplication, quality filtering, and source-weighting strategies exist?

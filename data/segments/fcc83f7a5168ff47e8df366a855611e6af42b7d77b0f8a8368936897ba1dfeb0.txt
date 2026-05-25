@@ -1,0 +1,5 @@
+**Cluster B: Core prompt patterns and their software engineering applicability**
+- B1. What prompt patterns has the research literature formalised (role, chain-of-thought (CoT), few-shot, constraint-framing)?
+- B2. What is Structured CoT (SCoT) and how does it improve over standard CoT for code generation?
+- B3. How should few-shot examples be selected for code generation vs. test generation vs. review tasks?
+- B4. What patterns are specific to software engineering vs. general LLM use?

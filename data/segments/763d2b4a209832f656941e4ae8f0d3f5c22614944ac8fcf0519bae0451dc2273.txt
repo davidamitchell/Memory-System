@@ -1,0 +1,2 @@
+**Regulatory/operational lens:**
+No regulatory considerations apply directly to database technology choice. The git-first, owner-reviews-all-changes constraint (from AGENTS.md) does apply: since the database is binary and excluded from git, the source-of-truth for research item metadata must always remain the YAML front-matter in Markdown files. The database is a derived index — it must be rebuildable from source at any time. This is an important architectural invariant for any implementation.

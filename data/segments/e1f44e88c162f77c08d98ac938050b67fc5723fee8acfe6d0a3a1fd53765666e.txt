@@ -1,0 +1,2 @@
+**Q2.2 — Team taxonomy phase:**
+In KPMG's documented 18-month implementation model, team taxonomy deployment occurs in Phase 3 (months 7–9), after data quality remediation (Phase 2, months 4–6). [fact, KPMG] The implication is that attempting team taxonomy before data quality is resolved produces a taxonomy anchored to unreliable cost data — a common reason for model rebuilds. [inference]

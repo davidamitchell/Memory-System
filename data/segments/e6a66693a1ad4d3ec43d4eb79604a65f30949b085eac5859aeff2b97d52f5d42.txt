@@ -1,0 +1,1 @@
+Every session ends with a full close sequence. This is not optional.

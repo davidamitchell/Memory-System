@@ -1,0 +1,1 @@
+[fact] Claude Code on the web supports a "setup script": a Bash script that runs before Claude Code launches, after the repository is cloned. (S3: "A setup script is a Bash script that runs when a new cloud session starts, before Claude Code launches.")

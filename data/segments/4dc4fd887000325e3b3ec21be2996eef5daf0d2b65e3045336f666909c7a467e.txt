@@ -1,0 +1,5 @@
+- Question: To what extent do Large Language Models optimise token prediction over textual distributions rather than learn invariant causal models of reality?
+- Scope: distributional semantics, token-level Empirical Risk Minimisation framing, representational geometry, mechanistic interpretability, causal benchmarks, and placement on Pearl's causal hierarchy.
+- Constraints: full mode, direct dependency on Research Questions 2.1 and 2.4, URL-backed sources only, and formal claims preferred over anecdote.
+- Output: knowledge item with executive summary, key findings, evidence map, assumptions, analysis, risks, gaps, uncertainties, and open questions.
+- Prior completed items consulted: https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-18-rq2-1-erm-causal-blindness.md ; https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-18-rq2-4-causal-hierarchy-formal-limits.md ; https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-09-orthogonality-thesis-llm-training-posttraining-enterprise-risk.md

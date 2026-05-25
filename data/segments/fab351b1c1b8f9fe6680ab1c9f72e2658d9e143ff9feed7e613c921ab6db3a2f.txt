@@ -1,0 +1,1 @@
+- **Scaling evidence gap:** The scaling pattern (lower ratio, lower perturbation slope in larger models) is based on six model checkpoints across three families. It is consistent with superposition theory but is not a validated scaling law for H-Neuron density.

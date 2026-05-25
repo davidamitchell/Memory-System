@@ -1,0 +1,1 @@
+[fact] **Prior work check:** I searched `Research/completed/` for adjacent work before extending this item. The most directly related completed items are `2026-02-28-ai-strategy-swe-focus.md`, `2026-03-14-reliable-software-llm-era.md`, `2026-03-21-technology-capability-models.md`, `2026-03-10-nature-of-the-firm-coase-organisations.md`, and `2026-02-28-jevons-paradox.md`.

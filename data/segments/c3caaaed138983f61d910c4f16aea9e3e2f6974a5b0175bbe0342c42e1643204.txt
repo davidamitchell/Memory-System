@@ -1,0 +1,1 @@
+Given that Hallucination-Associated Neurons (H-Neurons) emerge during pre-training rather than instruction tuning or RLHF, what does this reveal about how hallucination-prone behaviour is encoded during the pre-training phase, and what concrete changes to pre-training data, objectives, or architecture could reduce H-Neuron formation?

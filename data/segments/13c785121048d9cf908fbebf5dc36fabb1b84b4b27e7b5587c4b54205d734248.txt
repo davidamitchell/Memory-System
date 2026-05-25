@@ -1,0 +1,1 @@
+[fact] If the repo is not checked out in the setup steps, Copilot will check it out automatically after the steps complete. (S1: "If you do not check out your code, Copilot will do this for you.")

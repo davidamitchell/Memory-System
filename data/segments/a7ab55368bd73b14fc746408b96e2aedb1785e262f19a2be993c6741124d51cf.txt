@@ -1,0 +1,1 @@
+This is richer than a simple `## Related` link list: the ontology encodes explicit, machine-readable relationship types (subClassOf, derivedFrom, contradicts, supersedes) that support formal reasoning and structured query (e.g. SPARQL).

@@ -1,0 +1,7 @@
+**In scope:**
+- Prompt patterns and strategies for each SDLC phase: Discovery/Research, Requirements, Design, Planning, Building, Testing, Reviewing, Iteration/Loop
+- Best practices for structuring AI agent prompts in software engineering contexts (role prompting, chain-of-thought, few-shot, structured output)
+- Emergent and adopted strategies from practitioner communities (GitHub Copilot Workspace, Cursor, Aider, Claude Code, etc.)
+- Aligned tooling approaches that provide precise, actionable phase-specific guidance
+- Practical examples and templates/frameworks from real-world implementations
+- Mapping of AI-assisted systems to SDLC efficiency gains

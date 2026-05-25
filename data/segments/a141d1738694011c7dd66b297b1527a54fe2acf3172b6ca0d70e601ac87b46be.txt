@@ -1,0 +1,1 @@
+[inference] Copilot Workspace operationalises phase-aware prompting by automatically specialising the agent and context for each phase transition (issue analysis → spec generation → plan decomposition → code generation → test execution). The developer edits at the plan level rather than writing individual prompts, which is a form of constrained meta-prompting.

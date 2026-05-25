@@ -1,0 +1,1 @@
+[fact] The GetDX Q4 2025 Impact Report found that roughly 60% of non-engineers (managers, designers, product managers) now use AI to contribute code daily. Source: alexop.dev/posts/the-software-factory, citing getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025 [secondary relay of a vendor report].

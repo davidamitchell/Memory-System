@@ -1,0 +1,12 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| 88% of backlog items are rated `medium` | YAML front-matter analysis, 2026-03-03 | high | Direct count: 22/25 medium |
+| D4 (Research Tooling) = 44% of backlog | Tag analysis of Research/backlog/*.md | high | 11/25 items tagged with tooling/interface/delivery/youtube/transcripts |
+| Five domains cover all 48 items | Tag co-occurrence analysis of all items | medium | Some items straddle domains; assignment to primary domain is an inference |
+| Four-dimension rubric matches AGENTS.md heuristic | AGENTS.md heuristic; JTBD (Sivoi Insights); OKR (OKR International); PARA (Forte Labs) | medium | Synthesis across three frameworks; no single source validates the exact rubric |
+| 40% drift threshold appropriate for this corpus | RAND research portfolio evaluation; corpus size arithmetic | medium | Threshold not empirically validated; derived from first principles |
+| Monthly review cadence | Corpus turnover arithmetic (3/day × 20 working days = 60 items/month vs. 25-item backlog) | high | Arithmetic is direct; assumption is that 3/day rate is sustained |
+| `research agenda` command implementable without new dependencies | Direct inspection of src/research/item.py, src/research/cli.py | high | All required fields already parsed; Python stdlib sufficient for report generation |
+| D2 (Agentic Systems) under-represented | Tag analysis: 2 of 25 backlog items | high | Direct count |
+| workflow_dispatch + GitHub issue is correct delivery | AGENTS.md "Consequences for tooling design" | high | Explicitly stated in AGENTS.md |
+| Open Questions are under-used as backlog input | Review of completed items | medium | Observed in several items; not systematically counted |

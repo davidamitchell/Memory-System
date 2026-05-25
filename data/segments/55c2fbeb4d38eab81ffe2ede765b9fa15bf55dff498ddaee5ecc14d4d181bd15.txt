@@ -1,0 +1,20 @@
+- **Root question:** which existing tools and control-plane patterns implement the UELGF rail with the least bespoke engineering and the clearest governance boundaries?
+- **A. Component mapping**
+  - A1. What capabilities must the PAP, PDP, PIP, PEP, runtime feedback loop, kill switch, and scaffold generator expose?
+  - A2. Which of those capabilities are already present in off-the-shelf tools, and which remain integration work?
+- **B. Policy runtime**
+  - B1. What does Open Policy Agent (OPA) provide for bundle rollout, latency, logging, and masking?
+  - B2. What does Cedar provide for request semantics, schema validation, diagnostics, and deny behavior?
+  - B3. Which engine fits the UELGF PDP best as deployed infrastructure rather than as a language in isolation?
+- **C. Observability**
+  - C1. What trace, log, and metric semantics can OpenTelemetry provide directly?
+  - C2. Which UELGF fields must travel as context metadata, and which must stay out of propagated headers?
+  - C3. Which Collector processors create the minimum governance-safe telemetry pipeline?
+- **D. Identity and revocation**
+  - D1. Which credential systems actually issue short-lived or revocable workload credentials?
+  - D2. Which revocation guarantees depend on credential expiry rather than instant kill?
+  - D3. What residual risk remains for unmanaged or off-rail credentials?
+- **E. Financial-institution operating model**
+  - E1. Which control-plane components must be centrally governed, inventoried, and independently reviewed?
+  - E2. Which tooling choices are likely extensions of existing estates, and which are likely net-new approvals?
+  - E3. What is the smallest credible stack that still enforces policy, telemetry, and revocation?

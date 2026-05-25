@@ -1,0 +1,6 @@
+- Type: knowledge, backlog-item
+- Description: A structured comparison of LSE, knowledge graphs (GraphRAG, LightRAG, HippoRAG), concept maps, and hierarchical document compression (RAPTOR) as techniques for large-scale agent context management; a recommended five-layer knowledge architecture; a staged adoption path tied to corpus scale; and open questions that seed follow-on implementation items.
+- Links:
+  - https://arxiv.org/abs/2404.16130 (GraphRAG — Edge et al., 2024)
+  - https://arxiv.org/abs/2410.05779 (LightRAG — Guo et al., 2024)
+  - https://arxiv.org/abs/2401.18059 (RAPTOR — Sarthi et al., 2024)

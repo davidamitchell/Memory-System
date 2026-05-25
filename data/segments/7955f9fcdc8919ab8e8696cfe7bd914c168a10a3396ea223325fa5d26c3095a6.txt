@@ -1,0 +1,1 @@
+**[inference]** Scoring rule: sum the four dimensions (4–12 range). Map to priority: 10–12 = `high`; 6–9 = `medium`; 4–5 = `low`. This produces a tri-level priority that is sparse at `high` by design — only items with ≥3 in at least two dimensions reach `high`.

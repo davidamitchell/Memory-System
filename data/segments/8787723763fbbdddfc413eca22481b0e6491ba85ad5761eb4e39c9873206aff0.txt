@@ -1,0 +1,1 @@
+Another is that some causal abstractions do emerge, but only weakly or incompletely under the default objective and become more robust when explicit causal structure is added. [inference; source: https://aclanthology.org/2024.emnlp-main.381/; https://openreview.net/forum?id=mqoxLkX210]

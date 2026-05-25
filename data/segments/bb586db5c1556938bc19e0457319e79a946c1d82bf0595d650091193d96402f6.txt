@@ -1,0 +1,1 @@
+ChromaDB requires `pip install chromadb`, which pulls in a significant dependency tree (including `hnswlib`, `tokenizers`, and several ML dependencies). The persistent client requires the Chroma server running in-memory; data is written to disk but the process architecture is heavier than SQLite. [fact, source: docs.trychroma.com, confirmed by direct access]

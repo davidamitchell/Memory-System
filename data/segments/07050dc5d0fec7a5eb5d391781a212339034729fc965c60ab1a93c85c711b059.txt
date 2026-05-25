@@ -1,0 +1,1 @@
+**Output format:** Technology recommendation with justification, schema design, migration trigger criteria, backlog items for implementation.

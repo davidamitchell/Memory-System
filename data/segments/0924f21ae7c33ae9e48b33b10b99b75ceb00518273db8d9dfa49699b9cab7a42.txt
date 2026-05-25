@@ -1,0 +1,5 @@
+Sources consulted:
+- Primary: Thoughtworks, "Moving beyond the hype: How to scale AI successfully" - https://www.thoughtworks.com/insights/whitepapers/how-to-scale-ai-successfully
+- Primary: McKinsey, "The State of AI: Global Survey 2025" - https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+- Primary: California Management Review, "Bridging the Gaps in AI Transformation: An Evidence-Based Framework for Scalable Adoption" - https://cmr.berkeley.edu/2025/11/bridging-the-gaps-in-ai-transformation-an-evidence-based-framework-for-scalable-adoption/
+- Tertiary: `Research/completed/2026-03-12-exploration-synthesis-gap.md`

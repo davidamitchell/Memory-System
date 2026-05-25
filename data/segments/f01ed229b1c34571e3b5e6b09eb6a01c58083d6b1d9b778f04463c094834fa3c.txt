@@ -1,0 +1,1 @@
+**[fact]** The agent evaluation cross-repo analysis established that a gold dataset must contain known-good examples with explicitly documented expected quality properties, and must be version-controlled alongside the agent prompt. Source: `Research/completed/2026-03-10-agent-evaluation-cross-repo-analysis.md` Key Finding 12.

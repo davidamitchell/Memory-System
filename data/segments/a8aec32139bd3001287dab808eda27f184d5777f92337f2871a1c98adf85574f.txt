@@ -1,0 +1,1 @@
+[inference] This means the setup script for Claude Code on the web cannot be version-controlled in the repository directly. The repo owner must configure it in the Claude.ai project settings. Any developer contributing to the repo cannot rely on the same setup script being present unless they configure it in their own Claude.ai account.

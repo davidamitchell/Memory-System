@@ -1,0 +1,2 @@
+- [fact] Potential contradiction 3: TOC predicts removing the software constraint shifts the bottleneck to problem definition, yet investment boards and business cases already exist.
+- [inference] Resolution 3: Investment boards exist to allocate scarce engineering capacity, not primarily to improve problem-definition quality. When the engineering constraint is removed, the remaining governance need is for problem prioritisation and definition quality, which may require different mechanisms.

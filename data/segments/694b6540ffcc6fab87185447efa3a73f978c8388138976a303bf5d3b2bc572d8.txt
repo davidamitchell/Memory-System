@@ -1,0 +1,1 @@
+**Quality constraint check:** No section consists of headings without substantive content. The phase-specific framework in §6 is a synthesis, not a reproduction of any single source. The DORA throughput/stability tension (§4 Consistency Check) is explicitly flagged as partially unresolvable.

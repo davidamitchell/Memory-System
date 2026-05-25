@@ -1,0 +1,2 @@
+[fact] No peer-reviewed paper was found in 2022–2025 that explicitly describes a new programming language whose *primary design constraint* is "this language is intended to be written by an LLM, not a human". Searches across arXiv (cs.PL, cs.AI), PLDI, OOPSLA, POPL, NeurIPS, ICML, and ICLR 2022–2025 proceedings found no candidate matching this framing.
+Source: Web search results (2026-03-11); no primary source found.

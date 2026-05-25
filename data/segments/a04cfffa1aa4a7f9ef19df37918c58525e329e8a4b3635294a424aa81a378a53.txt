@@ -1,0 +1,2 @@
+[fact] **LMQL (Language Model Query Language)** (Beurer-Kellner, Fischer, Vechev; arXiv:2212.06094; PLDI 2023) introduced "language model programming" — generalising prompting to a mix of text and constraints (stopping phrases, type constraints such as `INT(N)`, set membership). Constraints are enforced at decoding time. Savings of 26–85% on API costs were reported. LMQL is an academic prototype with moderate production uptake; it was one of the first PLDI papers on LLM output control.
+Source: https://arxiv.org/abs/2212.06094; https://lmql.ai

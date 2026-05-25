@@ -1,0 +1,4 @@
+- [fact] Every section now traces back to either the item brief, the two prior completed research items, or the reviewed public sources. No unsupported factual claim remains in the research record.
+- [fact] The main uncertainty - that "synthesis step" is a cross-source construct rather than a canonical named phase - is stated explicitly in Sections 2, 3, 4, 6, and Risks.
+- [fact] All open questions are genuinely out of scope for this item and arise from evidence gaps rather than from incomplete drafting.
+- [inference] The item is ready to seed the Findings section because the answer, evidence map, assumptions, and remaining uncertainties are already explicit and internally consistent.

@@ -1,0 +1,1 @@
+**Constraints:** Vendor case studies used as evidence seeds only; claims requiring independent corroboration are labelled [inference] or [assumption] where a single source supplies them. PDFs (GAO-25-106488, KPMG, ISG) were not directly readable; content drawn from web search summaries citing these documents.

@@ -1,0 +1,1 @@
+8. The minimum viable documentation approach uses out-of-box ITSM templates as the baseline, supplements with documentation of the local configuration delta, escalation/exception paths, and a RACI per process, and avoids over-customisation — which proportionally increases the maintenance burden. [Medium confidence — well-supported by principle and practitioner guidance]

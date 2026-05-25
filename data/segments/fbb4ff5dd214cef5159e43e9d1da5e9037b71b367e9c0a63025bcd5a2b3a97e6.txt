@@ -1,0 +1,1 @@
+[inference] This makes concept generation a supporting technique for representation and supervision, while live answer quality still depends on access to current source material. (Sources: `https://arxiv.org/abs/2306.11644`; `https://arxiv.org/abs/2504.12915`)

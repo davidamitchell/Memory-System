@@ -1,0 +1,1 @@
+[assumption] The CTMS/Ivanti LIVE survey (80% inaccurate process maps, 20% accurate) is representative of ITSM practitioners broadly, not specific to a particular sector or tool set. Justification: the survey was conducted at a general ITSM event (not ServiceNow-specific), suggesting broad applicability; however, the sample size (100+) is modest.

@@ -1,0 +1,7 @@
+**In scope:**
+- The "software factory" concept: what it is, documented implementations (Stripe Minions, StrongDM, Gas Town), and the evidence for its viability
+- Theory of Constraints (TOC) applied to software development: is software scarcity the current organisational constraint, and what happens when it is removed?
+- Organisational implications: team structures, roles, governance, prioritisation mechanisms (investment boards, Scaled Agile Framework (SAFe), Program Increment (PI) planning) and whether they survive the transition
+- What "AI-native" means for organisations building or transforming software delivery
+- Mid-tier bank specific analysis: legacy system challenges, regulatory constraints, competitive threats from fintechs, and the opportunity window
+- Prior repository research that can be continued: AI strategy (Software Engineering (SWE) focus), reliable software in the Large Language Model (LLM) era, technology capability models

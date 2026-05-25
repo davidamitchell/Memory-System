@@ -1,0 +1,1 @@
+9. **The `research agenda` CLI command is implementable without new dependencies.** All required fields (`tags`, `priority`, `added`, `completed`, `blocks`) are already parsed by `ResearchItem.from_file()`. The command requires only a domain-map constant and reporting logic added to `src/research/cli.py`. [high confidence — direct source inspection]

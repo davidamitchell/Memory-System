@@ -1,0 +1,1 @@
+1. **SDLC phase taxonomy** — Define the eight target phases clearly (Discovery, Requirements, Design, Planning, Building, Testing, Reviewing, Iteration) and the key AI tasks within each phase (e.g., in Testing: generate unit tests, generate edge-case scenarios, review test coverage, mutate tests).

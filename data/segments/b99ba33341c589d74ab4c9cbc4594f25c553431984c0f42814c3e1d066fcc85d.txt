@@ -1,0 +1,1 @@
+How does Jevons Paradox operate across different sectors historically, what are the conditions under which cost or efficiency improvements *do not* increase total demand, and what do current thinkers predict for the software engineering and code-production market as the marginal cost of producing code falls rapidly toward zero?

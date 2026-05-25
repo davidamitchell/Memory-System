@@ -1,0 +1,4 @@
+**Out of scope:**
+- Platform-specific implementation details, covered in the practice items
+- Regulatory compliance obligations, covered in adjacent regulatory work
+- AIBOM schema design, covered in `2026-05-06-aibom-schema-design-standards-alignment`

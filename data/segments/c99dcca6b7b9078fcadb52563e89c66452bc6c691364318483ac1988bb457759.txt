@@ -1,0 +1,6 @@
+PREP --> P5 --> P6 --> DD
+    DD --> P7
+    SEG --> P7
+    P7 --> DP
+    P7 --> EA
+    EA --> PV

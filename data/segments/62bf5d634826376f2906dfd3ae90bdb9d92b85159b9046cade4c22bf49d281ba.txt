@@ -1,0 +1,18 @@
+1. Audit reconstruction requirements
+   1.1 Which fields must be recorded to reconstruct one run of an agentic pipeline?
+   1.2 Which of those fields are specific to Large Language Model tool-use systems rather than generic software logs?
+2. Formal model choice
+   2.1 Which finite-state and probabilistic models do current verification tools support directly?
+   2.2 Where does nondeterminism enter those models?
+   2.3 Which supported abstractions are closest to open-loop agent behavior?
+3. Verification boundary
+   3.1 What can deterministic model checking prove exactly on finite abstractions?
+   3.2 What can probabilistic model checking prove on nondeterministic or stochastic abstractions?
+   3.3 When does the problem move from exact verification to approximation or runtime monitoring?
+4. Agentic control-surface effects
+   4.1 How do autonomy, tool access, and uncontrolled inputs enlarge the runtime state that must be audited?
+   4.2 Why is self-explanation or self-correction an insufficient substitute for trace reconstruction?
+5. Production synthesis
+   5.1 How does auditability change as flexibility increases?
+   5.2 How does formal verifiability change as flexibility increases?
+   5.3 What design pattern follows for regulated production environments?

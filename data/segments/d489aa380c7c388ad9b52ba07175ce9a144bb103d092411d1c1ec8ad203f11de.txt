@@ -1,0 +1,1 @@
+**Research question restated:** How should the research backlog for `davidamitchell/Research` be maintained and prioritised to ensure balanced coverage of strategically important domains, detect over-concentration in one area (research drift), and surface high-value gaps?

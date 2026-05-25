@@ -1,0 +1,5 @@
+**Approach sub-question 3 — Concept maps:**
+- Q3.1: What distinguishes a concept map from a knowledge graph (propositional vs. entity-relation structure)?
+- Q3.2: Are concept maps machine-readable by default? What formats support automated agent use?
+- Q3.3: Can LLMs construct concept maps automatically, and is the quality sufficient for agent navigation?
+- Q3.4: Is a concept map a useful abstraction layer above a knowledge graph, or does the knowledge graph subsume it?

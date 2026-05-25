@@ -1,0 +1,5 @@
+**Out of scope:**
+- Third-party commentary used as substantive evidence
+- Claims about LeCun's views that cannot be tied back to accessible primary or host-published material checked in this session
+- Empirical testing of whether LeCun is correct
+- Competing critiques from other researchers unless necessary for a narrow clarification of terminology

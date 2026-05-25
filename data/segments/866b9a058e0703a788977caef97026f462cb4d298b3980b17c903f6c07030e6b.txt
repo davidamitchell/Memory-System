@@ -1,0 +1,1 @@
+What are the best practices for maintaining and evolving a Knowledge Graph (KG), a structured graph of entities and relationships, that serves multi-step software agents, covering schema versioning, entity resolution, conflict detection, and knowledge freshness, while avoiding disruption to dependent agents?

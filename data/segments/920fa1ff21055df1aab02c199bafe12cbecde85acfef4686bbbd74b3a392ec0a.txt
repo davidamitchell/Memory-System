@@ -1,0 +1,6 @@
+**Inferences drawn:**
+- Five domains are the right granularity: D1 AI Strategy/Governance, D2 Agentic Systems, D3 Cognitive Science, D4 Research Tooling, D5 Knowledge Management/Process
+- 40% concentration threshold in a 30-day window is the right drift detection calibration
+- Four-dimension prioritisation rubric (decision dependency, dependency unblocking, gap severity, input availability) formally captures the AGENTS.md heuristic
+- Monthly review cadence matches the corpus turnover rate
+- `research agenda` CLI command can be implemented using only existing dependencies and extending existing patterns

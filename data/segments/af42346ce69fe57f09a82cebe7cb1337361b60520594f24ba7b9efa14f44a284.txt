@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Reconstructed LeCun's accessible primary-source argument against text-only Large Language Models as a route to autonomous machine intelligence, separating high-confidence paper-level mechanism from lower-confidence chronology claims where transcript access was incomplete.
+- Links:
+  - https://openreview.net/forum?id=BZ5a1r-kVsf
+  - https://www.brown.edu/news/2026-04-01/yann-lecun-artificial-intelligence-pioneer
+  - https://www.youtube.com/watch?v=ZbrfvMLZZK4

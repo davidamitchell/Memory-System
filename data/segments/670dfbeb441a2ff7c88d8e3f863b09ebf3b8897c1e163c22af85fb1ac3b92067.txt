@@ -1,0 +1,3 @@
+- Which metric thresholds would justify blocking a release when AIBOM coverage is incomplete but other compensating controls are strong?
+- How should organizations classify and sample semantically risky retrieval content so the false-assurance gap rate becomes measurable across incidents?
+- What evidence standard should distinguish acceptable runtime divergence from policy-violating divergence in multi-agent systems?

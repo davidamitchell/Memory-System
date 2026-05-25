@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Evidence-based synthesis of what is genuinely invariant in enterprise banking Software as a Service (SaaS) platforms, what remains customer implementation work, and how Artificial Intelligence (AI)-assisted development shifts the build-versus-buy threshold.
+- Links:
+  - https://www.ncino.com/implementation
+  - https://www.cio.com/article/242681/calculating-the-total-cost-of-ownership-for-enterprise-software.html
+  - https://github.blog/news-insights/research/the-economic-impact-of-the-ai-powered-developer-lifecycle-and-lessons-from-github-copilot/

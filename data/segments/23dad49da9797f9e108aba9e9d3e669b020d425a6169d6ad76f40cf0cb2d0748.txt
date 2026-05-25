@@ -1,0 +1,3 @@
+```markdown
+> ⚠️ Superseded by [new file](path/to/new-file.md).
+```

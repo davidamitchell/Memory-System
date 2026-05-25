@@ -1,0 +1,1 @@
+5. **People and process change matters more than algorithms.** BCG's 10-20-70 rule states that 10% of AI transformation is algorithms, 20% is data and technology, and 70% is people and process change. Projects fail most often because the operating model is not changed, not because the AI model is wrong.

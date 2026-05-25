@@ -1,0 +1,1 @@
+Which organisations have developed AI strategies explicitly framed around risk reduction — operational risk, credit risk, fraud, compliance, model risk — and what governance structures, outcome metrics, and failure modes characterise successful implementations?

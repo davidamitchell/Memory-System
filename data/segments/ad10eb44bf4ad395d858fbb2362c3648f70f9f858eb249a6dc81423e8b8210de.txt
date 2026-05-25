@@ -1,0 +1,10 @@
+- **§0:** Research question restated ✓. Constraints stated ✓. Prior work cited ✓. No unlabelled assumptions ✓.
+- **§1:** Decomposition tree covers all Approach sub-questions ✓. Every branch terminates at an atomic question ✓. No redundant branches ✓.
+- **§2:** Every claim labelled [fact] or [inference] ✓. Every [fact] has a cited source ✓. Sources marked [x] or [ ] in Sources section ✓. No source marked [x] that was not actually accessed ✓. agentevals README accessed and specific claim extracted ✓. Pydantic Evals documentation accessed ✓. Hamel guide accessed ✓.
+- **§3:** Narrative glue removed ✓. Three key tensions identified (1–5 vs binary, tooling, gold set size) and resolved ✓. No unsupported generalisations ✓.
+- **§4:** Internal contradiction scan complete ✓. One potential tension (scoring scale) identified and resolved ✓. No unresolvable contradictions ✓.
+- **§5:** Technical, economic, historical, and behavioural lenses applied ✓. Regulatory lens assessed and found not applicable (stated) ✓.
+- **§6:** All seven synthesis components present with substantive content ✓. 10 Key Findings, each ≥20 words ✓. Evidence Map has row for every Key Finding ✓. No placeholder headings ✓.
+- **Acronym audit:** CI expanded on first use in Research Question: "Continuous Integration (CI)" ✓. LLM expanded on first use in Research Question: "Large Language Model (LLM)" ✓. CLI expanded on first use in §2 Q4b: "Command Line Interface (CLI)" ✓. API expanded on first use in §2 Q1c: "Application Programming Interface (API)" ✓. RAG expanded on first use in §2 Q5a: "Retrieval-Augmented Generation (RAG)" ✓. No other high-risk abbreviations from the research-prompt.md table used without expansion ✓.
+- **All threads synthesised:** tooling selection ✓, rubric structure ✓, gold dataset ✓, CI design ✓, cost ✓.
+- **All uncertainties explicit:** judge model drift, gold set coverage, calibration, token availability ✓.

@@ -1,0 +1,5 @@
+- Explicit representation of **concepts** and their **relationships**
+- **Domain scoping** — the ability to retrieve knowledge within a defined domain boundary
+- **Versioning** of the knowledge structure itself
+- **Reasoning** — the ability to infer new knowledge from existing relationships
+- **Auditability** — clear lineage between source documents and derived knowledge

@@ -1,0 +1,10 @@
+| # | Processor | Input → Output |
+|---|-----------|----------------|
+| 1 | **Sourcing** | Document Source → Sourced Document (Raw) |
+| 2 | **Cleaning** | Raw → Prepared (strip markup, images, non-text) |
+| 3 | **Metadata** | Prepared + source context → enriched Prepared (MIME type, lineage, retrieval time, tags) |
+| 4 | **Domain Extraction** | Prepared → domain signals (candidate domain labels) |
+| 5 | **Domain Matching** | Domain signals → Domain Document (assignment to upper ontology domain) |
+| 6 | **Concept Extraction** | Domain Document → concepts + relationships (entities, properties, axioms) |
+| 7 | **Ontology Build** | Concepts + relationships → Domain Ontology (lower); merges into Upper Ontology |
+| 8 | **Ontology Versioning** | Ontology snapshot → versioned artefact (diff, changelog, rollback pointer) |
