@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Fixed — agent instructions and BACKLOG integrity (2026-05-25)
+- `.github/copilot-instructions.md`: Replaced broken `decisions` skill reference with correct `adr` skill; added missing skills `backlog-worker`, `swe`, `tdd`, `feedback`, `remove-ai-slop` to §2 and §4
+- `BACKLOG.md`: W-0207 `status: ready` → `status: done` (implementation was already complete in PROGRESS.md from 2026-05-24)
+- `requirements.txt`: Fixed malformed line (`rdflib>=6.3openai>=1.0` joined without newline); added `spacy>=3.7`
+
+### Added — W-0205: NLP enrichment in preparation processor (2026-05-25)
+- `pipeline/processors/p02_preparation.py`: Optional NLP enrichment step; `state["nlp"]=True` activates spaCy `en_core_web_sm`; adds `nlp_annotations` (entities, noun_chunks, pos_tags) to pipeline state; backward-compatible (off by default)
+- `pipeline/processors/p07_concept_extraction.py`: LLM strategy consumes `nlp_annotations` from state; appends named entities and noun chunks to user prompt as NLP pre-analysis signal; rule-based path unchanged
+- `pipeline/eval.py`: `--nlp` flag added; threaded through `evaluate_file()` and `print_report()`
+- `tests/test_nlp_enrichment_w0205.py`: 12 acceptance tests covering p02 enrichment, p07 integration, and backward compatibility
+
 ### Added — W-0207: GitHub Pages ontology browser
 - `pipeline/export_json.py`: exports latest TTL → `docs/data/ontology.json` (concepts, relations, documents)
 - `pipeline/export_html.py`: stamps JSON into `docs/index.html` with pre-rendered tables (no JS required)

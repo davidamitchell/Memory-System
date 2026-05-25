@@ -450,6 +450,21 @@ The NLP layer belongs in p02 because it is a preparation step (transforming raw 
 - All existing tests pass unchanged (`python -m pytest tests/ -v`)
 - `python -m pytest tests/test_nlp_enrichment_w0205.py` passes
 
+### Notes
+
+**2026-05-25 — Implementation complete; eval score comparison blocked.**
+
+All code deliverables are done:
+- `p02_preparation.py`: NLP enrichment added (`state["nlp"]=True` activates it); `spacy>=3.7` + `en_core_web_sm` required; model cached lazily via `_nlp_model` seam.
+- `p07_concept_extraction.py`: LLM strategy appends NLP pre-analysis (entities, noun chunks) to the user prompt via `_format_nlp_annotations()`.
+- `pipeline/eval.py`: `--nlp` flag added; threaded through `evaluate_file()` and `print_report()`.
+- `requirements.txt`: `spacy>=3.7` added.
+- `tests/test_nlp_enrichment_w0205.py`: 12 tests, all passing.
+
+**Blocker:** The eval criterion `pipeline/eval.py --corpus glossary/ --extractor llm --nlp` requires `OPENAI_API_KEY` to run. This key is not available in the agent sandbox. The delta score (NLP-enriched vs LLM-only baseline) cannot be recorded until a session with the key set runs this command and appends the result to `PROGRESS.md`.
+
+To complete: run `python pipeline/eval.py --corpus glossary/ --extractor llm --nlp` in an environment with `OPENAI_API_KEY` set, record the aggregate F1 in `PROGRESS.md` alongside the W-0204 baseline (1.000 rule-based), then mark this item done.
+
 ---
 
 ## W-0206

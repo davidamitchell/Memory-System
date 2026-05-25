@@ -92,6 +92,20 @@ Rules:
 """
 
 
+def _format_nlp_annotations(annotations: dict) -> str:
+    """Render nlp_annotations as a compact, prompt-friendly string."""
+    lines = []
+    entities = annotations.get("entities", [])
+    if entities:
+        ent_strs = [f"{e['text']} ({e['label']})" for e in entities[:20]]
+        lines.append("Named entities: " + ", ".join(ent_strs))
+    chunks = annotations.get("noun_chunks", [])
+    if chunks:
+        chunk_strs = [c["text"] for c in chunks[:20]]
+        lines.append("Key noun phrases: " + ", ".join(chunk_strs))
+    return "\n".join(lines)
+
+
 def _extract_llm(state: dict, source_slug: str, segments: list[dict]) -> dict:
     """Call the LLM and return a delta_proposal dict."""
     fm = state.get("front_matter", {})
@@ -104,7 +118,15 @@ def _extract_llm(state: dict, source_slug: str, segments: list[dict]) -> dict:
     if fm.get("themes"):
         seed_info += f"Themes: {', '.join(fm['themes'])}\n"
 
-    user_prompt = f"{seed_info}\n---\n{body}"
+    # Append NLP annotations when available (W-0205)
+    nlp_section = ""
+    annotations = state.get("nlp_annotations")
+    if annotations:
+        formatted = _format_nlp_annotations(annotations)
+        if formatted:
+            nlp_section = f"\n\nNLP pre-analysis:\n{formatted}\n"
+
+    user_prompt = f"{seed_info}\n---\n{body}{nlp_section}"
 
     model = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
     client = _get_llm_client()

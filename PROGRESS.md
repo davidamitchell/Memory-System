@@ -373,3 +373,38 @@ Replaced the mobile bottom-sheet detail panel with full hash-routed detail pages
 2. What slowed down? Nothing significant. The main design decision was whether to hide the desktop header nav entirely on mobile (replaced by bottom bar) vs show both — hiding the header nav entirely on mobile is cleaner and avoids duplicating tap targets.
 3. What single change would prevent friction next time? The `table-scroll` wrapper is now in the HTML template (`export_html.py`) for relations and documents, but concept table uses CSS card layout instead — future work (swipe gestures, pinch-zoom, search-as-you-type) should stay in `app.js` as progressive layers.
 4. Is this a pattern? Yes — mobile-first progressive enhancement: start with semantic HTML, add CSS layout layers by viewport, add JS behaviour on top. Each layer is independent and degrades gracefully.
+
+---
+
+## 2026-05-25 — Instructions fix + W-0207 backlog correction + W-0205 NLP enrichment (partial)
+
+### Instructions fix
+
+`.github/copilot-instructions.md` §2 and §4 referenced a `decisions` skill at `.github/skills/decisions/SKILL.md` — that folder does not exist in the skills submodule. The correct skill is `adr` at `.github/skills/adr/SKILL.md`. Both references updated.
+
+The key skills list in §2 was also missing several skills added to the submodule since the instructions were last written: `backlog-worker`, `swe`, `tdd`, `feedback`, and `remove-ai-slop`. All added.
+
+### W-0207 backlog correction
+
+W-0207 was implemented on 2026-05-24 (full PROGRESS.md entry exists) but the BACKLOG entry still read `status: ready`. Corrected to `status: done`.
+
+### W-0205: NLP enrichment in p02 — code complete, eval blocked
+
+**Working: W-0205 — p02 NLP enrichment + p07 LLM integration**
+
+**Changes:**
+- `pipeline/processors/p02_preparation.py`: Optional NLP enrichment step. When `state["nlp"]=True`, runs `en_core_web_sm` over `body_text` and adds `nlp_annotations` (entities, noun_chunks, pos_tags) to state. Model cached lazily in `_nlp_model`; seam is replaceable in tests. When `state["nlp"]` is absent or `False`, output is identical to pre-W-0205.
+- `pipeline/processors/p07_concept_extraction.py`: LLM strategy appends NLP annotations to the user prompt via `_format_nlp_annotations()`. Named entities and noun chunks are rendered as compact strings injected under "NLP pre-analysis:". No change to `delta_proposal` schema.
+- `pipeline/eval.py`: `--nlp` flag added; passed through `evaluate_file()` into state; reflected in `print_report()` header.
+- `requirements.txt`: `spacy>=3.7` added (on its own line; also fixed pre-existing formatting issue where `rdflib>=6.3` and `openai>=1.0` were joined without newline).
+- `tests/test_nlp_enrichment_w0205.py`: 12 acceptance tests, all passing. Mock spaCy model used — no model download required to run tests.
+
+**Test results:** 54/54 pass.
+
+**Blocker — eval score comparison not recorded:** The criterion `pipeline/eval.py --corpus glossary/ --extractor llm --nlp` requires `OPENAI_API_KEY`. Key not available in agent sandbox. Item left `active`. To complete: run the eval command in an environment with the key set, record aggregate F1 alongside W-0204 baseline (rule-based: 1.000 F1), then mark W-0205 `done`.
+
+**Mini-Retro**
+1. Did the process work? Mostly yes. The backlog instruction fix was straightforward. W-0207's stale BACKLOG status was caught during the entry phase — the PROGRESS.md had the full implementation record but the BACKLOG had not been updated. Pattern: sessions that implement work should always advance the BACKLOG status as part of Close, not as a later correction.
+2. What slowed down or went wrong? Mock spaCy doc was initially a `SimpleNamespace` — Python doesn't honour `__iter__` on instances, only on types. Switched to `MagicMock` which supports `__iter__` via `__class__` magic. One test cycle wasted.
+3. What single change would prevent this next time? Add a note to the `swe` or `tdd` skill (or the build loop harness) that Python dunders on instances do not work unless the type defines them — use `MagicMock` for protocol mocking. Raised as a potential skill improvement.
+4. Is this a pattern? The BACKLOG-status-drift is a pattern: W-0207 and now potentially others could have stale `ready` status if the Close phase was skipped or abbreviated. Consider a BACKLOG integrity check as a standing Entry step.
