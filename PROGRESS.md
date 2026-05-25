@@ -348,6 +348,26 @@ Progressively built out the GitHub Pages ontology browser for mobile viewports a
 - Full-width search on mobile ✓
 - All 42 tests pass unchanged ✓
 
+---
+
+## 2026-05-25 — W-0210: Concept and relation detail pages with hash routing
+
+Replaced the mobile bottom-sheet detail panel with full hash-routed detail pages for both concepts and relations.
+
+**Changes:**
+- `docs/app.js`: full rewrite — hash router (`#concept/<id>`, `#relation/<from>/<pred>/<to>`), `showConceptPage()`, `showRelationPage()`, updated row bindings; removed old bottom-sheet code
+- `docs/style.css`: replaced `.detail-panel` block with detail-page styles (`.back-btn`, `.dp-content`, `.dp-section`, `.dp-list`, `.rel-pair`, `.rel-card`, `.edge-link`); added relation row cursor; removed backdrop/bottom-sheet CSS from mobile block
+- `pipeline/export_html.py`: relation rows now have `class="relation-row"`, `tabindex="0"`, `data-from/pred/to`, `data-relation` JSON; removed `#concept-detail` div; concept links use `href="#concept/<id>"`
+- `docs/index.html`: regenerated (175,934 bytes)
+- `BACKLOG.md`: W-0210 added as `status: done`
+
+**Acceptance criteria met:**
+- Clicking concept row → `#concept/<id>` full-page view ✓
+- Clicking relation row → `#relation/<from>/<pred>/<to>` full-page view ✓
+- Back buttons return to list ✓
+- Browser back/forward works ✓
+- All 42 tests pass unchanged ✓
+
 **Mini-Retro**
 1. Did the process work? Yes — the progressive enhancement principle was easy to follow: all CSS is in `style.css`, all mobile JS is additive in `app.js`, and the static HTML continues to work without JS.
 2. What slowed down? Nothing significant. The main design decision was whether to hide the desktop header nav entirely on mobile (replaced by bottom bar) vs show both — hiding the header nav entirely on mobile is cleaner and avoids duplicating tap targets.

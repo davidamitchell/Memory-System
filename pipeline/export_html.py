@@ -104,7 +104,6 @@ def render_concepts(data: dict) -> str:
 {rows_html}
     </tbody>
   </table>
-  <div id="concept-detail" class="detail-panel" hidden aria-live="polite"></div>
 </section>
 """.strip()
 
@@ -117,11 +116,23 @@ def render_relations(data: dict) -> str:
         predicate = h(r.get("predicate", "relatedTerm"))
         to_id = h(r["to_id"])
         to_label = h(r["to_label"])
+
+        # Encode relation data for JS detail page
+        rel_json = h(json.dumps({
+            "from_id":    r["from_id"],
+            "from_label": r["from_label"],
+            "predicate":  r.get("predicate", "relatedTerm"),
+            "to_id":      r["to_id"],
+            "to_label":   r["to_label"],
+        }))
+
         rows.append(
-            f'    <tr>\n'
-            f'      <td data-label="From"><a href="#{from_id}" class="concept-link" data-id="{from_id}">{from_label}</a></td>\n'
+            f'    <tr class="relation-row" tabindex="0"'
+            f' data-from="{from_id}" data-pred="{predicate}" data-to="{to_id}"'
+            f' data-relation="{rel_json}">\n'
+            f'      <td data-label="From"><a href="#concept/{from_id}">{from_label}</a></td>\n'
             f'      <td class="predicate predicate-{predicate}" data-label="Predicate">{predicate}</td>\n'
-            f'      <td data-label="To"><a href="#{to_id}" class="concept-link" data-id="{to_id}">{to_label}</a></td>\n'
+            f'      <td data-label="To"><a href="#concept/{to_id}">{to_label}</a></td>\n'
             f'    </tr>'
         )
 
@@ -160,7 +171,7 @@ def render_documents(data: dict) -> str:
             cid_h = h(cid)
             clabel = h(label_lookup.get(cid, cid))
             concept_links.append(
-                f'<a href="#{cid_h}" class="concept-link" data-id="{cid_h}">{clabel}</a>'
+                f'<a href="#concept/{cid_h}">{clabel}</a>'
             )
         concepts_cell = ", ".join(concept_links) if concept_links else '<span class="muted">—</span>'
         rows.append(

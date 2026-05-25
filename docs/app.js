@@ -1,15 +1,12 @@
 /* docs/app.js — Progressive enhancement for the ontology browser.
  *
  * Layers added on top of the static HTML:
- *  1. Tab switcher — replaces the static anchor nav with a tab bar that
- *     shows/hides sections without a page reload.
- *  2. Live search — injects a <input type="search"> above each table and
- *     filters rows on keyup.
- *  3. Concept detail panel — clicking (or pressing Enter on) a concept row
- *     renders a detail panel below the table showing aliases, tags, related
- *     terms, and the full definition.
- *  4. Concept-link navigation — clicking concept links in the Relations or
- *     Documents sections switches to the Concepts tab and highlights the row.
+ *  1. Data index   — builds concept / relation lookups from embedded DOM data
+ *  2. Router       — hash-based routing: #concept/<id>, #relation/<from>/<pred>/<to>
+ *  3. Tab switcher — shows/hides sections for #overview, #concepts, #relations, #documents
+ *  4. Live search  — injects a <input type="search"> above each table
+ *  5. Concept page — full-page detail view for a concept
+ *  6. Relation page — full-page detail view for a relation edge
  *
  * None of this is required; the page works fully without JS.
  */
@@ -18,73 +15,117 @@
   'use strict';
 
   // -------------------------------------------------------------------------
-  // 1. Tab switcher
+  // 1. Data index
   // -------------------------------------------------------------------------
 
-  const sections = Array.from(document.querySelectorAll('main > section'));
-  const nav = document.getElementById('main-nav');
+  // Build concept lookup from data-concept JSON attrs on concept rows
+  var conceptIndex = Object.create(null);
+  document.querySelectorAll('tr.concept-row[data-concept]').forEach(function (row) {
+    try {
+      var c = JSON.parse(row.getAttribute('data-concept'));
+      conceptIndex[c.id] = c;
+    } catch (_) {}
+  });
 
-  if (nav && sections.length) {
-    // Build tab buttons from existing nav links
-    const links = Array.from(nav.querySelectorAll('a'));
+  // Build relation list from data-relation JSON attrs on relation rows
+  var relationList = [];
+  document.querySelectorAll('tr.relation-row[data-relation]').forEach(function (row) {
+    try {
+      relationList.push(JSON.parse(row.getAttribute('data-relation')));
+    } catch (_) {}
+  });
 
-    function showSection(targetId) {
-      sections.forEach(function (sec) {
-        sec.hidden = sec.id !== targetId;
-      });
-      links.forEach(function (a) {
-        const active = a.getAttribute('href') === '#' + targetId;
-        a.classList.toggle('active', active);
-        a.setAttribute('aria-current', active ? 'page' : 'false');
-      });
-      // Update URL hash without scrolling
-      history.replaceState(null, '', '#' + targetId);
+  // -------------------------------------------------------------------------
+  // 2. Router + shared page container
+  // -------------------------------------------------------------------------
+
+  var mainEl = document.querySelector('main');
+  var sections = Array.from(document.querySelectorAll('main > section'));
+  var nav = document.getElementById('main-nav');
+  var navLinks = nav ? Array.from(nav.querySelectorAll('a')) : [];
+
+  // Inject a single detail-page container that replaces section content
+  var detailPage = document.createElement('div');
+  detailPage.id = 'detail-page';
+  detailPage.hidden = true;
+  mainEl.appendChild(detailPage);
+
+  function route() {
+    var hash = location.hash || '#overview';
+    if (hash.startsWith('#concept/')) {
+      showConceptPage(decodeURIComponent(hash.slice('#concept/'.length)));
+    } else if (hash.startsWith('#relation/')) {
+      var parts = decodeURIComponent(hash.slice('#relation/'.length)).split('/');
+      if (parts.length >= 3) {
+        showRelationPage(parts[0], parts[1], parts[2]);
+      } else {
+        showSection(sections[0].id);
+      }
+    } else {
+      var targetId = hash.slice(1);
+      var valid = sections.some(function (s) { return s.id === targetId; });
+      showSection(valid ? targetId : sections[0].id);
     }
-
-    links.forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        const hash = a.getAttribute('href');
-        if (hash && hash.startsWith('#')) {
-          e.preventDefault();
-          showSection(hash.slice(1));
-        }
-      });
-    });
-
-    // Activate the section matching the current hash, or default to overview
-    const initial = (location.hash || '#overview').slice(1);
-    const validId = sections.some(function (s) { return s.id === initial; })
-      ? initial
-      : sections[0].id;
-    showSection(validId);
   }
 
+  window.addEventListener('hashchange', route);
+
   // -------------------------------------------------------------------------
-  // 2. Live search
+  // 3. Tab switcher
+  // -------------------------------------------------------------------------
+
+  function showSection(targetId) {
+    detailPage.hidden = true;
+    detailPage.innerHTML = '';
+    sections.forEach(function (sec) {
+      sec.hidden = sec.id !== targetId;
+    });
+    navLinks.forEach(function (a) {
+      var active = a.getAttribute('href') === '#' + targetId;
+      a.classList.toggle('active', active);
+      a.setAttribute('aria-current', active ? 'page' : 'false');
+    });
+    history.replaceState(null, '', '#' + targetId);
+  }
+
+  navLinks.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var href = a.getAttribute('href');
+      // Only intercept simple section tab links (no sub-paths)
+      if (href && href.startsWith('#') && href.indexOf('/') === -1) {
+        e.preventDefault();
+        showSection(href.slice(1));
+      }
+    });
+  });
+
+  // -------------------------------------------------------------------------
+  // 4. Live search
   // -------------------------------------------------------------------------
 
   function injectSearch(tableId, placeholder) {
-    const table = document.getElementById(tableId);
+    var table = document.getElementById(tableId);
     if (!table) return;
 
-    const wrap = document.createElement('div');
+    var wrap = document.createElement('div');
     wrap.className = 'search-wrap';
-
-    const input = document.createElement('input');
+    var input = document.createElement('input');
     input.type = 'search';
     input.placeholder = placeholder || 'Filter…';
     input.setAttribute('aria-label', placeholder || 'Filter rows');
-
     wrap.appendChild(input);
-    table.parentNode.insertBefore(wrap, table);
 
-    const tbody = table.querySelector('tbody');
+    // Insert above any .table-scroll wrapper, not inside it
+    var parent = table.parentNode;
+    var insertBefore = (parent.classList && parent.classList.contains('table-scroll'))
+      ? parent : table;
+    insertBefore.parentNode.insertBefore(wrap, insertBefore);
 
+    var tbody = table.querySelector('tbody');
     input.addEventListener('input', function () {
-      const q = input.value.trim().toLowerCase();
+      var q = input.value.trim().toLowerCase();
       Array.from(tbody.rows).forEach(function (row) {
-        const text = row.textContent.toLowerCase();
-        row.classList.toggle('hidden-row', q.length > 0 && !text.includes(q));
+        row.classList.toggle('hidden-row', q.length > 0 && !row.textContent.toLowerCase().includes(q));
       });
     });
   }
@@ -94,178 +135,237 @@
   injectSearch('documents-table', 'Search documents…');
 
   // -------------------------------------------------------------------------
-  // 3. Concept detail panel
+  // Shared helpers
   // -------------------------------------------------------------------------
-
-  const detailPanel = document.getElementById('concept-detail');
-
-  // Inject backdrop element for mobile bottom-sheet overlay
-  var backdrop = document.createElement('div');
-  backdrop.id = 'detail-backdrop';
-  document.body.appendChild(backdrop);
-  backdrop.addEventListener('click', function () { closeDetail(); });
-
-  function renderDetail(concept) {
-    if (!detailPanel) return;
-
-    const aliases = (concept.aliases || []).join(', ') || '—';
-    const tags    = (concept.tags    || []).map(function (t) {
-      return '<span class="badge">' + esc(t) + '</span>';
-    }).join(' ') || '—';
-
-    // related is now [{id, rel}, ...] — build labelled links grouped by predicate
-    const relatedItems = (concept.related || []);
-    const related = relatedItems.length
-      ? relatedItems.map(function (item) {
-          var id  = typeof item === 'object' ? item.id  : item;
-          var rel = typeof item === 'object' ? item.rel : 'relatedTerm';
-          var display = id.replace(/-/g, '\u2011');
-          var badge = rel !== 'relatedTerm'
-            ? ' <span class="pred-badge pred-' + esc(rel) + '">' + esc(rel) + '</span>'
-            : '';
-          return '<a href="#' + esc(id) + '" class="concept-link" data-id="' + esc(id) + '">' +
-                 esc(display) + '</a>' + badge;
-        }).join(', ')
-      : '—';
-
-    // docs list
-    const docs = (concept.docs || []);
-    const docsHtml = docs.length
-      ? '<ul class="docs-list">' + docs.map(function (f) {
-          var fname = f.replace(/^.*\//, '');
-          // Link to the Documents tab entry
-          return '<li><a href="#documents" class="section-link" data-doc="' + esc(f) + '">' +
-                 '<code>' + esc(fname) + '</code></a></li>';
-        }).join('') + '</ul>'
-      : '<span class="muted">—</span>';
-
-    detailPanel.innerHTML =
-      '<button class="detail-close" aria-label="Close detail panel">&times;</button>' +
-      '<h3>' + esc(concept.label) + '</h3>' +
-      '<div class="detail-row"><span class="detail-label">Definition</span>' +
-        '<span class="detail-value">' + esc(concept.comment || '—') + '</span></div>' +
-      '<div class="detail-row"><span class="detail-label">Domain</span>' +
-        '<span class="detail-value">' + esc(concept.domain || '—') + '</span></div>' +
-      '<div class="detail-row"><span class="detail-label">Aliases</span>' +
-        '<span class="detail-value">' + esc(aliases) + '</span></div>' +
-      '<div class="detail-row"><span class="detail-label">Tags</span>' +
-        '<span class="detail-value">' + tags + '</span></div>' +
-      '<div class="detail-row"><span class="detail-label">Related</span>' +
-        '<span class="detail-value">' + related + '</span></div>' +
-      '<div class="detail-row"><span class="detail-label">Documents</span>' +
-        '<span class="detail-value">' + docsHtml + '</span></div>';
-
-    detailPanel.hidden = false;
-    backdrop.classList.add('active');
-    document.body.style.overflow = 'hidden';
-
-    // Bind close button
-    detailPanel.querySelector('.detail-close').addEventListener('click', function () {
-      closeDetail();
-    });
-
-    // Bind concept links inside the panel
-    bindConceptLinks(detailPanel);
-
-    // Bind document links — navigate to Documents tab and scroll to the row
-    detailPanel.querySelectorAll('a.section-link').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        e.preventDefault();
-        var docFile = a.getAttribute('data-doc');
-        if (nav) {
-          var docsLink = nav.querySelector('a[href="#documents"]');
-          if (docsLink) docsLink.click();
-        }
-        if (docFile) {
-          var row = document.querySelector('tr[data-file="' + docFile + '"]');
-          if (row) {
-            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            row.classList.add('highlight');
-            setTimeout(function () { row.classList.remove('highlight'); }, 1500);
-          }
-        }
-      });
-    });
-  }
-
-  function closeDetail() {
-    if (!detailPanel) return;
-    detailPanel.hidden = true;
-    detailPanel.innerHTML = '';
-    backdrop.classList.remove('active');
-    document.body.style.overflow = '';
-    // Remove selected state from all rows
-    document.querySelectorAll('tr.concept-row.selected').forEach(function (r) {
-      r.classList.remove('selected');
-    });
-  }
 
   function esc(str) {
     return String(str)
-      .replace(/&/g,  '&amp;')
-      .replace(/</g,  '&lt;')
-      .replace(/>/g,  '&gt;')
-      .replace(/"/g,  '&quot;');
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
   }
 
-  // Attach click/keydown handlers to all concept rows in the concepts table
-  document.querySelectorAll('tr.concept-row').forEach(function (row) {
-    function activate() {
-      var raw = row.getAttribute('data-concept');
-      if (!raw) return;
-      try {
-        var concept = JSON.parse(raw);
-        // Deselect others
-        document.querySelectorAll('tr.concept-row.selected').forEach(function (r) {
-          r.classList.remove('selected');
-        });
-        row.classList.add('selected');
-        renderDetail(concept);
-      } catch (e) {
-        // Silently ignore malformed data
-      }
+  function renderPage(html, activeHref) {
+    sections.forEach(function (sec) { sec.hidden = true; });
+    navLinks.forEach(function (a) {
+      var active = a.getAttribute('href') === activeHref;
+      a.classList.toggle('active', active);
+      a.setAttribute('aria-current', active ? 'page' : 'false');
+    });
+    detailPage.innerHTML = html;
+    detailPage.hidden = false;
+    window.scrollTo(0, 0);
+  }
+
+  function backBtn(href, label) {
+    return '<a href="' + href + '" class="back-btn">&#8592; ' + esc(label) + '</a>';
+  }
+
+  function predBadge(pred) {
+    return '<span class="predicate predicate-' + esc(pred) + '">' + esc(pred) + '</span>';
+  }
+
+  // -------------------------------------------------------------------------
+  // 5. Concept detail page
+  // -------------------------------------------------------------------------
+
+  function showConceptPage(id) {
+    var concept = conceptIndex[id];
+    if (!concept) {
+      renderPage(
+        backBtn('#concepts', 'All concepts') +
+        '<p class="muted" style="margin-top:1rem">Concept not found: ' + esc(id) + '</p>',
+        '#concepts'
+      );
+      return;
     }
 
-    row.addEventListener('click', activate);
+    var aliases = (concept.aliases || []).join(', ') || '—';
+
+    var tagsHtml = (concept.tags || []).length
+      ? concept.tags.map(function (t) { return '<span class="badge">' + esc(t) + '</span>'; }).join(' ')
+      : '<span class="muted">—</span>';
+
+    // Related concepts with predicate badges
+    var relatedItems = concept.related || [];
+    var relatedHtml = relatedItems.length
+      ? '<ul class="dp-list">' + relatedItems.map(function (item) {
+          var rid    = typeof item === 'object' ? item.id  : item;
+          var rel    = typeof item === 'object' ? item.rel : 'relatedTerm';
+          var rlabel = (conceptIndex[rid] && conceptIndex[rid].label) || rid.replace(/-/g, '\u2011');
+          var badge  = rel !== 'relatedTerm'
+            ? ' <span class="pred-badge pred-' + esc(rel) + '">' + esc(rel) + '</span>'
+            : '';
+          return '<li><a href="#concept/' + encodeURIComponent(rid) + '">' + esc(rlabel) + '</a>' + badge + '</li>';
+        }).join('') + '</ul>'
+      : '<span class="muted">—</span>';
+
+    // Outgoing / incoming relations from the full relation list
+    var outgoing = relationList.filter(function (r) { return r.from_id === id; });
+    var incoming = relationList.filter(function (r) { return r.to_id   === id; });
+
+    function edgeLink(r) {
+      return ' <a href="#relation/' +
+        encodeURIComponent(r.from_id) + '/' +
+        encodeURIComponent(r.predicate) + '/' +
+        encodeURIComponent(r.to_id) +
+        '" class="edge-link" title="View relation detail">&nearr;</a>';
+    }
+
+    var outHtml = outgoing.length
+      ? '<ul class="dp-list">' + outgoing.map(function (r) {
+          return '<li>' + predBadge(r.predicate) + ' <a href="#concept/' + encodeURIComponent(r.to_id) + '">' + esc(r.to_label) + '</a>' + edgeLink(r) + '</li>';
+        }).join('') + '</ul>'
+      : '<span class="muted">—</span>';
+
+    var inHtml = incoming.length
+      ? '<ul class="dp-list">' + incoming.map(function (r) {
+          return '<li><a href="#concept/' + encodeURIComponent(r.from_id) + '">' + esc(r.from_label) + '</a> ' + predBadge(r.predicate) + edgeLink(r) + '</li>';
+        }).join('') + '</ul>'
+      : '<span class="muted">—</span>';
+
+    var docsHtml = (concept.docs || []).length
+      ? '<ul class="dp-list">' + concept.docs.map(function (f) {
+          return '<li><code>' + esc(f.replace(/^.*\//, '')) + '</code></li>';
+        }).join('') + '</ul>'
+      : '<span class="muted">—</span>';
+
+    var html =
+      backBtn('#concepts', 'All concepts') +
+      '<article class="dp-content">' +
+        '<header class="dp-header">' +
+          '<h2>' + esc(concept.label) + '</h2>' +
+          (concept.domain ? '<span class="badge">' + esc(concept.domain) + '</span>' : '') +
+        '</header>' +
+
+        (concept.comment
+          ? '<section class="dp-section"><h3>Definition</h3><p>' + esc(concept.comment) + '</p></section>'
+          : '') +
+
+        '<section class="dp-section"><h3>Aliases</h3><p>' + esc(aliases) + '</p></section>' +
+        '<section class="dp-section"><h3>Tags</h3><p>' + tagsHtml + '</p></section>' +
+        '<section class="dp-section"><h3>Related concepts</h3>' + relatedHtml + '</section>' +
+
+        (outgoing.length
+          ? '<section class="dp-section"><h3>Outgoing relations (' + outgoing.length + ')</h3>' + outHtml + '</section>'
+          : '') +
+        (incoming.length
+          ? '<section class="dp-section"><h3>Incoming relations (' + incoming.length + ')</h3>' + inHtml + '</section>'
+          : '') +
+
+        '<section class="dp-section"><h3>Source documents</h3>' + docsHtml + '</section>' +
+      '</article>';
+
+    history.replaceState(null, '', '#concept/' + encodeURIComponent(id));
+    renderPage(html, '#concepts');
+  }
+
+  // -------------------------------------------------------------------------
+  // 6. Relation detail page
+  // -------------------------------------------------------------------------
+
+  function showRelationPage(fromId, predicate, toId) {
+    var fromConcept = conceptIndex[fromId];
+    var toConcept   = conceptIndex[toId];
+    var fromLabel   = fromConcept ? fromConcept.label : fromId;
+    var toLabel     = toConcept   ? toConcept.label   : toId;
+
+    function conceptCard(concept, id) {
+      if (!concept) {
+        return '<div class="rel-card rel-card--missing"><span class="muted">' + esc(id) + '</span></div>';
+      }
+      var snippet = concept.comment
+        ? esc(concept.comment.slice(0, 200)) + (concept.comment.length > 200 ? '…' : '')
+        : '';
+      return '<div class="rel-card">' +
+        '<a href="#concept/' + encodeURIComponent(concept.id) + '" class="rel-card-title">' + esc(concept.label) + '</a>' +
+        (concept.domain ? ' <span class="badge">' + esc(concept.domain) + '</span>' : '') +
+        (snippet ? '<p class="rel-card-def">' + snippet + '</p>' : '') +
+      '</div>';
+    }
+
+    // Other edges with the same predicate type
+    var sameType = relationList.filter(function (r) {
+      return r.predicate === predicate && !(r.from_id === fromId && r.to_id === toId);
+    });
+    var sameTypeHtml = sameType.length
+      ? '<ul class="dp-list">' + sameType.map(function (r) {
+          return '<li>' +
+            '<a href="#concept/' + encodeURIComponent(r.from_id) + '">' + esc(r.from_label) + '</a>' +
+            ' ' + predBadge(r.predicate) + ' ' +
+            '<a href="#concept/' + encodeURIComponent(r.to_id) + '">' + esc(r.to_label) + '</a>' +
+          '</li>';
+        }).join('') + '</ul>'
+      : '<span class="muted">No other relations with this predicate.</span>';
+
+    var html =
+      backBtn('#relations', 'All relations') +
+      '<article class="dp-content">' +
+        '<header class="dp-header">' +
+          '<h2>' + esc(fromLabel) + ' ' + predBadge(predicate) + ' ' + esc(toLabel) + '</h2>' +
+        '</header>' +
+
+        '<section class="dp-section rel-pair">' +
+          '<div class="rel-pair-col"><h3>From</h3>' + conceptCard(fromConcept, fromId) + '</div>' +
+          '<div class="rel-pair-arrow">' + predBadge(predicate) + '</div>' +
+          '<div class="rel-pair-col"><h3>To</h3>' + conceptCard(toConcept, toId) + '</div>' +
+        '</section>' +
+
+        '<section class="dp-section">' +
+          '<h3>Other &ldquo;' + esc(predicate) + '&rdquo; relations (' + sameType.length + ')</h3>' +
+          sameTypeHtml +
+        '</section>' +
+      '</article>';
+
+    history.replaceState(null, '', '#relation/' + encodeURIComponent(fromId) + '/' + encodeURIComponent(predicate) + '/' + encodeURIComponent(toId));
+    renderPage(html, '#relations');
+  }
+
+  // -------------------------------------------------------------------------
+  // 7. Row click bindings
+  // -------------------------------------------------------------------------
+
+  // Concept rows — navigate to concept detail page
+  document.querySelectorAll('tr.concept-row').forEach(function (row) {
+    row.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      var id = row.getAttribute('data-id');
+      if (id) location.hash = '#concept/' + encodeURIComponent(id);
+    });
     row.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        activate();
+        var id = row.getAttribute('data-id');
+        if (id) location.hash = '#concept/' + encodeURIComponent(id);
       }
-      if (e.key === 'Escape') {
-        closeDetail();
+    });
+  });
+
+  // Relation rows — navigate to relation detail page
+  document.querySelectorAll('tr.relation-row').forEach(function (row) {
+    row.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      var fromId    = row.getAttribute('data-from');
+      var predicate = row.getAttribute('data-pred');
+      var toId      = row.getAttribute('data-to');
+      if (fromId && predicate && toId) {
+        location.hash = '#relation/' + encodeURIComponent(fromId) + '/' + encodeURIComponent(predicate) + '/' + encodeURIComponent(toId);
+      }
+    });
+    row.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        row.click();
       }
     });
   });
 
   // -------------------------------------------------------------------------
-  // 4. Concept-link navigation
+  // Initial route
   // -------------------------------------------------------------------------
 
-  function bindConceptLinks(root) {
-    (root || document).querySelectorAll('a.concept-link').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        var id = a.getAttribute('data-id');
-        if (!id) return;
-
-        // Switch to the concepts tab
-        e.preventDefault();
-        if (nav) {
-          var conceptsLink = nav.querySelector('a[href="#concepts"]');
-          if (conceptsLink) conceptsLink.click();
-        }
-
-        // Find the matching row and activate it
-        var targetRow = document.querySelector('tr.concept-row[data-id="' + id + '"]');
-        if (targetRow) {
-          targetRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          targetRow.focus();
-          targetRow.click();
-        }
-      });
-    });
-  }
-
-  bindConceptLinks(document);
+  route();
 
 })();
+

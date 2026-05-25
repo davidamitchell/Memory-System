@@ -530,6 +530,41 @@ The GitHub Pages ontology browser is mobile-first. Key improvements shipped:
 
 ---
 
+## W-0210
+
+status: done
+created: 2026-05-25
+updated: 2026-05-25
+blocks: []
+blocked-by: [W-0209]
+research: []
+assumptions:
+  - Hash-based routing is sufficient for a static site with no server
+  - Browser back/forward button must work correctly for concept and relation pages
+  - Progressive enhancement maintained: tables remain navigable without JS
+
+### Outcome
+
+Concept rows and relation rows now navigate to full detail pages (hash routes `#concept/<id>` and `#relation/<from>/<pred>/<to>`) instead of opening a modal or bottom sheet.
+
+- **Concept detail page** (`#concept/<id>`): full-page view with definition, domain badge, aliases, tags, related concepts (linked), outgoing/incoming relations (linked), and source documents. Back button returns to the concepts list.
+- **Relation detail page** (`#relation/<from>/<pred>/<to>`): full-page view with from/to concept cards (linked), predicate badge, and a full list of other relations with the same predicate. Back button returns to the relations list.
+- Hash-based routing handles browser back/forward correctly
+- Relation rows are now clickable (tabindex, cursor, keyboard)
+- Links within rendered pages use the same hash scheme so navigation is composable
+- Removed old bottom-sheet detail panel; cleaned up dead CSS
+
+### Acceptance criteria
+
+- Clicking any concept row navigates to `#concept/<id>` full-page view ✓
+- Back button from concept page returns to `#concepts` list ✓
+- Clicking any relation row navigates to `#relation/<from>/<pred>/<to>` full-page view ✓
+- Back button from relation page returns to `#relations` list ✓
+- Browser back/forward works ✓
+- All 42 existing tests pass unchanged ✓
+
+---
+
 ## References
 
 1. [`BACKLOG.md`](./BACKLOG.md) — discovery-phase research items; historical record.
