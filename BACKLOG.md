@@ -593,7 +593,7 @@ Concept rows and relation rows now navigate to full detail pages (hash routes `#
 
 ## W-0211
 
-status: ready
+status: done
 created: 2026-05-25
 updated: 2026-05-25
 blocks: [W-0212]
@@ -637,7 +637,7 @@ The `gh` CLI is already used by p07 for `gh models run` calls. In a GitHub Actio
 
 ## W-0212
 
-status: ready
+status: done
 created: 2026-05-25
 updated: 2026-05-25
 blocks: []

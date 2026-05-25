@@ -55,7 +55,7 @@ def batch_pipeline_output():
             need_run = False
 
     if need_run:
-        result = _run(PIPELINE_SCRIPT, GLOSSARY_DIR)
+        result = _run(PIPELINE_SCRIPT, GLOSSARY_DIR, "--strategy", "rule-based")
         assert result.returncode == 0, f"Batch pipeline failed:\n{result.stderr}"
 
 
@@ -66,7 +66,7 @@ def batch_pipeline_output():
 
 def test_batch_pipeline_exits_zero():
     """Batch pipeline over glossary/ exits 0."""
-    result = _run(PIPELINE_SCRIPT, GLOSSARY_DIR)
+    result = _run(PIPELINE_SCRIPT, GLOSSARY_DIR, "--strategy", "rule-based")
     assert result.returncode == 0, f"stderr:\n{result.stderr}"
 
 

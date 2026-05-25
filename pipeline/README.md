@@ -10,11 +10,14 @@ full PROV-O provenance tracing from raw source to stored assertion.
 ## Quick Start
 
 ```bash
-# Process a single file
+# Process a single file (LLM strategy — default)
 python pipeline/run_pipeline.py glossary/vector-embedding.md
 
-# Process all files in a directory
-python pipeline/run_pipeline.py glossary/
+# Process all files in a directory with the LLM strategy (default)
+python pipeline/run_pipeline.py raw_document_corpus/
+
+# Process the structured glossary corpus with rule-based extraction
+python pipeline/run_pipeline.py glossary/ --strategy rule-based
 
 # Query a concept card
 python pipeline/query.py "vector embedding"
@@ -24,6 +27,33 @@ python pipeline/query.py --format json "vector embedding"
 
 # Show the two-hop neighbourhood
 python pipeline/query.py --related "vector embedding"
+```
+
+---
+
+## Extraction Strategies
+
+P-07 (Concept Extraction) supports two pluggable extraction strategies selected
+via the `--strategy` CLI flag or `state["strategy"]` in programmatic use:
+
+| Strategy | Default? | Best for | Notes |
+|----------|----------|----------|-------|
+| `llm` | ✓ Yes | Unstructured prose (`raw_document_corpus/`) | Calls `gh models run` via the `gh` CLI; requires `gh auth` |
+| `rule-based` | No | Structured glossary corpus (`glossary/`) | Reads YAML front-matter directly; near-perfect F1; no LLM calls |
+
+**Why `llm` is the default:** The primary production corpus (`raw_document_corpus/`) is
+unstructured prose with no YAML front-matter.  Running `rule-based` on prose silently
+produces sparse extractions (title only, no relations).  Making `llm` the default ensures
+the correct strategy fires without requiring an explicit flag.
+
+**When to use `rule-based`:** Use `--strategy rule-based` explicitly for the glossary
+corpus and for the W-0203 eval harness, where deterministic front-matter fidelity is the
+measurement target and LLM calls are neither needed nor desirable.
+
+```bash
+# Eval harness — always uses rule-based or llm explicitly
+python pipeline/eval.py --corpus glossary/ --extractor rule-based
+python pipeline/eval.py --corpus glossary/ --extractor llm
 ```
 
 ---

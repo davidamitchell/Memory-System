@@ -5,13 +5,15 @@ Processes one document (or a directory of documents) through all 12
 processors and writes the versioned Turtle output to data/ontology/.
 
 Usage:
-    python pipeline/run_pipeline.py <path>
+    python pipeline/run_pipeline.py <path> [--strategy llm|rule-based]
 
     <path> may be a single .md file or a directory (processes all .md files).
 
 Examples:
     python pipeline/run_pipeline.py glossary/vector-embedding.md
     python pipeline/run_pipeline.py glossary/
+    python pipeline/run_pipeline.py glossary/ --strategy rule-based
+    python pipeline/run_pipeline.py raw_document_corpus/ --strategy llm
 """
 from __future__ import annotations
 
@@ -80,16 +82,17 @@ def collect_sources(path: Path) -> list[Path]:
     return sorted(p for p in path.rglob("*.md") if not p.name.startswith("README"))
 
 
-def run_pipeline(source_path: str) -> dict:
+def run_pipeline(source_path: str, strategy: str = "llm") -> dict:
     """Run the full 12-processor pipeline for a single document.
 
     Args:
         source_path: Path to the source file, relative to REPO_ROOT.
+        strategy: Extraction strategy — ``"llm"`` (default) or ``"rule-based"``.
 
     Returns:
         Final pipeline state dict.
     """
-    state: dict = {"source_path": source_path}
+    state: dict = {"source_path": source_path, "strategy": strategy}
 
     for processor in PROCESSORS:
         state = processor.run(state, REPO_ROOT)
@@ -97,7 +100,7 @@ def run_pipeline(source_path: str) -> dict:
     return state
 
 
-def run_pipeline_batch(source_paths: list[str]) -> dict:
+def run_pipeline_batch(source_paths: list[str], strategy: str = "llm") -> dict:
     """Run p01–p08 for each source (accumulating one graph), then p09–p12 once.
 
     Processing all files into a single ontology version rather than
@@ -105,6 +108,7 @@ def run_pipeline_batch(source_paths: list[str]) -> dict:
 
     Args:
         source_paths: Ordered list of source file paths relative to REPO_ROOT.
+        strategy: Extraction strategy — ``"llm"`` (default) or ``"rule-based"``.
 
     Returns:
         Final pipeline state dict after version commit and export.
@@ -113,7 +117,7 @@ def run_pipeline_batch(source_paths: list[str]) -> dict:
 
     for source_path in source_paths:
         logging.info("  extracting: %s", source_path)
-        state: dict = {"source_path": source_path}
+        state: dict = {"source_path": source_path, "strategy": strategy}
         if "graph" in batch_state:
             state["graph"] = batch_state["graph"]
 
@@ -138,6 +142,15 @@ def main() -> None:
         help="Path to a .md file or a directory of .md files (relative to repo root or absolute).",
     )
     parser.add_argument(
+        "--strategy",
+        default="llm",
+        choices=["llm", "rule-based"],
+        help=(
+            "Extraction strategy: 'llm' (default, for prose) or 'rule-based' "
+            "(for structured front-matter corpora such as glossary/)."
+        ),
+    )
+    parser.add_argument(
         "-v", "--verbose", action="store_true", help="Enable debug logging."
     )
     args = parser.parse_args()
@@ -159,11 +172,11 @@ def main() -> None:
 
     if len(rel_paths) == 1:
         # Single file: full 12-processor run
-        final_state = run_pipeline(rel_paths[0])
+        final_state = run_pipeline(rel_paths[0], strategy=args.strategy)
     else:
         # Directory / multi-file: batch mode — accumulate all into one version
         logging.info("Batch mode: extracting all files, then committing once")
-        final_state = run_pipeline_batch(rel_paths)
+        final_state = run_pipeline_batch(rel_paths, strategy=args.strategy)
 
     diff = final_state.get("diff", {})
     if diff:

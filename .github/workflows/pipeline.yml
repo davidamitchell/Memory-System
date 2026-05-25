@@ -1,0 +1,84 @@
+name: Ontology Pipeline
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "raw_document_corpus/**"
+      - "glossary/**"
+  workflow_dispatch:
+    inputs:
+      strategy:
+        description: "Extraction strategy (llm or rule-based)"
+        required: false
+        default: "llm"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  run-pipeline:
+    name: Run ontology pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install rdflib
+
+      - name: Authenticate gh CLI
+        run: gh auth status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine extraction strategy
+        id: strategy
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "value=${{ inputs.strategy }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=llm" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run ontology pipeline (full corpus)
+        run: |
+          python pipeline/run_pipeline.py raw_document_corpus/ \
+            --strategy ${{ steps.strategy.outputs.value }}
+          python pipeline/run_pipeline.py glossary/ \
+            --strategy rule-based
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Regenerate ontology JSON and HTML
+        run: |
+          python pipeline/export_json.py
+          python pipeline/export_html.py
+
+      - name: Commit updated artefacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ontology/ docs/data/ontology.json docs/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update ontology snapshot [skip ci]"
+            git push
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

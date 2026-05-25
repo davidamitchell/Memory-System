@@ -2,9 +2,12 @@
 
 Supports two extraction strategies selected via ``state["strategy"]``:
 
-``rule-based`` (default)
+``rule-based``
     Reads structured YAML front-matter fields directly.  Near-perfect on
     the glossary corpus; produces sparse results on unstructured prose docs.
+    Use explicitly via ``state["strategy"] = "rule-based"`` or the
+    ``--strategy rule-based`` CLI flag when evaluating against the structured
+    corpus.
 
     Extraction sources:
       - ``rdfs:label``     ← front_matter.title (or H1 fallback from p02)
@@ -214,14 +217,14 @@ def _extract_rule_based(state: dict, source_slug: str, segments: list[dict]) -> 
 def run(state: dict, repo_root: Path) -> dict:  # noqa: ARG001
     """Extract concept assertions and record the Extraction Activity.
 
-    Reads ``state["strategy"]`` (default ``"rule-based"``) to select the
+    Reads ``state["strategy"]`` (default ``"llm"``) to select the
     extraction strategy.
 
     Adds to state:
     - ``delta_proposal``: dict describing the candidate assertions
     - ``extraction_activity``: dict recording this extraction run
     """
-    strategy = state.get("strategy", "rule-based")
+    strategy = state.get("strategy", "llm")
     logger.info("[7/12] Concept Extraction Processor — strategy=%s", strategy)
 
     segments: list[dict] = state["segments"]

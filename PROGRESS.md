@@ -2,6 +2,47 @@
 
 ---
 
+## 2026-05-25 — W-0211: GitHub Actions pipeline workflow + W-0212: LLM default strategy
+
+### W-0211: `.github/workflows/pipeline.yml`
+
+Created the GitHub Actions workflow that makes GitHub Actions the sole trigger for pipeline execution.
+
+**Changes:**
+- `.github/workflows/pipeline.yml` — new workflow:
+  - Triggers on push to `main` when any file in `raw_document_corpus/` or `glossary/` changes
+  - Triggers on `workflow_dispatch` with optional `strategy` input (default `llm`)
+  - Steps: checkout → Python 3.11 → install rdflib → authenticate `gh` via `GITHUB_TOKEN` → run batch pipeline on `raw_document_corpus/` (LLM) and `glossary/` (rule-based) → regenerate `docs/data/ontology.json` and `docs/index.html` → commit artefacts back to main with `[skip ci]`
+  - Skips commit step if nothing changed (idempotent)
+  - `permissions: contents: write` for the commit-back step
+  - `concurrency: pipeline` with `cancel-in-progress: false` to prevent parallel runs from corrupting the version counter
+
+**Acceptance criteria met:**
+- Triggers on push to `raw_document_corpus/**` and `glossary/**` ✓
+- `workflow_dispatch` with `strategy` input ✓
+- Commits updated artefacts with `[skip ci]` ✓
+- No-op if no changes ✓
+
+### W-0212: LLM as default extraction strategy
+
+Changed the extraction strategy default from `rule-based` to `llm` throughout the pipeline.
+
+**Changes:**
+- `pipeline/processors/p07_concept_extraction.py`: `state.get("strategy", "rule-based")` → `state.get("strategy", "llm")`; module docstring updated to mark `llm` as the default
+- `pipeline/run_pipeline.py`: `run_pipeline()` and `run_pipeline_batch()` gain a `strategy` parameter (default `"llm"`); `main()` gains `--strategy` CLI flag (choices: `llm`, `rule-based`, default `llm`)
+- `pipeline/README.md`: Quick Start updated with `--strategy` examples; new **Extraction Strategies** section documenting when to use each strategy and the rationale for the default
+- `tests/test_pipeline_w0200.py` and `tests/test_pipeline_w0201.py`: subprocess calls against the glossary corpus now pass `--strategy rule-based` explicitly (required companion change; the W-0212 assumption that "all tests mock `_gh_models_caller`" was incorrect for the subprocess-based acceptance tests)
+
+**Test results:** 54/54 pass.
+
+**Mini-Retro**
+1. Did the process work? Yes — both items are straightforward. W-0211 is a new workflow file; W-0212 is a one-line default change plus flag plumbing.
+2. What slowed down? The W-0212 assumption in BACKLOG.md ("All existing tests mock `_gh_models_caller`") was incorrect: two test files invoke `run_pipeline.py` via subprocess against the glossary corpus and do not mock anything. Switching the default to `llm` broke those tests because `gh models run` is unavailable in the test sandbox. Fixed by adding `--strategy rule-based` to the subprocess calls in those tests — the correct and explicit form.
+3. What single change would prevent this next time? Record subprocess-invoking tests separately from unit tests in the BACKLOG assumption; note that subprocess tests are integration tests that inherit the real environment and will fail if the environment lacks an authenticated `gh` CLI.
+4. Is this a pattern? Yes — any test that calls `run_pipeline.py` as a subprocess must specify the strategy explicitly when it is testing a strategy-sensitive path. The `--strategy` flag makes this self-documenting.
+
+---
+
 ## 2026-05-23 — W-0200: 12-processor ontology pipeline (first slice)
 
 Built the full end-to-end ontology pipeline for a single glossary file (`glossary/vector-embedding.md`).
