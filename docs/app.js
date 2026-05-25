@@ -122,11 +122,30 @@
     insertBefore.parentNode.insertBefore(wrap, insertBefore);
 
     var tbody = table.querySelector('tbody');
+    var noResultsRow = null;
+
+    function updateNoResults() {
+      var allHidden = Array.from(tbody.rows).every(function (row) {
+        return row.classList.contains('hidden-row') || row === noResultsRow;
+      });
+      if (allHidden && !noResultsRow) {
+        noResultsRow = document.createElement('tr');
+        noResultsRow.className = 'no-results-row';
+        noResultsRow.innerHTML = '<td colspan="10" class="no-results-msg">No matching results.</td>';
+        tbody.appendChild(noResultsRow);
+      } else if (!allHidden && noResultsRow) {
+        tbody.removeChild(noResultsRow);
+        noResultsRow = null;
+      }
+    }
+
     input.addEventListener('input', function () {
       var q = input.value.trim().toLowerCase();
       Array.from(tbody.rows).forEach(function (row) {
+        if (row === noResultsRow) return;
         row.classList.toggle('hidden-row', q.length > 0 && !row.textContent.toLowerCase().includes(q));
       });
+      updateNoResults();
     });
   }
 

@@ -449,6 +449,52 @@ tr.relation-row:focus {
 }
 
 /* ------------------------------------------------------------------ */
+/* Overview — distribution breakdown tables                            */
+/* ------------------------------------------------------------------ */
+
+.dist-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.dist-block {
+  flex: 1;
+  min-width: 200px;
+}
+
+.dist-block h3 {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+  margin: 0 0 .5rem;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+table.dist-table th,
+table.dist-table td {
+  font-size: .82rem;
+  padding: .3rem .65rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* "No results" row (injected by JS on empty search)                  */
+/* ------------------------------------------------------------------ */
+
+.no-results-msg {
+  color: var(--muted);
+  font-size: .87rem;
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------ */
 /* Badges / tags                                                        */
 /* ------------------------------------------------------------------ */
 

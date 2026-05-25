@@ -5,7 +5,7 @@ Processes one document (or a directory of documents) through all 12
 processors and writes the versioned Turtle output to data/ontology/.
 
 Usage:
-    python pipeline/run_pipeline.py <path> [--strategy llm|rule-based]
+    python pipeline/run_pipeline.py <path> [--strategy llm|rule-based] [--skip-errors]
 
     <path> may be a single .md file or a directory (processes all .md files).
 
@@ -14,6 +14,7 @@ Examples:
     python pipeline/run_pipeline.py glossary/
     python pipeline/run_pipeline.py glossary/ --strategy rule-based
     python pipeline/run_pipeline.py raw_document_corpus/ --strategy llm
+    python pipeline/run_pipeline.py raw_document_corpus/ --strategy llm --skip-errors
 """
 from __future__ import annotations
 
@@ -100,7 +101,11 @@ def run_pipeline(source_path: str, strategy: str = "llm") -> dict:
     return state
 
 
-def run_pipeline_batch(source_paths: list[str], strategy: str = "llm") -> dict:
+def run_pipeline_batch(
+    source_paths: list[str],
+    strategy: str = "llm",
+    skip_errors: bool = False,
+) -> dict:
     """Run p01–p08 for each source (accumulating one graph), then p09–p12 once.
 
     Processing all files into a single ontology version rather than
@@ -109,22 +114,49 @@ def run_pipeline_batch(source_paths: list[str], strategy: str = "llm") -> dict:
     Args:
         source_paths: Ordered list of source file paths relative to REPO_ROOT.
         strategy: Extraction strategy — ``"llm"`` (default) or ``"rule-based"``.
+        skip_errors: When ``True``, log per-file failures and continue rather
+            than aborting the whole batch.  Errors are collected in
+            ``state["extraction_errors"]`` and the function still returns
+            normally so p09–p12 run on the successfully processed files.
+            When ``False`` (the default), any per-file exception propagates
+            immediately and halts the batch.
 
     Returns:
         Final pipeline state dict after version commit and export.
+        When *skip_errors* is True the dict may contain an
+        ``"extraction_errors"`` key listing per-file failures.
     """
     batch_state: dict = {}  # carries accumulated graph across files
+    extraction_errors: list[dict] = []
+    total = len(source_paths)
 
-    for source_path in source_paths:
-        logging.info("  extracting: %s", source_path)
+    for idx, source_path in enumerate(source_paths, 1):
+        logging.info("  [%d/%d] extracting: %s", idx, total, source_path)
         state: dict = {"source_path": source_path, "strategy": strategy}
         if "graph" in batch_state:
             state["graph"] = batch_state["graph"]
 
-        for processor in _EXTRACT_PROCESSORS:
-            state = processor.run(state, REPO_ROOT)
+        try:
+            for processor in _EXTRACT_PROCESSORS:
+                state = processor.run(state, REPO_ROOT)
+            batch_state["graph"] = state["graph"]
+        except Exception as exc:  # noqa: BLE001
+            logging.error(
+                "  [%d/%d] ERROR — %s: %s: %s",
+                idx, total, source_path, type(exc).__name__, exc,
+            )
+            if not skip_errors:
+                raise
+            extraction_errors.append({"path": source_path, "error": str(exc)})
 
-        batch_state["graph"] = state["graph"]
+    if extraction_errors:
+        logging.warning(
+            "  %d/%d file(s) failed during extraction (graph built from %d file(s)):",
+            len(extraction_errors), total, total - len(extraction_errors),
+        )
+        for err in extraction_errors:
+            logging.warning("    FAILED %s — %s", err["path"], err["error"])
+        batch_state["extraction_errors"] = extraction_errors
 
     # Commit the accumulated graph as a single new version
     for processor in _COMMIT_PROCESSORS:
@@ -148,6 +180,15 @@ def main() -> None:
         help=(
             "Extraction strategy: 'llm' (default, for prose) or 'rule-based' "
             "(for structured front-matter corpora such as glossary/)."
+        ),
+    )
+    parser.add_argument(
+        "--skip-errors",
+        action="store_true",
+        help=(
+            "In batch mode: log per-file failures and continue rather than "
+            "aborting the whole run.  The process exits non-zero if any file "
+            "failed.  Has no effect on single-file runs."
         ),
     )
     parser.add_argument(
@@ -176,7 +217,9 @@ def main() -> None:
     else:
         # Directory / multi-file: batch mode — accumulate all into one version
         logging.info("Batch mode: extracting all files, then committing once")
-        final_state = run_pipeline_batch(rel_paths, strategy=args.strategy)
+        final_state = run_pipeline_batch(
+            rel_paths, strategy=args.strategy, skip_errors=args.skip_errors
+        )
 
     diff = final_state.get("diff", {})
     if diff:
@@ -187,6 +230,32 @@ def main() -> None:
         print(f"\n{prev} → {next_}: +{added} triples, {removed} removed")
 
     print(f"Output: {final_state.get('output_path')}")
+
+    # --- Exit non-zero on any errors or validation conflicts ---
+    exit_code = 0
+
+    extraction_errors = final_state.get("extraction_errors", [])
+    if extraction_errors:
+        print(
+            f"\nERROR: {len(extraction_errors)} file(s) failed during extraction:",
+            file=sys.stderr,
+        )
+        for err in extraction_errors:
+            print(f"  {err['path']}: {err['error']}", file=sys.stderr)
+        exit_code = 1
+
+    validation_report = final_state.get("validation_report", {})
+    conflict_count = validation_report.get("conflict_count", 0)
+    if conflict_count:
+        version_tag = validation_report.get("version_tag", "?")
+        print(
+            f"\nWARNING: {conflict_count} conflict(s) found — "
+            f"see data/reports/validation-{version_tag}.json",
+            file=sys.stderr,
+        )
+        exit_code = 1
+
+    sys.exit(exit_code)
 
 
 if __name__ == "__main__":
