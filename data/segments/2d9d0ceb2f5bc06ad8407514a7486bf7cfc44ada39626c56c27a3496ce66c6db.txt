@@ -1,0 +1,3 @@
+- Each committed ontology snapshot is tagged with a semantic version (`major.minor.patch`)
+- Diffs are stored as human-readable changelogs alongside the ontology artefact
+- Rollback is by pointer — the prior snapshot is never deleted (append-only, same philosophy as `PROGRESS.md`)

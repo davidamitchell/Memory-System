@@ -1,0 +1,2 @@
+**Check 4: Does Jsonformer merit a separate finding?**
+Jsonformer (GitHub: 1rgs/jsonformer) enforces JSON structure by generating JSON field values one at a time, reusing the model only for value-generation. It is a simpler predecessor to Outlines and Guidance, both of which supersede it in capability and adoption. No separate finding is warranted; it is accurately labelled "identified but not consulted separately" because it is subsumed by the Outlines finding. ✓

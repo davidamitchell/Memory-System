@@ -1,0 +1,1 @@
+Copy `raw_document_corpus/` from `copilot/ontology-experiment` into `main` (and all working branches derived from it) as a first-class directory. This directory is the **primary latent-extraction testing corpus** for W-0204 and beyond. The `glossary/` corpus retains its role as the structured ground-truth baseline for eval harness scoring (W-0203).

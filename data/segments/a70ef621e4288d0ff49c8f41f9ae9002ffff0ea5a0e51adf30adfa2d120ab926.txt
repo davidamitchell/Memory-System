@@ -1,0 +1,4 @@
+4. **Tooling alignment** — Research how tooling can encode prompt guidance:
+   - `.github/copilot-instructions.md`, `AGENTS.md`, `.cursorrules`, `.aider.conf` as persistent context files
+   - MCP (Model Context Protocol) servers as tooling scaffolds
+   - CI/CD-integrated review prompts (automated PR review, test generation triggers)

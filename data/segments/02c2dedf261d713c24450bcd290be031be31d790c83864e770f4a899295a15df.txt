@@ -1,0 +1,6 @@
+**In scope:**
+- Lineage tracking: can the decision path of an agentic system be reconstructed post hoc with sufficient fidelity for audit?
+- State-space growth in agentic systems: does branching from Large Language Model (LLM) outputs make formal verification materially harder than for deterministic workflows?
+- Non-Deterministic Finite Automata (NDFA), Markov Decision Process (MDP), and related state-transition abstractions for runtime verification of agentic pipelines
+- Formal verification approaches, especially model checking, for deterministic, probabilistic, and nondeterministic workflow abstractions
+- Regulatory and compliance implications of partially reconstructable or only approximately verifiable runtime state

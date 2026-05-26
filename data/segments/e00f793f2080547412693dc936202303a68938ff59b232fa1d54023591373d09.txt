@@ -1,0 +1,8 @@
+1. [fact] Anthropic's live board and official expansion announcement show that the company is scaling as an enterprise software and services provider as much as a frontier lab.
+2. [fact] Google DeepMind's current openings show a visible shift toward Gemini product surfaces and robotics, not only core research.
+3. [fact] xAI's strongest hiring signal is infrastructure and data operations, which matches its public compute expansion in Memphis.
+4. [fact] Mistral shows the sharpest measurable role-volume shift in the sample, moving from 13 visible postings in April 2024 to 54 in April 2025 and 149 current postings in April 2026.
+5. [fact] Cohere's current board and product pages show a strategy centred on secure enterprise agents, private deployment, and forward-deployed implementation.
+6. [fact] OpenAI's publicly visible role sample and official developer roadmap point to developer tooling, deployment engineering, privacy, and governance as current priorities.
+7. [inference] The highest-confidence cross-company conclusion is that operationalisation, not raw model research alone, is now the dominant competitive frontier.
+8. [inference] Executive and star-researcher hires are most useful where public boards are opaque, and Meta is the clearest example of that pattern.

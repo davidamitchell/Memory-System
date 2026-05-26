@@ -1,0 +1,4 @@
+**Constraints:**
+- Focus on the W3C ODRL 2.2 specification and its RDF and Web Ontology Language (OWL) representation
+- Distinguish clearly between policy expression and policy enforcement
+- Prefer peer-reviewed papers, W3C specifications, and documented implementations over vendor marketing

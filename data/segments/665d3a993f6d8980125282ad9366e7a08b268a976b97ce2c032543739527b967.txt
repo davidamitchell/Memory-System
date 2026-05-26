@@ -1,0 +1,3 @@
+**Constraints:**
+- Prioritise empirical cost datasets and benchmark studies over anecdotal case studies.
+- Keep assumptions explicit when source data is incomplete.

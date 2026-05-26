@@ -1,0 +1,2 @@
+[fact] IntentLang (GitHub: l3yx/intentlang) formalises human intent as an intermediate representation within agent programs. It is described as "the next-generation AI Agent framework driven by intent" — a design-time framework for human engineers, not an output format for LLMs.
+Source: https://github.com/l3yx/intentlang

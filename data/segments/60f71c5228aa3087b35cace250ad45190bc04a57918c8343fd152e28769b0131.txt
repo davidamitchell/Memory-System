@@ -1,0 +1,1 @@
+**[fact]** Simplified Drum-Buffer-Rope (S-DBR) is a variant that maintains one buffer (at shipping) and manages flow across the drum through load planning rather than multiple buffer points. Source: [Wikipedia -- Theory of Constraints](https://en.wikipedia.org/wiki/Theory_of_constraints).

@@ -1,0 +1,3 @@
+- Review checklist status: acronym expansion sweep complete; inline claim labels present in Research Skill Output and Findings; Evidence Map source cells remain URL-backed.
+- Cross-reference sweep status: adjacent completed items on anomaly detection and digest-bound policy identity rechecked before the second review pass.
+- [inference; source: https://www.w3.org/TR/vc-data-model/; https://github.com/in-toto/attestation/blob/main/spec/v1/resource_descriptor.md] The main remaining uncertainty is implementation profile design rather than conceptual structure: the recommended pattern is supported, but the exact ontology and serialization profile would still need engineering work.

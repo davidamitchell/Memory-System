@@ -1,0 +1,1 @@
+5. **Assess the compounding rate** - Does the evidence suggest that entropy growth is linear or super-linear in AI-heavy workflows? Is there a threshold effect beyond which recovery becomes infeasible?

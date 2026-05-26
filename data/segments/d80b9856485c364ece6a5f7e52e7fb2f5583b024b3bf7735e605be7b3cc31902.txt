@@ -1,0 +1,3 @@
+The migration is a two-step process:
+1. **Phase 1 (SQLite relational + FTS5):** Write a `src/db/` module with a `DatabaseStore` class. On first run, scan all `Research/{backlog,in-progress,completed}/*.md`, parse YAML front-matter, and `INSERT OR IGNORE` into `items` and `tags`. Load `state/index.json` and insert all existing entries into `processed`. Remove `StateStore` JSON dependency from `src/main.py`. Add `state/research.db` to `.gitignore`.
+2. **Phase 2 (sqlite-vec embeddings):** Extend `DatabaseStore` to generate embeddings for each completed item's findings on insert and store in `item_embeddings`. This requires an embedding model (local via `sentence-transformers` or API via OpenAI/Gemini). This step is gated on the semantic search backlog item.

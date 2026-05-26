@@ -1,0 +1,1 @@
+2. **"sqlite-vec is pre-v1 but is recommended."** Resolved by phasing. Phase 1 (relational + FTS5) uses only stable, stdlib SQLite. Phase 2 (vector search) adds sqlite-vec. If sqlite-vec introduces breaking changes before 1.0, the semantic search backlog item can absorb those costs at implementation time. Phase 1 is not gated on Phase 2.

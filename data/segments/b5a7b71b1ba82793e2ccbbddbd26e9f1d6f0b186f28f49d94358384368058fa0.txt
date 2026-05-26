@@ -1,0 +1,5 @@
+Related prior research:
+- `2026-03-10-formal-spec-intent-alignment-agentic-coding.md` — specification hierarchy, type-constrained decoding, reward hacking
+- `2026-03-10-ai-concept-classification-taxonomy.md` — failure mode taxonomy, structural controls
+- `2026-03-08-context-engineering-first-principles.md` — goal-level vs token-level steering
+- `2026-03-02-integrative-framework-agent-decision-making.md` — decision-making frameworks for agents

@@ -1,0 +1,1 @@
+The Stack Overflow finding that 45% say AI is bad at complex tasks is consistent with Barke et al.'s exploration vs. acceleration distinction: complex tasks map to exploration mode, where AI assistance is less reliable.

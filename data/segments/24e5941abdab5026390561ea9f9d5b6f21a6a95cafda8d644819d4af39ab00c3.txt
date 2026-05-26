@@ -1,0 +1,1 @@
+The strongest challenge to treating DPROD as settled is not technical weakness but publication inconsistency, because the namespace and version story diverges across official surfaces. [inference; source: https://www.omg.org/spec/DPROD/; https://www.omg.org/spec/DPROD/dprod-ontology.ttl; https://ekgf.org/dprod/adopt/; https://github.com/EKGF/dprod/blob/develop/README.md]

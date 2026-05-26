@@ -1,0 +1,1 @@
+**Stage 3 (~500+ items):** Add community detection and community summaries (GraphRAG pattern within LightRAG). Global sensemaking queries ("what does the corpus say about X?") become the dominant query type at this scale.

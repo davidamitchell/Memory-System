@@ -1,0 +1,1 @@
+**[fact]** RAND's research portfolio evaluation framework recommends both periodic (quarterly) holistic reviews and continuous item-level monitoring. The quarterly review assesses strategic alignment; item-level monitoring detects drift in near-real-time. Source: RAND "Evolving the Practice of Evaluating Research Portfolios".

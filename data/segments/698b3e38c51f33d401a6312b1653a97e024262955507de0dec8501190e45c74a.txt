@@ -1,0 +1,2 @@
+[fact] **SGLang** (Zheng et al.; NeurIPS 2024; arXiv:2312.07104) is a Python-embedded domain-specific language (DSL) for expressing multi-step LLM workflows. Its runtime introduces RadixAttention for key-value (KV) cache reuse and compressed FSMs for structured output decoding. SGLang is a widely deployed inference framework; the GitHub repo at https://github.com/sgl-project/sglang is an active high-performance inference server.
+Source: https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf

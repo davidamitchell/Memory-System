@@ -1,0 +1,14 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| H-Neurons predictive in base models before alignment (AUROC > baseline on all 6 models) | Gao et al. (2025), arXiv:2512.01797, Fig. 4a | high | Primary empirical evidence for pre-training origin |
+| H-Neurons undergo minimal weight change during SFT (parameter inertia, avg rank ≈0.97) | Gao et al. (2025), arXiv:2512.01797, Fig. 4b | high | One-sided t-test P < 0.001 across all tested models |
+| NTP objective rewards fluent compliant continuations without factual accuracy penalty | Gao et al. (2025) §5; Kalai et al. (2025) "Why language models hallucinate" | high (mechanism); medium (corpus-signal role) | Kalai et al. is learning-theory paper cited in Gao et al.; no direct ablation |
+| RLHF does not rewrite circuits; operates at response-distribution level | Gao et al. parameter inertia; RLHF alignment tax literature | high | Consistent with multiple independent findings on RLHF surface-level operation |
+| Larger models have lower H-Neuron ratios (0.01‰ vs 0.35‰) | Gao et al. (2025), Table 1 | medium | Only 6 models, 3 families; pattern consistent but not a formal scaling law |
+| Larger models show lower compliance perturbation slopes (2.40 vs 3.03) | Gao et al. (2025), Fig. 3 | medium | Same data limitation; "average slope" aggregated across 4 benchmarks |
+| Data filtering dramatically changes model behaviour (Phi-1 quality data effect) | Gunasekar et al. (2023), arXiv:2306.11644 | medium | Evidence is for coding benchmarks; generalisation to over-compliance is inference |
+| Web-scale filtering can match curated corpora at 5 trillion tokens (RefinedWeb) | Penedo et al. (2023), arXiv:2306.01116 | medium | Demonstrates filtering feasibility and effectiveness on general capability |
+| RLHF creates alignment tax; stronger reward optimisation degrades capabilities | Alignment tax literature (ACL 2024) | fact | Constrains how far RLHF can push against pre-trained features |
+| Superposition: models encode more features than dimensions; sparse features compress via superposition | Elhage et al. (2022), transformer-circuits.pub toy models | high | Toy model result; direct extrapolation to large transformer H-Neurons is inference |
+| Uncertainty-expression auxiliary objective directly addresses NTP compliance reward | First-principles inference from §2 | low | No empirical validation at scale; mechanistically justified |
+| Architectural FFN widening could reduce superposition pressure | Elhage et al. (2022) superposition theory | low | Inference; no direct pre-training experiment for H-Neurons |

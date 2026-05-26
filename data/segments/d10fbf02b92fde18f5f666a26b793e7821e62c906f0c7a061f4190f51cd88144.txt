@@ -1,0 +1,6 @@
+Supporting questions:
+- What does the explore–exploit transition actually involve? What distinguishes exploration (learning under uncertainty) from exploitation (leveraging known value), and where does the transition boundary sit?
+- What is the synthesis step? What work must happen between exploring a new technology and exploiting it at scale, and what artefacts or decisions does it produce?
+- Why is synthesis skipped? What are the structural, cultural, and time-pressure forces that cause the step to be omitted when technology is moving fast?
+- What are the costs of skipping synthesis? What forms of hidden debt, re-work, and under-realised value result?
+- What strategies exist for preserving synthesis discipline while keeping pace with fast-moving technology, tooling, techniques, and patterns?

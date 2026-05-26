@@ -1,0 +1,10 @@
+**Acronyms:**
+- ITSM: IT Service Management — expanded in §1, Cluster B (first use in Research Skill Output)
+- CSDM: Common Service Data Model — expanded in Scope section at first use
+- ITIL: Information Technology Infrastructure Library — expanded in §2-A1
+- BPM: Business Process Management — expanded in §2-A3
+- BPMN: Business Process Model and Notation — expanded in §2-A2 at first use
+- CI: Configuration Item — consistent with CSDM research item
+- RACI: Responsible, Accountable, Consulted, Informed — expanded in §2-C1
+- MVP: Minimum Viable Process — expanded in §2-D1
+- SLA: Service Level Agreement — expanded in §2-D2 at first use

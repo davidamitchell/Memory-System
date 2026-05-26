@@ -1,0 +1,1 @@
+[fact] Git Large File Storage (LFS) is also supported via `actions/checkout@v5` with `lfs: true`. (S1.)

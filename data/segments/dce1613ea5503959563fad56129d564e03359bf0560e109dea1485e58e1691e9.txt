@@ -1,0 +1,1 @@
+3. **GraphRAG vs. LightRAG costs**: GraphRAG builds community summaries upfront (high construction cost, fast global query). LightRAG avoids full rebuilds (lower maintenance cost). Both are valid depending on whether the corpus is static or dynamic. For a growing research corpus, LightRAG is strictly better. No internal contradiction.

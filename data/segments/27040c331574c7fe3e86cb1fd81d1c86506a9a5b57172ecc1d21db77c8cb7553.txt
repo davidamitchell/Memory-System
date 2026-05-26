@@ -1,0 +1,3 @@
+**8.2 Speculation-control:**
+- Evaluative terms: "production-grade" anchored to GitHub stars, funding, adoption evidence; "most mature" not used; "highest-resolution" qualified in context. ✓
+- Causal claims: "constraining generation to valid schemas reduces structural hallucination failures" — cited to Outlines/Guidance documentation. "Level 4–5 faces undecidability barrier" — labelled [inference] with justification. ✓

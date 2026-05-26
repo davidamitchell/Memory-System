@@ -1,0 +1,1 @@
+10. [inference] The Jevons Paradox risk is real: cheaper software production may not reduce total software investment but instead increase demand for software features, migrating the constraint from "can we afford to build this?" to "which of the many cheap things should we build?", which requires a different kind of governance than investment boards optimised for scarcity.

@@ -1,0 +1,1 @@
+**[fact]** `src/research/cli.py` already implements `cmd_add`, `cmd_list`, `cmd_start`, `cmd_complete`. The `register_subparser` function attaches sub-commands. Adding `agenda` follows the same pattern: a new `cmd_agenda` function, registered as `research agenda`. Source: direct inspection of `src/research/cli.py`.

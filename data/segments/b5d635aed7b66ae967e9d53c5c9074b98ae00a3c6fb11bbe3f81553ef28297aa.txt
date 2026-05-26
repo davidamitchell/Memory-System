@@ -1,0 +1,8 @@
+- question: identify the measurable point at which Human-in-the-Loop (HITL) bank-compliance review stops acting as an effective challenge function and becomes routine acceptance of automated triage, then specify controls that keep challenge capacity real.
+- in_scope: alert-volume, workload, staffing, time-on-task, challenge-rate, escalation, override, auditability, and supervisory expectations for model-risk and human-oversight design.
+- out_of_scope: fully autonomous decisioning, general labour policy, and vendor-by-vendor tool comparison.
+- constraints: use full-mode research, prioritise primary supervisory sources, and translate human-factors evidence into bounded operational thresholds rather than treating it as direct banking law.
+- output: knowledge
+- prior_completed_items: https://davidamitchell.github.io/Research/research/2026-04-26-human-in-the-loop-ai-automated-workflows.html, https://davidamitchell.github.io/Research/research/2026-05-02-hitl-review-volume-bottleneck-rubber-stamp.html, https://davidamitchell.github.io/Research/research/2026-04-26-ai-lowcode-observability-telemetry-governance.html, https://davidamitchell.github.io/Research/research/2026-04-26-ai-lowcode-governance-enforcement-architecture.html, https://davidamitchell.github.io/Research/research/2026-04-26-ai-governance-cost-performance-delivery-impact.html
+- source_correction: seeded SR 11-7 link -> OCC Bulletin 2026-13a
+- failed_primary_search: direct fetches of the 2011 SR 11-7 landing pages and query `site:federalreserve.gov sr1107 pdf`

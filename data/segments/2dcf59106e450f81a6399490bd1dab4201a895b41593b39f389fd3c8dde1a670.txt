@@ -1,0 +1,1 @@
+11. **A `workflow_dispatch`-triggered agenda analysis workflow posting results as a GitHub issue is the correct delivery mechanism.** This is the prescribed pattern for owner-accessible reporting in AGENTS.md and does not require new credentials. [fact — AGENTS.md "Consequences for tooling design"]

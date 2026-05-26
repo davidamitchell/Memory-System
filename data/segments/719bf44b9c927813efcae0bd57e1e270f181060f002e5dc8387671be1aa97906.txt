@@ -1,0 +1,6 @@
+**In scope:**
+- Mechanics of Jevons Paradox: the original coal/steam-engine observation, the rebound effect, and the conditions that amplify or suppress it
+- Historical sector case studies: energy (lighting, transport, computing), manufacturing, agriculture, water use, and at least one non-energy sector
+- Counter-examples: cases where efficiency improvements reduced or stabilised total demand rather than expanding it (e.g. CFC refrigerants, leaded petrol, asbestos — retirement through substitution/regulation; or saturation markets)
+- Current published and speculative commentary on decreasing cost of SWE/code production: who is making predictions, what mechanisms they invoke, and whether they explicitly reference Jevons
+- Personal speculative framework: what might happen at 1-year, 5-year, and 10-year horizons for software engineering as a profession and an economic activity

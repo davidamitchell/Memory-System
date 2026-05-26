@@ -1,0 +1,1 @@
+DuckDB also provides an FTS extension (`fts`) with BM25 via `match_bm25`. [fact, source: duckdb.org/docs/stable/core_extensions/full_text_search.html, confirmed by direct documentation access]

@@ -1,0 +1,1 @@
+These are binding constraints on all processors, storage, and control decisions:

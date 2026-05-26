@@ -1,0 +1,1 @@
+The research loop agent currently has no automated quality gate. There is no way to know from a CI signal whether the agent's output meets the expected standard. This item closes that gap by producing a rubric and a CI workflow design.

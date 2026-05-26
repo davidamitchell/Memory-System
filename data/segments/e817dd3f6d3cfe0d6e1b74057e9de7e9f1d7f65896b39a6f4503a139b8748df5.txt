@@ -1,0 +1,3 @@
+**Scope:**
+- In scope: Copilot coding agent (GitHub issue → assign → pull request (PR)); Claude Code on the web / iOS app `code` feature; `copilot-setup-steps.yml`; `devcontainer.json`; submodule initialisation for `.github/skills/`; instructions placement in `copilot-instructions.md` / `CLAUDE.md`.
+- Out of scope: `research-loop.yml` workflow setup (handled separately); local developer environments; Codespaces (mentioned only for comparison); the content of the skills submodule itself.

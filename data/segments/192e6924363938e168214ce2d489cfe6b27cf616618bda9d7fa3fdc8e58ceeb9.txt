@@ -1,0 +1,6 @@
+Gaps relative to target state:
+- No NLP preprocessing (no tokenisation, POS tagging, NER, or dependency parsing)
+- Concepts and relations are explicitly declared, not inferred from prose
+- All relations are untyped (`ms:relatedTerm`)
+- No taxonomic hierarchy (`subClassOf` is absent)
+- No extraction quality evaluation framework

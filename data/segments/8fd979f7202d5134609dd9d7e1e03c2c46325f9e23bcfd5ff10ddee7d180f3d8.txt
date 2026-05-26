@@ -1,0 +1,1 @@
+[inference] Without a `copilot-setup-steps.yml` specifying `actions/setup-python`, the agent uses whatever Python is present on the runner image and may not be the version required by this repo (Python 3.11+ per `pyproject.toml`).

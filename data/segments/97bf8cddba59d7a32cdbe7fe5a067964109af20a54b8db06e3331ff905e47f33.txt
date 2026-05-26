@@ -1,0 +1,5 @@
+**In scope:**
+- SQLite (core and extensions) for local storage
+- DuckDB as an alternative for analytics-heavy use
+- Embedded vector stores (LanceDB, ChromaDB, sqlite-vss)
+- Schema design for research items, sources, and transcripts

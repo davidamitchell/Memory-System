@@ -1,0 +1,5 @@
+- [fact] March and ambidexterity research establish that exploration and exploitation are genuinely different modes with different demands. Source: O'Reilly and Tushman 2013 working paper discussing March (1991).
+- [fact] Lean Startup adds a management logic for deciding when learning is sufficient to justify wider commitment. Source: Eric Ries, "Methodology."
+- [fact] Thoughtworks, McKinsey, California Management Review, Boston Consulting Group, and Chief Information Officer (CIO) show what goes wrong in practice when organisations try to scale without first codifying architecture, workflow, governance, ownership, and standards. Source: cited sources above.
+- [inference] The resulting conclusion is that synthesis is best understood as the missing management phase that translates learning into repeatable exploitation.
+- [inference] The weakest part of the evidence concerns the exact minimum artefact format, which remains design guidance rather than a directly studied standard.

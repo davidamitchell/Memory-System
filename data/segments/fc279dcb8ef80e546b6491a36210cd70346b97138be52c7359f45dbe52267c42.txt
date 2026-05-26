@@ -1,0 +1,1 @@
+That is why the synthesis keeps telemetry-driven adaptation at the control-plane and budget-selection level rather than claiming high confidence in per-request objective rewrites. [inference; source: https://openreview.net/forum?id=CduFAALvGe; https://docs.aws.amazon.com/wellarchitected/2022-03-31/framework/rel_withstand_component_failures_static_stability.html]

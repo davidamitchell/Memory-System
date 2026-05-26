@@ -1,0 +1,3 @@
+1. **Was any phase slow or skipped?** If a phase felt unnecessary for this task, was that because the task was simple, or because the harness has redundant structure? If the latter, propose a change.
+2. **Did any phase catch something that would otherwise have been missed?** This is evidence the phase earns its cost. Note it.
+3. **Was the loop the right granularity?** If checklist items were too coarse (each contained implicit sub-steps) or too fine (trivial items padded the list), adjust the decomposition rule for next time.

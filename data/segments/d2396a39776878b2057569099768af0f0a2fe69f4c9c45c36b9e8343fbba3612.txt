@@ -1,0 +1,5 @@
+1. What is the empirical evidence that H-Neurons originate in pre-training?
+   1a. What experimental design in Gao et al. tests the pre-training origin claim?
+   1b. What are the AUROC results for base-model transfer, and what do they imply?
+   1c. Do H-Neurons change during SFT/RLHF, or do they exhibit parameter inertia?
+   1d. What alternative explanations (e.g., H-Neurons are an SFT artefact) are ruled out?

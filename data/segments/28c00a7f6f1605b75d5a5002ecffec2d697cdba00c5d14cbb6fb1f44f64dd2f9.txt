@@ -1,0 +1,1 @@
+The clearest direct evidence in the consulted material comes from runtime-assurance and circuit-breaker literature, not from enterprise LLM case studies. [inference; source: https://arxiv.org/abs/2102.12981; https://arxiv.org/abs/1808.07921; https://learn.microsoft.com/azure/architecture/patterns/circuit-breaker]

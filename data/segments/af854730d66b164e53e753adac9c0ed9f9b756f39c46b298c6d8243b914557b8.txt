@@ -1,0 +1,2 @@
+**Technical lens:**
+- The convergent architecture identified in the agent memory research (Knowledge Graph of Thoughts + GoT) applies directly here: embeddings index into the knowledge graph; the knowledge graph provides relational structure; reasoning traverses graph paths. For the research corpus, this means: sqlite-vec embeddings → LightRAG graph → PPR-based multi-hop traversal → results fed to the agent's reasoning loop.

@@ -1,0 +1,1 @@
+This item grounds the knowledge-layer foundation that the integrative decision-making framework (`2026-03-02-integrative-framework-agent-decision-making.md`) requires. You cannot align agent intent with organisational knowledge if you have not first structured that knowledge in a navigable, compressible form.

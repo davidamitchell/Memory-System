@@ -1,0 +1,18 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| 74% of companies struggle to scale AI value | BCG, October 2024 press release | high | Large-sample global survey |
+| AI leaders: 1.5x revenue, 1.6x shareholder returns | BCG "Where's the Value in AI" report, 2024 | high | Survey-based; self-reported by leaders |
+| ANZ: $1.9B productivity savings since 2019 | ainvest.com report citing ANZ financials | medium | Reported by ANZ; not independently audited |
+| ANZ: 40–55% faster code development | Microsoft/GitHub Copilot case study, ANZ BlueNotes | high | Vendor case study; corroborated by ANZ public statements |
+| ANZ: home loan origination from 1 year to 6 weeks | Temporal.io case study | medium | Single vendor case study |
+| ANZ: Gini coefficient 0.78 → 0.82 | bestpractice.ai citing Nvidia/Monash partnership | medium | Third-party case study; not independently audited |
+| 85% of failed AI projects cite data as core issue | Multiple enterprise surveys (Forbes, IBM, RAND) | high | Consistent across independent sources |
+| BCG 10-20-70 rule | BCG "The Leader's Guide to Transforming with AI" | high | Consistent with broader literature |
+| Only 12–16% of AI initiatives reach enterprise scale | IBM Think, CIO.com synthesis | medium | Survey-based; methodology varies |
+| Doubling compute = ~1% quality improvement | Analytics India Mag, MIT IDE, TechCrunch 2024 | high | Consistent across independent AI research sources |
+| 91% of NZ businesses report efficiency improvements | AI Forum NZ Third AI Productivity Report | high | NZ-specific; methodology not detailed in summary |
+| 68% of NZ SMEs plan no AI investment | NZ AI Strategy commentary, thecolab.ai | medium | Cited by commentators; primary source is NZ government data |
+| NZ $76B GDP uplift by 2038 | NZ AI Strategy "Investing with Confidence" 2025 | low | Government projection; based on modelling assumptions not independently verified |
+| 71% of US hospitals use predictive AI (2024) | healthit.gov data brief 2023–2024 | high | Government data; representative survey |
+| 3.7x ROI from generative AI | IDC/Microsoft sponsored report 2025 | low | Vendor-sponsored; high conflict of interest |
+| Accenture: 2.5x revenue, 2.4x productivity | Accenture newsroom, 2024 | medium | Vendor self-reporting; methodology opaque |

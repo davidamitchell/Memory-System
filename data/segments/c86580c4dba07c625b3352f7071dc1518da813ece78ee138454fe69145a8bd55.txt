@@ -1,0 +1,4 @@
+**Out of scope:**
+- AI as a general risk (ethical risks, existential risks, safety risks) — not the topic here
+- AI risk management frameworks as compliance exercises (covered by EU AI Act / NIST RMF research)
+- Security-specific AI applications — see separate backlog item

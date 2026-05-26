@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item synthesizes how asset specificity, information asymmetry, causal ambiguity, and absorptive-capacity limits combine to block knowledge transfer, and identifies transfer designs that reduce abandonment without pretending specialist knowledge is frictionless. [inference; source: https://www.nber.org/system/files/chapters/c2144/c2144.pdf; https://eric.ed.gov/?id=EJ406851; https://api.crossref.org/works/10.1287%2Forsc.2016.1049]
+- Links:
+  - [Arrow (1962) Economic Welfare and the Allocation of Resources for Invention](https://www.nber.org/system/files/chapters/c2144/c2144.pdf)
+  - [Cohen and Levinthal (1990) Absorptive Capacity: A New Perspective on Learning and Innovation](https://eric.ed.gov/?id=EJ406851)
+  - [Szulanski, Ringov, and Jensen (2016) Overcoming Stickiness: How the Timing of Knowledge Transfer Methods Affects Transfer Difficulty](https://api.crossref.org/works/10.1287%2Forsc.2016.1049)

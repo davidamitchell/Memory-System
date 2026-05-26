@@ -1,0 +1,1 @@
+5. **Assess maturity and adoption.** For each candidate: is it a research prototype, an open-source library, or a production tool? What is the evidence of adoption (GitHub stars, citations, integration into agentic frameworks)?

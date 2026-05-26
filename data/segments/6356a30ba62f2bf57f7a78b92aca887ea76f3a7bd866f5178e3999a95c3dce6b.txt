@@ -1,0 +1,1 @@
+6. DuckDB lacks built-in vector search. Adding it would require a community extension or an external vector store, defeating the purpose of using DuckDB as a single solution.

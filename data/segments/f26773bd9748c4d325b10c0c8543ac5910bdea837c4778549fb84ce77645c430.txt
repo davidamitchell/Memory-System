@@ -1,0 +1,6 @@
+**Approach sub-question 2 — Knowledge graphs construction and retrieval:**
+- Q2.1: What is the GraphRAG pipeline (entity extraction → community detection → community summarisation → map-reduce retrieval)?
+- Q2.2: How does GraphRAG compare to standard RAG on global vs. local query types?
+- Q2.3: What is LightRAG and how does it address GraphRAG's incremental-update limitation?
+- Q2.4: How does HippoRAG use Personalised PageRank over a knowledge graph for multi-hop retrieval?
+- Q2.5: What is the cost of building and maintaining a knowledge graph at 100–1,000 document scale?

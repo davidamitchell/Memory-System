@@ -1,0 +1,1 @@
+2. **Li et al. (2023) SCoT (Structured Chain-of-Thought) prompting outperforms standard CoT by up to 13.79% Pass@1 on code generation benchmarks by structuring intermediate reasoning steps using program constructs (sequence, branch, loop) rather than natural-language narrative.** Source: arXiv:2305.06599. Confidence: high.

@@ -1,0 +1,1 @@
+**[inference]** Output should be printed to stdout (Markdown format) and optionally written to a file. The GitHub Actions workflow can capture stdout and post it as a GitHub issue body via `gh issue create`. This avoids committing a report file that would be stale immediately.

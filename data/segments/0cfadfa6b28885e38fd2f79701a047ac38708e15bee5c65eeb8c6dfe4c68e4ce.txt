@@ -1,0 +1,1 @@
+Front matter fields are not rendered as content by most Markdown renderers (GitHub, Jekyll, etc.); they are consumed by tooling that processes the file. In this system, the fields drive indexing, filtering, and knowledge graph maintenance.

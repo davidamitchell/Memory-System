@@ -1,0 +1,1 @@
+[inference] `devcontainer.json` serves neither agent surface; it is scoped to Codespaces and local dev container tools only.

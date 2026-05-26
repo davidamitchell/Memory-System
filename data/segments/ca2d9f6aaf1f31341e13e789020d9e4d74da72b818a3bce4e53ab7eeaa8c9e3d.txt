@@ -1,0 +1,8 @@
+**In scope:**
+- Maturity model design: definition of maturity stages (for example, initial, developing, defined, managed, optimising) with clear stage boundary criteria across all governance dimensions identified in Q1-Q12 and Q15
+- Stage definitions: what capabilities, practices, evidence artefacts, and outcomes characterise each maturity level for each governance dimension
+- Progression pathways: what sequence of improvements is recommended for progressing from one maturity level to the next, and what investment or effort is required at each step
+- Benchmarking: how organisations can assess their current maturity level using observable evidence, not just self-assessment, and what common assessment mechanisms exist
+- Existing maturity models: assessment of whether existing maturity frameworks, such as Capability Maturity Model Integration (CMMI), National Institute of Standards and Technology (NIST) Artificial Intelligence Risk Management Framework (AI RMF) maturity guidance, and AI governance maturity models from industry bodies, are applicable or require adaptation
+- Relationship between governance maturity and risk profile: what the evidence says about the relationship between governance maturity level and operational risk, incident rate, and regulatory compliance
+- The role of culture and behaviour (Q14) in maturity progression, including whether maturity models that focus only on structural capabilities without addressing behavioural conditions overstate an organisation's actual governance capability

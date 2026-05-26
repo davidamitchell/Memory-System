@@ -1,0 +1,1 @@
+[fact] The evidence base for the factory model at scale is real: Stripe's Minions produces 1,300+ AI-authored PRs/week, Google reports 25%+ AI-generated production code, and ANZ reports 40–55% faster development from structured AI deployment.

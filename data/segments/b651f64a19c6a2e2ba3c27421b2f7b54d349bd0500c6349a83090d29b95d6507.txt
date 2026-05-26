@@ -1,0 +1,1 @@
+**[fact]** Garret Automotive is cited in TOC literature as an early case study of TA and TOC implementation, showing improved resource allocation and faster response to market changes after adopting throughput-based decision-making. Source: [Springer -- Throughput Accounting](https://link.springer.com/chapter/10.1057/9780230353275_12).

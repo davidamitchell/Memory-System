@@ -1,0 +1,6 @@
+Supporting questions:
+- Which roles and skill areas are growing fastest across the top AI labs (OpenAI, Anthropic, Google DeepMind, Meta AI, xAI, Mistral)?
+- How have advertised roles changed over the past 12–24 months (via Wayback Machine archives and LinkedIn historical data)?
+- What do high-profile individual hires, announced on LinkedIn, X/Twitter, or in press releases, tell us about capability gaps companies are trying to fill?
+- Are there patterns across companies (e.g. simultaneous surges in safety, deployment, hardware, or policy hiring) that reveal industry-wide inflection points?
+- What signals do compensation data (Levels.fyi, Glassdoor) give about which teams are being most aggressively resourced?

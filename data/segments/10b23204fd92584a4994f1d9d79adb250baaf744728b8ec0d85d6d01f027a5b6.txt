@@ -1,0 +1,1 @@
+[fact] **Output format:** Structured knowledge item with full §0–§7 research skill output, Executive Summary, Key Findings, Evidence Map, and Open Questions.

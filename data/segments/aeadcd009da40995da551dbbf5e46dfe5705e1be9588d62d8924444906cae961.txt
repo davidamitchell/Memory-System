@@ -1,0 +1,1 @@
+**Context budget rule:** If the conversation context is growing large, pause and summarise the current state before the next item. Drop retrieved snippets that are no longer relevant.

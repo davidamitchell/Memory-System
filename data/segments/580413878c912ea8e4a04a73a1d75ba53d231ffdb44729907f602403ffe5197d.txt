@@ -1,0 +1,6 @@
+4. **Prioritisation framework** — Design a structured prioritisation framework for research items. Proposed dimensions:
+   - *Strategic urgency*: does a decision depend on this research being completed in the next 30 days?
+   - *Dependency unblocking*: does this item's completion unlock other backlog items or BACKLOG.md slices?
+   - *Knowledge gap severity*: how much does the absence of this knowledge constrain decision quality?
+   - *Input availability*: are good sources available and accessible now, or is this premature?
+   Produce a simple scoring rubric (1–3 per dimension) that can be applied when adding or triaging items.

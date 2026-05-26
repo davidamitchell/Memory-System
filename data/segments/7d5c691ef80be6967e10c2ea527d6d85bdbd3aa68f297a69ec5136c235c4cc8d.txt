@@ -1,0 +1,3 @@
+1. Compile production cost evidence for agent workarounds by complexity and task type, including inference, governance, and recovery overhead.
+2. Compile delivery-cost evidence for closing underlying systems capability gaps with AI-assisted software engineering.
+3. Model breakeven points and sensitivity to productivity multipliers for missing integration capability, missing application functionality, and missing governed data access.

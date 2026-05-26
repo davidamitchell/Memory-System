@@ -1,0 +1,5 @@
+- Review result: pass
+- Acronym audit: Large Language Model (LLM), Empirical Risk Minimisation (ERM), Reinforcement Learning from Human Feedback (RLHF), Natural Language Processing (NLP), Artificial Intelligence (AI)
+- Claim audit: all visible claims in Research Skill Output labeled as fact, inference, or assumption, except pure workflow metadata in Section 0 and review metadata here
+- Cross-item audit: direct dependence on Research Questions 2.1 and 2.4 and thematic link to the orthogonality item are reflected in frontmatter and cited prose
+- Findings parity: Section 6 and Findings use the same substantive conclusions, confidence levels, and source families

@@ -1,0 +1,21 @@
+- **Root question:** What telemetry model makes AI and low-code governance reconstructable, attributable, privacy-bounded, and regulator-defensible?
+- **A. Baseline telemetry taxonomy**
+  - A1. Which metadata fields are mandatory for every governed event, regardless of platform?
+  - A2. Which AI-specific fields are required for model, prompt, retrieval, tool, and output reconstruction?
+  - A3. Which low-code-specific fields are required for trigger, action, connector, and run reconstruction?
+- **B. Granularity**
+  - B1. Which categories require immutable metadata for every event?
+  - B2. Which categories justify full-content capture, and when must that capture be selective rather than universal?
+- **C. Correlation and attribution**
+  - C1. Which correlation identifiers must flow across platforms and vendors?
+  - C2. How should user identity, machine identity, and session lineage be preserved together?
+- **D. Retention and access**
+  - D1. What retention rules are directly prescribed by the reviewed sources?
+  - D2. Where do the sources require a purpose-based retention policy rather than a single universal period?
+  - D3. Who should be able to query which log categories?
+- **E. Privacy**
+  - E1. Which telemetry fields routinely contain personal or otherwise sensitive data?
+  - E2. What do the sources imply about redaction, minimisation, and erasure handling?
+- **F. Synthesis**
+  - F1. What reference model fits both AI and low-code systems?
+  - F2. What minimum set of logs should be mandatory before an enterprise claims governed deployment?

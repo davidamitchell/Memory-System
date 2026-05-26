@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: A definition and scorecard framework for capability debt, plus a sequencing rule for reducing high-consequence debt before scaling agentic AI. [inference; source: https://airc.nist.gov/airmf-resources/airmf/5-sec-core/; https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report; https://aws.amazon.com/blogs/security/four-security-principles-for-agentic-ai-systems/]
+- Links:
+  - https://airc.nist.gov/airmf-resources/airmf/5-sec-core/
+  - https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report
+  - https://aws.amazon.com/blogs/security/four-security-principles-for-agentic-ai-systems/

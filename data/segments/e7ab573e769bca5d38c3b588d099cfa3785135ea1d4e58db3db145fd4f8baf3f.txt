@@ -1,0 +1,1 @@
+**Constraints:** Publicly accessible sources. Vendor documentation, technical blog posts, arXiv preprints, and open-access papers (2022-2026). Web search at retrieval time for the most current vendor and research state, as the enterprise LLM customisation landscape is evolving rapidly.

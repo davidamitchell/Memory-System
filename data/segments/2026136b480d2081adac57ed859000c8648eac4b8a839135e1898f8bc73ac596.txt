@@ -1,0 +1,4 @@
+1. Search for regulatory enforcement actions and advisory opinions that reference AI or automated decision-making failures in compliance contexts.
+2. Review academic and official literature on LLM reliability in legal, medical, and financial high-stakes settings.
+3. Examine regulator-published AI guidance for financial services, privacy, and governance.
+4. Synthesize a risk taxonomy: stochastic failure type -> regulatory obligation exposed -> evidence of occurrence -> defensible mitigation pattern.

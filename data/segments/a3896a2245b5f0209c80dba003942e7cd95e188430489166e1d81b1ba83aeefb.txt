@@ -1,0 +1,6 @@
+review_result: pass
+acronym_audit: passed
+claim_audit: passed
+table_audit: passed
+findings_parity: passed
+confidence: medium

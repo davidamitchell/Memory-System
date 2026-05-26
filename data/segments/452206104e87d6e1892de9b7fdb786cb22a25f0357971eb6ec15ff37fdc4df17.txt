@@ -1,0 +1,4 @@
+**Out of scope:**
+- Detailed technical modelling of elasticity (regression-level economics)
+- Policy prescription for energy markets (only as examples to test the mechanism)
+- Detailed labour-economics treatment of automation more broadly (keep focus on code production)

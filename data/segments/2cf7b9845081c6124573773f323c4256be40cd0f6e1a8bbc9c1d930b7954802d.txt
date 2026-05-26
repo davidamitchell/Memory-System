@@ -1,0 +1,4 @@
+**Out of scope:**
+- General AI risk not specifically tied to compliance, privacy, governance, or regulatory obligations
+- Risks from adversarial attacks on LLMs, such as prompt injection or jailbreaking, which are a separate research question
+- Product comparison or vendor ranking

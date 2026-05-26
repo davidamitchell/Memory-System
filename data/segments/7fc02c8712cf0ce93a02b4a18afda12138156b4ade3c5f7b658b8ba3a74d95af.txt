@@ -1,0 +1,3 @@
+- **Assumptions:**
+  - [assumption; source: https://csrc.nist.gov/pubs/sp/800/162/final] Runtime telemetry can be normalized into stable subject, object, action, and environment style attributes for every relevant tool call. Justification: ABAC assumes such attributes exist, but this item did not test a concrete telemetry pipeline.
+  - [assumption; source: https://www.w3.org/TR/vc-data-model/; https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md] A production implementation can combine a verifiable credential envelope with an in-toto digest subject without introducing incompatible trust semantics. Justification: both models are composable on paper, but this item did not build an interoperability profile.

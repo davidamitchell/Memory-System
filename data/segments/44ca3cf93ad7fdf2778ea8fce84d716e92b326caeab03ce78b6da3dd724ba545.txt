@@ -1,0 +1,1 @@
+[inference] The fragmentation of context file formats across tools is a practical impediment to reuse. A team using multiple AI tools (Copilot, Cursor, Claude Code) must maintain equivalent content in multiple formats. AGENTS.md is the emerging convergence point, but tool support as of early 2025 is still uneven.

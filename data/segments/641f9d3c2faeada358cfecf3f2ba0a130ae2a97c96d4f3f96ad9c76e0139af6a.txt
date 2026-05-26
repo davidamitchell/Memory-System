@@ -1,0 +1,1 @@
+**[inference]** TOC's rope mechanism and CONWIP are both implementations of backpressure, differing in granularity: DBR targets a specific constraint, while CONWIP operates at the system boundary. Both control the rate of work entry to protect downstream capacity.

@@ -1,0 +1,1 @@
+[fact] Process Mining requires clean, consistent event logging to produce reliable output. Inconsistent state transition logic, legacy data gaps, or heavily customised lifecycle states can distort the resulting process maps. Source: https://servicenowspectaculars.com/servicenow-process-mining-implementation-issues-2026/.

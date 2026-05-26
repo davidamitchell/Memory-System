@@ -1,0 +1,1 @@
+1. **SQLite's FTS5 extension is built into Python's standard library `sqlite3` module and requires no additional dependencies to provide BM25-ranked full-text search over research item titles, questions, and findings.** [high confidence]

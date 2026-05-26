@@ -1,0 +1,4 @@
+Sources consulted:
+- Primary: Charles A. O'Reilly III and Michael L. Tushman, "Organizational Ambidexterity: Past, Present and Future" (Harvard Business School working paper, 2013) - https://www.hbs.edu/ris/Publication%20Files/O'Reilly%20and%20Tushman%20AMP%20Ms%20051413_c66b0c53-5fcd-46d5-aa16-943eab6aa4a1.pdf
+- Primary: Eric Ries, "Methodology" - https://theleanstartup.com/principles
+- Tertiary: `Research/completed/2026-02-28-exploit-explore-ai-portfolio-framework.md`

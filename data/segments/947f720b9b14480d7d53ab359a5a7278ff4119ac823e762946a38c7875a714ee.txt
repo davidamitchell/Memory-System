@@ -1,0 +1,1 @@
+2. Flow Designer and Playbooks serve different layers — automation and runtime guidance respectively — and neither produces a human-readable BPMN-style process map that a process owner would recognise as authoritative process documentation independent of the platform. [High confidence]

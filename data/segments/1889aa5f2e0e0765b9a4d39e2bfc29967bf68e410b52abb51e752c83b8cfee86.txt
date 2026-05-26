@@ -1,0 +1,1 @@
+MADR (Markdown Any Decision Records) is a specific format for writing ADRs, created by the ADR GitHub organisation. It provides a minimal, opinionated Markdown template that ensures every decision record captures: the context that led to the decision, the decision itself, and the consequences (positive, negative, and neutral) of choosing that option.

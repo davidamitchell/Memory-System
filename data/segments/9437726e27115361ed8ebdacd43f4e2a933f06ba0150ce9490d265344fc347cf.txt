@@ -1,0 +1,6 @@
+**In scope:**
+- Defining risk tier categories suited to enterprise AI and low-code use cases (e.g. informational, decision-support, autonomous action, and any intermediate tiers)
+- Criteria for classifying a use case into a risk tier (reversibility of action, regulatory exposure, data sensitivity, scope of automated decision, human override availability)
+- Mapping from risk tier to required governance controls (approval thresholds, oversight intensity, monitoring requirements, human review frequency)
+- Existing risk classification frameworks from regulatory bodies (European Union (EU) AI Act risk classification, National Institute of Standards and Technology (NIST) Artificial Intelligence Risk Management Framework (AI RMF) 1.0, International Organization for Standardization (ISO) / International Electrotechnical Commission (IEC) 42001) and how they can be adapted for enterprise-internal classification
+- How risk tier assignment should evolve when a use case changes scope or capability over time

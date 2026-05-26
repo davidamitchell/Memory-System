@@ -1,0 +1,6 @@
+- All processors must record their version and execution context as an Extraction Activity
+- Segments are the minimum addressable unit; whole documents are no longer sufficient as evidence references
+- Upper ontology changes require Alignment Governance review — this introduces a human (or governed automated) gate
+- Rollback is always safe: history is append-only, the active pointer is the only mutable state
+- The provenance Turtle pattern above is the target assertion format; it can be extended but not simplified away
+- The design document (`_docs/design/ontology-system-design.md`) is updated to v2 reflecting these changes

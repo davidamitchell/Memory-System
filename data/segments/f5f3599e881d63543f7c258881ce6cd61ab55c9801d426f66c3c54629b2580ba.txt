@@ -1,0 +1,8 @@
+**In scope:**
+- Latent Semantic Analysis (LSA) / Latent Semantic Extraction (LSE): SVD-based dimensionality reduction of term-document matrices; construction of a compressed semantic space; document-to-document and query-to-document similarity in that space; relationship to modern dense embeddings
+- Knowledge graphs as a knowledge management layer: entity and relation extraction from large corpora; graph construction strategies; community detection and hierarchical summarisation (GraphRAG pattern); graph traversal for intent-aligned context retrieval
+- Concept maps: topological representations of a knowledge domain; differences from knowledge graphs (propositions vs. entities); use for navigability and agent-query alignment; automatic vs. manual construction
+- Document compression strategies: extractive summarisation (sentence scoring, BM25-based salience), abstractive summarisation (LLM-based), hierarchical summarisation (multi-level abstract → section → paragraph); lossy vs. lossless trade-offs for agent consumption
+- Knowledge layering and tiered abstraction: the principle that raw documents, extracted summaries, concept nodes, and graph communities are different abstraction levels; pull-based injection matching the required depth to the current task intent
+- Context prioritisation under window constraints: intent-matching against knowledge layers; semantic proximity scoring; graph centrality-based ranking; recency weighting; combining multiple signals for priority ordering
+- Relationship to this research corpus: can these techniques be applied to the `Research/completed/` item set at current and projected scale?

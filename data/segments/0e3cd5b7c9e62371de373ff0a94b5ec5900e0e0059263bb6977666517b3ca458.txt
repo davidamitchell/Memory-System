@@ -1,0 +1,7 @@
+**In scope:**
+- The explore–exploit framework as used in organisational strategy, portfolio theory, and technology adoption
+- The synthesis step as a distinct phase: what it is, what it produces, and why it is a precondition for high-value exploitation
+- Failure modes when synthesis is skipped: rework cycles, adoption debt, fragmented knowledge, inconsistent exploitation patterns
+- Strategies for balancing speed and synthesis discipline: time-boxing exploration, synthesis rituals, minimum-viable synthesis artefacts, staged exploitation gates
+- Relationship to prior research on exploration–synthesis gap (`2026-03-12-exploration-synthesis-gap`) and the exploit–explore Artificial Intelligence (AI) portfolio framework (`2026-02-28-exploit-explore-ai-portfolio-framework`)
+- Practical heuristics for technology leaders managing rapid-cycle tooling and pattern change (e.g., AI tooling, agent frameworks, platform shifts)

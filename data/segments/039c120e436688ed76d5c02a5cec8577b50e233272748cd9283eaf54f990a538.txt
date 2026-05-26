@@ -1,0 +1,1 @@
+4. **Score the major tools** - For the highest-profile commercial and open-source coding tools, locate their most recent published scores on the major benchmarks. Produce a structured comparison table. Flag where scores are missing, outdated, or methodologically suspect.

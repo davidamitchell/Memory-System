@@ -1,0 +1,5 @@
+1. What is the **shape** of the ontology (upper vs lower; domain scoping)?
+2. What **document types** are in scope?
+3. What **processing steps** transform raw documents into ontological knowledge?
+4. How is the ontology **versioned** so changes are auditable and reversible?
+5. What additional processors are needed beyond the obvious ones?

@@ -1,0 +1,1 @@
+4. **APRA CPS 230 (effective July 2025) makes boards directly accountable for AI systems in critical operations**, requiring documented decision logic, resilience testing under disruption scenarios, and mandatory incident reporting to APRA for AI-related failures. NZ subsidiaries of Australian-owned banks (ANZ NZ, ASB, BNZ, Westpac NZ) are affected at group level.

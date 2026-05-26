@@ -1,0 +1,1 @@
+1. **Peng et al. (2023) measured a 55.8% task completion speed increase using GitHub Copilot in a controlled Build-phase experiment; this figure is phase-specific and does not extend to whole-SDLC efficiency claims.** Source: arXiv:2302.06590. Confidence: high.

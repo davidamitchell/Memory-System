@@ -1,0 +1,1 @@
+8. **D2 (Agentic Systems) is under-represented in backlog.** Only 2 of 25 backlog items relate to agents and agentic architecture, despite this being a strategically active area (4 items already completed). No new agentic items have been queued — this is a coverage gap. [fact — derived from tag analysis]

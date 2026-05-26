@@ -1,0 +1,2 @@
+- [fact] Renovate automatically discovers relevant package files, works across multiple platforms and languages, supports monorepos, schedules update pull requests, and shares configuration through presets. Source: https://docs.renovatebot.com
+- [inference] Renovate is not an architecture-discovery engine, but it is a practical **drift detector** for dependency policy alignment because it continuously sees which dependencies exist, where updates are pending, and whether shared configuration is being applied consistently. Source: https://docs.renovatebot.com

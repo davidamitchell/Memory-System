@@ -1,0 +1,3 @@
+- [Research Question 5.1: Stochastic versus Deterministic Failure Modes on Identical Unvalidated Inputs](https://davidamitchell.github.io/Research/research/2026-05-18-rq5-1-stochastic-vs-deterministic-failures.html)
+- [Are Multi-Step Large Language Model-Based Systems Inherently Less Explainable Than Equivalently Scoped Deterministic Software Systems?](https://davidamitchell.github.io/Research/research/2026-05-18-agentic-explainability-vs-traditional.html)
+- [What observability and telemetry model is required to govern Artificial Intelligence and low-code systems at scale?](https://davidamitchell.github.io/Research/research/2026-04-26-ai-lowcode-observability-telemetry-governance.html)

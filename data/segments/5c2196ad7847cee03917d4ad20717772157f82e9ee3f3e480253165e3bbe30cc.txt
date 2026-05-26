@@ -1,0 +1,4 @@
+- What is the minimum viable version of TBM — what subset of the full taxonomy delivers enough value to justify the investment and can be completed in under six months?
+- How do organisations that have undergone significant cloud adoption (>50% workloads in cloud) adapt the application register and team taxonomy given that infrastructure costs are increasingly usage-based rather than fixed allocation?
+- Are there documented examples of private organisations that stalled a TBM/ITFM programme and successfully restarted it, and what changed to enable the restart?
+- How does the RUN/BUILD allocation interact with CapEx/OpEx accounting in practice — specifically, when BUILD work is capitalised, does the TBM model track the capitalised asset separately from the ongoing run costs?

@@ -1,0 +1,4 @@
+6. **Tooling design** — Design a `python -m src.main research agenda` command:
+   - Reads all items in `Research/backlog/` and `Research/completed/`
+   - Reports: tag frequency distribution, priority distribution, domain coverage (using the domain map from step 1), items ≥ 60 days old without progress, Open Questions from completed items that have not spawned backlog items
+   - Output: a human-readable report (Markdown table) that can be committed as `Research/agenda-report.md` or posted as a GitHub issue comment

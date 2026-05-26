@@ -17,7 +17,7 @@ local IDE or terminal required.
 
 ### `.github/copilot-setup-steps.yml`
 
-Prepares the ephemeral Copilot sandbox before the agent starts working.
+Prepares the ephemeral Copilot sandbox before the [AI agent](../glossary/ai-agent.md) starts working.
 
 ```yaml
 steps:
@@ -43,7 +43,7 @@ returns in milliseconds rather than blocking on a download.
 
 ### `.vscode/mcp.json`
 
-Tells Copilot (and VS Code) how to start the MCP server via stdio transport.
+Tells Copilot (and VS Code) how to start the [MCP server](../glossary/mcp-server.md) via [stdio transport](../glossary/stdio-transport.md).
 
 ```json
 {
@@ -83,3 +83,10 @@ This file is picked up automatically by:
 - [`.github/copilot-instructions.md`](../.github/copilot-instructions.md) — AI agent constitution and headless-mode section 15
 - [README.md](../README.md) — Quick-start and MCP configuration reference
 - [getting-started-prompt.md](../getting-started-prompt.md) — Original architecture PRD
+
+## References
+
+1. [Model Context Protocol](https://modelcontextprotocol.io/) — the protocol used for agent–server communication.
+2. [MCP Specification: Transports](https://modelcontextprotocol.io/docs/concepts/transports) — stdio transport details.
+3. [GitHub Copilot Coding Agent](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent) — how the headless Copilot agent works.
+4. [BAAI/bge-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5) — the [embedding model](../glossary/embedding-model.md) pre-warmed in the setup step.

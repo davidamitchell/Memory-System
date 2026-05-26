@@ -1,0 +1,3 @@
+- Access note: seeded Gartner and Theory of Constraints Institute pages were not used for downstream evidence because more directly relevant and accessible sources existed for delivery throughput, queueing, and workaround demand.
+- Failed primary-source search record: query `"IT throughput backlog growth technical debt enterprise coefficient"` returned no credible public cross-firm dataset that quantified a stable elasticity between delivery throughput and the accumulation of unmet operational capability needs.
+- Failed primary-source search record: query `"shadow IT backlog reduction enterprise effect size low code"` returned no comparable public study that measured a standardized enterprise-scale backlog-reduction effect from citizen development or low-code rollout.

@@ -1,0 +1,7 @@
+DS --> P1 --> RAW
+    RAW --> P2 --> PREP
+    PREP --> P3 --> SEG
+    PREP --> P4
+    P4 --> DSTORE
+    SEG --> DSTORE
+    SEG --> RS

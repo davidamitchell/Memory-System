@@ -1,0 +1,5 @@
+1. **Survey published cases** — identify 8–12 corporate or government programmes where efficiency was the explicit primary objective and outcomes were published or independently reported.
+2. **Extract design variables** — for each case: industry, AI type (Type 1–4 in the four-type typology), deployment model (build/buy/partner), data readiness approach, change management method, time to value, and outcome metric.
+3. **Pattern analysis** — identify common success factors and failure modes across cases.
+4. **NZ relevance filter** — assess which patterns are applicable to NZ-scale organisations (typically smaller, less data-rich than the global cases).
+5. **Efficiency ceiling analysis** — what are the known limits of efficiency-focused AI deployment? When does efficiency-mode AI investment face diminishing returns?

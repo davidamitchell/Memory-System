@@ -1,0 +1,1 @@
+- [fact] Source classification for Section A: alexop.dev is treated as a primary practitioner essay for the software-factory thesis; Stripe's engineering blog is a primary company disclosure; first-person Hacker News implementation accounts are treated as primary practitioner evidence; InfoQ and similar summaries are treated only as secondary corroboration.

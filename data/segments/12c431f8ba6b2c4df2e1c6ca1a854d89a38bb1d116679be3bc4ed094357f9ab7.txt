@@ -1,0 +1,3 @@
+- Which compliance case families, such as sanctions, Anti-Money Laundering (AML), fraud, or conduct alerts, require different local challenge-minute assumptions?
+- What minimum frequency of planted-error or synthetic-fault tests best balances realism with reviewer gaming risk?
+- When should dual control or mandatory second review be reserved for only the highest-risk alerts instead of applied more broadly?

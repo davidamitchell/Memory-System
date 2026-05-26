@@ -1,0 +1,1 @@
+1. **Map the benchmark landscape** - Identify the major published benchmark suites used to evaluate AI coding tools: SWE-bench family, HumanEval, MBPP, LiveCodeBench, BigCodeBench, and others. For each: what tasks are included, what does a passing grade mean, who created it, and how widely adopted is it as an evaluation standard?

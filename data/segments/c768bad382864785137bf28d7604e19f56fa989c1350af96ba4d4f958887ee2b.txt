@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item defines the realistic control boundary of AIBOM, identifies the main false-assurance traps, and proposes an operational metric set for deciding whether AIBOM adoption is actually improving security and governance outcomes. [inference; source: https://www.nist.gov/itl/ai-risk-management-framework; https://arxiv.org/abs/2302.12173; https://www.microsoft.com/en-us/security/blog/2025/04/24/new-whitepaper-outlines-the-taxonomy-of-failure-modes-in-ai-agents/]
+- Links:
+  - https://www.nist.gov/itl/ai-risk-management-framework
+  - https://arxiv.org/abs/2302.12173
+  - https://www.microsoft.com/en-us/security/blog/2025/04/24/new-whitepaper-outlines-the-taxonomy-of-failure-modes-in-ai-agents/

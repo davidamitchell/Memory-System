@@ -1,0 +1,6 @@
+**For Copilot coding agent:**
+- Default environment: Ubuntu Linux (x64), GitHub Actions runner, Python version depends on Ubuntu image (not guaranteed to be 3.11+).
+- Setup controlled by: `.github/workflows/copilot-setup-steps.yml`.
+- Without the file: auto-checkout only; no package installs; `.github/skills/` is empty.
+- With the file: full control over OS, Python version, dependency install, and submodule init.
+- Submodule requirement: `actions/checkout@v4` with `submodules: recursive` and `token: ${{ secrets.SKILLS_PAT }}`.

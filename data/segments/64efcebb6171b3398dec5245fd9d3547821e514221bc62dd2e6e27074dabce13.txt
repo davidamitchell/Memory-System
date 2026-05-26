@@ -1,0 +1,5 @@
+**Status:** draft
+**Version:** 3
+**Date:** 2026-05-23
+**Supersedes:** v1 (initial design, same file)
+**Related ADRs:** [ADR-0002](../adr/0002-move-from-vector-storage-to-ontology.md) · [ADR-0004](../adr/0004-provenance-model-and-control-plane.md)

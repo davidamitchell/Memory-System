@@ -1,0 +1,1 @@
+12. **Open Questions in completed items are an under-used backlog input.** Multiple completed items contain follow-on questions not yet added to backlog. The monthly review checklist should scan Open Questions sections systematically. [medium confidence — qualitative observation]

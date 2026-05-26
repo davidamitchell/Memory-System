@@ -1,0 +1,2 @@
+- Triage is a planned feature (not yet implemented) dependent on W-0102 (inbox folder).
+- The triage agent will use `search_brain` to find similar existing memories before classifying a new one, to avoid duplication.

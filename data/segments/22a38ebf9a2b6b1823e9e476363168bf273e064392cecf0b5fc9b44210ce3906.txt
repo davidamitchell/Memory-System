@@ -1,0 +1,1 @@
+The protocol operates over a transport layer — most commonly stdio for local servers or HTTP/SSE for remote servers. The server declares which tools it provides; the client discovers them at connection time and calls them by name with typed arguments.

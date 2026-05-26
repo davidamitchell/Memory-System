@@ -1,0 +1,5 @@
+- Most quantified efficiency outcomes are self-reported by either the organisation or a vendor with commercial interest. Independently audited case studies are rare.
+- Air NZ and Fonterra were listed as sources in the research item but public quantified outcome data for both is thin. Efficiency gains are cited in general terms only; company-specific hard numbers are not publicly available.
+- The OECD case study database and NZ Productivity Commission sources were not consulted for this iteration. They may hold independently verified data not captured here.
+- NZ SME AI adoption data is drawn from AI Forum NZ reporting; the primary dataset methodology is not described in the summaries accessed.
+- The efficiency ceiling concept applies differently to AI deployers (businesses using AI tools) vs. AI developers (model trainers). The research conflates these two ceilings in parts of the literature; they require separate analysis.

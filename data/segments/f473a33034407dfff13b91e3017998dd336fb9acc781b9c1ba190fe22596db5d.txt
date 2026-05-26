@@ -1,0 +1,12 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Software factory pattern is production-validated | https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents | high | Primary engineering disclosure from Stripe |
+| Tool adoption without redesign harms team outcomes | https://services.google.com/fh/files/misc/2024_final_dora_report.pdf | high | Primary DORA report |
+| Constraint shifts upstream when execution gets cheaper | https://velocityschedulingsystem.com/blog/theory-of-constraints-ai ; https://theagilemindset.co.uk/theory-of-constraints-in-software-development/ | medium | Theory-backed inference, not a controlled study |
+| Governance mechanisms become less valuable under low software scarcity | https://alexop.dev/posts/the-software-factory/ | medium | Inference drawn from the practitioner essay |
+| AI-native is an organisational design choice | https://online.hbs.edu/blog/post/ai-native ; https://www.forbes.com/councils/forbesbusinesscouncil/2025/10/22/what-it-really-means-to-be-an-ai-native-company/ | medium | Definitional alignment across two external sources |
+| Mid-tier banks retain advantages but face a compounded challenge | https://www.finastra.com/viewpoints/articles/modernization-or-bust-critical-moment-us-mid-tier-banks ; https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/core-banking-modernization-makers ; https://www.mckinsey.com/industries/financial-services/our-insights/extracting-value-from-ai-in-banking-rewiring-the-enterprise | medium | Multiple industry sources align |
+| Backpressure, spec quality, and factory architecture are the highest-leverage investments | https://alexop.dev/posts/the-software-factory/ ; https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents | medium | Inference from recurring architecture patterns |
+| Dark factory is not viable for regulated environments | https://news.ycombinator.com/item?id=47226107 | high | First-person practitioner account |
+| Cognitive debt is the primary reliability risk at factory scale | https://quint-lang.org/posts/cognitive_debt ; https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents | medium | Inference grounded in throughput plus reliability mechanism |
+| Jevons Paradox makes prioritisation the next governance problem | https://www.economicshelp.org/blog/220917/economics/jevons-paradox-definition-and-explanation/ ; https://alexop.dev/posts/the-software-factory/ | medium | Economic inference applied to software production |

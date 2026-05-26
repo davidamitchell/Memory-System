@@ -1,0 +1,4 @@
+4. What can RLHF and instruction tuning structurally not fix?
+   4a. Does RLHF rewrite pre-trained circuits or merely suppress their expression?
+   4b. What evidence shows pre-trained hallucination behaviour resurfaces under distributional shift?
+   4c. What is the alignment tax, and does it constrain aggressive suppression?

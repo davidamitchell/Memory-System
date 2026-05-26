@@ -1,0 +1,21 @@
+- **A. ODRL expression model**
+  - A1. What policy, rule, party, asset, action, constraint, inheritance, and conflict concepts does ODRL 2.2 define?
+  - A2. Which ODRL actions and constraints matter most for graph access and usage governance?
+- **B. KG attachment pattern**
+  - B1. How can a named graph, dataset, or graph-backed service be represented as an ODRL asset?
+  - B2. What does the specification provide for attaching policy metadata to assets?
+- **C. Identity and authorization context**
+  - C1. What does Solid WAC cover, and what does it not cover compared with ODRL?
+  - C2. How do Solid-OIDC, ACP, WebID, and VCs provide runtime identity context that ODRL itself lacks?
+- **D. Enforcement architecture**
+  - D1. What do W3C and data-space sources say about expression versus enforcement?
+  - D2. Where are Policy Decision Point, Policy Enforcement Point, Policy Information Point, and Policy Execution Point style components placed?
+- **E. Query-time feasibility**
+  - E1. Is there evidence for production-grade ODRL-aware SPARQL rewriting or named-graph filtering?
+  - E2. Which parts of ODRL can be translated into allow-or-deny query decisions, and which parts require post-access monitoring?
+- **F. Tooling and deployments**
+  - F1. What emerging tools, profiles, or engines evaluate ODRL?
+  - F2. Which implementations are research prototypes, connector-boundary tools, or production-adjacent systems?
+- **G. Synthesis**
+  - G1. What is the recommended pattern for attaching ODRL to KGs used by software agents?
+  - G2. What are the main limitations and open questions?

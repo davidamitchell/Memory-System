@@ -1,0 +1,1 @@
+**Constraints:** Focus on implementation experience — practitioner accounts, post-implementation reviews, and case studies that describe what was hard, not just the outcomes achieved. Vendor case studies are acceptable as seeds but must be read critically for what they omit.

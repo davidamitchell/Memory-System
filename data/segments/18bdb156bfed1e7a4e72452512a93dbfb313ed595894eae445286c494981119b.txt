@@ -1,0 +1,5 @@
+1. **Risk taxonomy and AIBOM coverage mapping:** Build a structured taxonomy of agentic Artificial Intelligence security and governance risks, drawing on the prior security threat model and the current external taxonomies. For each risk category, assess whether AIBOM provides full visibility, partial visibility, no visibility, or false assurance.
+2. **Structural risk mitigation analysis:** Document where AIBOM genuinely reduces risk, including component vulnerability detection, version pinning, dependency-graph anomaly detection, and authority-surface documentation.
+3. **False assurance scenarios:** Document concrete scenarios where a complete, well-formed AIBOM provides false assurance, including prompt injection, Retrieval-Augmented Generation poisoning, memory poisoning, and harmful use of legitimately declared tools.
+4. **Inference opacity boundary:** Analyze where current neural-network inference opacity creates a practical visibility gap that present-day AIBOM methods do not close.
+5. **Metric proposals:** Define a minimal set of metrics that quantify AIBOM effectiveness and identify the baseline data required to compute each.

@@ -1,0 +1,1 @@
+[fact] The `copilot-setup-steps.yml` file supports all standard GitHub Actions step types: `uses` (GitHub Actions), `run` (shell commands), `with` (inputs), `env` (environment variables). (S1, S2.)

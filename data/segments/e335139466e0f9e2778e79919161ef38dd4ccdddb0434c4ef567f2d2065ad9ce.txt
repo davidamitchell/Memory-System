@@ -1,0 +1,1 @@
+For queries A1–A5, SQLite + FTS5 requires no external dependencies beyond `sqlite3` (stdlib). [fact]

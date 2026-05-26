@@ -1,0 +1,1 @@
+**[fact]** Pydantic Evals is a code-first evaluation framework for AI systems. It supports custom evaluators, LLM judges (defaulting to GPT-4o), and span-based evaluation using OpenTelemetry traces. It does not require Logfire, but LLM judge evaluators require an LLM API client (langchain, openai, anthropic). Source: https://ai.pydantic.dev/evals/

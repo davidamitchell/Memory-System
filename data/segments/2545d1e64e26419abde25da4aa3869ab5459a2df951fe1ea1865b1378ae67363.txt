@@ -1,0 +1,14 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Dense embeddings outperform LSA on MTEB benchmarks | MTEB benchmark; markaicode.com comparison (2024) | high | Multiple independent sources; LSA excluded from current MTEB leaderboard |
+| GraphRAG significantly outperforms standard RAG on global queries | Edge et al. arXiv:2404.16130 (2024) | high | Primary source; independent replication in LightRAG paper |
+| GraphRAG requires full rebuild for incremental updates | LightRAG arXiv:2410.05779 framing; GraphRAG documentation | high | Architectural fact; consistent across sources |
+| LightRAG achieves 10–100× lower token costs vs. GraphRAG | arXiv:2410.05779; EMNLP 2025 findings | high | Primary source with benchmark comparison |
+| HippoRAG: +20% multi-hop QA; 10–30× cheaper than IRCoT | arXiv:2405.14831; NeurIPS 2024 proceedings | high | Primary source; peer-reviewed at NeurIPS 2024 |
+| RAPTOR: +20pp on QuALITY benchmark, F1 55.7% on QASPER | arXiv:2401.18059; ICLR 2024 proceedings | high | Primary source; peer-reviewed at ICLR 2024 |
+| Concept maps not natively machine-readable for agent queries | realkm.com concept mapping review (2024); NVIDIA KG/LLM blog | high | Consistent across practitioner and academic sources |
+| Knowledge graphs subsume concept map navigability for machine use | NVIDIA KG/LLM blog; dataversity.net; MDPI MDPI KG+LLM survey | high | Multiple independent sources |
+| RRF is native in all major vector search engines | Azure AI Search docs; Milvus docs; MongoDB docs (2024) | high | Independently verified across 6+ platforms |
+| KG construction cost <$1 for 500 items at current prices | Estimated from arXiv:2410.05779 token benchmarks | medium | Estimate based on LightRAG token usage numbers; dependent on model choice |
+| Five-layer architecture maps onto Letta memory framework | Letta blog; 2026-03-02-agent-memory-management-context-injection.md | high | Internal consistency across two research items |
+| Knowledge rot risk for AI/ML domain items >12–18 months | Enterprise wiki post-mortems; Zep/Graphiti design rationale | medium | No domain-specific timing benchmark; extrapolated from general KB evidence |

@@ -1,0 +1,4 @@
+- **C2. Designs that increase information-processing capacity**
+  - [fact; source: https://doi.org/10.1287/inte.4.3.28] Galbraith identifies vertical information systems and lateral relations, such as liaison roles or integrators, as ways to increase organisational information-processing capacity when interdependence cannot be reduced.
+  - [fact; source: https://davidamitchell.github.io/Research/research/2026-04-26-permission-safe-rag-enterprise-information-architecture.html] Retrieval systems only increase capacity when identity, permissions, and source boundaries are coherent enough that the system can compute a reliable allow-set.
+  - [inference; source: https://doi.org/10.1287/inte.4.3.28; https://davidamitchell.github.io/Research/research/2026-04-26-permission-safe-rag-enterprise-information-architecture.html] The strongest digital pattern is permission-coherent self-service backed by named integrators and exception routes for ambiguous cases.

@@ -1,0 +1,2 @@
+**Prior research cross-reference:**
+- `Research/completed/2026-03-28-agent-instruction-loading-and-skills-access.md` (W-0035): confirmed that the Copilot coding agent does not initialise git submodules by default, submodule access requires `copilot-setup-steps.yml` with `submodules: recursive` and a Personal Access Token (PAT), and Claude Code on the web reads `CLAUDE.md`. This item builds on W-0035 by focusing on the environment setup mechanics rather than instruction loading.

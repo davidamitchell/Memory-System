@@ -1,0 +1,23 @@
+```text
+What is the cost of operating a recurring agent workaround versus closing the gap in software?
+|
+|-- Q1. What costs are unavoidable for a production agent workaround?
+|   |-- Q1a. What do model tokens, runtime, and search actually cost?
+|   |-- Q1b. What governance, review, and risk-management work remains human?
+|   `-- Q1c. What failure-recovery or retry burden remains after deployment?
+|
+|-- Q2. What delivery-cost assumptions are defensible for software-gap closure?
+|   |-- Q2a. What is a reasonable loaded software-delivery labor cost anchor?
+|   |-- Q2b. What productivity multiplier range is supported by current evidence?
+|   `-- Q2c. What ongoing maintenance cost remains after the gap is closed?
+|
+|-- Q3. How do common capability-gap classes differ?
+|   |-- Q3a. What is a representative missing-integration closure effort?
+|   |-- Q3b. What is a representative missing-functionality closure effort?
+|   `-- Q3c. What is a representative missing-governed-data-access closure effort?
+|
+`-- Q4. Under what conditions does recurring agent operation produce positive return?
+    |-- Q4a. What are the three-year breakeven thresholds?
+    |-- Q4b. What are the five-year breakeven thresholds?
+    `-- Q4c. Which contextual factors favor recurring agent operation as a bridge rather than an end state?
+```

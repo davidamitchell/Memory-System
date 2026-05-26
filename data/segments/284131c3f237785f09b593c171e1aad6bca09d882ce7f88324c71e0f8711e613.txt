@@ -1,0 +1,4 @@
+**Q3 - Why do banks buy rather than build?**
+- Q3a. Is there public evidence that banks rely heavily on external core or platform providers?
+- Q3b. What benefits are consistently cited for buying/renting banking platforms?
+- Q3c. What limits or trade-offs are consistently cited for building bespoke systems?

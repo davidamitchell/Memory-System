@@ -1,0 +1,1 @@
+- **[inference]** The technical frontier is not choosing between retrieval and model customisation, but deciding which knowledge should stay external and fresh versus which repeated patterns should be internalised into adapters, rankers, or domain-tuned models.

@@ -1,0 +1,1 @@
+**Constraints:** Prioritise cases with independently verified or audited outcomes. Flag self-reported savings with lower confidence.

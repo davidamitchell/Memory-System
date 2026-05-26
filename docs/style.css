@@ -1,0 +1,843 @@
+/* docs/style.css — Open-Brain Ontology Browser
+ *
+ * Mobile-first: base styles target small screens (≤640 px).
+ * @media (min-width: 641px) layers on desktop enhancements.
+ * Primary viewing surface: mobile (phone/tablet).
+ */
+
+/* ------------------------------------------------------------------ */
+/* Reset & tokens                                                       */
+/* ------------------------------------------------------------------ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:          #fafaf8;
+  --surface:     #ffffff;
+  --border:      #ddd9d0;
+  --text:        #1a1a18;
+  --muted:       #6b6860;
+  --accent:      #2a5ba8;
+  --accent-hover:#1e4280;
+  --badge-bg:    #eeecea;
+  --badge-text:  #44403c;
+  --row-hover:   #f4f2ee;
+  --detail-bg:   #f7f5f1;
+  --font-mono:   "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-body:   system-ui, -apple-system, sans-serif;
+  --radius:      4px;
+  --shadow:      0 1px 4px rgba(0,0,0,.08);
+  --nav-height:  56px;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------------------------ */
+/* Base (mobile)                                                        */
+/* ------------------------------------------------------------------ */
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  /* reserve space for fixed bottom nav */
+  padding-bottom: var(--nav-height);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: .87em;
+  background: var(--badge-bg);
+  padding: .1em .35em;
+  border-radius: var(--radius);
+}
+
+/* ------------------------------------------------------------------ */
+/* Header — compact on mobile                                          */
+/* ------------------------------------------------------------------ */
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: .6rem 1rem .5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  margin: 0 0 .1rem;
+  font-family: var(--font-mono);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+.subtitle {
+  margin: 0 0 .3rem;
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* Navigation — bottom tab bar on mobile (primary)                     */
+/* ------------------------------------------------------------------ */
+
+#main-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -1px 6px rgba(0,0,0,.1);
+  display: flex;
+  gap: 0;
+  padding: 0;
+  z-index: 20;
+  flex-wrap: nowrap;
+}
+
+#main-nav a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 .25rem;
+  min-height: var(--nav-height);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  border-radius: 0;
+  border: none;
+  color: var(--muted);
+  transition: background .12s, color .12s;
+}
+
+#main-nav a:hover,
+#main-nav a.active {
+  background: var(--badge-bg);
+  color: var(--accent);
+  border-top: 2px solid var(--accent);
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Main content — mobile padding                                        */
+/* ------------------------------------------------------------------ */
+
+main {
+  padding: 1rem .75rem 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: .8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sections                                                             */
+/* ------------------------------------------------------------------ */
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  font-family: var(--font-mono);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 .75rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.count {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: .9em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Search input (injected by JS) — full-width on mobile               */
+/* ------------------------------------------------------------------ */
+
+.search-wrap {
+  margin-bottom: .75rem;
+}
+
+.search-wrap input[type="search"] {
+  width: 100%;
+  padding: .35rem .65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: .87rem;
+  font-family: var(--font-body);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+}
+.search-wrap input[type="search"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(42,91,168,.15);
+}
+
+/* ------------------------------------------------------------------ */
+/* Tables — compact cells on mobile                                     */
+/* ------------------------------------------------------------------ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+thead tr {
+  background: var(--badge-bg);
+}
+
+th, td {
+  padding: .45rem .6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: var(--row-hover);
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+  font-size: .84em;
+  width: 3rem;
+}
+
+.predicate {
+  font-family: var(--font-mono);
+  font-size: .82em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Predicate colour coding */
+.predicate-implements    { color: #2563eb; }
+.predicate-instanceOf    { color: #7c3aed; }
+.predicate-partOf        { color: #059669; }
+.predicate-contrasts     { color: #dc2626; }
+.predicate-uses          { color: #d97706; }
+.predicate-relatedTerm   { color: var(--muted); }
+
+/* Predicate badges in concept detail panel */
+.pred-badge {
+  display: inline-block;
+  padding: .05em .35em;
+  border-radius: 3px;
+  font-size: .75em;
+  font-family: var(--font-mono);
+  border: 1px solid currentColor;
+  opacity: .75;
+  margin-left: .2em;
+  white-space: nowrap;
+}
+.pred-implements  { color: #2563eb; }
+.pred-instanceOf  { color: #7c3aed; }
+.pred-partOf      { color: #059669; }
+.pred-contrasts   { color: #dc2626; }
+.pred-uses        { color: #d97706; }
+
+.muted {
+  color: var(--muted);
+}
+
+/* Stats table (overview) */
+table.stats {
+  max-width: 100%;
+}
+table.stats th {
+  font-family: var(--font-body);
+  font-size: .88rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+  font-weight: 500;
+  width: 55%;
+}
+table.stats td {
+  font-family: var(--font-mono);
+  font-size: .88rem;
+}
+
+/* Concept rows — clickable */
+tr.concept-row {
+  cursor: pointer;
+}
+tr.concept-row:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+tr.concept-row.selected {
+  background: #edf2fb;
+}
+
+/* Hidden row (filtered out by JS) */
+tr.hidden-row {
+  display: none;
+}
+
+/* Highlighted document row (from concept → document link) */
+tr.highlight {
+  animation: row-flash 1.5s ease-out;
+}
+@keyframes row-flash {
+  0%   { background: #fef3c7; }
+  100% { background: transparent; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Concept table — card layout (mobile default)                        */
+/* ------------------------------------------------------------------ */
+
+#concepts-table,
+#concepts-table thead,
+#concepts-table tbody,
+#concepts-table tr,
+#concepts-table th,
+#concepts-table td {
+  display: block;
+  width: 100%;
+}
+
+#concepts-table thead tr {
+  display: none;
+}
+
+#concepts-table tr.concept-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: .6rem;
+  padding: .65rem .8rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  width: 100%;
+}
+
+#concepts-table tr.concept-row.selected {
+  background: #edf2fb;
+  border-color: var(--accent);
+}
+
+#concepts-table tr.hidden-row {
+  display: none;
+}
+
+#concepts-table td {
+  border: none;
+  padding: .1rem 0;
+  width: auto;
+}
+
+/* domain — labelled second line */
+#concepts-table td[data-label="Domain"] {
+  color: var(--muted);
+  font-size: .8rem;
+  padding-top: .25rem;
+}
+
+#concepts-table td[data-label="Domain"]::before {
+  content: attr(data-label) ": ";
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-family: var(--font-mono);
+}
+
+/* tags + related — inline counters on same line */
+#concepts-table td[data-label="Tags"],
+#concepts-table td[data-label="Related"] {
+  display: inline;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  color: var(--muted);
+  margin-right: .75rem;
+  width: auto;
+  text-align: left;
+}
+
+#concepts-table td[data-label="Tags"]::before {
+  content: "Tags: ";
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+#concepts-table td[data-label="Related"]::before {
+  content: "Related: ";
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Detail page (concept / relation full-page view) — mobile base       */
+/* ------------------------------------------------------------------ */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: .4rem .8rem;
+  border-radius: var(--radius);
+  background: var(--badge-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: .87rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  transition: background .12s, border-color .12s;
+}
+
+.back-btn:hover {
+  background: var(--row-hover);
+  border-color: var(--accent);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.dp-content {
+  max-width: 100%;
+}
+
+.dp-header {
+  margin-bottom: 1.5rem;
+}
+
+.dp-header h2 {
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.dp-section {
+  margin-bottom: 1.5rem;
+}
+
+.dp-section h3 {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+  margin: 0 0 .5rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dp-section p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.dp-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dp-list li {
+  padding: .3rem 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+
+.dp-list li:last-child {
+  border-bottom: none;
+}
+
+/* small arrow link to relation detail page */
+.edge-link {
+  font-size: .78em;
+  color: var(--muted);
+  margin-left: .3rem;
+}
+
+.edge-link:hover {
+  color: var(--accent);
+}
+
+/* relation detail — stacked on mobile (default) */
+.rel-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.rel-pair-arrow {
+  padding-top: 0;
+  text-align: left;
+}
+
+.rel-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .85rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.rel-card--missing {
+  color: var(--muted);
+}
+
+.rel-card-title {
+  display: block;
+  font-weight: 600;
+  font-size: .95rem;
+  margin-bottom: .35rem;
+}
+
+.rel-card-def {
+  margin: .35rem 0 0;
+  font-size: .83rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* clickable relation rows */
+tr.relation-row {
+  cursor: pointer;
+}
+
+tr.relation-row:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Overview — distribution breakdown tables                            */
+/* ------------------------------------------------------------------ */
+
+.dist-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.dist-block {
+  flex: 1;
+  min-width: 140px;
+}
+
+.dist-block h3 {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+  margin: 0 0 .5rem;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+table.dist-table th,
+table.dist-table td {
+  font-size: .82rem;
+  padding: .3rem .65rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* "No results" row (injected by JS on empty search)                  */
+/* ------------------------------------------------------------------ */
+
+.no-results-msg {
+  color: var(--muted);
+  font-size: .87rem;
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------ */
+/* Badges / tags                                                        */
+/* ------------------------------------------------------------------ */
+
+.badge {
+  display: inline-block;
+  padding: .1em .45em;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-radius: 3px;
+  font-size: .78em;
+  font-family: var(--font-mono);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Table scroll wrapper (relations, documents)                         */
+/* ------------------------------------------------------------------ */
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+}
+
+/* ensure scrollable tables don't collapse below readable width */
+.table-scroll table {
+  min-width: 480px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Desktop enhancements — min-width: 641px                             */
+/* ------------------------------------------------------------------ */
+
+@media (min-width: 641px) {
+  /* larger header */
+  header {
+    padding: 1.25rem 1.5rem .75rem;
+  }
+
+  header h1 {
+    font-size: 1.15rem;
+    margin-bottom: .15rem;
+  }
+
+  .subtitle {
+    font-size: .82rem;
+    margin-bottom: .65rem;
+  }
+
+  /* no bottom-nav offset needed */
+  body {
+    padding-bottom: 0;
+  }
+
+  /* centred max-width content */
+  main {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  /* top horizontal nav — replaces fixed bottom bar */
+  #main-nav {
+    position: static;
+    height: auto;
+    background: none;
+    border-top: none;
+    box-shadow: none;
+    display: flex;
+    gap: .15rem;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  #main-nav a {
+    flex: none;
+    display: inline-block;
+    padding: .3rem .75rem;
+    min-height: auto;
+    font-size: .83rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    color: var(--muted);
+  }
+
+  #main-nav a:hover,
+  #main-nav a.active {
+    background: var(--badge-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-top: none;
+    text-decoration: none;
+  }
+
+  /* normal table cell padding */
+  th, td {
+    padding: .55rem .8rem;
+  }
+
+  .num {
+    width: 4rem;
+  }
+
+  /* stats table capped width */
+  table.stats {
+    max-width: 400px;
+  }
+
+  /* concept table — restore standard table layout */
+  #concepts-table,
+  #concepts-table thead,
+  #concepts-table tbody,
+  #concepts-table tr,
+  #concepts-table th,
+  #concepts-table td {
+    display: table-row;
+    width: auto;
+  }
+
+  #concepts-table {
+    display: table;
+  }
+
+  #concepts-table thead {
+    display: table-header-group;
+  }
+
+  #concepts-table tbody {
+    display: table-row-group;
+  }
+
+  #concepts-table th,
+  #concepts-table td {
+    display: table-cell;
+  }
+
+  #concepts-table thead tr {
+    display: table-row;
+  }
+
+  #concepts-table tr.concept-row {
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  #concepts-table tr.concept-row.selected {
+    background: #edf2fb;
+    border-color: transparent;
+  }
+
+  #concepts-table td {
+    border-bottom: 1px solid var(--border);
+    padding: .55rem .8rem;
+  }
+
+  #concepts-table td[data-label="Domain"] {
+    color: var(--text);
+    font-size: inherit;
+    padding-top: .55rem;
+  }
+
+  #concepts-table td[data-label="Domain"]::before {
+    content: none;
+  }
+
+  #concepts-table td[data-label="Tags"],
+  #concepts-table td[data-label="Related"] {
+    display: table-cell;
+    font-size: .84em;
+    margin-right: 0;
+  }
+
+  #concepts-table td[data-label="Tags"]::before,
+  #concepts-table td[data-label="Related"]::before {
+    content: none;
+  }
+
+  /* .table-scroll tables: no forced min-width on wide screens */
+  .table-scroll table {
+    min-width: 0;
+  }
+
+  /* back button — inline, not full-width */
+  .back-btn {
+    width: auto;
+    min-height: auto;
+    font-size: .83rem;
+    margin-bottom: 1.25rem;
+    justify-content: flex-start;
+  }
+
+  .dp-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .dp-content {
+    max-width: 700px;
+  }
+
+  /* relation pair — side-by-side on desktop */
+  .rel-pair {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .rel-pair-arrow {
+    padding-top: 1.75rem;
+    text-align: center;
+  }
+
+  /* dist-row more breathing room */
+  .dist-row {
+    gap: 2rem;
+  }
+
+  .dist-block {
+    min-width: 200px;
+  }
+}

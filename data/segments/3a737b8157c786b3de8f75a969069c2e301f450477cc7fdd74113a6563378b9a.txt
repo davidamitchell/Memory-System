@@ -1,0 +1,1 @@
+1. H-Neurons are present and predictive in base pre-trained models before any instruction tuning or RLHF, confirmed by backward-transferability experiments in Gao et al.: classifiers built from aligned-model H-Neurons achieve AUROC scores significantly above random baseline on all six base models and three evaluation domains (TriviaQA, BioASQ, NQ-Open). [confidence: high]

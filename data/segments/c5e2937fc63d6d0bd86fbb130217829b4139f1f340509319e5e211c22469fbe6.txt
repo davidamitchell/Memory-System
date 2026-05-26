@@ -1,0 +1,1 @@
+The central tension is between rubric reproducibility (which benefits from binary LLM-judge verdicts per dimension) and quality trend tracking (which benefits from a 1–5 scale). The resolution is: use a 1–5 scale but treat any dimension scoring 1 as an automatic FAIL. This provides both benefits without sacrificing either.

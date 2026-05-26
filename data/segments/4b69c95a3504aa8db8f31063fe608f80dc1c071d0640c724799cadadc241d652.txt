@@ -1,0 +1,1 @@
+11. **The BIS Project Aurora demonstrated cross-institutional AI for AML**: synthetic transaction data was used to train AI that detected money laundering patterns invisible to institution-level rule-based systems. This foreshadows a regulatory-supervised shared AI infrastructure model for financial crime detection.

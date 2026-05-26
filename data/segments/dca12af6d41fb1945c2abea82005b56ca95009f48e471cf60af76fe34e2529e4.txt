@@ -1,0 +1,1 @@
+[fact] Reusable workflows (`uses:` at the job level) are not supported in `copilot-setup-steps` jobs; steps must be specified directly. (S6: "Calling a reusable workflow with the uses: keyword is not supported in copilot-setup-steps jobs.")

@@ -1,0 +1,1 @@
+This item therefore asks how Popper's demarcation criterion can be translated into finite-sample learning-theory terms and then combined with description length to recover a sharper boundary between mechanism and interpolation. [inference; source: https://plato.stanford.edu/entries/popper/; https://iep.utm.edu/pop-sci/; https://arxiv.org/abs/math/0406077]

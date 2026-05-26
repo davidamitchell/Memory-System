@@ -1,0 +1,3 @@
+Date: 2026-05-23
+Status: accepted
+Supersedes: [0003-ontology-architecture.md](./0003-ontology-architecture.md)

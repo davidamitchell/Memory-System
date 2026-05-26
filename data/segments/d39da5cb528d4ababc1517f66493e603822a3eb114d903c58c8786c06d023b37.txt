@@ -1,0 +1,16 @@
+1. What does PP claim the brain is doing at the computational level?
+   1.1. What are the core roles of hierarchical generative models, top-down predictions, and bottom-up prediction errors?
+   1.2. What does active inference add beyond passive predictive coding?
+   1.3. How much direct empirical support exists for this picture?
+2. What does LLM next-token generation actually optimize?
+   2.1. How do Transformer decoders generate outputs one token at a time?
+   2.2. What does large-scale autoregressive training plausibly teach the model internally?
+3. Are these two "prediction" regimes structurally equivalent?
+   3.1. Is predicting sensory input for embodied control the same as predicting the next token in text?
+   3.2. What is the role of embodiment, action, and online error correction in each case?
+4. Do LLMs learn world models?
+   4.1. What evidence suggests linear or structured internal representations?
+   4.2. What evidence suggests those representations are still limited, ungrounded, or non-planning in character?
+5. What follows for meaning, understanding, and consciousness?
+   5.1. What does the stochastic-parrot critique imply?
+   5.2. What does Seth's biological framing imply about consciousness in non-embodied predictors?

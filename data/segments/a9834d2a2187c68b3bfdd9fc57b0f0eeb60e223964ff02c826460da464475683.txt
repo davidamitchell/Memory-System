@@ -1,0 +1,6 @@
+- [inference] **Reliability at scale:** Cognitive debt and AI hallucination risk compound with factory volume. The formal specification countermeasures (Quint, contracts) are not yet widely adopted in factory implementations.
+- [inference] **Regulatory compliance gap:** The dark factory compliance problem is unresolved. Regulated environments may need a tiered approach: AI-native for non-regulated software, human-reviewed-AI-generated for regulated software.
+- [fact] **Measurement gap:** No study directly measures whether software engineering is the primary organisational constraint before and after AI adoption at the same organisation. The TOC analysis is therefore theoretical rather than empirically tested in longitudinal form.
+- [fact] **Capability gap:** The factory model requires new skills (spec writing, factory architecture, agent pipeline design) that most organisations do not currently have.
+- [inference] **Transition risk:** The transition requires investing in those capabilities before the benefits fully materialise.
+- [inference] **Jevons Paradox risk:** Cheaper software may increase total software demand rather than reducing total investment, potentially creating new forms of scarcity (requirement writers, decision-makers, domain experts) that organisations are not prepared for.

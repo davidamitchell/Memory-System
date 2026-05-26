@@ -1,0 +1,3 @@
+- [Mitchell (2026) The Nature of the Firm: Coase and organisations](https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-03-10-nature-of-the-firm-coase-organisations.md)
+- [Mitchell (2026) Key-person dependency and Basel execution, delivery, and process-management risk linkage](https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-09-key-person-dependency-basel-risk-linkage.md)
+- [Mitchell (2026) Risk scoring when workforce processes are unstandardized](https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-09-prc-risk-scoring-unstandardized-workforce-processes.md)

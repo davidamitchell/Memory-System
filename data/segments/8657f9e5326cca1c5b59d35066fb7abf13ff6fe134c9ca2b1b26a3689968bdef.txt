@@ -1,0 +1,6 @@
+**Cluster A: Capability inventory**
+- A1. What is the Process Universe — is it a design-time reference library or an operational tool?
+- A2. What is the distinction between Flow Designer and Playbooks — what does each document and to whom?
+- A3. What is the status of Workflow Editor — is it still viable for new process documentation?
+- A4. What is Process Mining — what kind of "documentation" does it produce, and for whom?
+- A5. How do these capabilities relate to each other — are they complementary or overlapping?

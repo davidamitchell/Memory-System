@@ -1,0 +1,1 @@
+White et al.'s pattern catalog and Li et al.'s SCoT paper both point to structure as the key lever for prompt quality — White et al. at the meta-level of interaction patterns, Li et al. at the level of intermediate reasoning steps. No contradiction.

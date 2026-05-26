@@ -1,0 +1,4 @@
+**Assumptions made:**
+- The 40% drift threshold is the right calibration for this corpus (not verified against historical data; assessed against corpus size and processing rate)
+- Monthly review cadence is appropriate (not validated; derived from corpus turnover arithmetic)
+- Five domains adequately cover the owner's research interests (based on tag analysis; owner's actual domain priorities not confirmed)

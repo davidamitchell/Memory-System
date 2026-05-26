@@ -1,0 +1,1 @@
+**Output format:** Structured findings with Executive Summary, Key Findings (6–12), Evidence Map, Assumptions, Analysis, Risks/Gaps/Uncertainties, and Open Questions.

@@ -1,0 +1,1 @@
+Type 3 (delegated authority agents) in the four-type typology is most prevalent in risk management: AI making credit decisions, flagging fraud, or escalating compliance exceptions. The governance architecture for these systems is the primary unresolved question.

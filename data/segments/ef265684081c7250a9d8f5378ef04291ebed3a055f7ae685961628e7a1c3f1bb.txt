@@ -1,0 +1,4 @@
+Every finding in §2 is labelled. The key inferences are:
+- That documentation decay is primarily a governance/ownership failure, not a tooling gap — this is a reasonable inference from the practitioner data (80% inaccuracy rate across tool types) but not proven by a controlled study
+- That the absence of native CSDM-to-process-documentation linkage is a structural gap — this is inferred from the lack of evidence of such a linkage in any source consulted; it is possible ServiceNow has added such functionality in recent releases not captured in the sources consulted
+- That Flow Designer and Playbooks do not constitute BPM-style process maps — this is inferred from their documented purpose; the sources describe them as automation and guidance tools, not documentation tools

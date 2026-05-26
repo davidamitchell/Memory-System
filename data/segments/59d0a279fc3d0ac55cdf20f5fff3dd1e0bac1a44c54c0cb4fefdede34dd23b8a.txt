@@ -1,0 +1,6 @@
+```
+Before starting any task, ensure the environment is ready:
+  git submodule update --init .github/skills
+  pip install -e ".[dev]"
+If these fail, stop and report the error rather than proceeding without skills or installed packages.
+```

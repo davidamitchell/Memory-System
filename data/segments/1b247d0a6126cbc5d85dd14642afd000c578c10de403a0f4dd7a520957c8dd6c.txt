@@ -1,0 +1,1 @@
+HippoRAG is the best current multi-hop retrieval mechanism once the graph is built, but its Personalised PageRank implementation adds complexity. A pragmatic alternative is to use LightRAG's dual-level retrieval as the first implementation and assess whether PPR adds measurable quality.

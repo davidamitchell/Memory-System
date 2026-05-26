@@ -1,0 +1,4 @@
+**Out of scope:**
+- Detailed design of individual governance dimensions, covered by Q1-Q12
+- Economic modelling of the cost of maturity improvement, covered by Q8
+- Specific AI or technology maturity models unrelated to governance, because the focus is governance capability maturity

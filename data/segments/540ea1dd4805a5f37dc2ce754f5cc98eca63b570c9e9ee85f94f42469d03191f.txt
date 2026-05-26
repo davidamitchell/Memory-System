@@ -1,0 +1,4 @@
+Every memory file includes `tags` in its front matter:
+```yaml
+tags: [journal, lancedb, architecture]
+```

@@ -1,0 +1,8 @@
+- What is the gap between what base LLMs know (public internet) and what an organisation needs them to know (internal context + salient external context)?
+- What are the current state-of-the-art approaches to organisation-specific LLM adaptation: RAG, fine-tuning, parameter-efficient fine-tuning (PEFT), Mixture of Experts (MoE), retrieval-augmented fine-tuning, and knowledge distillation?
+- What is the feasibility - technology maturity, cost, time to value, and skill requirements - of each approach for a mid-to-large enterprise?
+- What does a "layered" architecture look like in practice - an org-specific adapter or model layer sitting on top of or beside a base foundation model?
+- What does a "tandem" or "adversarial" architecture look like - can two models (one general, one org-specific) collaborate or check each other?
+- Who is already building organisation-customised LLM systems, and what architectural choices have they made?
+- Does concept generation (generative synthesis of org-specific domain concepts from internal corpora) offer a viable path that RAG alone cannot deliver?
+- What are the specific failure modes of RAG that motivate exploring customised or fine-tuned models for org context?

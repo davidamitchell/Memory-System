@@ -1,0 +1,1 @@
+**[inference]** The current AGENTS.md heuristic for `high` priority ("answers a question that directly unblocks tooling/infrastructure/other research, or strategically urgent with clear downstream impact") aligns well with dimensions 1 and 2 above. The rubric formalises what the heuristic intended.

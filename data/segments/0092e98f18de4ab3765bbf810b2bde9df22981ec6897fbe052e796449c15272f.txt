@@ -1,0 +1,5 @@
+**Out of scope:**
+- Procurement recommendations or vendor comparisons beyond technical capability assessment (no commercial recommendation is the output of this item)
+- Detailed deployment runbooks or Infrastructure as Code (IaC) templates (focus is on reference architecture, not deployment automation)
+- Security hardening guides for the individual tools (OPA, Cedar, OTel, IAM), those are covered by vendor documentation; focus here is on governance integration
+- Training-time AI model tooling (focus is on runtime governance tooling)

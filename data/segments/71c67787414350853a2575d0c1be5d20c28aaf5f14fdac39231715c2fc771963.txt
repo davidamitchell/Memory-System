@@ -1,0 +1,1 @@
+[fact] The Copilot coding agent runs on GitHub-hosted Ubuntu Linux (x64) runners by default, with Windows 64-bit as an alternative. macOS runners are not supported. (S1: "Copilot coding agent is only compatible with Ubuntu x64 Linux and Windows 64-bit runners.")

@@ -1,0 +1,2 @@
+This folder contains definition files for every key term used in this repository.
+All definition files follow the schema in [`definition_scheme.md`](../definition_scheme.md).

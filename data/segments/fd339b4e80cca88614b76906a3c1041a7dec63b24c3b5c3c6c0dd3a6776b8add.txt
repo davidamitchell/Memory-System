@@ -1,0 +1,1 @@
+This item directly supports the `davidamitchell/Skills` submodule, which provides agent skills for this repository and may be extended with SDLC-phase-specific skills.

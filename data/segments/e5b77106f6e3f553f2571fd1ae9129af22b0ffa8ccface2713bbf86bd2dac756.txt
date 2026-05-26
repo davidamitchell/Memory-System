@@ -1,0 +1,1 @@
+**[inference]** Backpressure in TOC is functionally identical to backpressure in reactive systems design: it is a control signal that travels upstream to prevent overload of a downstream resource. The difference is that TOC formalises this as an explicit scheduling rule (the rope) with a defined time-based trigger.

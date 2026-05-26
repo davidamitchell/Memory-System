@@ -1,0 +1,1 @@
+5. **D1 (AI Strategy & Governance) should maintain a protected minimum of ≥2 backlog items.** As the domain most directly tied to the owner's professional context, it should trigger a coverage alert if it drains to zero during loop processing. [medium confidence — professional context inference]

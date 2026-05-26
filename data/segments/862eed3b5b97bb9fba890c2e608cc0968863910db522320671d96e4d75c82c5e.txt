@@ -1,0 +1,5 @@
+ChromaDB offers an in-process persistent client (`chromadb.PersistentClient(path="./chroma_data")`). It stores data in a local directory. It provides:
+- Dense, sparse, and hybrid vector search
+- Metadata filtering
+- Full-text (keyword/regex) search
+- Apache 2.0 licence

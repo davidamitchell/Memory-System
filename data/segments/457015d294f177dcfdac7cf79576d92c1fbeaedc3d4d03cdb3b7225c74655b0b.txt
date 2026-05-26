@@ -1,0 +1,1 @@
+> **These phases are proposals — descriptive, not prescriptive.** They describe a plausible route from the current state to the target state. Sequence, scope, and naming will evolve as the work proceeds.

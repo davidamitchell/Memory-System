@@ -1,0 +1,4 @@
+**Cluster D: Tooling alignment — persistent context and MCP**
+- D1. What are the dominant persistent context file formats (AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) and their trade-offs?
+- D2. What does MCP (Model Context Protocol) enable for phase-aware tooling that static context files cannot?
+- D3. What CI/CD (Continuous Integration/Continuous Deployment) integration patterns exist for AI-assisted review and test generation?

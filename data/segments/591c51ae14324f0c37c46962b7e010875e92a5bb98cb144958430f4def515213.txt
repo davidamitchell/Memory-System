@@ -1,0 +1,1 @@
+[inference] SCoT's advantage over CoT for code generation is consistent with the structural nature of source code: programs are composed of sequences, conditionals, and loops, not narrative prose. Asking the LLM to reason in the same structural vocabulary as the output domain reduces the translation step between reasoning and generation.

@@ -1,0 +1,21 @@
+- **Root question:** Which measures are used to evaluate AI coding harnesses, and who leads those measures in public evidence?
+- **A. Benchmark families**
+  - A1. Which benchmarks directly test end-to-end software engineering work in repositories?
+  - A2. Which benchmarks test standalone code generation or editing rather than full harness behavior?
+  - A3. Which benchmarks were created to address contamination or benchmark saturation?
+- **B. Metrics**
+  - B1. What does pass@k measure, and where is it standard?
+  - B2. What does percent resolved or task completion rate measure in software engineering agent benchmarks?
+  - B3. Which secondary metrics appear in product studies or harness-specific leaderboards?
+- **C. Credibility**
+  - C1. Which measures are benchmark-maintained and reproducible?
+  - C2. Which results are vendor self-reported or based on internal eval suites?
+  - C3. What benchmark limitations or gaming risks are publicly acknowledged?
+- **D. Product score coverage**
+  - D1. Which named commercial tools have public, attributable benchmark entries?
+  - D2. Which named open-source harnesses have public, attributable benchmark entries?
+  - D3. Which popular products rely mainly on internal studies, internal evals, or model-level evidence instead of public comparable harness scores?
+- **E. Decision relevance**
+  - E1. Which benchmarks are strongest for selecting agentic coding harnesses?
+  - E2. Which metrics matter for real-world harness quality but remain weakly measured?
+  - E3. What should a reader treat as leader status versus missing-data status?

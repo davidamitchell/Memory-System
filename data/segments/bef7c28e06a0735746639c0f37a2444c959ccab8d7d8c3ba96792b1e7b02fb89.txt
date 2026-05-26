@@ -1,0 +1,4 @@
+- **[inference]** Leanstral matters because it pushes AI assistance into a domain where correctness is adjudicated by a proof kernel instead of by a tired reviewer scanning plausible code.
+- **[inference]** That advantage is real but bounded. Teams still have to decide what properties are worth formalizing, whether the formal model captures real intent, and whether the surrounding operational workflow prevents catastrophic side effects.
+- **[inference]** The incident comparison clarifies the boundary: proof engineering is for logical correctness inside the model; guardrails such as least privilege and manual approval are for real-world actions outside the model.
+- **[inference]** The synthesis therefore favors complementarity over substitution: the more capable agents become, the more value there is in both stronger formal artifacts and stronger operational controls.

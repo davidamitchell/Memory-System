@@ -1,0 +1,2 @@
+**Gap identified:**
+Whether Claude Code on the web clones the `.github/skills/` submodule is not documented. If it does not (consistent with typical non-recursive clones), then even with the UI setup script running `git submodule update --init .github/skills`, the submodule will be empty unless the GitHub app installed on the repo has access to `davidamitchell/Skills`. This may require an additional PAT or GitHub App permission configuration for Claude Code web, separate from the `SKILLS_PAT` used in `copilot-setup-steps.yml`.

@@ -1,0 +1,4 @@
+- **[fact]** Every conclusion in the synthesis is traceable to either official vendor documentation, accessible independent lifecycle-cost literature, or prior completed research in this repository.
+- **[fact]** All major claims in the synthesis were checked for acronym expansion, evidence sufficiency, and consistency between the investigation, key findings, and evidence map.
+- **[fact]** The two main alternative interpretations - "SaaS wins categorically" and "AI makes platforms obsolete" - were both rejected because the evidence supports a layered conclusion rather than either extreme.
+- **[fact]** Remaining uncertainty is explicit: inaccessible analyst sources, absent proprietary pricing, and incomplete public evidence on exact AI effects for regulated assurance work.

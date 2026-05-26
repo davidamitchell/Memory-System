@@ -1,0 +1,5 @@
+- How do phase-specific prompt patterns interact with context-window constraints in long-running agent sessions? At what context length does phase framing become noise rather than signal?
+- Is there a measurable defect-rate or velocity improvement attributable specifically to phase-aware prompting vs. baseline Copilot usage in production codebases?
+- What is the optimal granularity for SDLC phase decomposition in an autonomous agent loop — eight phases vs. coarser (plan/build/ship) or finer splits?
+- How should prompt templates be versioned and evolved as underlying model capabilities change? The SCoT advantage over CoT was measured on 2022–2023 models; it may be smaller or absent in more recent models with stronger reasoning capabilities.
+- Can MCP `prompts` primitives be used to implement the full phase-aware framework described in §6, and what is the implementation effort vs. static context files?

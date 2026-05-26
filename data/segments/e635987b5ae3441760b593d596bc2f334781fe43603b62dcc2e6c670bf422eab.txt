@@ -1,0 +1,1 @@
+Mid-tier banks are a particularly interesting case: they have legacy systems built over decades, operate under regulatory constraints that make autonomous deployment risky, and face competitive pressure from fintechs unencumbered by that legacy — but they also have domain data and regulatory relationships that AI-native entrants lack.

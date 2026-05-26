@@ -1,0 +1,1 @@
+6. **Failure to scale beyond pilots is the dominant failure mode.** Only 12–16% of AI initiatives reach enterprise scale. Most stall when moving from proof-of-concept to integration with core workflows. Common causes: brittle models, absent governance, no executive sponsorship, and insufficient change management.

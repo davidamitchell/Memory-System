@@ -1,0 +1,3 @@
+- **Behavioural lens**
+  - **[fact]** nCino's implementation guidance devotes multiple phases to communication, walkthroughs, training, and adoption. Source: primary [x] https://www.ncino.com/implementation
+  - **[inference]** Adoption work is itself an invariant cost of enterprise transformation. Platforms can reduce invention effort, but they do not remove organisational change effort.

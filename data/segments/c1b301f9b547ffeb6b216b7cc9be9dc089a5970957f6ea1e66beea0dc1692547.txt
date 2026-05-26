@@ -1,0 +1,1 @@
+11. **`workflow_dispatch` + GitHub issue is the correct delivery mechanism for agenda reports.** This is the owner's access model and is explicitly prescribed in AGENTS.md. No new credentials required. [high confidence — AGENTS.md direct]

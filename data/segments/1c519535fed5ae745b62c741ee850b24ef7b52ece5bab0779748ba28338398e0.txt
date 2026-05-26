@@ -1,0 +1,1 @@
+What is the data product ontology, which organisations and communities use it, how is it applied in practice within data mesh and data management architectures, and is it still current relative to competing and complementary standards?

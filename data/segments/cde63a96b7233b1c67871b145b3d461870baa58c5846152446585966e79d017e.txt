@@ -1,0 +1,1 @@
+**Stage 2 (~150–200 items):** Build a LightRAG knowledge graph. This is the threshold where cross-item relationship queries justify graph construction overhead. LightRAG's incremental merge model is operationally sustainable for a daily-updated corpus.

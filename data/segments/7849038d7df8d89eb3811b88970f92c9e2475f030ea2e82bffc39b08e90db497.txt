@@ -1,0 +1,1 @@
+- **Primary gap:** No direct pre-training ablation experiment tests whether removing sycophantic content or adding uncertainty-expression objectives reduces H-Neuron formation. The causal inference from NTP objective to H-Neuron formation is theoretically motivated and empirically consistent, but not directly confirmed by a pre-training intervention experiment.

@@ -1,0 +1,5 @@
+Claims:
+- [fact] McKinsey and Thoughtworks both frame scaling as an organisational redesign problem involving workflows, adoption, governance, and operating model choices, not as a one-time model selection problem. Source: McKinsey 2025; Thoughtworks whitepaper.
+- [fact] Lean Startup treats learning loops as recurring cycles with explicit pivot-or-persevere decisions rather than as a single front-loaded discovery stage. Source: Eric Ries, "Methodology."
+- [inference] Sustainable cadence in a fast-moving environment comes from recurring synthesis cycles: every exploration wave should end with explicit reuse decisions and a refreshed standard, even if the standard is intentionally lightweight and revisable. Basis: McKinsey, Thoughtworks, Lean Startup.
+- [assumption] A lightweight synthesis pack can usually fit into a single-page summary plus linked artefacts without losing essential operating detail. Justification: the reviewed sources specify the need for codification, milestones, ownership, and guardrails, but they do not prescribe a universal document size; a compact default best preserves speed while still forcing explicit decisions.

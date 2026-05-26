@@ -1,0 +1,5 @@
+- A new `_docs/design/` folder documents the full component and sequence diagrams
+- The processor pipeline is the primary unit of testability and extension
+- Ontology versioning satisfies the audit/lineage requirements that vector storage could not meet
+- Export/serialisation enables interoperability with standard ontology tooling (Protégé, SPARQL endpoints)
+- Consistency validation prevents silent corruption of the knowledge graph as new documents are sourced

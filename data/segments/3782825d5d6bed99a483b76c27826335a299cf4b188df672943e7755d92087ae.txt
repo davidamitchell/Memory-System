@@ -1,0 +1,1 @@
+2. **Pre-training-time interventions** — Can the pre-training procedure be modified to prevent H-Neurons from forming in the first place? What would this cost in terms of data scale, compute, or general capability?

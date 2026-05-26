@@ -1,0 +1,2 @@
+**Economic lens — dependency cost:**
+`chromadb` pulls in 15+ transitive dependencies including `hnswlib` (C++ extension), `tokenizers` (Rust extension), and `mmh3`. This raises the barrier for running the pipeline in a fresh GitHub Actions environment and increases the surface area for dependency conflicts. SQLite (`import sqlite3`) is zero-cost. `sqlite-vec` (`pip install sqlite-vec`) is a pure-C extension with no transitive Python dependencies. [inference from package structure]

@@ -1,0 +1,1 @@
+YAML front matter is a convention for embedding structured metadata inside a plain-text Markdown file. The block starts and ends with a line containing only three dashes (`---`) and must appear before any other content in the file. The content between the delimiters is parsed as YAML.

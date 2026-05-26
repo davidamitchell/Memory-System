@@ -1,0 +1,1 @@
+As the autonomous loop processes 3 items per day on weekdays, the backlog is consumed rapidly. Without intentional curation, the loop will work through whatever happens to be at the top of the file system, which is not necessarily what is most strategically important.

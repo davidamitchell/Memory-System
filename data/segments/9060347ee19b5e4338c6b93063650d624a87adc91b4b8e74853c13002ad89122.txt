@@ -1,0 +1,14 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| SQLite FTS5 built-in, BM25 ranking, phrase/prefix search | sqlite.org/fts5.html (accessed directly) | high | In stdlib since Python 3.x via `sqlite3` module |
+| sqlite-vec provides KNN in SQLite, `pip install sqlite-vec` | github.com/asg017/sqlite-vec (accessed directly) | high | Mozilla Builders sponsorship; pre-v1 |
+| sqlite-vec pre-v1 status, breaking changes expected | github.com/asg017/sqlite-vec README (accessed directly) | high | Explicitly marked as pre-v1 |
+| DuckDB is OLAP-optimised, columnar-vectorised | duckdb.org/why_duckdb (accessed directly) | high | Primary positioning documentation |
+| DuckDB FTS extension uses BM25 | duckdb.org/docs/stable/core_extensions/full_text_search.html (accessed directly) | high | `match_bm25` function, Porter stemmer |
+| DuckDB has no built-in vector search | DuckDB extension docs review | high | No KNN/ANN listed in core extensions |
+| ChromaDB persistent client available, heavy dependencies | docs.trychroma.com (accessed directly) | high | PersistentClient noted; dependency tree inferred |
+| ChromaDB is embeddings-first, not a relational DB | docs.trychroma.com/docs/overview/introduction (accessed directly) | high | Explicit positioning statement |
+| LanceDB targets multi-modal lakehouse at scale | docs.lancedb.com (accessed directly) | high | Explicit positioning statement |
+| Prior research deferred vector stores until >50 items | 2026-02-27-indexing-and-tracking-method.md Key Finding 5 | high | Direct quote from completed item |
+| Zotero uses SQLite + FTS table | 2026-02-27-indexing-and-tracking-method.md Key Finding 2 | high | Zotero docs cited in prior item |
+| Binary database files are not git-diffable | 2026-02-27-indexing-and-tracking-method.md Key Finding 4 | high | Well-established; confirmed in prior item |

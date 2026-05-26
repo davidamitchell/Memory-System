@@ -1,0 +1,4 @@
+- What is the thinnest normalized architecture schema that can represent imports, package dependencies, ownership, standards violations, ADR references, and generated blueprint links without becoming another heavyweight enterprise metamodel?
+- Which open-source extractors outside the JavaScript and Java ecosystems are mature enough to provide equivalent structural evidence for Python, .NET, Go, and Infrastructure as Code (IaC) repositories?
+- What is the minimum evaluation harness needed to measure false-positive and false-negative rates for cross-repository coupling detection before the system is trusted as a governance control?
+- Should the synthesized output live primarily as per-repo architecture files, a central results hub, or both?

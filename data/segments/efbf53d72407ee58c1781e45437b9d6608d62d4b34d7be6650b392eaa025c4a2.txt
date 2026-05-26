@@ -1,0 +1,1 @@
+Are multi-step Large Language Model (LLM)-based systems inherently less explainable than equivalently scoped deterministic software systems, or does production-scale distributed-system complexity make both classes practically equally opaque?

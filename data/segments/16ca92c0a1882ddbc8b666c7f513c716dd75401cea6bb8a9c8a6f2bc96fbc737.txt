@@ -1,0 +1,4 @@
+**Cluster D: Minimum viable approach**
+- D1. What is the minimum viable set of process documentation that produces meaningful operational value?
+- D2. What is safe to leave undocumented, and what is dangerous to leave undocumented?
+- D3. How does starting with out-of-box ITSM templates change the minimum viable equation?

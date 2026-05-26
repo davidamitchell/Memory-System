@@ -1,0 +1,3 @@
+Vector/semantic search over completed research items becomes useful when:
+- The corpus exceeds ~50 items (below this, manual browsing is as fast as semantic search)
+- The owner wants to ask "what do I know about X?" against the corpus

@@ -1,0 +1,1 @@
+- **Benchmark-to-production gap:** SCoT and CoT comparisons are on standardised benchmarks (HumanEval, MBPP). Real SDLC tasks involve existing codebases, domain-specific constraints, and coordination overhead not captured in benchmarks.

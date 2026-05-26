@@ -1,0 +1,3 @@
+- LanceDB is the vector database implementation in this repository.
+- The index lives in `.lancedb/` and is excluded from git.
+- The index is rebuilt from pre-computed `.embedding.json` files on every server startup (per W-0100 design).

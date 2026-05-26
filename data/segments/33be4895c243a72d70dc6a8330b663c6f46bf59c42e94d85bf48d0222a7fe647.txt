@@ -1,0 +1,4 @@
+1. **Did the process work?** Was the approach sound? Did the plan hold?
+2. **What slowed down or went wrong?** No blame — just facts.
+3. **What single change would prevent this next time?** If nothing: say so.
+4. **Is this a pattern?** Have you seen this friction before? If yes, it deserves a fix, not just a note.

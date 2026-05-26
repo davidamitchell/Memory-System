@@ -1,0 +1,4 @@
+- The `raw_document_corpus/` directory (50 files, date-prefixed) is version-controlled on `main` and all feature branches going forward.
+- The W-0204 LLM extractor is tested against at least one `raw_document_corpus/` file, with the resulting concept card inspected and recorded in `PROGRESS.md`.
+- `BACKLOG.md` is updated: W-0204 references `raw_document_corpus/` as the prose target.
+- The `copilot/ontology-experiment` branch remains available but is no longer the canonical location for these documents.

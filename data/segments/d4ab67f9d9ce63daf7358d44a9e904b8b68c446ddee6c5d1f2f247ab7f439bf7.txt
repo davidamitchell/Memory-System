@@ -1,0 +1,15 @@
+P4 --> X1[Select next checklist item]
+    X1 --> X2[Make smallest valid change]
+    X2 --> V1{Validate: tests,\nlinks, front matter,\ntags, graph health}
+    V1 -- fail --> FIX[Fix before continuing]
+    FIX --> V1
+    V1 -- pass --> X3[Commit: memory: description]
+    X3 --> X4{Drift check:\nstill solving\noriginal intent?}
+    X4 -- drifted --> C1[Stop — trim scope — update plan]
+    C1 --> X1
+    X4 -- on track --> X5{Stuck >\n2 attempts?}
+    X5 -- yes --> C2[Add blocker to BACKLOG.md — skip item]
+    C2 --> X6
+    X5 -- no --> X6{More checklist\nitems?}
+    X6 -- yes --> X1
+    X6 -- no --> CL1

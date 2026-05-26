@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Research synthesis on runtime assurance, deterministic transaction boundaries, and overload-safe fallback design for hybrid reasoning stacks.
+- Links:
+  - https://arxiv.org/abs/2102.12981
+  - https://learn.microsoft.com/azure/architecture/patterns/circuit-breaker
+  - https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/

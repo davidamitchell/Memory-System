@@ -1,0 +1,1 @@
+4. [inference] Much of the current governance apparatus (SAFe, PI planning, investment boards, QA teams, project management "front doors") is rationally explained by software scarcity and becomes unnecessary overhead, rather than value-adding process, when software production cost drops by an order of magnitude.

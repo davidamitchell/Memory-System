@@ -1,0 +1,4 @@
+- For a named mid-tier bank, what is the five-year numeric break-even point between Salesforce Financial Services Cloud (FSC) plus nCino-style configuration and a bespoke platform built on a modern cloud stack with AI-assisted development?
+- How large is the regression-testing and release-management burden created by vendor-driven upgrade cycles in mature Salesforce Financial Services Cloud (FSC) and nCino estates?
+- Which banking capabilities most consistently remain worth building in-house even when the institution buys a broader platform - pricing, decisioning, customer journeys, or servicing orchestration?
+- How should exit costs and vendor-lock-in risk be incorporated into a full platform Total Cost of Ownership (TCO) model for banking Software as a Service (SaaS)?

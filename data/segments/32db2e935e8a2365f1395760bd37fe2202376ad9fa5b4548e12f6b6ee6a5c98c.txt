@@ -1,0 +1,10 @@
+| Phase | Mode | Pattern | Key principle |
+|---|---|---|---|
+| Discovery | Exploration | Persona + context manager | Ground AI in stakeholder role; constrain output to structured hypotheses |
+| Requirements | Exploration | Question refinement + output template | Elicit open questions; enforce user-story format |
+| Design | Exploration | CoT + alternative approaches | Require explicit trade-off reasoning; output as ADR (Architecture Decision Record) |
+| Planning | Acceleration | Task decomposition + constraint framing | Decompose to single-PR scope; prevent large batches |
+| Building | Acceleration | SCoT + few-shot | Use program-structure intermediate steps; provide minimal relevant context |
+| Testing | Acceleration | SCoT + fact-check list | Generate tests with explicit edge-case reasoning; require AI to label its own uncertainty |
+| Reviewing | Mixed | Critique + reflection | Require explicit identification of deviations from standards; no uncritical approval |
+| Iteration | Exploration | Alternative approaches + context manager | Review batch as a whole; identify patterns rather than individual items |

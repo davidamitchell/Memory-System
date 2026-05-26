@@ -1,0 +1,1 @@
+**Summary position:** SQLite (with FTS5 at Phase 1, sqlite-vec at Phase 2) is the correct technology. The schema above supports all required queries. Migration is triggered by one of four observable signals, not by a fixed item count.

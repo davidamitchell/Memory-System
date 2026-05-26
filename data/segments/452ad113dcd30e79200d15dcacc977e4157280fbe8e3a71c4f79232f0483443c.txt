@@ -1,0 +1,4 @@
+**Out of scope:**
+- Pure research papers on AI coding models (not implementation strategies)
+- SWE AI tool comparisons (not a product review question)
+- General developer experience surveys without strategy context

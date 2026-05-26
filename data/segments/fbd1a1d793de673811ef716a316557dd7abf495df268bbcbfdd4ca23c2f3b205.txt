@@ -1,0 +1,21 @@
+- A. Candidate ontology surface
+  - A1. Which public machine-readable vocabulary is explicitly dedicated to data products?
+  - A2. Which adjacent standards model neighboring concerns without being dedicated data product ontologies?
+- B. DPROD structure
+  - B1. What classes does DPROD define?
+  - B2. What object properties and datatype properties does DPROD define?
+  - B3. How does DPROD reuse DCAT, SHACL, and other external vocabularies?
+- C. DPROD publication and currency
+  - C1. Who publishes DPROD on the official publication surfaces?
+  - C2. What do those surfaces say about version status, namespace, and modification history?
+  - C3. Is the repository still active in 2026?
+- D. Usage patterns
+  - D1. How do the official examples apply DPROD in practice?
+  - D2. Which practical concerns are delegated to complementary vocabularies rather than encoded directly in DPROD?
+- E. Adoption
+  - E1. Which public repositories or products reference DPROD outside the core EKGF repository?
+  - E2. Do major catalog products expose DPROD natively or mainly use their own data-product models?
+- F. Comparative relevance
+  - F1. Where does DPROD overlap with DCAT, schema.org Dataset, Data Privacy Vocabulary (DPV), and the Findable, Accessible, Interoperable, and Reusable (FAIR) principles?
+  - F2. What role does the Data Product Descriptor Specification (DPDS) play relative to DPROD?
+  - F3. Has any ontology reached clear consensus adoption across the public ecosystem?

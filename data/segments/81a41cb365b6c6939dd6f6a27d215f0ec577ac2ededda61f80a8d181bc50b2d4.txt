@@ -1,0 +1,4 @@
+**E. Guardrail comparison**
+- E1. What exactly failed in the Claude Code infrastructure incident?
+- E2. Would formal proof engineering have prevented that failure?
+- E3. What combined guardrail stack is best supported by the evidence?

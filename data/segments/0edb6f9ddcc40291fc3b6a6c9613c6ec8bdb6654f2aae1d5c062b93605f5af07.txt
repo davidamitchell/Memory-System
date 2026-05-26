@@ -1,0 +1,1 @@
+- [fact] Root question decomposed into five branches.

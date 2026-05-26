@@ -1,0 +1,1 @@
+7. The binary-artefact constraint (no git-diffable database file) applies equally to all four technologies. All database files belong in `.gitignore` (or the existing `state/` directory). The database is rebuilt from YAML front-matter on first run and maintained incrementally thereafter — it is a derived artefact, not source of truth.

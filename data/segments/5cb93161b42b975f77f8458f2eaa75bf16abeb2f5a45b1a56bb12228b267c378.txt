@@ -1,0 +1,5 @@
+**Out of scope:**
+- Technical debt in source code when it is not linked to organisational process or capability gaps
+- Vendor or product selection for debt-reduction tooling
+- A full Capability Maturity Model Integration (CMMI) survey unrelated to AI risk
+- Macro-level economic cost-benefit analysis of AI adoption

@@ -1,0 +1,1 @@
+4. **RLHF limits** — What does the RLHF and post-training alignment literature say about the limits of post-training alignment for fixing problems that originate in pre-training? Can reward signals selectively suppress pre-trained features, or do they primarily reroute behaviour at the surface level?

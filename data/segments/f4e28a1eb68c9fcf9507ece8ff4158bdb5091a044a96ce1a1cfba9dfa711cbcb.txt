@@ -1,0 +1,2 @@
+**Curriculum learning interventions:**
+- Stage training data so that high-quality, epistemically reliable content dominates the early training phase (when foundational representations are forming) and lower-quality content is introduced later or at lower weight. **[inference]** Feasibility: medium — requires careful scheduling and monitoring. Estimated effectiveness: speculative; no direct evidence for effect on H-Neuron formation specifically.

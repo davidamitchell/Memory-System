@@ -1,0 +1,6 @@
+| Field | Glossary | raw_document_corpus |
+|---|---|---|
+| Title | `title` | `title` |
+| Keywords | `tags: [...]` | `themes: [...]` |
+| Aliases | `aliases: [...]` | *(absent)* |
+| Cross-refs | `related: [{file, rel}]` | `cites: [slug]` + `related: [slug]` |

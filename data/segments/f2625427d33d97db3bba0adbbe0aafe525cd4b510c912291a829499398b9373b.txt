@@ -1,0 +1,1 @@
+During the W-0200/W-0201 implementation phase, the 26-file `glossary/` corpus was chosen as the ground-truth test bed for the pipeline because every concept, alias, tag, and relationship is explicitly declared in structured front-matter. This made it possible to validate the rule-based extractor (p07) with near-zero ambiguity.

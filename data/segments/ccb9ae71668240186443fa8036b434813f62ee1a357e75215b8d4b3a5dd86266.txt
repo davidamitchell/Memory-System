@@ -1,0 +1,5 @@
+**Inferences (derived from evidence, with reasoning):**
+- Application register → team taxonomy → work-item tagging is a non-parallelisable dependency chain: each artefact uses the prior as its scope definition (reasoning: team taxonomy maps teams to applications; tagging maps tickets to applications — both require a stable application list)
+- Tagging degradation is silent and produces systematically biased rather than obviously wrong data (reasoning: no alert fires on a plausible-but-incorrect ratio; bias is directional — RUN drifts high because maintenance is easier to categorise)
+- Joint sponsorship necessity stems from the structural problem: CIO has data access authority, CFO has budget authority — neither can succeed without the other's domain (reasoning: three independent sources converge on this pattern)
+- Federal failure rate (69%) is a lower bound for unsupported implementations: federal agencies had a regulatory mandate and OMB oversight that private organisations lack (reasoning: harder environmental constraints should, if anything, increase compliance, yet 69% still failed)

@@ -1,0 +1,1 @@
+The contrast is with "cloud-first" or "SaaS" architectures where the user's data lives primarily in a vendor's database and the local application is a thin client. If the vendor's service goes down, the user loses access to their own data.

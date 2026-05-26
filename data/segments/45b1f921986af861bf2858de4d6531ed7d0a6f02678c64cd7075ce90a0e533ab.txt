@@ -1,0 +1,1 @@
+2. `devcontainer.json` has no effect on either primary agent surface. Its absence (W-0004) is a separate issue relevant only to Codespaces and local dev containers. Creating it does not address the agent environment gap.

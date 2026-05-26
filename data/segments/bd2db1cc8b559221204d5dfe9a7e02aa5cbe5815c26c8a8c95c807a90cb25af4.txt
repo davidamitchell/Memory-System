@@ -1,0 +1,4 @@
+**Out of scope:**
+- H-Neuron identification methodology (covered in `2026-03-05-h-neurons-in-llms`)
+- Inference-time and fine-tuning-time interventions (covered in `2026-03-05-h-neuron-over-compliance`)
+- General hallucination taxonomy and causes (covered in `2026-03-05-llm-hallucination-mechanisms`)

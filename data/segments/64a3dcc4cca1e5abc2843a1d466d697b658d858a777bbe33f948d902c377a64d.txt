@@ -1,0 +1,18 @@
+```
+┌── Select next checklist item
+│
+├── Apply the smallest change that satisfies the item
+│   • Use ecosystem tools (lint, format, scaffold) in preference to manual edits
+│   • Apply relevant skill outputs verbatim where the skill is authoritative
+│
+├── Validate immediately (see Phase 4)
+│
+├── Commit with message: memory: <description>
+│
+├── Drift check: re-read the one-sentence intent from Entry
+│   • Am I still solving that problem?
+│   • Have I introduced changes outside the checklist scope?
+│   If yes to either: pause and go to Phase 5 (Correct)
+│
+└── Mark checklist item done in report_progress
+```

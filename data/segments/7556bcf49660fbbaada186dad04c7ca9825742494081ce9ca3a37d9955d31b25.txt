@@ -1,0 +1,9 @@
+**In scope:**
+- Purpose-built languages or DSLs whose primary intended author is an LLM agent, not a human programmer
+- Structured output formats (JSON schemas, constraint grammars, typed intermediate representations) designed specifically to constrain what LLMs can emit and thereby reduce failure modes
+- Research prototypes, academic papers, and production systems (2022–2026) describing languages or grammars designed with LLM generation in mind
+- How each candidate approach maps to the five-layer failure mode taxonomy from `2026-03-10-ai-concept-classification-taxonomy.md`: which layers (generation, goal, alignment, safety/security, operational) each language targets
+- How each candidate maps to the specification hierarchy from `2026-03-10-formal-spec-intent-alignment-agentic-coding.md`: where on the informal → structured output → type annotations → rich type system → formal verification continuum each approach sits
+- Type-constrained decoding (ETH Zurich Programming Language Design and Implementation (PLDI) 2025) and related compiler-enforced generation as a language-design mechanism
+- The "Out of the Tar Pit" thesis applied to agent-generated code: do any of these languages reduce mutable state and control flow complexity in LLM-produced output?
+- Intermediate representation (IR) approaches where agents emit to a typed IR rather than a surface language

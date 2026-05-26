@@ -1,0 +1,1 @@
+4. Because the Claude Code web setup script is not in the repository, it cannot be guaranteed for all users. The fallback mechanism, a prose instruction in `CLAUDE.md`/`AGENTS.md`, relies on Claude following the instruction, which is an inference but supported by Anthropic's documentation that Claude respects `CLAUDE.md` context.

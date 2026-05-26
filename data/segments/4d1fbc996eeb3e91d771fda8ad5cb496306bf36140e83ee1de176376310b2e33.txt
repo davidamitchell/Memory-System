@@ -1,0 +1,1 @@
+Semantic search works by converting both the query and every stored document into vector embeddings, then finding the stored vectors that are geometrically closest to the query vector. Two texts are "semantically similar" if their vectors have a high cosine similarity — meaning the embedding model placed them near each other in the vector space.

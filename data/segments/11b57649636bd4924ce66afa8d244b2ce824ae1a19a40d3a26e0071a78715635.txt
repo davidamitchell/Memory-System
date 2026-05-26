@@ -1,0 +1,1 @@
+1. **Pre-training origin evidence** — Work through the evidence from arXiv:2512.01797 for the pre-training origin claim. What comparison is made between base and instruction-tuned/RLHF models? How strong is the evidence? What alternative explanations are ruled out?

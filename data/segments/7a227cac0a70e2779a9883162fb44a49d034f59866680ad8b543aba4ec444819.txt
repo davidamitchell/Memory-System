@@ -1,0 +1,1 @@
+[fact] The same survey found that 80% of ITSM teams report their process maps do not reflect how work is actually performed. Source: CTMS survey, https://www.ctms-itsm.com/blogs/how-itsm-are-using-process-maps/.

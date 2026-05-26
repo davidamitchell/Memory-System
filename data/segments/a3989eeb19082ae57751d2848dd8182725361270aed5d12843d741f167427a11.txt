@@ -1,0 +1,4 @@
+- [inference] What measurable threshold tells an enterprise that retrieval quality has plateaued enough to justify adapter training rather than another round of retrieval engineering?
+- [inference] Which parts of organisational knowledge should remain permanently external for provenance reasons even if they could be internalised technically?
+- [inference] Can synthetic domain corpora be made auditable enough for regulated industries to trust them as part of a production adaptation pipeline?
+- [inference] What evaluation harness best measures a layered enterprise stack that combines retrieval, adapters, routing, and critic models rather than evaluating those pieces in isolation?

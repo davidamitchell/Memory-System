@@ -1,0 +1,1 @@
+Move all [AI agent](../../glossary/ai-agent.md) instructions to `.github/copilot-instructions.md`. Delete AGENTS.md. Update README.md. Add .github/skills submodule and supporting structure.

@@ -1,0 +1,5 @@
+**Branch C — Organisational implications**
+- C1: Which current organisational structures (SAFe, investment boards, QA teams, POs) exist specifically because software production is expensive and scarce?
+- C2: Which governance structures survive when software production becomes cheap and fast?
+- C3: What does the new equilibrium team structure look like in AI-native organisations?
+- C4: What does "AI-native" specifically mean vs. AI-assisted or AI-first?

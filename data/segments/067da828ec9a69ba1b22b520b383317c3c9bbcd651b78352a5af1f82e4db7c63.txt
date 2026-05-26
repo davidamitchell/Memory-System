@@ -1,0 +1,4 @@
+**Out of scope:**
+- Backpressure in software networking/TCP (unless explicitly connected to TOC)
+- Generic lean or agile process discussions not grounded in TOC
+- Opinion pieces or blog posts without empirical backing

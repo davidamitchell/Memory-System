@@ -1,0 +1,18 @@
+1. **Define the gap precisely** - articulate the internal context gap and salient external context gap in concrete terms. What does a model need to "know" that RAG cannot deliver? What does "org-salient external context" mean operationally (e.g., jurisdiction-specific regulation, named competitor filings, industry-specific terminology)? Use this to establish why org-customised LLMs are worth exploring beyond RAG.
+2. **Map the adaptation landscape** - survey the full range of approaches from lightest to heaviest: prompt engineering and few-shot prompting -> RAG -> PEFT (Low-Rank Adaptation (LoRA), Quantized Low-Rank Adaptation (QLoRA), prefix tuning, adapters) -> full fine-tuning -> domain-adaptive pretraining -> model merging / model soup -> training a domain-specific model from scratch. For each: what does it require in data, compute, and skill? What org-context problems does it solve that lighter approaches cannot?
+3. **Case study audit** - examine real enterprise deployments:
+   - Bloomberg GPT - domain-adaptive pretraining on financial text
+   - MedPaLM / Med-Gemini - medical domain adaptation
+   - Harvey AI - legal domain LLM on top of GPT-4
+   - Morgan Stanley + OpenAI - enterprise RAG at scale with fine-tuned retrieval
+   - Glean - enterprise search and knowledge graph over internal data
+   - Legal, financial, and healthcare sector examples where regulatory context is critical
+   For each: what architectural approach was used, what was the stated rationale, and what are the reported outcomes or failure modes?
+4. **Layered / tandem / adversarial architecture deep dive** - examine multi-model architectural patterns where one model specialises in org context while another provides general capability:
+   - Layered: adapter layers, LoRA on top of frozen base, prompt/prefix injection
+   - Tandem: routing (which model answers this query?), ensemble, Mixture-of-Agents (MoA)
+   - Adversarial: Constitutional AI debate, model-as-critic, chain-of-verification (CoVe), self-consistency
+   What is the latency, cost, and complexity overhead of each? When is each warranted?
+5. **Concept generation assessment** - investigate whether generative synthesis of org-specific concepts from internal corpora is a viable path. Does training (or fine-tuning) on org data to generate a domain concept library or synthetic domain corpus create a richer representation than RAG alone? What research supports or challenges this? Is this closer to knowledge distillation, synthetic data generation, or ontology extraction?
+6. **Feasibility matrix** - produce a structured feasibility assessment across the key adaptation approaches, covering: technology readiness (production-ready, early-adopter, research-only), cost range, data requirements (volume, quality, labelling), time-to-value estimate, and skill requirements (data science team, Machine Learning Operations (MLOps), domain experts).
+7. **Synthesis** - produce Executive Summary, Key Findings, Evidence Map, and Feasibility Matrix.

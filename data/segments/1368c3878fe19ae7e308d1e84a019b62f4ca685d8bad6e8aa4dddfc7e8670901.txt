@@ -1,0 +1,3 @@
+- source_replacement: seeded European Banking Authority risk-analysis URL -> current anti-money laundering and countering the financing of terrorism landing page plus July 2025 Opinion press release
+- source_extraction: National Institute of Standards and Technology Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile -> official publication page plus linked PDF text
+- source_extraction: Bashkirova and Krpan paper -> London School of Economics repository landing page plus DOI metadata

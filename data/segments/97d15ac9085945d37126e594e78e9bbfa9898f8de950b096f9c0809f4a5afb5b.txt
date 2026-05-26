@@ -1,0 +1,1 @@
+Retrieval quality is a first-class engineering concern. Poor retrieval — returning irrelevant results, or failing to surface a concept that should clearly match — undermines the entire value proposition of a personal knowledge system. Retrieval quality signals should be noted in the mini-retro and raised as backlog items.

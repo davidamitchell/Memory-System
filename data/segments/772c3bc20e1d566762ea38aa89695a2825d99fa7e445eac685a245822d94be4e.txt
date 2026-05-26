@@ -1,0 +1,1 @@
+Blocked on `2026-03-28-agent-instruction-loading-and-skills-access.md` (W-0035): need to know what each agent reads before specifying what to write into those files.

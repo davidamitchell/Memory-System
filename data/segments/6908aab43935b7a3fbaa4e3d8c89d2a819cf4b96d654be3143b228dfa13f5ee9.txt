@@ -1,0 +1,4 @@
+**C. Schema design**
+- C1. What tables are needed to model research items, tags, sources, and transcripts?
+- C2. How should FTS5 be layered over the relational schema?
+- C3. Where do vector embeddings live if added later?

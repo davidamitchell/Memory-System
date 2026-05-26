@@ -1,0 +1,4 @@
+The evidence consistently supports a staged adoption path:
+- **Now (< 100 items):** BM25 + dense embedding hybrid search (per semantic-full-text-search.md). RAPTOR hierarchy adds value immediately with minimal incremental cost, because existing item structure (Executive Summary, Key Findings) already provides Layers 1 and 2.
+- **At ~150–200 items:** LightRAG knowledge graph construction. This is the threshold where cross-item relationship queries ("which items address topic X in relation to Y?") become frequent enough to justify graph construction.
+- **At ~500+ items:** Community detection and community summaries (Layer 4 domain schema). GraphRAG-style global sensemaking queries become valuable at this scale.

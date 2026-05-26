@@ -1,0 +1,1 @@
+**Constraints:** Tooling must derive all signals from existing YAML front-matter (`tags`, `priority`, `status`, `added`, `completed`). No new external services. Any agenda analysis must be runnable as a GitHub Actions step or locally via `python -m src.main`.

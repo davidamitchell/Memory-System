@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Implementation mechanics for IT RUN vs BUILD cost allocation — application register governance, team taxonomy construction, work-item tagging enforcement, sponsorship requirements, 18-month phase sequence, and failure mode analysis. Anchored by GAO-25-106488 empirical failure data.
+- Links:
+  - https://www.gao.gov/products/gao-25-106488 (GAO audit: federal TBM implementation, 2025)
+  - https://regoconsulting.com/6-steps-for-a-successful-apptio-tbm-project-plan/ (Rego Consulting: practical Apptio TBM project plan)
+  - https://community.leanix.net/application-portfolio-management-42/application-classification-how-to-decide-723 (LeanIX: application boundary criteria practitioner discussion)

@@ -1,0 +1,5 @@
+**Constraints:**
+- Git-based, owner reviews diffs via GitHub website — binary database files must be treated as runtime artefacts, not committed source
+- Python 3.11+, `pyproject.toml` as dependency source
+- Single-owner, single-process (no concurrency requirements beyond atomic writes)
+- Corpus scale: hundreds to low thousands of research items; not petabyte-scale

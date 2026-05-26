@@ -1,0 +1,5 @@
+```bash
+cd /repo  # or the clone path
+git submodule update --init .github/skills
+pip install -e ".[dev]"
+```

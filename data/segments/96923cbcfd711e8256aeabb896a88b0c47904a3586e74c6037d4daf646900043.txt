@@ -1,0 +1,2 @@
+- source_replacement: OCC Bulletin 2026-13a
+- source_access: local Portable Document Format (PDF) extraction

@@ -1,0 +1,1 @@
+[inference] Cause (1) — one-off creation — is the primary structural failure. The others are symptoms or amplifiers. If process documentation is scoped and budgeted as a project deliverable, no subsequent funding or time is allocated for maintenance. Governance, ownership, and engagement failures occur downstream.

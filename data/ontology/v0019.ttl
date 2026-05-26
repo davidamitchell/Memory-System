@@ -1,0 +1,46 @@
+@prefix ms: <https://memory.example.org/ms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://memory.example.org/ms/assertion/vector-embedding> a ms:AssertionNode ;
+    rdfs:label "Vector Embedding" ;
+    rdfs:comment "A fixed-length list of numbers that encodes the meaning of a piece of text so that semantically similar texts produce numerically similar vectors." ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260524T080049> ;
+    ms:aliases "embedding",
+        "text embedding",
+        "vector representation" ;
+    ms:hasTag "embedding",
+        "nlp",
+        "representation",
+        "vector" ;
+    ms:inDomain ms:VocabularyDomain ;
+    ms:partOf <https://memory.example.org/ms/assertion/vector-database> ;
+    ms:relatedTerm <https://memory.example.org/ms/assertion/lancedb>,
+        <https://memory.example.org/ms/assertion/semantic-search> ;
+    ms:uses <https://memory.example.org/ms/assertion/embedding-model> .
+
+<https://memory.example.org/ms/activity/extract-20260524T080049> a ms:ExtractionActivity ;
+    prov:endedAtTime "2026-05-24T08:00:49+00:00"^^xsd:dateTime ;
+    prov:used <https://memory.example.org/ms/segment/1296aeb6f427cb2e6e18f9ee30c4ea7661db05c0c983de69570a19a916be2915>,
+        <https://memory.example.org/ms/segment/372040ac752937ac4f9d4108a40610c08e394ac85873a5faba1fbd6e48a1f391>,
+        <https://memory.example.org/ms/segment/8e68f0cb90bd5a5b1ac42dd060bfd691e3e5ed06ec615d4dc5915e6e261e6a47>,
+        <https://memory.example.org/ms/segment/fb40e87c4184a95e55c091c70c32406b0571dd0632a4f896645f57b1b8eade8a> ;
+    prov:wasAssociatedWith <https://memory.example.org/ms/processor/concept-extractor-v1.0.0> .
+
+<https://memory.example.org/ms/segment/1296aeb6f427cb2e6e18f9ee30c4ea7661db05c0c983de69570a19a916be2915> a ms:PreparedSegment ;
+    ms:contentHash "sha256:1296aeb6f427cb2e6e18f9ee30c4ea7661db05c0c983de69570a19a916be2915" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+
+<https://memory.example.org/ms/segment/372040ac752937ac4f9d4108a40610c08e394ac85873a5faba1fbd6e48a1f391> a ms:PreparedSegment ;
+    ms:contentHash "sha256:372040ac752937ac4f9d4108a40610c08e394ac85873a5faba1fbd6e48a1f391" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+
+<https://memory.example.org/ms/segment/8e68f0cb90bd5a5b1ac42dd060bfd691e3e5ed06ec615d4dc5915e6e261e6a47> a ms:PreparedSegment ;
+    ms:contentHash "sha256:8e68f0cb90bd5a5b1ac42dd060bfd691e3e5ed06ec615d4dc5915e6e261e6a47" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+
+<https://memory.example.org/ms/segment/fb40e87c4184a95e55c091c70c32406b0571dd0632a4f896645f57b1b8eade8a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fb40e87c4184a95e55c091c70c32406b0571dd0632a4f896645f57b1b8eade8a" ;
+    ms:sourceDocument "glossary/vector-embedding.md" .
+

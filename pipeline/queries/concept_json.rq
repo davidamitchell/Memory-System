@@ -1,0 +1,50 @@
+# concept_json.rq — Concept card query returning all fields for JSON serialisation.
+#
+# Returns all properties of an AssertionNode needed to build the JSON concept
+# card shape: label, definition, aliases, tags, related terms, and evidence.
+# Equivalent to concept_card.rq but structured for JSON output with explicit
+# ?relatedLabel binding.
+#
+# Bind the root node URI to ?node before executing.
+#
+# Example (rdflib prepareQuery / initBindings):
+#   from rdflib import URIRef
+#   g.query(QUERY, initBindings={"node": URIRef("https://memory.example.org/ms/assertion/vector-embedding")})
+#
+# Prefixes match those used in the Turtle snapshots.
+
+PREFIX ms:   <https://memory.example.org/ms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT
+    ?label
+    ?comment
+    ?alias
+    ?tag
+    ?relatedNode
+    ?relatedLabel
+    ?contentHash
+    ?sourceDoc
+WHERE {
+    ?node a ms:AssertionNode ;
+          rdfs:label ?label .
+
+    OPTIONAL { ?node rdfs:comment  ?comment }
+    OPTIONAL { ?node ms:aliases    ?alias   }
+    OPTIONAL { ?node ms:hasTag     ?tag     }
+
+    OPTIONAL {
+        ?node ms:relatedTerm ?relatedNode .
+        OPTIONAL { ?relatedNode rdfs:label ?relatedLabel }
+    }
+
+    OPTIONAL {
+        ?node prov:wasGeneratedBy ?activity .
+        ?activity prov:used ?seg .
+        ?seg ms:contentHash   ?contentHash .
+        ?seg ms:sourceDocument ?sourceDoc .
+    }
+}
+ORDER BY ?label ?alias ?tag ?relatedLabel

@@ -1,0 +1,1 @@
+The infrastructure cost tower (Compute, Storage, Network) is typically built first in Phase 4 because the data is more tractable; application/service taxonomies and labour mapping follow. [inference, consistent with KPMG phasing and TBM Council ATUM guidance]

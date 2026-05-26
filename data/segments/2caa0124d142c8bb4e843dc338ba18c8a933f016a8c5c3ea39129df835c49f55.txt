@@ -1,0 +1,12 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Outlines: ~13,500 GitHub stars, FSM-based schema enforcement, level 2 | https://github.com/dottxt-ai/outlines; https://techcrunch.com/2024/10/17/with-11-9-million-in-funding-dottxt-tells-ai-models-how-to-answer/ | High | Verified via web search 2026-03-11 |
+| Guidance: ~21,000 GitHub stars, LLGuidance engine adopted by OpenAI API | https://github.com/guidance-ai/guidance; https://www.microsoft.com/en-us/research/project/guidance-control-lm-output/ | High | Verified via web search 2026-03-11 |
+| ETH Zurich PLDI 2025: arXiv:2504.09246, compilation errors halved, level 3 | https://arxiv.org/abs/2504.09246; https://pldi25.sigplan.org/details/pldi-2025-papers/25/Type-Constrained-Code-Generation-with-Language-Models | High | Primary source; PLDI 2025 proceedings confirmed |
+| No purpose-built LLM-output language at levels 4–5 | Web search across arXiv, PLDI, NeurIPS, ICML, ICLR 2022–2025 (this investigation) | High (inference) | Absence-of-evidence claim; cannot be 100% certain; all named source-list items checked |
+| LMQL: PLDI 2023, arXiv:2212.06094, constraint-guided decoding | https://arxiv.org/abs/2212.06094 | High | Primary source |
+| SGLang: NeurIPS 2024, arXiv:2312.07104, Python-embedded DSL, RadixAttention | https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf | High | Primary source |
+| Code as Policies: arXiv:2209.07753, Python as LLM output for robot control | https://arxiv.org/abs/2209.07753 | High | Primary source |
+| Dafny as IR: arXiv:2501.06283, LLM generates Dafny for mechanical verification | https://arxiv.org/pdf/2501.06283v1 | Medium | Primary source; 2025 preprint |
+| All current tools address Layer 1 structural failures only | `Research/completed/2026-03-10-ai-concept-classification-taxonomy.md`; https://dottxt-ai.github.io/outlines/latest/ | High | Consistent across all sources; Outlines docs explicitly confirm semantic hallucination remains |
+| Level 4–5 LLM-output language faces undecidability barrier | [inference] from `Research/completed/2026-03-10-formal-spec-intent-alignment-agentic-coding.md` + computability theory | Medium | Logically derivable; no single primary source |

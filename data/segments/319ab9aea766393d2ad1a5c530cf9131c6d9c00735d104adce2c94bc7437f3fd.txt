@@ -1,0 +1,3 @@
+- The README describes Open-Brain as "a local-first, agent-native memory system".
+- LanceDB's embedded architecture (`.lancedb/` is a local folder, not a cloud endpoint) is the direct implementation of the local-first principle for the vector index.
+- The `.md` files in the git repository are the implementation for the source-of-truth data layer.

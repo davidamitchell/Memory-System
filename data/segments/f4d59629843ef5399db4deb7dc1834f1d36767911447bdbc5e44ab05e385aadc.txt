@@ -1,0 +1,1 @@
+5. **The recommended five-table schema (`items`, `tags`, `sources`, `processed`, `transcripts`) with an FTS5 virtual table over item content supports all identified query patterns: relational filtering by status/priority/tag, URL deduplication, source tracking, and full-text search.** [high confidence]

@@ -1,0 +1,4 @@
+5. What does scaling do to H-Neuron density and perturbation sensitivity?
+   5a. Does H-Neuron ratio change with model scale in Gao et al.'s data?
+   5b. Does compliance slope under perturbation change with model scale?
+   5c. What do superposition theory and scaling laws predict about feature encoding at scale?

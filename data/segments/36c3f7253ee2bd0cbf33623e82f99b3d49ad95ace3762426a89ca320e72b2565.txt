@@ -1,0 +1,1 @@
+A tag is a string element in the `tags` list of a memory file's YAML front matter. Tags provide an explicit, human-curated categorisation layer on top of the semantic vector index. Where semantic search finds files by conceptual similarity, tag-based filtering finds files by declared membership in a category.

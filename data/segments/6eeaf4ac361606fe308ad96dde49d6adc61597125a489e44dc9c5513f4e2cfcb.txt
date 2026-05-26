@@ -1,0 +1,1 @@
+[fact] The setup script can install dependencies, configure tools, or prepare anything the cloud environment needs that is not in the default image. (S3: "Use setup scripts to install dependencies, configure tools, or prepare anything the cloud environment needs that isn't in the default image.")

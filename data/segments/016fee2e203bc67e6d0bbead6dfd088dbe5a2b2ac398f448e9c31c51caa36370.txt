@@ -1,0 +1,4 @@
+**Constraints:**
+- Must distinguish structural risks, where AIBOM helps, from behavioral or inferential risks, where it does not
+- Red-team scenarios must be sourced or grounded in documented attack patterns
+- Must build on the completed theory and practice items in this AIBOM series

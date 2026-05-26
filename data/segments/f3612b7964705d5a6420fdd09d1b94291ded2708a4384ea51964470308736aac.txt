@@ -1,0 +1,17 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Custom Copilot CLI is only feasible approach | AGENTS.md credentials table; DeepEval docs; Pydantic Evals docs; agentevals README | high | Credential constraint is explicit in AGENTS.md |
+| Acronym non-expansion is most frequent failure | research-prompt.md Step 6 header ("#1 cause of review failures") | high | Explicit statement in the protocol document |
+| Executive Summary first-sentence quality is diagnostic | research-prompt.md Step 5 Executive Summary spec | high | Protocol specifies "first sentence must state the answer as a specific, falsifiable claim" |
+| Evidence Map gaps are a documented failure mode | research-prompt.md Rules ("Do not skip the Evidence Map") | high | Hard rule in the research protocol |
+| Pydantic Evals defaults to GPT-4o | https://pydantic.dev/articles/llm-as-a-judge | high | "GPT-4o by default" stated explicitly |
+| Pydantic Evals has no Copilot API integration | https://ai.pydantic.dev/evals/ documentation | high | No mention of Copilot API in docs |
+| Two-level evaluation (deterministic + LLM) | https://hamel.dev/blog/posts/evals/ | high | Hamel Level 1 (unit tests) + Level 2 (model eval) framework |
+| Hard FAIL on score 1 + 1–5 scale for trend tracking | https://ai.pydantic.dev/evals/ (binary more reproducible); https://hamel.dev/blog/posts/evals/ (pass rate is product decision) | high | Inference combining two primary practitioner sources |
+| agentevals designed for tool-call trajectory matching | https://github.com/langchain-ai/agentevals | high | README describes trajectory as "list of tool calls" |
+| Gold set must refresh with protocol changes | Research/completed/2026-03-10-agent-evaluation-cross-repo-analysis.md KF 11 | high | Benchmark saturation principle applied to gold sets |
+| Machine-parseable output pattern proven in existing workflow | .github/workflows/research-review.yml | high | grep "^OVERALL: FAIL" pattern already in production |
+| Runner cost $0.008/minute → $0.04 per 5-min run | GitHub Actions pricing documentation (https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions) | medium | Estimate; actual runtime may vary |
+| DeepEval requires OpenAI/Anthropic key | https://www.confident-ai.com/blog/llm-agent-evaluation-complete-guide | high | Documented LLM API requirement |
+| Research-review.yml applies three skills in sequence | .github/workflows/research-review.yml | high | Source code directly inspected |
+| Copilot subscription already paid / COPILOT_GITHUB_TOKEN in use | AGENTS.md approved credentials table; research-loop.yml | high | Confirmed credential exists in repository secrets |

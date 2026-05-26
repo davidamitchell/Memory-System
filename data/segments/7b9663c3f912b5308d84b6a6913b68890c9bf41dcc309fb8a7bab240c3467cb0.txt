@@ -1,0 +1,2 @@
+P8->>P9: candidate graph updates
+    P9->>CP: validation report

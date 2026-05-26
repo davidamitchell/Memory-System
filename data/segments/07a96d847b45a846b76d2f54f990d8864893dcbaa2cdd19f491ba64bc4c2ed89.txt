@@ -1,0 +1,5 @@
+**Approach sub-question 4 — Document compression and hierarchical summarisation:**
+- Q4.1: How does RAPTOR build a hierarchical tree of summaries and what retrieval precision does it achieve?
+- Q4.2: What are the information-loss trade-offs at each RAPTOR abstraction level?
+- Q4.3: How does extractive vs. abstractive compression compare for agent consumption?
+- Q4.4: What is the minimum viable hierarchy depth for 100–1,000 document corpora?

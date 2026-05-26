@@ -1,0 +1,1 @@
+[fact] Claude Code on the web does not respect `copilot-setup-steps.yml`. That file is a GitHub Actions workflow file processed only by GitHub's Actions infrastructure, which is not involved in Claude Code's execution. (S3: no mention of `copilot-setup-steps.yml`; the setup mechanism is the UI-configured Bash script.)

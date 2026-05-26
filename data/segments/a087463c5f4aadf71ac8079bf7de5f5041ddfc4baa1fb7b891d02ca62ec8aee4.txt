@@ -1,0 +1,1 @@
+6. A gold dataset of 3–5 manually audited items is the minimum viable regression baseline; the gold set must be re-evaluated whenever the research protocol changes, following the benchmark-refresh principle from the agent evaluation cross-repo analysis. Confidence: medium.

@@ -1,0 +1,1 @@
+**Coverage check:** All six approach sub-questions are addressed. The pre-training origin evidence (§2.1), the NTP causal mechanism (§2.2), data quality research (§2.3), RLHF limits (§2.4), scaling dynamics (§2.5), and intervention design (§2.6) are each substantively covered.

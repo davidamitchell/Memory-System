@@ -1,0 +1,9 @@
+**In scope:**
+- The Predictive Processing / Predictive Coding framework (Helmholtz, Friston, Clark, Seth) — the claim that perception and cognition are fundamentally generative model-based prediction
+- Karl Friston's Free Energy Principle (FEP) as the unifying mathematical framework for PP
+- Andy Clark's "Surfing Uncertainty" / "Being There" framing of PP and embodied cognition
+- Anil Seth's work on "controlled hallucination" and the beast machine thesis
+- LLM next-token generation mechanics: autoregressive Transformer (AT) architecture, self-supervised pre-training, temperature/sampling, emergent capabilities
+- Mechanistic interpretability research bearing on whether LLMs develop internal world models (Nanda et al., Grokking, linear representation probes)
+- The "stochastic parrot" critique (Bender et al., 2021) and responses to it
+- Philosophical framing: symbol grounding, intentionality, understanding vs. prediction

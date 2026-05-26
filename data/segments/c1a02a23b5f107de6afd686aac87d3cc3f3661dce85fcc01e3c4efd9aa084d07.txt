@@ -1,0 +1,7 @@
+**In scope:**
+- Structural risk mitigation: dependency graph vulnerabilities, known-compromised component detection, version drift alerts, analogous to Software Bill of Materials (SBOM) use cases
+- Behavioral risk visibility gaps: prompt injection, tool misuse, Retrieval-Augmented Generation (RAG) poisoning, and runtime manipulation that bypass even a complete AIBOM
+- Drift risk categories: model version drift, RAG knowledge-base staleness, external tool Application Programming Interface (API) changes, memory corruption, and which are detectable via AIBOM versus invisible
+- False assurance scenarios: documented attack patterns showing how an attacker can fully compromise an agentic system despite a valid, up-to-date AIBOM
+- Metric proposals: runtime dependency capture rate, drift detection latency, blast-radius reduction from AIBOM-informed controls, and AIBOM coverage-completeness score
+- Inference opacity: the limits on what can be known about a model's reasoning process regardless of AIBOM completeness

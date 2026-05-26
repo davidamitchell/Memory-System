@@ -1,0 +1,5 @@
+- **[fact]** Coverage check: the investigation addressed the private-knowledge gap, the adaptation landscape, the named case studies, layered and verifier architectures, concept generation, and the required feasibility matrix.
+- **[fact]** Source check: every factual claim in the investigation maps to a cited academic paper, vendor document, or explicitly identified repository-completed item, with the Morgan Stanley case clearly marked as secondary evidence.
+- **[fact]** Claim-labelling check: the investigation, reasoning, consistency check, depth expansion, and synthesis sections explicitly label claims as `[fact]`, `[inference]`, or `[assumption]`.
+- **[fact]** Findings check: every claim in `## Findings` below is carried over from the synthesis above and does not introduce a new factual assertion.
+- **[inference]** Final judgement: the evidence supports a layered-hybrid conclusion much more strongly than either a retrieval-only conclusion or a train-your-own-model conclusion.

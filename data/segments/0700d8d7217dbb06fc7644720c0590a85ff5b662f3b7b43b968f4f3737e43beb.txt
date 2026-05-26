@@ -1,0 +1,3 @@
+- **Economic lens**
+  - **[fact]** TCO literature and implementation evidence both show that hidden lifecycle costs are large enough to distort decisions if omitted. Sources: secondary [x] CIO TCO article; primary [x] nCino implementation page; prior-art [x] 2026-03-13-financial-forecasting-it-run-costs.md.
+  - **[inference]** The right economic question is not "license versus developers" but "vendor-amortized primitives plus local implementation versus bespoke domain platform plus local implementation."

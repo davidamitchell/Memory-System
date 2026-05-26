@@ -1,0 +1,3 @@
+**Constraints:**
+- Must be achievable using only the credentials listed in the instructions table (`GITHUB_TOKEN`, `COPILOT_GITHUB_TOKEN`).
+- No new credentials may be introduced without owner approval.

@@ -1,0 +1,1 @@
+1. SQLite + FTS5 requires zero additional dependencies beyond Python's standard library. DuckDB requires `pip install duckdb`; ChromaDB and LanceDB each pull in heavy ML dependency trees. Minimal dependency footprint is a preference in this codebase (confirmed by `pyproject.toml` structure).

@@ -1,0 +1,1 @@
+If any check fails: fix it before moving to the next item. Do not accumulate debt.

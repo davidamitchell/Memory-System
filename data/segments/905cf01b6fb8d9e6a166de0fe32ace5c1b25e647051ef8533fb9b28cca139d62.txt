@@ -1,0 +1,3 @@
+- `add_memory(title, content, folder)` is the programmatic capture tool.
+- The planned capture surfaces include: iOS Shortcut (W-0104), CLI `remember` command (W-0105), Telegram bot (W-0108), Slack bot (W-0109).
+- The inbox pattern (W-0102) removes the folder-decision friction from the capture path.

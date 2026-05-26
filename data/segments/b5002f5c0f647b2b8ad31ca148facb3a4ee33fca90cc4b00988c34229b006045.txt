@@ -1,0 +1,2 @@
+**Unsupported leaps:**
+- None identified. All claims in Findings are traced to sources in §2 or labelled as inferences.

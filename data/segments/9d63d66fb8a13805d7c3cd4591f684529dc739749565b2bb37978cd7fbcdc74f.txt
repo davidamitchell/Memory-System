@@ -1,0 +1,1 @@
+2. **JPMorgan Chase achieved a 95% reduction in false positives in AML/fraud detection using AI**, with fraud detected 300× faster and estimated savings of $1.5 billion in 2023–2024 across 450+ AI use cases spanning risk management, surveillance, and operations.

@@ -1,0 +1,10 @@
+**In scope:**
+- Global AI strategy examples: national strategies, corporate frameworks, and academic frameworks from major jurisdictions (USA, EU, UK, Singapore, Canada, Australia, etc.)
+- New Zealand-specific examples: government strategies, agency policies, and private-sector case studies
+- NZ regulatory and policy landscape: RBNZ (financial stability and prudential perspectives), DIA (digital government, privacy, trust), MBIE (economic policy, workforce, digital industry), PNZ, and any other relevant agencies or statutory bodies
+- NZ political positions on AI: current government (National-led coalition with ACT and NZ First) — any AI-specific policies, budget commitments, or regulatory intentions; and the opposition (Labour, Green Party) — their stated AI policy positions and any commitments made in or since the 2023 election
+- New Zealand case law relevant to AI: liability, intellectual property, privacy, employment, and contractual questions raised by automated or AI-assisted decisions
+- Published policy frameworks and categorisation schemas: how regulators and standards bodies are defining, classifying, and governing AI systems
+- DORA (EU Digital Operational Resilience Act) AI capability model: what it defines, who it applies to, what compliance looks like
+- Use-case typology: at minimum — (1) augmentation (AI assists humans), (2) agentic builders (AI builds artefacts — code, docs, content), (3) agents making decisions (AI operates with delegated authority), (4) fully agentic business units (AI runs an organisational unit end-to-end)
+- Exploit vs explore distinction: when should an organisation use AI to extract more value from known patterns (exploit) vs use it to discover new capabilities or markets (explore)?

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-Brain Ontology Browser — v0073</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Open-Brain Ontology Browser</h1>
+  <p class="subtitle">Version <strong>v0073</strong> &middot; 2026-05-25T20:16:51Z</p>
+  <nav id="main-nav" aria-label="Sections">
+    <a href="#overview">Overview</a>
+    <a href="#concepts">Concepts</a>
+    <a href="#relations">Relations</a>
+    <a href="#documents">Documents</a>
+  </nav>
+</header>
+
+<main>
+<section id="overview" aria-label="Overview">
+  <h2>Overview</h2>
+  <table class="stats">
+    <tbody>
+      <tr><th>Ontology version</th><td>v0073</td></tr>
+      <tr><th>Generated</th><td>2026-05-25T20:16:51Z</td></tr>
+      <tr><th>Concepts</th><td>26</td></tr>
+      <tr><th>Relations</th><td>83</td></tr>
+      <tr><th>Source documents</th><td>26</td></tr>
+    </tbody>
+  </table>
+  <div class="dist-row">
+  <div class="dist-block">
+    <h3>Concepts by domain</h3>
+    <table class="stats dist-table">
+      <thead><tr><th>Domain</th><th class="num">Concepts</th></tr></thead>
+      <tbody>
+      <tr><td>VocabularyDomain</td><td class="num">26</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="dist-block">
+    <h3>Relations by predicate</h3>
+    <table class="stats dist-table">
+      <thead><tr><th>Predicate</th><th class="num">Relations</th></tr></thead>
+      <tbody>
+      <tr><td class="predicate predicate-relatedTerm">relatedTerm</td><td class="num">30</td></tr>
+      <tr><td class="predicate predicate-uses">uses</td><td class="num">30</td></tr>
+      <tr><td class="predicate predicate-partOf">partOf</td><td class="num">16</td></tr>
+      <tr><td class="predicate predicate-implements">implements</td><td class="num">3</td></tr>
+      <tr><td class="predicate predicate-instanceOf">instanceOf</td><td class="num">3</td></tr>
+      <tr><td class="predicate predicate-contrasts">contrasts</td><td class="num">1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section id="concepts" aria-label="Concepts">
+  <h2>Concepts <span class="count">(26)</span></h2>
+  <table id="concepts-table">
+    <thead>
+      <tr>
+        <th>Label / Definition</th>
+        <th>Domain</th>
+        <th class="num" title="Number of tags">Tags</th>
+        <th class="num" title="Number of related terms">Related</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr class="concept-row" data-id="agent-first" data-concept="{&quot;id&quot;: &quot;agent-first&quot;, &quot;label&quot;: &quot;Agent-first&quot;, &quot;comment&quot;: &quot;A design philosophy that treats AI agents as primary users of a system, building in autonomous read/write access, versioned context, and self-correction from the start rather than adding them as afterthoughts.&quot;, &quot;aliases&quot;: [&quot;agent first&quot;, &quot;agent native&quot;, &quot;agent-native&quot;], &quot;tags&quot;: [&quot;agent-first&quot;, &quot;agent-native&quot;, &quot;ai&quot;, &quot;architecture&quot;, &quot;design&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;ai-agent&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;local-first&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;mcp&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}], &quot;docs&quot;: [&quot;glossary/agent-first.md&quot;]}" tabindex="0">
+      <td><strong>Agent-first</strong><br><small class="muted">A design philosophy that treats AI agents as primary users of a system, building in autonomous read/write access, versio…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="ai-agent" data-concept="{&quot;id&quot;: &quot;ai-agent&quot;, &quot;label&quot;: &quot;AI Agent&quot;, &quot;comment&quot;: &quot;An AI system that can autonomously take sequences of actions \u2014 including calling external tools \u2014 to complete a goal specified in natural language.&quot;, &quot;aliases&quot;: [&quot;AI assistant&quot;, &quot;Copilot agent&quot;, &quot;agent&quot;, &quot;coding agent&quot;], &quot;tags&quot;: [&quot;agent&quot;, &quot;ai&quot;, &quot;autonomous&quot;, &quot;claude&quot;, &quot;copilot&quot;, &quot;cursor&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;agent-first&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;mcp&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;mcp-tool&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;skill&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/ai-agent.md&quot;]}" tabindex="0">
+      <td><strong>AI Agent</strong><br><small class="muted">An AI system that can autonomously take sequences of actions — including calling external tools — to complete a goal spe…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">6</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="adr" data-concept="{&quot;id&quot;: &quot;adr&quot;, &quot;label&quot;: &quot;Architecture Decision Record&quot;, &quot;comment&quot;: &quot;A short, structured document that records a significant architectural or design decision, its context, the options considered, and the consequences of the chosen option.&quot;, &quot;aliases&quot;: [&quot;ADR&quot;, &quot;decision record&quot;], &quot;tags&quot;: [&quot;adr&quot;, &quot;architecture&quot;, &quot;decision&quot;, &quot;documentation&quot;, &quot;governance&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;madr&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}], &quot;docs&quot;: [&quot;glossary/adr.md&quot;]}" tabindex="0">
+      <td><strong>Architecture Decision Record</strong><br><small class="muted">A short, structured document that records a significant architectural or design decision, its context, the options consi…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">2</td>
+    </tr>
+    <tr class="concept-row" data-id="capture" data-concept="{&quot;id&quot;: &quot;capture&quot;, &quot;label&quot;: &quot;Capture&quot;, &quot;comment&quot;: &quot;The act of storing a new piece of knowledge as a memory file \u2014 the write side of the memory system, in contrast to retrieval.&quot;, &quot;aliases&quot;: [&quot;add memory&quot;, &quot;memory capture&quot;, &quot;write&quot;], &quot;tags&quot;: [&quot;capture&quot;, &quot;friction&quot;, &quot;input&quot;, &quot;memory&quot;, &quot;write&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;inbox&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;mcp-tool&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;memory-file&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;retrieval&quot;, &quot;rel&quot;: &quot;contrasts&quot;}], &quot;docs&quot;: [&quot;glossary/capture.md&quot;]}" tabindex="0">
+      <td><strong>Capture</strong><br><small class="muted">The act of storing a new piece of knowledge as a memory file — the write side of the memory system, in contrast to retri…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="embedding-model" data-concept="{&quot;id&quot;: &quot;embedding-model&quot;, &quot;label&quot;: &quot;Embedding Model&quot;, &quot;comment&quot;: &quot;A machine-learning model that converts text into a fixed-length vector of numbers representing its semantic content.&quot;, &quot;aliases&quot;: [&quot;sentence encoder&quot;, &quot;text encoder&quot;], &quot;tags&quot;: [&quot;embedding&quot;, &quot;model&quot;, &quot;nlp&quot;, &quot;superseded&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;lancedb&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;semantic-search&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;vector-embedding&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/embedding-model.md&quot;]}" tabindex="0">
+      <td><strong>Embedding Model</strong><br><small class="muted">A machine-learning model that converts text into a fixed-length vector of numbers representing its semantic content.</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="inbox" data-concept="{&quot;id&quot;: &quot;inbox&quot;, &quot;label&quot;: &quot;Inbox&quot;, &quot;comment&quot;: &quot;A designated `/inbox` folder where memory files can be dropped without a folder decision, title, or full front matter, for later classification by an agent.&quot;, &quot;aliases&quot;: [&quot;capture inbox&quot;, &quot;inbox folder&quot;], &quot;tags&quot;: [&quot;capture&quot;, &quot;folder&quot;, &quot;inbox&quot;, &quot;triage&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;capture&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;memory-file&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;triage&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}], &quot;docs&quot;: [&quot;glossary/inbox.md&quot;]}" tabindex="0">
+      <td><strong>Inbox</strong><br><small class="muted">A designated `/inbox` folder where memory files can be dropped without a folder decision, title, or full front matter, f…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="knowledge-graph" data-concept="{&quot;id&quot;: &quot;knowledge-graph&quot;, &quot;label&quot;: &quot;Knowledge Graph&quot;, &quot;comment&quot;: &quot;A structured network in which entities (concepts, assertions, sources) are connected by typed relationships, enabling reasoning, traversal, and structured query.&quot;, &quot;aliases&quot;: [&quot;knowledge base graph&quot;, &quot;ontology graph&quot;], &quot;tags&quot;: [&quot;graph&quot;, &quot;knowledge-graph&quot;, &quot;links&quot;, &quot;ontology&quot;, &quot;structure&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;tag&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/knowledge-graph.md&quot;]}" tabindex="0">
+      <td><strong>Knowledge Graph</strong><br><small class="muted">A structured network in which entities (concepts, assertions, sources) are connected by typed relationships, enabling re…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">2</td>
+    </tr>
+    <tr class="concept-row" data-id="lancedb" data-concept="{&quot;id&quot;: &quot;lancedb&quot;, &quot;label&quot;: &quot;LanceDB&quot;, &quot;comment&quot;: &quot;An embedded, serverless vector database that stores and searches high-dimensional numerical vectors, requiring no separate database process.&quot;, &quot;aliases&quot;: [], &quot;tags&quot;: [&quot;embedded&quot;, &quot;lancedb&quot;, &quot;search&quot;, &quot;superseded&quot;, &quot;vector-database&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;embedding-model&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;semantic-search&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;vector-database&quot;, &quot;rel&quot;: &quot;instanceOf&quot;}, {&quot;id&quot;: &quot;vector-embedding&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/lancedb.md&quot;]}" tabindex="0">
+      <td><strong>LanceDB</strong><br><small class="muted">An embedded, serverless vector database that stores and searches high-dimensional numerical vectors, requiring no separa…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="local-first" data-concept="{&quot;id&quot;: &quot;local-first&quot;, &quot;label&quot;: &quot;Local-first&quot;, &quot;comment&quot;: &quot;A software design philosophy in which the user&#x27;s local device is the primary source of truth, with cloud storage used for backup and sync rather than as the authoritative store.&quot;, &quot;aliases&quot;: [&quot;local first&quot;, &quot;offline-first&quot;], &quot;tags&quot;: [&quot;architecture&quot;, &quot;design&quot;, &quot;local-first&quot;, &quot;offline&quot;, &quot;privacy&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;agent-first&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;lancedb&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}], &quot;docs&quot;: [&quot;glossary/local-first.md&quot;]}" tabindex="0">
+      <td><strong>Local-first</strong><br><small class="muted">A software design philosophy in which the user&#x27;s local device is the primary source of truth, with cloud storage used fo…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="madr" data-concept="{&quot;id&quot;: &quot;madr&quot;, &quot;label&quot;: &quot;MADR&quot;, &quot;comment&quot;: &quot;A lightweight Markdown template for writing Architecture Decision Records that enforces the minimum structure needed to capture context, decision, and consequences.&quot;, &quot;aliases&quot;: [&quot;Markdown Any Decision Records&quot;, &quot;Markdown Architectural Decision Records&quot;], &quot;tags&quot;: [&quot;adr&quot;, &quot;decision&quot;, &quot;format&quot;, &quot;madr&quot;, &quot;markdown&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;adr&quot;, &quot;rel&quot;: &quot;instanceOf&quot;}], &quot;docs&quot;: [&quot;glossary/madr.md&quot;]}" tabindex="0">
+      <td><strong>MADR</strong><br><small class="muted">A lightweight Markdown template for writing Architecture Decision Records that enforces the minimum structure needed to …</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">1</td>
+    </tr>
+    <tr class="concept-row" data-id="mcp-server" data-concept="{&quot;id&quot;: &quot;mcp-server&quot;, &quot;label&quot;: &quot;MCP Server&quot;, &quot;comment&quot;: &quot;A process that implements the Model Context Protocol server side, exposing a named set of tools that AI clients can discover and call.&quot;, &quot;aliases&quot;: [&quot;mcp_server.py&quot;, &quot;open-brain server&quot;], &quot;tags&quot;: [&quot;bridge&quot;, &quot;mcp&quot;, &quot;python&quot;, &quot;server&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;mcp&quot;, &quot;rel&quot;: &quot;implements&quot;}, {&quot;id&quot;: &quot;mcp-tool&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;stdio-transport&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/mcp-server.md&quot;]}" tabindex="0">
+      <td><strong>MCP Server</strong><br><small class="muted">A process that implements the Model Context Protocol server side, exposing a named set of tools that AI clients can disc…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="mcp-tool" data-concept="{&quot;id&quot;: &quot;mcp-tool&quot;, &quot;label&quot;: &quot;MCP Tool&quot;, &quot;comment&quot;: &quot;A named, typed capability declared by an MCP server that an AI agent can discover and invoke autonomously.&quot;, &quot;aliases&quot;: [&quot;MCP capability&quot;, &quot;tool call&quot;], &quot;tags&quot;: [&quot;api&quot;, &quot;capability&quot;, &quot;mcp&quot;, &quot;tool&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;ai-agent&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;mcp&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;mcp-server&quot;, &quot;rel&quot;: &quot;partOf&quot;}], &quot;docs&quot;: [&quot;glossary/mcp-tool.md&quot;]}" tabindex="0">
+      <td><strong>MCP Tool</strong><br><small class="muted">A named, typed capability declared by an MCP server that an AI agent can discover and invoke autonomously.</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="memory-file" data-concept="{&quot;id&quot;: &quot;memory-file&quot;, &quot;label&quot;: &quot;Memory File&quot;, &quot;comment&quot;: &quot;A single Markdown file stored in this repository that represents one unit of source knowledge, from which the ontology store derives structured assertions.&quot;, &quot;aliases&quot;: [&quot;brain file&quot;, &quot;memory&quot;, &quot;note&quot;, &quot;source document&quot;], &quot;tags&quot;: [&quot;file&quot;, &quot;markdown&quot;, &quot;memory&quot;, &quot;note&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;superseded-by&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;tag&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;yaml-front-matter&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/memory-file.md&quot;]}" tabindex="0">
+      <td><strong>Memory File</strong><br><small class="muted">A single Markdown file stored in this repository that represents one unit of source knowledge, from which the ontology s…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="mini-retro" data-concept="{&quot;id&quot;: &quot;mini-retro&quot;, &quot;label&quot;: &quot;Mini-Retro&quot;, &quot;comment&quot;: &quot;A mandatory four-question retrospective appended to `PROGRESS.md` at the end of every agent session, designed to surface process improvements and convert friction into system changes.&quot;, &quot;aliases&quot;: [&quot;mini retrospective&quot;, &quot;retro&quot;, &quot;session retrospective&quot;], &quot;tags&quot;: [&quot;improvement&quot;, &quot;mini-retro&quot;, &quot;process&quot;, &quot;retrospective&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;adr&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;partOf&quot;}], &quot;docs&quot;: [&quot;glossary/mini-retro.md&quot;]}" tabindex="0">
+      <td><strong>Mini-Retro</strong><br><small class="muted">A mandatory four-question retrospective appended to `PROGRESS.md` at the end of every agent session, designed to surface…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">2</td>
+    </tr>
+    <tr class="concept-row" data-id="mcp" data-concept="{&quot;id&quot;: &quot;mcp&quot;, &quot;label&quot;: &quot;Model Context Protocol&quot;, &quot;comment&quot;: &quot;An open standard that lets AI assistants call external tools and data sources through a structured interface, replacing one-off integrations with a single universal protocol.&quot;, &quot;aliases&quot;: [&quot;MCP&quot;], &quot;tags&quot;: [&quot;ai&quot;, &quot;integration&quot;, &quot;mcp&quot;, &quot;protocol&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;ai-agent&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;mcp-server&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;mcp-tool&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;stdio-transport&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}], &quot;docs&quot;: [&quot;glossary/mcp.md&quot;]}" tabindex="0">
+      <td><strong>Model Context Protocol</strong><br><small class="muted">An open standard that lets AI assistants call external tools and data sources through a structured interface, replacing …</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="open-brain" data-concept="{&quot;id&quot;: &quot;open-brain&quot;, &quot;label&quot;: &quot;Open-Brain&quot;, &quot;comment&quot;: &quot;The personal AI knowledge store implemented in this repository: a local-first, agent-native knowledge base backed by Markdown files and an ontology-based knowledge graph, exposed to AI tools via the Model Context Protocol.&quot;, &quot;aliases&quot;: [&quot;GitHub Open-Brain&quot;, &quot;Memory-System&quot;, &quot;open brain&quot;], &quot;tags&quot;: [&quot;github&quot;, &quot;memory-system&quot;, &quot;open-brain&quot;, &quot;project&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;agent-first&quot;, &quot;rel&quot;: &quot;implements&quot;}, {&quot;id&quot;: &quot;knowledge-graph&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;local-first&quot;, &quot;rel&quot;: &quot;implements&quot;}, {&quot;id&quot;: &quot;mcp-server&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/open-brain.md&quot;]}" tabindex="0">
+      <td><strong>Open-Brain</strong><br><small class="muted">The personal AI knowledge store implemented in this repository: a local-first, agent-native knowledge base backed by Mar…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="retrieval" data-concept="{&quot;id&quot;: &quot;retrieval&quot;, &quot;label&quot;: &quot;Retrieval&quot;, &quot;comment&quot;: &quot;The process of finding and returning relevant knowledge in response to a query, using ontology traversal, graph pattern matching, or structured query across the knowledge store.&quot;, &quot;aliases&quot;: [&quot;knowledge retrieval&quot;, &quot;recall&quot;, &quot;search&quot;], &quot;tags&quot;: [&quot;knowledge&quot;, &quot;recall&quot;, &quot;retrieval&quot;, &quot;search&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;knowledge-graph&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;mcp-tool&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;partOf&quot;}], &quot;docs&quot;: [&quot;glossary/retrieval.md&quot;]}" tabindex="0">
+      <td><strong>Retrieval</strong><br><small class="muted">The process of finding and returning relevant knowledge in response to a query, using ontology traversal, graph pattern …</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="semantic-search" data-concept="{&quot;id&quot;: &quot;semantic-search&quot;, &quot;label&quot;: &quot;Semantic Search&quot;, &quot;comment&quot;: &quot;A search technique that finds documents by conceptual meaning rather than exact keyword matching, using vector similarity as the relevance signal.&quot;, &quot;aliases&quot;: [&quot;similarity search&quot;, &quot;vector search&quot;], &quot;tags&quot;: [&quot;nlp&quot;, &quot;retrieval&quot;, &quot;search&quot;, &quot;similarity&quot;, &quot;superseded&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;lancedb&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;retrieval&quot;, &quot;rel&quot;: &quot;instanceOf&quot;}, {&quot;id&quot;: &quot;vector-database&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;vector-embedding&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/semantic-search.md&quot;]}" tabindex="0">
+      <td><strong>Semantic Search</strong><br><small class="muted">A search technique that finds documents by conceptual meaning rather than exact keyword matching, using vector similarit…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="skill" data-concept="{&quot;id&quot;: &quot;skill&quot;, &quot;label&quot;: &quot;Skill&quot;, &quot;comment&quot;: &quot;A reusable, self-contained Markdown file in `.github/skills/` that provides an AI agent with specialised instructions for a well-defined task type.&quot;, &quot;aliases&quot;: [&quot;agent skill&quot;, &quot;skill module&quot;], &quot;tags&quot;: [&quot;agent&quot;, &quot;instruction&quot;, &quot;module&quot;, &quot;reusable&quot;, &quot;skill&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;adr&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;ai-agent&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;open-brain&quot;, &quot;rel&quot;: &quot;partOf&quot;}], &quot;docs&quot;: [&quot;glossary/skill.md&quot;]}" tabindex="0">
+      <td><strong>Skill</strong><br><small class="muted">A reusable, self-contained Markdown file in `.github/skills/` that provides an AI agent with specialised instructions fo…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="stdio-transport" data-concept="{&quot;id&quot;: &quot;stdio-transport&quot;, &quot;label&quot;: &quot;stdio Transport&quot;, &quot;comment&quot;: &quot;The MCP transport mechanism that uses a process&#x27;s standard input and standard output streams to exchange JSON-RPC messages between an MCP client and server.&quot;, &quot;aliases&quot;: [&quot;standard input/output transport&quot;, &quot;stdio&quot;], &quot;tags&quot;: [&quot;ipc&quot;, &quot;mcp&quot;, &quot;protocol&quot;, &quot;stdio&quot;, &quot;transport&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;mcp&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;mcp-server&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/stdio-transport.md&quot;]}" tabindex="0">
+      <td><strong>stdio Transport</strong><br><small class="muted">The MCP transport mechanism that uses a process&#x27;s standard input and standard output streams to exchange JSON-RPC messag…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">5</td>
+      <td class="num" data-label="Related">2</td>
+    </tr>
+    <tr class="concept-row" data-id="superseded-by" data-concept="{&quot;id&quot;: &quot;superseded-by&quot;, &quot;label&quot;: &quot;Superseded-by&quot;, &quot;comment&quot;: &quot;The memory lifecycle state (and corresponding front matter field) that marks a file as out of date and points to the newer file that replaced it, preserving history while directing readers to current information.&quot;, &quot;aliases&quot;: [&quot;superseded&quot;, &quot;superseded_by&quot;, &quot;supersedes&quot;], &quot;tags&quot;: [&quot;lifecycle&quot;, &quot;memory&quot;, &quot;superseded-by&quot;, &quot;versioning&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;knowledge-graph&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;memory-file&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;yaml-front-matter&quot;, &quot;rel&quot;: &quot;partOf&quot;}], &quot;docs&quot;: [&quot;glossary/superseded-by.md&quot;]}" tabindex="0">
+      <td><strong>Superseded-by</strong><br><small class="muted">The memory lifecycle state (and corresponding front matter field) that marks a file as out of date and points to the new…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="tag" data-concept="{&quot;id&quot;: &quot;tag&quot;, &quot;label&quot;: &quot;Tag&quot;, &quot;comment&quot;: &quot;A short keyword stored in a memory file&#x27;s YAML front matter that categorises the file and makes it retrievable by topic even when semantic search returns noisy results.&quot;, &quot;aliases&quot;: [&quot;category tag&quot;, &quot;label&quot;], &quot;tags&quot;: [&quot;categorisation&quot;, &quot;metadata&quot;, &quot;retrieval&quot;, &quot;tag&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;memory-file&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;semantic-search&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;yaml-front-matter&quot;, &quot;rel&quot;: &quot;partOf&quot;}], &quot;docs&quot;: [&quot;glossary/tag.md&quot;]}" tabindex="0">
+      <td><strong>Tag</strong><br><small class="muted">A short keyword stored in a memory file&#x27;s YAML front matter that categorises the file and makes it retrievable by topic …</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="triage" data-concept="{&quot;id&quot;: &quot;triage&quot;, &quot;label&quot;: &quot;Triage&quot;, &quot;comment&quot;: &quot;The process of reviewing inbox files, inferring the correct destination folder and front matter, and moving each file to its permanent location.&quot;, &quot;aliases&quot;: [&quot;classification&quot;, &quot;inbox triage&quot;, &quot;memory triage&quot;], &quot;tags&quot;: [&quot;automation&quot;, &quot;classification&quot;, &quot;inbox&quot;, &quot;triage&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;ai-agent&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;capture&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;inbox&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;memory-file&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}], &quot;docs&quot;: [&quot;glossary/triage.md&quot;]}" tabindex="0">
+      <td><strong>Triage</strong><br><small class="muted">The process of reviewing inbox files, inferring the correct destination folder and front matter, and moving each file to…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="vector-database" data-concept="{&quot;id&quot;: &quot;vector-database&quot;, &quot;label&quot;: &quot;Vector Database&quot;, &quot;comment&quot;: &quot;A database purpose-built to store and retrieve high-dimensional numerical vectors using approximate nearest-neighbour algorithms.&quot;, &quot;aliases&quot;: [&quot;embedding store&quot;, &quot;vector store&quot;], &quot;tags&quot;: [&quot;database&quot;, &quot;search&quot;, &quot;storage&quot;, &quot;vector&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;lancedb&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;semantic-search&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;vector-embedding&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/vector-database.md&quot;]}" tabindex="0">
+      <td><strong>Vector Database</strong><br><small class="muted">A database purpose-built to store and retrieve high-dimensional numerical vectors using approximate nearest-neighbour al…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    <tr class="concept-row" data-id="vector-embedding" data-concept="{&quot;id&quot;: &quot;vector-embedding&quot;, &quot;label&quot;: &quot;Vector Embedding&quot;, &quot;comment&quot;: &quot;A fixed-length list of numbers that encodes the meaning of a piece of text so that semantically similar texts produce numerically similar vectors.&quot;, &quot;aliases&quot;: [&quot;embedding&quot;, &quot;text embedding&quot;, &quot;vector representation&quot;], &quot;tags&quot;: [&quot;embedding&quot;, &quot;nlp&quot;, &quot;representation&quot;, &quot;vector&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;embedding-model&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;lancedb&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;semantic-search&quot;, &quot;rel&quot;: &quot;relatedTerm&quot;}, {&quot;id&quot;: &quot;vector-database&quot;, &quot;rel&quot;: &quot;partOf&quot;}], &quot;docs&quot;: [&quot;glossary/vector-embedding.md&quot;]}" tabindex="0">
+      <td><strong>Vector Embedding</strong><br><small class="muted">A fixed-length list of numbers that encodes the meaning of a piece of text so that semantically similar texts produce nu…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">4</td>
+    </tr>
+    <tr class="concept-row" data-id="yaml-front-matter" data-concept="{&quot;id&quot;: &quot;yaml-front-matter&quot;, &quot;label&quot;: &quot;YAML Front Matter&quot;, &quot;comment&quot;: &quot;A block of YAML key-value metadata at the very top of a Markdown file, delimited by `---` lines, that provides structured fields for indexing and retrieval.&quot;, &quot;aliases&quot;: [&quot;YAML header&quot;, &quot;front matter&quot;, &quot;frontmatter&quot;], &quot;tags&quot;: [&quot;front-matter&quot;, &quot;markdown&quot;, &quot;metadata&quot;, &quot;yaml&quot;], &quot;domain&quot;: &quot;VocabularyDomain&quot;, &quot;related&quot;: [{&quot;id&quot;: &quot;memory-file&quot;, &quot;rel&quot;: &quot;partOf&quot;}, {&quot;id&quot;: &quot;superseded-by&quot;, &quot;rel&quot;: &quot;uses&quot;}, {&quot;id&quot;: &quot;tag&quot;, &quot;rel&quot;: &quot;uses&quot;}], &quot;docs&quot;: [&quot;glossary/yaml-front-matter.md&quot;]}" tabindex="0">
+      <td><strong>YAML Front Matter</strong><br><small class="muted">A block of YAML key-value metadata at the very top of a Markdown file, delimited by `---` lines, that provides structure…</small></td>
+      <td data-label="Domain">VocabularyDomain</td>
+      <td class="num" data-label="Tags">4</td>
+      <td class="num" data-label="Related">3</td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="relations" aria-label="Relations">
+  <h2>Relations <span class="count">(83)</span></h2>
+  <div class="table-scroll">
+  <table id="relations-table">
+    <thead>
+      <tr>
+        <th>From</th>
+        <th>Predicate</th>
+        <th>To</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr class="relation-row" tabindex="0" data-from="agent-first" data-pred="relatedTerm" data-to="ai-agent" data-relation="{&quot;from_id&quot;: &quot;agent-first&quot;, &quot;from_label&quot;: &quot;Agent-first&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;ai-agent&quot;, &quot;to_label&quot;: &quot;AI Agent&quot;}">
+      <td data-label="From"><a href="#concept/agent-first">Agent-first</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/ai-agent">AI Agent</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="agent-first" data-pred="relatedTerm" data-to="local-first" data-relation="{&quot;from_id&quot;: &quot;agent-first&quot;, &quot;from_label&quot;: &quot;Agent-first&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;local-first&quot;, &quot;to_label&quot;: &quot;Local-first&quot;}">
+      <td data-label="From"><a href="#concept/agent-first">Agent-first</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/local-first">Local-first</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="agent-first" data-pred="relatedTerm" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;agent-first&quot;, &quot;from_label&quot;: &quot;Agent-first&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/agent-first">Agent-first</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="agent-first" data-pred="uses" data-to="mcp" data-relation="{&quot;from_id&quot;: &quot;agent-first&quot;, &quot;from_label&quot;: &quot;Agent-first&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;mcp&quot;, &quot;to_label&quot;: &quot;Model Context Protocol&quot;}">
+      <td data-label="From"><a href="#concept/agent-first">Agent-first</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/mcp">Model Context Protocol</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="ai-agent" data-pred="relatedTerm" data-to="agent-first" data-relation="{&quot;from_id&quot;: &quot;ai-agent&quot;, &quot;from_label&quot;: &quot;AI Agent&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;agent-first&quot;, &quot;to_label&quot;: &quot;Agent-first&quot;}">
+      <td data-label="From"><a href="#concept/ai-agent">AI Agent</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/agent-first">Agent-first</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="ai-agent" data-pred="uses" data-to="mcp-tool" data-relation="{&quot;from_id&quot;: &quot;ai-agent&quot;, &quot;from_label&quot;: &quot;AI Agent&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;mcp-tool&quot;, &quot;to_label&quot;: &quot;MCP Tool&quot;}">
+      <td data-label="From"><a href="#concept/ai-agent">AI Agent</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/mcp-tool">MCP Tool</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="ai-agent" data-pred="uses" data-to="mcp" data-relation="{&quot;from_id&quot;: &quot;ai-agent&quot;, &quot;from_label&quot;: &quot;AI Agent&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;mcp&quot;, &quot;to_label&quot;: &quot;Model Context Protocol&quot;}">
+      <td data-label="From"><a href="#concept/ai-agent">AI Agent</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/mcp">Model Context Protocol</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="ai-agent" data-pred="uses" data-to="skill" data-relation="{&quot;from_id&quot;: &quot;ai-agent&quot;, &quot;from_label&quot;: &quot;AI Agent&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;skill&quot;, &quot;to_label&quot;: &quot;Skill&quot;}">
+      <td data-label="From"><a href="#concept/ai-agent">AI Agent</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/skill">Skill</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="adr" data-pred="relatedTerm" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;adr&quot;, &quot;from_label&quot;: &quot;Architecture Decision Record&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/adr">Architecture Decision Record</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="adr" data-pred="uses" data-to="madr" data-relation="{&quot;from_id&quot;: &quot;adr&quot;, &quot;from_label&quot;: &quot;Architecture Decision Record&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;madr&quot;, &quot;to_label&quot;: &quot;MADR&quot;}">
+      <td data-label="From"><a href="#concept/adr">Architecture Decision Record</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/madr">MADR</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="capture" data-pred="contrasts" data-to="retrieval" data-relation="{&quot;from_id&quot;: &quot;capture&quot;, &quot;from_label&quot;: &quot;Capture&quot;, &quot;predicate&quot;: &quot;contrasts&quot;, &quot;to_id&quot;: &quot;retrieval&quot;, &quot;to_label&quot;: &quot;Retrieval&quot;}">
+      <td data-label="From"><a href="#concept/capture">Capture</a></td>
+      <td class="predicate predicate-contrasts" data-label="Predicate">contrasts</td>
+      <td data-label="To"><a href="#concept/retrieval">Retrieval</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="capture" data-pred="uses" data-to="inbox" data-relation="{&quot;from_id&quot;: &quot;capture&quot;, &quot;from_label&quot;: &quot;Capture&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;inbox&quot;, &quot;to_label&quot;: &quot;Inbox&quot;}">
+      <td data-label="From"><a href="#concept/capture">Capture</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/inbox">Inbox</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="capture" data-pred="uses" data-to="mcp-tool" data-relation="{&quot;from_id&quot;: &quot;capture&quot;, &quot;from_label&quot;: &quot;Capture&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;mcp-tool&quot;, &quot;to_label&quot;: &quot;MCP Tool&quot;}">
+      <td data-label="From"><a href="#concept/capture">Capture</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/mcp-tool">MCP Tool</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="capture" data-pred="uses" data-to="memory-file" data-relation="{&quot;from_id&quot;: &quot;capture&quot;, &quot;from_label&quot;: &quot;Capture&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;memory-file&quot;, &quot;to_label&quot;: &quot;Memory File&quot;}">
+      <td data-label="From"><a href="#concept/capture">Capture</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/memory-file">Memory File</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="embedding-model" data-pred="relatedTerm" data-to="lancedb" data-relation="{&quot;from_id&quot;: &quot;embedding-model&quot;, &quot;from_label&quot;: &quot;Embedding Model&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;lancedb&quot;, &quot;to_label&quot;: &quot;LanceDB&quot;}">
+      <td data-label="From"><a href="#concept/embedding-model">Embedding Model</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/lancedb">LanceDB</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="embedding-model" data-pred="relatedTerm" data-to="semantic-search" data-relation="{&quot;from_id&quot;: &quot;embedding-model&quot;, &quot;from_label&quot;: &quot;Embedding Model&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;semantic-search&quot;, &quot;to_label&quot;: &quot;Semantic Search&quot;}">
+      <td data-label="From"><a href="#concept/embedding-model">Embedding Model</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/semantic-search">Semantic Search</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="embedding-model" data-pred="uses" data-to="vector-embedding" data-relation="{&quot;from_id&quot;: &quot;embedding-model&quot;, &quot;from_label&quot;: &quot;Embedding Model&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;vector-embedding&quot;, &quot;to_label&quot;: &quot;Vector Embedding&quot;}">
+      <td data-label="From"><a href="#concept/embedding-model">Embedding Model</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="inbox" data-pred="partOf" data-to="capture" data-relation="{&quot;from_id&quot;: &quot;inbox&quot;, &quot;from_label&quot;: &quot;Inbox&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;capture&quot;, &quot;to_label&quot;: &quot;Capture&quot;}">
+      <td data-label="From"><a href="#concept/inbox">Inbox</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/capture">Capture</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="inbox" data-pred="partOf" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;inbox&quot;, &quot;from_label&quot;: &quot;Inbox&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/inbox">Inbox</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="inbox" data-pred="relatedTerm" data-to="memory-file" data-relation="{&quot;from_id&quot;: &quot;inbox&quot;, &quot;from_label&quot;: &quot;Inbox&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;memory-file&quot;, &quot;to_label&quot;: &quot;Memory File&quot;}">
+      <td data-label="From"><a href="#concept/inbox">Inbox</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/memory-file">Memory File</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="inbox" data-pred="relatedTerm" data-to="triage" data-relation="{&quot;from_id&quot;: &quot;inbox&quot;, &quot;from_label&quot;: &quot;Inbox&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;triage&quot;, &quot;to_label&quot;: &quot;Triage&quot;}">
+      <td data-label="From"><a href="#concept/inbox">Inbox</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/triage">Triage</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="knowledge-graph" data-pred="partOf" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;knowledge-graph&quot;, &quot;from_label&quot;: &quot;Knowledge Graph&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/knowledge-graph">Knowledge Graph</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="knowledge-graph" data-pred="uses" data-to="tag" data-relation="{&quot;from_id&quot;: &quot;knowledge-graph&quot;, &quot;from_label&quot;: &quot;Knowledge Graph&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;tag&quot;, &quot;to_label&quot;: &quot;Tag&quot;}">
+      <td data-label="From"><a href="#concept/knowledge-graph">Knowledge Graph</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/tag">Tag</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="lancedb" data-pred="instanceOf" data-to="vector-database" data-relation="{&quot;from_id&quot;: &quot;lancedb&quot;, &quot;from_label&quot;: &quot;LanceDB&quot;, &quot;predicate&quot;: &quot;instanceOf&quot;, &quot;to_id&quot;: &quot;vector-database&quot;, &quot;to_label&quot;: &quot;Vector Database&quot;}">
+      <td data-label="From"><a href="#concept/lancedb">LanceDB</a></td>
+      <td class="predicate predicate-instanceOf" data-label="Predicate">instanceOf</td>
+      <td data-label="To"><a href="#concept/vector-database">Vector Database</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="lancedb" data-pred="relatedTerm" data-to="semantic-search" data-relation="{&quot;from_id&quot;: &quot;lancedb&quot;, &quot;from_label&quot;: &quot;LanceDB&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;semantic-search&quot;, &quot;to_label&quot;: &quot;Semantic Search&quot;}">
+      <td data-label="From"><a href="#concept/lancedb">LanceDB</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/semantic-search">Semantic Search</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="lancedb" data-pred="uses" data-to="embedding-model" data-relation="{&quot;from_id&quot;: &quot;lancedb&quot;, &quot;from_label&quot;: &quot;LanceDB&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;embedding-model&quot;, &quot;to_label&quot;: &quot;Embedding Model&quot;}">
+      <td data-label="From"><a href="#concept/lancedb">LanceDB</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/embedding-model">Embedding Model</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="lancedb" data-pred="uses" data-to="vector-embedding" data-relation="{&quot;from_id&quot;: &quot;lancedb&quot;, &quot;from_label&quot;: &quot;LanceDB&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;vector-embedding&quot;, &quot;to_label&quot;: &quot;Vector Embedding&quot;}">
+      <td data-label="From"><a href="#concept/lancedb">LanceDB</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="local-first" data-pred="relatedTerm" data-to="agent-first" data-relation="{&quot;from_id&quot;: &quot;local-first&quot;, &quot;from_label&quot;: &quot;Local-first&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;agent-first&quot;, &quot;to_label&quot;: &quot;Agent-first&quot;}">
+      <td data-label="From"><a href="#concept/local-first">Local-first</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/agent-first">Agent-first</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="local-first" data-pred="relatedTerm" data-to="lancedb" data-relation="{&quot;from_id&quot;: &quot;local-first&quot;, &quot;from_label&quot;: &quot;Local-first&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;lancedb&quot;, &quot;to_label&quot;: &quot;LanceDB&quot;}">
+      <td data-label="From"><a href="#concept/local-first">Local-first</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/lancedb">LanceDB</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="local-first" data-pred="relatedTerm" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;local-first&quot;, &quot;from_label&quot;: &quot;Local-first&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/local-first">Local-first</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="madr" data-pred="instanceOf" data-to="adr" data-relation="{&quot;from_id&quot;: &quot;madr&quot;, &quot;from_label&quot;: &quot;MADR&quot;, &quot;predicate&quot;: &quot;instanceOf&quot;, &quot;to_id&quot;: &quot;adr&quot;, &quot;to_label&quot;: &quot;Architecture Decision Record&quot;}">
+      <td data-label="From"><a href="#concept/madr">MADR</a></td>
+      <td class="predicate predicate-instanceOf" data-label="Predicate">instanceOf</td>
+      <td data-label="To"><a href="#concept/adr">Architecture Decision Record</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp-server" data-pred="implements" data-to="mcp" data-relation="{&quot;from_id&quot;: &quot;mcp-server&quot;, &quot;from_label&quot;: &quot;MCP Server&quot;, &quot;predicate&quot;: &quot;implements&quot;, &quot;to_id&quot;: &quot;mcp&quot;, &quot;to_label&quot;: &quot;Model Context Protocol&quot;}">
+      <td data-label="From"><a href="#concept/mcp-server">MCP Server</a></td>
+      <td class="predicate predicate-implements" data-label="Predicate">implements</td>
+      <td data-label="To"><a href="#concept/mcp">Model Context Protocol</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp-server" data-pred="relatedTerm" data-to="mcp-tool" data-relation="{&quot;from_id&quot;: &quot;mcp-server&quot;, &quot;from_label&quot;: &quot;MCP Server&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;mcp-tool&quot;, &quot;to_label&quot;: &quot;MCP Tool&quot;}">
+      <td data-label="From"><a href="#concept/mcp-server">MCP Server</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/mcp-tool">MCP Tool</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp-server" data-pred="uses" data-to="stdio-transport" data-relation="{&quot;from_id&quot;: &quot;mcp-server&quot;, &quot;from_label&quot;: &quot;MCP Server&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;stdio-transport&quot;, &quot;to_label&quot;: &quot;stdio Transport&quot;}">
+      <td data-label="From"><a href="#concept/mcp-server">MCP Server</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/stdio-transport">stdio Transport</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp-tool" data-pred="partOf" data-to="mcp-server" data-relation="{&quot;from_id&quot;: &quot;mcp-tool&quot;, &quot;from_label&quot;: &quot;MCP Tool&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;mcp-server&quot;, &quot;to_label&quot;: &quot;MCP Server&quot;}">
+      <td data-label="From"><a href="#concept/mcp-tool">MCP Tool</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/mcp-server">MCP Server</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp-tool" data-pred="partOf" data-to="mcp" data-relation="{&quot;from_id&quot;: &quot;mcp-tool&quot;, &quot;from_label&quot;: &quot;MCP Tool&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;mcp&quot;, &quot;to_label&quot;: &quot;Model Context Protocol&quot;}">
+      <td data-label="From"><a href="#concept/mcp-tool">MCP Tool</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/mcp">Model Context Protocol</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp-tool" data-pred="relatedTerm" data-to="ai-agent" data-relation="{&quot;from_id&quot;: &quot;mcp-tool&quot;, &quot;from_label&quot;: &quot;MCP Tool&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;ai-agent&quot;, &quot;to_label&quot;: &quot;AI Agent&quot;}">
+      <td data-label="From"><a href="#concept/mcp-tool">MCP Tool</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/ai-agent">AI Agent</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="memory-file" data-pred="partOf" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;memory-file&quot;, &quot;from_label&quot;: &quot;Memory File&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/memory-file">Memory File</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="memory-file" data-pred="uses" data-to="superseded-by" data-relation="{&quot;from_id&quot;: &quot;memory-file&quot;, &quot;from_label&quot;: &quot;Memory File&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;superseded-by&quot;, &quot;to_label&quot;: &quot;Superseded-by&quot;}">
+      <td data-label="From"><a href="#concept/memory-file">Memory File</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/superseded-by">Superseded-by</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="memory-file" data-pred="uses" data-to="tag" data-relation="{&quot;from_id&quot;: &quot;memory-file&quot;, &quot;from_label&quot;: &quot;Memory File&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;tag&quot;, &quot;to_label&quot;: &quot;Tag&quot;}">
+      <td data-label="From"><a href="#concept/memory-file">Memory File</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/tag">Tag</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="memory-file" data-pred="uses" data-to="yaml-front-matter" data-relation="{&quot;from_id&quot;: &quot;memory-file&quot;, &quot;from_label&quot;: &quot;Memory File&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;yaml-front-matter&quot;, &quot;to_label&quot;: &quot;YAML Front Matter&quot;}">
+      <td data-label="From"><a href="#concept/memory-file">Memory File</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/yaml-front-matter">YAML Front Matter</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mini-retro" data-pred="partOf" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;mini-retro&quot;, &quot;from_label&quot;: &quot;Mini-Retro&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/mini-retro">Mini-Retro</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mini-retro" data-pred="relatedTerm" data-to="adr" data-relation="{&quot;from_id&quot;: &quot;mini-retro&quot;, &quot;from_label&quot;: &quot;Mini-Retro&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;adr&quot;, &quot;to_label&quot;: &quot;Architecture Decision Record&quot;}">
+      <td data-label="From"><a href="#concept/mini-retro">Mini-Retro</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/adr">Architecture Decision Record</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp" data-pred="relatedTerm" data-to="ai-agent" data-relation="{&quot;from_id&quot;: &quot;mcp&quot;, &quot;from_label&quot;: &quot;Model Context Protocol&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;ai-agent&quot;, &quot;to_label&quot;: &quot;AI Agent&quot;}">
+      <td data-label="From"><a href="#concept/mcp">Model Context Protocol</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/ai-agent">AI Agent</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp" data-pred="relatedTerm" data-to="mcp-server" data-relation="{&quot;from_id&quot;: &quot;mcp&quot;, &quot;from_label&quot;: &quot;Model Context Protocol&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;mcp-server&quot;, &quot;to_label&quot;: &quot;MCP Server&quot;}">
+      <td data-label="From"><a href="#concept/mcp">Model Context Protocol</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/mcp-server">MCP Server</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp" data-pred="relatedTerm" data-to="mcp-tool" data-relation="{&quot;from_id&quot;: &quot;mcp&quot;, &quot;from_label&quot;: &quot;Model Context Protocol&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;mcp-tool&quot;, &quot;to_label&quot;: &quot;MCP Tool&quot;}">
+      <td data-label="From"><a href="#concept/mcp">Model Context Protocol</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/mcp-tool">MCP Tool</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="mcp" data-pred="relatedTerm" data-to="stdio-transport" data-relation="{&quot;from_id&quot;: &quot;mcp&quot;, &quot;from_label&quot;: &quot;Model Context Protocol&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;stdio-transport&quot;, &quot;to_label&quot;: &quot;stdio Transport&quot;}">
+      <td data-label="From"><a href="#concept/mcp">Model Context Protocol</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/stdio-transport">stdio Transport</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="open-brain" data-pred="implements" data-to="agent-first" data-relation="{&quot;from_id&quot;: &quot;open-brain&quot;, &quot;from_label&quot;: &quot;Open-Brain&quot;, &quot;predicate&quot;: &quot;implements&quot;, &quot;to_id&quot;: &quot;agent-first&quot;, &quot;to_label&quot;: &quot;Agent-first&quot;}">
+      <td data-label="From"><a href="#concept/open-brain">Open-Brain</a></td>
+      <td class="predicate predicate-implements" data-label="Predicate">implements</td>
+      <td data-label="To"><a href="#concept/agent-first">Agent-first</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="open-brain" data-pred="implements" data-to="local-first" data-relation="{&quot;from_id&quot;: &quot;open-brain&quot;, &quot;from_label&quot;: &quot;Open-Brain&quot;, &quot;predicate&quot;: &quot;implements&quot;, &quot;to_id&quot;: &quot;local-first&quot;, &quot;to_label&quot;: &quot;Local-first&quot;}">
+      <td data-label="From"><a href="#concept/open-brain">Open-Brain</a></td>
+      <td class="predicate predicate-implements" data-label="Predicate">implements</td>
+      <td data-label="To"><a href="#concept/local-first">Local-first</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="open-brain" data-pred="uses" data-to="knowledge-graph" data-relation="{&quot;from_id&quot;: &quot;open-brain&quot;, &quot;from_label&quot;: &quot;Open-Brain&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;knowledge-graph&quot;, &quot;to_label&quot;: &quot;Knowledge Graph&quot;}">
+      <td data-label="From"><a href="#concept/open-brain">Open-Brain</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/knowledge-graph">Knowledge Graph</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="open-brain" data-pred="uses" data-to="mcp-server" data-relation="{&quot;from_id&quot;: &quot;open-brain&quot;, &quot;from_label&quot;: &quot;Open-Brain&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;mcp-server&quot;, &quot;to_label&quot;: &quot;MCP Server&quot;}">
+      <td data-label="From"><a href="#concept/open-brain">Open-Brain</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/mcp-server">MCP Server</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="retrieval" data-pred="partOf" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;retrieval&quot;, &quot;from_label&quot;: &quot;Retrieval&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/retrieval">Retrieval</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="retrieval" data-pred="uses" data-to="knowledge-graph" data-relation="{&quot;from_id&quot;: &quot;retrieval&quot;, &quot;from_label&quot;: &quot;Retrieval&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;knowledge-graph&quot;, &quot;to_label&quot;: &quot;Knowledge Graph&quot;}">
+      <td data-label="From"><a href="#concept/retrieval">Retrieval</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/knowledge-graph">Knowledge Graph</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="retrieval" data-pred="uses" data-to="mcp-tool" data-relation="{&quot;from_id&quot;: &quot;retrieval&quot;, &quot;from_label&quot;: &quot;Retrieval&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;mcp-tool&quot;, &quot;to_label&quot;: &quot;MCP Tool&quot;}">
+      <td data-label="From"><a href="#concept/retrieval">Retrieval</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/mcp-tool">MCP Tool</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="semantic-search" data-pred="instanceOf" data-to="retrieval" data-relation="{&quot;from_id&quot;: &quot;semantic-search&quot;, &quot;from_label&quot;: &quot;Semantic Search&quot;, &quot;predicate&quot;: &quot;instanceOf&quot;, &quot;to_id&quot;: &quot;retrieval&quot;, &quot;to_label&quot;: &quot;Retrieval&quot;}">
+      <td data-label="From"><a href="#concept/semantic-search">Semantic Search</a></td>
+      <td class="predicate predicate-instanceOf" data-label="Predicate">instanceOf</td>
+      <td data-label="To"><a href="#concept/retrieval">Retrieval</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="semantic-search" data-pred="uses" data-to="lancedb" data-relation="{&quot;from_id&quot;: &quot;semantic-search&quot;, &quot;from_label&quot;: &quot;Semantic Search&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;lancedb&quot;, &quot;to_label&quot;: &quot;LanceDB&quot;}">
+      <td data-label="From"><a href="#concept/semantic-search">Semantic Search</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/lancedb">LanceDB</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="semantic-search" data-pred="uses" data-to="vector-database" data-relation="{&quot;from_id&quot;: &quot;semantic-search&quot;, &quot;from_label&quot;: &quot;Semantic Search&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;vector-database&quot;, &quot;to_label&quot;: &quot;Vector Database&quot;}">
+      <td data-label="From"><a href="#concept/semantic-search">Semantic Search</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/vector-database">Vector Database</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="semantic-search" data-pred="uses" data-to="vector-embedding" data-relation="{&quot;from_id&quot;: &quot;semantic-search&quot;, &quot;from_label&quot;: &quot;Semantic Search&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;vector-embedding&quot;, &quot;to_label&quot;: &quot;Vector Embedding&quot;}">
+      <td data-label="From"><a href="#concept/semantic-search">Semantic Search</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="skill" data-pred="partOf" data-to="open-brain" data-relation="{&quot;from_id&quot;: &quot;skill&quot;, &quot;from_label&quot;: &quot;Skill&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;open-brain&quot;, &quot;to_label&quot;: &quot;Open-Brain&quot;}">
+      <td data-label="From"><a href="#concept/skill">Skill</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="skill" data-pred="relatedTerm" data-to="ai-agent" data-relation="{&quot;from_id&quot;: &quot;skill&quot;, &quot;from_label&quot;: &quot;Skill&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;ai-agent&quot;, &quot;to_label&quot;: &quot;AI Agent&quot;}">
+      <td data-label="From"><a href="#concept/skill">Skill</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/ai-agent">AI Agent</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="skill" data-pred="relatedTerm" data-to="adr" data-relation="{&quot;from_id&quot;: &quot;skill&quot;, &quot;from_label&quot;: &quot;Skill&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;adr&quot;, &quot;to_label&quot;: &quot;Architecture Decision Record&quot;}">
+      <td data-label="From"><a href="#concept/skill">Skill</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/adr">Architecture Decision Record</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="stdio-transport" data-pred="partOf" data-to="mcp" data-relation="{&quot;from_id&quot;: &quot;stdio-transport&quot;, &quot;from_label&quot;: &quot;stdio Transport&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;mcp&quot;, &quot;to_label&quot;: &quot;Model Context Protocol&quot;}">
+      <td data-label="From"><a href="#concept/stdio-transport">stdio Transport</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/mcp">Model Context Protocol</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="stdio-transport" data-pred="uses" data-to="mcp-server" data-relation="{&quot;from_id&quot;: &quot;stdio-transport&quot;, &quot;from_label&quot;: &quot;stdio Transport&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;mcp-server&quot;, &quot;to_label&quot;: &quot;MCP Server&quot;}">
+      <td data-label="From"><a href="#concept/stdio-transport">stdio Transport</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/mcp-server">MCP Server</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="superseded-by" data-pred="partOf" data-to="memory-file" data-relation="{&quot;from_id&quot;: &quot;superseded-by&quot;, &quot;from_label&quot;: &quot;Superseded-by&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;memory-file&quot;, &quot;to_label&quot;: &quot;Memory File&quot;}">
+      <td data-label="From"><a href="#concept/superseded-by">Superseded-by</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/memory-file">Memory File</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="superseded-by" data-pred="partOf" data-to="yaml-front-matter" data-relation="{&quot;from_id&quot;: &quot;superseded-by&quot;, &quot;from_label&quot;: &quot;Superseded-by&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;yaml-front-matter&quot;, &quot;to_label&quot;: &quot;YAML Front Matter&quot;}">
+      <td data-label="From"><a href="#concept/superseded-by">Superseded-by</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/yaml-front-matter">YAML Front Matter</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="superseded-by" data-pred="relatedTerm" data-to="knowledge-graph" data-relation="{&quot;from_id&quot;: &quot;superseded-by&quot;, &quot;from_label&quot;: &quot;Superseded-by&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;knowledge-graph&quot;, &quot;to_label&quot;: &quot;Knowledge Graph&quot;}">
+      <td data-label="From"><a href="#concept/superseded-by">Superseded-by</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/knowledge-graph">Knowledge Graph</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="tag" data-pred="partOf" data-to="memory-file" data-relation="{&quot;from_id&quot;: &quot;tag&quot;, &quot;from_label&quot;: &quot;Tag&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;memory-file&quot;, &quot;to_label&quot;: &quot;Memory File&quot;}">
+      <td data-label="From"><a href="#concept/tag">Tag</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/memory-file">Memory File</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="tag" data-pred="partOf" data-to="yaml-front-matter" data-relation="{&quot;from_id&quot;: &quot;tag&quot;, &quot;from_label&quot;: &quot;Tag&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;yaml-front-matter&quot;, &quot;to_label&quot;: &quot;YAML Front Matter&quot;}">
+      <td data-label="From"><a href="#concept/tag">Tag</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/yaml-front-matter">YAML Front Matter</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="tag" data-pred="relatedTerm" data-to="semantic-search" data-relation="{&quot;from_id&quot;: &quot;tag&quot;, &quot;from_label&quot;: &quot;Tag&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;semantic-search&quot;, &quot;to_label&quot;: &quot;Semantic Search&quot;}">
+      <td data-label="From"><a href="#concept/tag">Tag</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/semantic-search">Semantic Search</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="triage" data-pred="relatedTerm" data-to="capture" data-relation="{&quot;from_id&quot;: &quot;triage&quot;, &quot;from_label&quot;: &quot;Triage&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;capture&quot;, &quot;to_label&quot;: &quot;Capture&quot;}">
+      <td data-label="From"><a href="#concept/triage">Triage</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/capture">Capture</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="triage" data-pred="relatedTerm" data-to="memory-file" data-relation="{&quot;from_id&quot;: &quot;triage&quot;, &quot;from_label&quot;: &quot;Triage&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;memory-file&quot;, &quot;to_label&quot;: &quot;Memory File&quot;}">
+      <td data-label="From"><a href="#concept/triage">Triage</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/memory-file">Memory File</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="triage" data-pred="uses" data-to="ai-agent" data-relation="{&quot;from_id&quot;: &quot;triage&quot;, &quot;from_label&quot;: &quot;Triage&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;ai-agent&quot;, &quot;to_label&quot;: &quot;AI Agent&quot;}">
+      <td data-label="From"><a href="#concept/triage">Triage</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/ai-agent">AI Agent</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="triage" data-pred="uses" data-to="inbox" data-relation="{&quot;from_id&quot;: &quot;triage&quot;, &quot;from_label&quot;: &quot;Triage&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;inbox&quot;, &quot;to_label&quot;: &quot;Inbox&quot;}">
+      <td data-label="From"><a href="#concept/triage">Triage</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/inbox">Inbox</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="vector-database" data-pred="relatedTerm" data-to="lancedb" data-relation="{&quot;from_id&quot;: &quot;vector-database&quot;, &quot;from_label&quot;: &quot;Vector Database&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;lancedb&quot;, &quot;to_label&quot;: &quot;LanceDB&quot;}">
+      <td data-label="From"><a href="#concept/vector-database">Vector Database</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/lancedb">LanceDB</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="vector-database" data-pred="relatedTerm" data-to="semantic-search" data-relation="{&quot;from_id&quot;: &quot;vector-database&quot;, &quot;from_label&quot;: &quot;Vector Database&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;semantic-search&quot;, &quot;to_label&quot;: &quot;Semantic Search&quot;}">
+      <td data-label="From"><a href="#concept/vector-database">Vector Database</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/semantic-search">Semantic Search</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="vector-database" data-pred="uses" data-to="vector-embedding" data-relation="{&quot;from_id&quot;: &quot;vector-database&quot;, &quot;from_label&quot;: &quot;Vector Database&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;vector-embedding&quot;, &quot;to_label&quot;: &quot;Vector Embedding&quot;}">
+      <td data-label="From"><a href="#concept/vector-database">Vector Database</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="vector-embedding" data-pred="partOf" data-to="vector-database" data-relation="{&quot;from_id&quot;: &quot;vector-embedding&quot;, &quot;from_label&quot;: &quot;Vector Embedding&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;vector-database&quot;, &quot;to_label&quot;: &quot;Vector Database&quot;}">
+      <td data-label="From"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/vector-database">Vector Database</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="vector-embedding" data-pred="relatedTerm" data-to="lancedb" data-relation="{&quot;from_id&quot;: &quot;vector-embedding&quot;, &quot;from_label&quot;: &quot;Vector Embedding&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;lancedb&quot;, &quot;to_label&quot;: &quot;LanceDB&quot;}">
+      <td data-label="From"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/lancedb">LanceDB</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="vector-embedding" data-pred="relatedTerm" data-to="semantic-search" data-relation="{&quot;from_id&quot;: &quot;vector-embedding&quot;, &quot;from_label&quot;: &quot;Vector Embedding&quot;, &quot;predicate&quot;: &quot;relatedTerm&quot;, &quot;to_id&quot;: &quot;semantic-search&quot;, &quot;to_label&quot;: &quot;Semantic Search&quot;}">
+      <td data-label="From"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+      <td class="predicate predicate-relatedTerm" data-label="Predicate">relatedTerm</td>
+      <td data-label="To"><a href="#concept/semantic-search">Semantic Search</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="vector-embedding" data-pred="uses" data-to="embedding-model" data-relation="{&quot;from_id&quot;: &quot;vector-embedding&quot;, &quot;from_label&quot;: &quot;Vector Embedding&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;embedding-model&quot;, &quot;to_label&quot;: &quot;Embedding Model&quot;}">
+      <td data-label="From"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/embedding-model">Embedding Model</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="yaml-front-matter" data-pred="partOf" data-to="memory-file" data-relation="{&quot;from_id&quot;: &quot;yaml-front-matter&quot;, &quot;from_label&quot;: &quot;YAML Front Matter&quot;, &quot;predicate&quot;: &quot;partOf&quot;, &quot;to_id&quot;: &quot;memory-file&quot;, &quot;to_label&quot;: &quot;Memory File&quot;}">
+      <td data-label="From"><a href="#concept/yaml-front-matter">YAML Front Matter</a></td>
+      <td class="predicate predicate-partOf" data-label="Predicate">partOf</td>
+      <td data-label="To"><a href="#concept/memory-file">Memory File</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="yaml-front-matter" data-pred="uses" data-to="superseded-by" data-relation="{&quot;from_id&quot;: &quot;yaml-front-matter&quot;, &quot;from_label&quot;: &quot;YAML Front Matter&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;superseded-by&quot;, &quot;to_label&quot;: &quot;Superseded-by&quot;}">
+      <td data-label="From"><a href="#concept/yaml-front-matter">YAML Front Matter</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/superseded-by">Superseded-by</a></td>
+    </tr>
+    <tr class="relation-row" tabindex="0" data-from="yaml-front-matter" data-pred="uses" data-to="tag" data-relation="{&quot;from_id&quot;: &quot;yaml-front-matter&quot;, &quot;from_label&quot;: &quot;YAML Front Matter&quot;, &quot;predicate&quot;: &quot;uses&quot;, &quot;to_id&quot;: &quot;tag&quot;, &quot;to_label&quot;: &quot;Tag&quot;}">
+      <td data-label="From"><a href="#concept/yaml-front-matter">YAML Front Matter</a></td>
+      <td class="predicate predicate-uses" data-label="Predicate">uses</td>
+      <td data-label="To"><a href="#concept/tag">Tag</a></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="documents" aria-label="Documents">
+  <h2>Documents <span class="count">(26)</span></h2>
+  <div class="table-scroll">
+  <table id="documents-table">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th class="num" title="Number of text segments">Segments</th>
+        <th>Concepts</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr data-file="glossary/adr.md">
+      <td data-label="File"><code>glossary/adr.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/adr">Architecture Decision Record</a></td>
+    </tr>
+    <tr data-file="glossary/agent-first.md">
+      <td data-label="File"><code>glossary/agent-first.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/agent-first">Agent-first</a></td>
+    </tr>
+    <tr data-file="glossary/ai-agent.md">
+      <td data-label="File"><code>glossary/ai-agent.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/ai-agent">AI Agent</a></td>
+    </tr>
+    <tr data-file="glossary/capture.md">
+      <td data-label="File"><code>glossary/capture.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/capture">Capture</a></td>
+    </tr>
+    <tr data-file="glossary/embedding-model.md">
+      <td data-label="File"><code>glossary/embedding-model.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/embedding-model">Embedding Model</a></td>
+    </tr>
+    <tr data-file="glossary/inbox.md">
+      <td data-label="File"><code>glossary/inbox.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/inbox">Inbox</a></td>
+    </tr>
+    <tr data-file="glossary/knowledge-graph.md">
+      <td data-label="File"><code>glossary/knowledge-graph.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/knowledge-graph">Knowledge Graph</a></td>
+    </tr>
+    <tr data-file="glossary/lancedb.md">
+      <td data-label="File"><code>glossary/lancedb.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/lancedb">LanceDB</a></td>
+    </tr>
+    <tr data-file="glossary/local-first.md">
+      <td data-label="File"><code>glossary/local-first.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/local-first">Local-first</a></td>
+    </tr>
+    <tr data-file="glossary/madr.md">
+      <td data-label="File"><code>glossary/madr.md</code></td>
+      <td class="num" data-label="Segments">5</td>
+      <td data-label="Concepts"><a href="#concept/madr">MADR</a></td>
+    </tr>
+    <tr data-file="glossary/mcp-server.md">
+      <td data-label="File"><code>glossary/mcp-server.md</code></td>
+      <td class="num" data-label="Segments">3</td>
+      <td data-label="Concepts"><a href="#concept/mcp-server">MCP Server</a></td>
+    </tr>
+    <tr data-file="glossary/mcp-tool.md">
+      <td data-label="File"><code>glossary/mcp-tool.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/mcp-tool">MCP Tool</a></td>
+    </tr>
+    <tr data-file="glossary/mcp.md">
+      <td data-label="File"><code>glossary/mcp.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/mcp">Model Context Protocol</a></td>
+    </tr>
+    <tr data-file="glossary/memory-file.md">
+      <td data-label="File"><code>glossary/memory-file.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/memory-file">Memory File</a></td>
+    </tr>
+    <tr data-file="glossary/mini-retro.md">
+      <td data-label="File"><code>glossary/mini-retro.md</code></td>
+      <td class="num" data-label="Segments">5</td>
+      <td data-label="Concepts"><a href="#concept/mini-retro">Mini-Retro</a></td>
+    </tr>
+    <tr data-file="glossary/open-brain.md">
+      <td data-label="File"><code>glossary/open-brain.md</code></td>
+      <td class="num" data-label="Segments">5</td>
+      <td data-label="Concepts"><a href="#concept/open-brain">Open-Brain</a></td>
+    </tr>
+    <tr data-file="glossary/retrieval.md">
+      <td data-label="File"><code>glossary/retrieval.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/retrieval">Retrieval</a></td>
+    </tr>
+    <tr data-file="glossary/semantic-search.md">
+      <td data-label="File"><code>glossary/semantic-search.md</code></td>
+      <td class="num" data-label="Segments">5</td>
+      <td data-label="Concepts"><a href="#concept/semantic-search">Semantic Search</a></td>
+    </tr>
+    <tr data-file="glossary/skill.md">
+      <td data-label="File"><code>glossary/skill.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/skill">Skill</a></td>
+    </tr>
+    <tr data-file="glossary/stdio-transport.md">
+      <td data-label="File"><code>glossary/stdio-transport.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/stdio-transport">stdio Transport</a></td>
+    </tr>
+    <tr data-file="glossary/superseded-by.md">
+      <td data-label="File"><code>glossary/superseded-by.md</code></td>
+      <td class="num" data-label="Segments">5</td>
+      <td data-label="Concepts"><a href="#concept/superseded-by">Superseded-by</a></td>
+    </tr>
+    <tr data-file="glossary/tag.md">
+      <td data-label="File"><code>glossary/tag.md</code></td>
+      <td class="num" data-label="Segments">5</td>
+      <td data-label="Concepts"><a href="#concept/tag">Tag</a></td>
+    </tr>
+    <tr data-file="glossary/triage.md">
+      <td data-label="File"><code>glossary/triage.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/triage">Triage</a></td>
+    </tr>
+    <tr data-file="glossary/vector-database.md">
+      <td data-label="File"><code>glossary/vector-database.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/vector-database">Vector Database</a></td>
+    </tr>
+    <tr data-file="glossary/vector-embedding.md">
+      <td data-label="File"><code>glossary/vector-embedding.md</code></td>
+      <td class="num" data-label="Segments">4</td>
+      <td data-label="Concepts"><a href="#concept/vector-embedding">Vector Embedding</a></td>
+    </tr>
+    <tr data-file="glossary/yaml-front-matter.md">
+      <td data-label="File"><code>glossary/yaml-front-matter.md</code></td>
+      <td class="num" data-label="Segments">6</td>
+      <td data-label="Concepts"><a href="#concept/yaml-front-matter">YAML Front Matter</a></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Generated from <code>data/ontology/v0073.ttl</code> &middot;
+  <a href="https://github.com/davidamitchell/Memory-System">Memory-System</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

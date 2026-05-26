@@ -1,0 +1,7 @@
+| Domain | Primary tags | Backlog items | Completed items |
+|--------|-------------|---------------|-----------------|
+| **D1 — AI Strategy & Governance** | ai-strategy, governance, security, financial-services, rbnz, nz-specific, software-engineering | 5 | 8 |
+| **D2 — Agentic Systems & Architecture** | agents, agentic-ai, agentic-coding, mcp, lsp, context-management, memory, architecture | 2 | 4 |
+| **D3 — Cognitive Science & Foundations** | consciousness, predictive-processing, entropy, free-energy-principle, anil-seth, interoception, perception | 4 | 3 |
+| **D4 — Research Tooling & Delivery** | tooling, youtube, transcripts, automation, interface, delivery, indexing, storage, search, rag, chat | 11 | 5 |
+| **D5 — Knowledge Management & Process** | knowledge-management, synthesis, workflow, process, research-methodology, quality-assurance | 3 | 3 |

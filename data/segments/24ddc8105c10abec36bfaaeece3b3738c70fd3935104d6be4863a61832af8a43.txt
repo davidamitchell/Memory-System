@@ -1,0 +1,1 @@
+5. [inference] "AI-native" is an organisational design choice, not a technology attribute: AI-native organisations redesign team structure, governance, and incentives around AI execution capability, whereas AI-assisted organisations add AI tools to existing structures and therefore risk reproducing DORA's negative outcome.

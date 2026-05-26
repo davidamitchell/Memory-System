@@ -1,0 +1,3 @@
+**Constraints:**
+- Focus on operationally mature approaches, not academic-only proposals
+- Prefer documented practices from production systems or well-maintained open-source projects

@@ -1,0 +1,3 @@
+- The word "backpressure" does not appear in mainstream TOC terminology. The mapping from "backpressure" to "rope" and "work release" is conceptually accurate but means that literature searches using "backpressure" alone will miss most TOC research.
+- Peer-reviewed evidence of TOC/DBR in software development or knowledge-work contexts is sparse; the VSS article addresses this gap at a practitioner level only.
+- Dynamic constraint environments (where the bottleneck shifts frequently) are not well-covered by DBR as originally designed; Simplified Drum-Buffer-Rope (S-DBR) is a partial response but the literature on dynamic constraint management is less developed.

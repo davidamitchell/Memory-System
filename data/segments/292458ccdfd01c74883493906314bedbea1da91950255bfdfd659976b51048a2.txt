@@ -1,0 +1,4 @@
+1. Read [`definition_scheme.md`](../definition_scheme.md) before creating any file.
+2. Create `glossary/<kebab-case-term>.md` following the schema exactly.
+3. Add a row to the index table above.
+4. Cross-link the term's first occurrence in any existing files where it appears.

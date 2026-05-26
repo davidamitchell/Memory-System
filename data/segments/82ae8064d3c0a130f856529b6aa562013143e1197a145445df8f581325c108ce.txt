@@ -1,0 +1,8 @@
+**In scope:**
+- Job advertisements from the major AI labs: OpenAI, Anthropic, Google DeepMind, Meta AI Research, xAI, Mistral AI, Cohere, Inflection AI (now Microsoft), Stability AI
+- Historical job ads retrieved via the Wayback Machine (web.archive.org) for the period 2022–2026
+- High-profile individual hire announcements on LinkedIn, X (formerly Twitter), and company blogs
+- Job board aggregations: LinkedIn Jobs, Glassdoor, Indeed, Levels.fyi
+- Hacker News (HN) "Who is Hiring?" monthly threads and "Ask HN: Who wants to be hired?" counterpart
+- Compensation and headcount signals as proxies for investment priority
+- Cross-referencing hiring patterns with public strategic announcements, product launches, and published research to validate or challenge the inferences

@@ -1,0 +1,7 @@
+subgraph Ont_Layer["Ontology Layer"]
+        DP[Delta Proposal]
+        AN[Assertion Nodes]
+        DO[Domain Ontologies]
+        UO[Upper Ontology]
+        VO[Versioned Ontology]
+    end

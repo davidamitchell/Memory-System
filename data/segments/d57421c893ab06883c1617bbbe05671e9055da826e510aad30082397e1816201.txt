@@ -1,0 +1,5 @@
+SQLite is the world's most widely deployed DBMS (confirmed by sqlite.org). It is:
+- Part of Python's standard library (`import sqlite3`) — zero additional dependencies
+- File-based, single `.db` file (binary artefact, not git-diffable — must be excluded from git)
+- ACID transactional, supports `INSERT OR IGNORE` for deduplication
+- FTS5 included in the amalgamation since version 3.9.0 (2015): BM25 ranking, phrase search, prefix search

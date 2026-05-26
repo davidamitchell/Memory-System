@@ -1,0 +1,1 @@
+**Scope confirmation:** Evidence is bounded to prompt patterns, persistent context files, and tooling mechanisms for software development workflows. LLM (Large Language Model) pre-training, fine-tuning, and non-software domains are excluded. Recency constraint: prioritise 2022–2025 sources.

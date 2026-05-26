@@ -1,0 +1,3 @@
+**Branch D — NZ context**
+- D1: Have NZ technology companies (Xero, Trade Me, Datacom) disclosed SWE AI outcomes?
+- D2: What does the ANZ case (Australian parent) imply for the NZ technology sector?

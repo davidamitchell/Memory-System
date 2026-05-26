@@ -1,0 +1,1 @@
+What does Leanstral - an open-source agent for formal proof engineering - offer as a practical path to trustworthy, formally verified software built with Artificial Intelligence (AI) assistance, and how does it synthesise with existing research on formal methods, AI agent risk, and the critical need for human oversight and guardrails?

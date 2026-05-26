@@ -1,0 +1,6 @@
+**In scope:**
+- Distributional semantics, including J. R. Firth's hypothesis that "you shall know a word by the company it keeps", as the theoretical basis of LLM training
+- Spurious correlations in high-dimensional text spaces as a natural consequence of token-level optimisation
+- The Linear Representation Hypothesis: what geometry of internal representations would be necessary for causal reasoning?
+- Empirical evidence for and against LLMs constructing invariant causal representations
+- Connection to Phase 2's Empirical Risk Minimisation (ERM) and causal hierarchy analysis

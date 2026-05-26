@@ -1,0 +1,1 @@
+A vector database is a data store whose primary index structure is optimised for high-dimensional vector similarity queries, not for exact row lookups or keyword matching. Where a relational database answers "give me all rows where name = 'Alice'", a vector database answers "give me the 5 stored vectors most similar to this query vector".

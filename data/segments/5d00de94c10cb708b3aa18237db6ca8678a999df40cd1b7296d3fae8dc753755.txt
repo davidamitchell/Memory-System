@@ -1,0 +1,3 @@
+- Which pathway interventions deliver the fastest reduction in total effort, ownership cleanup, better permissions, stronger integrator roles, or safer speaking-up norms?
+- How should organisations classify knowledge requests by risk so that review-by-exception remains trusted rather than becoming a new bottleneck?
+- What minimum telemetry is sufficient to detect that unofficial routes are displacing the authoritative pathway before quality outcomes degrade?

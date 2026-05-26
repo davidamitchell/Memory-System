@@ -1,0 +1,4 @@
+- Can Leanstral or similar agents reliably translate business- or protocol-level intent into correct Lean properties without introducing a new layer of hidden specification error?
+- What proportion of real production software invariants can be encoded in Lean at an acceptable cost for ordinary engineering teams?
+- How should proof-time guarantees connect to operational policy systems so that verified code cannot still trigger destructive actions in production environments?
+- **Open question:** Once public artifacts are fully available, how does Leanstral compare empirically with LeanDojo-v2, Copra, and Lean Copilot on independent repository-scale benchmarks?

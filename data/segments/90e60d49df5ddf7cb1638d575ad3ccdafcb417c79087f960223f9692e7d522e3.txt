@@ -1,0 +1,19 @@
+- [fact] **A. Copilot-skill layer**
+  - A1. What exactly does the architecture-blueprint-generator skill ask an agent to produce?
+  - A2. Which parts of architecture inspection does that skill cover well, and which parts does it leave unresolved?
+- [fact] **B. Multi-repo orchestration layer**
+  - B1. What does RepoSwarm automate across a portfolio of repositories?
+  - B2. Does RepoSwarm provide evidence extraction, synthesis, or both?
+- [fact] **C. Deterministic evidence layer**
+  - C1. What can dependency-cruiser prove from source-code structure?
+  - C2. What can GitHub dependency graph, dependency review, and Software Bill of Materials (SBOM) exports prove from manifests?
+  - C3. What signals does Renovate provide about dependency drift and consistency?
+  - C4. What cross-repository investigation and bulk-remediation capabilities does Sourcegraph expose?
+  - C5. What enforcement or auto-remediation role does OpenRewrite play?
+- [fact] **D. Governance layer**
+  - D1. How can Open Policy Agent (OPA) encode standards checks once architecture facts are normalized?
+  - D2. What do architectural decision records (ADRs) and architecture fitness functions contribute that code graphs cannot?
+- [fact] **E. Operational synthesis**
+  - E1. What composite implementation pattern best fits a GitHub-first environment?
+  - E2. Which parts should remain deterministic and which parts should be delegated to Copilot skills or other agents?
+  - E3. What gaps remain even after combining these approaches?

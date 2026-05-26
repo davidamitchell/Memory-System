@@ -1,0 +1,1 @@
+9. The eval gate should trigger on push to main where the diff includes files in `Research/completed/`, complementing rather than replacing the existing `research-review.yml` which runs on draft items; the two workflows cover different lifecycle stages (pre-complete vs post-complete) and different failure mode classes (prose quality vs structural completeness). Confidence: high.

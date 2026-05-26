@@ -1,0 +1,4 @@
+- Coverage: complete
+- Claim labels: applied in Research Skill Output
+- Findings parity target: aligned to Section 6 synthesis
+- Unresolved uncertainty: see Risks, Gaps, and Uncertainties

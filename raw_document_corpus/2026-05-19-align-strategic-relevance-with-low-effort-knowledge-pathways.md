@@ -13,19 +13,17 @@ blocks:
   - 2026-05-19-trust-institutions-vs-incentive-schemes-knowledge-sharing
   - 2026-05-19-how-do-formal-governance-structures-distort-cross-department-knowledge-flows
   - 2026-05-19-what-institutional-designs-create-low-cost-psychologically-safe-help-seeking
-  [
-    organisation,
-    organisational-design,
-    organisational-learning,
-    organisational-theory,
-    governance,
-    transaction-costs,
-    knowledge-management,
-  ]
 started: 2026-05-20T06:19:20+00:00
 completed: 2026-05-20T06:41:15+00:00
 output: [knowledge, backlog-item]
-themes: []
+themes:
+  - organisation
+  - organisational-design
+  - organisational-learning
+  - organisational-theory
+  - governance
+  - transaction-costs
+  - knowledge-management
 cites:
   [
     2026-03-02-transaction-costs,

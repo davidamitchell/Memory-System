@@ -1,0 +1,1 @@
+[assumption] Organisations that invest in full BPMN-style process documentation without the governance infrastructure described (named owners, change-triggered updates, governance boards) will follow the decay pattern described in the literature. Justification: the decay causes identified in literature are structural (not project-specific), suggesting they apply broadly.

@@ -3,3 +3,5 @@ sentence-transformers
 watchdog
 mcp
 pyarrow
+rdflib>=6.3
+spacy>=3.7

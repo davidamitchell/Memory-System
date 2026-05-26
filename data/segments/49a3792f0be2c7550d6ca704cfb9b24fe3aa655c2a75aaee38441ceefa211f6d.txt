@@ -1,0 +1,3 @@
+- The ontology-based MCP query interface (not yet implemented) will be the primary retrieval tool.
+- Until the MCP server is implemented, agents retrieve context by searching files directly (grep, glob) and reading ADRs and design documents.
+- Retrieval quality signals should be raised in the mini-retro and as backlog items.

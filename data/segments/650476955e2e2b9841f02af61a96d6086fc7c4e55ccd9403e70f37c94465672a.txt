@@ -1,0 +1,2 @@
+**Technical lens:**
+The two-mechanism setup pattern (repo file for Copilot, UI config for Claude Code web) creates a maintenance asymmetry. The Copilot setup is declarative, version-controlled, and auditable. The Claude Code web setup is imperative, stored outside the repository, and invisible to other contributors. For a single-owner repository like this one, this asymmetry is manageable. [inference] For a team, it would be a significant governance gap.

@@ -1,0 +1,1 @@
+9. Process Mining discovers actual process behaviour from ITSM event logs and is effective for conformance validation and identifying automation opportunities, but it cannot substitute for authored documentation because it provides no policy rationale, no version-controlled change approvals, and degrades in quality when event logs are inconsistent or customised. [High confidence]

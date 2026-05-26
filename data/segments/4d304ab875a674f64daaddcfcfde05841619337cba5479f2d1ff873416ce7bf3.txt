@@ -1,0 +1,6 @@
+6. What pre-training interventions are candidates for reducing H-Neuron formation?
+   6a. Data filtering: what categories of text should be removed or down-weighted?
+   6b. Curriculum learning: what ordering or weighting strategy could reduce compliance encoding?
+   6c. Auxiliary objectives: what training signals could counteract the NTP compliance reward?
+   6d. Architectural choices: what structural modifications could reduce superposition-driven over-compliance encoding?
+   6e. What is the feasibility and estimated effectiveness of each intervention?

@@ -1,0 +1,7 @@
+1. **Characterise Leanstral** - read the source article linked from the HN thread and the public release materials. What does it do, how does it work, what is the current scope, and what is the community's assessment?
+2. **Lean 4 ecosystem overview** - establish what Lean 4 provides as a foundation: dependent types, the mathlib library, the Lake build system, and the existing ecosystem of Lean-based verification tools.
+3. **AI + formal verification landscape** - survey the current field: other projects using LLMs for proof synthesis or repair (LeanDojo, ReProver, Copra, Lean Copilot). Identify what Leanstral does differently.
+4. **Synthesise with prior research** - map Leanstral's approach onto the specification hierarchy from `2026-03-10-formal-spec-intent-alignment-agentic-coding` and the cognitive-debt framing from `2026-03-14-reliable-software-llm-era`. Where does formal proof engineering sit, and what does it add?
+5. **Claude Code incident and agent autonomy** - read the incident discussion. Identify the key arguments, proposed mitigations, and relationship to the formal proof approach.
+6. **Guardrails synthesis** - produce a comparative framing: runtime guardrails (policy enforcement, human oversight, access controls) versus proof-time guarantees (formal verification). When is each appropriate? Are they complementary?
+7. **Synthesis** - produce the Executive Summary, Key Findings, and Evidence Map.

@@ -1,0 +1,4 @@
+**In scope:**
+- Cost model components for production agent workarounds: build, inference, harness operations, governance, and failure recovery.
+- Cost model components for software-gap closure across missing integration capability, missing application functionality, and missing governed data access.
+- Breakeven analysis using plausible AI-assisted software engineering productivity multipliers over three-year and five-year horizons.

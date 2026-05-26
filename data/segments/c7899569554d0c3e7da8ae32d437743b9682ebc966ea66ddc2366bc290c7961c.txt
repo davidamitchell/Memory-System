@@ -1,0 +1,16 @@
+- **Root question:** what makes stochastic LLM output a weak primary control surface for governance, privacy, or regulatory decisions?
+- **A. Privacy and rights-significant decisions**
+  - A1. What do European Union and United Kingdom data-protection sources say about solely automated decisions and meaningful human intervention?
+  - A2. What do those sources imply for LLM-based privacy, access, or compliance decisions?
+- **B. Financial-services governance**
+  - B1. What do United Kingdom and United States financial regulators require around AI governance, validation, monitoring, and accountability?
+  - B2. Do those sources authorize stochastic generative systems to act as primary decision makers?
+- **C. Enforcement and compliance signals**
+  - C1. Are there official cases where AI claims or automated decision systems triggered compliance action?
+  - C2. What kinds of failures drew regulator attention: untested substitution for professionals, deceptive claims, missing safeguards, or unfair outcomes?
+- **D. Reliability evidence**
+  - D1. What evidence exists that LLMs fabricate citations, vary across repeated prompts, or produce unsafe advice in legal and medical settings?
+  - D2. How do those failure modes map to compliance obligations such as accuracy, contestability, traceability, and consistent treatment?
+- **E. Synthesis**
+  - E1. Which risk taxonomy best explains the control failure?
+  - E2. Which mitigations are supported strongly enough to recommend now?

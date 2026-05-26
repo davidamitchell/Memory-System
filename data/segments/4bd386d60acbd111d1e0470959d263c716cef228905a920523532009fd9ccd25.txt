@@ -1,0 +1,4 @@
+- [fact] OpenAI's official careers pages and xAI's official site were blocked from the runner, Meta's careers page required login, and several aggregation sources were protected by anti-bot or subscription controls.
+- [fact] Compensation evidence was weak because Levels.fyi did not surface comparable team-level data and Glassdoor and Indeed were blocked.
+- [fact] Historical role-volume comparison is strongest for Mistral and weaker elsewhere because archived public Structured APIs were unavailable.
+- [inference] The conclusion about industry-wide operationalisation is still high confidence because it is visible across multiple independent companies, but the confidence is lower for direct OpenAI-versus-Meta or Anthropic-versus-Google DeepMind numeric comparisons.

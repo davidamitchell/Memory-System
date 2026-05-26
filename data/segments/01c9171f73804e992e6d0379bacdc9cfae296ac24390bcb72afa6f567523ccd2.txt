@@ -1,0 +1,1 @@
+[inference] A plain prose instruction is less reliable than a structured block because model instruction-following for setup steps is not guaranteed; a structured section with a heading increases salience in the context window.

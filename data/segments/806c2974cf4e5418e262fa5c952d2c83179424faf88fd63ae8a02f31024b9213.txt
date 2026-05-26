@@ -1,0 +1,2 @@
+- **Assumption:** `copilot-setup-steps.yml` is a real GitHub feature with a defined schema. **Justification:** Referenced in GitHub Copilot documentation. Schema and behaviour unverified for this repo's use case.
+- **Assumption:** `devcontainer.json` does not affect the Copilot coding agent's container. **Justification:** Prior research on Codespaces suggests devcontainer is Codespaces-scoped. Needs confirmation.

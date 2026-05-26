@@ -1,0 +1,5 @@
+**Out of scope:**
+- Infrastructure-level observability (application performance monitoring, infrastructure metrics) beyond what is needed for governance purposes
+- Real-time alerting system design (focus is on the log data model, not the alerting infrastructure)
+- Identity model design (covered by Q2)
+- Enforcement architecture (covered by Q3)

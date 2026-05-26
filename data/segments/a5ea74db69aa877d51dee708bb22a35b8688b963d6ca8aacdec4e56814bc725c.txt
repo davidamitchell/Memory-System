@@ -1,0 +1,1 @@
+[inference] "AI-native" means redesigning team structure, governance, and incentive systems around AI execution rather than adding AI tools to existing structures.

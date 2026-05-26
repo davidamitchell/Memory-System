@@ -1,0 +1,1 @@
+In Open-Brain, retrieval is performed by querying the ontology store. A query can traverse concept graphs within a domain, match assertion patterns, or navigate provenance links from assertions back to source segments. This is richer than vector similarity: the ontology encodes explicit relationships that similarity alone cannot capture.

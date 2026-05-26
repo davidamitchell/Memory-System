@@ -1,0 +1,9 @@
+**In scope:**
+- How Microsoft 365 Copilot interacts with Microsoft Graph permissions and sensitivity labels when retrieving content for generative tasks
+- Real-world incidents or case studies where AI assistants inadvertently surfaced or incorporated classified or sensitive data into new outputs
+- Technical and policy mitigations, Data Loss Prevention (DLP), restricted content discovery, Government Community Cloud High (GCC High), sensitivity label enforcement, and how effective they are
+- How regulatory frameworks, General Data Protection Regulation (GDPR), Cybersecurity Maturity Model Certification (CMMC), International Traffic in Arms Regulations (ITAR), and national security policies, view the use of commercial Generative Artificial Intelligence (GenAI) on sensitive data
+- Risk profile differences between consumer or commercial Copilot, enterprise-licensed versions, and sovereign or government deployments
+- How over-permissioning and data sprawl in SharePoint and OneDrive amplify risks when Artificial Intelligence (AI) is introduced
+- Impact of poor or absent data-classification labeling on GenAI-driven data leakage
+- Whether Copilot-generated outputs, inline summaries, bullet lists, compiled reports, and new documents, inherit the sensitivity labels of their source documents, and what happens when they do not

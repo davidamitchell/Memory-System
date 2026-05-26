@@ -1,0 +1,1 @@
+4. [inference] Current governance mechanisms such as SAFe, Program Increment (PI) planning, investment boards, QA teams, and project-management front doors are largely responses to software scarcity and become less valuable as software execution becomes cheaper and faster. Source: https://alexop.dev/posts/the-software-factory/

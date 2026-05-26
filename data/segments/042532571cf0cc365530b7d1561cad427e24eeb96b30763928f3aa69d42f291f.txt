@@ -1,0 +1,3 @@
+1. **Bi-directional access**: the agent doesn't just read data; it has the authority to create and update it.
+2. **Versioned context**: the agent can use version history to understand how the data (and the thinking behind it) has evolved over time.
+3. **Self-correction**: the agent is explicitly tasked with finding and fixing structural errors in the data — not just consuming it passively.

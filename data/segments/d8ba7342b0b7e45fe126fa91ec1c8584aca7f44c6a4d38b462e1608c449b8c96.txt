@@ -1,0 +1,10 @@
+| Capability | Description |
+|-----------|-------------|
+| **Named entity extraction** | Concepts and classes identified from prose without hand-authored front-matter |
+| **Alias / synonym grouping** | Multiple surface forms of the same concept collapsed to a canonical node |
+| **Typed relation extraction** | Directed, labelled predicates between concepts (e.g. `partOf`, `causedBy`, `instanceOf`, `precedes`) rather than undifferentiated `relatedTerm` |
+| **Taxonomic hierarchy** | `subClassOf` / `rdf:type` edges enabling is-a reasoning; not just associative links |
+| **Confidence-weighted assertions** | Every extracted assertion carries a confidence score derived from extraction method and source authority |
+| **Full provenance tracing** | Every node resolves to the segment(s) that evidenced it; every segment resolves to its source document |
+| **Consistency validation** | Contradictions and collisions are detected before any version is committed |
+| **Evaluable output** | Extraction quality can be measured against a known-good ground truth corpus |

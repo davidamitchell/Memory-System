@@ -1,0 +1,1 @@
+sqlite-vec (successor to sqlite-vss) is a pure-C SQLite extension: `pip install sqlite-vec`, `vec0` virtual table, KNN queries, supports float32/int8/binary vectors, Mozilla Builders sponsorship. Pre-v1 (breaking changes expected). Requires SQLite ≥ 3.41 for full feature set. [fact, source: github.com/asg017/sqlite-vec, confirmed by direct GitHub access]

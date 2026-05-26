@@ -1,0 +1,1 @@
+5. The research item format maps to two natural rubric layers: Layer 1 is trajectory adherence (did all §0–§7 sections get substantive content? were all listed sources consulted?), and Layer 2 is semantic quality (does the Executive Summary answer the research question? are Key Findings specific and bounded?). Confidence: high.

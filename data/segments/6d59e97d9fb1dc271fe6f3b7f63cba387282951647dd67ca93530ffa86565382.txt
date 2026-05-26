@@ -1,0 +1,1 @@
+2. **Catalogue evaluation metrics** - What does each benchmark measure (pass@k, task completion rate, regression rate, cost-per-task, etc.)? How do these metrics relate to real-world coding utility? Are there any composite scoring frameworks that integrate multiple dimensions?

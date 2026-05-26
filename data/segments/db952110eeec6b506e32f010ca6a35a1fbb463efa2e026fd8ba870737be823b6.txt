@@ -1,0 +1,12 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Outlines: ~13,500 GitHub stars, FSM-based schema enforcement at level 2 | https://github.com/dottxt-ai/outlines; https://techcrunch.com/2024/10/17/with-11-9-million-in-funding-dottxt-tells-ai-models-how-to-answer/ | High | Verified via web search 2026-03-11 |
+| Guidance: ~21,000 GitHub stars, LLGuidance adopted by OpenAI | https://github.com/guidance-ai/guidance; https://www.microsoft.com/en-us/research/project/guidance-control-lm-output/ | High | Verified via web search 2026-03-11 |
+| ETH Zurich PLDI 2025: arXiv:2504.09246, type-constrained decoding for TypeScript, compilation errors halved | https://arxiv.org/abs/2504.09246 | High | Primary source; open-source code at https://github.com/eth-sri/type-constrained-code-generation |
+| No purpose-built LLM-output language exists at levels 4–5 | Web search across arXiv, PLDI, NeurIPS, ICML, ICLR 2022–2025 | High (inference) | Absence of evidence from comprehensive search; cannot be 100% certain |
+| LMQL: PLDI 2023, arXiv:2212.06094, constraint-guided decoding, progenitor of field | https://arxiv.org/abs/2212.06094 | High | Primary source; PLDI 2023 proceedings confirmed |
+| SGLang: NeurIPS 2024, Python-embedded DSL, RadixAttention, compressed FSMs | https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf | High | Primary source; NeurIPS 2024 proceedings confirmed |
+| Code as Policies: Liang et al. 2023, arXiv:2209.07753, Python as LLM output for robot control | https://arxiv.org/abs/2209.07753 | High | Primary source |
+| Dafny as IR: arXiv:2501.06283, 2025, LLM generates Dafny specs for mechanical verification | https://arxiv.org/pdf/2501.06283v1 | Medium | Identified via web search; primary source confirmed |
+| All current tools address only Layer 1 structural failures | Cross-reference: `2026-03-10-ai-concept-classification-taxonomy.md` + Outlines docs | High | Consistent across all sources; confirmed by Outlines documentation explicitly acknowledging semantic hallucination remains |
+| Level 4–5 LLM-output language faces undecidability barrier | [inference] from specification hierarchy + computability theory | Medium | Standard computability result; no single primary source but logically derivable |

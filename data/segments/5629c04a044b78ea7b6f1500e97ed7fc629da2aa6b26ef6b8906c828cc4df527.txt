@@ -1,0 +1,1 @@
+9. The marginal cost of the CI eval gate is zero in API fees (Copilot subscription is already paid) and approximately $0.04 per run in GitHub Actions runner cost (5 minutes at $0.008/minute), making per-item cost constraints effectively non-binding for this use case. Confidence: medium.

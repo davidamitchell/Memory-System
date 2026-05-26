@@ -1,0 +1,1 @@
+5. **Scaling dynamics** — What do scaling laws and mechanistic interpretability research suggest about how neuron-level features change with model scale? Does H-Neuron density decrease as models become larger (suggesting scale "solves" the problem) or does it remain stable/increase?

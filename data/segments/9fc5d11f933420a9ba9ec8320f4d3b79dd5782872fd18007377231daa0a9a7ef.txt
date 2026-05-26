@@ -1,0 +1,4 @@
+**Branch C — Agentic SWE frontier**
+- C1: What is Devin's documented performance on SWE-bench and how has the benchmark evolved?
+- C2: What is GitHub Copilot Workspace/Coding Agent's current capability profile?
+- C3: Where does autonomous coding agent performance fall short of human parity?

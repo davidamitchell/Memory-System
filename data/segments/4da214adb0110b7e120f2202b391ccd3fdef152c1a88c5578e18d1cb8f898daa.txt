@@ -1,0 +1,3 @@
+- `mcp_server.py` at the repo root is a **legacy prototype** from the original vector-storage design. It is not the target system.
+- The ontology-based MCP server is not yet built. Its tool interface will be defined and recorded in an ADR as part of implementation. See `docs/design/ontology-system-design.md` for the architecture.
+- `.vscode/mcp.json` currently points to `mcp_server.py`; this will be updated when the ontology server is implemented.

@@ -1,0 +1,1 @@
+**Scope confirmation:** The investigation is bounded to native ServiceNow capabilities and the governance conditions that make process documentation persist. The question is not capability inventory alone but sustainability in practice. External BPM tools and CSDM data modelling mechanics are out of scope.

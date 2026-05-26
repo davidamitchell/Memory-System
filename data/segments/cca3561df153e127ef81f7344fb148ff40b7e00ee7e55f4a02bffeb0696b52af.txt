@@ -1,0 +1,6 @@
+- Type: knowledge, backlog-item
+- Description: A phase taxonomy with evidence-backed prompt patterns for eight SDLC phases, a comparison of static context files vs. MCP-based tooling alignment, and an efficiency evidence map covering Build (55.8% speed gain), Testing (SCoT +13.79% Pass@1), and whole-workflow DORA findings; spawns a follow-on item on MCP server phase-prompt implementation.
+- Links:
+  - arXiv:2302.06590 — Peng et al., GitHub Copilot productivity experiment
+  - arXiv:2305.06599 — Li et al., Structured CoT for code generation
+  - https://services.google.com/fh/files/misc/dora_one_pager_2024.pdf — DORA 2024 executive summary

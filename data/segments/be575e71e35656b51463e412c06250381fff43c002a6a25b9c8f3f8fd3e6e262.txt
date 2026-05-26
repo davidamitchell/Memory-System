@@ -1,0 +1,6 @@
+- review_result: pass
+- acronym_audit: passed
+- domain_term_audit: passed
+- claim_label_audit: passed
+- synthesis_findings_parity: aligned
+- confidence_result: medium

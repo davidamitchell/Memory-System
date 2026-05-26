@@ -1,0 +1,1 @@
+[inference] The Claude Code web setup script should be a Bash snippet configured in the Claude.ai project settings for this repository. A correct script would be:

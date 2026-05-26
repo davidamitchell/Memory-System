@@ -1,0 +1,1 @@
+3. **Five domains cover the corpus without gaps.** D1 AI Strategy & Governance; D2 Agentic Systems & Architecture; D3 Cognitive Science & Foundations; D4 Research Tooling & Delivery; D5 Knowledge Management & Process. All 48 items map to exactly one primary domain. [medium confidence — taxonomy is an inference; some items straddle domains]

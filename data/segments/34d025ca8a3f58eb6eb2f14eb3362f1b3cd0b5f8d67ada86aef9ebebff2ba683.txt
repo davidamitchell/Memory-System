@@ -1,0 +1,2 @@
+P1[Decompose into checklist ≤7 items] --> P2[State Definition of Done]
+    P2 --> P3[Name at least one risk] --> P4[report_progress with plan]

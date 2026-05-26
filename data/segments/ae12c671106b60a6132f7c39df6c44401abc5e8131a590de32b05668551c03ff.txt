@@ -1,0 +1,6 @@
+**Out of scope:**
+- Policy synchronisation across phases (covered by RQ2)
+- Kill-switch and remediation protocols (covered by RQ3)
+- Invariant registration mechanism in the Policy Administration Point (PAP) (covered by RQ1), though the intent triple includes the invariant set as a subset
+- Anomaly detection in the Policy Information Point (PIP) (covered by RQ4), though the representation produced here must be evaluable by the PIP
+- Organisation-level intent (the organisational intent formal specification item), this research is scoped to asset-level intent only

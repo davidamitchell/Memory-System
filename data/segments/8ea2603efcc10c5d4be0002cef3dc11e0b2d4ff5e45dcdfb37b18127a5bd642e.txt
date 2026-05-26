@@ -1,0 +1,1 @@
+6. **Monthly review cadence matches the corpus turnover rate.** At 3 items/day on weekdays, the backlog turns over in ~8 weeks. A monthly review catches imbalances before the next turnover cycle. Quarterly would be too slow. [inference — arithmetic]

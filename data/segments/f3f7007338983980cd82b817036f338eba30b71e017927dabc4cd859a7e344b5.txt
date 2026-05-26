@@ -1,0 +1,8 @@
+**In scope:**
+- Native ServiceNow capabilities for process documentation and modelling: Process Universe, BPMN-style process flows, Flow Designer, Workflow Editor, Playbooks, Process Mining (if available)
+- How process maps in ServiceNow relate to the Common Service Data Model (CSDM) and module configuration
+- What distinguishes process documentation that stays maintained vs what decays into irrelevance within 6–12 months
+- Governance models for process ownership and update triggers
+- Integration of process documentation with ITSM practices (incident, problem, change, service request workflows)
+- Comparison against the minimum viable approach: is a lightweight process documentation strategy in SNOW better than a rich-but-stale one?
+- What "meaningful and maintained" looks like operationally — metrics, ownership models, review cadences

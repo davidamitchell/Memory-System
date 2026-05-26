@@ -1,0 +1,3 @@
+- #### Source access and replacement notes
+  - [fact; source: https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook] Access note: seeded NIST Playbook link replaced with the current official NIST playbook page.
+  - [fact; source: https://www.bankofengland.co.uk/prudential-regulation/publication/2022/october/artificial-intelligence] Access note: seeded FCA PDF link replaced with the current official Bank of England Discussion Paper 5/22 page.

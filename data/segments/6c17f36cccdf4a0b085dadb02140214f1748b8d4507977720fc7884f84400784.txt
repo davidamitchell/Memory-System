@@ -1,0 +1,4 @@
+- [`.github/copilot-instructions.md`](../../.github/copilot-instructions.md) — the constitution this harness operates within
+- [`_docs/design/ontology-system-design.md`](./ontology-system-design.md) — example of a multi-phase design document produced using a prior iteration of this loop
+- [`_docs/adr/README.md`](../adr/README.md) — ADR index; harness changes require an ADR
+- [`BACKLOG.md`](../../BACKLOG.md) — work items raised during harness execution

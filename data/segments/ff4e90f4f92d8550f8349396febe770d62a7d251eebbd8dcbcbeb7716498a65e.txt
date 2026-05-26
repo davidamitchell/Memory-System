@@ -1,0 +1,1 @@
+[inference] ReAct/MRKL/Toolformer occupy a degenerate level 1–2 position: they specify an informal format (level 1 intention) that is sometimes enforced by post-processing parsers (level 2 weakly). They are design patterns, not languages.

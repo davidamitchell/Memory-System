@@ -1,0 +1,1 @@
+[inference] Stripe's Minions and the alexop.dev model are human-in-the-loop factories: AI generates all code, but human review is mandatory before merge. The "dark factory" pattern (no human review) is an experimental frontier with documented compliance and debuggability risks, not yet viable for regulated environments.

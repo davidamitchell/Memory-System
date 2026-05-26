@@ -1,0 +1,1 @@
+Tags are lowercase, kebab-case strings (e.g. `meeting`, `lancedb`, `mcp`, `open-brain`).

@@ -1,0 +1,2 @@
+- [fact] Potential contradiction 1: DORA 2024 found AI reduces team delivery stability (–7.2%) yet the software factory model predicts faster delivery.
+- [inference] Resolution 1: These are not contradictory because DORA measures current AI-assisted development added to existing team structures, while the factory model requires redesigning the team structure and process around AI. Adding AI tools to existing SAFe processes likely produces the DORA result; redesigning around AI is what the factory model claims produces the speed gain.

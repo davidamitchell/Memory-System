@@ -1,0 +1,1 @@
+DuckDB's columnar storage is well-suited to queries that scan large portions of a table (analytics). The research item queries (A1–A4) are predominantly point lookups and small joins — row-oriented access patterns. SQLite's row-oriented storage is better matched to these patterns. [inference]

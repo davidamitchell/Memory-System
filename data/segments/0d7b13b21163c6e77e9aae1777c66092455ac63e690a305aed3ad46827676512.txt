@@ -1,0 +1,7 @@
+1. **Current snapshot** - crawl the official careers pages of each target company and categorise open roles by function (research, engineering, safety, policy, product, business/go-to-market, hardware/infrastructure). Produce a role-count breakdown per company.
+2. **Historical comparison via Wayback Machine** - retrieve archived snapshots of the same careers pages from 6, 12, and 24 months prior. Compare role counts and categories. Note significant increases, decreases, or novel role types.
+3. **High-profile hire mapping** - search LinkedIn announcements, X/Twitter (search for "\[Name\] joins \[Company\]"), and company blog posts for notable individual hires in 2024-2026. Group by function and seniority. Note any patterns (e.g. a wave of hardware architects, or ex-regulators joining policy teams).
+4. **Job board triangulation** - cross-check findings against LinkedIn Jobs, Glassdoor, and Indeed role counts and salary ranges. Use Levels.fyi for compensation bands as an investment-intensity proxy.
+5. **HN thread mining** - review the last 12 months of Hacker News "Who is Hiring?" threads (posted monthly) for AI lab postings and patterns.
+6. **Cross-reference with public strategy** - for each company, compare the hiring pattern against public strategic claims (blog posts, conference talks, SEC filings where applicable). Label agreements as [fact] and divergences as [inference].
+7. **Synthesis** - identify the 5-7 highest-confidence strategic signals that the hiring data supports, and flag the 2-3 most significant gaps or inconsistencies.

@@ -1,0 +1,1 @@
+The queries the system needs to answer, derived from the codebase, research workflow, and AGENTS.md:

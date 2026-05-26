@@ -1,0 +1,4 @@
+**Branch D — Mid-tier bank analysis**
+- D1: What specific challenges do mid-tier banks face in adopting software factory patterns?
+- D2: What competitive advantages do mid-tier banks retain that AI-native entrants lack?
+- D3: What is the opportunity window — how much time do mid-tier banks have before the competitive gap widens?

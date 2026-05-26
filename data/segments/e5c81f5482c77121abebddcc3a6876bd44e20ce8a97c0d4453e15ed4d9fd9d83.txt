@@ -1,0 +1,4 @@
+1. **Decision dependency** (1–3): Does a current active decision or work item depend on this research? (1 = no active dependency; 2 = would improve a pending decision; 3 = blocks a current decision or BACKLOG.md slice)
+2. **Dependency unblocking** (1–3): Does completing this item explicitly unblock other backlog items or BACKLOG.md slices? (1 = no; 2 = unblocks ≥1 item; 3 = unblocks ≥3 items or a high-priority item)
+3. **Knowledge gap severity** (1–3): How much does not having this knowledge constrain current decision quality? (1 = nice to know; 2 = noticeable gap; 3 = actively making decisions poorly due to absence)
+4. **Input availability** (1–3): Are good sources accessible now? (1 = premature, sources not yet available; 2 = sources exist but incomplete; 3 = rich sources available, research is timely)

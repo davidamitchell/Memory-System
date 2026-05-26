@@ -1,0 +1,3 @@
+**Constraints:**
+- Sources must be publicly accessible documentation, standards bodies, peer-reviewed papers, or independently authored technical articles, with no vendor marketing-only sources
+- Assess currency as of 2024-2026; flag any sources older than three years

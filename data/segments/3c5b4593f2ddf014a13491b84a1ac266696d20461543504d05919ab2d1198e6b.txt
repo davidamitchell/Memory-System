@@ -1,0 +1,1 @@
+3. **"DuckDB has FTS and is embedded — why not use it?"** Resolved by query pattern mismatch. DuckDB is OLAP-optimised; the research corpus queries are OLTP-pattern (row lookups, small joins). Additionally, DuckDB has no vector search, requiring a separate store for Phase 2 regardless. SQLite satisfies both phases in one file.

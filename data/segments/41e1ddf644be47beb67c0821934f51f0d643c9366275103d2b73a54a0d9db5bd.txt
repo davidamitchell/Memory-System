@@ -1,0 +1,1 @@
+The extension is pre-v1, meaning its SQL interface may have breaking changes before 1.0. This is a stability risk for production use. [fact, source: github.com/asg017/sqlite-vec README]

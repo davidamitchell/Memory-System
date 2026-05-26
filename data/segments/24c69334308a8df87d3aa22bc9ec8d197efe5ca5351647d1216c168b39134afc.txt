@@ -1,0 +1,1 @@
+3. **ANZ Bank deployed GitHub Copilot to 3,000 engineers following an internal controlled trial of 1,000 engineers** that showed 40–55% faster code development and improvements in code quality; ANZ is the most relevant documented case for the NZ financial services sector.

@@ -1,0 +1,1 @@
+3. **Analyse metric sensitivity** - Which metrics are most sensitive to the shallow-vs-deep module distinction? Review the literature on cyclomatic complexity, cognitive complexity, coupling, cohesion, and time-to-change. Identify which are tractable to measure automatically.

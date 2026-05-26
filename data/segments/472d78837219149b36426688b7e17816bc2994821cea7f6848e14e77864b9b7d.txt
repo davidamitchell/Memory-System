@@ -1,0 +1,1 @@
+The corpus was on a separate branch and was not referenced in the BACKLOG.md test plan, creating confusion about which documents were intended as the prose extraction target.

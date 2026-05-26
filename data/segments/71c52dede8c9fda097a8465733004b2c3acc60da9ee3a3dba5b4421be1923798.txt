@@ -1,0 +1,1 @@
+- **No whole-SDLC controlled study:** Every controlled experiment found covers one to two SDLC phases. There is no study that instruments all eight phases with the same team, tool, and evaluation method. The cross-phase efficiency framework in §6 is a synthesis from independent evidence, not a directly validated framework.

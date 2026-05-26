@@ -1,0 +1,1 @@
+**Technical lens:** The `agenda` CLI command should handle edge cases: empty directories, items with malformed YAML, items missing `tags` field. The `ResearchItem.from_file()` method already handles missing fields with defaults. The command should not fail on individual bad files — log a warning and continue, matching the error-handling pattern in `src/main.py`.

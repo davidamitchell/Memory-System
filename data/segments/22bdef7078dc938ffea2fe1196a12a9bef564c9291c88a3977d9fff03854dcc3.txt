@@ -1,0 +1,3 @@
+- [Ricardian Contract model: history, current state, and latest research](https://davidamitchell.github.io/Research/research/2026-03-14-ricardian-contract-model.html)
+- [Universal policy synchronisation and integrity](https://davidamitchell.github.io/Research/research/2026-04-27-pdp-universal-policy-synchronisation-integrity.html)
+- [Invariant-based anomaly detection in the Policy Information Point (PIP)](https://davidamitchell.github.io/Research/research/2026-04-27-pip-invariant-anomaly-detection.html)

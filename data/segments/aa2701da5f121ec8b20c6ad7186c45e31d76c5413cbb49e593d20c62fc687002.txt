@@ -1,0 +1,1 @@
+Together these items make the research question tractable: a language specifically designed for LLM agent output would sit at the intersection of structural controls and the level 3–4 specification hierarchy. The question is whether this design space has active occupants.

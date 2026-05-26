@@ -1,0 +1,4 @@
+- **A2. Which effort types matter**
+  - [fact; source: https://doi.org/10.1111/j.1468-0335.1937.tb00002.x; https://doi.org/10.2307/1882566] Coase and Williamson treat coordination choices as responses to transaction costs, especially search, bargaining, enforcement, uncertainty, and asset specificity.
+  - [fact; source: https://doi.org/10.1287/inte.4.3.28] Galbraith argues that uncertainty increases the amount of information organisations must process, and that organisations respond either by reducing the need for information processing or by increasing their capacity to process it.
+  - [inference; source: https://doi.org/10.1111/j.1468-0335.1937.tb00002.x; https://doi.org/10.1287/inte.4.3.28; https://doi.org/10.2307/2666999] For knowledge-seeking inside organisations, the relevant cost bundle includes search cost, access cost, interpretation cost, coordination delay, and social risk, because each one can make an otherwise accurate source practically unusable.

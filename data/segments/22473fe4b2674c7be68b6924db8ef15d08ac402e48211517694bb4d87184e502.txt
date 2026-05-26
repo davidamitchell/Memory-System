@@ -1,0 +1,15 @@
+- [x] [TBM Council practitioner community — implementation experience, not vendor materials (tbmcouncil.org forums/publications)](https://www.tbmcouncil.org/)
+- [ ] Apptio case studies for National Grid, Liberty Mutual, UPMC, Hermes Parcel — read specifically for implementation mechanics and challenges, not outcomes
+- [ ] Gartner "Run-Grow-Transform" framework (G00308477) — application definition criteria and governance guidance
+- [ ] Mik Kersten "Project to Product" (2018) — Flow Framework® value stream and team definition, and the practical challenge of mapping work to value streams
+- [ ] IT Financial Management (ITFM) practitioner blogs, conference talks (HDI, itSMF, FinOps Foundation) — implementation war stories
+- [x] "Application portfolio management" literature — how APM programmes define and govern the application register (LeanIX, SAP Help Portal)
+- [ ] Google Scholar: "IT cost allocation implementation challenges", "application portfolio rationalization governance", "TBM implementation lessons learned" — filtered post-2018
+- [ ] LinkedIn / practitioner accounts of TBM, FinOps, or ITFM programme implementations — specifically seeking accounts of what did not work as expected
+- [x] GAO-25-106488 (2025) — US federal agency TBM implementation audit
+- [x] KPMG Empowering TBM Program — 18-month phased implementation guidance
+- [x] Praecipio Consulting — practical Apptio TBM implementation steps and case data
+- [x] EY — ITFM business case and sponsorship patterns
+- [x] Serviceware — ITFM vs TBM sponsor alignment patterns
+- [x] Rego Consulting — TBM business case methodology
+- [x] ISG Multi-Dimensional TBM Framework — failure mode taxonomy

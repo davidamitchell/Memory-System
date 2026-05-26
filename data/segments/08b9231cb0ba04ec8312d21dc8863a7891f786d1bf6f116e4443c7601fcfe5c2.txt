@@ -1,0 +1,1 @@
+A fourth refinement arose from the provenance requirement: document segments, not whole documents, are the right granularity for evidence references. A **Prepared Segment** — an immutable, content-addressed fragment — enables precise, stable provenance links.

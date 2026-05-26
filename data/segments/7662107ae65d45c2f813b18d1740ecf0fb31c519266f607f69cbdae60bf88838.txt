@@ -1,0 +1,4 @@
+**In scope:**
+- Integration of transaction-cost, information-processing, and institutional perspectives into one design model.
+- Design principles that jointly minimise effort, preserve relevance, and improve knowledge-transfer quality.
+- Governance and measurement frameworks for sustaining alignment over time.

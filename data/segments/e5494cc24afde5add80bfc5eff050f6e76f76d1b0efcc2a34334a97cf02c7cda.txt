@@ -1,0 +1,4 @@
+**Cluster F: Process Mining evaluation**
+- F1. Can Process Mining substitute for authored documentation in whole or in part?
+- F2. What are Process Mining's specific limitations in a governance context?
+- F3. What is the optimal division of labour between Process Mining and authored documentation?

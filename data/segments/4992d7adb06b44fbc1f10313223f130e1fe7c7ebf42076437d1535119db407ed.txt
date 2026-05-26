@@ -1,0 +1,7 @@
+**Facts established:**
+1. TOC is a constraint-management framework with a rigorous five-step focusing process and three financial metrics (throughput, inventory, operating expense).
+2. DBR is the operational implementation of TOC in manufacturing, and the rope mechanism is backpressure formalised as a scheduling rule.
+3. Backpressure in TOC = controlled work release that prevents upstream processes from outpacing the constraint.
+4. TA provides financial grounding for backpressure decisions by measuring the cost of excess WIP and the value of constraint protection.
+5. Academic peer-reviewed literature confirms TOC effectiveness across manufacturing, project management, and healthcare with consistently documented improvements in throughput and lead times.
+6. The Velocity Scheduling System article applies TOC backpressure logic to AI-enabled organisations, treating CSJ as the upstream constraint that requires protection.

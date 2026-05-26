@@ -1,0 +1,52 @@
+# concept_card.rq — Portable SPARQL SELECT query for concept card retrieval.
+#
+# Usage (portable, works with any SPARQL 1.1 endpoint):
+#   BIND your search term to ?searchTerm and set the prefix declarations.
+#
+# This query returns all concept-card fields for an AssertionNode that
+# partially matches (case-insensitive) by rdfs:label or ms:aliases.
+#
+# Prefixes match those used in the Turtle snapshots.
+
+PREFIX ms:   <https://memory.example.org/ms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT
+    ?node
+    ?label
+    ?comment
+    ?alias
+    ?tag
+    ?relatedNode
+    ?contentHash
+    ?sourceDoc
+    ?activityId
+WHERE {
+    ?node a ms:AssertionNode ;
+          rdfs:label ?label .
+
+    OPTIONAL { ?node rdfs:comment ?comment }
+    OPTIONAL { ?node ms:aliases   ?alias   }
+    OPTIONAL { ?node ms:hasTag    ?tag     }
+    OPTIONAL { ?node ms:relatedTerm ?relatedNode }
+
+    OPTIONAL {
+        ?node prov:wasGeneratedBy ?activityId .
+        OPTIONAL {
+            ?activityId prov:used ?seg .
+            ?seg ms:contentHash  ?contentHash .
+            ?seg ms:sourceDocument ?sourceDoc .
+        }
+    }
+
+    # Filter: label or alias contains the search term (case-insensitive)
+    # Replace the literal below with the actual search term at call time.
+    # Example: BIND("vector embedding" AS ?searchTerm)
+    # FILTER(
+    #     CONTAINS(LCASE(STR(?label)), LCASE(?searchTerm)) ||
+    #     (BOUND(?alias) && CONTAINS(LCASE(STR(?alias)), LCASE(?searchTerm)))
+    # )
+}
+ORDER BY ?label ?alias ?tag

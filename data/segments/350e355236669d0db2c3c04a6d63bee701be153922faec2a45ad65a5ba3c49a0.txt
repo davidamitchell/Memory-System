@@ -1,0 +1,1 @@
+**Constraints:** Focus on work where the LLM-as-author framing is stated or clearly implied. Distinguish research prototypes from production tools. Prefer primary sources.

@@ -1,0 +1,6 @@
+Supporting questions:
+- What does the Predictive Processing (PP) / Predictive Coding (PC) framework say about how the brain works, and how well is it supported by neuroscience evidence?
+- How does LLM next-token generation actually work, and in what specific ways does it differ from the PP account?
+- Is "generating a model of the world" meaningfully different from "predicting the next token in a sequence"?
+- What role does embodiment, action, and the Free Energy Principle (FEP) play in the PP account that has no analogue in LLMs?
+- What do the similarities and differences imply about consciousness, understanding, and the plausibility of general intelligence emerging from next-token prediction?

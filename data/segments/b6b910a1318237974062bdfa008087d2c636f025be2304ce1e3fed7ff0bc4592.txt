@@ -1,0 +1,1 @@
+If a change is warranted, **make it now** — do not defer to a backlog item. This is §7 in action: "Do not just answer — make the change."

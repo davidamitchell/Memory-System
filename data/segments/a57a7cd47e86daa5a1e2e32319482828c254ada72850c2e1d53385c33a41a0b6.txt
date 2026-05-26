@@ -1,0 +1,7 @@
+DuckDB is an embedded columnar-vectorized OLAP database. Key characteristics (from duckdb.org/why_duckdb):
+- No external dependencies, embedded in-process
+- Single-file persistent database (binary, not git-diffable)
+- Columnar storage optimised for analytical (OLAP) queries — aggregations over large tables
+- FTS extension (BM25, Porter stemmer, configurable stopwords) available via autoload
+- MIT licence
+- No built-in vector search (no KNN/ANN index) — would require a community extension or external tooling

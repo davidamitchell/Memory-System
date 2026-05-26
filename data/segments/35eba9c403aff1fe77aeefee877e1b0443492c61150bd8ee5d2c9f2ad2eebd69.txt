@@ -1,0 +1,1 @@
+**[fact]** GraphRAG has a critical operational limitation: incremental updates require full graph rebuilding. Adding new documents triggers re-extraction, re-clustering, and re-summarisation of the entire graph. For a dynamic knowledge base, this is prohibitive. Source: LightRAG (2024) paper framing of the problem, arXiv:2410.05779.

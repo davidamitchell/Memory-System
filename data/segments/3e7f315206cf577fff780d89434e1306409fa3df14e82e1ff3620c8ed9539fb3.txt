@@ -1,0 +1,1 @@
+[inference] Transaction-cost theory explains why investment boards, SAFe, and project-management front doors were rational under scarcity and why lighter prioritisation mechanisms become more appropriate as software execution gets cheaper. Sources: https://alexop.dev/posts/the-software-factory/, https://velocityschedulingsystem.com/blog/theory-of-constraints-ai

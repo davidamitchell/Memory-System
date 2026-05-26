@@ -1,0 +1,15 @@
+- A. Versioning and change management
+  - A1. How should graph or schema changes be published so dependent consumers can keep working?
+  - A2. What metadata is needed to reconstruct an older graph state or explain when a change happened?
+- B. Provenance and conflict handling
+  - B1. How should the graph record where each assertion came from?
+  - B2. How should the system distinguish structural invalidity from disagreement between sources?
+- C. Entity resolution
+  - C1. What steps should happen before two records are merged into one canonical entity?
+  - C2. What should happen to old identifiers after a merge?
+- D. Freshness and ingestion
+  - D1. What combination of full refresh and incremental update is operationally mature?
+  - D2. How should downstream agents know how fresh a graph-derived artifact is?
+- E. Synthesis
+  - E1. What operating model combines versioning, provenance, validation, and freshness into one safe lifecycle?
+  - E2. Which adjacent repository findings qualify or sharpen that model?

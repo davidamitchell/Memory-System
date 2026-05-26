@@ -1,0 +1,2 @@
+- README.md describes Open-Brain as "agent-native".
+- The agent constitution in `.github/copilot-instructions.md` is the primary implementation of the agent-first design: it gives agents permission and mandate to improve the repository structure.

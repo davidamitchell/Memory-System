@@ -1,0 +1,7 @@
+| Rule | Enforcement |
+|---|---|
+| One task per session | If a second task surfaces mid-session, add it to `BACKLOG.md` and stay on the current task |
+| No orphan improvements | Improvements spotted but unrelated to the current task go to `BACKLOG.md`, not into the current PR |
+| Scope declared at Entry | Any file change outside the Entry scope requires an explicit justification in `report_progress` |
+| Skills before scratch work | If a skill exists for the task, its output is canonical — do not re-derive |
+| Retro is mandatory | A session without a mini-retro is not done |

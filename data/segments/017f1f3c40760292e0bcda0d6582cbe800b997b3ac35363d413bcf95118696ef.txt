@@ -1,0 +1,5 @@
+1. **Survey published cases** — identify 6–8 financial services or utilities organisations that have deployed AI specifically for risk reduction with disclosed governance approach and outcomes.
+2. **Regulatory expectation mapping** — for each relevant regulator (RBNZ, APRA, OCC, ECB), document what supervisory expectations exist for AI in risk management contexts.
+3. **Model risk management** — document how SR 11-7 (US) model risk management principles are being adapted for AI/ML models specifically (the original guidance predates neural networks).
+4. **Failure mode analysis** — identify cases where AI risk models failed or produced adverse outcomes. What went wrong and what governance would have caught it?
+5. **NZ applicability** — which frameworks and case studies are directly applicable to RBNZ-supervised institutions? What does RBNZ's current silence on AI-specific guidance mean in practice?

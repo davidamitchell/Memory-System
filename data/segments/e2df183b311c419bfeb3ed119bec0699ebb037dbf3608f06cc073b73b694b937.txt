@@ -1,0 +1,8 @@
+**In scope:**
+- Techniques for generating architecture blueprints from source code (dependency graphs, service maps, call graphs, Application Programming Interface (API) surface analysis)
+- Multi-repo relationship and coupling analysis (shared libraries, cross-repo imports, API contracts, event schemas)
+- Standards alignment checking (naming conventions, dependency policies, security patterns, architectural decision records (ADRs))
+- GitHub Copilot agent skills relevant to architecture inspection, particularly the architecture-blueprint-generator skill from awesome-copilot
+- Tooling for multi-repo operations: RepoSwarm and similar orchestration frameworks
+- Integration of architecture inspection into continuous integration / continuous delivery (CI/CD) pipelines or GitHub Actions workflows
+- Relationship to previous research on coding AI agent skills, Model Context Protocol (MCP), and multi-agent frameworks

@@ -1,0 +1,5 @@
+- Question: How can Karl Popper's criterion of demarcation and falsifiability be mathematically formalised to distinguish between a model that explains a physical mechanism and one that merely interpolates observational data?
+- Scope: statistical learning theory, description length, mechanistic versus interpolative modelling, and placement of modern deep learning.
+- Constraints: full mode, quantitative treatment first, philosophical interpretation only where needed to define the target.
+- Output: full structured synthesis with executive summary, key findings, evidence map, assumptions, analysis, risks, and open questions.
+- Prior-item scan: two completed items in this repository already separate broad mathematical frameworks from their more testable derived process theories, but neither item maps that distinction onto hypothesis-class capacity or description length. [fact; source: https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-02-28-predictive-processing-active-inference.md; https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-02-28-free-energy-entropy-and-life.md]

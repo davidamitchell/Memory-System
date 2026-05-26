@@ -1,0 +1,3 @@
+- `PROGRESS.md` contains the complete history of mini-retros for this repository.
+- `.github/copilot-instructions.md` §7 mandates the mini-retro and defines its four questions.
+- The "What is Done" checklist in §7 requires `PROGRESS.md` to be updated with a mini-retro before a session is considered complete.

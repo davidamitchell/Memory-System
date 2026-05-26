@@ -1,0 +1,4 @@
+- Will OMG stabilize the canonical namespace and release narrative around DPROD 1.0 in a way that removes the current beta versus final ambiguity?
+- Will DPROD remain narrowly aligned to DCAT resource, dataset, and service semantics, or expand toward richer port and contract classes closer to DPDS?
+- Which major catalog vendors, if any, will publish native DPROD import, export, or mapping support rather than platform-specific models?
+- Would a future DCAT profile or W3C-hosted profile reduce adoption friction more effectively than a standalone OMG-centered publication path?

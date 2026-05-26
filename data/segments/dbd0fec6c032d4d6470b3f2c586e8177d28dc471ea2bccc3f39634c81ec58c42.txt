@@ -1,0 +1,4 @@
+**Out of scope:**
+- External BPM tooling (Visio, ARIS, Signavio, Celonis) except as comparison points to illustrate tradeoffs
+- ServiceNow platform administration or workflow development mechanics
+- CSDM data modelling (see `2026-03-08-servicenow-csdm-data-modelling`)

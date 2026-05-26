@@ -1,0 +1,11 @@
+| Dimension | Conclusion |
+|---|---|
+| Technology | SQLite + FTS5 (Phase 1); SQLite + FTS5 + sqlite-vec (Phase 2) |
+| Migration trigger | ≥500 state entries, OR cross-item query need, OR semantic search backlog item started |
+| Dependencies | Phase 1: zero (stdlib); Phase 2: `pip install sqlite-vec` |
+| Schema | 5 tables: `items`, `tags`, `sources`, `processed`, `transcripts`; 1 FTS5 virtual table; 1 vec0 table (Phase 2) |
+| Database file | Binary artefact; add `state/research.db` to `.gitignore`; rebuild from YAML front-matter on first run |
+| Source of truth | YAML front-matter (Markdown files) — database is a derived index |
+| DuckDB verdict | Not suitable: OLAP-optimised engine mismatches row-oriented query patterns; no vector search |
+| ChromaDB verdict | Not suitable as primary store; embeddings-first, no relational layer, heavy dependencies |
+| LanceDB verdict | Disproportionate to corpus scale; designed for petabyte-scale multi-modal workloads |

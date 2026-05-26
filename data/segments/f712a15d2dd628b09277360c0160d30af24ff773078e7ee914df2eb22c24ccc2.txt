@@ -1,0 +1,1 @@
+**[fact]** LSA has one advantage: it is interpretable. The latent dimensions can be inspected and named (e.g., "dimension 3 relates to topics X, Y, Z"). Dense embedding dimensions are uninterpretable. For agent systems that need explainable retrieval paths, LSA's interpretability is a minor advantage. Source: spotintelligence.com LSA review (2023).

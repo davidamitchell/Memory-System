@@ -1,0 +1,1 @@
+1. **Tension between "larger models hallucinate less" and "scaling does not solve the problem"**: Resolved. Larger models have lower hallucination rates *and* lower perturbation leverage per neuron. Both are consistent with the compliance feature being more diffusely encoded. The behavioural outcome improves; the structural root cause does not disappear.

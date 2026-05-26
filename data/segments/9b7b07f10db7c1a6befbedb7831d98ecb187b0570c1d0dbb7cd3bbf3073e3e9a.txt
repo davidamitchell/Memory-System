@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: Evidence-based assessment of when AI-assisted coding improves local task quality versus when it increases system-level entropy, including a recommended monitoring stack for early detection.
+- Links:
+  - https://www.gitclear.com/ai_assistant_code_quality_2025_research
+  - https://github.blog/news-insights/research/does-github-copilot-improve-code-quality-heres-what-the-data-says/
+  - https://web.stanford.edu/~ouster/cgi-bin/cs190-winter18/lecture.php?topic=modularDesign

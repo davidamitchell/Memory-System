@@ -1,0 +1,1 @@
+8. **Zotero's architecture (SQLite with a relational schema + a separate FTS table indexed against item content) is the closest prior art for this use case and validates the proposed schema pattern.** [high confidence]

@@ -1,0 +1,4 @@
+- **Open questions:**
+  - [inference; source: https://w3c-ccg.github.io/zcap-spec/; https://www.w3.org/TR/vc-data-model/] What is the best controlled vocabulary for purpose classes, action patterns, and caveats that remains portable across tools and organizations?
+  - [inference; source: https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md; https://slsa.dev/spec/v1.0/provenance] Should amendment chains support partial revocation of specific capabilities, or should revocation always issue a whole new declaration to keep verification simpler?
+  - [inference; source: https://davidamitchell.github.io/Research/research/2026-04-27-pip-invariant-anomaly-detection.html] How should the PIP weight rare but legitimate emergency overrides without training itself to treat exceptional high-risk actions as normal?

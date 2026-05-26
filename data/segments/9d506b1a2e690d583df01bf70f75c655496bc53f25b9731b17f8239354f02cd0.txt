@@ -1,0 +1,10 @@
+- [fact] All major factual claims in the Research Skill Output are now labelled [fact], [inference], or [assumption].
+- [fact] Sources are cited for all [fact] claims, and source-type classifications are explicit within §2 Investigation.
+- [fact] The DORA counterevidence is prominently included and not dismissed.
+- [fact] Acronyms are expanded on first use throughout the document.
+- [fact] The Findings section avoids the banned filler phrases listed in the process prompt.
+- [fact] The executive summary first sentence is a specific falsifiable claim about timing and competitive disadvantage.
+- [fact] The Evidence Map includes confidence levels and caveats.
+- [fact] The Key Findings are complete sentences of at least 20 words each.
+- [fact] The Open Questions are specific and actionable as potential backlog items.
+- [fact] Cross-references to prior research are explicit, especially to Thread 2 in `learnings.md` and the completed prerequisite items.

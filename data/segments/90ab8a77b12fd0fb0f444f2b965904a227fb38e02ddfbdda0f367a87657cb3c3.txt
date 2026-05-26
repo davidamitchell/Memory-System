@@ -1,0 +1,1 @@
+A schema for SQLite that supports all required query patterns:

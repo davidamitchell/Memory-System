@@ -1,0 +1,1 @@
+This connects to the existing research thread on the exploration–synthesis gap (`2026-03-12-exploration-synthesis-gap`) and the AI portfolio framework (`2026-02-28-exploit-explore-ai-portfolio-framework`). This item focuses specifically on the practical question: what strategies make synthesis happen reliably in fast-moving contexts?

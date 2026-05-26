@@ -1,0 +1,14 @@
+| Claim | Source | Confidence | Notes |
+|---|---|---|---|
+| Application register prerequisite for team taxonomy and tagging (Finding 1) | KPMG 18-month model; TBM Council ATUM | high | Phase 1 deliverable; downstream phases depend on it |
+| Application boundary criteria — 4 attributes (Finding 2) | TBM Council ATUM; LeanIX documentation | high | Two independent sources agree on criteria |
+| KPMG 18-month phase sequence (Finding 3) | KPMG Empowering TBM Program | high | PDF not directly readable; synthesised from web search summaries citing document |
+| Joint CIO+CFO sponsorship pattern (Finding 4) | KPMG; EY; Serviceware | high | Three independent sources converge on this pattern |
+| Tagging principal-agent failure and mitigations (Finding 5) | Practitioner accounts; ITFM literature | medium | Inference; consistent across multiple practitioner accounts |
+| Degraded tagging produces silent RUN drift (Finding 6) | ITFM practitioner literature; GAO incomplete taxonomy finding | medium | Inference synthesised from partial sources |
+| 18/26 federal agencies failed after 8 years; $1.5M–$28.9M investment (Finding 7) | GAO-25-106488 (July 2025) | high | Primary source; specific quantitative claims |
+| ISG People dimension top failure cause; leadership turnover (Finding 8) | ISG Multi-Dimensional TBM Framework | high | PDF not directly readable; specific dimension ranking from web search summary |
+| Forrester 270% ROI, sub-6-month payback (Finding 9) | Forrester TEI via Rego Consulting | medium | Secondary citation; Forrester original not directly accessed |
+| "Now what?" stall requires decision-process wiring (Finding 10) | EY; Serviceware; Forrester TEI analysis | medium | Inference synthesised across sources |
+| Board argument structure (Finding 11) | EY; Rego Consulting; Serviceware | medium | Inference; consistent across three sources |
+| Change management over tooling determines completion (Finding 12) | ISG Multi-Dimensional TBM Framework | high | Direct claim from ISG dimension priority ranking |

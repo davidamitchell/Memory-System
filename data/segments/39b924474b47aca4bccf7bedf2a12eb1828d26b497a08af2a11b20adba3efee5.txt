@@ -1,0 +1,1 @@
+*Completion drift*: the last 5 completed items are all from the same domain. This indicates the autonomous loop has been consuming one domain's items faster than it is replenishing others.

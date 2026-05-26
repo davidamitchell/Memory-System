@@ -1,0 +1,1 @@
+The content to be searched: title, research question, key findings, tags. Documents are short (hundreds to low thousands of words per item). BM25 ranking is appropriate. Phrase search and prefix search would add value. The corpus will have at most hundreds to low thousands of documents for the foreseeable future — FTS performance is not a bottleneck at this scale.

@@ -1,0 +1,1 @@
+[fact] Stripe's documented investment pattern: every investment in developer tooling, documentation, devboxes, and CI directly improved agent performance — because the factory runs on the same infrastructure humans use. Source: alexop.dev/posts/the-software-factory, attributing Stripe.

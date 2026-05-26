@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: A specification for an immutable, signed intent credential consisting of a human-readable intent statement, a machine-readable intent declaration triple, and an append-only amendment chain for legitimate scope evolution.
+- Links:
+  - https://iang.org/papers/ricardian_contract.html
+  - https://www.w3.org/TR/vc-data-model/
+  - https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md

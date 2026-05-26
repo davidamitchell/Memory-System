@@ -1,0 +1,4 @@
+**Branch D — Failure mode coverage mapping**
+- D1. Which failure modes from the five-layer taxonomy are structurally addressed by at least one current approach?
+- D2. Which failure modes have no current structured approach addressing them?
+- D3. Do any approaches attempt to address Layer 2 (goal), Layer 3 (alignment), or Layer 4 (safety) structurally through output format design?

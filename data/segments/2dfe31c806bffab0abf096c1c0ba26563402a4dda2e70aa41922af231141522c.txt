@@ -1,0 +1,1 @@
+2. [fact] DORA 2024 found that adding AI tools to existing team structures produces net negative team delivery outcomes (–7.2% delivery stability and –1.5% throughput), which directly contradicts the naive "add AI to existing processes" approach and validates the factory model's requirement for process redesign.

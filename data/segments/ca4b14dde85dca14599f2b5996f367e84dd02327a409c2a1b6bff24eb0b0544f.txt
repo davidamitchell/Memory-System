@@ -1,0 +1,5 @@
+**Out of scope:**
+- LLM pre-training, fine-tuning, or model selection (covered by AI strategy items)
+- Infrastructure for deploying AI coding tools at enterprise scale
+- Non-software domains (e.g., prompt engineering for marketing or customer service)
+- Deep evaluation of specific IDE plugins or vendor products

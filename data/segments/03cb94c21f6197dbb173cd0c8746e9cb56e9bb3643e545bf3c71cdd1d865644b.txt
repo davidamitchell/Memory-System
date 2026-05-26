@@ -1,0 +1,3 @@
+- Consistent with all other repos in the organisation
+- All agents use the same well-known path
+- README.md updated to reflect correct file locations

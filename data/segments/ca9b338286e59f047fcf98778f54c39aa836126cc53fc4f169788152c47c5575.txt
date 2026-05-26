@@ -1,0 +1,9 @@
+1. Define "invariant" operationally and validate the four categories (functional, primitive, behavioural, economic) against platform documentation for Salesforce FSC and nCino.
+2. Survey Salesforce FSC documentation, AppExchange marketplace, and Trailhead material to enumerate what is truly out-of-the-box versus what requires configuration, custom development (Apex/Lightning Web Components (LWC)), or integration.
+3. Repeat step 2 for nCino, focusing on its banking-specific capabilities (loan origination, treasury, compliance).
+4. Extend the survey to other banking SaaS platforms cited in analyst reports (e.g. Temenos, Finastra, Mambu, Thought Machine) to identify any capabilities that differentiate true invariants across vendors.
+5. Validate the assumption that enterprise banks predominantly buy/rent rather than build, using analyst data (Gartner, Forrester, International Data Corporation (IDC)) and publicly available case studies.
+6. Build a TCO framework covering the eight cost categories identified in the research question; apply it to representative real-world banking implementations (where case study data permits).
+7. Compare TCO against a bespoke baseline using DDD/Clean Architecture, calibrated for pre-AI and AI-assisted development productivity estimates.
+8. Assess the impact of AI-assisted development on each TCO dimension (speed, integration effort, maintenance, testing) using available benchmarks and studies.
+9. Synthesise: which invariants genuinely justify SaaS adoption, which are illusory, and how does the AI era shift the threshold?

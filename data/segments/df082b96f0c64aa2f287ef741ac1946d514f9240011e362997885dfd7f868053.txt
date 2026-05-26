@@ -1,0 +1,1 @@
+7. **NZ banks' Pillar 3 disclosures do not contain standalone AI model risk sections.** Model risk appears under capital model governance (PD, LGD models) with regulatory overlays applied where model deficiencies are identified. "AI" is not a separate disclosure category.

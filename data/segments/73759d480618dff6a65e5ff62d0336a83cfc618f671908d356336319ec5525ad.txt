@@ -1,0 +1,6 @@
+1. Analyse the architecture-blueprint-generator skill (`https://github.com/github/awesome-copilot/blob/main/skills/architecture-blueprint-generator/SKILL.md`) to understand its prompting strategy, inputs, outputs, and limitations.
+2. Analyse RepoSwarm (`https://github.com/reposwarm/reposwarm`) to understand its model for orchestrating operations across multiple repositories and where architecture inspection fits.
+3. Survey the landscape of static analysis and architecture inspection tools: dependency-cruiser, Renovate, Sourcegraph, GitHub dependency graph APIs, OpenRewrite, and adjacent tooling.
+4. Identify coupling and relationship patterns that automated tools can detect (imports, shared package manifests, generated clients, Infrastructure as Code (IaC), shared standards files, and ADRs).
+5. Assess standards alignment checking: how ADRs, architecture fitness functions, and policy-as-code tools such as Open Policy Agent (OPA) can be combined with repository scanning.
+6. Synthesise a practical implementation plan: what can be done with GitHub Actions plus Copilot skills today, what requires additional tooling, and what the remaining gaps are.

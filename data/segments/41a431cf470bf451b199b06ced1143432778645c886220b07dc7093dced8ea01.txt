@@ -1,0 +1,17 @@
+1. Popperian target
+   1.1 What does Popper mean by demarcation, falsifiability, empirical content, and degree of testability?
+   1.2 What exactly is ruled out by a scientific theory in Popper's framework?
+2. Learning-theory mapping
+   2.1 What does Vapnik-Chervonenkis dimension measure?
+   2.2 What does the growth function count?
+   2.3 How can shattering and growth be reinterpreted as empirical possibilities left open by a hypothesis class?
+3. Compression mapping
+   3.1 What does Minimum Description Length minimize?
+   3.2 How does Kolmogorov complexity define explanation length?
+   3.3 How can description length proxy the difference between a short generative mechanism and a long fitted interpolation rule?
+4. Mechanism versus interpolation
+   4.1 What features distinguish mechanistic models from predictive interpolators in contemporary modelling practice?
+   4.2 How should finite-sample falsifiability, description length, and novelty testing be combined?
+5. Placement of modern deep learning
+   5.1 What do random-label fitting and double-descent results imply about interpolation?
+   5.2 Under what conditions could a deep model still count as mechanistic rather than merely interpolative?

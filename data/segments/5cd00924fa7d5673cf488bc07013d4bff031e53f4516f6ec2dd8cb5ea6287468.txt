@@ -1,0 +1,6 @@
+1. **Primary-source audit:** Check every seeded source URL, replace labels where the accessible host page differs from the seeded description, and record transcript-access limits explicitly.
+2. **Core argument extraction:** Use the 2022 paper to reconstruct LeCun's architectural argument in its most detailed form.
+3. **Public-framing extraction:** Use Brown University host material, the Brown lecture video metadata, the April 2025 interview summaries published by the official host, and the Pioneer Works host page to identify what LeCun repeats or sharpens later.
+4. **Boundary analysis:** Separate the negative boundary, real-world action without predictive world modelling, from the positive boundary, constrained symbolic or optimization-heavy reasoning tasks, and mark any parts that remain weakly evidenced.
+5. **Position evolution check:** Compare the accessible 2022, 2025, and 2026 materials for continuity, refinement, or reversal.
+6. **Synthesis:** Produce a structured answer with explicit confidence levels, evidence map, assumptions, and open questions.

@@ -1,0 +1,1 @@
+**Plan gate:** Do not advance to Execute until `report_progress` has recorded the checklist.

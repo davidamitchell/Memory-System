@@ -1,0 +1,1 @@
+**Output format:** Structured knowledge artefact: capability inventory, decay analysis, governance model specification, minimum viable approach definition, CSDM integration path, and Process Mining role assessment.

@@ -1,0 +1,3 @@
+- Which bounded abstraction patterns best preserve the semantics of retrieval and tool choice in enterprise agent pipelines without collapsing tractability?
+- What runtime-monitoring or shielding pattern provides the strongest complement to model checking for tool-using agents in mutable environments?
+- How should operators measure when an audit trail is reconstructable enough for contestability rather than merely rich enough for debugging?

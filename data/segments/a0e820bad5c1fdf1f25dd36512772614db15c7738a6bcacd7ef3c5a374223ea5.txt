@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item concludes that the dominant Microsoft 365 Copilot risk in regulated environments is accelerated reuse of already-accessible sensitive data, and that the minimum defensible control stack is permissions remediation, sensitivity labeling, DLP, discovery restrictions, auditability, and sovereign deployment where the data class requires it. [inference; source: https://learn.microsoft.com/en-us/microsoft-365/copilot/configure-secure-governed-data-foundation-microsoft-365-copilot; https://learn.microsoft.com/en-us/purview/dlp-microsoft365-copilot-location-learn-about; https://learn.microsoft.com/en-us/microsoft-365/copilot/gov-overview]
+- Links:
+  - https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy
+  - https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-architecture-data-protection-auditing
+  - https://learn.microsoft.com/en-us/purview/dlp-microsoft365-copilot-location-learn-about

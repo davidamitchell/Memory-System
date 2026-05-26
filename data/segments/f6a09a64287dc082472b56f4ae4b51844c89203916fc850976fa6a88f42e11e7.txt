@@ -1,0 +1,1 @@
+- **Uncertainty about data filtering scope:** Even if sycophantic text removal reduces H-Neuron formation, the practical difficulty of identifying and filtering sycophantic patterns at the scale of 5 trillion tokens without introducing new biases is unresolved.

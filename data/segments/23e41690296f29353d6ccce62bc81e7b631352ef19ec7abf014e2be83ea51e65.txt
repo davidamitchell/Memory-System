@@ -1,0 +1,2 @@
+Trigger->>P1: ingest(source)
+    P1->>Store: store Raw Document

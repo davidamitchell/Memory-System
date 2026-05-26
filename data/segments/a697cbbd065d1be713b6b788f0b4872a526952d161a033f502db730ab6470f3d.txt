@@ -1,0 +1,1 @@
+LanceDB is **not** the retrieval layer of this system. It was the original design concept; the decision to replace it with an ontology-based knowledge representation is recorded in [ADR-0002](../_docs/adr/0002-move-from-vector-storage-to-ontology.md). The legacy prototype `mcp_server.py` contains LanceDB code but represents the abandoned approach, not the target architecture.

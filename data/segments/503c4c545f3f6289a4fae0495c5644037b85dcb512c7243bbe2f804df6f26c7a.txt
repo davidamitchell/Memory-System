@@ -1,0 +1,4 @@
+- What internal data model best measures the current split between stable workaround demand that is tractable for centrally governed software delivery and structurally resistant demand in a large enterprise queue?
+- How much of current workaround demand is caused by missing platform capabilities versus missing cross-domain decision rights and governance?
+- What field evidence emerges over the next 12 to 24 months on AI-assisted throughput in production engineering organisations with high compliance and release-quality bars?
+- Can a reliable early-warning metric for the accumulation of unmet operational capability needs be constructed from shadow-IT discovery, workaround inventory growth, and queue lead-time data?

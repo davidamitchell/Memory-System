@@ -1,0 +1,4 @@
+**Constraints:**
+- Prefer primary or near-primary public sources, peer-reviewed studies, and official research programs.
+- Keep all assumptions explicit and sensitivity-tested.
+- Treat public evidence gaps as findings, not as permission to infer a precise elasticity.

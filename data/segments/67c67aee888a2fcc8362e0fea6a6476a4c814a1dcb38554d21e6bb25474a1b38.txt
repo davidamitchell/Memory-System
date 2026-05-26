@@ -1,0 +1,5 @@
+**Out of scope:**
+- Detailed analysis of individual compensation packages or personal career decisions
+- Academic hiring at universities unless directly linked to an AI lab partnership or spin-out
+- Defence/government AI hiring (sufficiently different market dynamics to warrant a separate item)
+- Recruitment processes, interview formats, or HR practices

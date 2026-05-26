@@ -1,0 +1,1 @@
+- **Assumption:** MCP's `prompts` primitive can deliver phase-specific prompt templates in a way that meaningfully improves over static context files. **Justification:** The capability exists in the protocol (modelcontextprotocol.io/docs/learn/server-concepts); no published case study of phase-aware MCP prompt delivery in an SDLC context was found.

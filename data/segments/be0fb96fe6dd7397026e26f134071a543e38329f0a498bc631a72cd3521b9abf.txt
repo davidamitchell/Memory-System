@@ -1,0 +1,3 @@
+- **Regulatory lens**
+  - **[fact]** Salesforce publishes architecture, sub-processor, and control documentation; nCino emphasizes regulatory-compliant onboarding and lending workflows. Sources: primary [x] https://www.salesforce.com/company/legal/trust-and-compliance-documentation/ ; primary [x] https://www.ncino.com/our-platform
+  - **[inference]** Regulatory pressure strengthens the platform case for commodity controls and documentation, because vendors amortize that work across customers.

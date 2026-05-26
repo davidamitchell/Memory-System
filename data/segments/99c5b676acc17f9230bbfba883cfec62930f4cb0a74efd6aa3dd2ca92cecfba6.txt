@@ -1,0 +1,19 @@
+1. Training objective
+   1.1 What objective does large-scale autoregressive language-model pre-training optimise?
+   1.2 Why is that objective an observational or associational objective rather than an interventional one?
+2. Distributional signal
+   2.1 What does Firthian distributional semantics say about how meaning is learned from text?
+   2.2 What kind of information is available in text corpora if the learner only sees token co-occurrence?
+3. Formal barrier
+   3.1 How do Research Questions 2.1 and 2.4 constrain what can be learned from observational text alone?
+   3.2 Can scale or architecture alone dissolve the causal-hierarchy barrier?
+4. Internal representation
+   4.1 What would count as evidence that an internal representation is causal rather than merely decodable?
+   4.2 Do linear probes or mechanistic-interpretability findings establish causal modelling?
+5. Empirical performance
+   5.1 What do current causal benchmarks say about Large Language Model performance on associational, interventional, and counterfactual tasks?
+   5.2 What evidence suggests proxy use, benchmark retrieval, or poor out-of-distribution generalisation?
+   5.3 What evidence suggests partial causal abstraction or useful latent structure?
+6. Synthesis
+   6.1 Is the best-supported answer that Large Language Models are strictly statistical, or that they are statistically trained systems with limited emergent abstractions?
+   6.2 Where does that place them on Pearl's hierarchy?

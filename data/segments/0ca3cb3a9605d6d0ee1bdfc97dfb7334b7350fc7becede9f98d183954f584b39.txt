@@ -1,0 +1,6 @@
+- Type: knowledge
+- Description: This item concludes that probabilistic Large Language Model output is best used as an assistive proposal layer rather than as the final authority for governance, privacy, or regulatory decisions, because the strongest accessible guidance and evidence point toward safeguards, traceability, and accountable override outside the model. [inference; source: https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/dealing-citizens/are-there-restrictions-use-automated-decision-making_en; https://airc.nist.gov/airmf-resources/airmf/5-sec-core/; https://davidamitchell.github.io/Research/research/2026-05-09-hybrid-architecture-probabilistic-llm-deterministic-governance.html]
+- Links:
+  - https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/dealing-citizens/are-there-restrictions-use-automated-decision-making_en
+  - https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes
+  - https://airc.nist.gov/airmf-resources/airmf/5-sec-core/

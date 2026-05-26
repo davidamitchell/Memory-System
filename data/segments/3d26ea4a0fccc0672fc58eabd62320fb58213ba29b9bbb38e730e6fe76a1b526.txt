@@ -1,0 +1,1 @@
+**Claim sourcing check:** Every [fact] claim maps to a directly accessed source. [inference] claims are explicitly flagged and justified. [assumption] claims (sycophantic content in web corpora is the primary signal; full ablation evidence is absent) are stated with their justifications.

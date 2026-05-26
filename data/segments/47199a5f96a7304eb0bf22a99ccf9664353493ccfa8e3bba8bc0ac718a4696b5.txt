@@ -1,0 +1,2 @@
+- [ ] [McKinsey (2024) The state of Artificial Intelligence in early 2024](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-early-2024)
+- [ ] [Gartner (n.d.) Forecasts and research on generative Artificial Intelligence](https://www.gartner.com/en/topics/generative-ai)

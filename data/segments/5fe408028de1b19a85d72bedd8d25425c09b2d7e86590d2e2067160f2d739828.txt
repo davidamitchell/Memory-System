@@ -1,0 +1,2 @@
+**Q4.3 — Investment magnitude:**
+US federal agency TBM implementations cost $1.5M–$28.9M per agency according to the GAO-25-106488 audit. [fact, GAO-25-106488] The wide range reflects agency size, data complexity, and vendor selection. For a mid-to-large enterprise, implementation costs are typically in the $2M–$10M range covering tooling licences, systems integration, data quality remediation, and change management. [assumption — derived from federal data but federal procurement overhead typically inflates costs vs. private sector]

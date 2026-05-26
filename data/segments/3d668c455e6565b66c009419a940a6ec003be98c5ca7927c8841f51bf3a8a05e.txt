@@ -1,0 +1,5 @@
+**Q1 - What do Salesforce FSC and nCino provide without customer invention?**
+- Q1a. What prebuilt financial-services functions does Salesforce FSC provide?
+- Q1b. What prebuilt banking functions does nCino provide?
+- Q1c. Which of those are domain packages versus shared platform primitives?
+- Q1d. Which customer outcomes still require institution-specific configuration, integration, or custom code?

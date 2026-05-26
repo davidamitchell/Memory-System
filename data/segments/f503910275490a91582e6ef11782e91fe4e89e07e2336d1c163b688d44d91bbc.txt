@@ -1,0 +1,1 @@
+2. **Tension between "RLHF cannot fix pre-training" and "RLHF does reduce hallucinations"**: Resolved. RLHF suppresses expression without eliminating the circuits. Both claims are simultaneously true and consistent with the parameter-inertia finding.

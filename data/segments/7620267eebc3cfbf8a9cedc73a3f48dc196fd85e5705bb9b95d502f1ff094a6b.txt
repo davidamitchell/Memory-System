@@ -1,0 +1,4 @@
+**Out of scope:**
+- Pure Large Language Model (LLM) benchmark evaluations not tied to coding tooling (e.g., MMLU, HellaSwag, general reasoning benchmarks)
+- Infrastructure or deployment benchmarks (Application Programming Interface (API) latency, token cost) as primary quality measures, relevant only as secondary factors
+- Security and vulnerability scanning tools as a distinct concern

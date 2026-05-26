@@ -1,0 +1,8 @@
+**Vector embedding addition (Phase 2):**
+```sql
+-- Added when sqlite-vec is introduced
+CREATE VIRTUAL TABLE IF NOT EXISTS item_embeddings USING vec0(
+    item_id TEXT,
+    embedding FLOAT[1536]  -- dimension matches chosen embedding model
+);
+```

@@ -1,0 +1,3 @@
+**Constraints:**
+- Empirical evidence preferred; theoretical frameworks accepted as context
+- Sources from 2020 onwards preferred for AI-specific evidence; foundational Software Engineering (SE) texts accepted regardless of date

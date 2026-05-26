@@ -1,0 +1,1 @@
+What representation of original intent, captured at the Getting Started phase, is simultaneously cryptographically verifiable and semantically stable enough to function as a meaningful evaluation baseline for the Policy Decision Point (PDP) across the full operational lifecycle of a governed asset, including legitimate scope evolution?

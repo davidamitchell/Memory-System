@@ -1,0 +1,17 @@
+- **Root question:** What threshold tells a bank that nominal Human-in-the-Loop (HITL) review has degraded into superficial acceptance of automated triage?
+- **A. Supervisory baseline**
+  - A1. What do banking and Artificial Intelligence (AI) oversight sources require for review to count as meaningful challenge?
+  - A2. Which reviewer attributes matter: authority, competence, independence, time, or logging?
+  - A3. Do the sources define explicit thresholds or only operating conditions?
+- **B. Queue mechanics**
+  - B1. What queue conditions indicate that review capacity has failed?
+  - B2. How severe is the false-positive problem in bank screening queues?
+  - B3. Which monitoring parameters and internal timelines do supervisors expect firms to tune and test?
+- **C. Human-performance mechanics**
+  - C1. How do workload, time pressure, and repetitive alerts change reviewer vigilance?
+  - C2. Which interface and workflow interventions reduce automation bias?
+  - C3. What does time-on-task evidence suggest about uninterrupted review blocks?
+- **D. Threshold synthesis**
+  - D1. Which indicators can be made auditable in production?
+  - D2. Which indicators are universal breach signals, and which must be locally calibrated?
+  - D3. Which tests prove that humans still challenge machine output under load?

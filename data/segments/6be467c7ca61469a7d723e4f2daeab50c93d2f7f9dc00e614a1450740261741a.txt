@@ -1,0 +1,1 @@
+The choice of LSA/LSE is resolved definitively: it adds no value over dense embeddings for this corpus and should not be implemented. The choice of concept maps is resolved: they are not a separate implementation concern; any concept-map-like view is a rendered artefact of the knowledge graph.

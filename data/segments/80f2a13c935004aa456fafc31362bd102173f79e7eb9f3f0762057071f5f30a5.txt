@@ -1,0 +1,4 @@
+**Cluster E: Efficiency evidence**
+- E1. What is the quantified productivity impact of AI coding assistance (Copilot, baseline)?
+- E2. What does DORA (DevOps Research and Assessment) 2024 say about AI's effects on delivery throughput and stability?
+- E3. Where do the gains concentrate in the SDLC, and where is evidence still thin?

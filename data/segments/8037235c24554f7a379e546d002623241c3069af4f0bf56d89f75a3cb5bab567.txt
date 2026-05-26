@@ -1,0 +1,16 @@
+- **Root question:** does large-scale deterministic software lose enough explainability to erase the structural explainability gap between it and multi-step LLM-based systems?
+- **A. Formal definition**
+  - A1. What do the formal explainability sources say explainability consists of?
+  - A2. Which dimensions are relevant for a cross-class comparison?
+- **B. LLM-based systems at small scope**
+  - B1. Do current LLM systems remain only partially reproducible under controlled settings?
+  - B2. Does that variability weaken local explanation and exact replay before scale is considered?
+- **C. Deterministic software at production scale**
+  - C1. What makes large deterministic distributed systems hard to explain globally?
+  - C2. Does observability solve that opacity or only manage it after the fact?
+- **D. Contrastive explanation**
+  - D1. Can both classes provide useful counterfactual or outcome-level explanations without full internal transparency?
+  - D2. Does that narrow the explainability gap more for one class than the other?
+- **E. Verdict**
+  - E1. Which explainability dimensions converge at scale?
+  - E2. Which dimensions remain structurally asymmetric?

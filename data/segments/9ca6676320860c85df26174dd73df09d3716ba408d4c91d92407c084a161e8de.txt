@@ -1,0 +1,1 @@
+What are the documented security, compliance, and governance risks of using Generative Artificial Intelligence (GenAI) tools such as Microsoft 365 (M365) Copilot for drafting memos, reports, and other documents in enterprise, government, or regulated environments that contain sensitive, confidential, or classified information?

@@ -1,0 +1,3 @@
+1. **No governing principles** — the pipeline had no explicit constraints on immutability, provenance, or reproducibility. Without these, implementations could diverge silently.
+2. **No provenance model** — assertions in the ontology had no formal link back to the source evidence that supports them. This made auditability and rollback incomplete.
+3. **No control plane** — state transitions (version commits, upper ontology mutations, rollbacks) had no explicit governance layer distinct from the data pipeline.

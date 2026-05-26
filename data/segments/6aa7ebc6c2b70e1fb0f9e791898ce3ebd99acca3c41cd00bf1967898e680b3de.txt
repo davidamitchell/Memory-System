@@ -1,0 +1,1 @@
+What is the fundamental difference between the predictive processing account of human cognition — in which the brain continuously generates and updates a generative model of the world — and Large Language Model (LLM) next-token prediction, and does this difference matter for understanding intelligence, meaning, and consciousness?

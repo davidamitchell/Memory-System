@@ -1,0 +1,6 @@
+**Facts established with high confidence:**
+- [fact] Stripe Minions merges 1,300+ AI-authored PRs/week at production scale, confirmed by multiple independent sources.
+- [fact] DORA 2024 found individual AI productivity gains do not translate to team-level delivery improvement without process redesign.
+- [fact] Mid-tier banks face legacy-system costs, resource constraints, and competitive pressure from fintechs.
+- [fact] Google's Sundar Pichai disclosed 25%+ AI-generated code in production during the Q3 2024 earnings cycle.
+- [fact] ANZ deployed GitHub Copilot to 3,000 engineers with reported 40–55% faster development.

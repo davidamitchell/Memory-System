@@ -1,0 +1,7 @@
+| Failure mode | Symptom |
+|---|---|
+| Scope creep | PR touches files unrelated to the stated task |
+| Context drift | Agent forgets the original intent mid-session |
+| Skill blindness | Agent re-derives something a skill already knows |
+| Silent breakage | Changes are committed without a validity check |
+| Silent stagnation | Session ends without recording what was learned |

@@ -1,0 +1,1 @@
+MCP is explicitly "agent-native": it is designed so that AI agents can autonomously decide when to call a tool, what arguments to pass, and how to interpret the result — without requiring the human user to manually orchestrate each call.

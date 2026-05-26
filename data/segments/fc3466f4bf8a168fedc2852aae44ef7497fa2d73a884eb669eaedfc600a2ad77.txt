@@ -1,0 +1,1 @@
+One new component is added to the document layer:

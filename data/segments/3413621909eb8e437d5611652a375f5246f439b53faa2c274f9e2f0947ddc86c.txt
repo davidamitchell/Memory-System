@@ -1,0 +1,3 @@
+1. **Parallel execution** — when a task decomposes into independent sub-tasks, can the loop run sub-agents in parallel? If so, how do drift checks coordinate across branches?
+2. **Harness versioning** — should this document carry a version number so that `copilot-instructions.md` can pin to a specific harness version?
+3. **Context budget enforcement** — is there a mechanical way (e.g. a token-count check) to trigger the summarise-and-prune step, or is it always a judgment call?

@@ -1,0 +1,5 @@
+DO --> P11
+    UO --> P11
+    P11 --> VCG --> VO
+    VO --> OSTORE
+    VO --> P12

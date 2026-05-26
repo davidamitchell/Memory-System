@@ -1,0 +1,2 @@
+**Operational lens:**
+The `copilot-setup-steps.yml` file has a useful secondary benefit: it can be triggered manually via `workflow_dispatch` from the GitHub Actions tab, which is accessible from the owner's iOS GitHub app. This means the setup can be tested without assigning a real issue to Copilot, useful for verifying that the PAT, submodule path, and Python install all work before relying on them in a coding session.

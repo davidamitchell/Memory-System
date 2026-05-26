@@ -1,0 +1,19 @@
+- **Root question:** what artefact should be signed at asset registration time so later tool calls can be judged against the same authorised intent without collapsing legitimate evolution into false drift?
+- **A. Representation structure**
+  - A1. What machine-checkable fields are necessary to represent authorised capability, data, and action scope?
+  - A2. Is the proposed triple sufficient, or does runtime evaluation require another first-class component?
+- **B. Cryptographic envelope**
+  - B1. What pattern best binds human-readable intent to machine-readable claims?
+  - B2. Should the authoritative identity be a mutable version label or an immutable digest?
+- **C. Runtime evaluation**
+  - C1. How should a tool call be normalised into a form the PDP can compare against the declaration?
+  - C2. What constitutes a violation for each component of the triple?
+- **D. Semantic stability**
+  - D1. Which changes are legitimate evolution that should be handled by amendment?
+  - D2. Which changes indicate a new asset or an unauthorised drift event?
+- **E. Amendment protocol**
+  - E1. How should amendments reference the original artefact and prior amendments?
+  - E2. What minimum fields are required for evaluable and auditable amendments?
+- **F. Agent and PIP evaluability**
+  - F1. Can an LLM agent compare a proposed tool call against the declaration without human interpretation?
+  - F2. Can the PIP derive priors over legitimate intent from the same declaration?

@@ -1,0 +1,4 @@
+- Is there a single file both agents respect as the environment setup declaration? Or do they need separate files?
+- What is the correct `postCreateCommand` for `devcontainer.json` given the submodule requirement?
+- What is the minimal addition to `.github/copilot-instructions.md` that causes Claude iOS to run the correct setup steps?
+- Does restoring `devcontainer.json` close W-0004 entirely, or does `copilot-setup-steps.yml` also need to be created?

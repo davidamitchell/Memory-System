@@ -1,0 +1,1 @@
+The phased approach (SQLite alone → SQLite + sqlite-vec) is the correct architecture because it avoids committing to a pre-v1 extension (sqlite-vec) in the core state management path. Phase 1 can be implemented and used in production; Phase 2 is added when the semantic search backlog item is executed.
