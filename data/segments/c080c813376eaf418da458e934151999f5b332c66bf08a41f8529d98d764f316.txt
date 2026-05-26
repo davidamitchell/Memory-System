@@ -1,0 +1,2 @@
+Unlike a raw assertion, an inference rule encodes generalisable knowledge
+rather than a specific fact about a specific individual.

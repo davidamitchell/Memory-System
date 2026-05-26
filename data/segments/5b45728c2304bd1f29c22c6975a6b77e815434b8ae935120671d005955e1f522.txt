@@ -1,0 +1,2 @@
+Rules can be expressed in many formalisms including Horn clauses, SWRL rules,
+SPARQL CONSTRUCT queries, and production rules in expert system shells.

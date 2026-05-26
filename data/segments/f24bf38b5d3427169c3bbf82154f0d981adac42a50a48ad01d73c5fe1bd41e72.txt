@@ -1,0 +1,2 @@
+An inference rule specifies conditions under which a conclusion can be drawn.
+In formal logic, rules take the form: given premises P1, P2, …, Pn, conclude C.

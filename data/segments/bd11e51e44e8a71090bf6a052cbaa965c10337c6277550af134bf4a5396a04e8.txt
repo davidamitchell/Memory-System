@@ -1,0 +1,3 @@
+A data pipeline chains multiple transformation steps so that the output of each
+stage becomes the input of the next. Pipelines are a foundational pattern in
+ETL systems, stream processing platforms, and machine learning workflows.

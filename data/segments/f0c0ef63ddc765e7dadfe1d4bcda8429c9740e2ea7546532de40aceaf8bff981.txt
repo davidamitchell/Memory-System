@@ -1,0 +1,3 @@
+It exists solely to verify that extractors handle the absence of all optional
+structured metadata gracefully — returning empty collections for aliases, tags,
+and related terms rather than raising an error.

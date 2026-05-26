@@ -1,0 +1,4 @@
+Pipelines may be synchronous (each stage completes before the next begins)
+or asynchronous (stages run concurrently with backpressure mechanisms).
+Fault isolation is a key property: a failure in one stage should not
+silently corrupt data flowing through the rest of the pipeline.
