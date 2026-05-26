@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""pipeline/eval.py — Extractor evaluation harness (W-0203).
+"""pipeline/eval.py — Extractor evaluation harness (W-0203, W-0206).
 
 Runs any extractor strategy against a document corpus and scores the
 ``delta_proposal`` output against the ground-truth values in the YAML
@@ -21,6 +21,9 @@ Usage
     # JSON output:
     python pipeline/eval.py --corpus foundational_concepts/ --json
 
+    # Typed relation extraction eval (W-0206, LLM only, requires gh auth):
+    python pipeline/eval.py --typed-relations
+
 Ground truth
 ------------
 For the ``foundational_concepts/`` corpus the ground truth is the YAML front-matter
@@ -29,6 +32,13 @@ where present (legacy files), or extracted prose otherwise:
   - aliases   → ``aliases`` field (list of strings)
   - tags      → ``tags`` field (list of strings)
   - related   → ``related[].file`` stems (list of slugs)
+
+For typed relations (``--typed-relations``) the ground truth is loaded from
+``data/eval/typed-relations-ground-truth.json``.  Each annotated file is
+scored on (target_slug, rel_type) pair exact match, with per-type breakdown.
+NOTE: typed relation evaluation requires the LLM extractor (``--extractor llm``).
+Rule-based extraction produces no typed relations from prose files and will
+return 0.0 F1.
 """
 from __future__ import annotations
 
@@ -93,6 +103,161 @@ def _load_ground_truth(path: Path) -> dict:
         elif isinstance(r, str):
             related.append(r.strip())
     return {"label": label, "aliases": aliases, "tags": tags, "related": related}
+
+
+# ---------------------------------------------------------------------------
+# Typed relations ground truth (W-0206)
+# ---------------------------------------------------------------------------
+
+_DEFAULT_TYPED_GT_PATH = REPO_ROOT / "data" / "eval" / "typed-relations-ground-truth.json"
+
+
+def _load_typed_relations_ground_truth(path: Path = _DEFAULT_TYPED_GT_PATH) -> dict:
+    """Load typed-relations annotation file.
+
+    Returns a mapping of ``slug -> list[{"target": str, "rel": str}]``.
+    """
+    data = json.loads(path.read_text(encoding="utf-8"))
+    gt_by_slug: dict = {}
+    for entry in data.get("annotated_files", []):
+        slug = entry["slug"]
+        gt_by_slug[slug] = entry.get("typed_relations", [])
+    return gt_by_slug
+
+
+def score_typed_relations(
+    predicted_related: list[dict],
+    ground_truth_typed: list[dict],
+) -> dict:
+    """Score typed relation predictions against ground truth.
+
+    Parameters
+    ----------
+    predicted_related:
+        List of ``{"id": "assertion/<slug>", "rel": "<type>"}`` dicts from
+        ``delta_proposal.related``.
+    ground_truth_typed:
+        List of ``{"target": "<slug>", "rel": "<type>"}`` dicts from the
+        annotation file.
+
+    Returns
+    -------
+    dict with keys:
+    - ``exact``: overall P/R/F1 for (target_slug, rel_type) exact-match pairs
+    - ``target_only``: P/R/F1 ignoring rel_type (did we find the right targets?)
+    - ``by_type``: per rel_type P/R/F1 breakdown
+    """
+    # Build predicted pairs: (target_slug, rel_type)
+    predicted_pairs: set[tuple[str, str]] = set()
+    predicted_targets: set[str] = set()
+    for r in predicted_related:
+        slug = r.get("id", "").split("/")[-1].lower()
+        rel = r.get("rel", "relatedTerm").lower()
+        if slug:
+            predicted_pairs.add((slug, rel))
+            predicted_targets.add(slug)
+
+    # Build ground truth pairs
+    gt_pairs: set[tuple[str, str]] = set()
+    gt_targets: set[str] = set()
+    for r in ground_truth_typed:
+        slug = r.get("target", "").lower()
+        rel = r.get("rel", "relatedTerm").lower()
+        if slug:
+            gt_pairs.add((slug, rel))
+            gt_targets.add(slug)
+
+    # Exact match P/R/F1 — serialize pairs to "slug:rel" strings for _prf
+    def _pairs_as_str(pairs: set[tuple[str, str]]) -> list[str]:
+        return [f"{s}:{r}" for s, r in pairs]
+
+    exact_p, exact_r, exact_f = _prf(_pairs_as_str(predicted_pairs), _pairs_as_str(gt_pairs))
+
+    # Target-only P/R/F1
+    target_p, target_r, target_f = _prf(list(predicted_targets), list(gt_targets))
+
+    # Per-type breakdown
+    all_rel_types = {rel for _, rel in gt_pairs} | {rel for _, rel in predicted_pairs}
+    by_type: dict = {}
+    for rel_type in sorted(all_rel_types):
+        pred_type = {slug for slug, rel in predicted_pairs if rel == rel_type}
+        gt_type = {slug for slug, rel in gt_pairs if rel == rel_type}
+        p, r, f = _prf(list(pred_type), list(gt_type))
+        by_type[rel_type] = {"precision": p, "recall": r, "f1": f}
+
+    return {
+        "exact": {"precision": exact_p, "recall": exact_r, "f1": exact_f},
+        "target_only": {"precision": target_p, "recall": target_r, "f1": target_f},
+        "by_type": by_type,
+        "predicted_pairs": sorted(predicted_pairs),
+        "gt_pairs": sorted(gt_pairs),
+    }
+
+
+def evaluate_file_typed_relations(source_path: str, extractor: str, gt_entry: list[dict]) -> dict:
+    """Run the extractor on one file and score its typed relations."""
+    state: dict = {"source_path": source_path, "extractor": extractor, "nlp": False}
+    for proc in _EXTRACT_PROCESSORS:
+        state = proc.run(state, REPO_ROOT)
+    state["strategy"] = extractor
+    state = p07_concept_extraction.run(state, REPO_ROOT)
+
+    proposal = state["delta_proposal"]
+    predicted_related = proposal.get("related", [])
+    scores = score_typed_relations(predicted_related, gt_entry)
+    return {"file": source_path, **scores}
+
+
+def aggregate_typed_relations(results: list[dict]) -> dict:
+    """Macro-average typed relation metrics across evaluated files."""
+    exact_f = _avg([r["exact"]["f1"] for r in results])
+    exact_p = _avg([r["exact"]["precision"] for r in results])
+    exact_r = _avg([r["exact"]["recall"] for r in results])
+
+    target_f = _avg([r["target_only"]["f1"] for r in results])
+    target_p = _avg([r["target_only"]["precision"] for r in results])
+    target_r = _avg([r["target_only"]["recall"] for r in results])
+
+    # Per-type macro-average across files that have ground truth for that type
+    all_types: set[str] = set()
+    for r in results:
+        all_types.update(r.get("by_type", {}).keys())
+    by_type: dict = {}
+    for rel_type in sorted(all_types):
+        vals = [r["by_type"][rel_type]["f1"] for r in results if rel_type in r.get("by_type", {})]
+        by_type[rel_type] = {"f1": _avg(vals)}
+
+    return {
+        "exact": {"precision": exact_p, "recall": exact_r, "f1": exact_f},
+        "target_only": {"precision": target_p, "recall": target_r, "f1": target_f},
+        "by_type": by_type,
+    }
+
+
+def print_typed_relations_report(results: list[dict], agg: dict, extractor: str) -> None:
+    """Pretty-print typed relation eval results."""
+    col_w = 9
+
+    print(f"\nTyped Relation Eval (W-0206)")
+    print(f"Extractor: {extractor}  |  Files: {len(results)}")
+    print()
+    header = f"{'File':<45}{'Exact F1':>{col_w}}{'Target F1':>{col_w}}"
+    print(header)
+    print("-" * len(header))
+    for r in results:
+        fname = r["file"][-44:] if len(r["file"]) > 44 else r["file"]
+        print(f"{fname:<45}{r['exact']['f1']:>{col_w}.3f}{r['target_only']['f1']:>{col_w}.3f}")
+    print("-" * len(header))
+    print(f"{'AGGREGATE':<45}{agg['exact']['f1']:>{col_w}.3f}{agg['target_only']['f1']:>{col_w}.3f}")
+    print()
+    print("Aggregate exact-match:")
+    m = agg["exact"]
+    print(f"  {'all':<14}  P={m['precision']:.3f}  R={m['recall']:.3f}  F1={m['f1']:.3f}")
+    print()
+    print("Per-type macro-average F1 (exact target + type match):")
+    for rel_type, metrics in agg["by_type"].items():
+        print(f"  {rel_type:<14}  F1={metrics['f1']:.3f}")
+    print()
 
 
 # ---------------------------------------------------------------------------
@@ -249,6 +414,16 @@ def main() -> None:
         dest="json_output",
         help="Emit results as JSON to stdout instead of the human-readable report",
     )
+    parser.add_argument(
+        "--typed-relations",
+        action="store_true",
+        dest="typed_relations",
+        help=(
+            "Score typed relation extraction (W-0206). Reads ground truth from "
+            "data/eval/typed-relations-ground-truth.json. NOTE: requires --extractor llm "
+            "and a working gh auth session; rule-based returns 0.0 F1 on prose files."
+        ),
+    )
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -261,6 +436,37 @@ def main() -> None:
     if not corpus_path.is_dir():
         print(f"Corpus directory not found: {corpus_path}", file=sys.stderr)
         sys.exit(1)
+
+    # --typed-relations mode: score only the annotated files in the ground-truth JSON
+    if args.typed_relations:
+        gt_path = _DEFAULT_TYPED_GT_PATH
+        if not gt_path.exists():
+            print(f"Ground truth file not found: {gt_path}", file=sys.stderr)
+            sys.exit(1)
+        gt_by_slug = _load_typed_relations_ground_truth(gt_path)
+        tr_results = []
+        for slug, gt_entry in gt_by_slug.items():
+            rel_path = str(Path("foundational_concepts") / f"{slug}.md")
+            abs_path = REPO_ROOT / rel_path
+            if not abs_path.exists():
+                logger.warning("Skipping %s: file not found", rel_path)
+                continue
+            try:
+                result = evaluate_file_typed_relations(rel_path, extractor=args.extractor, gt_entry=gt_entry)
+                tr_results.append(result)
+            except Exception as exc:  # noqa: BLE001
+                logger.warning("Skipping %s: %s", rel_path, exc)
+
+        if not tr_results:
+            print("No files could be evaluated.", file=sys.stderr)
+            sys.exit(1)
+
+        tr_agg = aggregate_typed_relations(tr_results)
+        if args.json_output:
+            print(json.dumps({"extractor": args.extractor, "results": tr_results, "aggregate": tr_agg}, indent=2))
+        else:
+            print_typed_relations_report(tr_results, tr_agg, extractor=args.extractor)
+        return
 
     md_files = sorted(
         p for p in corpus_path.rglob("*.md") if not p.name.startswith("README")

@@ -521,3 +521,46 @@ Each definition is domain-bounded (knowledge/ontology), dual-form (conceptual + 
 3. What single change would prevent this next time? Always include PROGRESS.md and CHANGELOG.md updates in the same commit as the content changes — the instructions are explicit on this.
 4. Is this a pattern? Yes — this has happened before. The fix is to treat PROGRESS.md and CHANGELOG.md updates as mandatory checklist items before calling report_progress for the first time.
 
+
+---
+
+## 2026-05-26 — W-0206: Typed relation extraction
+
+### What was built
+
+W-0206 delivers typed predicate extraction — replacing untyped `ms:relatedTerm` edges with semantically precise predicates (`ms:contrasts`, `ms:uses`, `ms:partOf`, `ms:instanceOf`, `ms:implements`, `ms:relatedTerm`).
+
+**Key finding during implementation:** The pipeline already supported typed relations end-to-end before W-0206. `p07` LLM prompt already asked for a `"rel"` field; `p08` already wrote `_ms(rel_pred)` for any value. What was missing was the vocabulary definition, ground truth annotation, eval harness extension, and tests.
+
+### Deliverables
+
+- `_docs/design/relation-type-vocabulary.md` — formal definition of the 6 relation types with selection criteria and upper ontology alignment notes
+- `data/eval/typed-relations-ground-truth.json` — hand-annotated typed relations for 10 foundational concept files (36 typed pairs: contrasts, uses, partOf, instanceOf, implements). Derived from "Distinguished From" tables and operational definitions.
+- `pipeline/eval.py` — extended with `--typed-relations` flag: new `score_typed_relations()` function scores (target_slug, rel_type) exact-match pairs, with target-only F1 and per-type breakdown
+- `tests/test_typed_relations_w0206.py` — 20 tests covering all 5 acceptance criteria (AC1–AC5)
+
+### Eval results
+
+```
+python pipeline/eval.py --typed-relations
+```
+
+Rule-based: exact F1 = 0.000 (expected — prose files have no YAML front-matter, so rule-based produces no relations)
+
+LLM eval blocked: `gh auth` unavailable in sandbox. To record LLM scores, run:
+```
+pipeline/eval.py --typed-relations --extractor llm --json
+```
+in an environment with valid `gh auth` and record macro-averaged exact F1 here.
+
+### Test results
+
+177 passed, 1 skipped (all green including 20 new W-0206 tests)
+
+**Blocker:** LLM F1 score comparison not recorded — requires `gh auth` with a valid GitHub Models token. Item marked `done` for all code/eval/test deliverables. Run eval in a credentialed environment and add LLM baseline score to this entry.
+
+**Mini-Retro**
+1. Did the process work? Yes — the two test failures were due to an incorrect namespace assumption (`mitchellsimontaylor.com` vs `memory.example.org`), caught immediately on first run.
+2. What slowed down or went wrong? The actual namespace was `https://memory.example.org/ms/` — it was in the PROGRESS.md context but not the memory store. One test cycle lost.
+3. What single change would prevent this next time? Always grep p08 for the MS namespace constant before writing any test that references `ms:` URIs. Add this to the W-02xx test template.
+4. Is this a pattern? Yes — namespace assumptions have appeared twice now. Consider adding the ms: namespace to the memory store explicitly.

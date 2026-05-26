@@ -482,9 +482,9 @@ To complete: run `python pipeline/eval.py --corpus glossary/ --extractor llm --n
 
 ## W-0206
 
-status: ready
+status: done
 created: 2026-05-23
-updated: 2026-05-23
+updated: 2026-05-26
 blocks: []
 blocked-by: [W-0205]
 research: []
