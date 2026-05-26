@@ -57,6 +57,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `.github/copilot-instructions.md` §17 Self-improve — updated to match
 
 ### Added
+- `glossary/` — 35 canonical definitions for the knowledge/ontology domain (ontology, domain, meta-model, model, semantics, syntax, corpus, document, metadata, concept, term, theme, class, individual, attribute, relationship, component, list, graph, node, edge, weight, resource, rdf, rdf-star, data, information, knowledge, fact, true, insight, wisdom, knowledge-extraction, process, capability) with `glossary/README.md` index and dependency map
 - `learnings.md` — distilled rules from all PROGRESS.md mini-retros
 
 ### Fixed
@@ -101,6 +102,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 - `README.md` — first uses of local-first, agent-native, LanceDB, semantic search, MCP, memory files, embedding model, vector database, MCP server, MCP tools, stdio transport cross-linked to glossary definitions
+
 
 
 - `BACKLOG-v2.md` — 5 new work items (W-0111–W-0115) and 2 new phases (Phase 3 Structured relational layer, Phase 4 Human door); Phase 5–7 renumbered from previous Phase 3–5

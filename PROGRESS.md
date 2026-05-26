@@ -449,3 +449,25 @@ W-0207 was implemented on 2026-05-24 (full PROGRESS.md entry exists) but the BAC
 2. What slowed down or went wrong? Mock spaCy doc was initially a `SimpleNamespace` — Python doesn't honour `__iter__` on instances, only on types. Switched to `MagicMock` which supports `__iter__` via `__class__` magic. One test cycle wasted.
 3. What single change would prevent this next time? Add a note to the `swe` or `tdd` skill (or the build loop harness) that Python dunders on instances do not work unless the type defines them — use `MagicMock` for protocol mocking. Raised as a potential skill improvement.
 4. Is this a pattern? The BACKLOG-status-drift is a pattern: W-0207 and now potentially others could have stale `ready` status if the Close phase was skipped or abbreviated. Consider a BACKLOG integrity check as a standing Entry step.
+
+---
+
+## 2026-05-26 — Glossary — 35 canonical definitions for the knowledge/ontology domain
+
+Added `glossary/` directory with 35 canonical definition files and a `glossary/README.md` index:
+
+- **Foundation (6):** ontology, domain, meta-model, model, semantics, syntax
+- **Source Material (3):** corpus, document, metadata
+- **Conceptual Structure (9):** concept, term, theme, class, individual, attribute, relationship, component, list
+- **Graph & RDF (7):** graph, node, edge, weight, resource, rdf, rdf-star
+- **Knowledge Hierarchy (7):** data, information, knowledge, fact, true, insight, wisdom
+- **Process & Capability (3):** knowledge-extraction, process, capability
+
+Each definition is domain-bounded (knowledge/ontology), dual-form (conceptual + operational), necessary-and-sufficient, non-circular, and consistent with all others. `glossary/README.md` provides a full index with one-line summaries and a dependency map.
+
+**Mini-Retro**
+1. Did the process work? Yes — the definitions were well-structured and the dual-form (conceptual + operational) format produced consistent, usable entries across all 35 terms.
+2. What slowed down or went wrong? PROGRESS.md and CHANGELOG.md were not updated in the initial commit, requiring a follow-up fix.
+3. What single change would prevent this next time? Always include PROGRESS.md and CHANGELOG.md updates in the same commit as the content changes — the instructions are explicit on this.
+4. Is this a pattern? Yes — this has happened before. The fix is to treat PROGRESS.md and CHANGELOG.md updates as mandatory checklist items before calling report_progress for the first time.
+
