@@ -7,6 +7,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- `glossary/` — 35 canonical definitions for the knowledge/ontology domain (ontology, domain, meta-model, model, semantics, syntax, corpus, document, metadata, concept, term, theme, class, individual, attribute, relationship, component, list, graph, node, edge, weight, resource, rdf, rdf-star, data, information, knowledge, fact, true, insight, wisdom, knowledge-extraction, process, capability) with `glossary/README.md` index and dependency map
 - `BACKLOG-v2.md` — 5 new work items (W-0111–W-0115) and 2 new phases (Phase 3 Structured relational layer, Phase 4 Human door); Phase 5–7 renumbered from previous Phase 3–5
 - W-0111: discovery item — Supabase MCP integration architecture (two-server vs unified server)
 - W-0112: implementation item — Supabase Postgres tables for contacts, meetings, and TBD (blocked by W-0111)

@@ -105,3 +105,24 @@ Extended `BACKLOG-v2.md` with 5 new work items and 2 new phases, per issue "New 
 2. What slowed down or went wrong? Phase renumbering required careful edits in multiple places (phase headers, Outstanding Discovery, Research Cross-Reference). No errors, but this is mechanical work that is easy to miss.
 3. What single change would prevent this next time? A script or table of contents in BACKLOG-v2.md that maps phase numbers to phase names would make renumbering visible at a glance — worth raising as a backlog item.
 4. Is this a pattern? Phase renumbering has now happened once. If it happens again, a structured phase index or YAML front-matter list of phases would eliminate the manual touch points.
+
+---
+
+## 2026-05-26 — Glossary — 35 canonical definitions for the knowledge/ontology domain
+
+Added `glossary/` directory with 35 canonical definition files and a `glossary/README.md` index:
+
+- **Foundation (6):** ontology, domain, meta-model, model, semantics, syntax
+- **Source Material (3):** corpus, document, metadata
+- **Conceptual Structure (9):** concept, term, theme, class, individual, attribute, relationship, component, list
+- **Graph & RDF (7):** graph, node, edge, weight, resource, rdf, rdf-star
+- **Knowledge Hierarchy (7):** data, information, knowledge, fact, true, insight, wisdom
+- **Process & Capability (3):** knowledge-extraction, process, capability
+
+Each definition is domain-bounded (knowledge/ontology), dual-form (conceptual + operational), necessary-and-sufficient, non-circular, and consistent with all others. `glossary/README.md` provides a full index with one-line summaries and a dependency map.
+
+**Mini-Retro**
+1. Did the process work? Yes — the definitions were well-structured and the dual-form (conceptual + operational) format produced consistent, usable entries across all 35 terms.
+2. What slowed down or went wrong? PROGRESS.md and CHANGELOG.md were not updated in the initial commit, requiring a follow-up fix.
+3. What single change would prevent this next time? Always include PROGRESS.md and CHANGELOG.md updates in the same commit as the content changes — the instructions are explicit on this.
+4. Is this a pattern? Yes — this has happened before. The fix is to treat PROGRESS.md and CHANGELOG.md updates as mandatory checklist items before calling report_progress for the first time.
