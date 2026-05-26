@@ -23,11 +23,16 @@ You are the **Architect** of this knowledge store, not just a user. This reposit
 [Skills](../glossary/skill.md) are available at `.github/skills/`. Key skills:
 
 - `backlog-manager` — `.github/skills/backlog-manager/SKILL.md`
+- `backlog-worker` — `.github/skills/backlog-worker/SKILL.md`
 - `research` — `.github/skills/research/SKILL.md`
 - `technical-writer` — `.github/skills/technical-writer/SKILL.md`
 - `code-review` — `.github/skills/code-review/SKILL.md`
 - `strategy-author` — `.github/skills/strategy-author/SKILL.md`
-- `decisions` — `.github/skills/decisions/SKILL.md`
+- `adr` — `.github/skills/adr/SKILL.md`
+- `swe` — `.github/skills/swe/SKILL.md`
+- `tdd` — `.github/skills/tdd/SKILL.md`
+- `feedback` — `.github/skills/feedback/SKILL.md`
+- `remove-ai-slop` — `.github/skills/remove-ai-slop/SKILL.md`
 
 > If no skill fits, note the gap in `BACKLOG.md` and proceed without synthesising a substitute.
 
@@ -41,7 +46,7 @@ The backlog is `BACKLOG.md` at the repo root. Use the `backlog-manager` skill fr
 
 ## 4. Architecture Decision Records
 
-Every non-trivial architectural or design decision must be recorded as an [ADR](../glossary/adr.md) in `_docs/adr/`. Use the `decisions` skill from `.github/skills/decisions/SKILL.md`. Format is [MADR](../glossary/madr.md). Files named `_docs/adr/NNNN-short-title.md`.
+Every non-trivial architectural or design decision must be recorded as an [ADR](../glossary/adr.md) in `_docs/adr/`. Use the `adr` skill from `.github/skills/adr/SKILL.md`. Format is [MADR](../glossary/madr.md). Files named `_docs/adr/NNNN-short-title.md`.
 
 ---
 
@@ -216,35 +221,39 @@ This is a **private repository**. Never include:
 
 ---
 
-## 15. GitHub Copilot — Headless / Web Mode
+## 15. GitHub-Native Execution Model
 
-This section describes how to use GitHub Copilot as an agent for this knowledge store when you have **no local IDE or terminal** (phone app, browser only).
+This system is **GitHub-native**. There is no local deployment and no CLI interaction required from the user. All pipeline processing runs inside GitHub Actions. This is the primary execution model, not a fallback.
 
-### How Copilot runs in headless mode
+### Execution surfaces
 
-When you assign an issue to `@copilot` on github.com (or via the GitHub mobile app), GitHub spins up an ephemeral cloud sandbox and runs the steps in `.github/copilot-setup-steps.yml` to install dependencies. Copilot then works on the task directly — writing and editing files, running the processing pipeline (once implemented), and opening a Pull Request.
+| Surface | How it works |
+|---|---|
+| **Pipeline processing** | GitHub Actions workflow (`pipeline.yml` — see W-0211). Triggered on push to `raw_document_corpus/` or by manual `workflow_dispatch`. No terminal required. |
+| **Agent tasks (Copilot)** | Assign an issue to `@copilot` on github.com or the mobile app. Copilot runs in an ephemeral cloud sandbox, uses `copilot-setup-steps.yml`, and opens a PR. |
+| **Site deployment** | `pages.yml` deploys the ontology browser to GitHub Pages automatically on every push to main. |
 
-### Workflow (phone / web — no local env required)
+### Copilot agent workflow (no local env required)
 
-1. **Open github.com** (or the GitHub mobile app) and navigate to this repository.
-2. **Create a new Issue** describing the task, e.g.:
-   - *"Add an ADR for the ontology serialisation format choice."*
-   - *"Draft the domain classification processor specification."*
-   - *"Refactor `projects/2025-06-15-open-brain-architecture.md` to reflect the ontology architecture."*
-3. **Assign the issue to `@copilot`** (Assignees → Copilot).
-4. Copilot will:
-   - Set up the Python environment via `copilot-setup-steps.yml`.
-   - Execute the requested task using the repository files and tools.
-   - Open a Pull Request with the resulting changes.
-5. **Review and merge** the PR directly from github.com or the mobile app.
+1. Open this repository on **github.com** (or the GitHub mobile app).
+2. Go to **Issues → New issue** and describe the task.
+3. In the **Assignees** panel, assign the issue to **Copilot**.
+4. Copilot opens a session, runs `copilot-setup-steps.yml`, works on the task, and opens a **Pull Request**.
+5. Review and merge the PR from the browser or phone.
 
-### Limitations in headless mode
+### Assumptions for all processing
+
+- No deployment target exists outside of GitHub (no server, no cloud service, no local env required from the user).
+- `GITHUB_TOKEN` is the sole authentication mechanism for pipeline execution (including `gh models run` LLM calls in p07).
+- The `gh` CLI is pre-installed on ubuntu-latest runners and authenticated automatically in any GitHub Actions context.
+
+### Limitations
 
 | Limitation | Explanation |
 |---|---|
-| Ontology MCP server not yet implemented | Copilot works on files directly; the MCP query interface is not yet available. |
-| No persistent background watcher | Any file-watching tooling only runs for the lifetime of the agent session. |
-| Git push requires write access | Ensure the repository's `GITHUB_TOKEN` (provided automatically in the sandbox) has write access, or grant Copilot write permission under **Settings → Copilot → Coding agent**. |
+| Ontology MCP server not yet implemented | Works on files directly; the MCP query interface is not yet available. |
+| No persistent background watcher | File-watching only runs for the lifetime of the agent session. |
+| Git push requires write access | Ensure `GITHUB_TOKEN` has write access, or grant Copilot write permission under **Settings → Copilot → Coding agent**. |
 
 ### MCP configuration reference
 

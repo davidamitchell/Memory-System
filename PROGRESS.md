@@ -2,6 +2,47 @@
 
 ---
 
+## 2026-05-25 — W-0211: GitHub Actions pipeline workflow + W-0212: LLM default strategy
+
+### W-0211: `.github/workflows/pipeline.yml`
+
+Created the GitHub Actions workflow that makes GitHub Actions the sole trigger for pipeline execution.
+
+**Changes:**
+- `.github/workflows/pipeline.yml` — new workflow:
+  - Triggers on push to `main` when any file in `raw_document_corpus/` or `glossary/` changes
+  - Triggers on `workflow_dispatch` with optional `strategy` input (default `llm`)
+  - Steps: checkout → Python 3.11 → install rdflib → authenticate `gh` via `GITHUB_TOKEN` → run batch pipeline on `raw_document_corpus/` (LLM) and `glossary/` (rule-based) → regenerate `docs/data/ontology.json` and `docs/index.html` → commit artefacts back to main with `[skip ci]`
+  - Skips commit step if nothing changed (idempotent)
+  - `permissions: contents: write` for the commit-back step
+  - `concurrency: pipeline` with `cancel-in-progress: false` to prevent parallel runs from corrupting the version counter
+
+**Acceptance criteria met:**
+- Triggers on push to `raw_document_corpus/**` and `glossary/**` ✓
+- `workflow_dispatch` with `strategy` input ✓
+- Commits updated artefacts with `[skip ci]` ✓
+- No-op if no changes ✓
+
+### W-0212: LLM as default extraction strategy
+
+Changed the extraction strategy default from `rule-based` to `llm` throughout the pipeline.
+
+**Changes:**
+- `pipeline/processors/p07_concept_extraction.py`: `state.get("strategy", "rule-based")` → `state.get("strategy", "llm")`; module docstring updated to mark `llm` as the default
+- `pipeline/run_pipeline.py`: `run_pipeline()` and `run_pipeline_batch()` gain a `strategy` parameter (default `"llm"`); `main()` gains `--strategy` CLI flag (choices: `llm`, `rule-based`, default `llm`)
+- `pipeline/README.md`: Quick Start updated with `--strategy` examples; new **Extraction Strategies** section documenting when to use each strategy and the rationale for the default
+- `tests/test_pipeline_w0200.py` and `tests/test_pipeline_w0201.py`: subprocess calls against the glossary corpus now pass `--strategy rule-based` explicitly (required companion change; the W-0212 assumption that "all tests mock `_gh_models_caller`" was incorrect for the subprocess-based acceptance tests)
+
+**Test results:** 54/54 pass.
+
+**Mini-Retro**
+1. Did the process work? Yes — both items are straightforward. W-0211 is a new workflow file; W-0212 is a one-line default change plus flag plumbing.
+2. What slowed down? The W-0212 assumption in BACKLOG.md ("All existing tests mock `_gh_models_caller`") was incorrect: two test files invoke `run_pipeline.py` via subprocess against the glossary corpus and do not mock anything. Switching the default to `llm` broke those tests because `gh models run` is unavailable in the test sandbox. Fixed by adding `--strategy rule-based` to the subprocess calls in those tests — the correct and explicit form.
+3. What single change would prevent this next time? Record subprocess-invoking tests separately from unit tests in the BACKLOG assumption; note that subprocess tests are integration tests that inherit the real environment and will fail if the environment lacks an authenticated `gh` CLI.
+4. Is this a pattern? Yes — any test that calls `run_pipeline.py` as a subprocess must specify the strategy explicitly when it is testing a strategy-sensitive path. The `--strategy` flag makes this self-documenting.
+
+---
+
 ## 2026-05-23 — W-0200: 12-processor ontology pipeline (first slice)
 
 Built the full end-to-end ontology pipeline for a single glossary file (`glossary/vector-embedding.md`).
@@ -373,3 +414,38 @@ Replaced the mobile bottom-sheet detail panel with full hash-routed detail pages
 2. What slowed down? Nothing significant. The main design decision was whether to hide the desktop header nav entirely on mobile (replaced by bottom bar) vs show both — hiding the header nav entirely on mobile is cleaner and avoids duplicating tap targets.
 3. What single change would prevent friction next time? The `table-scroll` wrapper is now in the HTML template (`export_html.py`) for relations and documents, but concept table uses CSS card layout instead — future work (swipe gestures, pinch-zoom, search-as-you-type) should stay in `app.js` as progressive layers.
 4. Is this a pattern? Yes — mobile-first progressive enhancement: start with semantic HTML, add CSS layout layers by viewport, add JS behaviour on top. Each layer is independent and degrades gracefully.
+
+---
+
+## 2026-05-25 — Instructions fix + W-0207 backlog correction + W-0205 NLP enrichment (partial)
+
+### Instructions fix
+
+`.github/copilot-instructions.md` §2 and §4 referenced a `decisions` skill at `.github/skills/decisions/SKILL.md` — that folder does not exist in the skills submodule. The correct skill is `adr` at `.github/skills/adr/SKILL.md`. Both references updated.
+
+The key skills list in §2 was also missing several skills added to the submodule since the instructions were last written: `backlog-worker`, `swe`, `tdd`, `feedback`, and `remove-ai-slop`. All added.
+
+### W-0207 backlog correction
+
+W-0207 was implemented on 2026-05-24 (full PROGRESS.md entry exists) but the BACKLOG entry still read `status: ready`. Corrected to `status: done`.
+
+### W-0205: NLP enrichment in p02 — code complete, eval blocked
+
+**Working: W-0205 — p02 NLP enrichment + p07 LLM integration**
+
+**Changes:**
+- `pipeline/processors/p02_preparation.py`: Optional NLP enrichment step. When `state["nlp"]=True`, runs `en_core_web_sm` over `body_text` and adds `nlp_annotations` (entities, noun_chunks, pos_tags) to state. Model cached lazily in `_nlp_model`; seam is replaceable in tests. When `state["nlp"]` is absent or `False`, output is identical to pre-W-0205.
+- `pipeline/processors/p07_concept_extraction.py`: LLM strategy appends NLP annotations to the user prompt via `_format_nlp_annotations()`. Named entities and noun chunks are rendered as compact strings injected under "NLP pre-analysis:". No change to `delta_proposal` schema.
+- `pipeline/eval.py`: `--nlp` flag added; passed through `evaluate_file()` into state; reflected in `print_report()` header.
+- `requirements.txt`: `spacy>=3.7` added (on its own line; also fixed pre-existing formatting issue where `rdflib>=6.3` and `openai>=1.0` were joined without newline).
+- `tests/test_nlp_enrichment_w0205.py`: 12 acceptance tests, all passing. Mock spaCy model used — no model download required to run tests.
+
+**Test results:** 54/54 pass.
+
+**Blocker — eval score comparison not recorded:** The criterion `pipeline/eval.py --corpus glossary/ --extractor llm --nlp` requires `OPENAI_API_KEY`. Key not available in agent sandbox. Item left `active`. To complete: run the eval command in an environment with the key set, record aggregate F1 alongside W-0204 baseline (rule-based: 1.000 F1), then mark W-0205 `done`.
+
+**Mini-Retro**
+1. Did the process work? Mostly yes. The backlog instruction fix was straightforward. W-0207's stale BACKLOG status was caught during the entry phase — the PROGRESS.md had the full implementation record but the BACKLOG had not been updated. Pattern: sessions that implement work should always advance the BACKLOG status as part of Close, not as a later correction.
+2. What slowed down or went wrong? Mock spaCy doc was initially a `SimpleNamespace` — Python doesn't honour `__iter__` on instances, only on types. Switched to `MagicMock` which supports `__iter__` via `__class__` magic. One test cycle wasted.
+3. What single change would prevent this next time? Add a note to the `swe` or `tdd` skill (or the build loop harness) that Python dunders on instances do not work unless the type defines them — use `MagicMock` for protocol mocking. Raised as a potential skill improvement.
+4. Is this a pattern? The BACKLOG-status-drift is a pattern: W-0207 and now potentially others could have stale `ready` status if the Close phase was skipped or abbreviated. Consider a BACKLOG integrity check as a standing Entry step.

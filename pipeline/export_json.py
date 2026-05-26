@@ -171,6 +171,12 @@ def export_ontology(g: Graph, version: str) -> dict:
         if stem in concept_ids_set:
             doc_concepts[f] = [stem]
         else:
+            import logging as _logging  # noqa: PLC0415
+            _logging.getLogger(__name__).debug(
+                "No concept node found for document stem %r (file: %s) — "
+                "concept_ids will be empty for this document",
+                stem, f,
+            )
             doc_concepts[f] = []
 
     documents = [
@@ -192,6 +198,21 @@ def export_ontology(g: Graph, version: str) -> dict:
     for concept in concepts:
         concept["docs"] = sorted(concept_docs.get(concept["id"], []))
 
+    # --- Domain distribution (concepts per domain) ---
+    from collections import Counter  # noqa: PLC0415
+    domain_counts: Counter = Counter(c["domain"] for c in concepts if c["domain"])
+    domain_distribution = [
+        {"domain": d, "count": n}
+        for d, n in sorted(domain_counts.items(), key=lambda x: (-x[1], x[0]))
+    ]
+
+    # --- Predicate distribution (relations per predicate type) ---
+    predicate_counts: Counter = Counter(r["predicate"] for r in relations)
+    predicate_distribution = [
+        {"predicate": p, "count": n}
+        for p, n in sorted(predicate_counts.items(), key=lambda x: (-x[1], x[0]))
+    ]
+
     return {
         "meta": {
             "version": version,
@@ -201,6 +222,8 @@ def export_ontology(g: Graph, version: str) -> dict:
                 "relations": len(relations),
                 "documents": len(documents),
             },
+            "domain_distribution": domain_distribution,
+            "predicate_distribution": predicate_distribution,
         },
         "concepts": concepts,
         "relations": relations,

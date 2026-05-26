@@ -130,10 +130,10 @@ def _avg(values: list[float]) -> float:
 # Per-file evaluation
 # ---------------------------------------------------------------------------
 
-def evaluate_file(source_path: str, extractor: str = "rule-based") -> dict:
+def evaluate_file(source_path: str, extractor: str = "rule-based", nlp: bool = False) -> dict:
     """Run the extractor on one file and return per-field metrics."""
     # Run p01–p06 to populate state up to domain matching
-    state: dict = {"source_path": source_path, "extractor": extractor}
+    state: dict = {"source_path": source_path, "extractor": extractor, "nlp": nlp}
     for proc in _EXTRACT_PROCESSORS:
         state = proc.run(state, REPO_ROOT)
 
@@ -186,13 +186,13 @@ def aggregate(results: list[dict]) -> dict:
     return agg
 
 
-def print_report(results: list[dict], agg: dict, extractor: str) -> None:
+def print_report(results: list[dict], agg: dict, extractor: str, nlp: bool = False) -> None:
     """Pretty-print per-file and aggregate metrics to stdout."""
     FIELDS = ["label", "aliases", "tags", "related"]
     col_w = 10
 
     header = f"{'File':<45}" + "".join(f"{'  '+f+' F1':>{col_w}}" for f in FIELDS)
-    print(f"\nExtractor: {extractor}")
+    print(f"\nExtractor: {extractor}" + (" + NLP enrichment" if nlp else ""))
     print(f"Files:     {len(results)}")
     print()
     print(header)
@@ -237,6 +237,12 @@ def main() -> None:
         help="Extraction strategy to evaluate (default: rule-based)",
     )
     parser.add_argument(
+        "--nlp",
+        action="store_true",
+        dest="nlp",
+        help="Enable NLP enrichment in p02 (requires spacy and en_core_web_sm)",
+    )
+    parser.add_argument(
         "--json",
         action="store_true",
         dest="json_output",
@@ -267,7 +273,7 @@ def main() -> None:
     results = []
     for rel in rel_paths:
         try:
-            result = evaluate_file(rel, extractor=args.extractor)
+            result = evaluate_file(rel, extractor=args.extractor, nlp=args.nlp)
             results.append(result)
         except Exception as exc:  # noqa: BLE001
             logger.warning("Skipping %s: %s", rel, exc)
@@ -279,9 +285,9 @@ def main() -> None:
     agg = aggregate(results)
 
     if args.json_output:
-        print(json.dumps({"extractor": args.extractor, "results": results, "aggregate": agg}, indent=2))
+        print(json.dumps({"extractor": args.extractor, "nlp": args.nlp, "results": results, "aggregate": agg}, indent=2))
     else:
-        print_report(results, agg, extractor=args.extractor)
+        print_report(results, agg, extractor=args.extractor, nlp=args.nlp)
 
 
 if __name__ == "__main__":

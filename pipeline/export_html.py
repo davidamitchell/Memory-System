@@ -49,6 +49,53 @@ def tag_badges(tags: list[str]) -> str:
 def render_overview(data: dict) -> str:
     meta = data["meta"]
     counts = meta["counts"]
+
+    domain_dist = meta.get("domain_distribution", [])
+    pred_dist = meta.get("predicate_distribution", [])
+
+    domain_rows = "".join(
+        f'      <tr><td>{h(d["domain"])}</td>'
+        f'<td class="num">{d["count"]}</td></tr>\n'
+        for d in domain_dist
+    )
+    pred_rows = "".join(
+        f'      <tr>'
+        f'<td class="predicate predicate-{h(p["predicate"])}">{h(p["predicate"])}</td>'
+        f'<td class="num">{p["count"]}</td></tr>\n'
+        for p in pred_dist
+    )
+
+    domain_table = (
+        f"""
+  <div class="dist-block">
+    <h3>Concepts by domain</h3>
+    <table class="stats dist-table">
+      <thead><tr><th>Domain</th><th class="num">Concepts</th></tr></thead>
+      <tbody>
+{domain_rows}      </tbody>
+    </table>
+  </div>"""
+        if domain_dist else ""
+    )
+
+    pred_table = (
+        f"""
+  <div class="dist-block">
+    <h3>Relations by predicate</h3>
+    <table class="stats dist-table">
+      <thead><tr><th>Predicate</th><th class="num">Relations</th></tr></thead>
+      <tbody>
+{pred_rows}      </tbody>
+    </table>
+  </div>"""
+        if pred_dist else ""
+    )
+
+    distributions = (
+        f'\n  <div class="dist-row">{domain_table}{pred_table}\n  </div>'
+        if (domain_dist or pred_dist) else ""
+    )
+
     return f"""
 <section id="overview" aria-label="Overview">
   <h2>Overview</h2>
@@ -60,7 +107,7 @@ def render_overview(data: dict) -> str:
       <tr><th>Relations</th><td>{counts['relations']}</td></tr>
       <tr><th>Source documents</th><td>{counts['documents']}</td></tr>
     </tbody>
-  </table>
+  </table>{distributions}
 </section>
 """.strip()
 

@@ -1,6 +1,8 @@
 # Memory-System — GitHub Open-Brain
 
-A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-first.md) knowledge store backed by GitHub Markdown files and an **ontology-based [knowledge graph](./glossary/knowledge-graph.md)**, exposed to [AI](./glossary/ai-agent.md) tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](./glossary/mcp.md).
+A **GitHub-native**, [agent-native](./glossary/agent-first.md) knowledge store backed by GitHub Markdown files and an **ontology-based [knowledge graph](./glossary/knowledge-graph.md)**, exposed to [AI](./glossary/ai-agent.md) tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](./glossary/mcp.md).
+
+All pipeline processing runs inside **GitHub Actions**. There is no local deployment and no CLI interaction required from the user. Push a document to the repository and the pipeline runs automatically. The only deployment target is GitHub.
 
 > **AI agents: read [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) for the rules and conventions that govern this repository.**
 
@@ -12,12 +14,18 @@ A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-
 ┌──────────────────────────────────────────┐
 │  Document Sources                        │
 └─────────────────┬────────────────────────┘
-                  │ ingest
+                  │ push to GitHub
                   ▼
+        ┌──────────────────┐
+        │  GitHub Actions  │  ← pipeline trigger (no local CLI required)
+        │  Workflow        │
+        └────────┬─────────┘
+                 │ run_pipeline.py --strategy llm
+                 ▼
          ┌─────────────────┐
          │  Processing     │  Sourcing → Cleaning → Metadata
          │  Pipeline       │  → Domain Classification → Matching
-         │                 │  → Concept Extraction → Ontology Build
+         │                 │  → Concept Extraction (LLM) → Ontology Build
          │                 │  → Consistency Validation → Versioning
          └────────┬────────┘
                   │
@@ -26,18 +34,18 @@ A **[local-first](./glossary/local-first.md)**, [agent-native](./glossary/agent-
           │                 │  Lower Ontologies (per domain)
           │                 │  Versioned snapshots (OWL/RDF/JSON-LD)
           └───────┬─────────┘
-                  │ MCP tools
+                  │ GitHub Pages (live) · MCP tools (future)
                   ▼
         ┌──────────────────┐
-        │  MCP Server      │  ← AI Agent Interface
+        │  Query / Browse  │  ← AI Agent Interface (future MCP)
         └──────────────────┘
 ```
 
 1. **Storage** — Knowledge lives as [memory files](./glossary/memory-file.md) (`.md` files) in `/meetings`, `/journal`, and `/projects`, and as versioned ontology snapshots in the Ontology Store.
-2. **Processing Pipeline** — A 12-processor pipeline (see [ADR-0004](./_docs/adr/0004-provenance-model-and-control-plane.md)) extracts concepts from source documents, builds domain ontologies, validates consistency, and commits versioned ontology snapshots.
+2. **Processing Pipeline** — A 12-processor pipeline (see [ADR-0004](./_docs/adr/0004-provenance-model-and-control-plane.md)) extracts concepts from source documents using LLM (via `gh models run`), builds domain ontologies, validates consistency, and commits versioned ontology snapshots.
 3. **Ontology Store** — An upper ontology (domain taxonomy) and per-domain lower ontologies, serialised as OWL/RDF/JSON-LD. Every assertion traces back to a content-addressed source segment.
-4. **MCP Bridge** — The [MCP server](./glossary/mcp-server.md) exposes [MCP tools](./glossary/mcp-tool.md) to any MCP-compatible AI client for querying and writing to the knowledge store.
-5. **Auto-sync** — Every write is automatically committed and pushed to GitHub.
+4. **GitHub Actions Trigger** — Every pipeline run is triggered by a GitHub Actions workflow, not local CLI. Push a document to `raw_document_corpus/` and the pipeline runs automatically, commits the updated ontology, and redeploys the Pages site.
+5. **MCP Bridge** — The [MCP server](./glossary/mcp-server.md) exposes [MCP tools](./glossary/mcp-tool.md) to any MCP-compatible AI client for querying and writing to the knowledge store (not yet implemented — see [ADR-0002](./_docs/adr/0002-move-from-vector-storage-to-ontology.md)).
 
 See the [design space](./_docs/design/ontology-system-design.md) for full component and sequence diagrams.
 
@@ -51,11 +59,17 @@ The architecture is fully designed (ADR-0002 through ADR-0004, `_docs/design/`).
 
 ---
 
-## GitHub Copilot in Headless Mode (Web / Mobile)
+## GitHub-Native Execution
 
-You can assign issues to Copilot from **github.com or the GitHub mobile app** — no local IDE or terminal required.
+This system runs entirely on GitHub. There is no local deployment, no local server to run, and no CLI interaction required from the user. GitHub Actions workflows are the trigger functions for all pipeline processing.
 
-### Step-by-step
+| How to interact | What happens |
+|---|---|
+| **Push documents** to `raw_document_corpus/` | `pipeline.yml` workflow fires, processes all documents with LLM extraction, commits updated ontology, redeploys GitHub Pages site |
+| **Assign an issue to Copilot** | Copilot runs in an ephemeral cloud sandbox (no local IDE required), opens a PR |
+| **Trigger manually** | `workflow_dispatch` on `pipeline.yml` runs a full corpus reprocessing |
+
+### Agent workflow (no local env required)
 
 1. Open this repository on **github.com** (or the mobile app).
 2. Go to **Issues → New issue** and describe the task (design work, documentation, backlog items, ADRs).

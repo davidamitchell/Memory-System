@@ -1,8 +1,8 @@
 # Ontology-Based Memory System — Design
 
 **Status:** draft
-**Version:** 3
-**Date:** 2026-05-23
+**Version:** 4
+**Date:** 2026-05-25
 **Supersedes:** v1 (initial design, same file)
 **Related ADRs:** [ADR-0002](../adr/0002-move-from-vector-storage-to-ontology.md) · [ADR-0004](../adr/0004-provenance-model-and-control-plane.md)
 
@@ -28,6 +28,10 @@ Six constraints govern all design decisions. See [ADR-0004](../adr/0004-provenan
 | **Control/Data Separation** | Transformation processors (data plane) are distinct from governance and version control (control plane) |
 | **Upper Ontology Stability** | Upper ontology mutations require explicit alignment governance acceptance |
 | **Bidirectional Traceability** | Concepts resolve to source evidence; source evidence resolves to derived assertions |
+| **GitHub-Native Execution** | There is no deployment target outside GitHub. All pipeline processing runs inside GitHub Actions. No local CLI interaction is required from the user. GitHub Actions workflows are the sole trigger functions. |
+| **Mobile-First View Layer** | The GitHub Pages browser is designed for mobile as the primary device. Base CSS targets small screens (≤640 px); desktop layout is a progressive enhancement at `min-width: 641px`. All future view-layer additions must start from mobile constraints. |
+
+> **Extraction strategy:** The primary corpus (`raw_document_corpus/`) is unstructured prose. Rule-based extraction (which reads explicit YAML front-matter fields) cannot produce a proper ontology from prose. LLM extraction via `gh models run` is always required for the production corpus. Rule-based extraction is retained as the evaluation baseline for the structured glossary corpus (see W-0203). `llm` is the default strategy (see W-0212).
 
 ---
 
@@ -211,7 +215,7 @@ End-to-end flow for ingesting a single document.
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Trigger as Trigger / Scheduler
+    actor Trigger as GitHub Actions Workflow
     participant P1 as Sourcing
     participant P2 as Preparation
     participant P3 as Segmentation
@@ -227,7 +231,7 @@ sequenceDiagram
     participant P12 as Export
     participant Store as Storage
 
-    Trigger->>P1: ingest(source)
+    Trigger->>P1: ingest(source)  %% triggered by GitHub Actions workflow
     P1->>Store: store Raw Document
 
     P1->>P2: raw document
@@ -369,7 +373,7 @@ Score derives from extraction method (rule-based > LLM-certain > LLM-uncertain),
 - [ ] What is the confidence weighting model for Trust Metadata — numeric score, tier-based, or rule-derived?
 - [ ] Is Alignment Governance a human approval gate, an automated check, or context-dependent?
 - [ ] How does rollback propagate when domain ontologies depend on an upper ontology version being rolled back?
-- [ ] What triggers a Version Commit — every ingest, scheduled batch, or manual gate?
+- [x] What triggers a Version Commit? → **GitHub Actions workflow** (push to `raw_document_corpus/` or `glossary/`, or manual `workflow_dispatch`) — see W-0211.
 - [ ] Can a document span multiple domains, and if so, how are conflicting domain assignments resolved?
 - [ ] How is the upper ontology seeded — manually authored, bootstrapped from BFO/SUMO/schema.org, or hybrid?
 - [ ] What is the internal representation format before serialisation (RDF graph, property graph, custom AST)?
