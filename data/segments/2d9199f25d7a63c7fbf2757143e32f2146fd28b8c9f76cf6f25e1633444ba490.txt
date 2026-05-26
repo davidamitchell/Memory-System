@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any abstract, intensionally defined unit of meaning with determinate membership conditions, operating within a domain, constitutes a concept.

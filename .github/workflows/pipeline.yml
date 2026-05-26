@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "raw_document_corpus/**"
-      - "glossary/**"
+      - "foundational_concepts/**"
   workflow_dispatch:
     inputs:
       strategy:
@@ -57,10 +57,10 @@ jobs:
 
       - name: Run ontology pipeline (full corpus)
         run: |
+          python pipeline/run_pipeline.py foundational_concepts/ \
+            --strategy llm
           python pipeline/run_pipeline.py raw_document_corpus/ \
             --strategy ${{ steps.strategy.outputs.value }}
-          python pipeline/run_pipeline.py glossary/ \
-            --strategy rule-based
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

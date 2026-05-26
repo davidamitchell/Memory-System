@@ -1,0 +1,1 @@
+A process is a defined, bounded sequence of operations that transforms one or more inputs into one or more outputs according to specified rules, with identifiable start and end states.

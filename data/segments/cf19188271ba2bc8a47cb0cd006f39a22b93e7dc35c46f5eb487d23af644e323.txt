@@ -1,0 +1,4 @@
+**Necessary conditions:**
+1. **Identifiable** — it is or can be assigned a URI/IRI that uniquely identifies it within the open web or a closed system.
+2. **Referenceable** — it can appear as the subject or object of a statement.
+3. **Entity-neutral** — it may be a physical thing, a digital artifact, a concept, a person, an event, or any other kind of entity; the category imposes no restriction.

@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Formally defined** — its membership conditions are expressed in a formal ontology language (e.g., OWL).
+2. **Named** — it has a URI/IRI that uniquely identifies it within the ontology.
+3. **Extensional** — its extension is the set of all individuals that satisfy its membership conditions at any point in time.
+4. **Membership-determinate** — given an individual and the class definition, a reasoner can determine (or infer) membership.
+5. **Closed under reasoning** — all individuals that satisfy the conditions are members, even if not explicitly asserted.

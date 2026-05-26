@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any purposive, selective, interpretable representation of a domain with sufficient formal precision constitutes a model.

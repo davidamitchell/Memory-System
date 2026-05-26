@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Fact** | A fact is a proposition that has been operationally verified and recorded as true; true is the property that makes something a fact. |
+| **Valid** | Valid (in logic) applies to arguments or schema constraints; true applies to propositions or sentences. |
+| **Asserted** | Asserted means recorded in the knowledge base; a statement can be asserted without being verified as true. |

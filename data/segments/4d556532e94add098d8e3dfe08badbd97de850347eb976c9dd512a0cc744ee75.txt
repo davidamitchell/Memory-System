@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any data model that represents information exclusively as subject–predicate–object triples where subjects and predicates are URI/IRI-identified conforms to RDF.

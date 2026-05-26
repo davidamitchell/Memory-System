@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Source-to-structure** — it takes source material that is not yet in a formal structured form and produces output that is.
+2. **Ontology-governed** — the output conforms to a pre-defined or concurrently-developed ontology or schema; the formalisation is not arbitrary.
+3. **Explicit output** — the result is expressed in a form that is independently queryable, reasoned over, or integrated with other structured knowledge.
+4. **Identifies and formalises** — it both locates relevant content in the source (identification) and expresses it formally (formalisation); neither alone is sufficient.

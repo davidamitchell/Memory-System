@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any stable, agent-attributed, preconditioned, and constrained ability to perform a class of operations or produce a class of outputs constitutes a capability.

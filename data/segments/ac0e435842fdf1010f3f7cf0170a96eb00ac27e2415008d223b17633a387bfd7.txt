@@ -1,0 +1,4 @@
+1. An `rdf:type` triple exists linking its URI to a class URI (e.g., `ex:ResearchItem rdf:type ex:Document`).
+2. Property assertions (attributes and relationships) about it are stored as triples with its URI as subject.
+3. A reasoner can classify it under further classes based on its properties and the ontology's class axioms.
+4. It can be returned as a result of a SPARQL `SELECT` or `ASK` query.

@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any finite, ordered sequence of elements where position is significant and boundaries are defined constitutes a list.

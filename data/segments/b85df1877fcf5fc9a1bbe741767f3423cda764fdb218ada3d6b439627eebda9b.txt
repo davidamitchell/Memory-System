@@ -1,0 +1,4 @@
+1. It is encoded in a formal language (e.g., OWL, RDF Schema, Common Logic).
+2. Every term in it has a definition expressible as necessary and sufficient conditions.
+3. A reasoner can use it to classify individuals, detect inconsistencies, and derive inferences.
+4. Two parties working independently with the same ontology will assign the same interpretation to the same term in the same context.

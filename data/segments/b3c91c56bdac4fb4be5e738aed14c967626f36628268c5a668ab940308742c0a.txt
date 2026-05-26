@@ -1,0 +1,1 @@
+A class is a formal, named set of individuals that share a common definition expressed as necessary and sufficient conditions, within an ontology, such that a reasoner can determine class membership for any individual.

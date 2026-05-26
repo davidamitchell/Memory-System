@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Information** | Information is contextualised data that is interpretable but not necessarily verified; a fact is verified as true. |
+| **Insight** | An insight is a derived, non-obvious statement obtained by reasoning over facts; a fact is a directly verified base-level assertion. |
+| **Assertion** | An assertion is any recorded statement, verified or not; a fact is specifically a verified true assertion. |
+| **True** | True is the property; fact is the entity (a proposition) that possesses that property and has been verified. |

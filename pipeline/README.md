@@ -11,22 +11,22 @@ full PROV-O provenance tracing from raw source to stored assertion.
 
 ```bash
 # Process a single file (LLM strategy — default)
-python pipeline/run_pipeline.py glossary/vector-embedding.md
+python pipeline/run_pipeline.py foundational_concepts/concept.md
 
 # Process all files in a directory with the LLM strategy (default)
 python pipeline/run_pipeline.py raw_document_corpus/
 
-# Process the structured glossary corpus with rule-based extraction
-python pipeline/run_pipeline.py glossary/ --strategy rule-based
+# Process the foundational concepts corpus
+python pipeline/run_pipeline.py foundational_concepts/ --strategy llm
 
 # Query a concept card
-python pipeline/query.py "vector embedding"
+python pipeline/query.py "concept"
 
 # Query as JSON
-python pipeline/query.py --format json "vector embedding"
+python pipeline/query.py --format json "ontology"
 
 # Show the two-hop neighbourhood
-python pipeline/query.py --related "vector embedding"
+python pipeline/query.py --related "ontology"
 ```
 
 ---
@@ -38,22 +38,21 @@ via the `--strategy` CLI flag or `state["strategy"]` in programmatic use:
 
 | Strategy | Default? | Best for | Notes |
 |----------|----------|----------|-------|
-| `llm` | ✓ Yes | Unstructured prose (`raw_document_corpus/`) | Calls `gh models run` via the `gh` CLI; requires `gh auth` |
-| `rule-based` | No | Structured glossary corpus (`glossary/`) | Reads YAML front-matter directly; near-perfect F1; no LLM calls |
+| `llm` | ✓ Yes | Unstructured prose (`raw_document_corpus/`, `foundational_concepts/`) | Calls `gh models run` via the `gh` CLI; requires `gh auth` |
+| `rule-based` | No | Structured YAML front-matter corpora | Reads YAML front-matter directly; near-perfect F1; no LLM calls |
 
-**Why `llm` is the default:** The primary production corpus (`raw_document_corpus/`) is
-unstructured prose with no YAML front-matter.  Running `rule-based` on prose silently
-produces sparse extractions (title only, no relations).  Making `llm` the default ensures
-the correct strategy fires without requiring an explicit flag.
+**Why `llm` is the default:** Both production corpora (`raw_document_corpus/` and
+`foundational_concepts/`) use prose format with no YAML front-matter.  Making `llm`
+the default ensures the correct strategy fires without requiring an explicit flag.
 
-**When to use `rule-based`:** Use `--strategy rule-based` explicitly for the glossary
-corpus and for the W-0203 eval harness, where deterministic front-matter fidelity is the
-measurement target and LLM calls are neither needed nor desirable.
+**When to use `rule-based`:** Use `--strategy rule-based` explicitly for legacy
+structured-front-matter corpora and for the W-0203 eval harness, where deterministic
+front-matter fidelity is the measurement target.
 
 ```bash
 # Eval harness — always uses rule-based or llm explicitly
-python pipeline/eval.py --corpus glossary/ --extractor rule-based
-python pipeline/eval.py --corpus glossary/ --extractor llm
+python pipeline/eval.py --corpus foundational_concepts/ --extractor rule-based
+python pipeline/eval.py --corpus foundational_concepts/ --extractor llm
 ```
 
 ---
@@ -76,7 +75,7 @@ python pipeline/eval.py --corpus glossary/ --extractor llm
 | P-12 | **Export** | `graph`, `version_tag` | `output_path` |
 
 **Domain tie-break rule:** when a document emits multiple domain signals (e.g.
-both `Vocabulary` and `Architecture`), the *first signal wins*.  The pipeline
+both `FoundationalConcept` and `Architecture`), the *first signal wins*.  The pipeline
 records `domain_tie_break_applied: true` in the state when more than one signal
 is present.
 
@@ -98,7 +97,7 @@ is present.
 | `ms:AssertionNode` | A single named concept / knowledge claim |
 | `ms:ExtractionActivity` | PROV activity that produced the assertion |
 | `ms:PreparedSegment` | A hashed body paragraph used as evidence |
-| `ms:VocabularyDomain` | Upper-ontology domain for glossary terms |
+| `ms:FoundationalConceptDomain` | Upper-ontology domain for foundational concept terms |
 | `ms:ArchitectureDomain` | Upper-ontology domain for architecture ADRs |
 
 ### Key `ms:` properties

@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Subject area** | An informal clustering of topics; a domain additionally requires fixed, formal term interpretations. |
+| **Namespace** | A namespace provides syntactic scoping of identifiers; a domain provides semantic scoping of meanings. |
+| **Ontology** | An ontology is a formal specification *within* a domain; the domain is the region of discourse the ontology describes. |

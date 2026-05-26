@@ -1,0 +1,4 @@
+1. It appears in a controlled vocabulary, glossary, or ontology for a domain.
+2. A definition exists that states what the term denotes (necessary and sufficient conditions or explicit stipulation).
+3. Any competent user of the domain can apply the term consistently to the same set of referents.
+4. No other term in the same domain has the identical denotation (i.e., it is not a redundant synonym without declared equivalence).

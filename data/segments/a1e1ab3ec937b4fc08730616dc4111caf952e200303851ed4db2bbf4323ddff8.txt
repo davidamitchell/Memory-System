@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any systematic specification of a function from syntactic expressions to interpretations in a model, defining truth conditions for those expressions, constitutes a semantics for that language.

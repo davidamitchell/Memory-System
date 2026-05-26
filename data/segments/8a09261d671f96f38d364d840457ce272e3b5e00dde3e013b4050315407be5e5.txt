@@ -1,0 +1,4 @@
+1. A schema or ontology exists that assigns meaning to the data's structure and values.
+2. An agent with access to the schema can answer questions using it that they could not answer without it.
+3. It can be encoded, transmitted, and decoded by parties sharing the same schema without loss of content.
+4. It does not require external verification of truth to be used; it is accepted provisionally as a meaningful statement.

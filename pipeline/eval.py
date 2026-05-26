@@ -9,21 +9,22 @@ aggregate.
 
 Usage
 -----
-    # Rule-based extractor against the glossary (baseline):
-    python pipeline/eval.py --corpus glossary/
+    # Rule-based extractor against the foundational concepts (baseline):
+    python pipeline/eval.py --corpus foundational_concepts/
 
     # Explicit extractor flag (rule-based is the default):
-    python pipeline/eval.py --corpus glossary/ --extractor rule-based
+    python pipeline/eval.py --corpus foundational_concepts/ --extractor rule-based
 
-    # LLM extractor (requires OPENAI_API_KEY or equivalent):
-    python pipeline/eval.py --corpus glossary/ --extractor llm
+    # LLM extractor:
+    python pipeline/eval.py --corpus foundational_concepts/ --extractor llm
 
     # JSON output:
-    python pipeline/eval.py --corpus glossary/ --json
+    python pipeline/eval.py --corpus foundational_concepts/ --json
 
 Ground truth
 ------------
-For the ``glossary/`` corpus the ground truth is the YAML front-matter:
+For the ``foundational_concepts/`` corpus the ground truth is the YAML front-matter
+where present (legacy files), or extracted prose otherwise:
   - label     → ``title`` field (single string; F1 is 1.0 if exact match)
   - aliases   → ``aliases`` field (list of strings)
   - tags      → ``tags`` field (list of strings)
@@ -227,8 +228,8 @@ def main() -> None:
     parser.add_argument(
         "--corpus",
         type=Path,
-        default=REPO_ROOT / "glossary",
-        help="Directory of .md files to evaluate (default: glossary/)",
+        default=REPO_ROOT / "foundational_concepts",
+        help="Directory of .md files to evaluate (default: foundational_concepts/)",
     )
     parser.add_argument(
         "--extractor",

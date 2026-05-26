@@ -1,0 +1,1 @@
+A graph is a mathematical structure consisting of a non-empty set of nodes and a set of edges, where each edge connects two nodes, used to represent binary relationships between entities.

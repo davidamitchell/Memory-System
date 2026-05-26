@@ -1,0 +1,1 @@
+True is a property of a proposition that holds when and only when the proposition accurately corresponds to a state of affairs in the intended domain — or, in a formal system, when the proposition is satisfied by every intended model of that system.

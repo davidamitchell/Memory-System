@@ -1,0 +1,4 @@
+**Necessary conditions:**
+1. **Discrete** — it is a distinct element in the graph; it has identity separate from all other nodes.
+2. **Graph-resident** — it exists only within the context of a graph structure.
+3. **Connectable** — it may be the source or target of zero or more edges (including isolated nodes with no edges).

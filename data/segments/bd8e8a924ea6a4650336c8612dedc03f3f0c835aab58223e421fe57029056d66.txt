@@ -1,0 +1,4 @@
+| Term | Distinction |
+|------|-------------|
+| **Attribute** | An attribute is any named property with a data value; a weight is specifically a numeric attribute used for quantitative comparison or algorithmic computation. |
+| **Label** | A label is a categorical identifier; a weight is a quantitative value. |

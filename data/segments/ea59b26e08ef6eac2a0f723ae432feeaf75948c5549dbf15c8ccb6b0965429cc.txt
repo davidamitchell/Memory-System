@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Recurrent** — it appears across multiple documents or assertions; it is not singular or isolated.
+2. **Identifiable** — it can be named and its scope described, even if its boundaries are approximate.
+3. **Semantic** — it is defined by meaning-proximity, not by syntactic co-occurrence alone.
+4. **Sub-formal** — it does not impose necessary and sufficient conditions on its members; membership is a matter of degree or judgment.

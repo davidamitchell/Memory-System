@@ -1,0 +1,1 @@
+Semantics is the systematic assignment of meaning to the expressions of a formal language, defined as a function from syntactic expressions to their interpretations in a model, specifying the truth conditions of those expressions.

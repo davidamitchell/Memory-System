@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Presupposes knowledge** — it can only be exercised by an agent that possesses relevant knowledge; wisdom without knowledge is uninformed judgment.
+2. **Evaluative** — it involves assessing goals, values, and consequences, not merely deriving true conclusions.
+3. **Context-sensitive** — the same knowledge may be applied differently in different situations; wisdom is the capacity to determine the appropriate application.
+4. **Non-algorithmic** — it cannot be fully reduced to a procedure; it requires judgment in the face of incomplete specifications and trade-offs.

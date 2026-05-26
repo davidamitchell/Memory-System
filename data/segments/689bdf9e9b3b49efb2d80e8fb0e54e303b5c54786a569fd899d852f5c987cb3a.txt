@@ -1,0 +1,4 @@
+1. It has a unique identifier (path, URI, slug).
+2. Its content can be retrieved and read independently of other documents.
+3. It has metadata describing its identity, provenance, and subject matter.
+4. It can be added to or removed from a corpus as a unit without partial inclusion.

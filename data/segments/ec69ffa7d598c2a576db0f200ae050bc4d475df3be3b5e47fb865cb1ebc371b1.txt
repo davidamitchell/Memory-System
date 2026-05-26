@@ -1,0 +1,1 @@
+Knowledge is the set of verified, true statements about a domain, understood in their relational context, that enable an agent to reason, infer, and act correctly within that domain.

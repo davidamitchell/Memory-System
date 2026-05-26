@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Fact** | A fact is a directly verified base assertion; an insight is derived and reveals something beyond the directly observed facts. |
+| **Inference** | An inference is any conclusion derivable by a formal rule; an insight is an inference that is non-obvious and has significant explanatory or actionable value. Not all inferences are insights. |
+| **Hypothesis** | A hypothesis is an unverified conjecture; an insight is grounded in verified facts. |

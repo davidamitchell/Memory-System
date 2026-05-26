@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Module** | Module is a near-synonym; component emphasises functional role and composability, while module emphasises encapsulation and reuse. |
+| **Ontology** | An ontology is a complete, self-standing specification; a component is a bounded part designed to be assembled into a larger specification. |
+| **Class** | A class is a single named type within an ontology; a component is a grouping of multiple related classes, properties, and axioms. |

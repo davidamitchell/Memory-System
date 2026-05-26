@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Propositional** — it is a statement with a defined subject and predicate that has a truth value.
+2. **True** — it accurately corresponds to the state of affairs in the domain.
+3. **Verified** — its truth has been established through a defined process (observation, inference from axioms, source attestation).
+4. **Recorded** — it is explicitly stored or derivable within a knowledge base.
+5. **Domain-bounded** — its scope is fixed by the domain in which verification was performed.

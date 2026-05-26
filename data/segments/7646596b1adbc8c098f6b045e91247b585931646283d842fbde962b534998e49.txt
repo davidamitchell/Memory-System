@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Representational** — it stands for a domain; it is not the domain itself.
+2. **Selective** — it captures only chosen aspects of the domain; no model is exhaustive.
+3. **Purposive** — it is constructed for an explicit purpose that determines what is and is not included.
+4. **Interpretable** — its elements can be mapped to (or evaluated against) the domain it represents.
+5. **Formal or semi-formal** — its structure is defined with sufficient precision to be used consistently across agents.

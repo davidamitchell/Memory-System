@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Agent-relative** — it is attributed to a specific agent, system, or process (not to a domain in the abstract).
+2. **Class-level** — it refers to a repeatable type of operation or output, not a single occurrence.
+3. **Preconditioned** — it specifies the conditions under which the ability can be exercised.
+4. **Constrained** — it operates within defined limits (resource, time, input type, environmental context).
+5. **Stable** — it persists across multiple invocations; it is not a one-off achievement.

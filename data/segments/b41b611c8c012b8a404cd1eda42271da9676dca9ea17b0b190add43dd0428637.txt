@@ -1,0 +1,4 @@
+1. A numeric value is stored as an attribute of a node or edge.
+2. The attribute has a declared type that specifies what property it measures (e.g., `confidence`, `co-occurrence_count`, `semantic_similarity`).
+3. It can be used in graph algorithms (e.g., shortest path, ranking, clustering) where numeric edge or node values are required.
+4. Its scale is declared (e.g., `[0, 1]` for probability; `[1, ∞)` for cost).

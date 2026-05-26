@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Data** | Data is uncontextualised raw symbols; information is data that has been contextualised and made interpretable. |
+| **Knowledge** | Knowledge is information that has been verified as true and understood in relation to other knowledge; information does not require verification. |
+| **Fact** | A fact is a verified true statement; information is a meaningful statement that may or may not have been verified. |

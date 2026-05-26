@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any numeric value assigned to a node or edge under a defined measurement scheme, intended for comparative use, constitutes a weight.

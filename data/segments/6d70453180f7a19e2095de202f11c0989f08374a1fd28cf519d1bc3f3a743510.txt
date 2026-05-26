@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Verified** — each statement has been tested or confirmed against evidence or a trusted source; it is not merely asserted.
+2. **True** — the statements accurately correspond to the state of the domain.
+3. **Relational** — statements are understood in terms of their connections to other statements and concepts; isolated facts without relational context do not constitute knowledge.
+4. **Enabling** — it supports reasoning, inference, or action that could not be performed without it.
+5. **Domain-bounded** — its scope and validity are defined relative to a domain.

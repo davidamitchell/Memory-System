@@ -2,6 +2,56 @@
 
 ---
 
+## 2026-05-26 — Glossary cleanup + additive pipeline
+
+### Rename glossary → foundational_concepts; delete non-foundational items
+
+Addressed two issues: (1) the `glossary/` directory had grown beyond its intended role
+as the base ontology / ontology of ontologies; (2) the pipeline was destructive — two
+sequential batch runs each started from a blank graph, so the first run's output was
+always discarded.
+
+**Changes:**
+- Deleted 26 non-foundational concept files from `glossary/` (operational/system-specific:
+  `adr`, `ai-agent`, `mcp`, `vector-embedding`, etc.)
+- `git mv glossary/ foundational_concepts/` — 35 genuinely foundational files remain
+- `foundational_concepts/README.md` — rewritten to reflect the new role (base ontology
+  meta-model only); removed old "System Terms" index
+- `pipeline/processors/p04_metadata.py` — `glossary/` → `foundational_concepts/` for
+  `source_authority = "authoritative"` classification
+- `pipeline/processors/p05_domain_classification.py` — domain signal `"Vocabulary"` →
+  `"FoundationalConcept"`; path prefix updated
+- `pipeline/processors/p06_domain_matching.py` — URI `ms:VocabularyDomain` →
+  `ms:FoundationalConceptDomain`
+- `pipeline/run_pipeline.py` — added `_load_latest_graph()` helper and primed
+  `run_pipeline_batch()` with the existing ontology so each batch run *adds* to the
+  accumulated graph rather than overwriting it (additive / incremental architecture)
+- `.github/workflows/pipeline.yml` — trigger path `glossary/**` → `foundational_concepts/**`;
+  both corpora now use `--strategy llm`; `foundational_concepts/` runs first so
+  `raw_document_corpus/` builds on top
+- All five test files updated: corpus paths, concept queries, assertion counts, domain checks
+- `pipeline/eval.py`, `pipeline/export_json.py`, `pipeline/README.md`, `README.md`,
+  `definition_scheme.md` — all `glossary/` references updated
+
+**Acceptance criteria met:**
+- `foundational_concepts/` contains exactly 35 foundational files ✓
+- Pipeline is additive: loading `foundational_concepts/` then `raw_document_corpus/`
+  produces a combined ontology (not just the second run) ✓
+- All tests updated to use new paths and domain names ✓
+
+**Mini-Retro**
+1. The "confused why B isn't the only option" insight was correct: once the design is
+   "load existing graph first", the multiple-source problem dissolves. The pipeline is
+   now source-agnostic and naturally composable.
+2. The old 26 YAML-format glossary entries were actively harmful — they acted as
+   noise that drowned out the foundational concepts in every pipeline run.
+3. The F1 threshold in `test_eval_w0203.py` was removed: the foundational concepts
+   use prose format (no YAML ground truth), so rule-based F1 is vacuously 1.0 or
+   undefined depending on how empty sets are scored. The eval harness test now checks
+   structure and extractor-flag handling only.
+
+---
+
 ## 2026-05-25 — W-0211: GitHub Actions pipeline workflow + W-0212: LLM default strategy
 
 ### W-0211: `.github/workflows/pipeline.yml`

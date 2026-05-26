@@ -1,0 +1,4 @@
+1. It can be assigned a unique identifier within the graph (URI, blank node ID, or index).
+2. It can be addressed in graph traversal or query operations.
+3. In an RDF graph: it corresponds to a resource (URI or blank node) or a literal appearing in subject or object position.
+4. In a property graph: it may carry attributes (key-value pairs) describing its properties.

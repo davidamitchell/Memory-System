@@ -1,0 +1,1 @@
+A weight is a numeric value assigned to a node or edge in a graph that quantifies a specific property of that node or edge — such as confidence, frequency, strength, cost, or importance — within the context of a defined measurement scheme.

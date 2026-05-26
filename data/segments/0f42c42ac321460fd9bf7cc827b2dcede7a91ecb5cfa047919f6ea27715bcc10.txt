@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Ontology** | An ontology is a normative, shared, formal specification of a domain's conceptual structure; a model is any selective representation. Every ontology is a model, but not every model is an ontology. |
+| **Meta-model** | A meta-model is a model whose subject is models themselves; it defines what constitutes a valid model. |
+| **Schema** | A schema constrains the structure of data instances; a model additionally carries semantic interpretation and may enable reasoning. |
+| **Simulation** | A simulation is a dynamic model that enacts processes over time; a model in the general sense may be static or dynamic. |

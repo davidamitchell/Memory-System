@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any finite, purposively assembled, domain-relevant collection of documents constitutes a corpus for that domain.

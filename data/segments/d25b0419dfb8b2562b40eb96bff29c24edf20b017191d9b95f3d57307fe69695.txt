@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Capability** | A capability is the stable ability to perform a class of processes; a process is a specific operational sequence that realises that capability. |
+| **Workflow** | A workflow is a process in which operations are assigned to agents or roles; process is the underlying structure independent of assignment. |
+| **Function** | A function (mathematical or software) maps inputs to outputs atomically; a process has internal, inspectable sequential structure. |

@@ -1,0 +1,4 @@
+1. For every expression in the language, a defined interpretation function specifies its referent or truth value.
+2. A reasoner uses the semantics to derive entailments: if a set of statements is true, what else must be true.
+3. Inconsistency detection is possible: the semantics can identify when a set of statements has no satisfying model.
+4. Two serialisations of the same knowledge are judged semantically equivalent when they have identical entailments.

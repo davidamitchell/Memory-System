@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Abstract** — it is not itself an individual instance; it represents a type, not a token.
+2. **Intensional** — it is defined by a set of properties that characterise membership, not by enumeration of members.
+3. **Determinate** — for any candidate individual, the necessary and sufficient conditions allow a fact-of-the-matter determination of membership (even if that determination requires inference).
+4. **Domain-relative** — its definition holds within a specified domain; its meaning does not shift across that domain.

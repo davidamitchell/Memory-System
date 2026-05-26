@@ -1,0 +1,1 @@
+A capability is a defined, stable ability of an agent, system, or process to perform a specific class of operations or produce a specific class of outputs, under specified preconditions and within specified constraints.

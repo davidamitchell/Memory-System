@@ -1,0 +1,4 @@
+1. A correspondence can be stated between its elements and elements of the domain it represents.
+2. Questions about the domain can be answered by querying the model (within its defined scope).
+3. Its scope conditions can be stated: the class of questions it is designed to answer and the class it is not.
+4. Two agents using the same model for the same purpose produce consistent results.

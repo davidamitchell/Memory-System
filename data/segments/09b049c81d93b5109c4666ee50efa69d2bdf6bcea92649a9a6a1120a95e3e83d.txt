@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Formal** — expressed in a language with a defined syntax and model-theoretic semantics (not natural language prose alone).
+2. **Explicit** — all concepts, relationships, and constraints are named and defined; nothing is left implicit.
+3. **Shared** — represents an intersubjective (community-agreed) conceptualisation, not a private one.
+4. **Domain-scoped** — covers exactly one bounded region of discourse; terms have their defined meanings only within that scope.
+5. **Includes constraints** — specifies which combinations of instances and relationships are permitted (not merely what exists).

@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any formally defined, named construct in an ontology that groups individuals satisfying stated necessary and sufficient conditions constitutes a class.

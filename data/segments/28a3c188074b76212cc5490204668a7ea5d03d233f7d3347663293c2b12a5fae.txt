@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any modular, functionally bounded, independently identifiable part of a knowledge system that is composable into a larger whole constitutes a component.

@@ -1,0 +1,5 @@
+1. It can be represented as a pair (or ordered pair for directed graphs) of node identifiers: `(source_id, target_id)`.
+2. In a typed graph: it has a label or type identifier specifying the kind of association.
+3. In an RDF graph: it corresponds to the predicate of a triple, with the subject and object as its endpoint nodes.
+4. In a property graph: it may carry attributes (key-value pairs) and has a mandatory type label.
+5. It can be traversed: starting from one endpoint node, it leads to the other.

@@ -1,0 +1,4 @@
+1. A parser can accept or reject any given expression as well-formed or ill-formed.
+2. A serialiser can produce expressions that conform to the rules.
+3. Two syntactically distinct expressions may be semantically equivalent (e.g., Turtle and RDF/XML serialising the same RDF graph).
+4. A syntax validator can be run prior to, and independently of, any semantic processing.

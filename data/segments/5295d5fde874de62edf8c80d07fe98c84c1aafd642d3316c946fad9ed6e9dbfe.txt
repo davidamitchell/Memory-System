@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Superset of RDF** — all valid RDF graphs are valid RDF-star graphs; it adds to, not replaces, RDF.
+2. **Embedded triples** — a triple `(s, p, o)` may itself appear in the subject or object position of an outer triple.
+3. **Asserted and quoted forms** — an embedded triple may be *asserted* (claimed to be true) or *quoted* (referenced without asserting truth), depending on the context.
+4. **Preserves RDF semantics** — triples not involving embedded triples are interpreted identically to standard RDF.

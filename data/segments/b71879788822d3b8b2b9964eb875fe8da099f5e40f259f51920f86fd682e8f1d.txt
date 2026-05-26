@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any connection between two nodes within a graph structure constitutes an edge.

@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Propositional** — it applies to propositions (statements that have a truth value), not to questions, commands, or non-assertoric expressions.
+2. **Correspondence** — the proposition accurately represents the state of the world or domain it describes.
+3. **Model-satisfaction** — in formal semantics: a proposition is true if and only if every interpretation that satisfies the axioms of the system also satisfies the proposition.
+4. **Domain-relative** — the truth of a proposition is assessed against a specific domain and its intended models, not in the abstract.

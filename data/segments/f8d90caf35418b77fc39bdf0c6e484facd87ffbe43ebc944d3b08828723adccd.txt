@@ -1,0 +1,4 @@
+1. Source documents (e.g., natural-language text, semi-structured markdown) are processed by a defined method.
+2. The output is a set of structured assertions (e.g., RDF triples, ontology instances) that can be validated against a schema.
+3. Each extracted assertion can be traced back to evidence in the source (provenance).
+4. The extracted assertions can be queried, merged with, or compared to other knowledge bases.

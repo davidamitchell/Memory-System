@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Knowledge** | Knowledge is the content (verified facts and their relationships); wisdom is the capacity to judge its appropriate application. |
+| **Insight** | An insight is a derived true statement; wisdom is the meta-capacity to judge the relevance and application of insights and knowledge. |
+| **Intelligence** | Intelligence is the general capacity to learn and reason; wisdom specifically concerns evaluative, contextualised judgment in the application of knowledge. |

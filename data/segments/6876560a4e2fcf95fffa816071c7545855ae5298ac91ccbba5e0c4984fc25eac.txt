@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Sequential** — it consists of operations in a defined order (even if some are parallel or conditional).
+2. **Transformative** — it changes the state of its inputs, producing outputs that differ from the inputs.
+3. **Bounded** — it has a defined start state and a defined end state (termination condition).
+4. **Rule-governed** — the transitions between operations follow explicit or specifiable rules.
+5. **Reproducible** — given the same inputs and rules, it produces the same class of outputs (deterministic or stochastically equivalent).

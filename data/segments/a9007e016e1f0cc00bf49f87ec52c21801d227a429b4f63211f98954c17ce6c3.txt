@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any typed, directed assertion connecting two resources by a named predicate constitutes a relationship.

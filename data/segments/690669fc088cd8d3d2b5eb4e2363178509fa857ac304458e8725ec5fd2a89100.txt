@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any set of attributes and relationships that describe the identity, provenance, structure, or administrative properties of a resource, and that is distinct from the resource's primary content, constitutes metadata.

@@ -1,0 +1,1 @@
+A meta-model is operationally identified when:

@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Specific** — it refers to exactly one particular entity in the domain, not a type or category.
+2. **Instance** — it falls under at least one class defined in the ontology (explicitly asserted or inferred).
+3. **Identifiable** — it has a URI/IRI or a uniquely scoped blank node identifier.
+4. **Atomic** — it is not itself composed of other individuals by the class definition; it is the base-level unit of assertion.

@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Numeric** — it is a quantitative value (integer or real number) on a defined scale.
+2. **Assigned** — it is attributed to a specific node or edge, not to the graph as a whole.
+3. **Scheme-relative** — its interpretation is defined by a named measurement scheme that specifies what the number represents and on what scale.
+4. **Comparative** — it is meaningful in comparison to the weights of other nodes or edges under the same scheme.

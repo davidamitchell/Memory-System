@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Concept** | A concept has necessary and sufficient conditions; a theme has approximate, judgment-based boundaries. |
+| **Class** | A class has formal membership criteria and is closed under a reasoner; a theme is open and approximate. |
+| **Tag** | A tag is an arbitrary label assigned by an author; a theme is a shared, semantically grounded grouping whose validity is intersubjective. |
+| **Topic** | Topic is an informal synonym; theme emphasises recurrence and semantic coherence across a corpus. |

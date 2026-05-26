@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Derived from data** — it originates in recorded, discrete observations or symbols.
+2. **Contextualised** — a schema, ontology, or interpretive frame has been applied that assigns meaning to the symbols.
+3. **Uncertainty-reducing** — it makes a distinction that matters to an agent: knowing it changes what the agent would expect or do.
+4. **Interpretable** — a competent agent with the relevant schema can extract its content without additional context.

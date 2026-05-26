@@ -1,0 +1,1 @@
+RDF is a W3C standard data model for expressing statements about resources as directed, typed triples of the form `(subject, predicate, object)`, where each component is either a URI/IRI (identifying a resource), a blank node (an anonymous resource), or a literal (a data value).

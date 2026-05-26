@@ -69,8 +69,8 @@ _MOCK_RESPONSE = {
     ],
 }
 
-# Use a glossary file for consistency with W-0203 baseline testing
-_TEST_FILE = "glossary/ai-agent.md"
+# Use a foundational_concepts file for testing
+_TEST_FILE = "foundational_concepts/concept.md"
 
 
 # ---------------------------------------------------------------------------

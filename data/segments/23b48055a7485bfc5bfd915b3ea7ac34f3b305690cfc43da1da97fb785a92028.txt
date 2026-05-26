@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Ordered** — the elements have a defined linear sequence; position is meaningful.
+2. **Finite** — it has a definite number of members (including the possibility of zero, an empty list).
+3. **Position-significant** — the identity of a list is determined by both its members and their order; reordering the same members produces a distinct list.
+4. **Bounded** — it has a defined first element (head) and a defined last element (tail terminus).

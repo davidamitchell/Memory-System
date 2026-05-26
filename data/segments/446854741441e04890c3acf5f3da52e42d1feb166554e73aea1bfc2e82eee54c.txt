@@ -1,0 +1,1 @@
+A weight is operationally identified when:

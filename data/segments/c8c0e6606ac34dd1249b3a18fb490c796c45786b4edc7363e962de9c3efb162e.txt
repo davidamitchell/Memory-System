@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Relationship** | A relationship is the knowledge-representation term for a typed, asserted connection between resources; an edge is the graph-theoretic term for a structural connection between nodes. |
+| **Node** | A node is an endpoint entity; an edge is the connection between endpoint entities. |
+| **Attribute** | An attribute is a property of a node with a data value; an edge connects two nodes (both are graph entities). |

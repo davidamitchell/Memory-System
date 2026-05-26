@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Finite** — the collection has defined membership; there is a fact of the matter about whether any given document is in or out.
+2. **Purposive** — assembled with an explicit analytical or representational goal, not arbitrarily accumulated.
+3. **Document-constituted** — composed exclusively of documents (discrete recorded-knowledge units).
+4. **Domain-relevant** — all member documents pertain to the domain under study.

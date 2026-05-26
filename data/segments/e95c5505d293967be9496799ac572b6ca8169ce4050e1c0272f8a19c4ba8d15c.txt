@@ -1,0 +1,4 @@
+1. It is stored separately from (or clearly delimited within) the resource's primary content (e.g., YAML frontmatter, HTTP headers, an RDF graph about the resource).
+2. It includes at least one identifier attribute (e.g., `title`, `URI`, `slug`).
+3. It can be processed and queried without parsing the resource's primary content.
+4. It remains valid and useful even when the primary content is unavailable.

@@ -28,7 +28,7 @@ Schema
       "to_id": "madr",  "to_label":   "MADR" }
   ],
   "documents": [
-    { "file": "glossary/adr.md", "segment_count": 4, "concept_ids": ["adr"] }
+    { "file": "foundational_concepts/concept.md", "segment_count": 4, "concept_ids": ["concept"] }
   ]
 }
 
@@ -153,7 +153,6 @@ def export_ontology(g: Graph, version: str) -> dict:
     relations.sort(key=lambda r: (r["from_label"].lower(), r["predicate"], r["to_label"].lower()))
 
     # --- Documents (from PreparedSegment triples) ---
-    # Concept IDs match their glossary filename (e.g. "adr" → "glossary/adr.md").
     # Batch mode records a single shared activity for all docs, so we derive the
     # document←→concept mapping from segment sourceDocument triples instead.
     doc_segments: dict[str, int] = defaultdict(int)

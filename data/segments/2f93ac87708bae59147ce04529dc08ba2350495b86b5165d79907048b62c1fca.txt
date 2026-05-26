@@ -1,0 +1,4 @@
+**Necessary conditions:**
+1. **Bounded** — it has explicit or implicit scope boundaries that separate it from other regions of discourse.
+2. **Determinate** — within its boundaries, every term has exactly one intended interpretation.
+3. **Coherent** — the concepts and relationships within it are mutually consistent.

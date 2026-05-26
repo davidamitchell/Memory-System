@@ -10,11 +10,16 @@ Usage:
     <path> may be a single .md file or a directory (processes all .md files).
 
 Examples:
-    python pipeline/run_pipeline.py glossary/vector-embedding.md
-    python pipeline/run_pipeline.py glossary/
-    python pipeline/run_pipeline.py glossary/ --strategy rule-based
+    python pipeline/run_pipeline.py foundational_concepts/concept.md
+    python pipeline/run_pipeline.py foundational_concepts/ --strategy llm
     python pipeline/run_pipeline.py raw_document_corpus/ --strategy llm
     python pipeline/run_pipeline.py raw_document_corpus/ --strategy llm --skip-errors
+
+Additive behaviour:
+    Batch runs load the latest existing ontology as their starting graph, so
+    each run *adds* to the accumulated knowledge rather than replacing it.
+    Running multiple source directories in sequence therefore composes
+    correctly — the second run builds on the first's output automatically.
 """
 from __future__ import annotations
 
@@ -101,6 +106,28 @@ def run_pipeline(source_path: str, strategy: str = "llm") -> dict:
     return state
 
 
+def _load_latest_graph(repo_root: Path):
+    """Load the latest versioned Turtle ontology, or return None if none exists.
+
+    Used to prime the batch pipeline with the existing accumulated knowledge so
+    that each new run *adds* to the graph rather than replacing it.
+    """
+    from rdflib import Graph  # noqa: PLC0415
+
+    ontology_dir = repo_root / "data" / "ontology"
+    ttl_files = sorted(ontology_dir.glob("v*.ttl")) if ontology_dir.exists() else []
+    if not ttl_files:
+        return None
+    g = Graph()
+    g.parse(str(ttl_files[-1]), format="turtle")
+    logging.info(
+        "  additive mode: loaded %d existing triples from %s",
+        len(g),
+        ttl_files[-1].name,
+    )
+    return g
+
+
 def run_pipeline_batch(
     source_paths: list[str],
     strategy: str = "llm",
@@ -127,6 +154,12 @@ def run_pipeline_batch(
         ``"extraction_errors"`` key listing per-file failures.
     """
     batch_state: dict = {}  # carries accumulated graph across files
+
+    # Prime with the existing ontology so this run *adds* to accumulated knowledge
+    existing_graph = _load_latest_graph(REPO_ROOT)
+    if existing_graph is not None:
+        batch_state["graph"] = existing_graph
+
     extraction_errors: list[dict] = []
     total = len(source_paths)
 
@@ -179,7 +212,7 @@ def main() -> None:
         choices=["llm", "rule-based"],
         help=(
             "Extraction strategy: 'llm' (default, for prose) or 'rule-based' "
-            "(for structured front-matter corpora such as glossary/)."
+            "(for structured front-matter corpora)."
         ),
     )
     parser.add_argument(

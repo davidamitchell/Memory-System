@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Document** | A document is a specific type of resource — one that is a recorded-content artifact; not all resources are documents. |
+| **Individual** | An individual is a resource that is an instance of a class in an ontology; a resource may or may not be classified as an individual. |
+| **Node** | A node is a graph-theoretic term for a vertex; in RDF, a resource in subject or object position corresponds to a node in the RDF graph. |
+| **Literal** | A literal is a data value (string, number, date); it can appear in object position but is not a resource (it has no URI). |

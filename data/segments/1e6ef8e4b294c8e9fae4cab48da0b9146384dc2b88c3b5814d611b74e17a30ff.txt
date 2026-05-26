@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **RDF\*** (RDF-star) | RDF\* extends RDF to allow triples themselves to be subjects or objects of other triples; standard RDF does not permit this. |
+| **OWL** | OWL (Web Ontology Language) is built on top of RDF and adds formal ontological constructs (class axioms, property restrictions); RDF is the underlying data model. |
+| **JSON / XML** | JSON and XML are serialisation formats; RDF is a semantic data model (multiple serialisations are possible for the same RDF graph). |
+| **Graph** | A graph is a mathematical structure of nodes and edges; RDF is a specific, URI-grounded, triple-based instantiation of a directed labelled graph. |

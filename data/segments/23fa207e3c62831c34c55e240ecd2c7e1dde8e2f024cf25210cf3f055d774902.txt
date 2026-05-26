@@ -1,0 +1,1 @@
+An individual is a specific, named or identified instance of one or more classes within an ontology; the atomic unit of the extensional domain that the ontology describes.

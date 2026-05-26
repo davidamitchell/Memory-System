@@ -1,0 +1,1 @@
+An attribute is a typed property of a resource or class that takes a data value (literal) as its range, asserting a named characteristic of a resource expressed as a primitive value rather than a link to another resource.

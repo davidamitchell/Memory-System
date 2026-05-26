@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any collection of recorded, discrete symbols or measurements that lacks sufficient contextual assignment to be interpreted as information constitutes data.

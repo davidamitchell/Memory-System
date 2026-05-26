@@ -1,0 +1,5 @@
+1. Its nodes can be enumerated and individually addressed.
+2. Its edges can be enumerated, and for each edge, its two endpoint nodes are defined.
+3. Graph algorithms (traversal, shortest path, clustering) can be applied to it.
+4. In a directed graph: each edge has a defined source and target (not interchangeable).
+5. In a labelled graph: each edge has a type label; in a property graph, nodes and edges also carry key-value attributes.

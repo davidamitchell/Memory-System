@@ -1,0 +1,4 @@
+1. Each element can be addressed by a non-negative integer index.
+2. The elements can be iterated in a stable, reproducible order.
+3. Inserting, appending, or reordering elements produces a distinct list.
+4. In RDF: it is encoded using `rdf:List` with `rdf:first` and `rdf:rest` properties, terminating at `rdf:nil`.

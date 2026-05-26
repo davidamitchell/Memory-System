@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any discrete, identifiable vertex within a graph structure constitutes a node.

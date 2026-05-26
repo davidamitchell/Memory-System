@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Term** | A term is the linguistic label assigned to a concept; multiple terms may denote the same concept (synonyms). |
+| **Class** | A class is the formal, extensional implementation of a concept in an ontology language (e.g., OWL class); a concept is the intensional meaning that the class encodes. |
+| **Theme** | A theme groups related concepts by semantic proximity without formal membership conditions; a concept has determinate membership criteria. |
+| **Individual** | An individual is an instance that falls under a concept; the concept is the type, the individual is the token. |

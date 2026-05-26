@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Meaning-assigning** — it specifies what expressions in a language refer to or denote.
+2. **Model-theoretic** — it defines interpretation via a model (a mathematical structure) that assigns referents to symbols and truth values to sentences.
+3. **Language-relative** — it is defined for a specific formal or formal-ish language; the semantics of one language does not transfer to another.
+4. **Truth-conditional** — for every well-formed sentence of the language, the semantics determines the conditions under which the sentence is true in a model.

@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Relationship** | A relationship connects a resource to another resource; an attribute connects a resource to a data value. |
+| **Metadata** | Metadata is the set of attributes (and relationships) that describe a resource's identity and provenance; an attribute is the primitive unit from which metadata is composed. |
+| **Property** | Property is the general term in RDF for both relationships (object properties) and attributes (datatype properties); attribute specifically denotes the datatype-valued kind. |

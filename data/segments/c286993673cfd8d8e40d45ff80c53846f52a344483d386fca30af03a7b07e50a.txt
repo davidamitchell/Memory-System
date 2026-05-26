@@ -1,0 +1,1 @@
+A corpus is a finite, purposively assembled collection of documents that serves as the primary source material for knowledge extraction, analysis, or ontology construction within a defined domain.

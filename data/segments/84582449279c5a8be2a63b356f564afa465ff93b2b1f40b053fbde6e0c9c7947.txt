@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Recorded** — it has been captured and persists independently of the act of observation.
+2. **Discrete** — it consists of separable units (symbols, measurements, values).
+3. **Uninterpreted** — it lacks assigned meaning, context, or schema at the point of definition; it is the raw material prior to contextualisation.
+4. **Finite and bounded** — a given data collection has defined membership at a point in time.

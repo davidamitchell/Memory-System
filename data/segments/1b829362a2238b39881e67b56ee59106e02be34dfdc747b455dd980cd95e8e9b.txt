@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Word** | A word is a unit of natural language with potentially multiple meanings; a term is a word or phrase given a single, domain-fixed meaning. |
+| **Concept** | A concept is the abstract unit of meaning; a term is the linguistic label assigned to that concept. One concept may have multiple terms (synonyms) but each term denotes exactly one concept within the domain. |
+| **Label** | A label is any identifier or name; a term additionally carries a formally defined denotation. |
