@@ -1,1710 +1,1641 @@
 {
   "meta": {
-    "version": "v0073",
-    "generated": "2026-05-25T20:16:51Z",
+    "version": "v0096",
+    "generated": "2026-05-26T18:59:24Z",
     "counts": {
-      "concepts": 26,
-      "relations": 83,
-      "documents": 26
+      "concepts": 85,
+      "relations": 0,
+      "documents": 85
     },
     "domain_distribution": [
       {
-        "domain": "VocabularyDomain",
-        "count": 26
+        "domain": "ResearchDocumentDomain",
+        "count": 50
+      },
+      {
+        "domain": "FoundationalConceptDomain",
+        "count": 35
       }
     ],
-    "predicate_distribution": [
-      {
-        "predicate": "relatedTerm",
-        "count": 30
-      },
-      {
-        "predicate": "uses",
-        "count": 30
-      },
-      {
-        "predicate": "partOf",
-        "count": 16
-      },
-      {
-        "predicate": "implements",
-        "count": 3
-      },
-      {
-        "predicate": "instanceOf",
-        "count": 3
-      },
-      {
-        "predicate": "contrasts",
-        "count": 1
-      }
-    ]
+    "predicate_distribution": []
   },
   "concepts": [
     {
-      "id": "agent-first",
-      "label": "Agent-first",
-      "comment": "A design philosophy that treats AI agents as primary users of a system, building in autonomous read/write access, versioned context, and self-correction from the start rather than adding them as afterthoughts.",
-      "aliases": [
-        "agent first",
-        "agent native",
-        "agent-native"
-      ],
-      "tags": [
-        "agent-first",
-        "agent-native",
-        "ai",
-        "architecture",
-        "design"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "ai-agent",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "local-first",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "mcp",
-          "rel": "uses"
-        },
-        {
-          "id": "open-brain",
-          "rel": "relatedTerm"
-        }
-      ],
-      "docs": [
-        "glossary/agent-first.md"
-      ]
-    },
-    {
-      "id": "ai-agent",
-      "label": "AI Agent",
-      "comment": "An AI system that can autonomously take sequences of actions — including calling external tools — to complete a goal specified in natural language.",
-      "aliases": [
-        "AI assistant",
-        "Copilot agent",
-        "agent",
-        "coding agent"
-      ],
-      "tags": [
-        "agent",
-        "ai",
-        "autonomous",
-        "claude",
-        "copilot",
-        "cursor"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "agent-first",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "mcp",
-          "rel": "uses"
-        },
-        {
-          "id": "mcp-tool",
-          "rel": "uses"
-        },
-        {
-          "id": "skill",
-          "rel": "uses"
-        }
-      ],
-      "docs": [
-        "glossary/ai-agent.md"
-      ]
-    },
-    {
-      "id": "adr",
-      "label": "Architecture Decision Record",
-      "comment": "A short, structured document that records a significant architectural or design decision, its context, the options considered, and the consequences of the chosen option.",
-      "aliases": [
-        "ADR",
-        "decision record"
-      ],
-      "tags": [
-        "adr",
-        "architecture",
-        "decision",
-        "documentation",
-        "governance"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "madr",
-          "rel": "uses"
-        },
-        {
-          "id": "open-brain",
-          "rel": "relatedTerm"
-        }
-      ],
-      "docs": [
-        "glossary/adr.md"
-      ]
-    },
-    {
-      "id": "capture",
-      "label": "Capture",
-      "comment": "The act of storing a new piece of knowledge as a memory file — the write side of the memory system, in contrast to retrieval.",
-      "aliases": [
-        "add memory",
-        "memory capture",
-        "write"
-      ],
-      "tags": [
-        "capture",
-        "friction",
-        "input",
-        "memory",
-        "write"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "inbox",
-          "rel": "uses"
-        },
-        {
-          "id": "mcp-tool",
-          "rel": "uses"
-        },
-        {
-          "id": "memory-file",
-          "rel": "uses"
-        },
-        {
-          "id": "retrieval",
-          "rel": "contrasts"
-        }
-      ],
-      "docs": [
-        "glossary/capture.md"
-      ]
-    },
-    {
-      "id": "embedding-model",
-      "label": "Embedding Model",
-      "comment": "A machine-learning model that converts text into a fixed-length vector of numbers representing its semantic content.",
-      "aliases": [
-        "sentence encoder",
-        "text encoder"
-      ],
-      "tags": [
-        "embedding",
-        "model",
-        "nlp",
-        "superseded"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "lancedb",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "semantic-search",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "vector-embedding",
-          "rel": "uses"
-        }
-      ],
-      "docs": [
-        "glossary/embedding-model.md"
-      ]
-    },
-    {
-      "id": "inbox",
-      "label": "Inbox",
-      "comment": "A designated `/inbox` folder where memory files can be dropped without a folder decision, title, or full front matter, for later classification by an agent.",
-      "aliases": [
-        "capture inbox",
-        "inbox folder"
-      ],
-      "tags": [
-        "capture",
-        "folder",
-        "inbox",
-        "triage"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "capture",
-          "rel": "partOf"
-        },
-        {
-          "id": "memory-file",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "open-brain",
-          "rel": "partOf"
-        },
-        {
-          "id": "triage",
-          "rel": "relatedTerm"
-        }
-      ],
-      "docs": [
-        "glossary/inbox.md"
-      ]
-    },
-    {
-      "id": "knowledge-graph",
-      "label": "Knowledge Graph",
-      "comment": "A structured network in which entities (concepts, assertions, sources) are connected by typed relationships, enabling reasoning, traversal, and structured query.",
-      "aliases": [
-        "knowledge base graph",
-        "ontology graph"
-      ],
-      "tags": [
-        "graph",
-        "knowledge-graph",
-        "links",
-        "ontology",
-        "structure"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "open-brain",
-          "rel": "partOf"
-        },
-        {
-          "id": "tag",
-          "rel": "uses"
-        }
-      ],
-      "docs": [
-        "glossary/knowledge-graph.md"
-      ]
-    },
-    {
-      "id": "lancedb",
-      "label": "LanceDB",
-      "comment": "An embedded, serverless vector database that stores and searches high-dimensional numerical vectors, requiring no separate database process.",
+      "id": "2026-05-16-agent-operational-cost-vs-gap-closure-cost",
+      "label": "Agent Operational Cost vs Gap Closure Cost",
+      "comment": "In scope:",
       "aliases": [],
-      "tags": [
-        "embedded",
-        "lancedb",
-        "search",
-        "superseded",
-        "vector-database"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "embedding-model",
-          "rel": "uses"
-        },
-        {
-          "id": "semantic-search",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "vector-database",
-          "rel": "instanceOf"
-        },
-        {
-          "id": "vector-embedding",
-          "rel": "uses"
-        }
-      ],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/lancedb.md"
+        "raw_document_corpus/2026-05-16-agent-operational-cost-vs-gap-closure-cost.md"
       ]
     },
     {
-      "id": "local-first",
-      "label": "Local-first",
-      "comment": "A software design philosophy in which the user's local device is the primary source of truth, with cloud storage used for backup and sync rather than as the authoritative store.",
-      "aliases": [
-        "local first",
-        "offline-first"
-      ],
-      "tags": [
-        "architecture",
-        "design",
-        "local-first",
-        "offline",
-        "privacy"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "agent-first",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "lancedb",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "open-brain",
-          "rel": "relatedTerm"
-        }
-      ],
+      "id": "2026-04-02-ai-company-hiring-strategies",
+      "label": "AI company hiring strategies: what job ads and recent hires reveal about strategic direction",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/local-first.md"
+        "raw_document_corpus/2026-04-02-ai-company-hiring-strategies.md"
       ]
     },
     {
-      "id": "madr",
-      "label": "MADR",
-      "comment": "A lightweight Markdown template for writing Architecture Decision Records that enforces the minimum structure needed to capture context, decision, and consequences.",
-      "aliases": [
-        "Markdown Any Decision Records",
-        "Markdown Architectural Decision Records"
-      ],
-      "tags": [
-        "adr",
-        "decision",
-        "format",
-        "madr",
-        "markdown"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "adr",
-          "rel": "instanceOf"
-        }
-      ],
+      "id": "2026-02-28-ai-strategy-business-efficiency-examples",
+      "label": "AI Strategy Examples: Business Efficiency Focus",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/madr.md"
+        "raw_document_corpus/2026-02-28-ai-strategy-business-efficiency-examples.md"
       ]
     },
     {
-      "id": "mcp-server",
-      "label": "MCP Server",
-      "comment": "A process that implements the Model Context Protocol server side, exposing a named set of tools that AI clients can discover and call.",
-      "aliases": [
-        "mcp_server.py",
-        "open-brain server"
-      ],
-      "tags": [
-        "bridge",
-        "mcp",
-        "python",
-        "server"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "mcp",
-          "rel": "implements"
-        },
-        {
-          "id": "mcp-tool",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "stdio-transport",
-          "rel": "uses"
-        }
-      ],
+      "id": "2026-02-28-ai-strategy-risk-reduction-focus",
+      "label": "AI Strategy Examples: Risk Reduction Focus",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/mcp-server.md"
+        "raw_document_corpus/2026-02-28-ai-strategy-risk-reduction-focus.md"
       ]
     },
     {
-      "id": "mcp-tool",
-      "label": "MCP Tool",
-      "comment": "A named, typed capability declared by an MCP server that an AI agent can discover and invoke autonomously.",
-      "aliases": [
-        "MCP capability",
-        "tool call"
-      ],
-      "tags": [
-        "api",
-        "capability",
-        "mcp",
-        "tool"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "ai-agent",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "mcp",
-          "rel": "partOf"
-        },
-        {
-          "id": "mcp-server",
-          "rel": "partOf"
-        }
-      ],
+      "id": "2026-02-28-ai-strategy-swe-focus",
+      "label": "AI Strategy Examples: Software Engineering Focus",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/mcp-tool.md"
+        "raw_document_corpus/2026-02-28-ai-strategy-swe-focus.md"
       ]
     },
     {
-      "id": "memory-file",
-      "label": "Memory File",
-      "comment": "A single Markdown file stored in this repository that represents one unit of source knowledge, from which the ontology store derives structured assertions.",
-      "aliases": [
-        "brain file",
-        "memory",
-        "note",
-        "source document"
-      ],
-      "tags": [
-        "file",
-        "markdown",
-        "memory",
-        "note"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "open-brain",
-          "rel": "partOf"
-        },
-        {
-          "id": "superseded-by",
-          "rel": "uses"
-        },
-        {
-          "id": "tag",
-          "rel": "uses"
-        },
-        {
-          "id": "yaml-front-matter",
-          "rel": "uses"
-        }
-      ],
+      "id": "2026-02-28-ai-strategy",
+      "label": "AI Strategy: global and NZ examples, policy frameworks, regulations, and use-case typologies",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/memory-file.md"
+        "raw_document_corpus/2026-02-28-ai-strategy.md"
       ]
     },
     {
-      "id": "mini-retro",
-      "label": "Mini-Retro",
-      "comment": "A mandatory four-question retrospective appended to `PROGRESS.md` at the end of every agent session, designed to surface process improvements and convert friction into system changes.",
-      "aliases": [
-        "mini retrospective",
-        "retro",
-        "session retrospective"
-      ],
-      "tags": [
-        "improvement",
-        "mini-retro",
-        "process",
-        "retrospective"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "adr",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "open-brain",
-          "rel": "partOf"
-        }
-      ],
+      "id": "2026-03-18-human-brain-prediction-machines",
+      "label": "Are Human Brains Just Prediction Machines? Comparing Predictive Processing and Large Language Model Next-Token Generation",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/mini-retro.md"
+        "raw_document_corpus/2026-03-18-human-brain-prediction-machines.md"
       ]
     },
     {
-      "id": "mcp",
-      "label": "Model Context Protocol",
-      "comment": "An open standard that lets AI assistants call external tools and data sources through a structured interface, replacing one-off integrations with a single universal protocol.",
-      "aliases": [
-        "MCP"
-      ],
-      "tags": [
-        "ai",
-        "integration",
-        "mcp",
-        "protocol"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "ai-agent",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "mcp-server",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "mcp-tool",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "stdio-transport",
-          "rel": "relatedTerm"
-        }
-      ],
+      "id": "2026-05-18-agentic-explainability-vs-traditional",
+      "label": "Are Multi-Step Large Language Model-Based Systems Inherently Less Explainable Than Equivalently Scoped Deterministic Software Systems?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/mcp.md"
+        "raw_document_corpus/2026-05-18-agentic-explainability-vs-traditional.md"
       ]
     },
     {
-      "id": "open-brain",
-      "label": "Open-Brain",
-      "comment": "The personal AI knowledge store implemented in this repository: a local-first, agent-native knowledge base backed by Markdown files and an ontology-based knowledge graph, exposed to AI tools via the Model Context Protocol.",
-      "aliases": [
-        "GitHub Open-Brain",
-        "Memory-System",
-        "open brain"
-      ],
-      "tags": [
-        "github",
-        "memory-system",
-        "open-brain",
-        "project"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "agent-first",
-          "rel": "implements"
-        },
-        {
-          "id": "knowledge-graph",
-          "rel": "uses"
-        },
-        {
-          "id": "local-first",
-          "rel": "implements"
-        },
-        {
-          "id": "mcp-server",
-          "rel": "uses"
-        }
-      ],
+      "id": "2026-04-30-ai-code-entropy-quality-metrics",
+      "label": "Artificial Intelligence code entropy and complexity: does repeated AI code generation without architectural guardrails increase software entropy over time?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/open-brain.md"
+        "raw_document_corpus/2026-04-30-ai-code-entropy-quality-metrics.md"
       ]
     },
     {
-      "id": "retrieval",
-      "label": "Retrieval",
-      "comment": "The process of finding and returning relevant knowledge in response to a query, using ontology traversal, graph pattern matching, or structured query across the knowledge store.",
-      "aliases": [
-        "knowledge retrieval",
-        "recall",
-        "search"
-      ],
-      "tags": [
-        "knowledge",
-        "recall",
-        "retrieval",
-        "search"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "knowledge-graph",
-          "rel": "uses"
-        },
-        {
-          "id": "mcp-tool",
-          "rel": "uses"
-        },
-        {
-          "id": "open-brain",
-          "rel": "partOf"
-        }
-      ],
+      "id": "2026-05-01-ai-coding-harness-quality-benchmarks",
+      "label": "Artificial Intelligence coding harness quality benchmarks: what measures are used to evaluate Artificial Intelligence coding tools and who scores highest?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/retrieval.md"
+        "raw_document_corpus/2026-05-01-ai-coding-harness-quality-benchmarks.md"
       ]
     },
     {
-      "id": "semantic-search",
-      "label": "Semantic Search",
-      "comment": "A search technique that finds documents by conceptual meaning rather than exact keyword matching, using vector similarity as the relevance signal.",
-      "aliases": [
-        "similarity search",
-        "vector search"
-      ],
-      "tags": [
-        "nlp",
-        "retrieval",
-        "search",
-        "similarity",
-        "superseded"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "lancedb",
-          "rel": "uses"
-        },
-        {
-          "id": "retrieval",
-          "rel": "instanceOf"
-        },
-        {
-          "id": "vector-database",
-          "rel": "uses"
-        },
-        {
-          "id": "vector-embedding",
-          "rel": "uses"
-        }
-      ],
+      "id": "2026-05-20-hitl-capacity-thresholds-in-banking-compliance",
+      "label": "At what threshold does Human-in-the-Loop (HITL) oversight in bank compliance operations stop being a meaningful challenge function and become routine acceptance of automated outputs?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/semantic-search.md"
+        "raw_document_corpus/2026-05-20-hitl-capacity-thresholds-in-banking-compliance.md"
       ]
     },
     {
-      "id": "skill",
-      "label": "Skill",
-      "comment": "A reusable, self-contained Markdown file in `.github/skills/` that provides an AI agent with specialised instructions for a well-defined task type.",
-      "aliases": [
-        "agent skill",
-        "skill module"
-      ],
-      "tags": [
-        "agent",
-        "instruction",
-        "module",
-        "reusable",
-        "skill"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "adr",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "ai-agent",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "open-brain",
-          "rel": "partOf"
-        }
-      ],
+      "id": "attribute",
+      "label": "Attribute",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
       "docs": [
-        "glossary/skill.md"
+        "foundational_concepts/attribute.md"
       ]
     },
     {
-      "id": "stdio-transport",
-      "label": "stdio Transport",
-      "comment": "The MCP transport mechanism that uses a process's standard input and standard output streams to exchange JSON-RPC messages between an MCP client and server.",
-      "aliases": [
-        "standard input/output transport",
-        "stdio"
-      ],
-      "tags": [
-        "ipc",
-        "mcp",
-        "protocol",
-        "stdio",
-        "transport"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "mcp",
-          "rel": "partOf"
-        },
-        {
-          "id": "mcp-server",
-          "rel": "uses"
-        }
-      ],
+      "id": "2026-04-01-backpressure-theory-of-constraints",
+      "label": "Backpressure Infrastructure and the Theory of Constraints",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/stdio-transport.md"
+        "raw_document_corpus/2026-04-01-backpressure-theory-of-constraints.md"
       ]
     },
     {
-      "id": "superseded-by",
-      "label": "Superseded-by",
-      "comment": "The memory lifecycle state (and corresponding front matter field) that marks a file as out of date and points to the newer file that replaced it, preserving history while directing readers to current information.",
-      "aliases": [
-        "superseded",
-        "superseded_by",
-        "supersedes"
-      ],
-      "tags": [
-        "lifecycle",
-        "memory",
-        "superseded-by",
-        "versioning"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "knowledge-graph",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "memory-file",
-          "rel": "partOf"
-        },
-        {
-          "id": "yaml-front-matter",
-          "rel": "partOf"
-        }
-      ],
+      "id": "capability",
+      "label": "Capability",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
       "docs": [
-        "glossary/superseded-by.md"
+        "foundational_concepts/capability.md"
       ]
     },
     {
-      "id": "tag",
-      "label": "Tag",
-      "comment": "A short keyword stored in a memory file's YAML front matter that categorises the file and makes it retrievable by topic even when semantic search returns noisy results.",
-      "aliases": [
-        "category tag",
-        "label"
-      ],
-      "tags": [
-        "categorisation",
-        "metadata",
-        "retrieval",
-        "tag"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "memory-file",
-          "rel": "partOf"
-        },
-        {
-          "id": "semantic-search",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "yaml-front-matter",
-          "rel": "partOf"
-        }
-      ],
+      "id": "class",
+      "label": "Class",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
       "docs": [
-        "glossary/tag.md"
+        "foundational_concepts/class.md"
       ]
     },
     {
-      "id": "triage",
-      "label": "Triage",
-      "comment": "The process of reviewing inbox files, inferring the correct destination folder and front matter, and moving each file to its permanent location.",
-      "aliases": [
-        "classification",
-        "inbox triage",
-        "memory triage"
-      ],
-      "tags": [
-        "automation",
-        "classification",
-        "inbox",
-        "triage"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "ai-agent",
-          "rel": "uses"
-        },
-        {
-          "id": "capture",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "inbox",
-          "rel": "uses"
-        },
-        {
-          "id": "memory-file",
-          "rel": "relatedTerm"
-        }
-      ],
+      "id": "2026-03-22-code-architecture-inspection",
+      "label": "Code Architecture Inspection Across Repositories",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/triage.md"
+        "raw_document_corpus/2026-03-22-code-architecture-inspection.md"
       ]
     },
     {
-      "id": "vector-database",
-      "label": "Vector Database",
-      "comment": "A database purpose-built to store and retrieve high-dimensional numerical vectors using approximate nearest-neighbour algorithms.",
-      "aliases": [
-        "embedding store",
-        "vector store"
-      ],
-      "tags": [
-        "database",
-        "search",
-        "storage",
-        "vector"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "lancedb",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "semantic-search",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "vector-embedding",
-          "rel": "uses"
-        }
-      ],
+      "id": "2026-05-09-compliance-risks-stochastic-llm-governance-decisions",
+      "label": "Compliance Risks of Relying on Stochastic Large Language Model (LLM) Outputs for Governance, Privacy, and Regulatory Decisions",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
       "docs": [
-        "glossary/vector-database.md"
+        "raw_document_corpus/2026-05-09-compliance-risks-stochastic-llm-governance-decisions.md"
       ]
     },
     {
-      "id": "vector-embedding",
-      "label": "Vector Embedding",
-      "comment": "A fixed-length list of numbers that encodes the meaning of a piece of text so that semantically similar texts produce numerically similar vectors.",
-      "aliases": [
-        "embedding",
-        "text embedding",
-        "vector representation"
-      ],
-      "tags": [
-        "embedding",
-        "nlp",
-        "representation",
-        "vector"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "embedding-model",
-          "rel": "uses"
-        },
-        {
-          "id": "lancedb",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "semantic-search",
-          "rel": "relatedTerm"
-        },
-        {
-          "id": "vector-database",
-          "rel": "partOf"
-        }
-      ],
+      "id": "component",
+      "label": "Component",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
       "docs": [
-        "glossary/vector-embedding.md"
+        "foundational_concepts/component.md"
       ]
     },
     {
-      "id": "yaml-front-matter",
-      "label": "YAML Front Matter",
-      "comment": "A block of YAML key-value metadata at the very top of a Markdown file, delimited by `---` lines, that provides structured fields for indexing and retrieval.",
-      "aliases": [
-        "YAML header",
-        "front matter",
-        "frontmatter"
-      ],
-      "tags": [
-        "front-matter",
-        "markdown",
-        "metadata",
-        "yaml"
-      ],
-      "domain": "VocabularyDomain",
-      "related": [
-        {
-          "id": "memory-file",
-          "rel": "partOf"
-        },
-        {
-          "id": "superseded-by",
-          "rel": "uses"
-        },
-        {
-          "id": "tag",
-          "rel": "uses"
-        }
-      ],
+      "id": "concept",
+      "label": "Concept",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
       "docs": [
-        "glossary/yaml-front-matter.md"
+        "foundational_concepts/concept.md"
+      ]
+    },
+    {
+      "id": "corpus",
+      "label": "Corpus",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/corpus.md"
+      ]
+    },
+    {
+      "id": "2026-04-27-cryptographic-intent-preservation-runtime-evaluation",
+      "label": "Cryptographic preservation and runtime evaluation of original intent: a representation formalism for Getting Started phase intent that is simultaneously verifiable and semantically stable across the full operational lifecycle",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-04-27-cryptographic-intent-preservation-runtime-evaluation.md"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/data.md"
+      ]
+    },
+    {
+      "id": "2026-05-12-data-product-ontology",
+      "label": "Data product ontology: definition, adoption, and current relevance",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-12-data-product-ontology.md"
+      ]
+    },
+    {
+      "id": "2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure",
+      "label": "Deterministic circuit-breakers and real-time infrastructure constraints for hybrid reasoning stacks",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure.md"
+      ]
+    },
+    {
+      "id": "document",
+      "label": "Document",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/document.md"
+      ]
+    },
+    {
+      "id": "domain",
+      "label": "Domain",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/domain.md"
+      ]
+    },
+    {
+      "id": "edge",
+      "label": "Edge",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/edge.md"
+      ]
+    },
+    {
+      "id": "2026-03-04-sdlc-ai-prompt-patterns",
+      "label": "Emergent Patterns in Software Engineering Prompts and SDLC Guidance",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-04-sdlc-ai-prompt-patterns.md"
+      ]
+    },
+    {
+      "id": "2026-03-28-environment-setup-consistency",
+      "label": "Environment setup consistency: what each agent sees when it starts work in this repo and how to make it consistent",
+      "comment": "Scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-28-environment-setup-consistency.md"
+      ]
+    },
+    {
+      "id": "2026-03-18-explore-to-exploit-synthesis-gap",
+      "label": "Explore to exploit: the synthesis step that makes exploitation pay off",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-18-explore-to-exploit-synthesis-gap.md"
+      ]
+    },
+    {
+      "id": "fact",
+      "label": "Fact",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/fact.md"
+      ]
+    },
+    {
+      "id": "graph",
+      "label": "Graph",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/graph.md"
+      ]
+    },
+    {
+      "id": "2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways",
+      "label": "How Can Institutions Align Strategic Relevance Pathways with Human Low-Effort Behaviour?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways.md"
+      ]
+    },
+    {
+      "id": "2026-05-08-capability-debt-definition-measurement-ai-risk-amplification",
+      "label": "How can organisational capability debt be rigorously defined and measured as a leading indicator of Artificial Intelligence (AI)-related enterprise risk, and how does pre-existing capability debt amplify risks from autonomous AI systems when human rate limits are removed?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-08-capability-debt-definition-measurement-ai-risk-amplification.md"
+      ]
+    },
+    {
+      "id": "2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer",
+      "label": "How Do Asset Specificity and Information Asymmetry Block Knowledge Transfer?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer.md"
+      ]
+    },
+    {
+      "id": "2026-03-07-run-build-it-allocation-implementation-how",
+      "label": "How organisations practically implement IT RUN vs BUILD cost allocation",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-07-run-build-it-allocation-implementation-how.md"
+      ]
+    },
+    {
+      "id": "2026-04-26-ai-lowcode-risk-tier-classification-controls",
+      "label": "How should Artificial Intelligence (AI) and low-code use cases be classified into risk tiers, and how should governance controls vary across those tiers?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-04-26-ai-lowcode-risk-tier-classification-controls.md"
+      ]
+    },
+    {
+      "id": "2026-05-20-banking-ai-syntactic-confidence-trap",
+      "label": "How should banks stop fluent but weakly evidenced Artificial Intelligence (AI)-generated compliance narratives from being mistaken for verified truth?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-20-banking-ai-syntactic-confidence-trap.md"
+      ]
+    },
+    {
+      "id": "individual",
+      "label": "Individual",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/individual.md"
+      ]
+    },
+    {
+      "id": "information",
+      "label": "Information",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/information.md"
+      ]
+    },
+    {
+      "id": "insight",
+      "label": "Insight",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/insight.md"
+      ]
+    },
+    {
+      "id": "2026-03-15-saas-banking-invariants",
+      "label": "Invariants in Software as a Service (SaaS) Banking Software",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-15-saas-banking-invariants.md"
+      ]
+    },
+    {
+      "id": "2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate",
+      "label": "IT Throughput Constraint Magnitude and Debt Accumulation Rate",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate.md"
+      ]
+    },
+    {
+      "id": "2026-02-28-jevons-paradox",
+      "label": "Jevons Paradox: efficiency gains, demand rebound, and the falling cost of software production",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-02-28-jevons-paradox.md"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "label": "Knowledge",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/knowledge.md"
+      ]
+    },
+    {
+      "id": "knowledge-extraction",
+      "label": "Knowledge Extraction",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/knowledge-extraction.md"
+      ]
+    },
+    {
+      "id": "2026-05-12-knowledge-graph-lifecycle-management-agentic",
+      "label": "Knowledge Graph lifecycle management for multi-step software agents: schema versioning, entity resolution, and knowledge freshness",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-12-knowledge-graph-lifecycle-management-agentic.md"
+      ]
+    },
+    {
+      "id": "2026-03-03-knowledge-representation-agent-context",
+      "label": "Knowledge Representation for Agent Context: LSE, Knowledge Graphs, Concept Maps, and Document Compression for Large-Scale Context Management",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-03-knowledge-representation-agent-context.md"
+      ]
+    },
+    {
+      "id": "2026-03-10-language-for-llm-agent-output",
+      "label": "Language designed for LLM agents to produce: addressing generation-layer failure modes in agentic systems",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-10-language-for-llm-agent-output.md"
+      ]
+    },
+    {
+      "id": "2026-03-19-layered-org-llm-architecture",
+      "label": "Layered Organisation Large Language Model: Feasibility and Architecture of Organisation-Customised LLMs",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-19-layered-org-llm-architecture.md"
+      ]
+    },
+    {
+      "id": "list",
+      "label": "List",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/list.md"
+      ]
+    },
+    {
+      "id": "2026-02-27-local-database",
+      "label": "Local database: requirements and technology choice",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-02-27-local-database.md"
+      ]
+    },
+    {
+      "id": "meta-model",
+      "label": "Meta-model",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/meta-model.md"
+      ]
+    },
+    {
+      "id": "metadata",
+      "label": "Metadata",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/metadata.md"
+      ]
+    },
+    {
+      "id": "model",
+      "label": "Model",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/model.md"
+      ]
+    },
+    {
+      "id": "2026-03-18-formal-proof-engineering-leanstral",
+      "label": "More formal proof engineering: Leanstral and Artificial Intelligence (AI)-assisted formal verification",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-18-formal-proof-engineering-leanstral.md"
+      ]
+    },
+    {
+      "id": "node",
+      "label": "Node",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/node.md"
+      ]
+    },
+    {
+      "id": "ontology",
+      "label": "Ontology",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/ontology.md"
+      ]
+    },
+    {
+      "id": "2026-05-12-odrl-policies-knowledge-graph-agentic-access",
+      "label": "Open Digital Rights Language (ODRL) policies in Knowledge Graphs for software-agent access control and usage governance",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-12-odrl-policies-knowledge-graph-agentic-access.md"
+      ]
+    },
+    {
+      "id": "2026-03-05-h-neuron-pretraining-origins",
+      "label": "Pre-Training Origins of Hallucination-Associated Neurons — Implications for LLM Development",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-05-h-neuron-pretraining-origins.md"
+      ]
+    },
+    {
+      "id": "process",
+      "label": "Process",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/process.md"
+      ]
+    },
+    {
+      "id": "rdf",
+      "label": "RDF (Resource Description Framework)",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/rdf.md"
+      ]
+    },
+    {
+      "id": "rdf-star",
+      "label": "RDF* (RDF-star)",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/rdf-star.md"
+      ]
+    },
+    {
+      "id": "relationship",
+      "label": "Relationship",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/relationship.md"
+      ]
+    },
+    {
+      "id": "2026-03-03-research-agenda-curation-coverage",
+      "label": "Research agenda curation: prioritisation, coverage analysis, and avoiding research drift",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-03-research-agenda-curation-coverage.md"
+      ]
+    },
+    {
+      "id": "2026-03-10-research-loop-evaluation-rubric",
+      "label": "Research loop evaluation rubric: LLM-as-judge specification for this repository's research loop agent",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-10-research-loop-evaluation-rubric.md"
+      ]
+    },
+    {
+      "id": "2026-05-18-rq5-2-flexibility-vs-predictability-auditability",
+      "label": "Research Question 5.2: Flexibility vs. Predictability, How the Agentic Tradeoff Affects Auditability and Formal Verification in Production Pipelines",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-18-rq5-2-flexibility-vs-predictability-auditability.md"
+      ]
+    },
+    {
+      "id": "resource",
+      "label": "Resource",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/resource.md"
+      ]
+    },
+    {
+      "id": "2026-05-18-rq1-1-popper-falsifiability",
+      "label": "RQ 1.1: Formalising Popper's Falsifiability as a Criterion Between Mechanism and Interpolation",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-18-rq1-1-popper-falsifiability.md"
+      ]
+    },
+    {
+      "id": "2026-05-18-rq3-1-llm-statistical-vs-causal",
+      "label": "RQ 3.1: Large Language Models as Statistical Optimisers, Token Distribution vs. Invariant Causal Models of Reality",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-18-rq3-1-llm-statistical-vs-causal.md"
+      ]
+    },
+    {
+      "id": "2026-05-10-m365-copilot-sensitive-data-security-governance-risks",
+      "label": "Security, Compliance, and Governance Risks of Using Generative AI (GenAI) Tools Such as Microsoft 365 (M365) Copilot on Sensitive, Confidential, or Classified Data in Regulated Environments",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-10-m365-copilot-sensitive-data-security-governance-risks.md"
+      ]
+    },
+    {
+      "id": "semantics",
+      "label": "Semantics",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/semantics.md"
+      ]
+    },
+    {
+      "id": "2026-03-08-servicenow-process-mapping",
+      "label": "ServiceNow Process Mapping: Maintainable Process Documentation in SNOW",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-08-servicenow-process-mapping.md"
+      ]
+    },
+    {
+      "id": "syntax",
+      "label": "Syntax",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/syntax.md"
+      ]
+    },
+    {
+      "id": "term",
+      "label": "Term",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/term.md"
+      ]
+    },
+    {
+      "id": "2026-03-23-software-factory",
+      "label": "The Software Factory: Organisational Transformation When the Cost of Quality Software Approaches Zero",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-03-23-software-factory.md"
+      ]
+    },
+    {
+      "id": "theme",
+      "label": "Theme",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/theme.md"
+      ]
+    },
+    {
+      "id": "true",
+      "label": "True",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/true.md"
+      ]
+    },
+    {
+      "id": "2026-04-28-uelgf-tooling-reference-architecture",
+      "label": "Universal Entity Lifecycle Governance Framework (UELGF) extension: tooling specification and reference architecture for policy-as-code, observability, and Identity and Access Management (IAM) implementation",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-04-28-uelgf-tooling-reference-architecture.md"
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/weight.md"
+      ]
+    },
+    {
+      "id": "2026-04-26-lecun-llm-critique-primary-sources",
+      "label": "What is Yann LeCun's complete argument against Large Language Models as a path to autonomous machine intelligence, and what is the precise technical basis for each claim?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-04-26-lecun-llm-critique-primary-sources.md"
+      ]
+    },
+    {
+      "id": "2026-04-26-ai-lowcode-governance-maturity-model",
+      "label": "What maturity model best describes the evolution of governance capabilities for Artificial Intelligence (AI) and low-code in enterprises?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-04-26-ai-lowcode-governance-maturity-model.md"
+      ]
+    },
+    {
+      "id": "2026-04-26-ai-lowcode-observability-telemetry-governance",
+      "label": "What observability and telemetry model is required to govern Artificial Intelligence (AI) and low-code systems at scale?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-04-26-ai-lowcode-observability-telemetry-governance.md"
+      ]
+    },
+    {
+      "id": "2026-05-06-aibom-effectiveness-risk-mitigation-limits",
+      "label": "What security and governance risks can a declared and runtime-observed inventory of models, prompts, retrieval sources, tools, memory, and delegation artifacts realistically mitigate for tool-using, stateful Artificial Intelligence (AI) workloads, and where does it create false assurance?",
+      "comment": "In scope:",
+      "aliases": [],
+      "tags": [],
+      "domain": "ResearchDocumentDomain",
+      "related": [],
+      "docs": [
+        "raw_document_corpus/2026-05-06-aibom-effectiveness-risk-mitigation-limits.md"
+      ]
+    },
+    {
+      "id": "wisdom",
+      "label": "Wisdom",
+      "comment": "Necessary conditions:",
+      "aliases": [],
+      "tags": [],
+      "domain": "FoundationalConceptDomain",
+      "related": [],
+      "docs": [
+        "foundational_concepts/wisdom.md"
       ]
     }
   ],
-  "relations": [
-    {
-      "from_id": "agent-first",
-      "from_label": "Agent-first",
-      "predicate": "relatedTerm",
-      "to_id": "ai-agent",
-      "to_label": "AI Agent"
-    },
-    {
-      "from_id": "agent-first",
-      "from_label": "Agent-first",
-      "predicate": "relatedTerm",
-      "to_id": "local-first",
-      "to_label": "Local-first"
-    },
-    {
-      "from_id": "agent-first",
-      "from_label": "Agent-first",
-      "predicate": "relatedTerm",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "agent-first",
-      "from_label": "Agent-first",
-      "predicate": "uses",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "ai-agent",
-      "from_label": "AI Agent",
-      "predicate": "relatedTerm",
-      "to_id": "agent-first",
-      "to_label": "Agent-first"
-    },
-    {
-      "from_id": "ai-agent",
-      "from_label": "AI Agent",
-      "predicate": "uses",
-      "to_id": "mcp-tool",
-      "to_label": "MCP Tool"
-    },
-    {
-      "from_id": "ai-agent",
-      "from_label": "AI Agent",
-      "predicate": "uses",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "ai-agent",
-      "from_label": "AI Agent",
-      "predicate": "uses",
-      "to_id": "skill",
-      "to_label": "Skill"
-    },
-    {
-      "from_id": "adr",
-      "from_label": "Architecture Decision Record",
-      "predicate": "relatedTerm",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "adr",
-      "from_label": "Architecture Decision Record",
-      "predicate": "uses",
-      "to_id": "madr",
-      "to_label": "MADR"
-    },
-    {
-      "from_id": "capture",
-      "from_label": "Capture",
-      "predicate": "contrasts",
-      "to_id": "retrieval",
-      "to_label": "Retrieval"
-    },
-    {
-      "from_id": "capture",
-      "from_label": "Capture",
-      "predicate": "uses",
-      "to_id": "inbox",
-      "to_label": "Inbox"
-    },
-    {
-      "from_id": "capture",
-      "from_label": "Capture",
-      "predicate": "uses",
-      "to_id": "mcp-tool",
-      "to_label": "MCP Tool"
-    },
-    {
-      "from_id": "capture",
-      "from_label": "Capture",
-      "predicate": "uses",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "embedding-model",
-      "from_label": "Embedding Model",
-      "predicate": "relatedTerm",
-      "to_id": "lancedb",
-      "to_label": "LanceDB"
-    },
-    {
-      "from_id": "embedding-model",
-      "from_label": "Embedding Model",
-      "predicate": "relatedTerm",
-      "to_id": "semantic-search",
-      "to_label": "Semantic Search"
-    },
-    {
-      "from_id": "embedding-model",
-      "from_label": "Embedding Model",
-      "predicate": "uses",
-      "to_id": "vector-embedding",
-      "to_label": "Vector Embedding"
-    },
-    {
-      "from_id": "inbox",
-      "from_label": "Inbox",
-      "predicate": "partOf",
-      "to_id": "capture",
-      "to_label": "Capture"
-    },
-    {
-      "from_id": "inbox",
-      "from_label": "Inbox",
-      "predicate": "partOf",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "inbox",
-      "from_label": "Inbox",
-      "predicate": "relatedTerm",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "inbox",
-      "from_label": "Inbox",
-      "predicate": "relatedTerm",
-      "to_id": "triage",
-      "to_label": "Triage"
-    },
-    {
-      "from_id": "knowledge-graph",
-      "from_label": "Knowledge Graph",
-      "predicate": "partOf",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "knowledge-graph",
-      "from_label": "Knowledge Graph",
-      "predicate": "uses",
-      "to_id": "tag",
-      "to_label": "Tag"
-    },
-    {
-      "from_id": "lancedb",
-      "from_label": "LanceDB",
-      "predicate": "instanceOf",
-      "to_id": "vector-database",
-      "to_label": "Vector Database"
-    },
-    {
-      "from_id": "lancedb",
-      "from_label": "LanceDB",
-      "predicate": "relatedTerm",
-      "to_id": "semantic-search",
-      "to_label": "Semantic Search"
-    },
-    {
-      "from_id": "lancedb",
-      "from_label": "LanceDB",
-      "predicate": "uses",
-      "to_id": "embedding-model",
-      "to_label": "Embedding Model"
-    },
-    {
-      "from_id": "lancedb",
-      "from_label": "LanceDB",
-      "predicate": "uses",
-      "to_id": "vector-embedding",
-      "to_label": "Vector Embedding"
-    },
-    {
-      "from_id": "local-first",
-      "from_label": "Local-first",
-      "predicate": "relatedTerm",
-      "to_id": "agent-first",
-      "to_label": "Agent-first"
-    },
-    {
-      "from_id": "local-first",
-      "from_label": "Local-first",
-      "predicate": "relatedTerm",
-      "to_id": "lancedb",
-      "to_label": "LanceDB"
-    },
-    {
-      "from_id": "local-first",
-      "from_label": "Local-first",
-      "predicate": "relatedTerm",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "madr",
-      "from_label": "MADR",
-      "predicate": "instanceOf",
-      "to_id": "adr",
-      "to_label": "Architecture Decision Record"
-    },
-    {
-      "from_id": "mcp-server",
-      "from_label": "MCP Server",
-      "predicate": "implements",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "mcp-server",
-      "from_label": "MCP Server",
-      "predicate": "relatedTerm",
-      "to_id": "mcp-tool",
-      "to_label": "MCP Tool"
-    },
-    {
-      "from_id": "mcp-server",
-      "from_label": "MCP Server",
-      "predicate": "uses",
-      "to_id": "stdio-transport",
-      "to_label": "stdio Transport"
-    },
-    {
-      "from_id": "mcp-tool",
-      "from_label": "MCP Tool",
-      "predicate": "partOf",
-      "to_id": "mcp-server",
-      "to_label": "MCP Server"
-    },
-    {
-      "from_id": "mcp-tool",
-      "from_label": "MCP Tool",
-      "predicate": "partOf",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "mcp-tool",
-      "from_label": "MCP Tool",
-      "predicate": "relatedTerm",
-      "to_id": "ai-agent",
-      "to_label": "AI Agent"
-    },
-    {
-      "from_id": "memory-file",
-      "from_label": "Memory File",
-      "predicate": "partOf",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "memory-file",
-      "from_label": "Memory File",
-      "predicate": "uses",
-      "to_id": "superseded-by",
-      "to_label": "Superseded-by"
-    },
-    {
-      "from_id": "memory-file",
-      "from_label": "Memory File",
-      "predicate": "uses",
-      "to_id": "tag",
-      "to_label": "Tag"
-    },
-    {
-      "from_id": "memory-file",
-      "from_label": "Memory File",
-      "predicate": "uses",
-      "to_id": "yaml-front-matter",
-      "to_label": "YAML Front Matter"
-    },
-    {
-      "from_id": "mini-retro",
-      "from_label": "Mini-Retro",
-      "predicate": "partOf",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "mini-retro",
-      "from_label": "Mini-Retro",
-      "predicate": "relatedTerm",
-      "to_id": "adr",
-      "to_label": "Architecture Decision Record"
-    },
-    {
-      "from_id": "mcp",
-      "from_label": "Model Context Protocol",
-      "predicate": "relatedTerm",
-      "to_id": "ai-agent",
-      "to_label": "AI Agent"
-    },
-    {
-      "from_id": "mcp",
-      "from_label": "Model Context Protocol",
-      "predicate": "relatedTerm",
-      "to_id": "mcp-server",
-      "to_label": "MCP Server"
-    },
-    {
-      "from_id": "mcp",
-      "from_label": "Model Context Protocol",
-      "predicate": "relatedTerm",
-      "to_id": "mcp-tool",
-      "to_label": "MCP Tool"
-    },
-    {
-      "from_id": "mcp",
-      "from_label": "Model Context Protocol",
-      "predicate": "relatedTerm",
-      "to_id": "stdio-transport",
-      "to_label": "stdio Transport"
-    },
-    {
-      "from_id": "open-brain",
-      "from_label": "Open-Brain",
-      "predicate": "implements",
-      "to_id": "agent-first",
-      "to_label": "Agent-first"
-    },
-    {
-      "from_id": "open-brain",
-      "from_label": "Open-Brain",
-      "predicate": "implements",
-      "to_id": "local-first",
-      "to_label": "Local-first"
-    },
-    {
-      "from_id": "open-brain",
-      "from_label": "Open-Brain",
-      "predicate": "uses",
-      "to_id": "knowledge-graph",
-      "to_label": "Knowledge Graph"
-    },
-    {
-      "from_id": "open-brain",
-      "from_label": "Open-Brain",
-      "predicate": "uses",
-      "to_id": "mcp-server",
-      "to_label": "MCP Server"
-    },
-    {
-      "from_id": "retrieval",
-      "from_label": "Retrieval",
-      "predicate": "partOf",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "retrieval",
-      "from_label": "Retrieval",
-      "predicate": "uses",
-      "to_id": "knowledge-graph",
-      "to_label": "Knowledge Graph"
-    },
-    {
-      "from_id": "retrieval",
-      "from_label": "Retrieval",
-      "predicate": "uses",
-      "to_id": "mcp-tool",
-      "to_label": "MCP Tool"
-    },
-    {
-      "from_id": "semantic-search",
-      "from_label": "Semantic Search",
-      "predicate": "instanceOf",
-      "to_id": "retrieval",
-      "to_label": "Retrieval"
-    },
-    {
-      "from_id": "semantic-search",
-      "from_label": "Semantic Search",
-      "predicate": "uses",
-      "to_id": "lancedb",
-      "to_label": "LanceDB"
-    },
-    {
-      "from_id": "semantic-search",
-      "from_label": "Semantic Search",
-      "predicate": "uses",
-      "to_id": "vector-database",
-      "to_label": "Vector Database"
-    },
-    {
-      "from_id": "semantic-search",
-      "from_label": "Semantic Search",
-      "predicate": "uses",
-      "to_id": "vector-embedding",
-      "to_label": "Vector Embedding"
-    },
-    {
-      "from_id": "skill",
-      "from_label": "Skill",
-      "predicate": "partOf",
-      "to_id": "open-brain",
-      "to_label": "Open-Brain"
-    },
-    {
-      "from_id": "skill",
-      "from_label": "Skill",
-      "predicate": "relatedTerm",
-      "to_id": "ai-agent",
-      "to_label": "AI Agent"
-    },
-    {
-      "from_id": "skill",
-      "from_label": "Skill",
-      "predicate": "relatedTerm",
-      "to_id": "adr",
-      "to_label": "Architecture Decision Record"
-    },
-    {
-      "from_id": "stdio-transport",
-      "from_label": "stdio Transport",
-      "predicate": "partOf",
-      "to_id": "mcp",
-      "to_label": "Model Context Protocol"
-    },
-    {
-      "from_id": "stdio-transport",
-      "from_label": "stdio Transport",
-      "predicate": "uses",
-      "to_id": "mcp-server",
-      "to_label": "MCP Server"
-    },
-    {
-      "from_id": "superseded-by",
-      "from_label": "Superseded-by",
-      "predicate": "partOf",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "superseded-by",
-      "from_label": "Superseded-by",
-      "predicate": "partOf",
-      "to_id": "yaml-front-matter",
-      "to_label": "YAML Front Matter"
-    },
-    {
-      "from_id": "superseded-by",
-      "from_label": "Superseded-by",
-      "predicate": "relatedTerm",
-      "to_id": "knowledge-graph",
-      "to_label": "Knowledge Graph"
-    },
-    {
-      "from_id": "tag",
-      "from_label": "Tag",
-      "predicate": "partOf",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "tag",
-      "from_label": "Tag",
-      "predicate": "partOf",
-      "to_id": "yaml-front-matter",
-      "to_label": "YAML Front Matter"
-    },
-    {
-      "from_id": "tag",
-      "from_label": "Tag",
-      "predicate": "relatedTerm",
-      "to_id": "semantic-search",
-      "to_label": "Semantic Search"
-    },
-    {
-      "from_id": "triage",
-      "from_label": "Triage",
-      "predicate": "relatedTerm",
-      "to_id": "capture",
-      "to_label": "Capture"
-    },
-    {
-      "from_id": "triage",
-      "from_label": "Triage",
-      "predicate": "relatedTerm",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "triage",
-      "from_label": "Triage",
-      "predicate": "uses",
-      "to_id": "ai-agent",
-      "to_label": "AI Agent"
-    },
-    {
-      "from_id": "triage",
-      "from_label": "Triage",
-      "predicate": "uses",
-      "to_id": "inbox",
-      "to_label": "Inbox"
-    },
-    {
-      "from_id": "vector-database",
-      "from_label": "Vector Database",
-      "predicate": "relatedTerm",
-      "to_id": "lancedb",
-      "to_label": "LanceDB"
-    },
-    {
-      "from_id": "vector-database",
-      "from_label": "Vector Database",
-      "predicate": "relatedTerm",
-      "to_id": "semantic-search",
-      "to_label": "Semantic Search"
-    },
-    {
-      "from_id": "vector-database",
-      "from_label": "Vector Database",
-      "predicate": "uses",
-      "to_id": "vector-embedding",
-      "to_label": "Vector Embedding"
-    },
-    {
-      "from_id": "vector-embedding",
-      "from_label": "Vector Embedding",
-      "predicate": "partOf",
-      "to_id": "vector-database",
-      "to_label": "Vector Database"
-    },
-    {
-      "from_id": "vector-embedding",
-      "from_label": "Vector Embedding",
-      "predicate": "relatedTerm",
-      "to_id": "lancedb",
-      "to_label": "LanceDB"
-    },
-    {
-      "from_id": "vector-embedding",
-      "from_label": "Vector Embedding",
-      "predicate": "relatedTerm",
-      "to_id": "semantic-search",
-      "to_label": "Semantic Search"
-    },
-    {
-      "from_id": "vector-embedding",
-      "from_label": "Vector Embedding",
-      "predicate": "uses",
-      "to_id": "embedding-model",
-      "to_label": "Embedding Model"
-    },
-    {
-      "from_id": "yaml-front-matter",
-      "from_label": "YAML Front Matter",
-      "predicate": "partOf",
-      "to_id": "memory-file",
-      "to_label": "Memory File"
-    },
-    {
-      "from_id": "yaml-front-matter",
-      "from_label": "YAML Front Matter",
-      "predicate": "uses",
-      "to_id": "superseded-by",
-      "to_label": "Superseded-by"
-    },
-    {
-      "from_id": "yaml-front-matter",
-      "from_label": "YAML Front Matter",
-      "predicate": "uses",
-      "to_id": "tag",
-      "to_label": "Tag"
-    }
-  ],
+  "relations": [],
   "documents": [
     {
-      "file": "glossary/adr.md",
-      "segment_count": 4,
+      "file": "foundational_concepts/attribute.md",
+      "segment_count": 8,
       "concept_ids": [
-        "adr"
+        "attribute"
       ]
     },
     {
-      "file": "glossary/agent-first.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "agent-first"
-      ]
-    },
-    {
-      "file": "glossary/ai-agent.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "ai-agent"
-      ]
-    },
-    {
-      "file": "glossary/capture.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "capture"
-      ]
-    },
-    {
-      "file": "glossary/embedding-model.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "embedding-model"
-      ]
-    },
-    {
-      "file": "glossary/inbox.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "inbox"
-      ]
-    },
-    {
-      "file": "glossary/knowledge-graph.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "knowledge-graph"
-      ]
-    },
-    {
-      "file": "glossary/lancedb.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "lancedb"
-      ]
-    },
-    {
-      "file": "glossary/local-first.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "local-first"
-      ]
-    },
-    {
-      "file": "glossary/madr.md",
-      "segment_count": 5,
-      "concept_ids": [
-        "madr"
-      ]
-    },
-    {
-      "file": "glossary/mcp-server.md",
-      "segment_count": 3,
-      "concept_ids": [
-        "mcp-server"
-      ]
-    },
-    {
-      "file": "glossary/mcp-tool.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "mcp-tool"
-      ]
-    },
-    {
-      "file": "glossary/mcp.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "mcp"
-      ]
-    },
-    {
-      "file": "glossary/memory-file.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "memory-file"
-      ]
-    },
-    {
-      "file": "glossary/mini-retro.md",
-      "segment_count": 5,
-      "concept_ids": [
-        "mini-retro"
-      ]
-    },
-    {
-      "file": "glossary/open-brain.md",
-      "segment_count": 5,
-      "concept_ids": [
-        "open-brain"
-      ]
-    },
-    {
-      "file": "glossary/retrieval.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "retrieval"
-      ]
-    },
-    {
-      "file": "glossary/semantic-search.md",
-      "segment_count": 5,
-      "concept_ids": [
-        "semantic-search"
-      ]
-    },
-    {
-      "file": "glossary/skill.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "skill"
-      ]
-    },
-    {
-      "file": "glossary/stdio-transport.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "stdio-transport"
-      ]
-    },
-    {
-      "file": "glossary/superseded-by.md",
-      "segment_count": 5,
-      "concept_ids": [
-        "superseded-by"
-      ]
-    },
-    {
-      "file": "glossary/tag.md",
-      "segment_count": 5,
-      "concept_ids": [
-        "tag"
-      ]
-    },
-    {
-      "file": "glossary/triage.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "triage"
-      ]
-    },
-    {
-      "file": "glossary/vector-database.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "vector-database"
-      ]
-    },
-    {
-      "file": "glossary/vector-embedding.md",
-      "segment_count": 4,
-      "concept_ids": [
-        "vector-embedding"
-      ]
-    },
-    {
-      "file": "glossary/yaml-front-matter.md",
+      "file": "foundational_concepts/capability.md",
       "segment_count": 6,
       "concept_ids": [
-        "yaml-front-matter"
+        "capability"
+      ]
+    },
+    {
+      "file": "foundational_concepts/class.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "class"
+      ]
+    },
+    {
+      "file": "foundational_concepts/component.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "component"
+      ]
+    },
+    {
+      "file": "foundational_concepts/concept.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "concept"
+      ]
+    },
+    {
+      "file": "foundational_concepts/corpus.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "corpus"
+      ]
+    },
+    {
+      "file": "foundational_concepts/data.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "data"
+      ]
+    },
+    {
+      "file": "foundational_concepts/document.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "document"
+      ]
+    },
+    {
+      "file": "foundational_concepts/domain.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "domain"
+      ]
+    },
+    {
+      "file": "foundational_concepts/edge.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "edge"
+      ]
+    },
+    {
+      "file": "foundational_concepts/fact.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "fact"
+      ]
+    },
+    {
+      "file": "foundational_concepts/graph.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "graph"
+      ]
+    },
+    {
+      "file": "foundational_concepts/individual.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "individual"
+      ]
+    },
+    {
+      "file": "foundational_concepts/information.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "information"
+      ]
+    },
+    {
+      "file": "foundational_concepts/insight.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "insight"
+      ]
+    },
+    {
+      "file": "foundational_concepts/knowledge-extraction.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "knowledge-extraction"
+      ]
+    },
+    {
+      "file": "foundational_concepts/knowledge.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "knowledge"
+      ]
+    },
+    {
+      "file": "foundational_concepts/list.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "list"
+      ]
+    },
+    {
+      "file": "foundational_concepts/meta-model.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "meta-model"
+      ]
+    },
+    {
+      "file": "foundational_concepts/metadata.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "metadata"
+      ]
+    },
+    {
+      "file": "foundational_concepts/model.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "model"
+      ]
+    },
+    {
+      "file": "foundational_concepts/node.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "node"
+      ]
+    },
+    {
+      "file": "foundational_concepts/ontology.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "ontology"
+      ]
+    },
+    {
+      "file": "foundational_concepts/process.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "process"
+      ]
+    },
+    {
+      "file": "foundational_concepts/rdf-star.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "rdf-star"
+      ]
+    },
+    {
+      "file": "foundational_concepts/rdf.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "rdf"
+      ]
+    },
+    {
+      "file": "foundational_concepts/relationship.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "relationship"
+      ]
+    },
+    {
+      "file": "foundational_concepts/resource.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "resource"
+      ]
+    },
+    {
+      "file": "foundational_concepts/semantics.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "semantics"
+      ]
+    },
+    {
+      "file": "foundational_concepts/syntax.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "syntax"
+      ]
+    },
+    {
+      "file": "foundational_concepts/term.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "term"
+      ]
+    },
+    {
+      "file": "foundational_concepts/theme.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "theme"
+      ]
+    },
+    {
+      "file": "foundational_concepts/true.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "true"
+      ]
+    },
+    {
+      "file": "foundational_concepts/weight.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "weight"
+      ]
+    },
+    {
+      "file": "foundational_concepts/wisdom.md",
+      "segment_count": 6,
+      "concept_ids": [
+        "wisdom"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-02-27-local-database.md",
+      "segment_count": 110,
+      "concept_ids": [
+        "2026-02-27-local-database"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-02-28-ai-strategy-business-efficiency-examples.md",
+      "segment_count": 31,
+      "concept_ids": [
+        "2026-02-28-ai-strategy-business-efficiency-examples"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-02-28-ai-strategy-risk-reduction-focus.md",
+      "segment_count": 31,
+      "concept_ids": [
+        "2026-02-28-ai-strategy-risk-reduction-focus"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-02-28-ai-strategy-swe-focus.md",
+      "segment_count": 71,
+      "concept_ids": [
+        "2026-02-28-ai-strategy-swe-focus"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-02-28-ai-strategy.md",
+      "segment_count": 29,
+      "concept_ids": [
+        "2026-02-28-ai-strategy"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-02-28-jevons-paradox.md",
+      "segment_count": 22,
+      "concept_ids": [
+        "2026-02-28-jevons-paradox"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-03-knowledge-representation-agent-context.md",
+      "segment_count": 111,
+      "concept_ids": [
+        "2026-03-03-knowledge-representation-agent-context"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-03-research-agenda-curation-coverage.md",
+      "segment_count": 112,
+      "concept_ids": [
+        "2026-03-03-research-agenda-curation-coverage"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-04-sdlc-ai-prompt-patterns.md",
+      "segment_count": 98,
+      "concept_ids": [
+        "2026-03-04-sdlc-ai-prompt-patterns"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-05-h-neuron-pretraining-origins.md",
+      "segment_count": 94,
+      "concept_ids": [
+        "2026-03-05-h-neuron-pretraining-origins"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-07-run-build-it-allocation-implementation-how.md",
+      "segment_count": 88,
+      "concept_ids": [
+        "2026-03-07-run-build-it-allocation-implementation-how"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-08-servicenow-process-mapping.md",
+      "segment_count": 118,
+      "concept_ids": [
+        "2026-03-08-servicenow-process-mapping"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-10-language-for-llm-agent-output.md",
+      "segment_count": 116,
+      "concept_ids": [
+        "2026-03-10-language-for-llm-agent-output"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-10-research-loop-evaluation-rubric.md",
+      "segment_count": 96,
+      "concept_ids": [
+        "2026-03-10-research-loop-evaluation-rubric"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-15-saas-banking-invariants.md",
+      "segment_count": 74,
+      "concept_ids": [
+        "2026-03-15-saas-banking-invariants"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-18-explore-to-exploit-synthesis-gap.md",
+      "segment_count": 52,
+      "concept_ids": [
+        "2026-03-18-explore-to-exploit-synthesis-gap"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-18-formal-proof-engineering-leanstral.md",
+      "segment_count": 44,
+      "concept_ids": [
+        "2026-03-18-formal-proof-engineering-leanstral"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-18-human-brain-prediction-machines.md",
+      "segment_count": 43,
+      "concept_ids": [
+        "2026-03-18-human-brain-prediction-machines"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-19-layered-org-llm-architecture.md",
+      "segment_count": 58,
+      "concept_ids": [
+        "2026-03-19-layered-org-llm-architecture"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-22-code-architecture-inspection.md",
+      "segment_count": 37,
+      "concept_ids": [
+        "2026-03-22-code-architecture-inspection"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-23-software-factory.md",
+      "segment_count": 139,
+      "concept_ids": [
+        "2026-03-23-software-factory"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-03-28-environment-setup-consistency.md",
+      "segment_count": 94,
+      "concept_ids": [
+        "2026-03-28-environment-setup-consistency"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-01-backpressure-theory-of-constraints.md",
+      "segment_count": 67,
+      "concept_ids": [
+        "2026-04-01-backpressure-theory-of-constraints"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-02-ai-company-hiring-strategies.md",
+      "segment_count": 43,
+      "concept_ids": [
+        "2026-04-02-ai-company-hiring-strategies"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-26-ai-lowcode-governance-maturity-model.md",
+      "segment_count": 39,
+      "concept_ids": [
+        "2026-04-26-ai-lowcode-governance-maturity-model"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-26-ai-lowcode-observability-telemetry-governance.md",
+      "segment_count": 37,
+      "concept_ids": [
+        "2026-04-26-ai-lowcode-observability-telemetry-governance"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-26-ai-lowcode-risk-tier-classification-controls.md",
+      "segment_count": 34,
+      "concept_ids": [
+        "2026-04-26-ai-lowcode-risk-tier-classification-controls"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-26-lecun-llm-critique-primary-sources.md",
+      "segment_count": 28,
+      "concept_ids": [
+        "2026-04-26-lecun-llm-critique-primary-sources"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-27-cryptographic-intent-preservation-runtime-evaluation.md",
+      "segment_count": 38,
+      "concept_ids": [
+        "2026-04-27-cryptographic-intent-preservation-runtime-evaluation"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-28-uelgf-tooling-reference-architecture.md",
+      "segment_count": 36,
+      "concept_ids": [
+        "2026-04-28-uelgf-tooling-reference-architecture"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-04-30-ai-code-entropy-quality-metrics.md",
+      "segment_count": 48,
+      "concept_ids": [
+        "2026-04-30-ai-code-entropy-quality-metrics"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-01-ai-coding-harness-quality-benchmarks.md",
+      "segment_count": 37,
+      "concept_ids": [
+        "2026-05-01-ai-coding-harness-quality-benchmarks"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-06-aibom-effectiveness-risk-mitigation-limits.md",
+      "segment_count": 42,
+      "concept_ids": [
+        "2026-05-06-aibom-effectiveness-risk-mitigation-limits"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-08-capability-debt-definition-measurement-ai-risk-amplification.md",
+      "segment_count": 35,
+      "concept_ids": [
+        "2026-05-08-capability-debt-definition-measurement-ai-risk-amplification"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-09-compliance-risks-stochastic-llm-governance-decisions.md",
+      "segment_count": 34,
+      "concept_ids": [
+        "2026-05-09-compliance-risks-stochastic-llm-governance-decisions"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-10-m365-copilot-sensitive-data-security-governance-risks.md",
+      "segment_count": 27,
+      "concept_ids": [
+        "2026-05-10-m365-copilot-sensitive-data-security-governance-risks"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-12-data-product-ontology.md",
+      "segment_count": 40,
+      "concept_ids": [
+        "2026-05-12-data-product-ontology"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-12-knowledge-graph-lifecycle-management-agentic.md",
+      "segment_count": 35,
+      "concept_ids": [
+        "2026-05-12-knowledge-graph-lifecycle-management-agentic"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-12-odrl-policies-knowledge-graph-agentic-access.md",
+      "segment_count": 42,
+      "concept_ids": [
+        "2026-05-12-odrl-policies-knowledge-graph-agentic-access"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-16-agent-operational-cost-vs-gap-closure-cost.md",
+      "segment_count": 40,
+      "concept_ids": [
+        "2026-05-16-agent-operational-cost-vs-gap-closure-cost"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate.md",
+      "segment_count": 53,
+      "concept_ids": [
+        "2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure.md",
+      "segment_count": 40,
+      "concept_ids": [
+        "2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-18-agentic-explainability-vs-traditional.md",
+      "segment_count": 27,
+      "concept_ids": [
+        "2026-05-18-agentic-explainability-vs-traditional"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-18-rq1-1-popper-falsifiability.md",
+      "segment_count": 40,
+      "concept_ids": [
+        "2026-05-18-rq1-1-popper-falsifiability"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-18-rq3-1-llm-statistical-vs-causal.md",
+      "segment_count": 45,
+      "concept_ids": [
+        "2026-05-18-rq3-1-llm-statistical-vs-causal"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-18-rq5-2-flexibility-vs-predictability-auditability.md",
+      "segment_count": 39,
+      "concept_ids": [
+        "2026-05-18-rq5-2-flexibility-vs-predictability-auditability"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways.md",
+      "segment_count": 49,
+      "concept_ids": [
+        "2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer.md",
+      "segment_count": 36,
+      "concept_ids": [
+        "2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-20-banking-ai-syntactic-confidence-trap.md",
+      "segment_count": 45,
+      "concept_ids": [
+        "2026-05-20-banking-ai-syntactic-confidence-trap"
+      ]
+    },
+    {
+      "file": "raw_document_corpus/2026-05-20-hitl-capacity-thresholds-in-banking-compliance.md",
+      "segment_count": 29,
+      "concept_ids": [
+        "2026-05-20-hitl-capacity-thresholds-in-banking-compliance"
       ]
     }
   ]
