@@ -27,6 +27,28 @@ Supports two extraction strategies selected via ``state["strategy"]``:
 
     The ``_gh_models_caller`` module-level callable can be replaced in
     tests to inject a mock without invoking the real CLI.
+
+Error handling in _call_gh_models
+----------------------------------
+Three failure modes are distinguished so callers can react appropriately:
+
+  GhModelsRateLimitError   — HTTP 429 / rate-limit message in stderr.
+                             The caller should wait the instructed time and
+                             retry once; it must NOT use exponential backoff
+                             for this class of error.
+
+  GhModelsUnavailableError — Transient failure (5xx, network glitch, timeout).
+                             Safe to retry with exponential backoff.
+
+  CalledProcessError       — Any other non-zero exit (bad model name, auth
+                             failure, etc.).  Propagates immediately; retrying
+                             would not help.
+
+Proactive pacing
+-----------------
+``_GhModelsPacer`` enforces a minimum inter-call interval derived from the
+model's known RPM limit so the process stays comfortably inside the free-tier
+window instead of hammering the API until it gets a 429.
 """
 from __future__ import annotations
 
@@ -35,16 +57,115 @@ import logging
 import os
 import re
 import subprocess as _subprocess
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-PROCESSOR_VERSION = "concept-extractor-v1.2.0"
+PROCESSOR_VERSION = "concept-extractor-v1.3.0"
 
 # Maximum number of NLP annotation items (entities, noun chunks) included in
 # the LLM prompt.  Keeps prompt size bounded while providing useful signal.
 _MAX_NLP_ITEMS_IN_PROMPT = 20
+
+# ---------------------------------------------------------------------------
+# Error sentinels — distinct types so callers handle each case correctly
+# ---------------------------------------------------------------------------
+
+
+class GhModelsRateLimitError(Exception):
+    """Raised when ``gh models run`` is rejected with a rate-limit (429) response.
+
+    Retrying immediately or with exponential backoff is wrong — the server has
+    told us to wait.  The caller should honour ``retry_after`` (seconds) then
+    try once more.  If the retry also hits a rate limit, give up for this item.
+    """
+
+    def __init__(self, message: str, retry_after: float = 10.0) -> None:
+        super().__init__(message)
+        self.retry_after = retry_after
+
+
+class GhModelsUnavailableError(Exception):
+    """Raised when ``gh models run`` fails with a transient server error (5xx).
+
+    Safe to retry with exponential backoff.
+    """
+
+
+# ---------------------------------------------------------------------------
+# Rate-limit and transient-error detection from gh CLI stderr
+# ---------------------------------------------------------------------------
+
+# Patterns that indicate a rate-limit (429) response from gh models.
+_RATE_LIMIT_PATTERNS = re.compile(
+    r"rate.?limit|429|too many requests|quota exceeded|requests per minute",
+    re.IGNORECASE,
+)
+
+# Patterns that indicate a transient server-side failure worth retrying.
+_TRANSIENT_PATTERNS = re.compile(
+    r"5\d\d|server error|service unavailable|internal error|connection|timeout",
+    re.IGNORECASE,
+)
+
+# Pattern to extract a suggested wait time (e.g. "retry after 30s", "wait 60 seconds").
+_RETRY_AFTER_PATTERN = re.compile(r"(?:retry.after|wait)\D*(\d+)\s*s", re.IGNORECASE)
+
+_SUBPROCESS_TIMEOUT = 120  # seconds — generous for large prompts, prevents hangs
+
+
+def _parse_retry_after(text: str, default: float = 10.0) -> float:
+    """Extract a retry-after value in seconds from an error message."""
+    match = _RETRY_AFTER_PATTERN.search(text)
+    if match:
+        return max(float(match.group(1)), 1.0)
+    return default
+
+
+def _classify_gh_error(stderr: str, returncode: int) -> str:
+    """Return 'rate_limit', 'transient', or 'fatal' based on stderr content."""
+    if _RATE_LIMIT_PATTERNS.search(stderr):
+        return "rate_limit"
+    if returncode >= 500 or _TRANSIENT_PATTERNS.search(stderr):
+        return "transient"
+    return "fatal"
+
+
+# ---------------------------------------------------------------------------
+# Proactive inter-call pacer
+# ---------------------------------------------------------------------------
+
+# Default RPM for GitHub Models free tier (conservative — avoids blind 429s).
+_DEFAULT_RPM = 10
+
+
+class _GhModelsPacer:
+    """Enforces a minimum gap between consecutive ``gh models run`` calls.
+
+    Uses ``60 / rpm`` seconds as the floor so the pipeline stays inside the
+    free-tier window rather than hitting the limit reactively.  Instantiate
+    once per pipeline run and call ``wait()`` before each LLM call.
+    """
+
+    def __init__(self, rpm: int = _DEFAULT_RPM) -> None:
+        self._interval = 60.0 / max(rpm, 1)
+        self._last: float = 0.0
+
+    def wait(self) -> None:
+        now = time.monotonic()
+        gap = self._interval - (now - self._last)
+        if gap > 0:
+            logger.debug("GhModelsPacer: waiting %.1fs before next gh models call", gap)
+            time.sleep(gap)
+        self._last = time.monotonic()
+
+
+# Module-level pacer shared across calls within a single pipeline run.
+# Tests can replace this with a no-op instance.
+_pacer = _GhModelsPacer()
+
 
 # ---------------------------------------------------------------------------
 # gh models caller — swappable for testing
@@ -56,17 +177,55 @@ _GH_MODEL_DEFAULT = "gpt-4o-mini"
 def _call_gh_models(model: str, system_prompt: str, user_prompt: str) -> str:
     """Invoke ``gh models run`` and return the response text.
 
-    The user prompt is supplied via stdin to avoid command-line length
-    limits on large documents.  ``check=True`` ensures subprocess errors
-    propagate immediately rather than being silently swallowed.
+    The user prompt is supplied via stdin to avoid command-line length limits
+    on large documents.
+
+    Raises:
+        GhModelsRateLimitError:    server returned 429 / rate-limit message.
+        GhModelsUnavailableError:  transient server error — safe to retry.
+        subprocess.CalledProcessError: any other non-zero exit (auth, bad model, …).
+        subprocess.TimeoutExpired: call took longer than _SUBPROCESS_TIMEOUT seconds.
     """
-    result = _subprocess.run(
-        ["gh", "models", "run", model, "--system-prompt", system_prompt],
-        input=user_prompt,
-        capture_output=True,
-        text=True,
-        check=True,
-    )
+    try:
+        result = _subprocess.run(
+            ["gh", "models", "run", model, "--system-prompt", system_prompt],
+            input=user_prompt,
+            capture_output=True,
+            text=True,
+            timeout=_SUBPROCESS_TIMEOUT,
+        )
+    except _subprocess.TimeoutExpired:
+        raise GhModelsUnavailableError(
+            f"gh models run timed out after {_SUBPROCESS_TIMEOUT}s"
+        )
+
+    if result.returncode != 0:
+        stderr = (result.stderr or "").strip()
+        kind = _classify_gh_error(stderr, result.returncode)
+        if kind == "rate_limit":
+            wait = _parse_retry_after(stderr)
+            logger.warning(
+                "gh models: rate-limited (rc=%d) — suggested wait %.0fs. stderr: %s",
+                result.returncode,
+                wait,
+                stderr[:200],
+            )
+            raise GhModelsRateLimitError(stderr, retry_after=wait)
+        if kind == "transient":
+            logger.warning(
+                "gh models: transient error (rc=%d) — stderr: %s",
+                result.returncode,
+                stderr[:200],
+            )
+            raise GhModelsUnavailableError(stderr)
+        # Fatal: auth failure, unknown model, etc. — log clearly and propagate.
+        logger.error(
+            "gh models: fatal error (rc=%d) — stderr: %s",
+            result.returncode,
+            stderr[:400],
+        )
+        result.check_returncode()  # raises CalledProcessError with full context
+
     return result.stdout
 
 
