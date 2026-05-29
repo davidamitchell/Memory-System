@@ -1,0 +1,55 @@
+@prefix ms: <https://memory.example.org/ms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://memory.example.org/ms/assertion/concept> a ms:AssertionNode ;
+    rdfs:label "Concept" ;
+    rdfs:comment "Necessary conditions:" ;
+    prov:wasGeneratedBy <https://memory.example.org/ms/activity/extract-20260529T191823> ;
+    ms:inDomain ms:FoundationalConceptDomain .
+
+<https://memory.example.org/ms/activity/extract-20260529T191823> a ms:ExtractionActivity ;
+    prov:endedAtTime "2026-05-29T19:18:23+00:00"^^xsd:dateTime ;
+    prov:used <https://memory.example.org/ms/segment/191703d472c31e23b442f23a4fcd2a84d6d72f814ad45f22d1ae67c7c58fd81c>,
+        <https://memory.example.org/ms/segment/2d9199f25d7a63c7fbf2757143e32f2146fd28b8c9f76cf6f25e1633444ba490>,
+        <https://memory.example.org/ms/segment/5ccfaf68cf4743c28550dd45d14e7822cd9446d9236ed5a38059f4dac0e44880>,
+        <https://memory.example.org/ms/segment/7baf14b6afc1cff18b90f91fa9858822f84ffb8e48b1d1edcdac09845b9398e8>,
+        <https://memory.example.org/ms/segment/a7452e1ec7fd0a411384f131844d0af2dd1b760ce3ff9fb99b2b9d4807da5816>,
+        <https://memory.example.org/ms/segment/cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b>,
+        <https://memory.example.org/ms/segment/d8657dd175b2a06c3f6d255522d8b3dad52b5a4a42ae1cc7f88412a1548fd439>,
+        <https://memory.example.org/ms/segment/fa7a6d4b4f98ef4d6530413674eef047df2712a874d63178084920706c83a34a> ;
+    prov:wasAssociatedWith <https://memory.example.org/ms/processor/concept-extractor-v1.3.0> .
+
+<https://memory.example.org/ms/segment/191703d472c31e23b442f23a4fcd2a84d6d72f814ad45f22d1ae67c7c58fd81c> a ms:PreparedSegment ;
+    ms:contentHash "sha256:191703d472c31e23b442f23a4fcd2a84d6d72f814ad45f22d1ae67c7c58fd81c" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
+<https://memory.example.org/ms/segment/2d9199f25d7a63c7fbf2757143e32f2146fd28b8c9f76cf6f25e1633444ba490> a ms:PreparedSegment ;
+    ms:contentHash "sha256:2d9199f25d7a63c7fbf2757143e32f2146fd28b8c9f76cf6f25e1633444ba490" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
+<https://memory.example.org/ms/segment/5ccfaf68cf4743c28550dd45d14e7822cd9446d9236ed5a38059f4dac0e44880> a ms:PreparedSegment ;
+    ms:contentHash "sha256:5ccfaf68cf4743c28550dd45d14e7822cd9446d9236ed5a38059f4dac0e44880" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
+<https://memory.example.org/ms/segment/7baf14b6afc1cff18b90f91fa9858822f84ffb8e48b1d1edcdac09845b9398e8> a ms:PreparedSegment ;
+    ms:contentHash "sha256:7baf14b6afc1cff18b90f91fa9858822f84ffb8e48b1d1edcdac09845b9398e8" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
+<https://memory.example.org/ms/segment/a7452e1ec7fd0a411384f131844d0af2dd1b760ce3ff9fb99b2b9d4807da5816> a ms:PreparedSegment ;
+    ms:contentHash "sha256:a7452e1ec7fd0a411384f131844d0af2dd1b760ce3ff9fb99b2b9d4807da5816" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
+<https://memory.example.org/ms/segment/cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b> a ms:PreparedSegment ;
+    ms:contentHash "sha256:cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
+<https://memory.example.org/ms/segment/d8657dd175b2a06c3f6d255522d8b3dad52b5a4a42ae1cc7f88412a1548fd439> a ms:PreparedSegment ;
+    ms:contentHash "sha256:d8657dd175b2a06c3f6d255522d8b3dad52b5a4a42ae1cc7f88412a1548fd439" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
+<https://memory.example.org/ms/segment/fa7a6d4b4f98ef4d6530413674eef047df2712a874d63178084920706c83a34a> a ms:PreparedSegment ;
+    ms:contentHash "sha256:fa7a6d4b4f98ef4d6530413674eef047df2712a874d63178084920706c83a34a" ;
+    ms:sourceDocument "foundational_concepts/concept.md" .
+
