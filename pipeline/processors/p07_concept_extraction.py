@@ -33,9 +33,11 @@ Error handling in _call_gh_models
 Three failure modes are distinguished so callers can react appropriately:
 
   GhModelsRateLimitError   — HTTP 429 / rate-limit message in stderr.
-                             The caller should wait the instructed time and
-                             retry once; it must NOT use exponential backoff
-                             for this class of error.
+                             Detected by ``_is_rate_limited_response`` or
+                             ``_is_quota_response`` helpers.  The caller
+                             should wait the instructed time and retry once;
+                             it must NOT use exponential backoff for this
+                             class of error.
 
   GhModelsUnavailableError — Transient failure (5xx, network glitch, timeout).
                              Safe to retry with exponential backoff.
@@ -44,11 +46,17 @@ Three failure modes are distinguished so callers can react appropriately:
                              failure, etc.).  Propagates immediately; retrying
                              would not help.
 
+``_extract_llm`` wraps ``_gh_models_caller`` with the full retry/degradation
+logic: rate-limit → honour wait + one retry; transient → exponential backoff
+with two retries; any other error or exhausted retries → degrade gracefully
+to front-matter fields.
+
 Proactive pacing
 -----------------
 ``_GhModelsPacer`` enforces a minimum inter-call interval derived from the
 model's known RPM limit so the process stays comfortably inside the free-tier
-window instead of hammering the API until it gets a 429.
+window instead of hammering the API until it gets a 429.  The pacer resets
+its timer whenever the active model changes.
 """
 from __future__ import annotations
 
@@ -100,7 +108,13 @@ class GhModelsUnavailableError(Exception):
 
 # Patterns that indicate a rate-limit (429) response from gh models.
 _RATE_LIMIT_PATTERNS = re.compile(
-    r"rate.?limit|429|too many requests|quota exceeded|requests per minute",
+    r"rate.?limit|429|too many requests|requests per minute",
+    re.IGNORECASE,
+)
+
+# Patterns that indicate a quota-exceeded response (separate from per-minute rate limits).
+_QUOTA_PATTERNS = re.compile(
+    r"quota.?exceeded|quota",
     re.IGNORECASE,
 )
 
@@ -116,6 +130,16 @@ _RETRY_AFTER_PATTERN = re.compile(r"(?:retry.after|wait)\D*(\d+)\s*s", re.IGNORE
 _SUBPROCESS_TIMEOUT = 120  # seconds — generous for large prompts, prevents hangs
 
 
+def _is_rate_limited_response(stderr: str) -> bool:
+    """Return True when stderr indicates a rate-limit (429) response from gh models."""
+    return bool(_RATE_LIMIT_PATTERNS.search(stderr))
+
+
+def _is_quota_response(stderr: str) -> bool:
+    """Return True when stderr indicates a quota-exceeded response from gh models."""
+    return bool(_QUOTA_PATTERNS.search(stderr))
+
+
 def _parse_retry_after(text: str, default: float = 10.0) -> float:
     """Extract a retry-after value in seconds from an error message."""
     match = _RETRY_AFTER_PATTERN.search(text)
@@ -126,7 +150,7 @@ def _parse_retry_after(text: str, default: float = 10.0) -> float:
 
 def _classify_gh_error(stderr: str, returncode: int) -> str:
     """Return 'rate_limit', 'transient', or 'fatal' based on stderr content."""
-    if _RATE_LIMIT_PATTERNS.search(stderr):
+    if _is_rate_limited_response(stderr) or _is_quota_response(stderr):
         return "rate_limit"
     if returncode >= 500 or _TRANSIENT_PATTERNS.search(stderr):
         return "transient"
@@ -146,14 +170,25 @@ class _GhModelsPacer:
 
     Uses ``60 / rpm`` seconds as the floor so the pipeline stays inside the
     free-tier window rather than hitting the limit reactively.  Instantiate
-    once per pipeline run and call ``wait()`` before each LLM call.
+    once per pipeline run and call ``wait(model)`` before each LLM call.
+
+    When ``model`` changes the last-call timer is reset so a fresh model
+    gets its full inter-call window rather than inheriting the old model's
+    remaining wait.
     """
 
     def __init__(self, rpm: int = _DEFAULT_RPM) -> None:
         self._interval = 60.0 / max(rpm, 1)
         self._last: float = 0.0
+        self._current_model: str = ""
 
-    def wait(self) -> None:
+    def wait(self, model: str = "") -> None:
+        if model and model != self._current_model:
+            logger.debug(
+                "GhModelsPacer: model changed to %r — resetting last-call timer", model
+            )
+            self._last = 0.0
+            self._current_model = model
         now = time.monotonic()
         gap = self._interval - (now - self._last)
         if gap > 0:
@@ -186,6 +221,7 @@ def _call_gh_models(model: str, system_prompt: str, user_prompt: str) -> str:
         subprocess.CalledProcessError: any other non-zero exit (auth, bad model, …).
         subprocess.TimeoutExpired: call took longer than _SUBPROCESS_TIMEOUT seconds.
     """
+    _pacer.wait(model)
     try:
         result = _subprocess.run(
             ["gh", "models", "run", model, "--system-prompt", system_prompt],
@@ -271,7 +307,15 @@ def _format_nlp_annotations(annotations: dict) -> str:
 
 
 def _extract_llm(state: dict, source_slug: str, segments: list[dict]) -> dict:
-    """Call the LLM and return a delta_proposal dict."""
+    """Call the LLM and return a delta_proposal dict.
+
+    Error handling:
+    - ``GhModelsRateLimitError``: honour ``retry_after``, one respectful retry;
+      degrade gracefully to front-matter if the retry also fails.
+    - ``GhModelsUnavailableError``: retry with exponential backoff (up to two
+      additional attempts); degrade gracefully if all retries are exhausted.
+    - Any other exception: log and degrade immediately to front-matter fields.
+    """
     fm = state.get("front_matter", {})
     body = state.get("body_text", "")[:6000]  # cap to avoid token overflow
 
@@ -291,15 +335,62 @@ def _extract_llm(state: dict, source_slug: str, segments: list[dict]) -> dict:
             nlp_section = f"\n\nNLP pre-analysis:\n{formatted}\n"
 
     user_prompt = f"{seed_info}\n---\n{body}{nlp_section}"
-
     model = os.environ.get("GH_MODEL", _GH_MODEL_DEFAULT)
-    raw = _gh_models_caller(model, _LLM_SYSTEM_PROMPT, user_prompt) or "{}"
-    # Strip optional markdown fences
-    raw = re.sub(r"^```(?:json)?\s*", "", raw.strip())
-    raw = re.sub(r"\s*```$", "", raw)
 
+    raw: str | None = None
     try:
-        extracted = _json.loads(raw)
+        raw = _gh_models_caller(model, _LLM_SYSTEM_PROMPT, user_prompt)
+    except GhModelsRateLimitError as exc:
+        logger.warning(
+            "gh models: rate-limited for %s — waiting %.0fs then retrying once",
+            source_slug,
+            exc.retry_after,
+        )
+        time.sleep(exc.retry_after)
+        try:
+            raw = _gh_models_caller(model, _LLM_SYSTEM_PROMPT, user_prompt)
+        except Exception as retry_exc:
+            logger.warning(
+                "gh models: rate-limit retry also failed for %s (%s) — degrading to front-matter",
+                source_slug,
+                retry_exc,
+            )
+    except GhModelsUnavailableError:
+        _backoff_delays = (2.0, 4.0)
+        for attempt, delay in enumerate(_backoff_delays, start=1):
+            logger.info(
+                "gh models: transient error for %s — backoff %.0fs (attempt %d/%d)",
+                source_slug,
+                delay,
+                attempt,
+                len(_backoff_delays),
+            )
+            time.sleep(delay)
+            try:
+                raw = _gh_models_caller(model, _LLM_SYSTEM_PROMPT, user_prompt)
+                break
+            except GhModelsUnavailableError:
+                continue
+            except Exception:
+                break
+        if raw is None:
+            logger.warning(
+                "gh models: all retries failed for %s — degrading to front-matter",
+                source_slug,
+            )
+    except Exception as exc:
+        logger.warning(
+            "gh models: unexpected error for %s (%s) — degrading to front-matter",
+            source_slug,
+            exc,
+        )
+
+    # Strip optional markdown fences and parse JSON
+    if raw:
+        raw = re.sub(r"^```(?:json)?\s*", "", raw.strip())
+        raw = re.sub(r"\s*```$", "", raw)
+    try:
+        extracted = _json.loads(raw or "{}")
     except _json.JSONDecodeError:
         logger.warning("LLM returned non-JSON for %s; using front-matter fallback", source_slug)
         extracted = {}
