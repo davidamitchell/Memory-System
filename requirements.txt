@@ -5,3 +5,4 @@ mcp
 pyarrow
 rdflib>=6.3
 spacy>=3.7
+pyyaml>=6.0

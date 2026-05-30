@@ -39,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install rdflib
+          pip install rdflib pyyaml
 
       - name: Authenticate gh CLI
         run: gh auth status
