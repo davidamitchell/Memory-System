@@ -10,26 +10,27 @@ This test MUST pass before any other pipeline tests are considered reliable.
 from __future__ import annotations
 
 import importlib
+import pkgutil
+from pathlib import Path
 
 import pytest
 
-# All modules that must be importable in a correctly-provisioned environment.
-# Add new processors here as they are introduced.
-PIPELINE_MODULES = [
-    "pipeline.run_pipeline",
-    "pipeline.processors.p01_sourcing",
-    "pipeline.processors.p02_preparation",
-    "pipeline.processors.p03_segmentation",
-    "pipeline.processors.p04_metadata",
-    "pipeline.processors.p05_domain_classification",
-    "pipeline.processors.p06_domain_matching",
-    "pipeline.processors.p07_concept_extraction",
-    "pipeline.processors.p08_ontology_build",
-    "pipeline.processors.p09_consistency_validation",
-    "pipeline.processors.p10_reconciliation",
-    "pipeline.processors.p11_version_commit",
-    "pipeline.processors.p12_export",
-]
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+_PROCESSORS_DIR = _REPO_ROOT / "pipeline" / "processors"
+
+
+def _discover_processor_modules() -> list[str]:
+    """Return dotted module paths for every module under pipeline/processors/."""
+    import pipeline.processors as _pkg  # noqa: PLC0415
+
+    return [
+        f"pipeline.processors.{info.name}"
+        for info in pkgutil.iter_modules(_pkg.__path__)
+        if not info.name.startswith("_")
+    ]
+
+
+PIPELINE_MODULES = ["pipeline.run_pipeline"] + _discover_processor_modules()
 
 
 @pytest.mark.parametrize("module_path", PIPELINE_MODULES)
