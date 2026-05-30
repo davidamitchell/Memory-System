@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Attribute** | An attribute connects a resource to a data value (literal); a relationship connects a resource to another resource. |
+| **Edge** | An edge is the graph-theoretic term for a connection between nodes; a relationship is the knowledge-representation term for a typed, asserted connection between resources. |
+| **Association** | Association is informal and may be undirected or untyped; a relationship is always typed and directed. |

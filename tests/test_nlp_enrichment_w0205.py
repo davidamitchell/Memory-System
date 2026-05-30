@@ -74,7 +74,7 @@ _MOCK_LLM_RESPONSE = {
     "related": [{"id": "knowledge-graph", "rel": "relatedTerm"}],
 }
 
-_TEST_FILE = "glossary/ai-agent.md"
+_TEST_FILE = "foundational_concepts/concept.md"
 _RESEARCH_FILE = "raw_document_corpus/2026-05-12-data-product-ontology.md"
 
 

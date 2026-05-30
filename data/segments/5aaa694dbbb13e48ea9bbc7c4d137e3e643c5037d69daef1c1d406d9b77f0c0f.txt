@@ -1,0 +1,1 @@
+An attribute is operationally identified when:

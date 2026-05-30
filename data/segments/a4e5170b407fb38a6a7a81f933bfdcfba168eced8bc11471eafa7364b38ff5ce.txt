@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Set** | A set is unordered and contains no duplicates; a list is ordered and may contain duplicates. |
+| **Bag (multiset)** | A bag is unordered but allows duplicates; a list is ordered. |
+| **Sequence** | Sequence is a synonym for list in most formal contexts; used interchangeably here. |
+| **Graph** | A graph is a non-linear structure of nodes and edges; a list is a strictly linear structure. |

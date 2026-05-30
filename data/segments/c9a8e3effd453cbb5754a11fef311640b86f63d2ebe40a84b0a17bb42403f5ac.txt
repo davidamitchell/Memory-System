@@ -1,0 +1,4 @@
+**Necessary conditions:**
+1. **Descriptive of a resource** — it is about a resource, not the primary content of that resource.
+2. **Structural or administrative** — it concerns identity (what the resource is), provenance (where it came from, when, by whom), structure (how it is organised), or administrative status (its lifecycle state).
+3. **Distinct from content** — removing the metadata leaves the substantive content of the resource intact; removing the content leaves the metadata structurally valid (though pointing to nothing).

@@ -1,0 +1,1 @@
+A model is a purposive, selective formal or semi-formal representation of a domain that captures specific aspects of its structure, entities, relationships, or behaviour for purposes of reasoning, prediction, communication, or design.

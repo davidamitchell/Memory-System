@@ -1,0 +1,7 @@
+**Necessary conditions:**
+1. **Triple-based** — every statement is expressed as exactly one subject–predicate–object triple.
+2. **Subject** — is a URI/IRI or blank node (never a literal).
+3. **Predicate** — is always a URI/IRI identifying a named relationship.
+4. **Object** — is a URI/IRI, blank node, or typed/language-tagged literal.
+5. **URI-identified** — resources are identified by URIs/IRIs, ensuring global uniqueness and dereference potential.
+6. **Open-world** — the absence of a statement does not entail its falsity.

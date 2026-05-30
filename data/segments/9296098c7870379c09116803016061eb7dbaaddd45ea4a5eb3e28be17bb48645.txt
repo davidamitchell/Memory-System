@@ -1,0 +1,3 @@
+Each stage in a pipeline should enforce a defined input/output contract,
+making stages independently testable and replaceable without altering
+surrounding logic.

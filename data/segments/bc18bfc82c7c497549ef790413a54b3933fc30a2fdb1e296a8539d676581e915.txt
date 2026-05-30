@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any bounded, sequential, rule-governed, transformative sequence of operations with defined start and end states constitutes a process.

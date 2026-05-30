@@ -1,0 +1,4 @@
+1. It can be given a term (label) within a domain vocabulary.
+2. Its necessary and sufficient conditions can be stated.
+3. Given any individual and the concept's conditions, it is possible (in principle) to determine whether the individual is an instance.
+4. It participates in at least one relationship (subsumption, composition, or association) with another concept in the domain.

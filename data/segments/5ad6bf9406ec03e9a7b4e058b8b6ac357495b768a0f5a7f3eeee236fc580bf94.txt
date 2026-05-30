@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any structure consisting of a non-empty node set and an edge set where each edge connects two nodes constitutes a graph.

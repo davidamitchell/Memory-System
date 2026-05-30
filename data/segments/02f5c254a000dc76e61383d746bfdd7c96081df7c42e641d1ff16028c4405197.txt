@@ -1,0 +1,1 @@
+A list is an ordered, finite sequence of elements in which the position of each element is significant and the sequence has defined first and last members.

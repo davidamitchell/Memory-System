@@ -1,0 +1,1 @@
+An ontology is a formal, explicit, shared specification of the concepts, relationships, and constraints that constitute a domain of discourse, enabling both human understanding and machine-processable reasoning over that domain.

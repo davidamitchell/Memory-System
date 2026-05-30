@@ -1,0 +1,5 @@
+1. Its inputs and outputs can be named and typed.
+2. Its steps can be enumerated in order.
+3. Its termination condition can be stated.
+4. It can be executed or simulated, and the outputs can be verified against expected results.
+5. Its instances can be monitored: at any point during execution, the current state is identifiable.

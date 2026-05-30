@@ -1,0 +1,4 @@
+1. It is declared with `owl:Class` (or equivalent) in the ontology.
+2. Its definition is stated using class axioms (e.g., `rdfs:subClassOf`, `owl:equivalentClass`, property restrictions).
+3. A reasoner can classify any given individual as a member, non-member, or indeterminate.
+4. Instances of the class can be queried via SPARQL using `rdf:type` or inference.

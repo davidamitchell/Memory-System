@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Discrete** — it exists as a bounded artifact distinguishable from all other documents.
+2. **Self-contained** — its content is cohesive and interpretable without requiring merger with another document.
+3. **Addressable** — it can be uniquely identified and located (e.g., by a URI, filename, or identifier).
+4. **Recorded** — its content is fixed at a point in time and persists independently of its author's presence.
+5. **Carries statements** — it asserts or records one or more propositions about subjects.

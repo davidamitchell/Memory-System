@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Information** | Information is contextualised data that reduces uncertainty; knowledge additionally requires verification, truth, and relational understanding. |
+| **Data** | Data is uncontextualised raw material; knowledge is the fully contextualised, verified, relational output. |
+| **Fact** | A fact is a single verified true statement; knowledge is the structured, interconnected set of facts and their relational context. |
+| **Wisdom** | Wisdom is the evaluative capacity to judge when and how to apply knowledge in complex situations; knowledge is the content that wisdom draws on. |

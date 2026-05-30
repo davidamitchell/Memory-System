@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Information extraction** | Information extraction identifies and structures surface-level data (named entities, dates, relations) from text; knowledge extraction additionally formalises these into an ontology, enabling reasoning and inference. |
+| **Data mining** | Data mining discovers statistical patterns in structured datasets; knowledge extraction operates on source documents and produces ontologically-grounded statements. |
+| **Knowledge discovery** | Knowledge discovery is a broader term including insight generation; knowledge extraction is specifically the formalisation step that precedes or enables discovery. |

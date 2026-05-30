@@ -1,0 +1,2 @@
+This document is intentionally minimal and contains no structured front-matter,
+no bold definition, and no related-term links.

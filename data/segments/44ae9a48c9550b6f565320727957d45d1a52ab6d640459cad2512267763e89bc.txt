@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Concept** | A concept is the intensional meaning (the idea); a class is the formal implementation of that concept in an ontology language. |
+| **Theme** | A theme is a soft, approximate grouping; a class has hard, formal membership conditions. |
+| **Individual** | An individual is an instance of a class; the class is the type, the individual is the token. |
+| **Set** | A mathematical set is defined only by its members; a class is defined by conditions that generate its membership, not by enumeration. |

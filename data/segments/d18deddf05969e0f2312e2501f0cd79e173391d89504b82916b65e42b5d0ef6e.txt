@@ -1,0 +1,4 @@
+1. It is expressed as a triple or assertion that is present in the knowledge base (asserted or derivable by the reasoner).
+2. Its provenance is traceable: the source and verification method are recorded.
+3. No contradicting verified assertion exists within the same knowledge base.
+4. It can be used as a premise in valid inferences to derive additional facts.

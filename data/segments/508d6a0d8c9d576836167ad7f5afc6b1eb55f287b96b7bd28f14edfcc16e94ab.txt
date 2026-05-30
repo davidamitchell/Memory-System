@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Modular** — it has defined boundaries that separate it from other components.
+2. **Functionally bounded** — it serves a specific, nameable representational or functional purpose.
+3. **Part of a larger whole** — it is a constituent of a system or ontology, not a standalone system in itself.
+4. **Composable** — it can be combined with other components to form the whole, and its contribution to the whole is determinate.
+5. **Independently identifiable** — it can be referenced, described, and reasoned about without requiring the entire system.

@@ -1,0 +1,1 @@
+A meta-model is a model whose domain of discourse is models themselves: it specifies the structure, valid constructs, constraints, and semantics that all conforming models within a defined class must satisfy.

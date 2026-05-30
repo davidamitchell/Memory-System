@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any set of verified, true statements about a domain, understood relationally and enabling reasoning or action within that domain, constitutes knowledge.

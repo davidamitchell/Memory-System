@@ -1,0 +1,1 @@
+An edge is a connection between two nodes in a graph that represents an association or relationship between the entities those nodes denote, optionally typed (labelled) and optionally directed.

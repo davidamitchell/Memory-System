@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **Class** | A class is the type; an individual is the token that is an instance of the type. |
+| **Concept** | A concept is the intensional meaning of a type; an individual is a specific thing that falls under that type. |
+| **Resource** | A resource is any URI-identified entity; an individual is specifically a resource that is classified as an instance in an ontology. All individuals are resources; not all resources are individuals. |
+| **Node** | A node is a graph-structural term; an individual is an ontological term. An individual is typically represented as a node. |

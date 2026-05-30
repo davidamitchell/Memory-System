@@ -1,0 +1,4 @@
+1. It has been verified against evidence from the domain (empirical or formal proof).
+2. No contradicting evidence or derivation exists within the knowledge base.
+3. A reasoner finds it consistent with all stated axioms and facts.
+4. It can be asserted without qualification in the knowledge base (i.e., added as an axiom or derived fact).

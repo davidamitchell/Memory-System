@@ -1,0 +1,3 @@
+1. A set of terms can be listed whose meanings are fixed and agreed within a specific community or system.
+2. A boundary condition can be stated: a term used outside this boundary may have a different or undefined meaning.
+3. An ontology, schema, or controlled vocabulary exists (or can be constructed) that governs interpretation within the boundary.

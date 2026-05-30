@@ -1,0 +1,4 @@
+1. An agent correctly applies knowledge in situations where the applicable rules conflict, are incomplete, or have not been previously encountered.
+2. The agent's decisions can be retrospectively justified by appeal to goals, values, and consequences — not merely to rules.
+3. The agent knows when *not* to apply a piece of knowledge (recognising scope limits).
+4. Outcomes produced by the agent are better (by agreed criteria) than those produced by rule-following alone.

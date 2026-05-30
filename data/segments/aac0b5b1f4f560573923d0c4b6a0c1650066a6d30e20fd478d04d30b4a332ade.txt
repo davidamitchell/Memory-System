@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any discrete, self-contained, addressable, recorded artifact that carries statements constitutes a document.

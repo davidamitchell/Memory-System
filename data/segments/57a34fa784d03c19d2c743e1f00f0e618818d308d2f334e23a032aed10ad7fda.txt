@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Rule-governed** — it consists of explicit, finite rules that determine which strings or structures are well-formed.
+2. **Structure-only** — it concerns the form of expressions, not their interpretation or truth conditions.
+3. **Language-specific** — the rules apply to a particular language; the syntax of one language does not govern another.
+4. **Decidable** — for any given expression, it is decidable (in finite steps) whether the expression is syntactically well-formed.

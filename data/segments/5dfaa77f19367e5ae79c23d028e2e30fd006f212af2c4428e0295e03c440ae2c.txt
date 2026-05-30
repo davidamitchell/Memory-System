@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **RDF reification** | RDF reification uses four standard triples to describe a triple; RDF-star uses compact embedded-triple syntax without creating new blank nodes. |
+| **Named graphs** | Named graphs assign provenance or context to a *set* of triples; RDF-star assigns metadata to an *individual* triple. |
+| **RDF** | RDF does not permit triples in subject/object position; RDF-star extends this capability. |

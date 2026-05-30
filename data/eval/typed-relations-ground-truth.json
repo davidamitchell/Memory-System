@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "description": "Hand-annotated typed relations for 10 foundational concept files. Derived from Distinguished From tables and operational definitions. Used for W-0206 eval scoring.",
+  "relation_types": ["contrasts", "uses", "partOf", "instanceOf", "implements", "relatedTerm"],
+  "annotated_files": [
+    {
+      "source": "foundational_concepts/concept.md",
+      "slug": "concept",
+      "typed_relations": [
+        {"target": "term",       "rel": "contrasts"},
+        {"target": "class",      "rel": "contrasts"},
+        {"target": "theme",      "rel": "contrasts"},
+        {"target": "individual", "rel": "contrasts"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/knowledge.md",
+      "slug": "knowledge",
+      "typed_relations": [
+        {"target": "information", "rel": "contrasts"},
+        {"target": "data",        "rel": "contrasts"},
+        {"target": "fact",        "rel": "contrasts"},
+        {"target": "wisdom",      "rel": "contrasts"},
+        {"target": "information", "rel": "uses"},
+        {"target": "fact",        "rel": "uses"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/class.md",
+      "slug": "class",
+      "typed_relations": [
+        {"target": "concept",    "rel": "contrasts"},
+        {"target": "theme",      "rel": "contrasts"},
+        {"target": "individual", "rel": "contrasts"},
+        {"target": "concept",    "rel": "implements"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/individual.md",
+      "slug": "individual",
+      "typed_relations": [
+        {"target": "class",    "rel": "contrasts"},
+        {"target": "concept",  "rel": "contrasts"},
+        {"target": "resource", "rel": "contrasts"},
+        {"target": "node",     "rel": "contrasts"},
+        {"target": "class",    "rel": "instanceOf"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/ontology.md",
+      "slug": "ontology",
+      "typed_relations": [
+        {"target": "model",        "rel": "contrasts"},
+        {"target": "concept",      "rel": "uses"},
+        {"target": "class",        "rel": "uses"},
+        {"target": "relationship", "rel": "uses"},
+        {"target": "domain",       "rel": "uses"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/graph.md",
+      "slug": "graph",
+      "typed_relations": [
+        {"target": "rdf",  "rel": "contrasts"},
+        {"target": "node", "rel": "uses"},
+        {"target": "edge", "rel": "uses"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/relationship.md",
+      "slug": "relationship",
+      "typed_relations": [
+        {"target": "attribute", "rel": "contrasts"},
+        {"target": "edge",      "rel": "contrasts"},
+        {"target": "node",      "rel": "uses"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/node.md",
+      "slug": "node",
+      "typed_relations": [
+        {"target": "resource",  "rel": "contrasts"},
+        {"target": "individual","rel": "contrasts"},
+        {"target": "edge",      "rel": "contrasts"},
+        {"target": "graph",     "rel": "partOf"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/edge.md",
+      "slug": "edge",
+      "typed_relations": [
+        {"target": "relationship", "rel": "contrasts"},
+        {"target": "node",         "rel": "contrasts"},
+        {"target": "attribute",    "rel": "contrasts"},
+        {"target": "graph",        "rel": "partOf"},
+        {"target": "relationship", "rel": "implements"}
+      ]
+    },
+    {
+      "source": "foundational_concepts/information.md",
+      "slug": "information",
+      "typed_relations": [
+        {"target": "data",      "rel": "contrasts"},
+        {"target": "knowledge", "rel": "contrasts"},
+        {"target": "fact",      "rel": "contrasts"},
+        {"target": "data",      "rel": "uses"}
+      ]
+    }
+  ]
+}

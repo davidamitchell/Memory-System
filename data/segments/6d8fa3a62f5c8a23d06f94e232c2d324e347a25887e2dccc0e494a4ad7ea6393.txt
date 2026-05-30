@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any model that defines the valid constructs, structure, and constraints for a class of models, and against which those models can be validated for conformance, constitutes a meta-model.

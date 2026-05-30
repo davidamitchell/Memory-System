@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Dataset** | A dataset is a structured collection of data records; a corpus is a collection of documents (which may be unstructured or semi-structured). |
+| **Archive** | An archive preserves documents for historical or compliance reasons without an explicit analytical purpose. |
+| **Knowledge base** | A knowledge base contains formalised statements derived from a corpus; a corpus contains the source documents prior to formalisation. |

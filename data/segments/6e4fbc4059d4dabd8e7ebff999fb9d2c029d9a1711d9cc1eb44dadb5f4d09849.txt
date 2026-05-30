@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Model** | A model represents a first-order domain; a meta-model represents the space of valid models. Every meta-model is a model, but not every model is a meta-model. |
+| **Ontology** | An ontology specifies the concepts and relationships of a first-order domain; a meta-model specifies the constructs and rules for building models (which may include ontologies). |
+| **Schema** | A schema constrains data instances within a single model; a meta-model constrains the structure of models themselves. |

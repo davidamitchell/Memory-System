@@ -1,0 +1,1 @@
+A resource is any entity that can be uniquely identified by a URI/IRI and about which statements can be made in an RDF-based knowledge representation; the atomic unit of reference in a knowledge graph.

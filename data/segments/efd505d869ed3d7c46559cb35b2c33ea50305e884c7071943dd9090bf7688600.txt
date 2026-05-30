@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any complete, explicit set of rules that determines the well-formedness of expressions in a language, independently of their meaning, constitutes a syntax for that language.

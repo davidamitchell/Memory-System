@@ -1,0 +1,1 @@
+A relationship is a typed, directed association between two resources (subject and object) that asserts a specific, named connection holding between them within a domain.

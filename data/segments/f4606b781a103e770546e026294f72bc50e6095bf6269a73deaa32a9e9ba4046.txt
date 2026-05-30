@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Resource** | A resource is the knowledge-representation term for an identifiable entity; a node is the graph-theoretic term for a vertex. In an RDF graph, resources correspond to nodes, but the concepts belong to different levels of abstraction. |
+| **Individual** | An individual is an ontological term for an instance of a class; a node is a graph-structural term. An individual is typically represented as a node, but not all nodes are individuals. |
+| **Edge** | An edge is a connection between nodes; a node is the connected entity itself. |

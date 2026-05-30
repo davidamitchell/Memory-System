@@ -1,0 +1,1 @@
+A node is a discrete vertex in a graph that represents a distinct entity, resource, concept, or value, and that may be connected to other nodes by edges.

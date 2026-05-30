@@ -1,0 +1,6 @@
+| Term | Distinction |
+|------|-------------|
+| **RDF** | RDF is a specific, URI-grounded, triple-based instantiation of a directed labelled graph with formal semantics; a graph is the abstract mathematical structure that RDF instantiates. |
+| **Tree** | A tree is a connected, acyclic graph; a general graph may have cycles and disconnected components. |
+| **Network** | Network is an informal term often used for applied or weighted graphs; graph is the formal mathematical term. |
+| **Knowledge Graph** | A knowledge graph is a graph whose nodes are entities or concepts and whose edges represent typed, asserted relationships, governed by an ontology; a graph is the abstract structure it instantiates. |

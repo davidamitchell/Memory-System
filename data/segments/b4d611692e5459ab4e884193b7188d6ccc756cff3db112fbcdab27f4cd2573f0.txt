@@ -1,0 +1,5 @@
+1. It can be named and described by a verb phrase (e.g., "extract named entities from markdown documents").
+2. Its preconditions can be listed (e.g., "given a markdown document and an entity schema").
+3. Its outputs can be described (e.g., "a set of entity–type pairs").
+4. Its limits can be stated (e.g., "limited to documents under 10,000 tokens").
+5. It can be tested: given valid inputs meeting the preconditions, does the agent reliably produce the described output class?

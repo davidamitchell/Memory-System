@@ -1,0 +1,4 @@
+1. Statements can be queried and new true statements can be derived by inference.
+2. The provenance of each statement is traceable (source, verification method).
+3. Inconsistency detection is possible: contradictory statements can be identified.
+4. An agent using the knowledge base demonstrably performs better in the domain than an agent without it.

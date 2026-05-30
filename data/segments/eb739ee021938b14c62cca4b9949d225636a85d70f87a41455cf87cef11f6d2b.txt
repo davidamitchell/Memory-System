@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Typed** — it has a named predicate that specifies the kind of connection (e.g., `isPartOf`, `dependsOn`).
+2. **Binary** — it connects exactly two participants: a subject (domain) and an object (range).
+3. **Directed** — it has a defined source (subject) and a defined target (object); the direction is not reversible without defining a distinct inverse relationship.
+4. **Between resources** — both subject and object are resources (URI/IRI-identified entities), not literals.
+5. **Asserted** — its existence is a claim that the named association holds between the two participants.

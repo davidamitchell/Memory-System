@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any linguistic expression that has been stipulatively assigned a single denotation within a defined domain constitutes a term for that domain.

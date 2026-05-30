@@ -1,0 +1,6 @@
+**Necessary conditions:**
+1. **Models models** — its subject matter is the structure and valid elements of models, not of a first-order domain.
+2. **Normative** — it prescribes what constitutes a valid model in its class; conformance to the meta-model is testable.
+3. **Structural** — it defines the types of constructs (classes, properties, relationships) that may appear in conforming models.
+4. **Constraining** — it imposes restrictions on how constructs may be combined, ordered, or typed.
+5. **Class-scoped** — it governs a family of models, not a single model instance.

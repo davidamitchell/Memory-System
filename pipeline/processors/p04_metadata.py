@@ -27,9 +27,9 @@ def run(state: dict, repo_root: Path) -> dict:  # noqa: ARG001
     front_matter = state["front_matter"]
     retrieval_time = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    # Rule: files from the glossary/ path are authoritative (curated, hand-authored)
+    # Rule: files from the foundational_concepts/ path are authoritative (curated, hand-authored)
     source_path: str = state["source_path"]
-    if source_path.startswith("glossary/"):
+    if source_path.startswith("foundational_concepts/"):
         source_authority = "authoritative"
     else:
         source_authority = "secondary"

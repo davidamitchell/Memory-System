@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any extension of RDF in which triples can appear in subject or object position of other triples, and which preserves standard RDF semantics for non-embedded triples, constitutes RDF-star.

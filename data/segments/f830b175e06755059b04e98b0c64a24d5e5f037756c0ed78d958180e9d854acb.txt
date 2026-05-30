@@ -1,0 +1,1 @@
+Syntax is the set of formal rules that define the structure and composition of well-formed expressions in a language, independent of the meanings those expressions carry.

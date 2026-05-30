@@ -1,0 +1,1 @@
+Information is data that has been assigned context and structure such that it is interpretable by an agent and reduces uncertainty about a state of affairs, without requiring verification of its truth.

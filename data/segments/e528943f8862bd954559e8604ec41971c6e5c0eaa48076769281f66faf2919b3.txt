@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+A proposition is true if and only if it corresponds to the actual state of affairs in the domain it describes, or equivalently, is satisfied by all intended models of that domain.

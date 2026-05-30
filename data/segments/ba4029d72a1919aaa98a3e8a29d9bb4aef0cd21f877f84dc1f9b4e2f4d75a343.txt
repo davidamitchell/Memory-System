@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Semantics** | Semantics assigns meaning to well-formed expressions; syntax only determines which expressions are well-formed. |
+| **Format** | Format is an informal term for a data layout convention; syntax is a formal specification with decidable well-formedness. |
+| **Schema** | A schema constrains the structure of data instances; syntax constrains the structure of the language's expressions before data meaning is considered. |

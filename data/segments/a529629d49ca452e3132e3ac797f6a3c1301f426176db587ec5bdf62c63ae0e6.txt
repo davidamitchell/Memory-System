@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Process** | A process is a sequence of operations; a capability is the stable ability to execute a process or class of processes. A capability may be realised by multiple processes. |
+| **Function** | Function (in software) is a specific executable unit; capability is the domain-level ability that one or more functions may implement. |
+| **Skill** | Skill is an informal synonym; capability is the formal, preconditioned, constrained version used in knowledge system design. |

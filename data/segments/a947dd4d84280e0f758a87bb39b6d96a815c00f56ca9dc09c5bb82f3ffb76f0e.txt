@@ -1,0 +1,4 @@
+1. It has a defined scope: a set of classes, properties, or axioms that belong to it and a set that do not.
+2. It can be serialised and loaded independently (e.g., as a separate ontology module via `owl:imports`).
+3. Its interface is defined: what it exports (terms usable by other components) and what it imports (terms it depends on).
+4. Removing it from the system produces a well-defined reduction in the system's capabilities.

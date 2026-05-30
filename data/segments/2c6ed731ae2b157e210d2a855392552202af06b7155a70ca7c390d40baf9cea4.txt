@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any named property whose range is a typed data value, asserted of a resource, constitutes an attribute.

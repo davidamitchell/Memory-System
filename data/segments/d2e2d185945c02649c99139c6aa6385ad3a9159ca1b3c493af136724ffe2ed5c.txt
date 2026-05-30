@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Information** | Information is data that has been contextualised and structured to be interpretable and to reduce uncertainty; data is the pre-contextualised raw material. |
+| **Fact** | A fact is a verified true statement about the world; data is unverified and uninterpreted. |
+| **Metadata** | Metadata is structured description about a resource; data is the raw content the metadata describes. |

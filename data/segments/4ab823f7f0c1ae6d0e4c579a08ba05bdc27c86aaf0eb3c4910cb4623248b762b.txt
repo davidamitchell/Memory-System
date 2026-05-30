@@ -1,0 +1,1 @@
+RDF-star (RDF*) is an extension of RDF that allows an existing triple to be used directly as the subject or object of another triple — called an *embedded triple* — enabling statements about statements without full reification.

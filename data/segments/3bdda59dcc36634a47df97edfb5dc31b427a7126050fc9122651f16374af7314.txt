@@ -1,0 +1,4 @@
+1. A schema or formal specification exists that lists the permitted element types and their valid combinations.
+2. Any candidate model can be tested for conformance: the meta-model determines pass/fail.
+3. Modelling tools use it to constrain what can be created (e.g., an ontology editor enforcing OWL syntax and semantics).
+4. It is itself expressed in a meta-modelling language (e.g., OWL is the meta-model for OWL ontologies; MOF is the meta-model for UML).

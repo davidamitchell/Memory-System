@@ -1,6 +1,6 @@
 # Memory-System — GitHub Open-Brain
 
-A **GitHub-native**, [agent-native](./glossary/agent-first.md) knowledge store backed by GitHub Markdown files and an **ontology-based [knowledge graph](./glossary/knowledge-graph.md)**, exposed to [AI](./glossary/ai-agent.md) tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](./glossary/mcp.md).
+A **GitHub-native**, [agent-native](./foundational_concepts/concept.md) knowledge store backed by GitHub Markdown files and an **ontology-based [knowledge graph](./foundational_concepts/graph.md)**, exposed to [AI](./foundational_concepts/knowledge.md) tools (Claude Desktop, Cursor, GitHub Copilot) via the [Model Context Protocol (MCP)](./foundational_concepts/semantics.md).
 
 All pipeline processing runs inside **GitHub Actions**. There is no local deployment and no CLI interaction required from the user. Push a document to the repository and the pipeline runs automatically. The only deployment target is GitHub.
 
@@ -41,11 +41,11 @@ All pipeline processing runs inside **GitHub Actions**. There is no local deploy
         └──────────────────┘
 ```
 
-1. **Storage** — Knowledge lives as [memory files](./glossary/memory-file.md) (`.md` files) in `/meetings`, `/journal`, and `/projects`, and as versioned ontology snapshots in the Ontology Store.
+1. **Storage** — Knowledge lives as [memory files](./foundational_concepts/document.md) (`.md` files) in `/meetings`, `/journal`, and `/projects`, and as versioned ontology snapshots in the Ontology Store.
 2. **Processing Pipeline** — A 12-processor pipeline (see [ADR-0004](./_docs/adr/0004-provenance-model-and-control-plane.md)) extracts concepts from source documents using LLM (via `gh models run`), builds domain ontologies, validates consistency, and commits versioned ontology snapshots.
 3. **Ontology Store** — An upper ontology (domain taxonomy) and per-domain lower ontologies, serialised as OWL/RDF/JSON-LD. Every assertion traces back to a content-addressed source segment.
 4. **GitHub Actions Trigger** — Every pipeline run is triggered by a GitHub Actions workflow, not local CLI. Push a document to `raw_document_corpus/` and the pipeline runs automatically, commits the updated ontology, and redeploys the Pages site.
-5. **MCP Bridge** — The [MCP server](./glossary/mcp-server.md) exposes [MCP tools](./glossary/mcp-tool.md) to any MCP-compatible AI client for querying and writing to the knowledge store (not yet implemented — see [ADR-0002](./_docs/adr/0002-move-from-vector-storage-to-ontology.md)).
+5. **MCP Bridge** — The [MCP server](./foundational_concepts/resource.md) exposes [MCP tools](./foundational_concepts/capability.md) to any MCP-compatible AI client for querying and writing to the knowledge store (not yet implemented — see [ADR-0002](./_docs/adr/0002-move-from-vector-storage-to-ontology.md)).
 
 See the [design space](./_docs/design/ontology-system-design.md) for full component and sequence diagrams.
 
@@ -98,7 +98,7 @@ Memory-System/
 ├── _docs/
 │   ├── adr/                     # Architecture Decision Records (MADR format)
 │   └── design/                  # Conceptual design space — components and diagrams
-├── glossary/                    # Controlled vocabulary — one definition file per term
+├── foundational_concepts/       # Base ontology — foundational meta-model definitions
 ├── definition_scheme.md         # Schema and rules every definition file must follow
 ├── mcp_server.py              # Legacy prototype (vector/LanceDB-based) — to be replaced
 ├── requirements.txt           # Python dependencies
@@ -128,8 +128,8 @@ Memory-System/
 - [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) — rules for AI agents working in this repo
 - [`_docs/design/ontology-system-design.md`](./_docs/design/ontology-system-design.md) — full architecture: components, pipeline, diagrams
 - [`_docs/adr/README.md`](./_docs/adr/README.md) — all Architecture Decision Records
-- [`glossary/README.md`](./glossary/README.md) — controlled vocabulary: definitions for every key term in the system
-- [`definition_scheme.md`](./definition_scheme.md) — the schema every glossary definition file must follow
+- [`foundational_concepts/README.md`](./foundational_concepts/README.md) — base ontology: foundational meta-model definitions
+- [`definition_scheme.md`](./definition_scheme.md) — the schema every foundational concept definition file must follow
 
 ---
 

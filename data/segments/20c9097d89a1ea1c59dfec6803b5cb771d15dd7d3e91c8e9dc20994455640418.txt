@@ -1,0 +1,1 @@
+A class is operationally identified when:

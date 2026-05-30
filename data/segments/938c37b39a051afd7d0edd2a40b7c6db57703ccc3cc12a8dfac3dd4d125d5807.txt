@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any entity that has been assigned a URI/IRI and can appear in the subject or object position of a statement constitutes a resource.

@@ -1,0 +1,4 @@
+Inference rules are the mechanism by which a reasoning engine extends a
+knowledge base without requiring explicit enumeration of every derivable fact.
+They are fundamental to automated reasoning systems, expert systems, and
+description logic reasoners such as those used in OWL ontologies.

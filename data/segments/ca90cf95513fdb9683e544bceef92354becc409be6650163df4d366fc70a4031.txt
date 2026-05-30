@@ -1,0 +1,3 @@
+1. It can be stored and retrieved without a domain interpretation being required by the storage mechanism.
+2. The same data can be interpreted differently by different agents applying different schemas (demonstrating it is pre-interpretive).
+3. It serves as the input to an information-construction process that assigns schema, context, or meaning.

@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any entity that is identified by a URI/IRI (or scoped blank node) and is asserted or inferred to be an instance of at least one class in the ontology constitutes an individual.

@@ -1,0 +1,1 @@
+Knowledge extraction is the process of identifying concepts, relationships, and facts within unstructured or semi-structured source material and formalising them as structured, machine-processable representations conformant to a defined ontology or schema.

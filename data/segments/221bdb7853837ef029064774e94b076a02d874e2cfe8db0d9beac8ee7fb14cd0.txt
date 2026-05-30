@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Node set** — it contains at least one node (non-empty).
+2. **Edge set** — it contains a (possibly empty) set of edges, each connecting exactly two nodes (which may be the same node, in the case of a self-loop).
+3. **Binary relationships** — edges represent pairwise connections; edges connect exactly two endpoints.
+4. **Well-defined** — for any given structure, it is decidable whether each element is a node, an edge, or neither.

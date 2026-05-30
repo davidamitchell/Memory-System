@@ -1,0 +1,4 @@
+**Necessary conditions:**
+1. **Connects two nodes** — it has exactly two endpoints (source and target in a directed graph; two endpoints in an undirected graph).
+2. **Graph-resident** — it exists within the context of a graph and has no meaning outside it.
+3. **Representational** — it represents an association or relationship between the entities at its endpoints.

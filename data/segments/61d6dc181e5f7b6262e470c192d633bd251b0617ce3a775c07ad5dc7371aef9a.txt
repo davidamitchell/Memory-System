@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any contextualised, interpretable, uncertainty-reducing representation derived from data constitutes information.

@@ -1,0 +1,4 @@
+1. Its membership criterion is stated (e.g., "all completed research items in the Research repository as of a given date").
+2. Its purpose is declared (e.g., "source material for ontology construction").
+3. Its boundaries can be tested: given any candidate document, it can be determined whether it is a member.
+4. It can be iterated over exhaustively.

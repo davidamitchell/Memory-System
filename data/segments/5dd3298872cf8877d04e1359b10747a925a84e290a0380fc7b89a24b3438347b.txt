@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Record** | A record is typically a structured data entry within a larger store; a document is independently interpretable content with its own identity. |
+| **Resource** | A resource is any identifiable entity (including documents); a document is specifically a recorded-content resource. |
+| **Individual** | An individual is an instance in an ontology; a document is the physical/digital artifact that may describe or constitute evidence for individuals. |

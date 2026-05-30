@@ -1,0 +1,4 @@
+1. A dataset requires statements about statements (e.g., provenance, confidence scores, temporal validity on individual triples).
+2. The data is serialised in an RDF-star-compatible syntax (e.g., Turtle-star, N-Triples-star).
+3. An RDF-star-aware query engine is used to process the embedded triples.
+4. The embedded triple syntax `<< s p o >>` appears in the serialisation.

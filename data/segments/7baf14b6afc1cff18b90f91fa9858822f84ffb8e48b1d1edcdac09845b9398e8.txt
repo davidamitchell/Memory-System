@@ -1,0 +1,1 @@
+A concept is an abstract unit of meaning that represents a category of entities or a type of thing, defined by necessary and sufficient conditions that determine which individuals fall under it.

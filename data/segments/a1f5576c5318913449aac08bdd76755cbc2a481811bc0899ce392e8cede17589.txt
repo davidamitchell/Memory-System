@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any recurrent, nameable, semantically coherent subject of concern that groups related concepts or documents without hard membership boundaries constitutes a theme.

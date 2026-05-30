@@ -1,0 +1,2 @@
+**Sufficient conditions:**  
+Any proposition that is true, verified, and recorded within a knowledge base for a defined domain constitutes a fact.

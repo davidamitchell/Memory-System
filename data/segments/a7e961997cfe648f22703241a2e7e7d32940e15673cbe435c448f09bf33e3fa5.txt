@@ -1,0 +1,4 @@
+1. Its derivation can be traced to specific source facts and an explicit inference or analysis method.
+2. It could not be found by retrieving any single source fact or document.
+3. It changes or refines the state of the knowledge base: a new class relationship, a gap in coverage, an unexpected dependency.
+4. An agent acting on it would behave differently than an agent without it.

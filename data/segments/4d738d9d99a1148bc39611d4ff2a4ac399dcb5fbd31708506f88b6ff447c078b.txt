@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Syntax** | Syntax specifies the structural rules for well-formed expressions; semantics specifies what those expressions mean. A syntactically valid expression may be semantically void or inconsistent. |
+| **Pragmatics** | Pragmatics concerns the use of language in context; semantics concerns meaning independent of use context. |
+| **Ontology** | An ontology encodes domain semantics in a formal language; semantics is the theory that defines what the ontology's statements mean. |

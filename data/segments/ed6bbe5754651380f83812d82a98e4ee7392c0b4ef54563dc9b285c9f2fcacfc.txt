@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Derived** — it is the output of an inferential or analytical process over facts; it is not directly observed or asserted.
+2. **Non-obvious** — it is not entailed by a single fact in isolation; its value lies in the connection it draws across multiple facts or abstractions.
+3. **Grounded** — it is traceable to specific facts or evidence; it is not speculative beyond what the evidence supports.
+4. **Explanatory or actionable** — it contributes to understanding why or how something is the case, or it enables a decision or action that could not be made without it.

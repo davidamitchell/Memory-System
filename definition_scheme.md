@@ -1,6 +1,6 @@
 # Definition Scheme
 
-This file defines the mandatory schema every file in `glossary/` must follow.
+This file defines the mandatory schema every file in `foundational_concepts/` must follow.
 It is the single source of truth for structure, required fields, and cross-linking rules.
 Any agent creating or editing a definition file must read this file first.
 
@@ -10,10 +10,10 @@ Any agent creating or editing a definition file must read this file first.
 
 ### 1. File location
 
-All definition files live in `glossary/`.
+All definition files live in `foundational_concepts/`.
 Filename must be `<kebab-case-term>.md` (lower-case, hyphens, no spaces).
 
-Examples: `glossary/mcp.md`, `glossary/vector-embedding.md`, `glossary/yaml-front-matter.md`
+Examples: `foundational_concepts/ontology.md`, `foundational_concepts/concept.md`, `foundational_concepts/syntax.md`
 
 ### 2. Required YAML front matter
 
@@ -95,10 +95,10 @@ If no external URL exists, cite the relevant file in this repository:
 When a defined term appears in **any** file in this repository:
 - Link it **on its first occurrence only** in that file.
 - Do not link it again in the same file (not in headers, not in the same section, not in code blocks).
-- Use the relative path from the file's location to `glossary/`.
-  - From repo root: `[Term](./glossary/term.md)`
-  - From a first-level subfolder (`projects/`, `journal/`, etc.): `[Term](../glossary/term.md)`
-  - From a second-level subfolder (`_docs/adr/`): `[Term](../../glossary/term.md)`
+- Use the relative path from the file's location to `foundational_concepts/`.
+  - From repo root: `[Term](./foundational_concepts/term.md)`
+  - From a first-level subfolder (`projects/`, `journal/`, etc.): `[Term](../foundational_concepts/term.md)`
+  - From a second-level subfolder (`_docs/adr/`): `[Term](../../foundational_concepts/term.md)`
 - Do not link terms inside YAML front matter, code blocks, or inline code spans.
 
 ### 5. Aliases
@@ -112,12 +112,12 @@ Use this exact string everywhere the term is mentioned in prose (including links
 
 ### 7. Adding a new term — checklist
 
-- [ ] File created in `glossary/<kebab-case>.md`
+- [ ] File created in `foundational_concepts/<kebab-case>.md`
 - [ ] All front matter fields present and valid category used
 - [ ] One-line bold definition present
 - [ ] All four required sections present in correct order
 - [ ] Minimum one external reference
-- [ ] New entry added to `glossary/README.md` index table
+- [ ] New entry added to `foundational_concepts/README.md` index table
 - [ ] First occurrence of the term cross-linked in any files where it appears
 
 ### 8. Updating an existing term
@@ -125,7 +125,7 @@ Use this exact string everywhere the term is mentioned in prose (including links
 - Edit the definition file in place.
 - If the meaning changes substantially, note the old meaning in `## Definition` and explain the change.
 - Do not delete history — this is a living knowledge base.
-- Update `glossary/README.md` if the category or title changes.
+- Update `foundational_concepts/README.md` if the category or title changes.
 
 ---
 

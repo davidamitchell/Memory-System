@@ -5,7 +5,7 @@ in the ``ms:`` namespace.  Tie-break rule: first signal wins when
 multiple signals are present.
 
 Canonical domain map:
-  Vocabulary                → ms:VocabularyDomain
+  FoundationalConcept        → ms:FoundationalConceptDomain
   ArchitectureDecisionRecord → ms:ArchitectureDecisionRecordDomain
   Design                    → ms:DesignDomain
   ResearchDocument          → ms:ResearchDocumentDomain
@@ -22,7 +22,7 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 _DOMAIN_URI_MAP = {
-    "Vocabulary": "ms:VocabularyDomain",
+    "FoundationalConcept": "ms:FoundationalConceptDomain",
     "ArchitectureDecisionRecord": "ms:ArchitectureDecisionRecordDomain",
     "Design": "ms:DesignDomain",
     "ResearchDocument": "ms:ResearchDocumentDomain",

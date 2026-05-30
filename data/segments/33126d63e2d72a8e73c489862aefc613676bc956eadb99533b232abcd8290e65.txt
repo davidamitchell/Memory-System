@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Linguistic** — it is a word or phrase in a natural or formal language.
+2. **Domain-scoped** — its denotation is fixed within a specific domain; outside that domain it may denote differently or not at all.
+3. **Univocal** — within its domain, it denotes exactly one concept (no polysemy within scope).
+4. **Assigned** — the denotation is stipulated, not merely habitual; there is a definitional act binding term to concept.

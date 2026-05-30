@@ -1,0 +1,1 @@
+Metadata is the set of attributes and relationships that describe the identity, provenance, structure, and administrative properties of a resource or document, without constituting the primary subject-matter content of that resource.

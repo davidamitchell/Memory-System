@@ -1,0 +1,1 @@
+A component is a modular, functionally bounded part of a larger ontology or knowledge system that can be independently identified, defined, and composed with other components, and that fulfils a specific representational or functional role within the whole.

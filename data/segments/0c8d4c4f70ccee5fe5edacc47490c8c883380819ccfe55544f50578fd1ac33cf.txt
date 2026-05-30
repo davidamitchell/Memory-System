@@ -1,0 +1,5 @@
+| Term | Distinction |
+|------|-------------|
+| **Data** | Data is the raw, uninterpreted primary content; metadata is the structured description *about* that content. |
+| **Attribute** | An attribute is a single name–value property; metadata is the aggregate collection of attributes (and relationships) describing a resource. |
+| **Content** | Content is what the resource is about (its subject matter); metadata is what the resource is (its description). |

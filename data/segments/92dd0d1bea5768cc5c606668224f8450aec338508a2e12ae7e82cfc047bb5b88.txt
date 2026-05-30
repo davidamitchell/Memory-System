@@ -1,0 +1,4 @@
+1. A label can be assigned to it (e.g., "agentic-ai", "governance").
+2. A set of documents or concepts can be listed as falling under it, with defensible reasons for inclusion.
+3. Removing it from a classification system would reduce the cohesion of related groupings.
+4. Its scope can be described in a sentence without enumerating every member.

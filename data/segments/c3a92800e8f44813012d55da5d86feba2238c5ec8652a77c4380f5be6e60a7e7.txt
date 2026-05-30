@@ -1,0 +1,4 @@
+1. A dataset can be serialised in a conformant RDF syntax (e.g., Turtle, N-Triples, JSON-LD, RDF/XML).
+2. Each triple can be extracted and processed independently by an RDF-aware processor.
+3. Two RDF graphs can be merged by taking the union of their triple sets without name collisions (given shared URI namespaces).
+4. SPARQL queries can be executed against the dataset.

@@ -1,0 +1,5 @@
+**Necessary conditions:**
+1. **Named** — it has a URI/IRI identifying the property type.
+2. **Data-valued** — its range is a literal (string, number, date, boolean, etc.), not a URI/IRI-identified resource.
+3. **Subject-attached** — it is asserted of a specific resource (the subject).
+4. **Typed** — the literal value has a datatype (explicit or inferred, e.g., `xsd:string`, `xsd:dateTime`).

@@ -1,0 +1,7 @@
+| Term | Distinction |
+|------|-------------|
+| **Taxonomy** | A taxonomy organises concepts in a hierarchy (is-a only); an ontology additionally defines non-hierarchical relationships and formal constraints. |
+| **Vocabulary / Glossary** | A vocabulary assigns natural-language definitions to terms; an ontology assigns formal, machine-processable definitions. |
+| **Schema** | A schema constrains data structures; an ontology additionally carries semantic commitments about what entities and relationships mean. |
+| **Model** | A model represents selected aspects of a domain for a purpose; an ontology is a normative specification of the domain's conceptual structure. |
+| **Knowledge Graph** | A knowledge graph is a populated instance of an ontology (individuals + assertions); the ontology is the schema governing it. |
