@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Ontology Pipeline"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -19,6 +22,7 @@ jobs:
   export:
     name: Export ontology data
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
