@@ -25,7 +25,6 @@ from pipeline.export_html import (
     render_overview,
     render_page,
     render_relations,
-    tag_badges,
 )
 
 MS = Namespace("https://memory.example.org/ms/")
@@ -46,8 +45,6 @@ def _build_minimal_graph() -> Graph:
     g.add((nodeA, RDFS.label, Literal("Concept A")))
     g.add((nodeA, RDFS.comment, Literal("First test concept.")))
     g.add((nodeA, MS.aliases, Literal("alias-a")))
-    g.add((nodeA, MS.hasTag, Literal("test")))
-    g.add((nodeA, MS.hasTag, Literal("alpha")))
     g.add((nodeA, MS.inDomain, MS.TestDomain))
     g.add((nodeA, MS.relatedTerm, MS["assertion/concept-b"]))
 
@@ -99,18 +96,13 @@ class TestExportOntologyConceptList:
     def test_concept_has_required_fields(self):
         data = export_ontology(_build_minimal_graph(), "v0001")
         for concept in data["concepts"]:
-            for field in ("id", "label", "comment", "aliases", "tags", "domain", "related"):
+            for field in ("id", "label", "comment", "aliases", "domain", "related"):
                 assert field in concept, f"Missing field '{field}' in concept {concept.get('id')}"
 
     def test_aliases_exported(self):
         data = export_ontology(_build_minimal_graph(), "v0001")
         concept_a = next(c for c in data["concepts"] if c["id"] == "concept-a")
         assert "alias-a" in concept_a["aliases"]
-
-    def test_tags_exported(self):
-        data = export_ontology(_build_minimal_graph(), "v0001")
-        concept_a = next(c for c in data["concepts"] if c["id"] == "concept-a")
-        assert sorted(concept_a["tags"]) == ["alpha", "test"]
 
     def test_domain_field_is_local_name(self):
         data = export_ontology(_build_minimal_graph(), "v0001")
@@ -214,12 +206,6 @@ class TestHtmlHelpers:
         assert "ontology" in result
         assert '<span' in result
 
-    def test_tag_badges_multiple(self):
-        result = tag_badges(["ai", "graph", "logic"])
-        assert "ai" in result
-        assert "graph" in result
-        assert "logic" in result
-
 
 # ---------------------------------------------------------------------------
 # render_overview — section HTML
@@ -259,11 +245,6 @@ class TestRenderConcepts:
         html = render_concepts(self._sample_data())
         assert "Concept A" in html
         assert "Concept B" in html
-
-    def test_contains_tags(self):
-        html = render_concepts(self._sample_data())
-        assert "test" in html
-        assert "alpha" in html
 
     def test_html_escapes_special_chars(self):
         """Labels with HTML-special characters are safely escaped."""

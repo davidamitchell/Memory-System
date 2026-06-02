@@ -1,17 +1,13 @@
 {
   "meta": {
-    "version": "v0124",
-    "generated": "2026-05-30T03:54:26Z",
+    "version": "v0150",
+    "generated": "2026-06-02T20:05:54Z",
     "counts": {
-      "concepts": 85,
+      "concepts": 35,
       "relations": 0,
-      "documents": 85
+      "documents": 35
     },
     "domain_distribution": [
-      {
-        "domain": "ResearchDocumentDomain",
-        "count": 50
-      },
       {
         "domain": "FoundationalConceptDomain",
         "count": 35
@@ -21,143 +17,10 @@
   },
   "concepts": [
     {
-      "id": "2026-05-16-agent-operational-cost-vs-gap-closure-cost",
-      "label": "Agent Operational Cost vs Gap Closure Cost",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-16-agent-operational-cost-vs-gap-closure-cost.md"
-      ]
-    },
-    {
-      "id": "2026-04-02-ai-company-hiring-strategies",
-      "label": "AI company hiring strategies: what job ads and recent hires reveal about strategic direction",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-02-ai-company-hiring-strategies.md"
-      ]
-    },
-    {
-      "id": "2026-02-28-ai-strategy-business-efficiency-examples",
-      "label": "AI Strategy Examples: Business Efficiency Focus",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-02-28-ai-strategy-business-efficiency-examples.md"
-      ]
-    },
-    {
-      "id": "2026-02-28-ai-strategy-risk-reduction-focus",
-      "label": "AI Strategy Examples: Risk Reduction Focus",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-02-28-ai-strategy-risk-reduction-focus.md"
-      ]
-    },
-    {
-      "id": "2026-02-28-ai-strategy-swe-focus",
-      "label": "AI Strategy Examples: Software Engineering Focus",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-02-28-ai-strategy-swe-focus.md"
-      ]
-    },
-    {
-      "id": "2026-02-28-ai-strategy",
-      "label": "AI Strategy: global and NZ examples, policy frameworks, regulations, and use-case typologies",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-02-28-ai-strategy.md"
-      ]
-    },
-    {
-      "id": "2026-03-18-human-brain-prediction-machines",
-      "label": "Are Human Brains Just Prediction Machines? Comparing Predictive Processing and Large Language Model Next-Token Generation",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-18-human-brain-prediction-machines.md"
-      ]
-    },
-    {
-      "id": "2026-05-18-agentic-explainability-vs-traditional",
-      "label": "Are Multi-Step Large Language Model-Based Systems Inherently Less Explainable Than Equivalently Scoped Deterministic Software Systems?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-18-agentic-explainability-vs-traditional.md"
-      ]
-    },
-    {
-      "id": "2026-04-30-ai-code-entropy-quality-metrics",
-      "label": "Artificial Intelligence code entropy and complexity: does repeated AI code generation without architectural guardrails increase software entropy over time?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-30-ai-code-entropy-quality-metrics.md"
-      ]
-    },
-    {
-      "id": "2026-05-01-ai-coding-harness-quality-benchmarks",
-      "label": "Artificial Intelligence coding harness quality benchmarks: what measures are used to evaluate Artificial Intelligence coding tools and who scores highest?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-01-ai-coding-harness-quality-benchmarks.md"
-      ]
-    },
-    {
-      "id": "2026-05-20-hitl-capacity-thresholds-in-banking-compliance",
-      "label": "At what threshold does Human-in-the-Loop (HITL) oversight in bank compliance operations stop being a meaningful challenge function and become routine acceptance of automated outputs?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-20-hitl-capacity-thresholds-in-banking-compliance.md"
-      ]
-    },
-    {
       "id": "attribute",
       "label": "Attribute",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -165,23 +28,10 @@
       ]
     },
     {
-      "id": "2026-04-01-backpressure-theory-of-constraints",
-      "label": "Backpressure Infrastructure and the Theory of Constraints",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-01-backpressure-theory-of-constraints.md"
-      ]
-    },
-    {
       "id": "capability",
       "label": "Capability",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -193,7 +43,6 @@
       "label": "Class",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -201,35 +50,10 @@
       ]
     },
     {
-      "id": "2026-03-22-code-architecture-inspection",
-      "label": "Code Architecture Inspection Across Repositories",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-22-code-architecture-inspection.md"
-      ]
-    },
-    {
-      "id": "2026-05-09-compliance-risks-stochastic-llm-governance-decisions",
-      "label": "Compliance Risks of Relying on Stochastic Large Language Model (LLM) Outputs for Governance, Privacy, and Regulatory Decisions",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-09-compliance-risks-stochastic-llm-governance-decisions.md"
-      ]
-    },
-    {
       "id": "component",
       "label": "Component",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -241,7 +65,6 @@
       "label": "Concept",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -253,7 +76,6 @@
       "label": "Corpus",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -261,23 +83,10 @@
       ]
     },
     {
-      "id": "2026-04-27-cryptographic-intent-preservation-runtime-evaluation",
-      "label": "Cryptographic preservation and runtime evaluation of original intent: a representation formalism for Getting Started phase intent that is simultaneously verifiable and semantically stable across the full operational lifecycle",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-27-cryptographic-intent-preservation-runtime-evaluation.md"
-      ]
-    },
-    {
       "id": "data",
       "label": "Data",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -285,35 +94,10 @@
       ]
     },
     {
-      "id": "2026-05-12-data-product-ontology",
-      "label": "Data product ontology: definition, adoption, and current relevance",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-12-data-product-ontology.md"
-      ]
-    },
-    {
-      "id": "2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure",
-      "label": "Deterministic circuit-breakers and real-time infrastructure constraints for hybrid reasoning stacks",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure.md"
-      ]
-    },
-    {
       "id": "document",
       "label": "Document",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -325,7 +109,6 @@
       "label": "Domain",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -337,7 +120,6 @@
       "label": "Edge",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -345,47 +127,10 @@
       ]
     },
     {
-      "id": "2026-03-04-sdlc-ai-prompt-patterns",
-      "label": "Emergent Patterns in Software Engineering Prompts and SDLC Guidance",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-04-sdlc-ai-prompt-patterns.md"
-      ]
-    },
-    {
-      "id": "2026-03-28-environment-setup-consistency",
-      "label": "Environment setup consistency: what each agent sees when it starts work in this repo and how to make it consistent",
-      "comment": "Scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-28-environment-setup-consistency.md"
-      ]
-    },
-    {
-      "id": "2026-03-18-explore-to-exploit-synthesis-gap",
-      "label": "Explore to exploit: the synthesis step that makes exploitation pay off",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-18-explore-to-exploit-synthesis-gap.md"
-      ]
-    },
-    {
       "id": "fact",
       "label": "Fact",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -397,7 +142,6 @@
       "label": "Graph",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -405,83 +149,10 @@
       ]
     },
     {
-      "id": "2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways",
-      "label": "How Can Institutions Align Strategic Relevance Pathways with Human Low-Effort Behaviour?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways.md"
-      ]
-    },
-    {
-      "id": "2026-05-08-capability-debt-definition-measurement-ai-risk-amplification",
-      "label": "How can organisational capability debt be rigorously defined and measured as a leading indicator of Artificial Intelligence (AI)-related enterprise risk, and how does pre-existing capability debt amplify risks from autonomous AI systems when human rate limits are removed?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-08-capability-debt-definition-measurement-ai-risk-amplification.md"
-      ]
-    },
-    {
-      "id": "2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer",
-      "label": "How Do Asset Specificity and Information Asymmetry Block Knowledge Transfer?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer.md"
-      ]
-    },
-    {
-      "id": "2026-03-07-run-build-it-allocation-implementation-how",
-      "label": "How organisations practically implement IT RUN vs BUILD cost allocation",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-07-run-build-it-allocation-implementation-how.md"
-      ]
-    },
-    {
-      "id": "2026-04-26-ai-lowcode-risk-tier-classification-controls",
-      "label": "How should Artificial Intelligence (AI) and low-code use cases be classified into risk tiers, and how should governance controls vary across those tiers?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-26-ai-lowcode-risk-tier-classification-controls.md"
-      ]
-    },
-    {
-      "id": "2026-05-20-banking-ai-syntactic-confidence-trap",
-      "label": "How should banks stop fluent but weakly evidenced Artificial Intelligence (AI)-generated compliance narratives from being mistaken for verified truth?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-20-banking-ai-syntactic-confidence-trap.md"
-      ]
-    },
-    {
       "id": "individual",
       "label": "Individual",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -493,7 +164,6 @@
       "label": "Information",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -505,7 +175,6 @@
       "label": "Insight",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -513,47 +182,10 @@
       ]
     },
     {
-      "id": "2026-03-15-saas-banking-invariants",
-      "label": "Invariants in Software as a Service (SaaS) Banking Software",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-15-saas-banking-invariants.md"
-      ]
-    },
-    {
-      "id": "2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate",
-      "label": "IT Throughput Constraint Magnitude and Debt Accumulation Rate",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate.md"
-      ]
-    },
-    {
-      "id": "2026-02-28-jevons-paradox",
-      "label": "Jevons Paradox: efficiency gains, demand rebound, and the falling cost of software production",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-02-28-jevons-paradox.md"
-      ]
-    },
-    {
       "id": "knowledge",
       "label": "Knowledge",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -565,7 +197,6 @@
       "label": "Knowledge Extraction",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -573,59 +204,10 @@
       ]
     },
     {
-      "id": "2026-05-12-knowledge-graph-lifecycle-management-agentic",
-      "label": "Knowledge Graph lifecycle management for multi-step software agents: schema versioning, entity resolution, and knowledge freshness",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-12-knowledge-graph-lifecycle-management-agentic.md"
-      ]
-    },
-    {
-      "id": "2026-03-03-knowledge-representation-agent-context",
-      "label": "Knowledge Representation for Agent Context: LSE, Knowledge Graphs, Concept Maps, and Document Compression for Large-Scale Context Management",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-03-knowledge-representation-agent-context.md"
-      ]
-    },
-    {
-      "id": "2026-03-10-language-for-llm-agent-output",
-      "label": "Language designed for LLM agents to produce: addressing generation-layer failure modes in agentic systems",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-10-language-for-llm-agent-output.md"
-      ]
-    },
-    {
-      "id": "2026-03-19-layered-org-llm-architecture",
-      "label": "Layered Organisation Large Language Model: Feasibility and Architecture of Organisation-Customised LLMs",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-19-layered-org-llm-architecture.md"
-      ]
-    },
-    {
       "id": "list",
       "label": "List",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -633,23 +215,10 @@
       ]
     },
     {
-      "id": "2026-02-27-local-database",
-      "label": "Local database: requirements and technology choice",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-02-27-local-database.md"
-      ]
-    },
-    {
       "id": "meta-model",
       "label": "Meta-model",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -661,7 +230,6 @@
       "label": "Metadata",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -673,7 +241,6 @@
       "label": "Model",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -681,23 +248,10 @@
       ]
     },
     {
-      "id": "2026-03-18-formal-proof-engineering-leanstral",
-      "label": "More formal proof engineering: Leanstral and Artificial Intelligence (AI)-assisted formal verification",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-18-formal-proof-engineering-leanstral.md"
-      ]
-    },
-    {
       "id": "node",
       "label": "Node",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -709,7 +263,6 @@
       "label": "Ontology",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -717,35 +270,10 @@
       ]
     },
     {
-      "id": "2026-05-12-odrl-policies-knowledge-graph-agentic-access",
-      "label": "Open Digital Rights Language (ODRL) policies in Knowledge Graphs for software-agent access control and usage governance",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-12-odrl-policies-knowledge-graph-agentic-access.md"
-      ]
-    },
-    {
-      "id": "2026-03-05-h-neuron-pretraining-origins",
-      "label": "Pre-Training Origins of Hallucination-Associated Neurons — Implications for LLM Development",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-05-h-neuron-pretraining-origins.md"
-      ]
-    },
-    {
       "id": "process",
       "label": "Process",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -757,7 +285,6 @@
       "label": "RDF (Resource Description Framework)",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -769,7 +296,6 @@
       "label": "RDF* (RDF-star)",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -781,7 +307,6 @@
       "label": "Relationship",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -789,47 +314,10 @@
       ]
     },
     {
-      "id": "2026-03-03-research-agenda-curation-coverage",
-      "label": "Research agenda curation: prioritisation, coverage analysis, and avoiding research drift",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-03-research-agenda-curation-coverage.md"
-      ]
-    },
-    {
-      "id": "2026-03-10-research-loop-evaluation-rubric",
-      "label": "Research loop evaluation rubric: LLM-as-judge specification for this repository's research loop agent",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-10-research-loop-evaluation-rubric.md"
-      ]
-    },
-    {
-      "id": "2026-05-18-rq5-2-flexibility-vs-predictability-auditability",
-      "label": "Research Question 5.2: Flexibility vs. Predictability, How the Agentic Tradeoff Affects Auditability and Formal Verification in Production Pipelines",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-18-rq5-2-flexibility-vs-predictability-auditability.md"
-      ]
-    },
-    {
       "id": "resource",
       "label": "Resource",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -837,47 +325,10 @@
       ]
     },
     {
-      "id": "2026-05-18-rq1-1-popper-falsifiability",
-      "label": "RQ 1.1: Formalising Popper's Falsifiability as a Criterion Between Mechanism and Interpolation",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-18-rq1-1-popper-falsifiability.md"
-      ]
-    },
-    {
-      "id": "2026-05-18-rq3-1-llm-statistical-vs-causal",
-      "label": "RQ 3.1: Large Language Models as Statistical Optimisers, Token Distribution vs. Invariant Causal Models of Reality",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-18-rq3-1-llm-statistical-vs-causal.md"
-      ]
-    },
-    {
-      "id": "2026-05-10-m365-copilot-sensitive-data-security-governance-risks",
-      "label": "Security, Compliance, and Governance Risks of Using Generative AI (GenAI) Tools Such as Microsoft 365 (M365) Copilot on Sensitive, Confidential, or Classified Data in Regulated Environments",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-10-m365-copilot-sensitive-data-security-governance-risks.md"
-      ]
-    },
-    {
       "id": "semantics",
       "label": "Semantics",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -885,23 +336,10 @@
       ]
     },
     {
-      "id": "2026-03-08-servicenow-process-mapping",
-      "label": "ServiceNow Process Mapping: Maintainable Process Documentation in SNOW",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-08-servicenow-process-mapping.md"
-      ]
-    },
-    {
       "id": "syntax",
       "label": "Syntax",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -913,7 +351,6 @@
       "label": "Term",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -921,23 +358,10 @@
       ]
     },
     {
-      "id": "2026-03-23-software-factory",
-      "label": "The Software Factory: Organisational Transformation When the Cost of Quality Software Approaches Zero",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-03-23-software-factory.md"
-      ]
-    },
-    {
       "id": "theme",
       "label": "Theme",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -949,7 +373,6 @@
       "label": "True",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -957,23 +380,10 @@
       ]
     },
     {
-      "id": "2026-04-28-uelgf-tooling-reference-architecture",
-      "label": "Universal Entity Lifecycle Governance Framework (UELGF) extension: tooling specification and reference architecture for policy-as-code, observability, and Identity and Access Management (IAM) implementation",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-28-uelgf-tooling-reference-architecture.md"
-      ]
-    },
-    {
       "id": "weight",
       "label": "Weight",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -981,59 +391,10 @@
       ]
     },
     {
-      "id": "2026-04-26-lecun-llm-critique-primary-sources",
-      "label": "What is Yann LeCun's complete argument against Large Language Models as a path to autonomous machine intelligence, and what is the precise technical basis for each claim?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-26-lecun-llm-critique-primary-sources.md"
-      ]
-    },
-    {
-      "id": "2026-04-26-ai-lowcode-governance-maturity-model",
-      "label": "What maturity model best describes the evolution of governance capabilities for Artificial Intelligence (AI) and low-code in enterprises?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-26-ai-lowcode-governance-maturity-model.md"
-      ]
-    },
-    {
-      "id": "2026-04-26-ai-lowcode-observability-telemetry-governance",
-      "label": "What observability and telemetry model is required to govern Artificial Intelligence (AI) and low-code systems at scale?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-04-26-ai-lowcode-observability-telemetry-governance.md"
-      ]
-    },
-    {
-      "id": "2026-05-06-aibom-effectiveness-risk-mitigation-limits",
-      "label": "What security and governance risks can a declared and runtime-observed inventory of models, prompts, retrieval sources, tools, memory, and delegation artifacts realistically mitigate for tool-using, stateful Artificial Intelligence (AI) workloads, and where does it create false assurance?",
-      "comment": "In scope:",
-      "aliases": [],
-      "tags": [],
-      "domain": "ResearchDocumentDomain",
-      "related": [],
-      "docs": [
-        "raw_document_corpus/2026-05-06-aibom-effectiveness-risk-mitigation-limits.md"
-      ]
-    },
-    {
       "id": "wisdom",
       "label": "Wisdom",
       "comment": "Necessary conditions:",
       "aliases": [],
-      "tags": [],
       "domain": "FoundationalConceptDomain",
       "related": [],
       "docs": [
@@ -1286,356 +647,6 @@
       "segment_count": 6,
       "concept_ids": [
         "wisdom"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-02-27-local-database.md",
-      "segment_count": 110,
-      "concept_ids": [
-        "2026-02-27-local-database"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-02-28-ai-strategy-business-efficiency-examples.md",
-      "segment_count": 31,
-      "concept_ids": [
-        "2026-02-28-ai-strategy-business-efficiency-examples"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-02-28-ai-strategy-risk-reduction-focus.md",
-      "segment_count": 31,
-      "concept_ids": [
-        "2026-02-28-ai-strategy-risk-reduction-focus"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-02-28-ai-strategy-swe-focus.md",
-      "segment_count": 71,
-      "concept_ids": [
-        "2026-02-28-ai-strategy-swe-focus"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-02-28-ai-strategy.md",
-      "segment_count": 29,
-      "concept_ids": [
-        "2026-02-28-ai-strategy"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-02-28-jevons-paradox.md",
-      "segment_count": 22,
-      "concept_ids": [
-        "2026-02-28-jevons-paradox"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-03-knowledge-representation-agent-context.md",
-      "segment_count": 111,
-      "concept_ids": [
-        "2026-03-03-knowledge-representation-agent-context"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-03-research-agenda-curation-coverage.md",
-      "segment_count": 112,
-      "concept_ids": [
-        "2026-03-03-research-agenda-curation-coverage"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-04-sdlc-ai-prompt-patterns.md",
-      "segment_count": 98,
-      "concept_ids": [
-        "2026-03-04-sdlc-ai-prompt-patterns"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-05-h-neuron-pretraining-origins.md",
-      "segment_count": 94,
-      "concept_ids": [
-        "2026-03-05-h-neuron-pretraining-origins"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-07-run-build-it-allocation-implementation-how.md",
-      "segment_count": 88,
-      "concept_ids": [
-        "2026-03-07-run-build-it-allocation-implementation-how"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-08-servicenow-process-mapping.md",
-      "segment_count": 118,
-      "concept_ids": [
-        "2026-03-08-servicenow-process-mapping"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-10-language-for-llm-agent-output.md",
-      "segment_count": 116,
-      "concept_ids": [
-        "2026-03-10-language-for-llm-agent-output"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-10-research-loop-evaluation-rubric.md",
-      "segment_count": 96,
-      "concept_ids": [
-        "2026-03-10-research-loop-evaluation-rubric"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-15-saas-banking-invariants.md",
-      "segment_count": 74,
-      "concept_ids": [
-        "2026-03-15-saas-banking-invariants"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-18-explore-to-exploit-synthesis-gap.md",
-      "segment_count": 52,
-      "concept_ids": [
-        "2026-03-18-explore-to-exploit-synthesis-gap"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-18-formal-proof-engineering-leanstral.md",
-      "segment_count": 44,
-      "concept_ids": [
-        "2026-03-18-formal-proof-engineering-leanstral"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-18-human-brain-prediction-machines.md",
-      "segment_count": 43,
-      "concept_ids": [
-        "2026-03-18-human-brain-prediction-machines"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-19-layered-org-llm-architecture.md",
-      "segment_count": 58,
-      "concept_ids": [
-        "2026-03-19-layered-org-llm-architecture"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-22-code-architecture-inspection.md",
-      "segment_count": 37,
-      "concept_ids": [
-        "2026-03-22-code-architecture-inspection"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-23-software-factory.md",
-      "segment_count": 139,
-      "concept_ids": [
-        "2026-03-23-software-factory"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-03-28-environment-setup-consistency.md",
-      "segment_count": 94,
-      "concept_ids": [
-        "2026-03-28-environment-setup-consistency"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-01-backpressure-theory-of-constraints.md",
-      "segment_count": 67,
-      "concept_ids": [
-        "2026-04-01-backpressure-theory-of-constraints"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-02-ai-company-hiring-strategies.md",
-      "segment_count": 43,
-      "concept_ids": [
-        "2026-04-02-ai-company-hiring-strategies"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-26-ai-lowcode-governance-maturity-model.md",
-      "segment_count": 39,
-      "concept_ids": [
-        "2026-04-26-ai-lowcode-governance-maturity-model"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-26-ai-lowcode-observability-telemetry-governance.md",
-      "segment_count": 37,
-      "concept_ids": [
-        "2026-04-26-ai-lowcode-observability-telemetry-governance"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-26-ai-lowcode-risk-tier-classification-controls.md",
-      "segment_count": 34,
-      "concept_ids": [
-        "2026-04-26-ai-lowcode-risk-tier-classification-controls"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-26-lecun-llm-critique-primary-sources.md",
-      "segment_count": 28,
-      "concept_ids": [
-        "2026-04-26-lecun-llm-critique-primary-sources"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-27-cryptographic-intent-preservation-runtime-evaluation.md",
-      "segment_count": 38,
-      "concept_ids": [
-        "2026-04-27-cryptographic-intent-preservation-runtime-evaluation"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-28-uelgf-tooling-reference-architecture.md",
-      "segment_count": 36,
-      "concept_ids": [
-        "2026-04-28-uelgf-tooling-reference-architecture"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-04-30-ai-code-entropy-quality-metrics.md",
-      "segment_count": 48,
-      "concept_ids": [
-        "2026-04-30-ai-code-entropy-quality-metrics"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-01-ai-coding-harness-quality-benchmarks.md",
-      "segment_count": 37,
-      "concept_ids": [
-        "2026-05-01-ai-coding-harness-quality-benchmarks"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-06-aibom-effectiveness-risk-mitigation-limits.md",
-      "segment_count": 42,
-      "concept_ids": [
-        "2026-05-06-aibom-effectiveness-risk-mitigation-limits"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-08-capability-debt-definition-measurement-ai-risk-amplification.md",
-      "segment_count": 35,
-      "concept_ids": [
-        "2026-05-08-capability-debt-definition-measurement-ai-risk-amplification"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-09-compliance-risks-stochastic-llm-governance-decisions.md",
-      "segment_count": 34,
-      "concept_ids": [
-        "2026-05-09-compliance-risks-stochastic-llm-governance-decisions"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-10-m365-copilot-sensitive-data-security-governance-risks.md",
-      "segment_count": 27,
-      "concept_ids": [
-        "2026-05-10-m365-copilot-sensitive-data-security-governance-risks"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-12-data-product-ontology.md",
-      "segment_count": 40,
-      "concept_ids": [
-        "2026-05-12-data-product-ontology"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-12-knowledge-graph-lifecycle-management-agentic.md",
-      "segment_count": 35,
-      "concept_ids": [
-        "2026-05-12-knowledge-graph-lifecycle-management-agentic"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-12-odrl-policies-knowledge-graph-agentic-access.md",
-      "segment_count": 42,
-      "concept_ids": [
-        "2026-05-12-odrl-policies-knowledge-graph-agentic-access"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-16-agent-operational-cost-vs-gap-closure-cost.md",
-      "segment_count": 40,
-      "concept_ids": [
-        "2026-05-16-agent-operational-cost-vs-gap-closure-cost"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate.md",
-      "segment_count": 53,
-      "concept_ids": [
-        "2026-05-16-it-throughput-constraint-magnitude-and-debt-accumulation-rate"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure.md",
-      "segment_count": 40,
-      "concept_ids": [
-        "2026-05-17-deterministic-circuit-breakers-hybrid-reasoning-infrastructure"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-18-agentic-explainability-vs-traditional.md",
-      "segment_count": 27,
-      "concept_ids": [
-        "2026-05-18-agentic-explainability-vs-traditional"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-18-rq1-1-popper-falsifiability.md",
-      "segment_count": 40,
-      "concept_ids": [
-        "2026-05-18-rq1-1-popper-falsifiability"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-18-rq3-1-llm-statistical-vs-causal.md",
-      "segment_count": 45,
-      "concept_ids": [
-        "2026-05-18-rq3-1-llm-statistical-vs-causal"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-18-rq5-2-flexibility-vs-predictability-auditability.md",
-      "segment_count": 39,
-      "concept_ids": [
-        "2026-05-18-rq5-2-flexibility-vs-predictability-auditability"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways.md",
-      "segment_count": 49,
-      "concept_ids": [
-        "2026-05-19-align-strategic-relevance-with-low-effort-knowledge-pathways"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer.md",
-      "segment_count": 36,
-      "concept_ids": [
-        "2026-05-19-how-do-asset-specificity-and-information-asymmetry-block-knowledge-transfer"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-20-banking-ai-syntactic-confidence-trap.md",
-      "segment_count": 45,
-      "concept_ids": [
-        "2026-05-20-banking-ai-syntactic-confidence-trap"
-      ]
-    },
-    {
-      "file": "raw_document_corpus/2026-05-20-hitl-capacity-thresholds-in-banking-compliance.md",
-      "segment_count": 29,
-      "concept_ids": [
-        "2026-05-20-hitl-capacity-thresholds-in-banking-compliance"
       ]
     }
   ]

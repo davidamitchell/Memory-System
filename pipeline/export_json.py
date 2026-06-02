@@ -83,7 +83,7 @@ def export_ontology(g: Graph, version: str) -> dict:
     concept_by_uri: dict[str, str] = {}  # full URI → id
 
     # Predicates that represent typed relationships between AssertionNodes
-    # (excludes metadata predicates like aliases, hasTag, inDomain, etc.)
+    # (excludes metadata predicates like aliases, inDomain, etc.)
     RELATIONSHIP_PREDICATES = {
         "relatedTerm", "implements", "instanceOf", "partOf",
         "contrasts", "uses",
@@ -97,7 +97,6 @@ def export_ontology(g: Graph, version: str) -> dict:
         label = str(next(g.objects(node, RDFS.label), ""))
         comment = str(next(g.objects(node, RDFS.comment), ""))
         aliases = sorted(str(o) for o in g.objects(node, MS.aliases))
-        tags = sorted(str(o) for o in g.objects(node, MS.hasTag))
         domain_uri = next(g.objects(node, MS.inDomain), None)
         domain = _local(str(domain_uri)) if domain_uri else ""
 
@@ -117,7 +116,6 @@ def export_ontology(g: Graph, version: str) -> dict:
                 "label": label,
                 "comment": comment,
                 "aliases": aliases,
-                "tags": tags,
                 "domain": domain,
                 "related": related_items,
             }

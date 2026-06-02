@@ -34,7 +34,7 @@ def pipeline_output():
     # If no versioned file exists, run the pipeline once
     ttl_files = sorted(ONTOLOGY_DIR.glob("v*.ttl"))
     if not ttl_files:
-        result = _run(PIPELINE_SCRIPT, TARGET, "--strategy", "rule-based")
+        result = _run(PIPELINE_SCRIPT, TARGET, "--strategy", "rule-based", "--no-nlp")
         assert result.returncode == 0, f"Pipeline failed:\n{result.stderr}"
 
 
@@ -44,7 +44,7 @@ def pipeline_output():
 
 def test_pipeline_runs():
     """Pipeline exits 0 for the target file."""
-    result = _run(PIPELINE_SCRIPT, TARGET, "--strategy", "rule-based")
+    result = _run(PIPELINE_SCRIPT, TARGET, "--strategy", "rule-based", "--no-nlp")
     assert result.returncode == 0, f"stderr:\n{result.stderr}"
 
 

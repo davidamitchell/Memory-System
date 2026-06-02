@@ -29,7 +29,7 @@ _CONCEPT_URI = "https://memory.example.org/ms/assertion/concept"
 
 def _run_pipeline() -> subprocess.CompletedProcess:
     return subprocess.run(
-        [sys.executable, str(PIPELINE_SCRIPT), _TARGET, "--strategy", "rule-based"],
+        [sys.executable, str(PIPELINE_SCRIPT), _TARGET, "--strategy", "rule-based", "--no-nlp"],
         capture_output=True,
         text=True,
         cwd=str(REPO_ROOT),

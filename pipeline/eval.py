@@ -3,9 +3,8 @@
 
 Runs any extractor strategy against a document corpus and scores the
 ``delta_proposal`` output against the ground-truth values in the YAML
-front-matter.  Metrics: precision, recall, F1 for each of four fields
-(label, aliases, tags, related edges), reported per-file and as an
-aggregate.
+front-matter.  Metrics: precision, recall, F1 for each of three fields
+(label, aliases, related edges), reported per-file and as an aggregate.
 
 Usage
 -----
@@ -30,8 +29,10 @@ For the ``foundational_concepts/`` corpus the ground truth is the YAML front-mat
 where present (legacy files), or extracted prose otherwise:
   - label     → ``title`` field (single string; F1 is 1.0 if exact match)
   - aliases   → ``aliases`` field (list of strings)
-  - tags      → ``tags`` field (list of strings)
   - related   → ``related[].file`` stems (list of slugs)
+
+Tags and themes are extraction signal only (they hint to the LLM which concepts
+may be present) and are not scored as ground truth.
 
 For typed relations (``--typed-relations``) the ground truth is loaded from
 ``data/eval/typed-relations-ground-truth.json``.  Each annotated file is
@@ -87,11 +88,10 @@ def _load_ground_truth(path: Path) -> dict:
     raw = path.read_text(encoding="utf-8")
     m = _FRONT_MATTER_RE.match(raw)
     if not m:
-        return {"label": path.stem, "aliases": [], "tags": [], "related": []}
+        return {"label": path.stem, "aliases": [], "related": []}
     fm: dict = yaml.safe_load(m.group(1)) or {}
     label = str(fm.get("title", path.stem)).strip()
     aliases = [str(a).strip() for a in fm.get("aliases", [])]
-    tags = [str(t).strip().lower() for t in fm.get("tags", [])]
     related = []
     for r in fm.get("related", []):
         if isinstance(r, dict):
@@ -102,7 +102,7 @@ def _load_ground_truth(path: Path) -> dict:
                 related.append(slug)
         elif isinstance(r, str):
             related.append(r.strip())
-    return {"label": label, "aliases": aliases, "tags": tags, "related": related}
+    return {"label": label, "aliases": aliases, "related": related}
 
 
 # ---------------------------------------------------------------------------
@@ -310,7 +310,6 @@ def evaluate_file(source_path: str, extractor: str = "rule-based", nlp: bool = F
     proposal = state["delta_proposal"]
     predicted_label = proposal.get("label", "")
     predicted_aliases = proposal.get("aliases", [])
-    predicted_tags = [t.lower() for t in proposal.get("tags", [])]
     predicted_related = [r["id"].split("/")[-1] for r in proposal.get("related", [])]
 
     # Ground truth from file
@@ -319,7 +318,6 @@ def evaluate_file(source_path: str, extractor: str = "rule-based", nlp: bool = F
 
     lp, lr, lf = _label_f1(predicted_label, gt["label"])
     ap, ar, af = _prf(predicted_aliases, gt["aliases"])
-    tp, tr, tf = _prf(predicted_tags, gt["tags"])
     rp, rr, rf = _prf(predicted_related, gt["related"])
 
     return {
@@ -328,8 +326,6 @@ def evaluate_file(source_path: str, extractor: str = "rule-based", nlp: bool = F
                     "predicted": predicted_label, "truth": gt["label"]},
         "aliases": {"precision": ap, "recall": ar, "f1": af,
                     "predicted": predicted_aliases, "truth": gt["aliases"]},
-        "tags":    {"precision": tp, "recall": tr, "f1": tf,
-                    "predicted": predicted_tags, "truth": gt["tags"]},
         "related": {"precision": rp, "recall": rr, "f1": rf,
                     "predicted": predicted_related, "truth": gt["related"]},
     }
@@ -341,7 +337,7 @@ def evaluate_file(source_path: str, extractor: str = "rule-based", nlp: bool = F
 
 def aggregate(results: list[dict]) -> dict:
     """Average per-file metrics across the corpus."""
-    fields = ["label", "aliases", "tags", "related"]
+    fields = ["label", "aliases", "related"]
     agg: dict = {}
     for field in fields:
         agg[field] = {
@@ -354,7 +350,7 @@ def aggregate(results: list[dict]) -> dict:
 
 def print_report(results: list[dict], agg: dict, extractor: str, nlp: bool = False) -> None:
     """Pretty-print per-file and aggregate metrics to stdout."""
-    FIELDS = ["label", "aliases", "tags", "related"]
+    FIELDS = ["label", "aliases", "related"]
     col_w = 10
 
     header = f"{'File':<45}" + "".join(f"{'  '+f+' F1':>{col_w}}" for f in FIELDS)

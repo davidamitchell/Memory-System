@@ -57,14 +57,13 @@ class TestHappyPath:
             "label": "Inference Rule",
             "comment": "A logical statement that derives new facts.",
             "aliases": ["derivation rule", "logical rule"],
-            "tags": ["logic", "reasoning", "inference"],
             "related": [{"id": "knowledge-base", "rel": "relatedTerm"}],
         }
         state = _run_with_response(json.dumps(payload))
         proposal = state["delta_proposal"]
         assert proposal["label"] == "Inference Rule"
         assert proposal["aliases"] == ["derivation rule", "logical rule"]
-        assert "logic" in proposal["tags"]
+        assert proposal["tags"] == []  # tags are no longer extracted
         assert proposal["related"][0]["id"] == "assertion/knowledge-base"
 
     def test_markdown_fenced_json_backtick(self):
@@ -105,10 +104,10 @@ class TestHappyPath:
         assert "_confidence" not in proposal
 
     def test_tags_are_lowercased(self):
-        """Tags in mixed case are normalised to lowercase."""
+        """Tags in the LLM response are ignored; delta_proposal always returns empty tags list."""
         payload = {"label": "Concept", "comment": "", "aliases": [], "tags": ["AI", "Knowledge-Graph", "LLM"], "related": []}
         state = _run_with_response(json.dumps(payload))
-        assert state["delta_proposal"]["tags"] == ["ai", "knowledge-graph", "llm"]
+        assert state["delta_proposal"]["tags"] == []
 
     def test_related_as_list_of_strings(self):
         """When related is a list of plain strings each becomes a relatedTerm entry."""

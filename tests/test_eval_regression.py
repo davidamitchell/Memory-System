@@ -48,7 +48,7 @@ def baseline():
 # Field-level F1 regression gates
 # ---------------------------------------------------------------------------
 
-@pytest.mark.parametrize("field", ["label", "aliases", "tags", "related"])
+@pytest.mark.parametrize("field", ["label", "aliases", "related"])
 def test_f1_above_baseline(eval_output, baseline, field):
     """Aggregate F1 for each field must not drop more than `tolerance` below baseline."""
     actual_f1 = eval_output["aggregate"][field]["f1"]
@@ -72,7 +72,7 @@ def test_eval_covers_all_foundational_docs(eval_output):
 
 
 def test_aggregate_has_all_fields(eval_output):
-    for field in ("label", "aliases", "tags", "related"):
+    for field in ("label", "aliases", "related"):
         assert field in eval_output["aggregate"]
         for metric in ("precision", "recall", "f1"):
             assert metric in eval_output["aggregate"][field]

@@ -55,7 +55,7 @@ def batch_pipeline_output():
             need_run = False
 
     if need_run:
-        result = _run(PIPELINE_SCRIPT, FOUNDATIONAL_DIR, "--strategy", "rule-based")
+        result = _run(PIPELINE_SCRIPT, FOUNDATIONAL_DIR, "--strategy", "rule-based", "--no-nlp")
         assert result.returncode == 0, f"Batch pipeline failed:\n{result.stderr}"
 
 
@@ -66,7 +66,7 @@ def batch_pipeline_output():
 
 def test_batch_pipeline_exits_zero():
     """Batch pipeline over foundational_concepts/ exits 0 (rule-based; no gh CLI needed)."""
-    result = _run(PIPELINE_SCRIPT, FOUNDATIONAL_DIR, "--strategy", "rule-based")
+    result = _run(PIPELINE_SCRIPT, FOUNDATIONAL_DIR, "--strategy", "rule-based", "--no-nlp")
     assert result.returncode == 0, f"stderr:\n{result.stderr}"
 
 

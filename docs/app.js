@@ -202,10 +202,6 @@
 
     var aliases = (concept.aliases || []).join(', ') || '—';
 
-    var tagsHtml = (concept.tags || []).length
-      ? concept.tags.map(function (t) { return '<span class="badge">' + esc(t) + '</span>'; }).join(' ')
-      : '<span class="muted">—</span>';
-
     // Related concepts with predicate badges
     var relatedItems = concept.related || [];
     var relatedHtml = relatedItems.length
@@ -263,7 +259,6 @@
           : '') +
 
         '<section class="dp-section"><h3>Aliases</h3><p>' + esc(aliases) + '</p></section>' +
-        '<section class="dp-section"><h3>Tags</h3><p>' + tagsHtml + '</p></section>' +
         '<section class="dp-section"><h3>Related concepts</h3>' + relatedHtml + '</section>' +
 
         (outgoing.length

@@ -64,9 +64,6 @@ def run(state: dict, repo_root: Path) -> dict:  # noqa: ARG001
     for alias in dp["aliases"]:
         g.add((node, _ms("aliases"), Literal(alias)))
 
-    for tag in dp["tags"]:
-        g.add((node, _ms("hasTag"), Literal(tag)))
-
     for rel_item in dp["related"]:
         if isinstance(rel_item, dict):
             rel_id = rel_item["id"]

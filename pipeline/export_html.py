@@ -38,10 +38,6 @@ def badge(text: str) -> str:
     return f'<span class="badge">{h(text)}</span>'
 
 
-def tag_badges(tags: list[str]) -> str:
-    return " ".join(badge(t) for t in tags)
-
-
 # ---------------------------------------------------------------------------
 # Section renderers
 # ---------------------------------------------------------------------------
@@ -119,7 +115,6 @@ def render_concepts(data: dict) -> str:
         label = h(c["label"])
         comment_short = h(c["comment"][:120] + ("…" if len(c["comment"]) > 120 else ""))
         domain = h(c["domain"])
-        n_tags = len(c["tags"])
         n_related = len(c["related"])
 
         # Encode full concept data as JSON in data-* attribute for JS detail panel
@@ -129,7 +124,6 @@ def render_concepts(data: dict) -> str:
             f'    <tr class="concept-row" data-id="{cid}" data-concept="{concept_json}" tabindex="0">\n'
             f'      <td><strong>{label}</strong><br><small class="muted">{comment_short}</small></td>\n'
             f'      <td data-label="Domain">{domain}</td>\n'
-            f'      <td class="num" data-label="Tags">{n_tags}</td>\n'
             f'      <td class="num" data-label="Related">{n_related}</td>\n'
             f'    </tr>'
         )
@@ -143,7 +137,6 @@ def render_concepts(data: dict) -> str:
       <tr>
         <th>Label / Definition</th>
         <th>Domain</th>
-        <th class="num" title="Number of tags">Tags</th>
         <th class="num" title="Number of related terms">Related</th>
       </tr>
     </thead>
