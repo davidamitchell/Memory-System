@@ -489,7 +489,7 @@ def _extract_rule_based(state: dict, source_slug: str, segments: list[dict]) -> 
         "label": label,
         "comment": state.get("bold_definition", ""),
         "aliases": fm.get("aliases", []),
-        "tags": fm.get("tags", []),
+        "tags": fm.get("tags") or fm.get("themes", []),
         "related": related_assertions,
         "primary_segment_hash": segments[0]["hash"] if segments else "",
         "all_segment_hashes": [s["hash"] for s in segments],
