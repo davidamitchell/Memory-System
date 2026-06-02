@@ -88,17 +88,20 @@ def collect_sources(path: Path) -> list[Path]:
     return sorted(p for p in path.rglob("*.md") if not p.name.startswith("README"))
 
 
-def run_pipeline(source_path: str, strategy: str = "llm") -> dict:
+def run_pipeline(source_path: str, strategy: str = "llm", nlp: bool = True) -> dict:
     """Run the full 12-processor pipeline for a single document.
 
     Args:
         source_path: Path to the source file, relative to REPO_ROOT.
         strategy: Extraction strategy — ``"llm"`` (default) or ``"rule-based"``.
+        nlp: Enable spaCy NLP enrichment in p02 (default ``True``).
+            Requires ``spacy`` and ``en_core_web_sm`` to be installed.
+            Pass ``False`` to skip NLP and reduce dependencies.
 
     Returns:
         Final pipeline state dict.
     """
-    state: dict = {"source_path": source_path, "strategy": strategy}
+    state: dict = {"source_path": source_path, "strategy": strategy, "nlp": nlp}
 
     for processor in PROCESSORS:
         state = processor.run(state, REPO_ROOT)
@@ -132,6 +135,7 @@ def run_pipeline_batch(
     source_paths: list[str],
     strategy: str = "llm",
     skip_errors: bool = False,
+    nlp: bool = True,
 ) -> dict:
     """Run p01–p08 for each source (accumulating one graph), then p09–p12 once.
 
@@ -147,6 +151,9 @@ def run_pipeline_batch(
             normally so p09–p12 run on the successfully processed files.
             When ``False`` (the default), any per-file exception propagates
             immediately and halts the batch.
+        nlp: Enable spaCy NLP enrichment in p02 (default ``True``).
+            Requires ``spacy`` and ``en_core_web_sm`` to be installed.
+            Pass ``False`` to skip NLP and reduce dependencies.
 
     Returns:
         Final pipeline state dict after version commit and export.
@@ -165,7 +172,7 @@ def run_pipeline_batch(
 
     for idx, source_path in enumerate(source_paths, 1):
         logging.info("  [%d/%d] extracting: %s", idx, total, source_path)
-        state: dict = {"source_path": source_path, "strategy": strategy}
+        state: dict = {"source_path": source_path, "strategy": strategy, "nlp": nlp}
         if "graph" in batch_state:
             state["graph"] = batch_state["graph"]
 
@@ -225,6 +232,15 @@ def main() -> None:
         ),
     )
     parser.add_argument(
+        "--no-nlp",
+        action="store_true",
+        dest="no_nlp",
+        help=(
+            "Disable spaCy NLP enrichment (p02).  NLP is on by default; use "
+            "this flag if spacy / en_core_web_sm are not installed."
+        ),
+    )
+    parser.add_argument(
         "-v", "--verbose", action="store_true", help="Enable debug logging."
     )
     args = parser.parse_args()
@@ -243,15 +259,16 @@ def main() -> None:
     logging.info("Processing %d file(s) from %s", len(sources), args.path)
 
     rel_paths = [str(s.relative_to(REPO_ROOT)) for s in sources]
+    nlp = not args.no_nlp
 
     if len(rel_paths) == 1:
         # Single file: full 12-processor run
-        final_state = run_pipeline(rel_paths[0], strategy=args.strategy)
+        final_state = run_pipeline(rel_paths[0], strategy=args.strategy, nlp=nlp)
     else:
         # Directory / multi-file: batch mode — accumulate all into one version
         logging.info("Batch mode: extracting all files, then committing once")
         final_state = run_pipeline_batch(
-            rel_paths, strategy=args.strategy, skip_errors=args.skip_errors
+            rel_paths, strategy=args.strategy, skip_errors=args.skip_errors, nlp=nlp
         )
 
     diff = final_state.get("diff", {})

@@ -71,11 +71,16 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-PROCESSOR_VERSION = "concept-extractor-v1.3.0"
+PROCESSOR_VERSION = "concept-extractor-v1.4.0"
 
-# Maximum number of NLP annotation items (entities, noun chunks) included in
+# Maximum number of NLP annotation items (entities, noun chunks, lemmas) included in
 # the LLM prompt.  Keeps prompt size bounded while providing useful signal.
 _MAX_NLP_ITEMS_IN_PROMPT = 20
+
+# POS tags considered content words for lemma extraction.  Closed-class words
+# (determiners, prepositions, conjunctions, auxiliaries) are excluded because
+# they add noise rather than signal for concept identification.
+_CONTENT_POS = {"NOUN", "VERB", "PROPN", "ADJ"}
 
 # ---------------------------------------------------------------------------
 # Error sentinels — distinct types so callers handle each case correctly
@@ -271,29 +276,47 @@ _gh_models_caller = _call_gh_models
 
 
 _LLM_SYSTEM_PROMPT = """\
-You are a concept extractor for a knowledge graph pipeline.
-Given a research document, extract the following fields and return them as JSON:
+You are a knowledge-graph extractor for a personal research memory system.
 
+Given a document, identify the single primary concept it is about and extract its typed \
+relationships to other concepts.
+
+Definitions (from the system glossary):
+- concept: an abstract unit of meaning defined by necessary and sufficient membership \
+conditions — not merely a topic or tag
+- relationship: a typed, directed association between two concepts; expressed as \
+(subject → predicate → object)
+- domain: a bounded region of discourse in which terms have fixed, agreed meanings
+
+Return only this JSON:
 {
   "label":   "<primary concept name>",
   "comment": "<one-sentence definition or summary, max 200 chars>",
-  "aliases": ["<alternative name>", ...],
-  "tags":    ["<lowercase keyword>", ...],
-  "related": [{"id": "<slug>", "rel": "<relatedTerm|uses|partOf|contrasts|implements|instanceOf>"}, ...]
+  "aliases": ["<synonym or abbreviation>", ...],
+  "related": [{"id": "<target-concept-slug>", "rel": "<relatedTerm|uses|partOf|contrasts|implements|instanceOf>"}, ...]
 }
 
 Rules:
-- label: the single most precise concept name for this document
-- comment: a concise definition extracted or synthesised from the text
-- aliases: other names or abbreviations the concept is known by
-- tags: 3–8 lowercase single-word or hyphenated keywords
-- related: other concept slugs mentioned or implied; use the document filename stems of any referenced documents as slugs
-- Respond with valid JSON only — no prose, no markdown fences.
+- label: the single most precise concept name this document is about
+- comment: a definition synthesised from the text; prefer necessary/sufficient conditions \
+where the document states them
+- aliases: synonyms, abbreviations, or alternative names for this concept
+- related: typed, directed relationships to other concepts; each id is the slug \
+(lowercase-hyphenated) of the target concept; omit self-referential entries
+- Themes (when provided) indicate the subject area — treat them as directional signals, \
+not as constraints on what you extract
+- Respond with valid JSON only — no prose, no markdown fences
 """
 
 
 def _format_nlp_annotations(annotations: dict) -> str:
-    """Render nlp_annotations as a compact, prompt-friendly string."""
+    """Render nlp_annotations as a compact, prompt-friendly string.
+
+    Includes three sections when data is present:
+    - Named entities (text + NER label)
+    - Key noun phrases (noun chunk texts)
+    - Key lemmas (deduped content-word lemmas from pos_tags: NOUN/VERB/PROPN/ADJ)
+    """
     lines = []
     entities = annotations.get("entities", [])
     if entities:
@@ -303,6 +326,18 @@ def _format_nlp_annotations(annotations: dict) -> str:
     if chunks:
         chunk_strs = [c["text"] for c in chunks[:_MAX_NLP_ITEMS_IN_PROMPT]]
         lines.append("Key noun phrases: " + ", ".join(chunk_strs))
+    pos_tags = annotations.get("pos_tags", [])
+    if pos_tags:
+        seen: set[str] = set()
+        lemmas: list[str] = []
+        for t in pos_tags:
+            if t.get("pos") in _CONTENT_POS:
+                lemma = t["lemma"].lower()
+                if lemma not in seen and len(lemma) > 2:
+                    seen.add(lemma)
+                    lemmas.append(lemma)
+        if lemmas:
+            lines.append("Key lemmas: " + ", ".join(lemmas[:_MAX_NLP_ITEMS_IN_PROMPT]))
     return "\n".join(lines)
 
 
@@ -398,7 +433,8 @@ def _extract_llm(state: dict, source_slug: str, segments: list[dict]) -> dict:
     label = str(extracted.get("label") or fm.get("title") or source_slug.replace("-", " ").title())
     comment = str(extracted.get("comment") or state.get("bold_definition", ""))
     aliases = list(extracted.get("aliases") or [])
-    tags = [str(t).lower() for t in (extracted.get("tags") or [])]
+    # Tags are no longer extracted; extraction focuses on concepts and relationships.
+    tags: list[str] = []
     related_raw = extracted.get("related") or []
     related: list[dict] = []
     for r in related_raw:
