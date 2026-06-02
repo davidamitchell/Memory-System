@@ -281,9 +281,9 @@ Two new pipeline scripts handle the export:
 
 ## W-0208
 
-status: todo
+status: done
 created: 2026-05-24
-updated: 2026-05-24
+updated: 2026-06-02
 blocks: []
 blocked-by: [W-0207]
 research: []

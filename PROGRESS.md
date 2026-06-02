@@ -2,6 +2,43 @@
 
 ---
 
+## 2026-06-02 — Tags cleanup + W-0208 confirmation
+
+### Remove tags as ontology output
+
+`tags`/`themes` from source front-matter are extraction signal only — hints to the LLM
+about which concepts may be present. They are not ontological assertions and have no place
+in the Domains → Concepts → typed Relationships model.
+
+**Changes:**
+- `pipeline/processors/p08_ontology_build.py`: Removed `ms:hasTag` triple writes
+- `pipeline/export_json.py`: Removed `tags` field from concept dicts
+- `pipeline/export_html.py`: Removed `tag_badges()` helper and Tags column
+- `docs/app.js`: Removed Tags section from concept detail page
+- `pipeline/eval.py`: Removed `tags` from all eval fields (was `_load_ground_truth`,
+  `evaluate_file`, `aggregate`, `print_report`); harness now measures 3 fields: label, aliases, related
+- `tests/eval_baseline.json`: Removed `"tags": 1.000`
+- `tests/test_export_unit.py`, `tests/test_eval_w0203.py`, `tests/test_eval_regression.py`:
+  Updated to remove all tags-related assertions and parametrize entries
+
+**Acceptance criteria met:**
+- 218 tests pass, 1 skipped ✓
+- `docs/index.html` regenerated with no Tags column ✓
+
+### W-0208: GitHub Pages → GitHub Actions confirmed
+
+`pages.yml` has been running successfully on every push to `main`. W-0208 marked done.
+
+**Mini-Retro**
+1. The cleanup was straightforward but touched 8+ files. The safest order was: write
+   the RDF graph first, then the JSON exporter, then the HTML renderer, then the browser
+   JS, then the eval harness, then the tests. Following data flow top-to-bottom minimised
+   confusion about what was still a source vs. a consumer.
+2. `test_export_unit.py` had four tags-specific tests that needed removal rather than
+   update — tests for removed functionality should be deleted, not left as dead code.
+
+---
+
 ## 2026-05-26 — Glossary cleanup + additive pipeline
 
 ### Rename glossary → foundational_concepts; delete non-foundational items

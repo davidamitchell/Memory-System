@@ -56,7 +56,7 @@ def test_eval_json_contains_four_field_metrics() -> None:
     assert result.returncode == 0, result.stderr
     data = json.loads(result.stdout)
     per_file = data["results"][0]
-    for field in ("label", "aliases", "tags", "related"):
+    for field in ("label", "aliases", "related"):
         assert field in per_file, f"Missing field '{field}' in per-file result"
         for metric in ("precision", "recall", "f1"):
             assert metric in per_file[field], f"Missing metric '{metric}' in field '{field}'"
@@ -67,7 +67,7 @@ def test_eval_json_has_aggregate() -> None:
     assert result.returncode == 0, result.stderr
     data = json.loads(result.stdout)
     assert "aggregate" in data
-    for field in ("label", "aliases", "tags", "related"):
+    for field in ("label", "aliases", "related"):
         assert field in data["aggregate"]
 
 

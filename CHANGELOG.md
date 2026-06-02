@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Removed — tags as ontology output (2026-06-02)
+- `pipeline/processors/p08_ontology_build.py`: Removed `ms:hasTag` triple writes; tags/themes from source front-matter are extraction signal only — not ontological assertions
+- `pipeline/export_json.py`: Removed `tags` field from concept dicts in `docs/data/ontology.json`
+- `pipeline/export_html.py`: Removed `tag_badges()` helper and Tags column from the concepts table
+- `docs/app.js`: Removed Tags section from concept detail page
+- `pipeline/eval.py`: Removed `tags` field from `_load_ground_truth`, `evaluate_file`, `aggregate`, and `print_report`; eval now measures 3 fields: label, aliases, related
+- `tests/eval_baseline.json`: Removed `"tags": 1.000` baseline entry
+- `tests/test_export_unit.py`: Removed `tag_badges` import, `MS.hasTag` triples from test graph, `test_tags_exported`, `test_contains_tags`, `test_tag_badges_multiple`
+- `tests/test_eval_w0203.py`, `tests/test_eval_regression.py`: Removed `"tags"` from field checks and parametrize
+
+### Changed — W-0208: GitHub Pages now served via GitHub Actions (2026-06-02)
+- Repository Pages source confirmed as GitHub Actions (`pages.yml`); W-0208 marked done in BACKLOG.md
+
 ### Fixed — agent instructions and BACKLOG integrity (2026-05-25)
 - `.github/copilot-instructions.md`: Replaced broken `decisions` skill reference with correct `adr` skill; added missing skills `backlog-worker`, `swe`, `tdd`, `feedback`, `remove-ai-slop` to §2 and §4
 - `BACKLOG.md`: W-0207 `status: ready` → `status: done` (implementation was already complete in PROGRESS.md from 2026-05-24)
