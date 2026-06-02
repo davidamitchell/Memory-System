@@ -143,10 +143,9 @@ The `glossary/` folder contains 26 files with consistent YAML front-matter. Each
 - All 12 processors are implemented as distinct Python functions/classes; none are absent or silently skipped; each logs its processor number and name on execution
 - The output `data/ontology/v0001.ttl` is valid Turtle (parseable by `rdflib.Graph().parse(...)`)
 - The output contains:
-  - One `ms:AssertionNode` per concept, with `rdfs:label` (title), `rdfs:comment` (first paragraph of body), and `ms:aliases` (from front-matter `aliases:`)
-  - `ms:relatedTerm` triples for each entry in the `related:` front-matter field (4 edges for `vector-embedding.md`)
-  - `ms:hasTag` triples for each tag in the `tags:` field
-  - One `prov:wasGeneratedBy` link to an `ms:ExtractionActivity`
+ - One `ms:AssertionNode` per concept, with `rdfs:label` (title), `rdfs:comment` (first paragraph of body), and `ms:aliases` (from front-matter `aliases:`)
+ - `ms:relatedTerm` triples for each entry in the `related:` front-matter field (4 edges for `vector-embedding.md`)
+ - One `prov:wasGeneratedBy` link to an `ms:ExtractionActivity`
   - One `prov:used` link from the activity to the `ms:PreparedSegment`
   - The segment carries `ms:contentHash` (`sha256:<hex>` of the body text) and `ms:sourceDocument` (relative path to the `.md` file)
 - Processor 9 (Consistency Validation) produces a validation report with zero conflicts; the report is written to `data/reports/validation-v0001.json`
@@ -157,7 +156,6 @@ The `glossary/` folder contains 26 files with consistent YAML front-matter. Each
   ── Vector Embedding ─────────────────────────────────────
   Definition : A fixed-length list of numbers that encodes…
   Aliases    : embedding, text embedding, vector representation
-  Tags       : embedding, vector, nlp, representation
   Related    : Embedding Model · Semantic Search · Vector Database · LanceDB
   Evidence   : data/segments/e3b0c4…txt (sha256:e3b0c4…)
   Source     : glossary/vector-embedding.md
@@ -165,7 +163,7 @@ The `glossary/` folder contains 26 files with consistent YAML front-matter. Each
   ```
 - The SPARQL query used by `query.py` is saved as `pipeline/queries/concept_card.rq` (plain `.rq` file, portable to any SPARQL endpoint)
 - `pipeline/README.md` documents: how to run the pipeline, how to run a query, the processor list, and the `ms:` namespace prefix table
-- Integration test `tests/test_pipeline_w0200.py` runs the pipeline against `glossary/vector-embedding.md`, asserts valid Turtle, asserts the expected triple count (label + comment + 4 related + 4 tags + provenance chain = ≥12 triples), and asserts `query.py "vector embedding"` exits 0 and prints "Vector Embedding"
+- Integration test `tests/test_pipeline_w0200.py` runs the pipeline against `glossary/vector-embedding.md`, asserts valid Turtle, asserts the expected triple count (label + comment + 4 related + provenance chain = ≥10 triples), and asserts `query.py "vector embedding"` exits 0 and prints "Vector Embedding"
 
 ---
 
@@ -231,7 +229,7 @@ The version diff (v0001 → v0002) is the first concrete answer to the "what tri
   Via Embedding Model : BAAI/bge-small-en-v1.5 · …
   ─────────────────────────────────────────────────────────
   ```
-- `pipeline/query.py --format json "vector embedding"` outputs valid JSON with keys `label`, `definition`, `aliases`, `tags`, `related`, `evidence`; `json.loads()` on the output does not raise
+- `pipeline/query.py --format json "vector embedding"` outputs valid JSON with keys `label`, `definition`, `aliases`, `related`, `evidence`; `json.loads()` on the output does not raise
 - `pipeline/query.py --format json --related "vector embedding"` outputs valid JSON with key `neighbours` (list of concept objects up to two hops)
 - The SPARQL queries used by `--related` and `--format json` are saved as `pipeline/queries/neighbours.rq` and `pipeline/queries/concept_json.rq`
 - `pipeline/README.md` is updated with: multi-file usage, `--related` and `--format` flag docs, the version diff format, and the domain tie-break rule (if applied)
@@ -357,7 +355,7 @@ blocks: [W-0204]
 blocked-by: [W-0201, W-0207]
 research: []
 assumptions:
-  - The 26 glossary files constitute ground truth: every concept label, alias, tag, and relatedTerm declared in their front-matter is a known-correct extraction target
+  - The 26 glossary files constitute ground truth: every concept label, alias, and relatedTerm declared in their front-matter is a known-correct extraction target. Tags and themes in source front-matter are extraction signal (hints about what concepts may be present) but are not ontology outputs and are not evaluated.
   - Precision and recall are computable by comparing `delta_proposal` output from any extractor against the hand-authored front-matter values
   - The existing rule-based p07 extractor should score near-perfect on the glossary corpus (it reads the front-matter directly) — this becomes the baseline ceiling
 uncertainty:
@@ -366,7 +364,7 @@ uncertainty:
 
 ### Outcome
 
-An evaluation CLI (`pipeline/eval.py`) that runs any extractor against the glossary corpus and prints per-file and aggregate precision/recall/F1 for concepts (label match), aliases, tags, and relatedTerm edges. The existing rule-based p07 is run first, establishing the baseline scores. The eval harness is the gate for all subsequent latent extraction phases: a new extractor is only accepted if it meets or exceeds baseline on the structured corpus.
+An evaluation CLI (`pipeline/eval.py`) that runs any extractor against the glossary corpus and prints per-file and aggregate precision/recall/F1 for concepts (label match), aliases, and relatedTerm edges. The existing rule-based p07 is run first, establishing the baseline scores. The eval harness is the gate for all subsequent latent extraction phases: a new extractor is only accepted if it meets or exceeds baseline on the structured corpus.
 
 ### Context
 
@@ -377,7 +375,7 @@ This is the thinnest possible first step for latent extraction: no new model, no
 ### Acceptance criteria
 
 - `pipeline/eval.py --corpus glossary/` runs without error and prints a structured report
-- Report includes: per-file precision/recall/F1 for labels, aliases, tags, and related edges; aggregate scores across all 26 files
+- Report includes: per-file precision/recall/F1 for labels, aliases, and related edges; aggregate scores across all 26 files
 - Running against the existing rule-based p07 produces near-perfect scores (≥0.95 aggregate F1) — this is recorded as the baseline in `PROGRESS.md`
 - The eval harness accepts an `--extractor` flag so future extractors can be swapped in without changing the harness itself
 - `python -m pytest tests/test_eval_w0203.py` passes
@@ -575,7 +573,7 @@ assumptions:
 
 Concept rows and relation rows now navigate to full detail pages (hash routes `#concept/<id>` and `#relation/<from>/<pred>/<to>`) instead of opening a modal or bottom sheet.
 
-- **Concept detail page** (`#concept/<id>`): full-page view with definition, domain badge, aliases, tags, related concepts (linked), outgoing/incoming relations (linked), and source documents. Back button returns to the concepts list.
+- **Concept detail page** (`#concept/<id>`): full-page view with definition, domain badge, aliases, related concepts (linked), outgoing/incoming relations (linked), and source documents. Back button returns to the concepts list.
 - **Relation detail page** (`#relation/<from>/<pred>/<to>`): full-page view with from/to concept cards (linked), predicate badge, and a full list of other relations with the same predicate. Back button returns to the relations list.
 - Hash-based routing handles browser back/forward correctly
 - Relation rows are now clickable (tabindex, cursor, keyboard)
@@ -652,7 +650,7 @@ assumptions:
   - All existing tests mock `_gh_models_caller`, so no test changes are required from the default switch
   - `run_pipeline.py` should expose a `--strategy` CLI flag so the eval harness and development use can override the default when needed
 rationale:
-  - Rule-based extraction depends entirely on explicit YAML front-matter fields (`related:`, `aliases:`, `tags:`). The primary corpus (`raw_document_corpus/`) is unstructured prose — it does not carry these fields. Running rule-based extraction on prose produces only a title and minimal tags: no concept relations, no aliases derived from text, no typed predicates. A proper ontology cannot be built from prose with rule-based extraction alone.
+  - Rule-based extraction depends entirely on explicit YAML front-matter fields (`related:`, `aliases:`). Source documents may also carry `tags:` or `themes:` fields — these are extraction signal (hints to the LLM about what concepts and terms may be present in the document) but are not stored as graph data. Running rule-based extraction on prose produces only a title: no concept relations, no aliases derived from text, no typed predicates. A proper ontology cannot be built from prose with rule-based extraction alone.
   - LLM extraction is therefore always required for the production use case. Making `llm` the default removes a footgun: if someone runs the pipeline against a prose corpus without specifying a strategy, they currently get silent no-op extractions rather than an error.
   - Rule-based is not removed. It remains the correct strategy for the glossary corpus and the W-0203 eval harness, where perfect front-matter fidelity is the measurement target. The strategy flag retains its value as an explicit override.
 
